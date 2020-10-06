@@ -12,3 +12,8 @@
 /captures
 .externalNativeBuild
 .cxx
+
+# ignore IDEA settings
+.idea/
+# but have a common checkstyle configuration
+!.idea/checkstyle-idea.xml
