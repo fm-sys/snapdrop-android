@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="textColorWhite">#FFFFFF</color>
+
+
+    <!-- color accent from Snapdrop website -->
+    <color name="colorAccent">#4285F4</color>
+</resources>
