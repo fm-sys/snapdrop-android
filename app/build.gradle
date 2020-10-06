@@ -42,3 +42,23 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 }
+
+/*
+ * own checkstyle configuration
+ * Android plugin doesn't interoperate with the Checkstyle plugin
+ */
+apply plugin: 'checkstyle'
+
+tasks.register('checkstyle', Checkstyle) {
+    configFile file("${project.rootDir}/checkstyle.xml")
+    source 'main/java'
+    source '../test/java'
+    source '../androidTest/java'
+    include '**/*.java'
+
+    classpath = files()
+}
+
+tasks.named('check') {
+    dependsOn tasks.named('checkstyle')
+}
