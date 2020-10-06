@@ -61,8 +61,6 @@ public class JavaScriptInterface {
     }
 
     private void convertBase64StringToPdfAndStoreIt(String base64PDf, String contentDisposition, String mimetype) throws IOException {
-        Log.e("BASE 64", base64PDf);
-        Log.e("Filename", contentDisposition);
         final int notificationId = 1;
 
         final File dwldsPath = getFinalNewDestinationFile(Environment.getExternalStoragePublicDirectory(
@@ -125,14 +123,14 @@ public class JavaScriptInterface {
         }
     }
 
-    public static File getFinalNewDestinationFile(File destinationFolder, String filename) {
+    public static File getFinalNewDestinationFile(final File destinationFolder, final String filename) {
 
         File newFile = new File(destinationFolder, filename);
         if (!newFile.exists()) {
             return newFile;
         }
 
-        String nameWithoutExtensionOrIncrement;
+        final String nameWithoutExtensionOrIncrement;
         String extension = getFileExtension(filename);
 
         if (extension != null) {
@@ -157,11 +155,11 @@ public class JavaScriptInterface {
         if (filename == null) {
             return null;
         }
-        int lastUnixPos = filename.lastIndexOf('/');
-        int lastWindowsPos = filename.lastIndexOf('\\');
-        int indexOfLastSeparator = Math.max(lastUnixPos, lastWindowsPos);
-        int extensionPos = filename.lastIndexOf('.');
-        int indexOfExtension = indexOfLastSeparator > extensionPos ? -1 : extensionPos;
+        final int lastUnixPos = filename.lastIndexOf('/');
+        final int lastWindowsPos = filename.lastIndexOf('\\');
+        final int indexOfLastSeparator = Math.max(lastUnixPos, lastWindowsPos);
+        final int extensionPos = filename.lastIndexOf('.');
+        final int indexOfExtension = indexOfLastSeparator > extensionPos ? -1 : extensionPos;
         if (indexOfExtension == -1) {
             return null;
         } else {
