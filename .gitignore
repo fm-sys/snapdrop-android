@@ -16,4 +16,4 @@
 # ignore IDEA settings
 .idea/
 # but have a common checkstyle configuration
-!.idea/checkstyle-idea.xml
+!/.idea/checkstyle-idea.xml
