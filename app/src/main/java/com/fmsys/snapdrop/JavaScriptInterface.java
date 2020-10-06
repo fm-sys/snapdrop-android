@@ -76,7 +76,7 @@ public class JavaScriptInterface {
 
         if (dwldsPath.exists()) {
             Intent intent = new Intent();
-            intent.setAction(android.content.Intent.ACTION_VIEW);
+            intent.setAction(Intent.ACTION_VIEW);
             Uri apkURI = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", dwldsPath);
             intent.setDataAndType(apkURI, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);

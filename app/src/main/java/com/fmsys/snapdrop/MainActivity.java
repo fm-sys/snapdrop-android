@@ -1,5 +1,6 @@
 package com.fmsys.snapdrop;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -39,8 +40,9 @@ public class MainActivity extends Activity {
     // workaround because snapdrop website do not show the correct devices after first load
     private boolean loadAgain = true;
 
-    Intent uploadIntent = null;
+    public Intent uploadIntent = null;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,10 +96,9 @@ public class MainActivity extends Activity {
             snackbar.show();
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
-            }
+        if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                && (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
+            requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
         }
 
         pullToRefresh.setOnRefreshListener(() -> {
@@ -120,11 +121,7 @@ public class MainActivity extends Activity {
         final ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connMgr != null) {
             NetworkInfo activeNetworkInfo = connMgr.getActiveNetworkInfo();
-            if (activeNetworkInfo != null) {
-                if (activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI) {
-                    return true;
-                }
-            }
+            return activeNetworkInfo != null && activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI;
         }
         return false;
     }
