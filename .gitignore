@@ -1,4 +1,3 @@
-*.iml
 .gradle
 /local.properties
 /.idea/caches
@@ -14,6 +13,7 @@
 .cxx
 
 # ignore IDEA settings
-.idea/
+.idea/*
 # but have a common checkstyle configuration
-!/.idea/checkstyle-idea.xml
+!.idea/checkstyle-idea.xml
+*.iml
