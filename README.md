@@ -12,6 +12,8 @@ New releases are allways listed up [here](https://github.com/fm-sys/snapdrop-and
 
 snapdrop-android orriganally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! There are quite some bugs waiting to be fixed...
 
+Also bug reports are very wellcome! But note that this is not the right place to report bugs regarding the Snapdrop website which occur independently of this app.
+
 ## credits
 - RobinLinus for [Snapdrop website development](https://github.com/RobinLinus/snapdrop) and the [launcher icon](client/images/logo_blue_512x512.png)
 - material design icons 
