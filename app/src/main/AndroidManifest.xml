@@ -16,7 +16,7 @@
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.fmsys.snapdrop.MainActivity"
-            android:screenOrientation="portrait">
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

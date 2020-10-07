@@ -1,9 +1,5 @@
 package com.fmsys.snapdrop;
 
-import androidx.annotation.RequiresApi;
-import androidx.core.content.ContextCompat;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -17,6 +13,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
 import android.view.Window;
 import android.webkit.ValueCallback;
@@ -26,6 +23,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -63,6 +64,7 @@ public class MainActivity extends Activity {
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setAllowContentAccess(true);
         webView.getSettings().setAllowFileAccess(true);
+        webView.getSettings().setSupportMultipleWindows(true);
         webView.addJavascriptInterface(new JavaScriptInterface(MainActivity.this), "SnapdropAndroid");
         webView.setWebChromeClient(new MyWebChromeClient());
         webView.clearCache(true);
@@ -140,15 +142,15 @@ public class MainActivity extends Activity {
 
     }
 
-    private void uploadFromIntent(Intent intent) {
+    private void uploadFromIntent(final Intent intent) {
         Uri[] results = null;
         try {
-            String dataString = intent.getDataString();
-            ClipData clipData = intent.getClipData();
+            final String dataString = intent.getDataString();
+            final ClipData clipData = intent.getClipData();
             if (clipData != null) {
                 results = new Uri[clipData.getItemCount()];
                 for (int i = 0; i < clipData.getItemCount(); i++) {
-                    ClipData.Item item = clipData.getItemAt(i);
+                    final ClipData.Item item = clipData.getItemAt(i);
                     results[i] = item.getUri();
                 }
             }
@@ -165,7 +167,7 @@ public class MainActivity extends Activity {
 
     class MyWebChromeClient extends WebChromeClient {
 
-        public boolean onShowFileChooser(WebView mWebView, ValueCallback<Uri[]> filePathCallback, FileChooserParams fileChooserParams) {
+        public boolean onShowFileChooser(final WebView mWebView, final ValueCallback<Uri[]> filePathCallback, final FileChooserParams fileChooserParams) {
             if (uploadMessage != null) {
                 uploadMessage.onReceiveValue(null);
                 uploadMessage = null;
@@ -179,7 +181,7 @@ public class MainActivity extends Activity {
             }
 
 
-            Intent intent = fileChooserParams.createIntent();
+            final Intent intent = fileChooserParams.createIntent();
             intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
             try {
                 startActivityForResult(intent, REQUEST_SELECT_FILE);
@@ -189,6 +191,14 @@ public class MainActivity extends Activity {
                 return false;
             }
             return true;
+        }
+
+        @Override
+        public boolean onCreateWindow(final WebView view, final boolean dialog, final boolean userGesture, final Message resultMsg) {
+            final String data = view.getHitTestResult().getExtra();
+            final Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(data));
+            startActivity(browserIntent);
+            return false;
         }
 
 
