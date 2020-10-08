@@ -3,15 +3,30 @@
 
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinatorLayout"
+    style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/AppTheme"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/splashImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_snapdrop"
+            android:visibility="visible" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/pullToRefresh"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:visibility="gone"
         tools:context=".MainActivity">
 
         <WebView
