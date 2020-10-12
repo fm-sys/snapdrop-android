@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="textColorWhite">#FFFFFF</color>
 
+    <color name="snackbarBackground">#323232</color>
 
     <!-- color accent from Snapdrop website -->
     <color name="colorAccent">#4285F4</color>
