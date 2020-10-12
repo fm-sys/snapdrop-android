@@ -27,7 +27,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -150,10 +149,6 @@ public class MainActivity extends Activity {
                     .make(coordinatorLayout, "A file is selected for sharing", Snackbar.LENGTH_INDEFINITE)
                     .setAction("drop", button -> uploadIntent = null)
                     .setActionTextColor(getResources().getColor(R.color.colorAccent));
-
-
-            final FrameLayout snackBarView = (FrameLayout) snackbar.getView();
-            snackBarView.setBackground(getResources().getDrawable(R.drawable.snackbar_larger_margin));
             snackbar.show();
         }
     }
