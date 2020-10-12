@@ -133,7 +133,7 @@
         </module>
         <module name="ImportOrder">
             <property name="severity" value="info" />
-            <property name="groups" value="com,android,androidx,java,javax,*" />
+            <property name="groups" value="android,androidx,com,java,javax,*" />
             <property name="ordered" value="true" />
             <property name="separated" value="true" />
             <property name="option" value="under" />

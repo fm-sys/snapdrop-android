@@ -102,22 +102,7 @@ public class MainActivity extends Activity {
         webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> webView.loadUrl(JavaScriptInterface.getBase64StringFromBlobUrl(url, mimetype)));
 
         refreshWebsite();
-
-        final Intent intent = getIntent();
-        if ((Intent.ACTION_SEND.equals(intent.getAction()) || Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction())) && intent.getType() != null) {
-            uploadIntent = intent;
-
-            final View coordinatorLayout = findViewById(R.id.coordinatorLayout);
-            final Snackbar snackbar = Snackbar
-                    .make(coordinatorLayout, "A file is selected for sharing", Snackbar.LENGTH_INDEFINITE)
-                    .setAction("drop", button -> uploadIntent = null)
-                    .setActionTextColor(getResources().getColor(R.color.colorAccent));
-
-
-            final FrameLayout snackBarView = (FrameLayout) snackbar.getView();
-            snackBarView.setBackground(getResources().getDrawable(R.drawable.snackbar_larger_margin));
-            snackbar.show();
-        }
+        onNewIntent(getIntent());
 
         if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
                 && (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
@@ -151,6 +136,24 @@ public class MainActivity extends Activity {
             return activeNetworkInfo != null && activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI;
         }
         return false;
+    }
+
+    @Override
+    protected void onNewIntent(final Intent intent) {
+        if ((Intent.ACTION_SEND.equals(intent.getAction()) || Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction())) && intent.getType() != null) {
+            uploadIntent = intent;
+
+            final View coordinatorLayout = findViewById(R.id.coordinatorLayout);
+            final Snackbar snackbar = Snackbar
+                    .make(coordinatorLayout, "A file is selected for sharing", Snackbar.LENGTH_INDEFINITE)
+                    .setAction("drop", button -> uploadIntent = null)
+                    .setActionTextColor(getResources().getColor(R.color.colorAccent));
+
+
+            final FrameLayout snackBarView = (FrameLayout) snackbar.getView();
+            snackBarView.setBackground(getResources().getDrawable(R.drawable.snackbar_larger_margin));
+            snackbar.show();
+        }
     }
 
     @Override

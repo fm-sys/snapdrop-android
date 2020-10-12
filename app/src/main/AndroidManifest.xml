@@ -18,6 +18,7 @@
         <activity
             android:name="com.fmsys.snapdrop.MainActivity"
             android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
