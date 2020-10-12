@@ -8,9 +8,13 @@ android {
         applicationId "com.fmsys.snapdrop"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-
+        versionCode 2
+        versionName "1.1"
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "snapdrop_v${defaultConfig.versionName}.apk"
+            }
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
