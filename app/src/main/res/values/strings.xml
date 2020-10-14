@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Snapdrop</string>
+
+    <string name="app_update">Update available</string>
+    <string name="app_update_summary">Updates usually contain important bug fixes and great new features. Installation is recommended…</string>
+    <string name="app_update_install">Install</string>
+    <string name="app_update_show_details">More details</string>
+    <string name="app_update_download_info">Downloading update</string>
+    <string name="app_update_download_text">This should only take a few seconds…</string>
 </resources>

@@ -17,3 +17,4 @@
 # but have a common checkstyle configuration
 !.idea/checkstyle-idea.xml
 *.iml
+*.lnk

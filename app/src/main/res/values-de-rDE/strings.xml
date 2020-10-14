@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="app_update">Update verfügbar</string>
+    <string name="app_update_summary">Updates enthalten in der Regel wichtige Fehlerbehebungen und tolle neue Funktionen. Die Installation wird empfohlen…</string>
+    <string name="app_update_install">Installieren</string>
+    <string name="app_update_show_details">Weitere Informationen</string>
+    <string name="app_update_download_info">Update wird heruntergeladen</string>
+    <string name="app_update_download_text">Dies sollte nur wenige Sekunden in Anspruch nehmen…</string>
+</resources>
