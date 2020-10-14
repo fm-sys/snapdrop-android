@@ -15,6 +15,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -30,6 +31,7 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.content.ContextCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -119,6 +121,7 @@ public class MainActivity extends Activity {
         intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
         registerReceiver(receiver, intentFilter);
 
+        new UpdateChecker().execute("");
     }
 
     private void refreshWebsite() {
@@ -276,6 +279,37 @@ public class MainActivity extends Activity {
 
         }
 
+    }
+
+    private class UpdateChecker extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(final String... params) {
+            try {
+                return UpdateUtils.checkUpdate();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(final String result) {
+            try {
+                if (result == null) {
+                    return;
+                }
+
+                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme)
+                        .setTitle(R.string.app_update)
+                        .setMessage(R.string.app_update_summary)
+                        .setPositiveButton(R.string.app_update_install, (dialog, id) -> UpdateUtils.runUpdate(MainActivity.this, result))
+                        .setNegativeButton(R.string.app_update_show_details, (dialog, id) -> UpdateUtils.showUpdatesInBrowserIntent(MainActivity.this));
+                builder.create().show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }
