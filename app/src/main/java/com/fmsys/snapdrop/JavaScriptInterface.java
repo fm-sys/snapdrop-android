@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.Environment;
 import android.os.Handler;
 import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.MimeTypeMap;
@@ -28,16 +27,16 @@ import java.io.IOException;
 public class JavaScriptInterface {
     private MainActivity context;
 
-    public JavaScriptInterface(MainActivity context) {
+    public JavaScriptInterface(final MainActivity context) {
         this.context = context;
     }
 
     @JavascriptInterface
-    public void getBase64FromBlobData(String base64Data, String contentDisposition, String mimetype) throws IOException {
-        convertBase64StringToPdfAndStoreIt(base64Data, contentDisposition, mimetype);
+    public void getBase64FromBlobData(final String base64Data, final String contentDisposition, final String mimetype) throws IOException {
+        convertBase64StringToFileAndStoreIt(base64Data, contentDisposition, mimetype);
     }
 
-    public static String getBase64StringFromBlobUrl(String blobUrl, String mimetype) {
+    public static String getBase64StringFromBlobUrl(final String blobUrl, final String mimetype) {
         if (blobUrl.startsWith("blob")) {
             return "javascript: var xhr = new XMLHttpRequest();" +
                     "xhr.open('GET', '" + blobUrl + "', true);" +
@@ -60,35 +59,35 @@ public class JavaScriptInterface {
         return "javascript: console.log('It is not a Blob URL');";
     }
 
-    private void convertBase64StringToPdfAndStoreIt(String base64PDf, String contentDisposition, String mimetype) throws IOException {
+    private void convertBase64StringToFileAndStoreIt(final String base64file, final String contentDisposition, final String mimetype) throws IOException {
         final int notificationId = 1;
 
         final File dwldsPath = getFinalNewDestinationFile(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_DOWNLOADS), contentDisposition);
-        byte[] pdfAsBytes = Base64.decode(base64PDf.replaceFirst("^data:" + mimetype + ";base64,", ""), 0);
+        final byte[] fileAsBytes = Base64.decode(base64file.replaceFirst("^data:" + mimetype + ";base64,", ""), 0);
         if (dwldsPath.createNewFile()) {
-            FileOutputStream os = new FileOutputStream(dwldsPath, false);
-            os.write(pdfAsBytes);
+            final FileOutputStream os = new FileOutputStream(dwldsPath, false);
+            os.write(fileAsBytes);
             os.flush();
         }
 
         if (dwldsPath.exists()) {
-            Intent intent = new Intent();
+            final Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
-            Uri apkURI = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", dwldsPath);
+            final Uri apkURI = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", dwldsPath);
             intent.setDataAndType(apkURI, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
-            String CHANNEL_ID = "MYCHANNEL";
+            final PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+            final String channelId = "MYCHANNEL";
             final NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, "download notification", NotificationManager.IMPORTANCE_LOW);
-                Notification notification = new Notification.Builder(context, CHANNEL_ID)
+                final NotificationChannel notificationChannel = new NotificationChannel(channelId, "download notification", NotificationManager.IMPORTANCE_LOW);
+                final Notification notification = new Notification.Builder(context, channelId)
                         .setContentText(dwldsPath.getName())
                         .setContentTitle("Download successful")
                         .setContentIntent(pendingIntent)
-                        .setChannelId(CHANNEL_ID)
+                        .setChannelId(channelId)
                         .setSmallIcon(android.R.drawable.stat_sys_download_done)
                         .build();
                 if (notificationManager != null) {
@@ -97,7 +96,7 @@ public class JavaScriptInterface {
                 }
 
             } else {
-                NotificationCompat.Builder b = new NotificationCompat.Builder(context, CHANNEL_ID)
+                final NotificationCompat.Builder b = new NotificationCompat.Builder(context, channelId)
                         .setDefaults(NotificationCompat.DEFAULT_ALL)
                         .setWhen(System.currentTimeMillis())
                         .setSmallIcon(android.R.drawable.stat_sys_download_done)
@@ -107,14 +106,14 @@ public class JavaScriptInterface {
 
                 if (notificationManager != null) {
                     notificationManager.notify(notificationId, b.build());
-                    Handler h = new Handler();
-                    long delayInMilliseconds = 1000;
+                    final Handler h = new Handler();
+                    final long delayInMilliseconds = 1000;
                     h.postDelayed(() -> notificationManager.cancel(notificationId), delayInMilliseconds);
                 }
             }
 
-            View coordinatorLayout = context.findViewById(R.id.coordinatorLayout);
-            Snackbar snackbar = Snackbar.make(coordinatorLayout, "file downloaded", Snackbar.LENGTH_SHORT);
+            final View coordinatorLayout = context.findViewById(R.id.coordinatorLayout);
+            final Snackbar snackbar = Snackbar.make(coordinatorLayout, "file downloaded", Snackbar.LENGTH_SHORT);
 
             final FrameLayout snackBarView = (FrameLayout) snackbar.getView();
             snackBarView.setBackground(context.getResources().getDrawable(R.drawable.snackbar_larger_margin));
@@ -135,7 +134,7 @@ public class JavaScriptInterface {
 
         if (extension != null) {
             extension = "." + extension;
-            int extInd = filename.lastIndexOf(extension);
+            final int extInd = filename.lastIndexOf(extension);
             nameWithoutExtensionOrIncrement = new StringBuilder(filename).replace(extInd, extInd + extension.length(), "").toString();
         } else {
             extension = "";
@@ -151,7 +150,7 @@ public class JavaScriptInterface {
     }
 
 
-    public static String getFileExtension(String filename) {
+    public static String getFileExtension(final String filename) {
         if (filename == null) {
             return null;
         }
