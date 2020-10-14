@@ -17,11 +17,11 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.File;
 import java.io.IOException;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public final class UpdateUtils {
