@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
-import android.os.Handler;
 import android.util.Base64;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -82,13 +81,14 @@ public class JavaScriptInterface {
             final NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                final NotificationChannel notificationChannel = new NotificationChannel(channelId, "download notification", NotificationManager.IMPORTANCE_LOW);
+                final NotificationChannel notificationChannel = new NotificationChannel(channelId, context.getString(R.string.notification_channel_name), NotificationManager.IMPORTANCE_DEFAULT);
                 final Notification notification = new Notification.Builder(context, channelId)
                         .setContentText(dwldsPath.getName())
-                        .setContentTitle("Download successful")
+                        .setContentTitle(context.getString(R.string.download_successful))
                         .setContentIntent(pendingIntent)
                         .setChannelId(channelId)
                         .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                        .setAutoCancel(true)
                         .build();
                 if (notificationManager != null) {
                     notificationManager.createNotificationChannel(notificationChannel);
@@ -100,20 +100,23 @@ public class JavaScriptInterface {
                         .setDefaults(NotificationCompat.DEFAULT_ALL)
                         .setWhen(System.currentTimeMillis())
                         .setSmallIcon(android.R.drawable.stat_sys_download_done)
-                        //.setContentIntent(pendingIntent)
-                        .setContentTitle("MY TITLE")
-                        .setContentText("MY TEXT CONTENT");
+                        .setContentIntent(pendingIntent)
+                        .setAutoCancel(true)
+                        .setContentTitle(context.getString(R.string.download_successful))
+                        .setContentText(dwldsPath.getName());
 
                 if (notificationManager != null) {
                     notificationManager.notify(notificationId, b.build());
-                    final Handler h = new Handler();
-                    final long delayInMilliseconds = 1000;
-                    h.postDelayed(() -> notificationManager.cancel(notificationId), delayInMilliseconds);
                 }
             }
 
             final View coordinatorLayout = context.findViewById(R.id.coordinatorLayout);
-            final Snackbar snackbar = Snackbar.make(coordinatorLayout, "file downloaded", Snackbar.LENGTH_SHORT);
+            final Snackbar snackbar = Snackbar.make(coordinatorLayout, "file downloaded", Snackbar.LENGTH_LONG)
+                    .setAction("open", button -> {
+                        context.startActivity(intent);
+                        notificationManager.cancel(notificationId);
+                    })
+                    .setActionTextColor(context.getResources().getColor(R.color.colorAccent));
 
             final FrameLayout snackBarView = (FrameLayout) snackbar.getView();
             snackBarView.setBackground(context.getResources().getDrawable(R.drawable.snackbar_larger_margin));

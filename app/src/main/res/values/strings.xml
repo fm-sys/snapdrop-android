@@ -7,4 +7,6 @@
     <string name="app_update_show_details">More details</string>
     <string name="app_update_download_info">Downloading update</string>
     <string name="app_update_download_text">This should only take a few seconds…</string>
+    <string name="download_successful">Download successful</string>
+    <string name="notification_channel_name">Download completed</string>
 </resources>

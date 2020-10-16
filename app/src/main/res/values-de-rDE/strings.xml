@@ -7,4 +7,6 @@
     <string name="app_update_show_details">Weitere Informationen</string>
     <string name="app_update_download_info">Update wird heruntergeladen</string>
     <string name="app_update_download_text">Dies sollte nur wenige Sekunden in Anspruch nehmen…</string>
+    <string name="download_successful">Download erfolgreich</string>
+    <string name="notification_channel_name">Download abgeschlossen</string>
 </resources>
