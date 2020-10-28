@@ -9,4 +9,7 @@
     <string name="app_update_download_text">This should only take a few seconds…</string>
     <string name="download_successful">Download successful</string>
     <string name="notification_channel_name">Download completed</string>
+    <string name="title_activity_about">About Snapdrop for Android</string>
+    <string name="title_activity_about_short">About Snapdrop</string>
+    <string name="developer_notice">Snapdrop for Android by fm-sys</string>
 </resources>
