@@ -11,9 +11,11 @@
     <string name="notification_channel_name">Download completed</string>
     <string name="title_activity_about">About Snapdrop for Android</string>
     <string name="title_activity_about_short">About Snapdrop</string>
-    <string name="developer_notice">Snapdrop for Android by fm-sys</string>
+    <string name="developer_notice" translatable="false">Snapdrop for Android by <a href="https://github.com/fm-sys">fm-sys</a></string>
     <string name="intent_file">A file is selected for sharing</string>
     <string name="intent_files">Files are selected for sharing</string>
     <string name="intent_content">Content is selected for sharing</string>
     <string name="open">open</string>
+    <string name="error_filechooser">Cannot open file chooser</string>
+    <string name="error_network">Please verify that you are connected with a WiFi network</string>
 </resources>

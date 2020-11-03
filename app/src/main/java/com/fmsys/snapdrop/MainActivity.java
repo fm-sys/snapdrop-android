@@ -139,7 +139,7 @@ public class MainActivity extends Activity {
         if (isInternetAvailable()) {
             webView.loadUrl("https://snapdrop.net/");
         } else {
-            final String offlineHtml = "<html><body><div style=\"width: 100%; text-align:center; position: absolute; top: 20%; font-size: 30px;\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"500px\" height=\"500px\" fill=\"gray\" width=\"48px\" height=\"48px\"><path d=\"M0 0h24v24H0zm0 0h24v24H0z\" fill=\"none\"/><path d=\"M22 6V4H6.82l2 2H22zM1.92 1.65L.65 2.92l1.82 1.82C2.18 5.08 2 5.52 2 6v11H0v3h17.73l2.35 2.35 1.27-1.27L3.89 3.62 1.92 1.65zM4 6.27L14.73 17H4V6.27zM23 8h-6c-.55 0-1 .45-1 1v4.18l2 2V10h4v7h-2.18l3 3H23c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1z\"/></svg><br/><br/>Please verify that you are connected with a WiFi network</div></body></html>";
+            final String offlineHtml = "<html><body><div style=\"width: 100%; text-align:center; position: absolute; top: 20%; font-size: 36px;\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"500px\" height=\"500px\" fill=\"gray\" width=\"48px\" height=\"48px\"><path d=\"M0 0h24v24H0zm0 0h24v24H0z\" fill=\"none\"/><path d=\"M22 6V4H6.82l2 2H22zM1.92 1.65L.65 2.92l1.82 1.82C2.18 5.08 2 5.52 2 6v11H0v3h17.73l2.35 2.35 1.27-1.27L3.89 3.62 1.92 1.65zM4 6.27L14.73 17H4V6.27zM23 8h-6c-.55 0-1 .45-1 1v4.18l2 2V10h4v7h-2.18l3 3H23c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1z\"/></svg><br/><br/>" + getString(R.string.error_network) + "</div></body></html>";
             webView.loadData(offlineHtml, "text/html", "utf-8");
             currentlyOffline = true;
         }
@@ -278,7 +278,7 @@ public class MainActivity extends Activity {
                 startActivityForResult(intent, REQUEST_SELECT_FILE);
             } catch (ActivityNotFoundException e) {
                 uploadMessage = null;
-                Toast.makeText(MainActivity.this, "Cannot Open File Chooser", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.error_filechooser, Toast.LENGTH_LONG).show();
                 return false;
             }
             return true;
