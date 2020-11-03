@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Environment;
+import android.text.TextUtils;
 import android.util.Base64;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -45,9 +46,9 @@ public class JavaScriptInterface {
                     "xhr.responseType = 'blob';" +
                     "xhr.onload = function(e) {" +
                     "    if (this.status == 200) {" +
-                    "        var blobPdf = this.response;" +
+                    "        var blobFile = this.response;" +
                     "        var reader = new FileReader();" +
-                    "        reader.readAsDataURL(blobPdf);" +
+                    "        reader.readAsDataURL(blobFile);" +
                     "        reader.onloadend = function() {" +
                     "            base64data = reader.result;" +
                     "            fileName = document.querySelector('a[href=\"" + blobUrl + "\"]').getAttribute('download');" +
@@ -113,22 +114,33 @@ public class JavaScriptInterface {
             }
 
             final View coordinatorLayout = context.findViewById(R.id.coordinatorLayout);
-            final Snackbar snackbar = Snackbar.make(coordinatorLayout, "file downloaded", Snackbar.LENGTH_LONG)
-                    .setAction("open", button -> {
-                        context.startActivity(intent);
-                        notificationManager.cancel(notificationId);
+            final Snackbar snackbar = Snackbar.make(coordinatorLayout, R.string.download_successful, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.open, button -> {
+                        try {
+                            context.startActivity(intent);
+                            notificationManager.cancel(notificationId);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                     })
                     .setActionTextColor(context.getResources().getColor(R.color.colorAccent));
 
             final FrameLayout snackBarView = (FrameLayout) snackbar.getView();
             snackBarView.setBackground(context.getResources().getDrawable(R.drawable.snackbar_larger_margin));
             snackbar.show();
+
+            // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
             context.uploadIntent = null;
 
-            // This part can raise errors when the downloaded file is not a media file. So don't put relevant lines below it!
-            final DownloadManager downloadManager = (DownloadManager) context.getSystemService(context.DOWNLOAD_SERVICE);
-            downloadManager.addCompletedDownload(dwldsPath.getName(), dwldsPath.getName(), true, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)), dwldsPath.getAbsolutePath(), dwldsPath.length(), false);
-            MediaScannerConnection.scanFile(context, new String[]{dwldsPath.getPath()}, null, null);
+            // This part can raise errors when the downloaded file is not a media file
+            try {
+                final DownloadManager downloadManager = (DownloadManager) context.getSystemService(context.DOWNLOAD_SERVICE);
+                downloadManager.addCompletedDownload(dwldsPath.getName(), dwldsPath.getName(), true, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)), dwldsPath.getAbsolutePath(), dwldsPath.length(), false);
+                MediaScannerConnection.scanFile(context, new String[]{dwldsPath.getPath()}, null, null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -175,4 +187,12 @@ public class JavaScriptInterface {
             return filename.substring(indexOfExtension + 1).toLowerCase();
         }
     }
+
+
+    public static String getSendTextDialogWithPreInsertedString(final String text) {
+        return "javascript: " +
+                //"Events.fire('text-recipient', '" + peerId + "');" +
+                "var x = document.getElementById(\"textInput\").value=\"" + TextUtils.htmlEncode(text) + "\";";
+    }
+
 }

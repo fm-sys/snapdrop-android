@@ -20,6 +20,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemClock;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -51,6 +53,9 @@ public class MainActivity extends Activity {
     private boolean currentlyOffline = true;
     private boolean currentlyLoading = false;
 
+    private float webviewClickX = 0.0f;
+    private float webviewClickY = 0.0f;
+
     public Intent uploadIntent = null;
 
     private ConnectivityManager connMgr = null;
@@ -72,7 +77,7 @@ public class MainActivity extends Activity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    @SuppressLint("SetJavaScriptEnabled")
+    @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility"})
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
@@ -117,6 +122,12 @@ public class MainActivity extends Activity {
             pullToRefresh.setRefreshing(false);
         });
 
+        webView.setOnTouchListener((v, event) -> {
+            webviewClickX = event.getX();
+            webviewClickY = event.getY();
+            return false;
+        });
+
         final IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
         registerReceiver(receiver, intentFilter);
@@ -147,10 +158,13 @@ public class MainActivity extends Activity {
         if ((Intent.ACTION_SEND.equals(intent.getAction()) || Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction())) && intent.getType() != null) {
             uploadIntent = intent;
 
+            final String clipText = getTextFromUploadIntent();
+            webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText));
+
             final View coordinatorLayout = findViewById(R.id.coordinatorLayout);
             final Snackbar snackbar = Snackbar
-                    .make(coordinatorLayout, "A file is selected for sharing", Snackbar.LENGTH_INDEFINITE)
-                    .setAction("drop", button -> uploadIntent = null)
+                    .make(coordinatorLayout, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
+                    .setAction(android.R.string.cancel, button -> uploadIntent = null)
                     .setActionTextColor(getResources().getColor(R.color.colorAccent));
             snackbar.show();
         }
@@ -198,6 +212,23 @@ public class MainActivity extends Activity {
         uploadMessage = null;
     }
 
+    private String getTextFromUploadIntent() {
+        final StringBuilder result = new StringBuilder();
+        if (uploadIntent != null) {
+            final ClipData clip = uploadIntent.getClipData();
+            if (clip != null && clip.getItemCount() > 0) {
+                for (int i = 0; i < clip.getItemCount(); i++) {
+                    final ClipData.Item item = clip.getItemAt(i);
+                    if (item.getText() != null) {
+                        result.append(item.getText()).append(" ");
+                    }
+                }
+            }
+        }
+        return result.toString().trim();
+    }
+
+
     class MyWebChromeClient extends WebChromeClient {
 
         public boolean onShowFileChooser(final WebView mWebView, final ValueCallback<Uri[]> filePathCallback, final FileChooserParams fileChooserParams) {
@@ -209,8 +240,35 @@ public class MainActivity extends Activity {
             uploadMessage = filePathCallback;
 
             if (uploadIntent != null) {
-                uploadFromIntent(uploadIntent);
-                return true;
+                try {
+                    uploadFromIntent(uploadIntent);
+                    return true;
+                } catch (Exception e) {
+                    // pass - can happen, when a text is selected for sharing instead of a file
+                }
+
+                try {
+                    // try to open text share dialog via a simulated long click to the previous coordinates if no files are attached to the upload intent
+                    final long downTime = SystemClock.uptimeMillis();
+                    final long eventTime = SystemClock.uptimeMillis();
+                    final int metaState = 0;
+                    final MotionEvent motionEvent = MotionEvent.obtain(
+                            downTime,
+                            eventTime,
+                            MotionEvent.ACTION_DOWN,
+                            webviewClickX,
+                            webviewClickY,
+                            metaState
+                    );
+
+                    //webView.dispatchTouchEvent(motionEvent);
+                    motionEvent.recycle();
+
+                    return true;
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
 
 
@@ -248,6 +306,8 @@ public class MainActivity extends Activity {
                 if (loadAgain) {
                     loadAgain = false;
                     refreshWebsite();
+                } else {
+                    webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
                 }
             }
 
@@ -311,5 +371,4 @@ public class MainActivity extends Activity {
             }
         }
     }
-
 }

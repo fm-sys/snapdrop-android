@@ -11,4 +11,8 @@
     <string name="notification_channel_name">Download abgeschlossen</string>
     <string name="title_activity_about">Über Snapdrop für Android</string>
     <string name="title_activity_about_short">Über Snapdrop</string>
+    <string name="intent_file">Datei ausgewählt</string>
+    <string name="intent_files">Dateien ausgewählt</string>
+    <string name="intent_content">Inhalt ausgewählt</string>
+    <string name="open">öffnen</string>
 </resources>

@@ -12,4 +12,8 @@
     <string name="title_activity_about">About Snapdrop for Android</string>
     <string name="title_activity_about_short">About Snapdrop</string>
     <string name="developer_notice">Snapdrop for Android by fm-sys</string>
+    <string name="intent_file">A file is selected for sharing</string>
+    <string name="intent_files">Files are selected for sharing</string>
+    <string name="intent_content">Content is selected for sharing</string>
+    <string name="open">open</string>
 </resources>
