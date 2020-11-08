@@ -10,8 +10,10 @@ import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Environment;
+import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.util.Pair;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.MimeTypeMap;
@@ -38,9 +40,13 @@ public class JavaScriptInterface {
         convertBase64StringToFileAndStoreIt(base64Data, contentDisposition, mimetype);
     }
 
-    public static String getBase64StringFromBlobUrl(final String blobUrl, final String mimetype) {
+    public static String getBase64StringFromBlobUrl(final String blobUrl, final String filename, final String mimetype) {
         if (blobUrl.startsWith("blob")) {
-            return "javascript: var xhr = new XMLHttpRequest();" +
+            return "javascript: " +
+                    // "fileName = document.querySelector('a[href=\"" + blobUrl + "\"]').getAttribute('download');" + //sometimes returns null - that's why we hand over the filename explicitly
+                    "fileName = \"" + filename + "\";" +
+                    "" +
+                    "var xhr = new XMLHttpRequest();" +
                     "xhr.open('GET', '" + blobUrl + "', true);" +
                     "xhr.setRequestHeader('Content-type','" + mimetype + "');" +
                     "xhr.responseType = 'blob';" +
@@ -51,7 +57,6 @@ public class JavaScriptInterface {
                     "        reader.readAsDataURL(blobFile);" +
                     "        reader.onloadend = function() {" +
                     "            base64data = reader.result;" +
-                    "            fileName = document.querySelector('a[href=\"" + blobUrl + "\"]').getAttribute('download');" +
                     "            SnapdropAndroid.getBase64FromBlobData(base64data, fileName, \"" + mimetype + "\");" +
                     "        }" +
                     "    }" +
@@ -62,7 +67,7 @@ public class JavaScriptInterface {
     }
 
     private void convertBase64StringToFileAndStoreIt(final String base64file, final String contentDisposition, final String mimetype) throws IOException {
-        final int notificationId = 1;
+        final int notificationId = (int) SystemClock.uptimeMillis();
 
         final File dwldsPath = getFinalNewDestinationFile(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_DOWNLOADS), contentDisposition);
@@ -193,6 +198,17 @@ public class JavaScriptInterface {
         return "javascript: " +
                 //"Events.fire('text-recipient', '" + peerId + "');" +
                 "var x = document.getElementById(\"textInput\").value=\"" + TextUtils.htmlEncode(text) + "\";";
+    }
+    public static String initialiseWebsite() {
+        return "javascript: " +
+                "window.addEventListener('file-received', e => {\n" +
+                "   SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size)" +
+                "}, false);";
+    }
+
+    @JavascriptInterface
+    public void saveDownloadFileName(final String name, final String size) {
+        context.downloadFilesList.add(Pair.create(name, size));
     }
 
 }

@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
+import android.util.Pair;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
@@ -40,8 +41,15 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
+
+    private static final String baseURL = "https://fm-sys.github.io/snapdrop/client/";
+    //private static final String baseURL = "https://snapdrop.net/";
+
     public WebView webView;
     public LinearLayoutCompat imageViewLayout;
     public SwipeRefreshLayout pullToRefresh;
@@ -49,12 +57,13 @@ public class MainActivity extends Activity {
     public ValueCallback<Uri[]> uploadMessage;
     public static final int REQUEST_SELECT_FILE = 100;
 
-    private boolean loadAgain = true;     // workaround cause snapdrop website does not show the correct devices after first load
+    private boolean loadAgain = true; // workaround cause Snapdrop website does not show the correct devices after first load
     private boolean currentlyOffline = true;
     private boolean currentlyLoading = false;
 
     private float webviewClickX = 0.0f;
     private float webviewClickY = 0.0f;
+    public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
 
     public Intent uploadIntent = null;
 
@@ -102,12 +111,32 @@ public class MainActivity extends Activity {
         webView.getSettings().setAllowContentAccess(true);
         webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setSupportMultipleWindows(true);
+        webView.getSettings().setUserAgentString("Snapdrop for Android/" + BuildConfig.VERSION_NAME);
         webView.addJavascriptInterface(new JavaScriptInterface(MainActivity.this), "SnapdropAndroid");
         webView.setWebChromeClient(new MyWebChromeClient());
         webView.setWebViewClient(new CustomWebViewClient());
         webView.clearCache(true);
 
-        webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> webView.loadUrl(JavaScriptInterface.getBase64StringFromBlobUrl(url, mimetype)));
+        webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
+
+            String filename = null;
+            int pos = 0;
+            for (Pair<String, String> file : downloadFilesList) {
+                pos++;
+
+                if (file.second.equals(String.valueOf(contentLength))) {
+                    filename = file.first;
+                    break;
+                }
+            }
+            downloadFilesList = downloadFilesList.subList(pos, downloadFilesList.size());
+
+            android.util.Log.e("array", downloadFilesList.toString());
+            android.util.Log.e("filename", filename);
+
+            webView.loadUrl(JavaScriptInterface.getBase64StringFromBlobUrl(url, filename, mimetype));
+
+        });
 
         refreshWebsite();
         onNewIntent(getIntent());
@@ -137,7 +166,7 @@ public class MainActivity extends Activity {
 
     private void refreshWebsite() {
         if (isInternetAvailable()) {
-            webView.loadUrl("https://snapdrop.net/");
+            webView.loadUrl(baseURL);
         } else {
             final String offlineHtml = "<html><body><div style=\"width: 100%; text-align:center; position: absolute; top: 20%; font-size: 36px;\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"500px\" height=\"500px\" fill=\"gray\" width=\"48px\" height=\"48px\"><path d=\"M0 0h24v24H0zm0 0h24v24H0z\" fill=\"none\"/><path d=\"M22 6V4H6.82l2 2H22zM1.92 1.65L.65 2.92l1.82 1.82C2.18 5.08 2 5.52 2 6v11H0v3h17.73l2.35 2.35 1.27-1.27L3.89 3.62 1.92 1.65zM4 6.27L14.73 17H4V6.27zM23 8h-6c-.55 0-1 .45-1 1v4.18l2 2V10h4v7h-2.18l3 3H23c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1z\"/></svg><br/><br/>" + getString(R.string.error_network) + "</div></body></html>";
             webView.loadData(offlineHtml, "text/html", "utf-8");
@@ -300,13 +329,15 @@ public class MainActivity extends Activity {
         public void onPageFinished(final WebView view, final String url) {
             currentlyLoading = false;
 
-            if (url.startsWith("https://snapdrop.net/")) {
+            if (url.startsWith(baseURL)) {
                 currentlyOffline = false;
 
                 if (loadAgain) {
                     loadAgain = false;
                     refreshWebsite();
                 } else {
+                    //website initialisation
+                    webView.loadUrl(JavaScriptInterface.initialiseWebsite());
                     webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
                 }
             }
