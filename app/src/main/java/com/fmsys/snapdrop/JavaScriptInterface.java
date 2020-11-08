@@ -136,11 +136,11 @@ public class JavaScriptInterface {
             snackbar.show();
 
             // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
-            context.uploadIntent = null;
+            context.resetUploadIntent();
 
             // This part can raise errors when the downloaded file is not a media file
             try {
-                final DownloadManager downloadManager = (DownloadManager) context.getSystemService(context.DOWNLOAD_SERVICE);
+                final DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
                 downloadManager.addCompletedDownload(dwldsPath.getName(), dwldsPath.getName(), true, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)), dwldsPath.getAbsolutePath(), dwldsPath.length(), false);
                 MediaScannerConnection.scanFile(context, new String[]{dwldsPath.getPath()}, null, null);
             } catch (Exception e) {
@@ -196,19 +196,31 @@ public class JavaScriptInterface {
 
     public static String getSendTextDialogWithPreInsertedString(final String text) {
         return "javascript: " +
-                //"Events.fire('text-recipient', '" + peerId + "');" +
                 "var x = document.getElementById(\"textInput\").value=\"" + TextUtils.htmlEncode(text) + "\";";
     }
     public static String initialiseWebsite() {
         return "javascript: " +
-                "window.addEventListener('file-received', e => {\n" +
-                "   SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size)" +
+                "window.addEventListener('file-received', e => {" +
+                "   SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);" +
+                "}, false);" +
+
+                "window.addEventListener('recipient-shortclicked', e => {" +
+                "   if (SnapdropAndroid.shouldOpenSendTextDialog()) {" +
+                "       Events.fire('text-recipient', e.detail);" +
+                "   }" +
                 "}, false);";
     }
+
+
 
     @JavascriptInterface
     public void saveDownloadFileName(final String name, final String size) {
         context.downloadFilesList.add(Pair.create(name, size));
+    }
+
+    @JavascriptInterface
+    public boolean shouldOpenSendTextDialog() {
+        return context.onlyText;
     }
 
 }

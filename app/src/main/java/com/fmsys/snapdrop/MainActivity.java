@@ -20,9 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.SystemClock;
 import android.util.Pair;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -61,8 +59,7 @@ public class MainActivity extends Activity {
     private boolean currentlyOffline = true;
     private boolean currentlyLoading = false;
 
-    private float webviewClickX = 0.0f;
-    private float webviewClickY = 0.0f;
+    public boolean onlyText = false;
     public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
 
     public Intent uploadIntent = null;
@@ -118,7 +115,6 @@ public class MainActivity extends Activity {
         webView.clearCache(true);
 
         webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
-
             String filename = null;
             int pos = 0;
             for (Pair<String, String> file : downloadFilesList) {
@@ -130,12 +126,7 @@ public class MainActivity extends Activity {
                 }
             }
             downloadFilesList = downloadFilesList.subList(pos, downloadFilesList.size());
-
-            android.util.Log.e("array", downloadFilesList.toString());
-            android.util.Log.e("filename", filename);
-
             webView.loadUrl(JavaScriptInterface.getBase64StringFromBlobUrl(url, filename, mimetype));
-
         });
 
         refreshWebsite();
@@ -149,12 +140,6 @@ public class MainActivity extends Activity {
         pullToRefresh.setOnRefreshListener(() -> {
             refreshWebsite();
             pullToRefresh.setRefreshing(false);
-        });
-
-        webView.setOnTouchListener((v, event) -> {
-            webviewClickX = event.getX();
-            webviewClickY = event.getY();
-            return false;
         });
 
         final IntentFilter intentFilter = new IntentFilter();
@@ -193,10 +178,26 @@ public class MainActivity extends Activity {
             final View coordinatorLayout = findViewById(R.id.coordinatorLayout);
             final Snackbar snackbar = Snackbar
                     .make(coordinatorLayout, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
-                    .setAction(android.R.string.cancel, button -> uploadIntent = null)
+                    .setAction(android.R.string.cancel, button -> resetUploadIntent())
                     .setActionTextColor(getResources().getColor(R.color.colorAccent));
             snackbar.show();
+
+            onlyText = true;
+            final Uri[] results = getUploadFromIntentUris(intent);
+            if (results != null) {
+                for (Uri uri : results) {
+                    if (uri != null) {
+                        onlyText = false;
+                        break;
+                    }
+                }
+            }
         }
+    }
+
+    public void resetUploadIntent () {
+        uploadIntent = null;
+        onlyText = false;
     }
 
     @Override
@@ -219,6 +220,11 @@ public class MainActivity extends Activity {
     }
 
     private void uploadFromIntent(final Intent intent) {
+        uploadMessage.onReceiveValue(getUploadFromIntentUris(intent));
+        uploadMessage = null;
+    }
+
+    private Uri[] getUploadFromIntentUris(final Intent intent) {
         Uri[] results = null;
         try {
             final String dataString = intent.getDataString();
@@ -235,10 +241,8 @@ public class MainActivity extends Activity {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(MainActivity.this, "File chooser failed", Toast.LENGTH_SHORT).show();
         }
-        uploadMessage.onReceiveValue(results);
-        uploadMessage = null;
+        return results;
     }
 
     private String getTextFromUploadIntent() {
@@ -274,29 +278,6 @@ public class MainActivity extends Activity {
                     return true;
                 } catch (Exception e) {
                     // pass - can happen, when a text is selected for sharing instead of a file
-                }
-
-                try {
-                    // try to open text share dialog via a simulated long click to the previous coordinates if no files are attached to the upload intent
-                    final long downTime = SystemClock.uptimeMillis();
-                    final long eventTime = SystemClock.uptimeMillis();
-                    final int metaState = 0;
-                    final MotionEvent motionEvent = MotionEvent.obtain(
-                            downTime,
-                            eventTime,
-                            MotionEvent.ACTION_DOWN,
-                            webviewClickX,
-                            webviewClickY,
-                            metaState
-                    );
-
-                    //webView.dispatchTouchEvent(motionEvent);
-                    motionEvent.recycle();
-
-                    return true;
-
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
             }
 
