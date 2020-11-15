@@ -108,7 +108,7 @@ public class MainActivity extends Activity {
         webView.getSettings().setAllowContentAccess(true);
         webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setSupportMultipleWindows(true);
-        webView.getSettings().setUserAgentString("Snapdrop for Android/" + BuildConfig.VERSION_NAME);
+        // webView.getSettings().setUserAgentString("Snapdrop for Android/" + BuildConfig.VERSION_NAME); // deactivated for now, as otherwise the device will be displayed as desktop PC
         webView.addJavascriptInterface(new JavaScriptInterface(MainActivity.this), "SnapdropAndroid");
         webView.setWebChromeClient(new MyWebChromeClient());
         webView.setWebViewClient(new CustomWebViewClient());
