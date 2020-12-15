@@ -17,4 +17,7 @@
     <string name="open">öffnen</string>
     <string name="error_filechooser">Dateiauswahl konnte nicht gestartet werden</string>
     <string name="error_network">Sie müssen mit einem WLAN verbunden sein, um Snapdrop nutzen zu können</string>
+    <string name="keep_on_title">Gerät wachhalten</string>
+    <string name="pref_category_settings">Einstellungen</string>
+    <string name="keep_on_summary">Aktivieren Sie diese Einstellung, wenn die Dateiübertragung bei ausgeschaltetem Bildschirm stockt bzw. abbricht (Neustart erforderlich)</string>
 </resources>

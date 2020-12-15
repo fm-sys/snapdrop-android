@@ -18,4 +18,7 @@
     <string name="open">open</string>
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
+    <string name="keep_on_summary">Enable if you have problems with transfers being interrupted when the screen turns off (restart required)</string>
+    <string name="keep_on_title">Keep screen on</string>
+    <string name="pref_category_settings">Settings</string>
 </resources>
