@@ -8,9 +8,10 @@ android {
         applicationId "com.fmsys.snapdrop"
         minSdkVersion 21
         targetSdkVersion 29
-        // version code and name need to be changed here when releasing a new version
-        versionCode 3
-        versionName "1.2"
+        // version code and name need to be changed here when releasing a new version.
+        // After that, build a new version via Build > Generate Signed Bundle / APK...
+        versionCode 4
+        versionName "1.3"
         applicationVariants.all { variant ->
             variant.outputs.all {
                 outputFileName = "snapdrop_v${defaultConfig.versionName}.apk"
