@@ -2,7 +2,7 @@
     <string name="app_name">Snapdrop</string>
 
     <string name="app_update">Update available</string>
-    <string name="app_update_summary">Updates usually contain important bug fixes and great new features. Installation is recommended…</string>
+    <string name="app_update_summary">Updates contain important bug fixes or great new features. The installation is recommended…</string>
     <string name="app_update_install">Install</string>
     <string name="app_update_show_details">More details</string>
     <string name="app_update_download_info">Downloading update</string>

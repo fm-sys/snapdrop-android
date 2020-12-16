@@ -308,8 +308,13 @@ public class MainActivity extends Activity {
 
         @Override
         public boolean onCreateWindow(final WebView view, final boolean dialog, final boolean userGesture, final Message resultMsg) {
-            final String data = view.getHitTestResult().getExtra();
-            final Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(data));
+            final String url = view.getHitTestResult().getExtra();
+            final Intent browserIntent;
+            if (url.endsWith("update.html#settings")) {
+                browserIntent = new Intent(MainActivity.this, AboutActivity.class);
+            } else {
+                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            }
             startActivity(browserIntent);
             return false;
         }

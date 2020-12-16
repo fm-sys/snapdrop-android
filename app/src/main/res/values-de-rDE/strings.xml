@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_update">Update verfügbar</string>
-    <string name="app_update_summary">Updates enthalten in der Regel wichtige Fehlerbehebungen und tolle neue Funktionen. Die Installation wird empfohlen…</string>
+    <string name="app_update_summary">Updates enthalten wichtige Fehlerbehebungen oder tolle neue Funktionen. Die Installation wird empfohlen…</string>
     <string name="app_update_install">Installieren</string>
     <string name="app_update_show_details">Weitere Informationen</string>
     <string name="app_update_download_info">Update wird heruntergeladen</string>
