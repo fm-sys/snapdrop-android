@@ -11,7 +11,7 @@
     <string name="notification_channel_name">Download concluído</string>
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
     <string name="title_activity_about_short">Sobre o Snapdrop</string>
-    <string name="developer_notice" translatable="false">Snapdrop para Android por <a href="https://github.com/fm-sys">fm-sys</a></string>
+    <string name="developer_notice">Snapdrop para Android por <a href="https://github.com/fm-sys">fm-sys</a></string>
     <string name="intent_file">O arquivo é selecionado para ser compartilhado</string>
     <string name="intent_files">Os arquivos são selecionados para ser compartilhados</string>
     <string name="intent_content">O conteúdo é selecionado para ser compartilhado</string>
