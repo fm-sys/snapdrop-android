@@ -27,6 +27,10 @@ android {
         }
     }
 
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+
     // use Java 8 to make use of lamda-expressions, etc.
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
