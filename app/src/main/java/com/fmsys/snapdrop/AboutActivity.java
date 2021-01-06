@@ -22,7 +22,6 @@ public class AboutActivity extends AppCompatActivity {
 
         final ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(adapter);
-        viewPager2.setOffscreenPageLimit(6);
     }
 
     public class ViewPagerAdapter extends FragmentStateAdapter {
@@ -35,7 +34,7 @@ public class AboutActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(final int position) {
-            if (position == 0) {
+            if (position == 1) {
                 return new AboutFragment();
             }
             return new SettingsFragment();

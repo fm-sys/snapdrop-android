@@ -10,5 +10,37 @@
             android:summary="@string/keep_on_summary"
             android:title="@string/keep_on_title"
             app:iconSpaceReserved="false" />
+        <Preference
+            android:key="@string/pref_device_name"
+            android:maxLines="1"
+            android:title="@string/pref_device_name_title"
+            android:summary="@string/pref_device_name_summary"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/title_activity_about"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/pref_developers"
+            android:title="@string/developers"
+            android:summary="@string/developer_notice_settings"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+        <Preference
+            android:key="@string/pref_license"
+            android:title="@string/license"
+            android:summary="GNU General Public License v3.0"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+        <Preference
+        android:key="@string/pref_version"
+        android:title="@string/version"
+        app:iconSpaceReserved="false"
+        app:singleLineTitle="false" />
+
     </PreferenceCategory>
 </PreferenceScreen>
