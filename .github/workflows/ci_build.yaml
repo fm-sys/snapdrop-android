@@ -1,5 +1,5 @@
 name: APK Build
-on: [pull_request, push]
+on: [pull_request, push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -7,4 +7,6 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
       - name: Build the app
-        run: ./gradlew build
+        run: |
+          chmod +x gradlew
+          ./gradlew build
