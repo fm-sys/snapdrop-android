@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: khan/pull-request-comment-trigger@v1
+      - uses: khan/pull-request-comment-trigger@master
         id: check
         with:
           trigger: 'retest this please'
