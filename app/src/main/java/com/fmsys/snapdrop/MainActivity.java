@@ -12,6 +12,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -121,7 +122,9 @@ public class MainActivity extends Activity {
         webView.getSettings().setAllowContentAccess(true);
         webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setSupportMultipleWindows(true);
-        // webView.getSettings().setUserAgentString("Snapdrop for Android/" + BuildConfig.VERSION_NAME); // deactivated for now, as otherwise the device will be displayed as desktop PC
+        if (prefs.contains(getString(R.string.pref_device_name))) {
+            webView.getSettings().setUserAgentString("Mozilla/5.0 (Linux; Android " + Build.VERSION.RELEASE + "; Build/HUAWEI" + prefs.getString(getString(R.string.pref_device_name), getString(R.string.app_name)) + ") Version/" + BuildConfig.VERSION_NAME + (isTablet(this) ? " Tablet " : " Mobile ") + "Safari/537.36");
+        }
         webView.addJavascriptInterface(new JavaScriptInterface(MainActivity.this), "SnapdropAndroid");
         webView.setWebChromeClient(new MyWebChromeClient());
         webView.setWebViewClient(new CustomWebViewClient());
@@ -199,6 +202,10 @@ public class MainActivity extends Activity {
             return activeNetworkInfo != null && activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI;
         }
         return false;
+    }
+
+    public static boolean isTablet(final Context ctx) {
+        return (ctx.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
     }
 
     @Override

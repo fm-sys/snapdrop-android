@@ -219,7 +219,6 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void updateLastOnlineTime() {
-        android.util.Log.e("time", "pref update");
         context.prefs.edit().putLong(context.getString(R.string.pref_last_server_connection), System.currentTimeMillis()).apply();
     }
 
