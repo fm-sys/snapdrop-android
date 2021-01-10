@@ -6,7 +6,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/fm-sys/snapdrop-android)](https://github.com/fm-sys/snapdrop-android/issues) 
 [![GitHub license](https://img.shields.io/github/license/fm-sys/snapdrop-android)](https://github.com/fm-sys/snapdrop-android/blob/master/LICENSE)
 # Snapdrop for Android
-Snapdrop for Android is an android client for the free and open source local file sharing solution https://snapdrop.net/. 
+**Snapdrop for Android** is an android client for the free and open source local file sharing solution https://snapdrop.net/. 
 
 >Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
 >
@@ -34,7 +34,7 @@ New releases are always listed up at the [GitHub releases page](https://github.c
 
 ## Contributing
 
-snapdrop-android originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! There are still some things which need to be fixed…
+**Snapdrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! There are still some things which need to be fixed…
 
 Also bug reports are very welcome! But note that this is not the right place to report bugs regarding the Snapdrop website which occur independently of this app.
 
