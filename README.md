@@ -8,19 +8,18 @@
 # Snapdrop for Android
 Snapdrop for Android is an android client for the free and open source local file sharing solution https://snapdrop.net/. 
 
-Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
-
-USB? - Old fashioned!
-Bluetooth? - Much too cumbersome and slow!
-E-mail? - Please not another email I write to myself!
-
-Snapdrop!
+>Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
+>
+> - USB? - Old fashioned!
+>
+> - Bluetooth? - Much too cumbersome and slow!
+>
+> - E-mail? - Please not another email I write to myself!
+> - Snapdrop!
 
 Snapdrop is a local file sharing solution which completely works in your browser. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
 
-However, even if it theoretically would fully work in your browser and you don't have to install anything, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with. 
-
-Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we have don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+However, even if it theoretically would fully work in your browser and you don't have to install anything, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with. Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we have don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
 
 
 <p align="center">
