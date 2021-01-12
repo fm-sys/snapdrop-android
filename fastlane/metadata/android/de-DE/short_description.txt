@@ -1,1 +1,1 @@
-Android client for the open source file sharing solution https://snapdrop.net/
+Android Client für die Open-Source-Datei-Freigabelösung https://snapdrop.net/
