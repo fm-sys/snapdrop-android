@@ -36,7 +36,7 @@ New releases are always listed up at the [GitHub releases page](https://github.c
 **Snapdrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
 
 ### Localization
-We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to translate **Snapdrop for Android** into your favorite language. If the language you're looking for does not yet exist, just post a note via Crowdin private message or create a small GitHub issue. I will activate the language as soon as possible.
+We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to translate **Snapdrop for Android** into your favorite language. If the language you're looking for does not yet exist, just post a note via [Crowdin private message](https://crowdin.com/messages/create/14335754/436610) or create a small GitHub issue. I will activate the language as soon as possible.
 
 <p align="center">
   <a href="https://crowdin.com/project/snapdrop-android" rel="nofollow">
