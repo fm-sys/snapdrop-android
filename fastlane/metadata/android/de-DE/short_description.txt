@@ -1,0 +1,1 @@
+Android Client für die Open-Source-Datei-Freigabelösung https://snapdrop.net/

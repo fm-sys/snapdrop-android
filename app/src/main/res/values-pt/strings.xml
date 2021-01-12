@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-
     <string name="app_update">Atualização disponível</string>
     <string name="app_update_summary">As atualizações contêm correções de falhas ou novas funcionalidades. A instalação é recomendada…</string>
     <string name="app_update_install">Instalar</string>
