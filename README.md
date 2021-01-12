@@ -33,11 +33,24 @@ However, even if it theoretically would fully work in your browser and you don't
 New releases are always listed up at the [GitHub releases page](https://github.com/fm-sys/snapdrop-android/releases/). If you prefer an F-Droid repo, you can use the binary repo [IzzyOnDroid](https://apt.izzysoft.de/fdroid/repo?fingerprint=3BF0D6ABFEAE2F401707B6D966BE743BF0EEE49C2561B9BA39073711F628937A) which you can add to your F-Droid client. However, I take no responsibility for the content offered there.
 
 ## Contributing
+**Snapdrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
 
-**Snapdrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! There are still some things which need to be fixed…
+### Localization
+We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to translate **Snapdrop for Android** into your favorite language. If the language you're looking for does not yet exist, just post a note via Crowdin private message or create a small GitHub issue. I will activate the language as soon as possible.
 
-Also bug reports are very welcome! But note that this is not the right place to report bugs regarding the Snapdrop website which occur independently of this app.
+<p align="center">
+  <a href="https://crowdin.com/project/snapdrop-android" rel="nofollow">
+    <img width="200" height="57" src="https://badges.crowdin.net/badge/dark/crowdin-on-light.png" srcset="https://badges.crowdin.net/badge/dark/crowdin-on-light.png 1x,https://badges.crowdin.net/badge/crowdin-on-light@2x.png 2x"  alt="Crowdin | Agile localization for tech companies" />
+  </a>
+</p>
 
-## credits
+
+Please do not change any translations manually in the .xml resource files. Nothing bad would happen though, but anyway these changes will be overwritten by Crowdin. If you want to add/change resource strings within your PR, Crowdin will automatically take care of the translations. 
+
+### Development
+If you want to help with development, this would be more than welcome! I am very glad about every pull request. However, if you plan to implement larger changes, please tell us in the [issue tracker](https://github.com/fm-sys/snapdrop-android/issues) before hacking on your great new feature. 
+
+
+## Credits
 - RobinLinus for [Snapdrop website development](https://github.com/RobinLinus/snapdrop) and the [launcher icon](https://github.com/RobinLinus/snapdrop/blob/663db5cbb39ab804b20f9cb6466effd9ed0e2d0c/client/images/logo_blue_512x512.png)
 - material design icons 
