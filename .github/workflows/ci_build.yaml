@@ -1,5 +1,12 @@
 name: APK Build
-on: [pull_request, push, workflow_dispatch]
+on: 
+  push:
+    branches:
+      - master
+
+  pull_request:
+  workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
