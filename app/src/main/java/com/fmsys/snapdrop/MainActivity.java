@@ -255,6 +255,15 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    public void onBackPressed() {
+        if (webView.getUrl().endsWith("#about")) {
+            webView.loadUrl(baseURL + "#");
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
     protected void onDestroy() {
         unregisterReceiver(receiver);
         super.onDestroy();
