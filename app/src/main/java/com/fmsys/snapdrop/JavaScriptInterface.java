@@ -204,6 +204,10 @@ public class JavaScriptInterface {
                 "   SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);" +
                 "}, false);" +
 
+                "window.addEventListener('serverconnection-active', e => {" +
+                "   SnapdropAndroid.updateLastOnlineTime();" +
+                "}, false);" +
+
                 "window.addEventListener('recipient-shortclicked', e => {" +
                 "   if (SnapdropAndroid.shouldOpenSendTextDialog()) {" +
                 "       Events.fire('text-recipient', e.detail);" +
@@ -212,6 +216,12 @@ public class JavaScriptInterface {
     }
 
 
+
+    @JavascriptInterface
+    public void updateLastOnlineTime() {
+        android.util.Log.e("time", "pref update");
+        context.prefs.edit().putLong(context.getString(R.string.pref_last_server_connection), System.currentTimeMillis()).apply();
+    }
 
     @JavascriptInterface
     public void saveDownloadFileName(final String name, final String size) {
