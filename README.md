@@ -19,7 +19,7 @@
 
 Snapdrop is a local file sharing solution which completely works in your browser. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
 
-However, even if it theoretically would fully work in your browser and you don't have to install anything, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with. Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we have don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+However, even if it theoretically would fully work in your browser and you don't have to install anything, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with. Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
 
 
 <p align="center">
@@ -36,7 +36,7 @@ New releases are always listed up at the [GitHub releases page](https://github.c
 **Snapdrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
 
 ### Localization
-We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to translate **Snapdrop for Android** into your favorite language. If the language you're looking for does not yet exist, just post a note via [Crowdin private message](https://crowdin.com/messages/create/14335754/436610) or create a small GitHub issue. I will activate the language as soon as possible.
+We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to translate **Snapdrop for Android** into your favorite language. If the language you're looking for does not yet exist, just post a note via [Crowdin private message](https://crowdin.com/messages/create/14335754/436610) or add a small comment to [this issue](https://github.com/fm-sys/snapdrop-android/issues/43). I will activate the language as soon as possible.
 
 <p align="center">
   <a href="https://crowdin.com/project/snapdrop-android" rel="nofollow">
@@ -45,12 +45,12 @@ We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our
 </p>
 
 
-Please do not change any translations manually in the .xml resource files. Nothing bad would happen though, but anyway these changes will be overwritten by Crowdin. If you want to add/change resource strings within your PR, Crowdin will automatically take care of the translations. 
-
 ### Development
-If you want to help with development, this would be more than welcome! I am very glad about every pull request. However, if you plan to implement larger changes, please tell us in the [issue tracker](https://github.com/fm-sys/snapdrop-android/issues) before hacking on your great new feature. 
+If you want to help with development, this would be more than welcome! I am very glad about every pull request. Just fork the repo and start coding. However, if you plan to implement larger changes, please tell us in the [issue tracker](https://github.com/fm-sys/snapdrop-android/issues) before hacking on your great new feature. 
+
+But please do not change any translations manually in the `.xml` resource files. Nothing bad would happen though, but anyway these changes will be overwritten by Crowdin. If you add/change any resource strings within your PR, Crowdin will automatically take care of all related translations. 
 
 
 ## Credits
-- RobinLinus for [Snapdrop website development](https://github.com/RobinLinus/snapdrop) and the [launcher icon](https://github.com/RobinLinus/snapdrop/blob/663db5cbb39ab804b20f9cb6466effd9ed0e2d0c/client/images/logo_blue_512x512.png)
-- material design icons 
+- [RobinLinus](https://github.com/RobinLinus) for Snapdrop website [development](https://github.com/RobinLinus/snapdrop) and [hosting](https://snapdrop.net/), and the [launcher icon](https://github.com/RobinLinus/snapdrop/blob/663db5cbb39ab804b20f9cb6466effd9ed0e2d0c/client/images/logo_blue_512x512.png) used for this app
+- [material design icons](https://material.io/resources/icons/) 
