@@ -196,7 +196,7 @@ public class JavaScriptInterface {
 
     public static String getSendTextDialogWithPreInsertedString(final String text) {
         return "javascript: " +
-                "var x = document.getElementById(\"textInput\").value=\"" + TextUtils.htmlEncode(text) + "\";";
+                "var x = document.getElementById(\"textInput\").innerHTML=\"" + TextUtils.htmlEncode(text) + "\";";
     }
     public static String initialiseWebsite() {
         return "javascript: " +
