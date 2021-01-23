@@ -13,18 +13,18 @@
     <string name="notification_channel_name">Download abgeschlossen</string>
     <!-- Action Buttons -->
     <string name="open">öffnen</string>
-    <string name="reset">reset</string>
+    <string name="reset">zurücksetzen</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Über Snapdrop für Android</string>
     <string name="title_activity_about_short">Über Snapdrop</string>
-    <string name="developer_notice">Snapdrop for Android by <a href="https://github.com/fm-sys">fm-sys</a></string>
-    <string name="developer_notice_settings"><b>fm-sys</b> and all contributors at GitHub</string>
-    <string name="license">License</string>
+    <string name="developer_notice">Snapdrop für Android von <a href="https://github.com/fm-sys">fm-sys</a></string>
+    <string name="developer_notice_settings"><b>fm-sys</b> und alle Mitwirkenden auf GitHub</string>
+    <string name="license">Lizenz</string>
     <string name="pref_category_settings">Einstellungen</string>
-    <string name="developers">Developer</string>
+    <string name="developers">Entwickler</string>
     <string name="version">Version</string>
-    <string name="pref_device_name_title">Device name</string>
-    <string name="pref_device_name_summary">Set a user-defined device name (restart required)</string>
+    <string name="pref_device_name_title">Gerätename</string>
+    <string name="pref_device_name_summary">Legen Sie einen benutzerdefinierten Gerätenamen fest (Neustart erforderlich)</string>
     <string name="keep_on_summary">Aktivieren Sie diese Einstellung, wenn die Dateiübertragung bei ausgeschaltetem Bildschirm stockt bzw. abbricht (Neustart erforderlich)</string>
     <string name="keep_on_title">Gerät wachhalten</string>
     <!-- File sharing -->
