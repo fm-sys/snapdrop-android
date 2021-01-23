@@ -138,8 +138,8 @@ public class MainActivity extends Activity {
         final CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
-        // check if the last server connection was in the past minute - if yes we don't create a new UUID as the "old peer" might still be visible
-        if (System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 60000) {
+        // check if the last server connection was in the past 100 seconds - if yes we don't create a new UUID as the "old peer" might still be visible
+        if (System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 100000) {
             cookieManager.setCookie("https://snapdrop.net/",
                     "peerid=" + UUID.randomUUID().toString() + ";" +
                             "path=/server;" +
@@ -191,8 +191,7 @@ public class MainActivity extends Activity {
     }
 
     private void showScreenNoConnection() {
-        final String offlineHtml = "<html><body><div style=\"width: 100%; text-align:center; position: absolute; top: 20%; font-size: 36px;\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"500px\" height=\"500px\" fill=\"gray\" width=\"48px\" height=\"48px\"><path d=\"M0 0h24v24H0zm0 0h24v24H0z\" fill=\"none\"/><path d=\"M22 6V4H6.82l2 2H22zM1.92 1.65L.65 2.92l1.82 1.82C2.18 5.08 2 5.52 2 6v11H0v3h17.73l2.35 2.35 1.27-1.27L3.89 3.62 1.92 1.65zM4 6.27L14.73 17H4V6.27zM23 8h-6c-.55 0-1 .45-1 1v4.18l2 2V10h4v7h-2.18l3 3H23c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1z\"/></svg><br/><br/>" + getString(R.string.error_network) + "</div></body></html>";
-        webView.loadData(offlineHtml, "text/html", "utf-8");
+        webView.loadUrl("file:///android_asset/offline.html?" + getString(R.string.error_network));
         currentlyOffline = true;
     }
 
@@ -365,16 +364,19 @@ public class MainActivity extends Activity {
         public void onPageFinished(final WebView view, final String url) {
             currentlyLoading = false;
 
-            if (url.startsWith(baseURL)) {
-                currentlyOffline = false;
+            if (url.startsWith(baseURL) || currentlyOffline) {
+                currentlyOffline = !url.startsWith(baseURL);
 
                 if (loadAgain) {
                     loadAgain = false;
-                    new Handler().postDelayed(MainActivity.this::refreshWebsite, 300);
+                    new Handler().postDelayed(MainActivity.this::refreshWebsite, 400);
                 } else {
                     //website initialisation
-                    webView.loadUrl(JavaScriptInterface.initialiseWebsite());
-                    webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
+                    if (!currentlyOffline) {
+                        webView.loadUrl(JavaScriptInterface.initialiseWebsite());
+                        webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
+                    }
+
                     imageViewLayout.setVisibility(View.GONE);
                     pullToRefresh.setVisibility(View.VISIBLE);
                 }
