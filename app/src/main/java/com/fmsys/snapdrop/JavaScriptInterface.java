@@ -53,6 +53,8 @@ public class JavaScriptInterface {
                     "xhr.onload = function(e) {" +
                     "    if (this.status == 200) {" +
                     "        var blobFile = this.response;" +
+
+                    //TODO: Do not load the complete file at once
                     "        var reader = new FileReader();" +
                     "        reader.readAsDataURL(blobFile);" +
                     "        reader.onloadend = function() {" +
