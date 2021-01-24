@@ -3,7 +3,7 @@ Snapdrop für Android ist ein Android Client für https://snapdrop.net/, einer k
 Haben Sie auch manchmal das Problem, dass Sie nur schnell eine Datei von Ihrem Telefon auf den PC übertragen müssen?
 
 USB? - Altmodisch!
-Bluetooth? - Viel zu umstämdlich und langsam!
+Bluetooth? - Viel zu umständlich und langsam!
 E-Mail? - Bitte nicht noch eine E-Mail, die ich an mich selber schreibe!
 
 Snapdrop!
