@@ -9,9 +9,11 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         // version code and name need to be changed here when releasing a new version.
-        // After that, build a new version via Build > Generate Signed Bundle / APK...
-        versionCode 4
-        versionName "1.3"
+        // Afterwards, build a new version via Build > Generate Signed Bundle / APK...
+        // Then please move the APK to the releases/old folder for archiving purposes.
+        // At last the output-metadata.json can be moved to the docs folder to trigger the in-app update notification.
+        versionCode 5
+        versionName "1.4"
         applicationVariants.all { variant ->
             variant.outputs.all {
                 outputFileName = "snapdrop_v${defaultConfig.versionName}.apk"
