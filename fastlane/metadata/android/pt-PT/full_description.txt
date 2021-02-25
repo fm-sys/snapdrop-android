@@ -10,6 +10,6 @@ Snapdrop!
 
 O Snapdrop é uma solução local de compartilhamento de arquivos que funciona completamente em seu navegador. Um pouco como o Airdrop da Apple, mas não apenas para dispositivos Apple. Windows, Linux, Android, IPhone, Mac - sem qualquer problema!
 
-However, even if it theoretically would fully work in your browser and you don't have to install anything, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with.
+No entanto, mesmo que teoricamente ele funcionaria completamente em seu navegador e você não precisa instalar nada, você vai adorar este app se você quiser usar o Snapdrop com mais frequência em sua vida diária. Graças a uma integração perfeita no sistema operacional Android, os arquivos são enviados ainda mais rápido. Você pode selecionar Snapdrop direto de outros aplicativos para compartilhar.
 
-Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we have don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+Graças à sua simplicidade radical, "Snapdrop para Android" torna a vida cotidiana de centenas de usuários mais fácil. Como um projeto de código aberto, não temos nenhum interesse comercial, mas queremos tornar o mundo um pouco melhor. Junte-se e convença-se!
