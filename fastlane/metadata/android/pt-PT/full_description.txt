@@ -1,15 +1,15 @@
-Snapdrop for Android is an android client for the free and open source local file sharing solution https://snapdrop.net/.
+O Snapdrop para o Android é um cliente android para a solução de compartilhamento de arquivos local gratuita e de código aberto https://snapdrop.net/.
 
-Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
+Você também às vezes tem o problema de que você só precisa transferir rapidamente um arquivo do seu telefone para o PC?
 
-USB? - Old fashioned!
-Bluetooth? - Much too cumbersome and slow!
-E-mail? - Please not another email I write to myself!
+USB? - Moda antiga!
+Bluetooth? - Muito pesado e lento!
+E-mail? - Por favor, não mais um e-mail que eu escrevo para mim!
 
 Snapdrop!
 
-Snapdrop is a local file sharing solution which completely works in your browser. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
+O Snapdrop é uma solução local de compartilhamento de arquivos que funciona completamente em seu navegador. Um pouco como o Airdrop da Apple, mas não apenas para dispositivos Apple. Windows, Linux, Android, IPhone, Mac - sem qualquer problema!
 
-However, even if it theoretically would fully work in your browser and you don't have to install anything, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with.
+No entanto, mesmo que teoricamente ele funcionaria completamente em seu navegador e você não precisa instalar nada, você vai adorar este app se você quiser usar o Snapdrop com mais frequência em sua vida diária. Graças a uma integração perfeita no sistema operacional Android, os arquivos são enviados ainda mais rápido. Você pode selecionar Snapdrop direto de outros aplicativos para compartilhar.
 
-Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we have don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+Graças à sua simplicidade radical, "Snapdrop para Android" torna a vida cotidiana de centenas de usuários mais fácil. Como um projeto de código aberto, não temos nenhum interesse comercial, mas queremos tornar o mundo um pouco melhor. Junte-se e convença-se!
