@@ -165,7 +165,7 @@ public class MainActivity extends Activity {
         refreshWebsite();
         onNewIntent(getIntent());
 
-        if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+        if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q)
                 && (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
             requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
         }

@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.fmsys.snapdrop"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         // version code and name need to be changed here when releasing a new version.
         // Afterwards, build a new version via Build > Generate Signed Bundle / APK...
         // Then please move the APK to the releases/old folder for archiving purposes.

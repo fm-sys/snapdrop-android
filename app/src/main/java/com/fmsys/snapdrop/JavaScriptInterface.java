@@ -5,12 +5,16 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.os.SystemClock;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Pair;
@@ -27,6 +31,9 @@ import com.google.android.material.snackbar.Snackbar;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class JavaScriptInterface {
     private MainActivity context;
@@ -36,15 +43,14 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
-    public void getBase64FromBlobData(final String base64Data, final String contentDisposition, final String mimetype) throws IOException {
-        convertBase64StringToFileAndStoreIt(base64Data, contentDisposition, mimetype);
+    public void getBase64FromBlobData(final String base64Data, final String contentDisposition) throws IOException {
+        convertBase64StringToFileAndStoreIt(base64Data, contentDisposition);
     }
 
     public static String getBase64StringFromBlobUrl(final String blobUrl, final String filename, final String mimetype) {
         if (blobUrl.startsWith("blob")) {
             return "javascript: " +
-                    // "fileName = document.querySelector('a[href=\"" + blobUrl + "\"]').getAttribute('download');" + //sometimes returns null - that's why we hand over the filename explicitly
-                    "fileName = \"" + filename + "\";" +
+                    (filename != null ? "fileName = \"" + filename + "\";" : "fileName = document.querySelector('a[href=\"" + blobUrl + "\"]').getAttribute('download');") + // querySelector sometimes returns null - that's why we try to hand over the filename explicitly
                     "" +
                     "var xhr = new XMLHttpRequest();" +
                     "xhr.open('GET', '" + blobUrl + "', true);" +
@@ -59,7 +65,7 @@ public class JavaScriptInterface {
                     "        reader.readAsDataURL(blobFile);" +
                     "        reader.onloadend = function() {" +
                     "            base64data = reader.result;" +
-                    "            SnapdropAndroid.getBase64FromBlobData(base64data, fileName, \"" + mimetype + "\");" +
+                    "            SnapdropAndroid.getBase64FromBlobData(base64data, fileName);" +
                     "        }" +
                     "    }" +
                     "};" +
@@ -68,23 +74,56 @@ public class JavaScriptInterface {
         return "javascript: console.log('It is not a Blob URL');";
     }
 
-    private void convertBase64StringToFileAndStoreIt(final String base64file, final String contentDisposition, final String mimetype) throws IOException {
+    private void convertBase64StringToFileAndStoreIt(final String base64file, final String contentDisposition) throws IOException {
         final int notificationId = (int) SystemClock.uptimeMillis();
 
-        final File dwldsPath = getFinalNewDestinationFile(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_DOWNLOADS), contentDisposition);
-        final byte[] fileAsBytes = Base64.decode(base64file.replaceFirst("^data:" + mimetype + ";base64,", ""), 0);
-        if (dwldsPath.createNewFile()) {
-            final FileOutputStream os = new FileOutputStream(dwldsPath, false);
-            os.write(fileAsBytes);
-            os.flush();
+        final Matcher m = Pattern.compile("^data:(.+);base64,").matcher(base64file.substring(0, 100));
+        String mimetype = null;
+        if (m.find()) {
+            mimetype = m.group(1);
         }
 
-        if (dwldsPath.exists()) {
+        android.util.Log.e("name", contentDisposition);
+        android.util.Log.e("mimetype", mimetype);
+
+        final byte[] fileAsBytes = Base64.decode(base64file.replaceFirst("^data:.+;base64,", ""), 0);
+
+        Uri uri = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            final ContentResolver resolver = context.getContentResolver();
+            final ContentValues contentValues = new ContentValues();
+            contentValues.put(MediaStore.Downloads.DISPLAY_NAME, contentDisposition);
+            contentValues.put(MediaStore.Downloads.MIME_TYPE, mimetype);
+            contentValues.put(MediaStore.Downloads.DATE_ADDED, System.currentTimeMillis());
+            contentValues.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
+
+            uri = resolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, contentValues);
+            final OutputStream outputStream = resolver.openOutputStream(uri);
+            outputStream.write(fileAsBytes);
+            outputStream.close();
+        } else {
+            final File dwldsPath = getFinalNewDestinationFile(Environment.getExternalStoragePublicDirectory(
+                    Environment.DIRECTORY_DOWNLOADS), contentDisposition);
+            if (dwldsPath.createNewFile()) {
+                final FileOutputStream os = new FileOutputStream(dwldsPath, false);
+                os.write(fileAsBytes);
+                os.flush();
+                uri = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", dwldsPath);
+            }
+            // This part can raise errors when the downloaded file is not a media file
+            try {
+                final DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+                downloadManager.addCompletedDownload(contentDisposition, contentDisposition, true, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)), dwldsPath.getAbsolutePath(), dwldsPath.length(), false);
+                MediaScannerConnection.scanFile(context, new String[]{dwldsPath.getPath()}, null, null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (uri != null) {
             final Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
-            final Uri fileURI = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", dwldsPath);
-            intent.setDataAndType(fileURI, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)));
+            intent.setDataAndType(uri, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             final PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
             final String channelId = "MYCHANNEL";
@@ -93,7 +132,7 @@ public class JavaScriptInterface {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 final NotificationChannel notificationChannel = new NotificationChannel(channelId, context.getString(R.string.notification_channel_name), NotificationManager.IMPORTANCE_DEFAULT);
                 final Notification notification = new Notification.Builder(context, channelId)
-                        .setContentText(dwldsPath.getName())
+                        .setContentText(contentDisposition)
                         .setContentTitle(context.getString(R.string.download_successful))
                         .setContentIntent(pendingIntent)
                         .setChannelId(channelId)
@@ -113,7 +152,7 @@ public class JavaScriptInterface {
                         .setContentIntent(pendingIntent)
                         .setAutoCancel(true)
                         .setContentTitle(context.getString(R.string.download_successful))
-                        .setContentText(dwldsPath.getName());
+                        .setContentText(contentDisposition);
 
                 if (notificationManager != null) {
                     notificationManager.notify(notificationId, b.build());
@@ -139,15 +178,6 @@ public class JavaScriptInterface {
 
             // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
             context.resetUploadIntent();
-
-            // This part can raise errors when the downloaded file is not a media file
-            try {
-                final DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
-                downloadManager.addCompletedDownload(dwldsPath.getName(), dwldsPath.getName(), true, MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(contentDisposition)), dwldsPath.getAbsolutePath(), dwldsPath.length(), false);
-                MediaScannerConnection.scanFile(context, new String[]{dwldsPath.getPath()}, null, null);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
     }
 
