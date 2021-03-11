@@ -6,8 +6,6 @@
     <string name="app_update_summary">As atualizações contêm correções de falhas ou novas funcionalidades. A instalação é recomendada…</string>
     <string name="app_update_install">Instalar</string>
     <string name="app_update_show_details">Mais detalhes</string>
-    <string name="app_update_download_info">Baixando atualização</string>
-    <string name="app_update_download_text">Deve levar apenas alguns segundos…</string>
     <!-- Download -->
     <string name="download_successful">Foi baixado com sucesso</string>
     <string name="notification_channel_name">Download concluído</string>
