@@ -435,7 +435,7 @@ public class MainActivity extends Activity {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme)
                         .setTitle(R.string.app_update)
                         .setMessage(R.string.app_update_summary)
-                        .setPositiveButton(R.string.app_update_install, (dialog, id) -> UpdateUtils.runUpdate(MainActivity.this, result))
+                        .setPositiveButton(R.string.app_update_install, (dialog, id) -> UpdateUtils.showAppInMarket(MainActivity.this))
                         .setNegativeButton(R.string.app_update_show_details, (dialog, id) -> UpdateUtils.showUpdatesInBrowserIntent(MainActivity.this));
                 builder.create().show();
 

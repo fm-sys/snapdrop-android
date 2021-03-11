@@ -6,8 +6,6 @@
     <string name="app_update_summary">Updates contain important bug fixes or great new features. The installation is recommended…</string>
     <string name="app_update_install">Install</string>
     <string name="app_update_show_details">More details</string>
-    <string name="app_update_download_info">Downloading update</string>
-    <string name="app_update_download_text">This should only take a few seconds…</string>
 
     <!-- Download -->
     <string name="download_successful">Download successful</string>
