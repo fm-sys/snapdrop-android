@@ -56,6 +56,7 @@ import java.util.UUID;
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
     private static final int LAUNCH_SETTINGS_ACTIVITY = 12;
+    public static final int REQUEST_SELECT_FILE = 100;
 
     private static final String baseURL = "https://fm-sys.github.io/snapdrop/client/";
     //private static final String baseURL = "https://snapdrop.net/";
@@ -66,7 +67,6 @@ public class MainActivity extends Activity {
     public SwipeRefreshLayout pullToRefresh;
 
     public ValueCallback<Uri[]> uploadMessage;
-    public static final int REQUEST_SELECT_FILE = 100;
 
     private boolean loadAgain = true; // workaround cause Snapdrop website does not show the correct devices after first load
     private boolean currentlyOffline = true;
