@@ -145,7 +145,6 @@ public class MainActivity extends Activity {
         final CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
-
         // check if the last server connection was in the past 3 minutes - if yes we don't create a new UUID as the "old peer" might still be visible
         if (System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60 * 3) {
             WebStorage.getInstance().deleteAllData();
