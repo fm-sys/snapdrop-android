@@ -19,14 +19,14 @@
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
     <string name="title_activity_about_short">Sobre o Snapdrop</string>
     <string name="developer_notice">Snapdrop para Android por <a href="https://github.com/fm-sys">fm-sys</a></string>
-    <string name="developer_notice_settings"><b>fmsys</b> e todos os colaboradores do GitHub</string>
+    <string name="developer_notice_settings"><b>fm-sys</b> e todos os colaboradores do GitHub</string>
     <string name="license">Licença</string>
     <string name="pref_category_settings">Configurações</string>
     <string name="developers">Desenvolvedor</string>
     <string name="version">Versão</string>
     <string name="pref_device_name_title">Nome do Dispositivo</string>
-    <string name="pref_device_name_summary">Set a user-defined device name</string>
-    <string name="keep_on_summary">Enable if you have problems with transfers being interrupted when the screen turns off</string>
+    <string name="pref_device_name_summary">Definir um nome de dispositivo definido pelo usuário</string>
+    <string name="keep_on_summary">Ativar se você tiver as transferências interrompidas quando a tela for desligada</string>
     <string name="keep_on_title">Mantenha a tela ligada</string>
     <string name="settings_theme_title">Theme</string>
     <string-array name="darkmode_entries">
