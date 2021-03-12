@@ -33,6 +33,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
+import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -43,6 +44,8 @@ import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.webkit.WebSettingsCompat;
+import androidx.webkit.WebViewFeature;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -52,6 +55,7 @@ import java.util.UUID;
 
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
+    private static final int LAUNCH_SETTINGS_ACTIVITY = 12;
 
     private static final String baseURL = "https://fm-sys.github.io/snapdrop/client/";
     //private static final String baseURL = "https://snapdrop.net/";
@@ -128,18 +132,24 @@ public class MainActivity extends Activity {
         webView.addJavascriptInterface(new JavaScriptInterface(MainActivity.this), "SnapdropAndroid");
         webView.setWebChromeClient(new MyWebChromeClient());
         webView.setWebViewClient(new CustomWebViewClient());
-        webView.clearCache(true);
 
         // Allow webContentsDebugging if APK was build as debuggable
         if (0 != (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)) {
             WebView.setWebContentsDebuggingEnabled(true);
         }
 
+        if (SnapdropApplication.isDarkTheme(this) && WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
+            WebSettingsCompat.setForceDark(webView.getSettings(), WebSettingsCompat.FORCE_DARK_ON);
+        }
+
         final CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
-        // check if the last server connection was in the past 100 seconds - if yes we don't create a new UUID as the "old peer" might still be visible
-        if (System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 100000) {
+
+        // check if the last server connection was in the past 3 minutes - if yes we don't create a new UUID as the "old peer" might still be visible
+        if (System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60 * 3) {
+            WebStorage.getInstance().deleteAllData();
+
             cookieManager.setCookie("https://snapdrop.net/",
                     "peerid=" + UUID.randomUUID().toString() + ";" +
                             "path=/server;" +
@@ -244,13 +254,19 @@ public class MainActivity extends Activity {
     public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
 
-        if (resultCode == RESULT_OK) {
-            uploadFromIntent(intent);
-        } else {
-            uploadMessage.onReceiveValue(null);
-            uploadMessage = null;
+        if (requestCode == REQUEST_SELECT_FILE) {
+            if (resultCode == RESULT_OK) {
+                uploadFromIntent(intent);
+            } else {
+                uploadMessage.onReceiveValue(null);
+                uploadMessage = null;
+            }
+        } else if (requestCode == LAUNCH_SETTINGS_ACTIVITY) {
+            if (resultCode == Activity.RESULT_OK) {
+                setResult(Activity.RESULT_OK);
+                recreate();
+            }
         }
-
     }
 
     @Override
@@ -346,13 +362,13 @@ public class MainActivity extends Activity {
         @Override
         public boolean onCreateWindow(final WebView view, final boolean dialog, final boolean userGesture, final Message resultMsg) {
             final String url = view.getHitTestResult().getExtra();
-            final Intent browserIntent;
             if (url.endsWith("update.html#settings")) {
-                browserIntent = new Intent(MainActivity.this, AboutActivity.class);
+                final Intent browserIntent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
             } else {
-                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                final Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(browserIntent);
             }
-            startActivity(browserIntent);
             return false;
         }
 
@@ -378,7 +394,8 @@ public class MainActivity extends Activity {
 
                         // welcome dialog
                         if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
-                            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme)
+                            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
+                                    .setCancelable(false)
                                     .setTitle(R.string.app_welcome)
                                     .setMessage(R.string.app_welcome_summary)
                                     .setPositiveButton(android.R.string.ok, (dialog, which) -> prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply());
@@ -441,7 +458,7 @@ public class MainActivity extends Activity {
                     return;
                 }
 
-                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme)
+                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
                         .setTitle(R.string.app_update)
                         .setMessage(R.string.app_update_summary)
                         .setPositiveButton(R.string.app_update_install, (dialog, id) -> UpdateUtils.showAppInMarket(MainActivity.this))

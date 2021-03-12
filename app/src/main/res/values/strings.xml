@@ -9,7 +9,7 @@
 
     <!-- Welcome -->
     <string name="app_welcome">Welcome to Snapdrop</string>
-    <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> or the Snapdrop app on any other device in your local WiFi network.\n2. Tab on the device you want to share the files with.\n3. Done! The file will be sent…</string>
+    <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> or the Snapdrop app on any other device in your local WiFi network.\n2. Tab on the device you want to share the file(s) with.\n3. Done! The file(s) will be sent…</string>
 
 
     <!-- Download -->
@@ -30,9 +30,15 @@
     <string name="developers">Developer</string>
     <string name="version">Version</string>
     <string name="pref_device_name_title">Device name</string>
-    <string name="pref_device_name_summary">Set a user-defined device name (restart required)</string>
-    <string name="keep_on_summary">Enable if you have problems with transfers being interrupted when the screen turns off (restart required)</string>
+    <string name="pref_device_name_summary">Set a user-defined device name</string>
+    <string name="keep_on_summary">Enable if you have problems with transfers being interrupted when the screen turns off</string>
     <string name="keep_on_title">Keep screen on</string>
+    <string name="settings_theme_title">Theme</string>
+    <string-array name="darkmode_entries">
+        <item>System Default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
 
     <!-- File sharing -->
     <string name="intent_file">A file is selected for sharing</string>

@@ -1,5 +1,6 @@
 package com.fmsys.snapdrop;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -44,7 +45,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             editText.setText(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(getString(R.string.pref_device_name), ""));
             editText.requestFocus();
 
-            final AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogTheme)
+            final AlertDialog.Builder builder = new AlertDialog.Builder(getContext())
                     .setTitle(R.string.pref_device_name_title)
                     .setView(dialogView)
                     .setPositiveButton(android.R.string.ok, (dialog, id) -> setDeviceName(editText.getText().toString()))
@@ -52,6 +53,15 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             builder.create().show();
             return true;
         });
+
+        final Preference themePref = findPreference(getString(R.string.pref_theme_setting));
+            themePref.setOnPreferenceChangeListener((Preference preference, Object newValue) -> {
+                final DarkModeSetting darkTheme = DarkModeSetting.valueOf((String) newValue);
+                SnapdropApplication.setAppTheme(darkTheme);
+                requireActivity().setResult(Activity.RESULT_OK);
+                requireActivity().recreate();
+                return true;
+            });
     }
 
     private void setDeviceName(final String s) {

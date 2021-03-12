@@ -18,6 +18,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:forceDarkAllowed="true"
         android:theme="@style/AppTheme">
 
         <activity android:name=".AboutActivity" />

@@ -1,5 +1,6 @@
 package com.fmsys.snapdrop;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,8 @@ public class AboutActivity extends AppCompatActivity {
 
         final ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(adapter);
+
+        setResult(Activity.RESULT_OK);
     }
 
     public class ViewPagerAdapter extends FragmentStateAdapter {

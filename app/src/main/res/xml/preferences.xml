@@ -17,6 +17,14 @@
             android:summary="@string/pref_device_name_summary"
             app:iconSpaceReserved="false"
             app:singleLineTitle="false" />
+        <ListPreference
+            android:defaultValue="@string/pref_value_theme_system_default"
+            android:entries="@array/darkmode_entries"
+            android:entryValues="@array/darkMode_values"
+            android:key="@string/pref_theme_setting"
+            android:title="@string/settings_theme_title"
+            android:summary="%s"
+            app:iconSpaceReserved="false" />
 
     </PreferenceCategory>
 
