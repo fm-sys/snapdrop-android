@@ -31,6 +31,7 @@ android {
 
     lintOptions {
         disable 'MissingTranslation'
+        disable 'ExtraTranslation'
     }
 
     // use Java 8 to make use of lamda-expressions, etc.
