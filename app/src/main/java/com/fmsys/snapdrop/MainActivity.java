@@ -375,6 +375,15 @@ public class MainActivity extends Activity {
                     if (!currentlyOffline) {
                         webView.loadUrl(JavaScriptInterface.initialiseWebsite());
                         webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
+
+                        // welcome dialog
+                        if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
+                            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme)
+                                    .setTitle(R.string.app_welcome)
+                                    .setMessage(R.string.app_welcome_summary)
+                                    .setPositiveButton(android.R.string.ok, (dialog, which) -> prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply());
+                            builder.create().show();
+                        }
                     }
 
                     imageViewLayout.setVisibility(View.GONE);
