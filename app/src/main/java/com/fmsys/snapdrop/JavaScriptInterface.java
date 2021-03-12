@@ -25,6 +25,7 @@ import android.widget.FrameLayout;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.FileProvider;
+import androidx.webkit.WebViewFeature;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -244,7 +245,7 @@ public class JavaScriptInterface {
                 "   if (SnapdropAndroid.shouldOpenSendTextDialog()) {" +
                 "       Events.fire('text-recipient', e.detail);" +
                 "   }" +
-                "}, false);";
+                "}, false);" + (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
     }
 
 
