@@ -29,10 +29,10 @@ Snapdrop is now available on [Google Play](https://play.google.com/store/apps/de
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.fmsys.snapdrop">
-    <img height="120" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+    <img height="100" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
   </a>
   <a href="https://apt.izzysoft.de/fdroid/index/apk/com.fmsys.snapdrop">
-    <img height="80" src="docs/download_graphic.jpg">
+    <img height="100" src="docs/download_graphic.png">
   </a>
 </p>
 
