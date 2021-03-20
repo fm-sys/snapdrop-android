@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <!-- Update -->
+    <string name="app_update">Actualizacion disponible</string>
+    <string name="app_update_summary">Las actualizaciones contienen importantes correcciones de errores o grandes nuevas características. Se recomienda la instalación…</string>
+    <string name="app_update_install">Instalar</string>
+    <string name="app_update_show_details">Más detalles</string>
+    <!-- Welcome -->
+    <string name="app_welcome">Bienvenido a Snapdrop</string>
+    <string name="app_welcome_summary">1. Abre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicación de Snapdrop en cualquier otro dispositivo de tu red Wi-Fi local.\n2. Toca en el dispositivo con el que quieres compartir los archivos.\n3. ¡Listo! Los archivos se enviarán…</string>
+    <!-- Download -->
+    <string name="download_successful">Descarga exitosa</string>
+    <string name="notification_channel_name">Descarga completada</string>
+    <!-- Action Buttons -->
+    <string name="open">abrir</string>
+    <string name="reset">restablecer</string>
+    <!-- Settings / About -->
+    <string name="title_activity_about">Acerca de Snapdrop para Android</string>
+    <string name="title_activity_about_short">Acerca de Snapdrop</string>
+    <string name="developer_notice">Snapdrop para Android por <a href="https://github.com/fm-sys">fm-sys</a></string>
+    <string name="developer_notice_settings"><b>fm-sys</b> y todos los colaboradores en GitHub</string>
+    <string name="license">Licencia</string>
+    <string name="pref_category_settings">Ajustes</string>
+    <string name="developers">Desarrollador</string>
+    <string name="version">Versión</string>
+    <string name="pref_device_name_title">Nombre del dispositivo</string>
+    <string name="pref_device_name_summary">Establece un nombre de dispositivo definido por el usuario</string>
+    <string name="keep_on_summary">Activar si tienes problemas con la interrupción de las transferencias cuando la pantalla se apaga</string>
+    <string name="keep_on_title">Mantener la pantalla encendida</string>
+    <string name="settings_theme_title">Tema</string>
+    <string-array name="darkmode_entries">
+        <item>Predeterminado del Sistema</item>
+        <item>Claro</item>
+        <item>Oscuro</item>
+    </string-array>
+    <!-- File sharing -->
+    <string name="intent_file">Se ha seleccionado un archivo para compartir</string>
+    <string name="intent_files">Los archivos están seleccionados para compartir</string>
+    <string name="intent_content">El contenido está seleccionado para compartir</string>
+    <string name="error_filechooser">No se pudo abrir el selector de archivos</string>
+    <string name="error_network">Por favor, compruebe que está conectado a una red WiFi</string>
+</resources>

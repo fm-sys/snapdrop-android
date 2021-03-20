@@ -1,0 +1,1 @@
+Cliente de Android para la solución de intercambio de archivos de código abierto https://snapdrop.net/

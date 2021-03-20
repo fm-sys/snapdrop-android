@@ -6,6 +6,9 @@
     <string name="app_update_summary">As atualizações contêm correções de falhas ou novas funcionalidades. A instalação é recomendada…</string>
     <string name="app_update_install">Instalar</string>
     <string name="app_update_show_details">Mais detalhes</string>
+    <!-- Welcome -->
+    <string name="app_welcome">Welcome to Snapdrop</string>
+    <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> or the Snapdrop app on any other device in your local WiFi network.\n2. Tab on the device you want to share the file(s) with.\n3. Done! The file(s) will be sent…</string>
     <!-- Download -->
     <string name="download_successful">Foi baixado com sucesso</string>
     <string name="notification_channel_name">Download concluído</string>
@@ -16,15 +19,21 @@
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
     <string name="title_activity_about_short">Sobre o Snapdrop</string>
     <string name="developer_notice">Snapdrop para Android por <a href="https://github.com/fm-sys">fm-sys</a></string>
-    <string name="developer_notice_settings"><b>fmsys</b> e todos os colaboradores do GitHub</string>
+    <string name="developer_notice_settings"><b>fm-sys</b> e todos os colaboradores do GitHub</string>
     <string name="license">Licença</string>
     <string name="pref_category_settings">Configurações</string>
     <string name="developers">Desenvolvedor</string>
     <string name="version">Versão</string>
     <string name="pref_device_name_title">Nome do Dispositivo</string>
-    <string name="pref_device_name_summary">Definir um nome de dispositivo definido pelo usuário (requer reinicialização)</string>
-    <string name="keep_on_summary">Ativar se você tiver as transferências interrompidas quando a tela for desligada (reinício necessário)</string>
+    <string name="pref_device_name_summary">Definir um nome de dispositivo definido pelo usuário</string>
+    <string name="keep_on_summary">Ativar se você tiver as transferências interrompidas quando a tela for desligada</string>
     <string name="keep_on_title">Mantenha a tela ligada</string>
+    <string name="settings_theme_title">Theme</string>
+    <string-array name="darkmode_entries">
+        <item>System Default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
     <!-- File sharing -->
     <string name="intent_file">O arquivo é selecionado para ser compartilhado</string>
     <string name="intent_files">Os arquivos são selecionados para ser compartilhados</string>
