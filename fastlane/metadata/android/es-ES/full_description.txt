@@ -1,8 +1,8 @@
-Snapdrop for Android is an android client for the free and open source local file sharing solution https://snapdrop.net/.
+Snapdrop para Android es un cliente de android para la solución de intercambio de archivos locales gratuita y de código abierto https://snapdrop.net/.
 
-Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
+¿A veces también tienes el problema de que sólo necesitas transferir rápidamente un archivo desde tu teléfono al PC?
 
-USB? - Old fashioned!
+USB? - Pasado de moda!
 Bluetooth? - Much too cumbersome and slow!
 E-mail? - Please not another email I write to myself!
 
