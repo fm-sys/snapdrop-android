@@ -18,6 +18,7 @@
     <style name="SnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
         <item name="android:backgroundTint">@color/snackbarBackground</item>
         <item name="android:background">@drawable/snackbar_larger_margin</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="AppTheme.Launcher">
