@@ -5,6 +5,8 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -244,7 +246,12 @@ public class JavaScriptInterface {
                 "}, false);" + (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
     }
 
-
+    @JavascriptInterface
+    public void copyToClipboard(final String text) {
+        final ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        final ClipData clip = ClipData.newPlainText("SnapdropAndroid", text);
+        clipboard.setPrimaryClip(clip);
+    }
 
     @JavascriptInterface
     public void updateLastOnlineTime() {
