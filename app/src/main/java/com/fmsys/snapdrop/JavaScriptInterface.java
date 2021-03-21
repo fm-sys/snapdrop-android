@@ -21,7 +21,6 @@ import android.util.Pair;
 import android.view.View;
 import android.webkit.JavascriptInterface;
 import android.webkit.MimeTypeMap;
-import android.widget.FrameLayout;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.FileProvider;
@@ -172,9 +171,6 @@ public class JavaScriptInterface {
 
                     })
                     .setActionTextColor(context.getResources().getColor(R.color.colorAccent));
-
-            final FrameLayout snackBarView = (FrameLayout) snackbar.getView();
-            snackBarView.setBackground(context.getResources().getDrawable(R.drawable.snackbar_larger_margin));
             snackbar.show();
 
             // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
