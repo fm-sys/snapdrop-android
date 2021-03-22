@@ -1,1 +1,1 @@
-Cliente Android para a solução de compartilhamento de arquivos open source https://snapdrop.net/
+Instant file sharing - free and open source!
