@@ -8,13 +8,19 @@ android {
         applicationId "com.fmsys.snapdrop"
         minSdkVersion 21
         targetSdkVersion 30
-        // As first step, always check if unmerged crowdin updates are available
 
-        // version code and name need to be changed here when releasing a new version.
-        // Afterwards, build a new version via Build > Generate Signed Bundle / APK...
+        // ToDo list - Update Instruction
+        //  -   As first step, always check if unmerged crowdin updates are available
+        //  -   Change version code and name when releasing a new version!
+        //  -   Afterwards, build a new version via Build > Generate Signed Bundle / APK...
+        //  -   Please move the APK to the releases/old folder for archiving purposes
+        //  -   Push to GitHub
+        //  -   Write Changelog at GitHub and add APK
+        //  -   Upload and publish APK to Google Play
+        //  -   Publish the release tag on Github
+        //  -   Post release info to Twitter
+        //  -   Optional: At last the output-metadata.json can be moved to the docs folder to trigger the in-app update notification.
 
-        // Then please move the APK to the releases/old folder for archiving purposes.
-        // At last the output-metadata.json can be moved to the docs folder to trigger the in-app update notification.
         versionCode 7
         versionName "1.5.1"
         applicationVariants.all { variant ->

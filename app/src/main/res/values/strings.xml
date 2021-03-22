@@ -28,6 +28,10 @@
     <string name="license">License</string>
     <string name="pref_category_settings">Settings</string>
     <string name="developers">Developer</string>
+    <string name="crowdin">Localization</string>
+    <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Stay informed about <b>Snapdrop for Android</b></string>
     <string name="version">Version</string>
     <string name="pref_device_name_title">Device name</string>
     <string name="pref_device_name_summary">Set a user-defined device name</string>

@@ -39,6 +39,18 @@
             app:iconSpaceReserved="false"
             app:singleLineTitle="false" />
         <Preference
+            android:key="@string/pref_crowdin"
+            android:title="@string/crowdin"
+            android:summary="@string/crowdin_summary"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+        <Preference
+            android:key="@string/pref_twitter"
+            android:title="@string/twitter"
+            android:summary="@string/twitter_summary"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+        <Preference
             android:key="@string/pref_license"
             android:title="@string/license"
             android:summary="GNU General Public License v3.0"

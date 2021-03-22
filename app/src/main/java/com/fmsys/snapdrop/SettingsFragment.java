@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -18,30 +19,19 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey) {
         setPreferencesFromResource(R.xml.preferences, rootKey);
 
-        final Preference versionPref = findPreference(getString(R.string.pref_version));
+        final Preference versionPref = initUrlPreference(R.string.pref_version, "https://github.com/fm-sys/snapdrop-android/releases/latest");
         versionPref.setSummary("v" + BuildConfig.VERSION_NAME);
-        versionPref.setOnPreferenceClickListener(pref -> {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/fm-sys/snapdrop-android")));
-            return true;
-        });
 
-        final Preference developersPref = findPreference(getString(R.string.pref_developers));
-        developersPref.setOnPreferenceClickListener(pref -> {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/fm-sys/snapdrop-android/graphs/contributors")));
-            return true;
-        });
-
-        final Preference licensePref = findPreference(getString(R.string.pref_license));
-        licensePref.setOnPreferenceClickListener(pref -> {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gnu.org/licenses/gpl-3.0.html")));
-            return true;
-        });
+        initUrlPreference(R.string.pref_developers, "https://github.com/fm-sys/snapdrop-android");
+        initUrlPreference(R.string.pref_crowdin, "https://crowdin.com/project/snapdrop-android");
+        initUrlPreference(R.string.pref_twitter, "https://twitter.com/SnapdropAndroid");
+        initUrlPreference(R.string.pref_license, "https://www.gnu.org/licenses/gpl-3.0.html");
 
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
         deviceNamePref.setOnPreferenceClickListener(pref -> {
 
             final View dialogView = this.getLayoutInflater().inflate(R.layout.device_name_dialog, null);
-            final EditText editText = (EditText) dialogView.findViewById(R.id.textInput);
+            final EditText editText = dialogView.findViewById(R.id.textInput);
             editText.setText(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(getString(R.string.pref_device_name), ""));
             editText.requestFocus();
 
@@ -62,6 +52,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 requireActivity().recreate();
                 return true;
             });
+    }
+
+    private Preference initUrlPreference(final @StringRes int pref, final String url) {
+        final Preference preference = findPreference(getString(pref));
+        if (preference != null) {
+            preference.setOnPreferenceClickListener(p -> {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                return true;
+            });
+        }
+        return preference;
     }
 
     private void setDeviceName(final String s) {

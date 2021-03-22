@@ -1,7 +1,6 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/fm-sys/snapdrop-android)](https://github.com/fm-sys/snapdrop-android/releases/latest) 
-[![GitHub All Releases](https://img.shields.io/github/downloads/fm-sys/snapdrop-android/total)](https://github.com/fm-sys/snapdrop-android/releases/) 
 [![CI build](https://github.com/fm-sys/snapdrop-android/workflows/APK%20Build/badge.svg?branch=master)](https://github.com/fm-sys/snapdrop-android) 
-[![Adopt newest website design](https://github.com/fm-sys/snapdrop/workflows/Adopt%20newest%20website%20design/badge.svg)](https://github.com/fm-sys/snapdrop/actions) 
+[![Adopt website changes](https://github.com/fm-sys/snapdrop/actions/workflows/sync_fork.yml/badge.svg)](https://github.com/fm-sys/snapdrop/actions) 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6a918bb3dc624cba87b5139f2cb4597d)](https://www.codacy.com/gh/fm-sys/snapdrop-android/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fm-sys/snapdrop-android&amp;utm_campaign=Badge_Grade) 
 [![GitHub issues](https://img.shields.io/github/issues/fm-sys/snapdrop-android)](https://github.com/fm-sys/snapdrop-android/issues) 
 [![GitHub license](https://img.shields.io/github/license/fm-sys/snapdrop-android)](https://github.com/fm-sys/snapdrop-android/blob/master/LICENSE)
@@ -14,9 +13,7 @@
 >Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
 >
 > - USB? - Old fashioned!
->
 > - Bluetooth? - Much too cumbersome and slow!
->
 > - E-mail? - Please not another email I write to myself!
 > - Snapdrop!
 
