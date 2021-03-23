@@ -9,6 +9,9 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -52,5 +55,11 @@ public final class UpdateUtils {
         } catch (android.content.ActivityNotFoundException anfe) {
             context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
         }
+    }
+
+    public static boolean isInstalledViaGooglePlay(final Activity context) {
+        final List<String> validInstallers = new ArrayList<>(Arrays.asList("com.android.vending", "com.google.android.feedback")); // list with valid installer package names
+        final String installer = context.getPackageManager().getInstallerPackageName(context.getPackageName());
+        return installer != null && validInstallers.contains(installer);
     }
 }

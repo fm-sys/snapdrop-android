@@ -254,6 +254,11 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
+    public int getVersionId() {
+        return BuildConfig.VERSION_CODE;
+    }
+
+    @JavascriptInterface
     public void updateLastOnlineTime() {
         context.prefs.edit().putLong(context.getString(R.string.pref_last_server_connection), System.currentTimeMillis()).apply();
     }

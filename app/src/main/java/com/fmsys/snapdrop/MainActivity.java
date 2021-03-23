@@ -454,17 +454,25 @@ public class MainActivity extends Activity {
         @Override
         protected void onPostExecute(final String result) {
             try {
-                if (result == null) {
+                if (result == null || uploadIntent != null) {
                     return;
                 }
 
-                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
-                        .setTitle(R.string.app_update)
-                        .setMessage(R.string.app_update_summary)
-                        .setPositiveButton(R.string.app_update_install, (dialog, id) -> UpdateUtils.showAppInMarket(MainActivity.this))
-                        .setNegativeButton(R.string.app_update_show_details, (dialog, id) -> UpdateUtils.showUpdatesInBrowserIntent(MainActivity.this));
-                builder.create().show();
-
+                if (UpdateUtils.isInstalledViaGooglePlay(MainActivity.this)) { // simplified and less disturbing message for PlayStore users
+                    final Snackbar snackbar = Snackbar
+                            .make(findViewById(R.id.coordinatorLayout), R.string.app_update_short_summary, Snackbar.LENGTH_INDEFINITE)
+                            .setAction(R.string.app_update_install, button -> UpdateUtils.showAppInMarket(MainActivity.this))
+                            .setActionTextColor(getResources().getColor(R.color.colorAccent));
+                    snackbar.show();
+                    new Handler().postDelayed(snackbar::dismiss, 10000); // 10 seconds
+                } else {
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
+                            .setTitle(R.string.app_update)
+                            .setMessage(R.string.app_update_summary)
+                            .setPositiveButton(R.string.app_update_install, (dialog, id) -> UpdateUtils.showAppInMarket(MainActivity.this))
+                            .setNegativeButton(R.string.app_update_show_details, (dialog, id) -> UpdateUtils.showUpdatesInBrowserIntent(MainActivity.this));
+                    builder.create().show();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
