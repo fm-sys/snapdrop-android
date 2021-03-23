@@ -3,7 +3,8 @@
     <string name="app_name">Snapdrop</string>
     <!-- Update -->
     <string name="app_update">Update available</string>
-    <string name="app_update_summary">Updates contain important bug fixes or great new features. The installation is recommended…</string>
+    <string name="app_update_summary">Updates contain important bug fixes and great new features. \n\nIf you don\'t have installed this app via Google Play, you unfortunately have to uninstall and reinstall the app to get the update from there.</string>
+    <string name="app_update_short_summary">A new update is available</string>
     <string name="app_update_install">Install</string>
     <string name="app_update_show_details">More details</string>
     <!-- Welcome -->
