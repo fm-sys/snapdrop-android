@@ -3,7 +3,8 @@
     <string name="app_name">Snapdrop</string>
     <!-- Update -->
     <string name="app_update">Update verfügbar</string>
-    <string name="app_update_summary">Aktualisierungen enthalten wichtige Fehlerbehebungen oder tolle neue Funktionen. Die Installation wird empfohlen…</string>
+    <string name="app_update_summary">Aktualisierungen enthalten wichtige Fehlerbehebungen und großartige neue Funktionen. \n\nWenn Sie diese App nicht über Google Play installiert haben, müssen Sie die App leider deinstallieren und neu installieren, um das Update von dort zu erhalten.</string>
+    <string name="app_update_short_summary">Ein neues Update ist verfügbar</string>
     <string name="app_update_install">Installieren</string>
     <string name="app_update_show_details">Weitere Infos</string>
     <!-- Welcome -->
@@ -23,6 +24,10 @@
     <string name="license">Lizenz</string>
     <string name="pref_category_settings">Einstellungen</string>
     <string name="developers">Entwickler</string>
+    <string name="crowdin">Übersetzung</string>
+    <string name="crowdin_summary">Helfen Sie <b>Snapdrop für Android</b> in Ihre bevorzugte Sprache zu übersetzen</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Bleiben Sie informiert über <b>Snapdrop für Android</b></string>
     <string name="version">Version</string>
     <string name="pref_device_name_title">Gerätename</string>
     <string name="pref_device_name_summary">Lege einen benutzerdefinierten Gerätenamen fest</string>
