@@ -21,8 +21,8 @@ android {
         //  -   Post release info to Twitter
         //  -   Optional: At last the output-metadata.json can be moved to the docs folder to trigger the in-app update notification.
 
-        versionCode 7
-        versionName "1.5.1"
+        versionCode 8
+        versionName "1.5.2"
         applicationVariants.all { variant ->
             variant.outputs.all {
                 outputFileName = "snapdrop_v${defaultConfig.versionName}.apk"
