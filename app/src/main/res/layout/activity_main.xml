@@ -6,7 +6,7 @@
     style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?colorPrimary"
+    android:background="?android:attr/colorBackground"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
