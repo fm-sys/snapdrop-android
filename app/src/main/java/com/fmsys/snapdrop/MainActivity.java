@@ -227,8 +227,7 @@ public class MainActivity extends Activity {
             final View coordinatorLayout = findViewById(R.id.coordinatorLayout);
             final Snackbar snackbar = Snackbar
                     .make(coordinatorLayout, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
-                    .setAction(android.R.string.cancel, button -> resetUploadIntent())
-                    .setActionTextColor(getResources().getColor(R.color.colorAccent));
+                    .setAction(android.R.string.cancel, button -> resetUploadIntent());
             snackbar.show();
 
             onlyText = true;
@@ -461,8 +460,7 @@ public class MainActivity extends Activity {
                 if (UpdateUtils.isInstalledViaGooglePlay(MainActivity.this)) { // simplified and less disturbing message for PlayStore users
                     final Snackbar snackbar = Snackbar
                             .make(findViewById(R.id.coordinatorLayout), R.string.app_update_short_summary, Snackbar.LENGTH_INDEFINITE)
-                            .setAction(R.string.app_update_install, button -> UpdateUtils.showAppInMarket(MainActivity.this))
-                            .setActionTextColor(getResources().getColor(R.color.colorAccent));
+                            .setAction(R.string.app_update_install, button -> UpdateUtils.showAppInMarket(MainActivity.this));
                     snackbar.show();
                     new Handler().postDelayed(snackbar::dismiss, 10000); // 10 seconds
                 } else {

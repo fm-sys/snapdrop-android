@@ -171,8 +171,7 @@ public class JavaScriptInterface {
                             e.printStackTrace();
                         }
 
-                    })
-                    .setActionTextColor(context.getResources().getColor(R.color.colorAccent));
+                    });
             snackbar.show();
 
             // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent

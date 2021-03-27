@@ -7,18 +7,25 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="snackbarStyle">@style/SnackBarStyle</item>
         <item name="snackbarButtonStyle">@style/SnackBarActionStyle</item>
+        <item name="snackbarTextViewStyle">@style/SnackbarTextViewStyle</item>
         <item name="alertDialogTheme">@style/AlertDialogTheme</item>
 
     </style>
 
     <style name="SnackBarActionStyle" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
         <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="SnackbarTextViewStyle" parent="@style/Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:textColor">@color/textColorWhite</item>
     </style>
 
     <style name="SnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
         <item name="android:backgroundTint">@color/snackbarBackground</item>
         <item name="android:background">@drawable/snackbar_larger_margin</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="actionTextColorAlpha">1.0</item>
+        <item name="animationMode">slide</item>
     </style>
 
     <style name="AppTheme.Launcher">
