@@ -44,5 +44,5 @@
     <string name="intent_files">Des fichiers sont sélectionnés pour partager</string>
     <string name="intent_content">Du contenu est sélectionné pour partager</string>
     <string name="error_filechooser">Impossible d\'ouvrir le fichier sélectionné</string>
-    <string name="error_network">Veuillez vérifier que vous êtes bien connectés à un réseau WiFi</string>
+    <string name="error_network">Veuillez vérifier que vous êtes bien connecté à un réseau WiFi</string>
 </resources>
