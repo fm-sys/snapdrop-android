@@ -2,47 +2,47 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <!-- Update -->
-    <string name="app_update">Update available</string>
-    <string name="app_update_summary">Updates contain important bug fixes and great new features. \n\nIf you don\'t have installed this app via Google Play, you unfortunately have to uninstall and reinstall the app to get the update from there.</string>
-    <string name="app_update_short_summary">A new update is available</string>
-    <string name="app_update_install">Install</string>
-    <string name="app_update_show_details">More details</string>
+    <string name="app_update">Dostępna aktualizacja</string>
+    <string name="app_update_summary">Aktualizacje zawierają ważne poprawki błędów i świetne nowe funkcje. \n\nJeśli nie zainstalowałeś tej aplikacji przez Google Play, niestety musisz odinstalować i ponownie zainstalować aplikację, aby pobrać z niej aktualizację.</string>
+    <string name="app_update_short_summary">Dostępna jest nowa aktualizacja</string>
+    <string name="app_update_install">Zainstaluj</string>
+    <string name="app_update_show_details">Więcej szczegółów</string>
     <!-- Welcome -->
-    <string name="app_welcome">Welcome to Snapdrop</string>
-    <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> or the Snapdrop app on any other device in your local WiFi network.\n2. Tab on the device you want to share the file(s) with.\n3. Done! The file(s) will be sent…</string>
+    <string name="app_welcome">Witamy w Snapdrop</string>
+    <string name="app_welcome_summary">1. Otwórz <a href="https://snapdrop.net">snapdrop.net</a> lub aplikację Snapdrop na dowolnym innym urządzeniu w lokalnej sieci WiFi.\n2. Zakładka na urządzeniu, z którym chcesz udostępnić plik(i)\n3. Gotowe! Pliki zostaną wysłane…</string>
     <!-- Download -->
-    <string name="download_successful">Download successful</string>
-    <string name="notification_channel_name">Download completed</string>
+    <string name="download_successful">Pobieranie zakończone</string>
+    <string name="notification_channel_name">Zakończono pobieranie</string>
     <!-- Action Buttons -->
-    <string name="open">open</string>
-    <string name="reset">reset</string>
+    <string name="open">otwórz</string>
+    <string name="reset">zresetuj</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">About Snapdrop for Android</string>
-    <string name="title_activity_about_short">About Snapdrop</string>
-    <string name="developer_notice">Snapdrop for Android by <a href="https://github.com/fm-sys">fm-sys</a></string>
-    <string name="developer_notice_settings"><b>fm-sys</b> and all contributors at GitHub</string>
-    <string name="license">License</string>
-    <string name="pref_category_settings">Settings</string>
-    <string name="developers">Developer</string>
-    <string name="crowdin">Localization</string>
-    <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
+    <string name="title_activity_about">O Snapdrop dla Androida</string>
+    <string name="title_activity_about_short">O Snapdrop</string>
+    <string name="developer_notice">Snapdrop dla Androida przez <a href="https://github.com/fm-sys">fm-sys</a></string>
+    <string name="developer_notice_settings"><b>fm-sys</b> i wszyscy współtwórcy na GitHub</string>
+    <string name="license">Licencja</string>
+    <string name="pref_category_settings">Ustawienia</string>
+    <string name="developers">Twórca</string>
+    <string name="crowdin">Tłumaczenia</string>
+    <string name="crowdin_summary">Pomóż przetłumaczyć <b>Snapdrop dla Androida</b> na Twój ulubiony język</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Stay informed about <b>Snapdrop for Android</b></string>
-    <string name="version">Version</string>
-    <string name="pref_device_name_title">Device name</string>
-    <string name="pref_device_name_summary">Set a user-defined device name</string>
-    <string name="keep_on_summary">Enable if you have problems with transfers being interrupted when the screen turns off</string>
-    <string name="keep_on_title">Keep screen on</string>
-    <string name="settings_theme_title">Theme</string>
+    <string name="twitter_summary">Bądź informowany o <b>Snapdrop dla Androida</b></string>
+    <string name="version">Wersja</string>
+    <string name="pref_device_name_title">Nazwa urządzenia</string>
+    <string name="pref_device_name_summary">Ustaw nazwę urządzenia zdefiniowaną przez użytkownika</string>
+    <string name="keep_on_summary">Włącz, jeśli masz problemy z przerywaniem transferów po wyłączeniu ekranu</string>
+    <string name="keep_on_title">Pozostaw ekran włączony</string>
+    <string name="settings_theme_title">Motyw</string>
     <string-array name="darkmode_entries">
-        <item>System Default</item>
-        <item>Light</item>
-        <item>Dark</item>
+        <item>Domyślne ustawienia</item>
+        <item>Jasny</item>
+        <item>Ciemny</item>
     </string-array>
     <!-- File sharing -->
-    <string name="intent_file">A file is selected for sharing</string>
-    <string name="intent_files">Files are selected for sharing</string>
-    <string name="intent_content">Content is selected for sharing</string>
-    <string name="error_filechooser">Cannot open file chooser</string>
-    <string name="error_network">Please verify that you are connected with a WiFi network</string>
+    <string name="intent_file">Plik jest wybrany do udostępnienia</string>
+    <string name="intent_files">Plik jest wybrany do udostępnienia</string>
+    <string name="intent_content">Zawartość jest zaznaczona do udostępnienia</string>
+    <string name="error_filechooser">Nie można otworzyć wyboru plików</string>
+    <string name="error_network">Upewnij się, że jesteś podłączony do sieci WiFi</string>
 </resources>
