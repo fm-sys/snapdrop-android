@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
     private boolean loadAgain = true; // workaround cause Snapdrop website does not show the correct devices after first load
     private boolean currentlyOffline = true;
     private boolean currentlyLoading = false;
+    private boolean forceRefresh = false;
 
     public boolean onlyText = false;
     public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
@@ -191,7 +192,7 @@ public class MainActivity extends Activity {
         new UpdateChecker().execute("");
     }
 
-    private void refreshWebsite(boolean pulled) {
+    private void refreshWebsite(final boolean pulled) {
         if (isInternetAvailable()) {
             isTranfering(pulled);
         } else {
@@ -203,12 +204,10 @@ public class MainActivity extends Activity {
         refreshWebsite(false);
     }
     
-    private boolean forceRefresh = false;
-    
-    private void isTranfering(Boolean pulled) {
+    private void isTranfering(final Boolean pulled) {
         webView.evaluateJavascript("(function() { return document.querySelectorAll('x-peer[transfer]').length > 0; })();", new ValueCallback<String>() {
             @Override
-            public void onReceiveValue(String t) {
+            public void onReceiveValue(final String t) {
                 if (!Boolean.valueOf(t) || (pulled && forceRefresh)) {
                     //currently no transfer OR forceRefresh by pullingToRefresh twice
                     webView.loadUrl(baseURL);
