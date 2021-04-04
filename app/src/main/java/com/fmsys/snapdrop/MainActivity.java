@@ -286,6 +286,12 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        refreshWebsite();
+    }
+
+    @Override
     protected void onDestroy() {
         unregisterReceiver(receiver);
         webView.loadUrl("about:blank");
