@@ -58,8 +58,8 @@ public class MainActivity extends Activity {
     private static final int LAUNCH_SETTINGS_ACTIVITY = 12;
     public static final int REQUEST_SELECT_FILE = 100;
 
-    private static final String baseURL = "https://fm-sys.github.io/snapdrop/client/";
-    //private static final String baseURL = "https://snapdrop.net/";
+    //private static final String baseURL = "https://fm-sys.github.io/snapdrop/client/";
+    private static final String baseURL = "https://snapdrop.net/";
 
     public WebView webView;
     public SharedPreferences prefs;
