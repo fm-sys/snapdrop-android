@@ -74,6 +74,7 @@ public class MainActivity extends Activity {
 
     public boolean onlyText = false;
     public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
+    public boolean transfer = false;
 
     public Intent uploadIntent = null;
 
@@ -180,7 +181,7 @@ public class MainActivity extends Activity {
         }
 
         pullToRefresh.setOnRefreshListener(() -> {
-            refreshWebsite();
+            refreshWebsite(true);
             pullToRefresh.setRefreshing(false);
         });
 
@@ -190,13 +191,22 @@ public class MainActivity extends Activity {
 
         new UpdateChecker().execute("");
     }
+    
+    private boolean forceRefresh = false;
 
-    private void refreshWebsite() {
-        if (isInternetAvailable()) {
+    private void refreshWebsite(boolean pulled) {
+        if (isInternetAvailable() && !transfer || forceRefresh) {
             webView.loadUrl(baseURL);
+            forceRefresh = false;
+        } else if (transfer)
+            forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
             showScreenNoConnection();
         }
+    }
+    
+    private void refreshWebsite() {
+        refreshWebsite(false);
     }
 
     private void showScreenNoConnection() {
