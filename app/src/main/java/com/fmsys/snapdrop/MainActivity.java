@@ -206,10 +206,10 @@ public class MainActivity extends Activity {
     private boolean forceRefresh = false;
     
     private void isTranfering(Boolean pulled) {
-        webView.evaluateJavascript("(function() { return document.querySelectorAll('x-peer[transfer]').length > 0; })();", new ValueCallback<Boolean>() {
+        webView.evaluateJavascript("(function() { return document.querySelectorAll('x-peer[transfer]').length > 0; })();", new ValueCallback<String>() {
             @Override
-            public void onReceiveValue(Boolean t) {
-                if (!t || (pulled && forceRefresh)) {
+            public void onReceiveValue(String t) {
+                if (!parseBoolean(t) || (pulled && forceRefresh)) {
                     //currently no transfer OR forceRefresh by pullingToRefresh twice
                     webView.loadUrl(baseURL);
                     forceRefresh = false;
