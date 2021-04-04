@@ -209,7 +209,7 @@ public class MainActivity extends Activity {
         webView.evaluateJavascript("(function() { return document.querySelectorAll('x-peer[transfer]').length > 0; })();", new ValueCallback<String>() {
             @Override
             public void onReceiveValue(String t) {
-                if (!parseBoolean(t) || (pulled && forceRefresh)) {
+                if (!Boolean.valueOf(t) || (pulled && forceRefresh)) {
                     //currently no transfer OR forceRefresh by pullingToRefresh twice
                     webView.loadUrl(baseURL);
                     forceRefresh = false;
