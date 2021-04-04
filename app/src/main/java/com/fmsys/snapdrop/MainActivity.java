@@ -198,7 +198,7 @@ public class MainActivity extends Activity {
         if (isInternetAvailable() && !transfer || forceRefresh) {
             webView.loadUrl(baseURL);
             forceRefresh = false;
-        } else if (transfer)
+        } else if (transfer) {
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
             showScreenNoConnection();
