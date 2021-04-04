@@ -206,7 +206,7 @@ public class MainActivity extends Activity {
     private boolean forceRefresh = false;
     
     private void isTranfering(Boolean pulled) {
-        webview.evaluateJavascript("(function() { return document.querySelectorAll('x-peer[transfer]').length > 0; })();", new ValueCallback<Boolean>() {
+        webView.evaluateJavascript("(function() { return document.querySelectorAll('x-peer[transfer]').length > 0; })();", new ValueCallback<Boolean>() {
             @Override
             public void onReceiveValue(Boolean t) {
                 if (!t || (pulled && forceRefresh)) {
