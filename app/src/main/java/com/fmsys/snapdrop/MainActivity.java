@@ -75,6 +75,7 @@ public class MainActivity extends Activity {
     public boolean onlyText = false;
     public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
     public boolean transfer = false;
+    private boolean forceRefresh = false;
 
     public Intent uploadIntent = null;
 
@@ -191,10 +192,8 @@ public class MainActivity extends Activity {
 
         new UpdateChecker().execute("");
     }
-    
-    private boolean forceRefresh = false;
 
-    private void refreshWebsite(boolean pulled) {
+    private void refreshWebsite(final boolean pulled) {
         if (isInternetAvailable() && !transfer || forceRefresh) {
             webView.loadUrl(baseURL);
             forceRefresh = false;
