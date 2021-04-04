@@ -230,11 +230,19 @@ public class JavaScriptInterface {
     }
     public static String initialiseWebsite() {
         return "javascript: " +
-                //change onCopy to connect to JavaScriptInterface
+                //change ReceiveTextDialog._onCopy to connect to JavaScriptInterface
+                "ReceiveTextDialog.prototype._oC = ReceiveTextDialog.prototype._onCopy;" +
                 "ReceiveTextDialog.prototype._onCopy = function(){" +
-                "   SnapdropAndroid.copyToClipboard(this.$text.textContent);" +
-                "   Events.fire('notify-user', 'Copied to clipboard');" +
-                "}" +
+                "               this._oC();" +
+                "               SnapdropAndroid.copyToClipboard(this.$text.textContent);" +
+                "            };" +
+                //change PeerUI.setProgress to connect to JavaScriptInterface
+                "PeerUI.prototype.sP = PeerUI.prototype.setProgress;" +
+                "PeerUI.prototype.setProgress = function(progress){" +
+                "               SnapdropAndroid.setProgress(progress);" +
+                "               this.sP(progress);" +
+                "            };" +
+            
                 //change tweet link
                 "document.querySelector('.icon-button[title~='Tweet']').href = 'https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20An%20Android%20client%20for https://snapdrop.net%20by%20@robin_linus%20&';" +
             
