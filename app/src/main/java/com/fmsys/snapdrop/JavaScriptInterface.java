@@ -265,6 +265,12 @@ public class JavaScriptInterface {
                 "let aboutIconButton = document.querySelector('.icon-button[href=\"#about\"]');" +
                 "aboutIconButton.parentElement.insertBefore(settingsIconButton, aboutIconButton.nextSibling);" +
             
+                //remove donation button (play guidelines)
+                "document.querySelector('.icon-button[href*=\"paypal\"]').hidden = true;" +
+            
+                //remove "safari hack"                 
+                "document.body.onclick = null;" +
+            
                 //change ServerConnection.send(message) to connect to JavaScriptInterface
                 "ServerConnection.prototype.s = ServerConnection.prototype.send;" +
                 "ServerConnection.prototype.send = function(message){" +
