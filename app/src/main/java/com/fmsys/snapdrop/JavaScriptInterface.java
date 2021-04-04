@@ -271,5 +271,14 @@ public class JavaScriptInterface {
     public boolean shouldOpenSendTextDialog() {
         return context.onlyText;
     }
+    
+    @JavascriptInterface
+    public void setProgress(final int progress) {
+        if (progress > 0) {
+            context.transfer = true;
+        } else {
+            context.transfer = false;
+        }
+    }
 
 }
