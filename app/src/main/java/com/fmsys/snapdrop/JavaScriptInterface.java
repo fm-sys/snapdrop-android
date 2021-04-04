@@ -273,7 +273,7 @@ public class JavaScriptInterface {
     }
     
     @JavascriptInterface
-    public void setProgress(final int progress) {
+    public void setProgress(final double progress) {
         if (progress > 0) {
             context.transfer = true;
         } else {
