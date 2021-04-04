@@ -244,7 +244,7 @@ public class JavaScriptInterface {
                 "            };" +
             
                 //change tweet link
-                "document.querySelector('.icon-button[title~='Tweet']').href = 'https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20An%20Android%20client%20for https://snapdrop.net%20by%20@robin_linus%20&';" +
+                "document.querySelector('.icon-button[title~=\"Tweet\"]').href = 'https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20An%20Android%20client%20for https://snapdrop.net%20by%20@robin_linus%20&';" +
             
                 //add settings icon-button
                 "let settingsIconButton = document.createElement('a');" +
@@ -262,7 +262,7 @@ public class JavaScriptInterface {
                 "settingsSvg.appendChild(settingsPath);" +
                 "settingsIconButton.appendChild(settingsSvg);" +
 
-                "let aboutIconButton = document.querySelector('.icon-button[href='#about']');" +
+                "let aboutIconButton = document.querySelector('.icon-button[href=\"#about\"]');" +
                 "aboutIconButton.parentElement.insertBefore(settingsIconButton, aboutIconButton.nextSibling);" +
             
                 //change ServerConnection.send(message) to connect to JavaScriptInterface
