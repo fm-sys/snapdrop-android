@@ -236,7 +236,7 @@ public class JavaScriptInterface {
                 "               this._oC();" +
                 "               SnapdropAndroid.copyToClipboard(this.$text.textContent);" +
                 "            };" +
-                //change PeerUI.setProgress to connect to JavaScriptInterface
+                //change PeerUI.setProgress(progress) to connect to JavaScriptInterface
                 "PeerUI.prototype.sP = PeerUI.prototype.setProgress;" +
                 "PeerUI.prototype.setProgress = function(progress){" +
                 "               SnapdropAndroid.setProgress(progress);" +
@@ -265,18 +265,26 @@ public class JavaScriptInterface {
                 "let aboutIconButton = document.querySelector('.icon-button[href='#about']');" +
                 "aboutIconButton.parentElement.insertBefore(settingsIconButton, aboutIconButton.nextSibling);" +
             
+                //change ServerConnection.send(message) to connect to JavaScriptInterface
+                "ServerConnection.prototype.s = ServerConnection.prototype.send;" +
+                "ServerConnection.prototype.send = function(message){" +
+                "               this.s(message);" +
+                "               if (message.type == 'pong') {" +
+                "                   SnapdropAndroid.updateLastOnlineTime();" +
+                "               }" +
+                "            };" +
+                
+                //change PeerUI._onTouchEnd(e) to connect to JavaScriptInterface
+                "PeerUI.prototype._oTE = PeerUI.prototype._onTouchEnd;" +
+                "PeerUI.prototype._onTouchEnd = function(e){" +
+                "               this._oTE(e);" +
+                "               if ((Date.now() - this._touchStart < 500) && SnapdropAndroid.shouldOpenSendTextDialog()) {" +
+                "                   Events.fire('text-recipient', e.detail);" +
+                "               }" +
+                "            };" +
+            
                 "window.addEventListener('file-received', e => {" +
                 "   SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);" +
-                "}, false);" +
-
-                "window.addEventListener('serverconnection-active', e => {" +
-                "   SnapdropAndroid.updateLastOnlineTime();" +
-                "}, false);" +
-
-                "window.addEventListener('recipient-shortclicked', e => {" +
-                "   if (SnapdropAndroid.shouldOpenSendTextDialog()) {" +
-                "       Events.fire('text-recipient', e.detail);" +
-                "   }" +
                 "}, false);" + (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
     }
 
