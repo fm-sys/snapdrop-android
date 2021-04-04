@@ -180,7 +180,7 @@ public class MainActivity extends Activity {
         }
 
         pullToRefresh.setOnRefreshListener(() -> {
-            refreshWebsite();
+            refreshWebsite(true);
             pullToRefresh.setRefreshing(false);
         });
 
@@ -191,13 +191,35 @@ public class MainActivity extends Activity {
         new UpdateChecker().execute("");
     }
 
-    private void refreshWebsite() {
+    private void refreshWebsite(boolean pulled) {
         if (isInternetAvailable()) {
-            webView.loadUrl(baseURL);
+            isTranfering(pulled);
         } else {
             showScreenNoConnection();
         }
     }
+    
+    private void refreshWebsite() {
+        refreshWebsite(false);
+    }
+    
+    private boolean forceRefresh = false;
+    
+    private void isTranfering(Boolean pulled) {
+        webview.evaluateJavascript("(function() { return document.querySelectorAll('x-peer[transfer]').length > 0; })();", new ValueCallback<Boolean>() {
+            @Override
+            public void onReceiveValue(Boolean t) {
+                if (!t || (pulled && forceRefresh)) {
+                    //currently no transfer OR forceRefresh by pullingToRefresh twice
+                    webView.loadUrl(baseURL);
+                    forceRefresh = false;
+                } else { //is transfering
+                    forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
+                }
+            }
+        });
+    }
+
 
     private void showScreenNoConnection() {
         webView.loadUrl("file:///android_asset/offline.html?" + getString(R.string.error_network));
