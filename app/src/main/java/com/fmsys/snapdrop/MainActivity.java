@@ -289,13 +289,13 @@ public class MainActivity extends Activity {
         return System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60 * 3;
     }
 
-    /*@Override
+    @Override
     public void onResume() {
         super.onResume();
         if (!onlinePastThreeMin()) {
             refreshWebsite();
         }
-    }*/
+    }
 
     @Override
     protected void onDestroy() {
