@@ -58,8 +58,8 @@ public class MainActivity extends Activity {
     private static final int LAUNCH_SETTINGS_ACTIVITY = 12;
     public static final int REQUEST_SELECT_FILE = 100;
 
-    private static final String baseURL = "https://fm-sys.github.io/snapdrop/client/";
-    //private static final String baseURL = "https://snapdrop.net/";
+    //private static final String baseURL = "https://fm-sys.github.io/snapdrop/client/";
+    private static final String baseURL = "https://snapdrop.net/";
 
     public WebView webView;
     public SharedPreferences prefs;
@@ -74,6 +74,8 @@ public class MainActivity extends Activity {
 
     public boolean onlyText = false;
     public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
+    public boolean transfer = false;
+    public boolean forceRefresh = false;
 
     public Intent uploadIntent = null;
 
@@ -146,7 +148,7 @@ public class MainActivity extends Activity {
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
         // check if the last server connection was in the past 3 minutes - if yes we don't create a new UUID as the "old peer" might still be visible
-        if (System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60 * 3) {
+        if (onlinePastThreeMin()) {
             WebStorage.getInstance().deleteAllData();
 
             cookieManager.setCookie("https://snapdrop.net/",
@@ -180,7 +182,7 @@ public class MainActivity extends Activity {
         }
 
         pullToRefresh.setOnRefreshListener(() -> {
-            refreshWebsite();
+            refreshWebsite(true);
             pullToRefresh.setRefreshing(false);
         });
 
@@ -191,12 +193,19 @@ public class MainActivity extends Activity {
         new UpdateChecker().execute("");
     }
 
-    private void refreshWebsite() {
-        if (isInternetAvailable()) {
+    private void refreshWebsite(final boolean pulled) {
+        if (isInternetAvailable() && !transfer || forceRefresh) {
             webView.loadUrl(baseURL);
+            forceRefresh = false;
+        } else if (transfer) {
+            forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
             showScreenNoConnection();
         }
+    }
+    
+    private void refreshWebsite() {
+        refreshWebsite(false);
     }
 
     private void showScreenNoConnection() {
@@ -273,6 +282,18 @@ public class MainActivity extends Activity {
             webView.loadUrl(baseURL + "#");
         } else {
             super.onBackPressed();
+        }
+    }
+    
+    private boolean onlinePastThreeMin() {
+        return System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60 * 3;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (onlinePastThreeMin()) {
+            refreshWebsite();
         }
     }
 
