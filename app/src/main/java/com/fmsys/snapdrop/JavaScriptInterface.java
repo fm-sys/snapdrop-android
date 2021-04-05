@@ -327,6 +327,7 @@ public class JavaScriptInterface {
             context.transfer = true;
         } else {
             context.transfer = false;
+            context.forceRefresh = false; //reset forceRefresh after transfer finished so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         }
     }
 
