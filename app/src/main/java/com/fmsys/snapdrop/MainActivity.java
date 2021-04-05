@@ -292,7 +292,7 @@ public class MainActivity extends Activity {
     @Override
     public void onResume() {
         super.onResume();
-        if (!onlinePastThreeMin()) {
+        if (onlinePastThreeMin()) {
             refreshWebsite();
         }
     }
