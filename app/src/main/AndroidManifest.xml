@@ -47,9 +47,8 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="https"
-                    android:host="snapdrop.net" />
+                <data android:scheme="http" android:host="snapdrop.net" />
+                <data android:scheme="https" android:host="snapdrop.net" />
             </intent-filter>
 
             <meta-data
