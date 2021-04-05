@@ -148,7 +148,7 @@ public class MainActivity extends Activity {
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
         // check if the last server connection was in the past 3 minutes - if yes we don't create a new UUID as the "old peer" might still be visible
-        if (onlineLastThreeMin()) {
+        if (onlinePastThreeMin()) {
             WebStorage.getInstance().deleteAllData();
 
             cookieManager.setCookie("https://snapdrop.net/",
@@ -285,14 +285,14 @@ public class MainActivity extends Activity {
         }
     }
     
-    private boolean onlineLastThreeMin() {
+    private boolean onlinePastThreeMin() {
         return System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60 * 3;
     }
 
     /*@Override
     public void onResume() {
         super.onResume();
-        if (!onlineLastThreeMin()) {
+        if (!onlinePastThreeMin()) {
             refreshWebsite();
         }
     }*/
