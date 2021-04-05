@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
     public boolean onlyText = false;
     public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
     public boolean transfer = false;
-    private boolean forceRefresh = false;
+    public boolean forceRefresh = false;
 
     public Intent uploadIntent = null;
 
