@@ -285,7 +285,7 @@ public class JavaScriptInterface {
                 "PeerUI.prototype._onTouchEnd = function(e){" +
                 "               this._oTE(e);" +
                 "               if ((Date.now() - this._touchStart < 500) && SnapdropAndroid.shouldOpenSendTextDialog()) {" +
-                "                   Events.fire('text-recipient', e.detail);" +
+                "                   Events.fire('text-recipient', this._peer.id);" +
                 "               }" +
                 "            };" +
             
