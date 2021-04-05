@@ -285,11 +285,11 @@ public class MainActivity extends Activity {
         }
     }
 
-    @Override
+    /*@Override
     public void onResume() {
         super.onResume();
         refreshWebsite();
-    }
+    }*/
 
     @Override
     protected void onDestroy() {
