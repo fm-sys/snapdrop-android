@@ -3,8 +3,8 @@
     <string name="app_name">Snapdrop</string>
     <!-- Update -->
     <string name="app_update">Actualizacion disponible</string>
-    <string name="app_update_summary">Updates contain important bug fixes and great new features. \n\nIf you don\'t have installed this app via Google Play, you unfortunately have to uninstall and reinstall the app to get the update from there.</string>
-    <string name="app_update_short_summary">A new update is available</string>
+    <string name="app_update_summary">Las actualizaciones contienen importantes correcciones de errores y grandes nuevas características. \n\nSi no has instalado esta aplicación a través de Google Play, lamentablemente tienes que desinstalar y reinstalar la aplicación para obtener la actualización de allí.</string>
+    <string name="app_update_short_summary">Una nueva actualización está disponible</string>
     <string name="app_update_install">Instalar</string>
     <string name="app_update_show_details">Más detalles</string>
     <!-- Welcome -->
@@ -24,10 +24,10 @@
     <string name="license">Licencia</string>
     <string name="pref_category_settings">Ajustes</string>
     <string name="developers">Desarrollador</string>
-    <string name="crowdin">Localization</string>
-    <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
+    <string name="crowdin">Localización</string>
+    <string name="crowdin_summary">Ayuda a traducir <b>Snapdrop para Android</b> a tu idioma favorito</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Stay informed about <b>Snapdrop for Android</b></string>
+    <string name="twitter_summary">Mantente informado sobre <b>Instantánea para Android</b></string>
     <string name="version">Versión</string>
     <string name="pref_device_name_title">Nombre del dispositivo</string>
     <string name="pref_device_name_summary">Establece un nombre de dispositivo definido por el usuario</string>
