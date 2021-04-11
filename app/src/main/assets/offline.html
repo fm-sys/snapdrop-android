@@ -55,6 +55,64 @@ x-information {
     justify-content: center;
     flex-direction: column;
 }
+
+/* Button */
+a {
+    text-decoration: none;
+    color: currentColor;
+    cursor: pointer;
+}
+
+.button {
+    padding: 0 16px;
+    box-sizing: border-box;
+    min-height: 36px;
+    min-width: 100px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    background: inherit;
+    color: var(--primary-color);
+}
+
+.button,
+.icon-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    touch-action: manipulation;
+    border: none;
+    outline: none;
+}
+
+.button:before,
+.icon-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: currentColor;
+    opacity: 0.2;
+    transition: opacity 300ms;
+}
+
+.button:before {
+    border-radius: 8px;
+}
+
+.button:focus:before,
+.icon-button:focus:before {
+    opacity: 0.4;
+}
     </style>
 </head>
 
@@ -66,11 +124,17 @@ x-information {
     </svg>
 
     <h3 id="text"></h3>
+
+    <div style="height:20%; position:absolute; bottom:0px;">
+        <a id="button" class="button" href="offlineButForceRefresh" target="_blank"></a>
+    </div>
 </x-information>
 
 
 <script>
-document.getElementById('text').innerHTML = decodeURI(window.location.search.substr(1));
+const params = new URLSearchParams(window.location.search)
+document.getElementById('text').innerHTML = decodeURI(params.get('text'));
+document.getElementById('button').innerHTML = decodeURI(params.get('button'));
 </script>
 </body>
 </html>

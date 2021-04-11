@@ -71,11 +71,11 @@ public class MainActivity extends Activity {
     private boolean loadAgain = true; // workaround cause Snapdrop website does not show the correct devices after first load
     private boolean currentlyOffline = true;
     private boolean currentlyLoading = false;
-
-    public boolean onlyText = false;
-    public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
-    public boolean transfer = false;
     public boolean forceRefresh = false;
+    public boolean transfer = false;
+    public boolean onlyText = false;
+
+    public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
 
     public Intent uploadIntent = null;
 
@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
             if ((!isInitialStickyBroadcast()) && currentlyOffline) {
                 final Handler handler = new Handler();
                 handler.postDelayed(() -> {
-                    if (isInternetAvailable()) {
+                    if (isWifiAvailable()) {
                         refreshWebsite();
                     }
                 }, 1500); // wait a bit until connection is ready
@@ -194,9 +194,11 @@ public class MainActivity extends Activity {
     }
 
     private void refreshWebsite(final boolean pulled) {
-        if (isInternetAvailable() && !transfer || forceRefresh) {
+        if (isWifiAvailable() && !transfer || forceRefresh) {
             webView.loadUrl(baseURL);
-            forceRefresh = false;
+            if (!loadAgain) {
+                forceRefresh = false;
+            }
         } else if (transfer) {
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
@@ -209,14 +211,22 @@ public class MainActivity extends Activity {
     }
 
     private void showScreenNoConnection() {
-        webView.loadUrl("file:///android_asset/offline.html?" + getString(R.string.error_network));
+        webView.loadUrl("file:///android_asset/offline.html?text=" + getString(R.string.error_network) + "&button=" + getString(R.string.ignore_error_network));
         currentlyOffline = true;
     }
 
-    public boolean isInternetAvailable() {
+    private boolean isWifiAvailable() {
         if (connMgr != null) {
             final NetworkInfo activeNetworkInfo = connMgr.getActiveNetworkInfo();
             return activeNetworkInfo != null && activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI;
+        }
+        return false;
+    }
+
+    private boolean isInternetAvailable() {
+        if (connMgr != null) {
+            final NetworkInfo activeNetworkInfo = connMgr.getActiveNetworkInfo();
+            return activeNetworkInfo != null && activeNetworkInfo.isConnected();
         }
         return false;
     }
@@ -390,6 +400,12 @@ public class MainActivity extends Activity {
             if (url.endsWith("update.html#settings")) {
                 final Intent browserIntent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
+            } else if (url.endsWith("offlineButForceRefresh")) {
+                forceRefresh = true;
+                loadAgain = true;
+                imageViewLayout.setVisibility(View.VISIBLE);
+                pullToRefresh.setVisibility(View.GONE);
+                refreshWebsite();
             } else {
                 final Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(browserIntent);

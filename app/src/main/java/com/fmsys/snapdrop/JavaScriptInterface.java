@@ -315,7 +315,9 @@ public class JavaScriptInterface {
             
                 "window.addEventListener('file-received', e => {" +
                 "   SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);" +
-                "}, false);" + (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
+                "}, false);" +
+
+                (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
     }
 
     @JavascriptInterface
