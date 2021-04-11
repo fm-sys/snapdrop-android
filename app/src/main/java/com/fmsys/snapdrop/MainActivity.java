@@ -264,7 +264,7 @@ public class MainActivity extends Activity {
         if (requestCode == REQUEST_SELECT_FILE) {
             if (resultCode == RESULT_OK) {
                 uploadFromIntent(intent);
-            } else {
+            } else if (uploadMessage != null) {
                 uploadMessage.onReceiveValue(null);
                 uploadMessage = null;
             }
@@ -305,8 +305,10 @@ public class MainActivity extends Activity {
     }
 
     private void uploadFromIntent(final Intent intent) {
-        uploadMessage.onReceiveValue(getUploadFromIntentUris(intent));
-        uploadMessage = null;
+        if (uploadMessage != null) {
+            uploadMessage.onReceiveValue(getUploadFromIntentUris(intent));
+            uploadMessage = null;
+        }
     }
 
     private Uri[] getUploadFromIntentUris(final Intent intent) {
