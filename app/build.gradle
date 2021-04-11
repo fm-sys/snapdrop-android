@@ -10,7 +10,7 @@ android {
         targetSdkVersion 30
 
         // ToDo list - Update Instruction
-        //  -   As first step, always check if unmerged crowdin updates are available
+        //  -   As first step, always check if unmerged crowdin updates are available and **pull** these changes into the local repo!
         //  -   Change version code and name when releasing a new version!
         //  -   Afterwards, build a new version via Build > Generate Signed Bundle / APK...
         //  -   Please move the APK to the releases/old folder for archiving purposes
@@ -21,7 +21,7 @@ android {
         //  -   Post release info to Twitter
         //  -   Optional: At last the output-metadata.json can be moved to the docs folder to trigger the in-app update notification.
 
-        versionCode 9
+        versionCode 10
         versionName "1.5.3"
         applicationVariants.all { variant ->
             variant.outputs.all {
