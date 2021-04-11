@@ -271,7 +271,24 @@ public class JavaScriptInterface {
 
                 "let aboutIconButton = document.querySelector('.icon-button[href=\"#about\"]');" +
                 "aboutIconButton.parentElement.insertBefore(settingsIconButton, aboutIconButton.nextSibling);" +
-            
+
+                //add footer to about page
+                "let websiteLinkDiv = document.createElement('div');" +
+                "websiteLinkDiv.style.cssText = 'height:10%; position:absolute; bottom:0px;';" +
+
+                "let websiteLink = document.createElement('a');" +
+                "websiteLink.href = 'https://snapdrop.net/';" +
+                "websiteLink.target = '_blank';" +
+
+                "let websiteLinkText = document.createElement('h4');" +
+                "websiteLinkText.style.cssText = 'font-size: 16px; font-weight: 400; letter-spacing: .5em; margin: 16px 0;';" +
+                "websiteLinkText.innerText = 'WWW.SNAPDROP.NET';" +
+
+                "let aboutScreen = document.querySelector('#about>section');" +
+                "websiteLinkDiv.appendChild(websiteLink);" +
+                "websiteLink.appendChild(websiteLinkText);" +
+                "aboutScreen.appendChild(websiteLinkDiv);" +
+
                 //remove donation button (play guidelines)
                 "document.querySelector('.icon-button[href*=\"paypal\"]').hidden = true;" +
             
