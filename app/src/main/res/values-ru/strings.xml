@@ -9,7 +9,7 @@
     <string name="app_update_show_details">More details</string>
     <!-- Welcome -->
     <string name="app_welcome">Welcome to Snapdrop</string>
-    <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> or the Snapdrop app on any other device in your local WiFi network.\n2. Tab on the device you want to share the file(s) with.\n3. Done! The file(s) will be sent…</string>
+    <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> or the Snapdrop app on any other device in your local WiFi network.\n2. Tap on the device you want to share the file(s) with.\n3. Done! The file(s) will be sent…</string>
     <!-- Download -->
     <string name="download_successful">Download successful</string>
     <string name="notification_channel_name">Download completed</string>
@@ -45,4 +45,5 @@
     <string name="intent_content">Content is selected for sharing</string>
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
+    <string name="ignore_error_network">Let me in anyway</string>
 </resources>

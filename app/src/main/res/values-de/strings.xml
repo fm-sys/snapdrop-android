@@ -45,4 +45,5 @@
     <string name="intent_content">Inhalt ausgewählt</string>
     <string name="error_filechooser">Dateiauswahl kann nicht gestartet werden</string>
     <string name="error_network">Sie müssen mit einem WLAN verbunden sein, um Snapdrop nutzen zu können</string>
+    <string name="ignore_error_network">Trotzdem laden</string>
 </resources>
