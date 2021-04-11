@@ -228,13 +228,20 @@ public class JavaScriptInterface {
         return "javascript: " +
                 "var x = document.getElementById(\"textInput\").innerHTML=\"" + TextUtils.htmlEncode(text) + "\";";
     }
+
+    /**
+     * Initialises the website (GUI and JS changes)
+     *
+     * Good practice: We should always try to touch the js as little as possible (add code instead of overriding) not to break anything should there be minor changes to the website
+     *
+     * @return java script string which needs to be executed in the webview.
+     */
     public static String initialiseWebsite() {
         return "javascript: " +
-                //change ReceiveTextDialog._onCopy to connect to JavaScriptInterface
-                "ReceiveTextDialog.prototype._oC = ReceiveTextDialog.prototype._onCopy;" +
+                //change ReceiveTextDialog._onCopy to connect to JavaScriptInterface (don't call super method as it will throw an NotAllowedError)
                 "ReceiveTextDialog.prototype._onCopy = function(){" +
-                "               this._oC();" +
                 "               SnapdropAndroid.copyToClipboard(this.$text.textContent);" +
+                "               Events.fire('notify-user', 'Copied to clipboard');" +
                 "            };" +
                 //change PeerUI.setProgress(progress) to connect to JavaScriptInterface
                 "PeerUI.prototype.sP = PeerUI.prototype.setProgress;" +
