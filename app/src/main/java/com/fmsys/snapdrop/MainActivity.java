@@ -284,7 +284,10 @@ public class MainActivity extends Activity {
             super.onBackPressed();
         }
     }
-    
+
+    /**
+     * @return true if there was no server connection for more than three minutes
+     */
     private boolean onlinePastThreeMin() {
         return System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60 * 3;
     }
