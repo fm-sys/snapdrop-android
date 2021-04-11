@@ -45,4 +45,5 @@
     <string name="intent_content">El contenido está seleccionado para compartir</string>
     <string name="error_filechooser">No se pudo abrir el selector de archivos</string>
     <string name="error_network">Por favor, compruebe que está conectado a una red WiFi</string>
+    <string name="ignore_error_network">Let me in anyway</string>
 </resources>
