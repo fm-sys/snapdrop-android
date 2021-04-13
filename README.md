@@ -14,7 +14,7 @@
 >Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
 >
 > - USB? - Old fashioned!
-> - Bluetooth? - Much too cumbersome and slow!
+> - Bluetooth? - Too much cumbersome and slow!
 > - E-mail? - Please not another email I write to myself!
 > - Snapdrop!
 
