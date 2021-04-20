@@ -146,17 +146,6 @@ public class MainActivity extends Activity {
         final CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
-        // check if the last server connection was in the past 3 minutes - if yes we don't create a new UUID as the "old peer" might still be visible
-        if (onlinePastThreeMin()) {
-            WebStorage.getInstance().deleteAllData();
-
-            cookieManager.setCookie("https://snapdrop.net/",
-                    "peerid=" + UUID.randomUUID().toString() + ";" +
-                            "path=/server;" +
-                            "max-age=86400;"
-            );
-        }
-
         webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
             String filename = null;
             int pos = 0;
