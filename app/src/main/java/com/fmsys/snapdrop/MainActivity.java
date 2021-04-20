@@ -58,8 +58,7 @@ public class MainActivity extends Activity {
     private static final int LAUNCH_SETTINGS_ACTIVITY = 12;
     public static final int REQUEST_SELECT_FILE = 100;
 
-    //private static final String baseURL = "https://fm-sys.github.io/snapdrop/client/";
-    private static final String baseURL = "https://snapdrop.net/";
+    private String baseURL;
 
     public WebView webView;
     public SharedPreferences prefs;
@@ -105,6 +104,8 @@ public class MainActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        
+        baseURL = prefs.getString(getString(R.string.pref_baseurl), getString(R.string.baseURL));
 
         if (prefs.getBoolean(getString(R.string.pref_switch_keep_on), false)) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
