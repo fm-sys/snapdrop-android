@@ -68,7 +68,6 @@ public class MainActivity extends Activity {
 
     public ValueCallback<Uri[]> uploadMessage;
 
-    private boolean loadAgain = true; // workaround cause Snapdrop website does not show the correct devices after first load
     private boolean currentlyOffline = true;
     private boolean currentlyLoading = false;
     public boolean forceRefresh = false;
@@ -196,9 +195,7 @@ public class MainActivity extends Activity {
     private void refreshWebsite(final boolean pulled) {
         if (isWifiAvailable() && !transfer || forceRefresh) {
             webView.loadUrl(baseURL);
-            if (!loadAgain) {
-                forceRefresh = false;
-            }
+            forceRefresh = false;
         } else if (transfer) {
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
@@ -402,7 +399,6 @@ public class MainActivity extends Activity {
                 startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
             } else if (url.endsWith("offlineButForceRefresh")) {
                 forceRefresh = true;
-                loadAgain = true;
                 imageViewLayout.setVisibility(View.VISIBLE);
                 pullToRefresh.setVisibility(View.GONE);
                 refreshWebsite();
@@ -423,32 +419,32 @@ public class MainActivity extends Activity {
 
             if (url.startsWith(baseURL) || currentlyOffline) {
                 currentlyOffline = !url.startsWith(baseURL);
-
-                if (loadAgain) {
-                    loadAgain = false;
-                    new Handler().postDelayed(MainActivity.this::refreshWebsite, 400);
-                } else {
-                    //website initialisation
-                    if (!currentlyOffline) {
-                        webView.loadUrl(JavaScriptInterface.initialiseWebsite());
-                        webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
-
-                        // welcome dialog
-                        if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
-                            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
-                                    .setCancelable(false)
-                                    .setTitle(R.string.app_welcome)
-                                    .setMessage(R.string.app_welcome_summary)
-                                    .setPositiveButton(android.R.string.ok, (dialog, which) -> prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply());
-                            builder.create().show();
-                        }
-                    }
-
-                    imageViewLayout.setVisibility(View.GONE);
-                    pullToRefresh.setVisibility(View.VISIBLE);
-                }
+                
+                initSnapdrop();
+                
             }
             super.onPageFinished(view, url);
+        }
+        
+        private void initSnapdrop() {
+            //website initialisation
+            if (!currentlyOffline) {
+                webView.loadUrl(JavaScriptInterface.initialiseWebsite());
+                webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
+
+                // welcome dialog
+                if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
+                            .setCancelable(false)
+                            .setTitle(R.string.app_welcome)
+                            .setMessage(R.string.app_welcome_summary)
+                            .setPositiveButton(android.R.string.ok, (dialog, which) -> prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply());
+                    builder.create().show();
+                }
+            }
+
+            imageViewLayout.setVisibility(View.GONE);
+            pullToRefresh.setVisibility(View.VISIBLE);
         }
 
         @Override
