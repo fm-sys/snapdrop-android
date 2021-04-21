@@ -45,7 +45,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         });
         
         final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
-        baseUrlPref.setSummary(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(baseUrlPref.getKey(),getString(R.string.baseURL)));
+        baseUrlPref.setSummary(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(baseUrlPref.getKey(), getString(R.string.baseURL)));
         baseUrlPref.setOnPreferenceChangeListener((preference, newValue) -> {
             baseUrlPref.setSummary(newValue.toString());
             return true;
