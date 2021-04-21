@@ -19,6 +19,7 @@ import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.util.Base64InputStream;
 import android.util.Pair;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -45,7 +46,7 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
-    public void getBase64FromBlobData(final String base64Data, final String contentDisposition) throws IOException {
+    public void getBase64FromBlobData(final Base64InputStream base64Data, final String contentDisposition) throws IOException {
         convertBase64StringToFileAndStoreIt(base64Data, contentDisposition);
     }
 
@@ -61,14 +62,10 @@ public class JavaScriptInterface {
                     "xhr.onload = function(e) {" +
                     "    if (this.status == 200) {" +
                     "        var blobFile = this.response;" +
-
-                    //TODO: Do not load the complete file at once
-                    "        var reader = new FileReader();" +
-                    "        reader.readAsDataURL(blobFile);" +
-                    "        reader.onloadend = function() {" +
-                    "            base64data = reader.result;" +
-                    "            SnapdropAndroid.getBase64FromBlobData(base64data, fileName);" +
-                    "        }" +
+                    "        blobFile.stream().getReader().read().then(function ({ done, base64data }) {" +
+                    "           if (done) {return}" +
+                    "           SnapdropAndroid.getBase64FromBlobData(base64data, fileName);" +
+                    "        });" +
                     "    }" +
                     "};" +
                     "xhr.send();";
@@ -76,7 +73,7 @@ public class JavaScriptInterface {
         return "javascript: console.log('It is not a Blob URL');";
     }
 
-    private void convertBase64StringToFileAndStoreIt(final String base64file, final String contentDisposition) throws IOException {
+    private void convertBase64StringToFileAndStoreIt(final Base64InputStream base64file, final String contentDisposition) throws IOException {
         final int notificationId = (int) SystemClock.uptimeMillis();
 
         final Matcher m = Pattern.compile("^data:(.+);base64,").matcher(base64file.substring(0, 100));
@@ -318,6 +315,10 @@ public class JavaScriptInterface {
                 "}, false);" +
 
                 (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
+    }
+
+    public static String beforeunload() {
+        return "javascript: window.dispatchEvent(new Event('beforeunload'));";
     }
 
     @JavascriptInterface
