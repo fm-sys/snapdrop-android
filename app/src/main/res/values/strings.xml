@@ -51,4 +51,7 @@
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
     <string name="ignore_error_network">Let me in anyway</string>
+    
+    <!-- baseURL -->
+    <string name="baseURL" translatable="false">https://snapdrop.net/</string>
 </resources>
