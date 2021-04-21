@@ -462,6 +462,10 @@ public class MainActivity extends Activity {
 
         @Override
         public void onReceivedError(final WebView view, final WebResourceRequest request, final WebResourceError error) {
+            //reset baseURL if invalid
+            prefs.edit().remove(getString(R.string.pref_baseurl)).apply();
+            baseURL = getString(R.string.baseURL);
+            
             showScreenNoConnection();
         }
 
