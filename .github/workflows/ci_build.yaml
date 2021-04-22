@@ -16,4 +16,11 @@ jobs:
       - name: Build the app
         run: |
           chmod +x gradlew
-          ./gradlew build
+          ./gradlew build --stacktrace
+      - name: Compile debug APK
+        run: ./gradlew assembleDebug --stacktrace
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
