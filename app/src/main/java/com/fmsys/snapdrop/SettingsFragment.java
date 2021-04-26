@@ -43,6 +43,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             builder.create().show();
             return true;
         });
+        
+        final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
+        baseUrlPref.setSummary(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(baseUrlPref.getKey(), getString(R.string.baseURL)));
+        baseUrlPref.setOnPreferenceChangeListener((preference, newValue) -> {
+            baseUrlPref.setSummary(newValue.toString());
+            return true;
+        });
 
         final Preference themePref = findPreference(getString(R.string.pref_theme_setting));
             themePref.setOnPreferenceChangeListener((Preference preference, Object newValue) -> {
