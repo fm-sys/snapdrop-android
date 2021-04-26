@@ -39,6 +39,7 @@
         <item>Hell</item>
         <item>Dunkel</item>
     </string-array>
+    <string name="baseurl_title">Base URL</string>
     <!-- File sharing -->
     <string name="intent_file">Datei ausgewählt</string>
     <string name="intent_files">Dateien ausgewählt</string>
@@ -46,4 +47,5 @@
     <string name="error_filechooser">Dateiauswahl kann nicht gestartet werden</string>
     <string name="error_network">Sie müssen mit einem WLAN verbunden sein, um Snapdrop nutzen zu können</string>
     <string name="ignore_error_network">Trotzdem laden</string>
+    <!-- baseURL -->
 </resources>
