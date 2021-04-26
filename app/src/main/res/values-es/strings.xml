@@ -39,6 +39,7 @@
         <item>Claro</item>
         <item>Oscuro</item>
     </string-array>
+    <string name="baseurl_title">Base URL</string>
     <!-- File sharing -->
     <string name="intent_file">Se ha seleccionado un archivo para compartir</string>
     <string name="intent_files">Los archivos están seleccionados para compartir</string>
@@ -46,4 +47,5 @@
     <string name="error_filechooser">No se pudo abrir el selector de archivos</string>
     <string name="error_network">Por favor, compruebe que está conectado a una red WiFi</string>
     <string name="ignore_error_network">Déjame intentarlo de todos modos</string>
+    <!-- baseURL -->
 </resources>
