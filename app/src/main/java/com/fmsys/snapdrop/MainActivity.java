@@ -33,7 +33,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
-import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
@@ -51,7 +50,6 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
@@ -462,10 +460,6 @@ public class MainActivity extends Activity {
 
         @Override
         public void onReceivedError(final WebView view, final WebResourceRequest request, final WebResourceError error) {
-            //reset baseURL if invalid
-            prefs.edit().remove(getString(R.string.pref_baseurl)).apply();
-            baseURL = getString(R.string.baseURL);
-            
             showScreenNoConnection();
         }
 

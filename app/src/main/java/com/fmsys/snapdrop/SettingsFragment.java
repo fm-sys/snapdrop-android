@@ -50,6 +50,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             baseUrlPref.setSummary(newValue.toString());
             return true;
         });
+        //todo: reset posibility
 
         final Preference themePref = findPreference(getString(R.string.pref_theme_setting));
             themePref.setOnPreferenceChangeListener((Preference preference, Object newValue) -> {
