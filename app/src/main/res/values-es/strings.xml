@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">Can\'t open browser</string>
     <!-- Update -->
     <string name="app_update">Actualizacion disponible</string>
     <string name="app_update_summary">Las actualizaciones contienen importantes correcciones de errores y grandes nuevas características. \n\nSi no has instalado esta aplicación a través de Google Play, lamentablemente tienes que desinstalar y reinstalar la aplicación para obtener la actualización de allí.</string>
