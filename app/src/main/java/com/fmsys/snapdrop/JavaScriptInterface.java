@@ -20,6 +20,7 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Base64InputStream;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -35,6 +36,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,15 +48,17 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
-    public void getBase64FromBlobData(final Base64InputStream base64Data, final String contentDisposition) throws IOException {
-        convertBase64StringToFileAndStoreIt(base64Data, contentDisposition);
+    public void sendBytes(String dec, final String contentDisposition) throws UnsupportedEncodingException {
+        //https://stackoverflow.com/questions/27034897/is-there-a-way-to-pass-an-arraybuffer-from-javascript-to-java-on-android
+        byte[] bytes = dec.getBytes("windows-1252");
+        Log.d("hjfldf", bytes.length+"");
     }
 
     public static String getBase64StringFromBlobUrl(final String blobUrl, final String filename, final String mimetype) {
         if (blobUrl.startsWith("blob")) {
             return "javascript: " +
                     (filename != null ? "fileName = \"" + filename + "\";" : "fileName = document.querySelector('a[href=\"" + blobUrl + "\"]').getAttribute('download');") + // querySelector sometimes returns null - that's why we try to hand over the filename explicitly
-                    "" +
+                    "var decoder = new TextDecoder(\"iso-8859-1\");" +
                     "var xhr = new XMLHttpRequest();" +
                     "xhr.open('GET', '" + blobUrl + "', true);" +
                     "xhr.setRequestHeader('Content-type','" + mimetype + "');" +
@@ -62,9 +66,11 @@ public class JavaScriptInterface {
                     "xhr.onload = function(e) {" +
                     "    if (this.status == 200) {" +
                     "        var blobFile = this.response;" +
-                    "        blobFile.stream().getReader().read().then(function ({ done, base64data }) {" +
+                    "        const reader = blobFile.stream().getReader();" +
+                    "        reader.read().then(function processBlob({ done, value }) {" +
                     "           if (done) {return}" +
-                    "           SnapdropAndroid.getBase64FromBlobData(base64data, fileName);" +
+                    "           SnapdropAndroid.sendBytes(decoder.decode(value), fileName);" +
+                    "           return reader.read().then(processBlob);" +
                     "        });" +
                     "    }" +
                     "};" +
@@ -74,7 +80,7 @@ public class JavaScriptInterface {
     }
 
     private void convertBase64StringToFileAndStoreIt(final Base64InputStream base64file, final String contentDisposition) throws IOException {
-        final int notificationId = (int) SystemClock.uptimeMillis();
+        /*final int notificationId = (int) SystemClock.uptimeMillis();
 
         final Matcher m = Pattern.compile("^data:(.+);base64,").matcher(base64file.substring(0, 100));
         String mimetype = null;
@@ -173,7 +179,7 @@ public class JavaScriptInterface {
 
             // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
             context.resetUploadIntent();
-        }
+        }*/
     }
 
     public static File getFinalNewDestinationFile(final File destinationFolder, final String filename) {
