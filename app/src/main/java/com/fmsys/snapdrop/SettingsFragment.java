@@ -1,11 +1,13 @@
 package com.fmsys.snapdrop;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
@@ -50,7 +52,11 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final Preference preference = findPreference(getString(pref));
         if (preference != null) {
             preference.setOnPreferenceClickListener(p -> {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(this.getContext(), R.string.err_no_browser, Toast.LENGTH_SHORT).show();
+                }
                 return true;
             });
         }

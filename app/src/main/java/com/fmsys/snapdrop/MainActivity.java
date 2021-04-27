@@ -391,8 +391,11 @@ public class MainActivity extends Activity {
                 pullToRefresh.setVisibility(View.GONE);
                 refreshWebsite();
             } else {
-                final Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                startActivity(browserIntent);
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(MainActivity.this, R.string.err_no_browser, Toast.LENGTH_SHORT).show();
+                }
             }
             return false;
         }
