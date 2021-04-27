@@ -39,7 +39,7 @@
         <item>Hell</item>
         <item>Dunkel</item>
     </string-array>
-    <string name="baseurl_title">Base URL</string>
+    <string name="baseurl_title">Basis-URL</string>
     <!-- File sharing -->
     <string name="intent_file">Datei ausgewählt</string>
     <string name="intent_files">Dateien ausgewählt</string>
