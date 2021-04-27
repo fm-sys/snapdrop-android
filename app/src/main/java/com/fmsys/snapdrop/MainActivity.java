@@ -158,7 +158,7 @@ public class MainActivity extends Activity {
                 }
             }
             downloadFilesList = downloadFilesList.subList(pos, downloadFilesList.size());
-            webView.loadUrl(JavaScriptInterface.getBase64StringFromBlobUrl(url, filename, mimetype));
+            //webView.loadUrl(JavaScriptInterface.getBase64StringFromBlobUrl(url, filename, mimetype));
         });
 
         refreshWebsite();

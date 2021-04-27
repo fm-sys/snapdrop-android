@@ -48,35 +48,10 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
-    public void sendBytes(String dec, final String contentDisposition) throws UnsupportedEncodingException {
+    public void sendBytes(String dec) throws UnsupportedEncodingException {
         //https://stackoverflow.com/questions/27034897/is-there-a-way-to-pass-an-arraybuffer-from-javascript-to-java-on-android
         byte[] bytes = dec.getBytes("windows-1252");
         Log.d("hjfldf", bytes.length+"");
-    }
-
-    public static String getBase64StringFromBlobUrl(final String blobUrl, final String filename, final String mimetype) {
-        if (blobUrl.startsWith("blob")) {
-            return "javascript: " +
-                    (filename != null ? "fileName = \"" + filename + "\";" : "fileName = document.querySelector('a[href=\"" + blobUrl + "\"]').getAttribute('download');") + // querySelector sometimes returns null - that's why we try to hand over the filename explicitly
-                    "var decoder = new TextDecoder(\"iso-8859-1\");" +
-                    "var xhr = new XMLHttpRequest();" +
-                    "xhr.open('GET', '" + blobUrl + "', true);" +
-                    "xhr.setRequestHeader('Content-type','" + mimetype + "');" +
-                    "xhr.responseType = 'blob';" +
-                    "xhr.onload = function(e) {" +
-                    "    if (this.status == 200) {" +
-                    "        var blobFile = this.response;" +
-                    "        const reader = blobFile.stream().getReader();" +
-                    "        reader.read().then(function processBlob({ done, value }) {" +
-                    "           if (done) {return}" +
-                    "           SnapdropAndroid.sendBytes(decoder.decode(value), fileName);" +
-                    "           return reader.read().then(processBlob);" +
-                    "        });" +
-                    "    }" +
-                    "};" +
-                    "xhr.send();";
-        }
-        return "javascript: console.log('It is not a Blob URL');";
     }
 
     private void convertBase64StringToFileAndStoreIt(final Base64InputStream base64file, final String contentDisposition) throws IOException {
@@ -320,11 +295,15 @@ public class JavaScriptInterface {
                 "   SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);" +
                 "}, false);" +
 
-                (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
-    }
+                //catch chunks
+                "FileDigester.prototype.uncnk = FileDigester.prototype.unchunk;" +
+                "FileDigester.prototype.unchunk = function(chunk){" +
+                "               let decoder = new TextDecoder(\"iso-8859-1\");" +
+                "               SnapdropAndroid.sendBytes(decoder.decode(chunk));" +
+                "               this.uncnk(chunk);" +
+                "            };" +
 
-    public static String beforeunload() {
-        return "javascript: window.dispatchEvent(new Event('beforeunload'));";
+                (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
     }
 
     @JavascriptInterface
