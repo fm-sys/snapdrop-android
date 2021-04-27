@@ -10,6 +10,5 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:gravity="bottom"
-        android:tag="Android " />
+        android:gravity="bottom" />
 </LinearLayout>

@@ -25,7 +25,7 @@
             android:title="@string/settings_theme_title"
             android:summary="%s"
             app:iconSpaceReserved="false" />
-        <EditTextPreference
+        <Preference
             android:defaultValue="@string/baseURL"
             android:key="@string/pref_baseurl"
             android:title="@string/baseurl_title"
