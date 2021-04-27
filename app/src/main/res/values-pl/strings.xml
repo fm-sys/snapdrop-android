@@ -39,6 +39,7 @@
         <item>Jasny</item>
         <item>Ciemny</item>
     </string-array>
+    <string name="baseurl_title">Base URL</string>
     <!-- File sharing -->
     <string name="intent_file">Plik jest wybrany do udostępnienia</string>
     <string name="intent_files">Plik jest wybrany do udostępnienia</string>
@@ -46,4 +47,5 @@
     <string name="error_filechooser">Nie można otworzyć wyboru plików</string>
     <string name="error_network">Upewnij się, że jesteś podłączony do sieci WiFi</string>
     <string name="ignore_error_network">Let me in anyway</string>
+    <!-- baseURL -->
 </resources>
