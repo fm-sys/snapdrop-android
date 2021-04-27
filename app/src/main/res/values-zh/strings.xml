@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">Can\'t open browser</string>
     <!-- Update -->
     <string name="app_update">有可用更新</string>
     <string name="app_update_summary">更新包含重要的错误修复和全新功能。 \n\n如果您的应用不是通过 Google Play 安装的，您必须卸载并从 Google Play 重新安装应用程序才能获取更新。</string>
