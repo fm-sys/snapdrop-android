@@ -49,6 +49,7 @@ import androidx.webkit.WebViewFeature;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -74,7 +75,7 @@ public class MainActivity extends Activity {
     public boolean transfer = false;
     public boolean onlyText = false;
 
-    public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
+    public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>(); // name - size
 
     public Intent uploadIntent = null;
 
@@ -147,18 +148,13 @@ public class MainActivity extends Activity {
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
         webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
-            String filename = null;
-            int pos = 0;
-            for (Pair<String, String> file : downloadFilesList) {
-                pos++;
-
-                if (file.second.equals(String.valueOf(contentLength))) {
-                    filename = file.first;
+            for (JavaScriptInterface.FileHeader file : downloadFilesList) {
+                if (file.size.equals(String.valueOf(contentLength))) {
+                    JavaScriptInterface.copyTempToDownloads(file, this);
+                    downloadFilesList.remove(file);
                     break;
                 }
             }
-            downloadFilesList = downloadFilesList.subList(pos, downloadFilesList.size());
-            //webView.loadUrl(JavaScriptInterface.getBase64StringFromBlobUrl(url, filename, mimetype));
         });
 
         refreshWebsite();
