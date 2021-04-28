@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">Can\'t open browser</string>
 
     <!-- Update -->
     <string name="app_update">Update available</string>
@@ -43,6 +44,7 @@
         <item>Light</item>
         <item>Dark</item>
     </string-array>
+    <string name="baseurl_title">Base URL</string>
 
     <!-- File sharing -->
     <string name="intent_file">A file is selected for sharing</string>
@@ -51,4 +53,7 @@
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
     <string name="ignore_error_network">Let me in anyway</string>
+
+    <!-- baseURL -->
+    <string name="baseURL" translatable="false">https://snapdrop.net/</string>
 </resources>

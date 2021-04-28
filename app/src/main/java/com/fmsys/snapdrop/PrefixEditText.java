@@ -9,7 +9,7 @@ import androidx.appcompat.widget.AppCompatEditText;
 
 /**
  * Custom view for adding a prefix to EditText
- * code: https://medium.com/@ali.muzaffar/adding-a-prefix-to-an-edittext-2a17a62c77e1
+ * code by: https://medium.com/@ali.muzaffar/adding-a-prefix-to-an-edittext-2a17a62c77e1
  **/
 public class PrefixEditText extends AppCompatEditText {
     private float mOriginalLeftPadding = -1;
