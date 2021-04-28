@@ -10,8 +10,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Looper;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.view.View;
@@ -29,8 +27,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class JavaScriptInterface {
     private MainActivity context;
@@ -66,99 +62,6 @@ public class JavaScriptInterface {
         fileOutputStream.close();
 
         context.downloadFilesList.add(fileHeader);
-    }
-
-    public static void copyTempToDownloads(FileHeader file, MainActivity context) {
-        final int notificationId = (int) SystemClock.uptimeMillis();
-
-        File out = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),file.name);
-
-        //run on seperate thread
-        ExecutorService executor = Executors.newSingleThreadExecutor();
-        Handler handler = new Handler(Looper.getMainLooper());
-
-        executor.execute(() -> {
-
-            Uri uri = null;
-
-            try {
-                FileChannel inChannel = new FileInputStream(file.path).getChannel();
-                FileChannel outChannel = new FileOutputStream(out).getChannel();
-
-                try {
-                    inChannel.transferTo(0, inChannel.size(), outChannel);
-
-                } catch (IOException e) { e.printStackTrace(); }
-                finally {
-                    try {
-                        inChannel.close();
-                        outChannel.close();
-                        uri = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".provider", out);
-                    } catch (IOException e) { e.printStackTrace(); }
-                }
-
-            } catch (FileNotFoundException e) { e.printStackTrace(); }
-
-            Uri finalUri = uri;
-            handler.post(() -> {
-                //UI Thread
-                if (finalUri != null) {
-                    final Intent intent = new Intent();
-                    intent.setAction(Intent.ACTION_VIEW);
-                    intent.setDataAndType(finalUri, file.mime);
-                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    final PendingIntent pendingIntent = PendingIntent.getActivity(context, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
-                    final String channelId = "MYCHANNEL";
-                    final NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-
-                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                        final NotificationChannel notificationChannel = new NotificationChannel(channelId, context.getString(R.string.notification_channel_name), NotificationManager.IMPORTANCE_DEFAULT);
-                        final Notification notification = new Notification.Builder(context, channelId)
-                                .setContentText(file.name)
-                                .setContentTitle(context.getString(R.string.download_successful))
-                                .setContentIntent(pendingIntent)
-                                .setChannelId(channelId)
-                                .setSmallIcon(android.R.drawable.stat_sys_download_done)
-                                .setAutoCancel(true)
-                                .build();
-                        if (notificationManager != null) {
-                            notificationManager.createNotificationChannel(notificationChannel);
-                            notificationManager.notify(notificationId, notification);
-                        }
-
-                    } else {
-                        final NotificationCompat.Builder b = new NotificationCompat.Builder(context, channelId)
-                                .setDefaults(NotificationCompat.DEFAULT_ALL)
-                                .setWhen(System.currentTimeMillis())
-                                .setSmallIcon(android.R.drawable.stat_sys_download_done)
-                                .setContentIntent(pendingIntent)
-                                .setAutoCancel(true)
-                                .setContentTitle(context.getString(R.string.download_successful))
-                                .setContentText(file.name);
-
-                        if (notificationManager != null) {
-                            notificationManager.notify(notificationId, b.build());
-                        }
-                    }
-
-                    final View coordinatorLayout = context.findViewById(R.id.coordinatorLayout);
-                    final Snackbar snackbar = Snackbar.make(coordinatorLayout, R.string.download_successful, Snackbar.LENGTH_LONG)
-                            .setAction(R.string.open, button -> {
-                                try {
-                                    context.startActivity(intent);
-                                    notificationManager.cancel(notificationId);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-
-                            });
-                    snackbar.show();
-
-                    // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
-                    context.resetUploadIntent();
-                }
-            });
-        });
     }
 
 
