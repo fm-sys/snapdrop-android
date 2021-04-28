@@ -1,32 +1,16 @@
 package com.fmsys.snapdrop;
 
-import  android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Environment;
-import android.os.SystemClock;
 import android.text.TextUtils;
-import android.view.View;
 import android.webkit.JavascriptInterface;
 
-import androidx.core.app.NotificationCompat;
-import androidx.core.content.FileProvider;
 import androidx.webkit.WebViewFeature;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.channels.FileChannel;
 
 public class JavaScriptInterface {
     private MainActivity context;
@@ -43,7 +27,7 @@ public class JavaScriptInterface {
         File outputDir = context.getCacheDir();
         String[] nameSplit = fileName.split("\\.");
 
-        tempFile = File.createTempFile(nameSplit[0], nameSplit[nameSplit.length-1], outputDir);
+        tempFile = File.createTempFile(fileName, "."+nameSplit[nameSplit.length-1], outputDir);
         fileOutputStream = new FileOutputStream(tempFile);
         fileHeader = new FileHeader(fileName, mimeType, fileSize, tempFile);
     }
@@ -54,6 +38,7 @@ public class JavaScriptInterface {
         //https://stackoverflow.com/questions/27034897/is-there-a-way-to-pass-an-arraybuffer-from-javascript-to-java-on-android
         byte[] bytes = dec.getBytes("windows-1252");
         fileOutputStream.write(bytes);
+        fileOutputStream.flush();
     }
 
     @JavascriptInterface

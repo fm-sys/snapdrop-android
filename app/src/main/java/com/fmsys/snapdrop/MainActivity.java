@@ -44,38 +44,20 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
-import androidx.documentfile.provider.DocumentFile;
-import androidx.fragment.app.FragmentActivity;
 import androidx.preference.PreferenceManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
 
-import com.afollestad.materialdialogs.MaterialDialog;
-import com.anggrayudi.storage.SimpleStorageHelper;
-import com.anggrayudi.storage.callback.FileCallback;
-import com.anggrayudi.storage.callback.FolderCallback;
-import com.anggrayudi.storage.file.DocumentFileCompat;
-import com.anggrayudi.storage.file.DocumentFileUtils;
 import com.google.android.material.snackbar.Snackbar;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.anggrayudi.storage.callback.FolderCallback.ConflictResolution.*;
 
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
@@ -210,7 +192,7 @@ public class MainActivity extends Activity {
             showScreenNoConnection();
         }
     }
-    
+
     private void refreshWebsite() {
         refreshWebsite(false);
     }
@@ -427,13 +409,13 @@ public class MainActivity extends Activity {
 
             if (url.startsWith(baseURL) || currentlyOffline) {
                 currentlyOffline = !url.startsWith(baseURL);
-                
+
                 initSnapdrop();
-                
+
             }
             super.onPageFinished(view, url);
         }
-        
+
         private void initSnapdrop() {
             //website initialisation
             if (!currentlyOffline) {
@@ -526,81 +508,62 @@ public class MainActivity extends Activity {
     public void copyTempToDownloads(JavaScriptInterface.FileHeader fileHeader) {
         final int notificationId = (int) SystemClock.uptimeMillis();
 
-        DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.path), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileHeader.name, new FileCallback() {
-            @Override
-            public void onCompleted(@NotNull Object file) {
-                final Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                DocumentFile documentFile = (DocumentFile) file;
-                intent.setDataAndType(FileProvider.getUriForFile(MainActivity.this, getApplicationContext().getPackageName() + ".provider", documentFile), fileHeader.mime);
-                intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                final PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
-                final String channelId = "MYCHANNEL";
-                final NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        //TODO move fileHeader.path to Downloads folder async and handle possible duplciates
 
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                    final NotificationChannel notificationChannel = new NotificationChannel(channelId, getString(R.string.notification_channel_name), NotificationManager.IMPORTANCE_DEFAULT);
-                    final Notification notification = new Notification.Builder(MainActivity.this, channelId)
-                            .setContentText(fileHeader.name)
-                            .setContentTitle(getString(R.string.download_successful))
-                            .setContentIntent(pendingIntent)
-                            .setChannelId(channelId)
-                            .setSmallIcon(android.R.drawable.stat_sys_download_done)
-                            .setAutoCancel(true)
-                            .build();
-                    if (notificationManager != null) {
-                        notificationManager.createNotificationChannel(notificationChannel);
-                        notificationManager.notify(notificationId, notification);
-                    }
+        final Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        File newFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/" + fileHeader.name);
+        intent.setDataAndType(FileProvider.getUriForFile(MainActivity.this, getApplicationContext().getPackageName() + ".provider", newFile), fileHeader.mime);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        final PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+        final String channelId = "MYCHANNEL";
+        final NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-                } else {
-                    final NotificationCompat.Builder b = new NotificationCompat.Builder(MainActivity.this, channelId)
-                            .setDefaults(NotificationCompat.DEFAULT_ALL)
-                            .setWhen(System.currentTimeMillis())
-                            .setSmallIcon(android.R.drawable.stat_sys_download_done)
-                            .setContentIntent(pendingIntent)
-                            .setAutoCancel(true)
-                            .setContentTitle(getString(R.string.download_successful))
-                            .setContentText(fileHeader.name);
-
-                    if (notificationManager != null) {
-                        notificationManager.notify(notificationId, b.build());
-                    }
-                }
-
-                final View coordinatorLayout = MainActivity.this.findViewById(R.id.coordinatorLayout);
-                final Snackbar snackbar = Snackbar.make(coordinatorLayout, R.string.download_successful, Snackbar.LENGTH_LONG)
-                        .setAction(R.string.open, button -> {
-                            try {
-                                startActivity(intent);
-                                notificationManager.cancel(notificationId);
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-
-                        });
-                snackbar.show();
-
-                // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
-                resetUploadIntent();
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            final NotificationChannel notificationChannel = new NotificationChannel(channelId, getString(R.string.notification_channel_name), NotificationManager.IMPORTANCE_DEFAULT);
+            final Notification notification = new Notification.Builder(MainActivity.this, channelId)
+                    .setContentText(fileHeader.name)
+                    .setContentTitle(getString(R.string.download_successful))
+                    .setContentIntent(pendingIntent)
+                    .setChannelId(channelId)
+                    .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                    .setAutoCancel(true)
+                    .build();
+            if (notificationManager != null) {
+                notificationManager.createNotificationChannel(notificationChannel);
+                notificationManager.notify(notificationId, notification);
             }
 
-            /*@Override
-            public void onConflict(@NotNull DocumentFile destinationFile, @NotNull FileCallback.FileConflictAction action) {
-                MaterialDialog materialDialog = new MaterialDialog(MainActivity.this)
-                        .cancelable(false)
-                        .title("Conflict Found")
-                        .message("What do you want to do with the folder already exists in destination?")
-                        .listItems("Replace", "Merge", "Create New", "Skip Duplicate").apply { if (!canMerge) remove("Merge") }) { _, index, _ ->
-                        val resolution = FolderCallback.ConflictResolution.values()[if (!canMerge && index > 0) index + 1 else index]
-                    action.confirmResolution(resolution)
-                    if (resolution == FolderCallback.ConflictResolution.SKIP) {
-                        Toast.makeText(this, "Skipped duplicate folders & files", Toast.LENGTH_SHORT).show()
+        } else {
+            final NotificationCompat.Builder b = new NotificationCompat.Builder(MainActivity.this, channelId)
+                    .setDefaults(NotificationCompat.DEFAULT_ALL)
+                    .setWhen(System.currentTimeMillis())
+                    .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                    .setContentIntent(pendingIntent)
+                    .setAutoCancel(true)
+                    .setContentTitle(getString(R.string.download_successful))
+                    .setContentText(fileHeader.name);
+
+            if (notificationManager != null) {
+                notificationManager.notify(notificationId, b.build());
+            }
+        }
+
+        final View coordinatorLayout = MainActivity.this.findViewById(R.id.coordinatorLayout);
+        final Snackbar snackbar = Snackbar.make(coordinatorLayout, R.string.download_successful, Snackbar.LENGTH_LONG)
+                .setAction(R.string.open, button -> {
+                    try {
+                        startActivity(intent);
+                        notificationManager.cancel(notificationId);
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                }
-            .show()
-            }*/
-        });
+
+                });
+        snackbar.show();
+
+        // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
+        resetUploadIntent();
     }
 
 
