@@ -536,11 +536,6 @@ public class MainActivity extends Activity {
                     handler.post(() -> fileDownloadedIntent(uri, fileHeader));
 
                 }
-
-                @Override
-                public void onConflict(@NotNull DocumentFile destinationFile, @NotNull FileCallback.FileConflictAction action) {
-
-                }
             });
 
         });
