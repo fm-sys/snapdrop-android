@@ -65,7 +65,6 @@ import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -92,6 +91,9 @@ public class MainActivity extends Activity {
     public boolean onlyText = false;
 
     public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>(); // name - size
+
+    private final ExecutorService executor = Executors.newSingleThreadExecutor();
+    private final Handler handler = new Handler(Looper.getMainLooper());
 
     public Intent uploadIntent = null;
 
@@ -521,22 +523,19 @@ public class MainActivity extends Activity {
         }
     }
 
-    ExecutorService executor = Executors.newSingleThreadExecutor();
-    Handler handler = new Handler(Looper.getMainLooper());
-
-    public void copyTempToDownloads(JavaScriptInterface.FileHeader fileHeader) {
+    private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
 
         executor.execute(() -> {
 
-            FileDescription fileDescription = new FileDescription(fileHeader.name,"",fileHeader.mime);
+            final FileDescription fileDescription = new FileDescription(fileHeader.getName(),"", fileHeader.getMime());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                MediaFile newFile = MediaStoreCompat.createDownload(this, fileDescription, true);
+                final MediaFile newFile = MediaStoreCompat.createDownload(this, fileDescription, true);
                 if (newFile != null) {
-                    DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.path), this, newFile, fileCallback(fileHeader));
+                    DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, newFile, fileCallback(fileHeader));
                 }
             } else {
-                DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.path), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileDescription, fileCallback(fileHeader));
+                DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileDescription, fileCallback(fileHeader));
             }
 
 
@@ -544,28 +543,28 @@ public class MainActivity extends Activity {
 
     }
 
-    private FileCallback fileCallback(JavaScriptInterface.FileHeader fileHeader) {
+    private FileCallback fileCallback(final JavaScriptInterface.FileHeader fileHeader) {
         return new FileCallback() {
             @Override
-            public void onFailed(@NotNull FileCallback.ErrorCode errorCode) {
+            public void onFailed(@NotNull final FileCallback.ErrorCode errorCode) {
                 Log.d("SimpleStorage", errorCode.toString());
                 //UI Thread
                 handler.post(() -> Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show());
             }
 
             @Override
-            public void onCompleted(@NotNull Object file) {
+            public void onCompleted(@NotNull final Object file) {
                 Uri uri = null;
 
                 if (file instanceof MediaFile) {
-                    MediaFile mediaFile = (MediaFile) file;
+                    final MediaFile mediaFile = (MediaFile) file;
                     uri = mediaFile.getUri();
                 } else if (file instanceof DocumentFile) {
-                    DocumentFile documentFile = (DocumentFile) file;
+                    final DocumentFile documentFile = (DocumentFile) file;
                     uri = DocumentFileUtils.isRawFile(documentFile) ? FileProvider.getUriForFile(MainActivity.this, getApplicationContext().getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile)) : documentFile.getUri();
                 }
 
-                Uri finalUri = uri;
+                final Uri finalUri = uri;
                 //UI Thread
                 handler.post(() -> fileDownloadedIntent(finalUri, fileHeader));
 
@@ -573,12 +572,12 @@ public class MainActivity extends Activity {
         };
     }
 
-    private void fileDownloadedIntent(Uri uri, JavaScriptInterface.FileHeader fileHeader) {
+    private void fileDownloadedIntent(final Uri uri, final JavaScriptInterface.FileHeader fileHeader) {
         final int notificationId = (int) SystemClock.uptimeMillis();
 
         final Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
-        intent.setDataAndType(uri, fileHeader.mime);
+        intent.setDataAndType(uri, fileHeader.getMime());
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         final PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
         final String channelId = "MYCHANNEL";
@@ -587,7 +586,7 @@ public class MainActivity extends Activity {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             final NotificationChannel notificationChannel = new NotificationChannel(channelId, getString(R.string.notification_channel_name), NotificationManager.IMPORTANCE_DEFAULT);
             final Notification notification = new Notification.Builder(MainActivity.this, channelId)
-                    .setContentText(fileHeader.name)
+                    .setContentText(fileHeader.getName())
                     .setContentTitle(getString(R.string.download_successful))
                     .setContentIntent(pendingIntent)
                     .setChannelId(channelId)
@@ -607,7 +606,7 @@ public class MainActivity extends Activity {
                     .setContentIntent(pendingIntent)
                     .setAutoCancel(true)
                     .setContentTitle(getString(R.string.download_successful))
-                    .setContentText(fileHeader.name);
+                    .setContentText(fileHeader.getName());
 
             if (notificationManager != null) {
                 notificationManager.notify(notificationId, b.build());

@@ -14,7 +14,6 @@ import java.io.IOException;
 
 public class JavaScriptInterface {
     private MainActivity context;
-    private File tempFile;
     private FileOutputStream fileOutputStream;
     private FileHeader fileHeader;
 
@@ -24,19 +23,19 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
-        File outputDir = context.getCacheDir();
+        final File outputDir = context.getCacheDir();
         String[] nameSplit = fileName.split("\\.");
         while (nameSplit[0].length() < 3) {
             nameSplit[0] += nameSplit[0];
         }
-        tempFile = File.createTempFile(nameSplit[0], "."+nameSplit[nameSplit.length-1], outputDir);
+        File tempFile = File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], outputDir);
         fileOutputStream = new FileOutputStream(tempFile);
         fileHeader = new FileHeader(fileName, mimeType, fileSize, tempFile);
     }
 
     @JavascriptInterface
-    public void onBytes(String dec) throws IOException {
-        if (fileOutputStream == null) {return;}
+    public void onBytes(final String dec) throws IOException {
+        if (fileOutputStream == null) { return; }
         //https://stackoverflow.com/questions/27034897/is-there-a-way-to-pass-an-arraybuffer-from-javascript-to-java-on-android
         byte[] bytes = dec.getBytes("windows-1252");
         fileOutputStream.write(bytes);
@@ -194,16 +193,16 @@ public class JavaScriptInterface {
     }
 
     public class FileHeader {
-        String name;
-        String mime;
-        String size;
-        File path;
+        private String name;
+        private String mime;
+        private String size;
+        private File file;
 
-        public FileHeader(String name, String mime, String size, File path) {
+        public FileHeader(final String name, final String mime, final String size, final File path) {
             this.name = name;
             this.mime = mime;
             this.size = size;
-            this.path = path;
+            this.file = path;
         }
 
         public String getName() {
@@ -218,8 +217,8 @@ public class JavaScriptInterface {
             return size;
         }
 
-        public File getPath() {
-            return path;
+        public File getTempFile() {
+            return file;
         }
     }
 
