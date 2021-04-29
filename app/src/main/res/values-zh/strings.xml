@@ -39,6 +39,7 @@
         <item>浅色</item>
         <item>深色</item>
     </string-array>
+    <string name="baseurl_title">Base URL</string>
     <!-- File sharing -->
     <string name="intent_file">已选择一个要共享的文件</string>
     <string name="intent_files">已选择多个要共享的文件</string>
@@ -46,4 +47,5 @@
     <string name="error_filechooser">无法打开文件选择程序</string>
     <string name="error_network">请确保您已经连接到WiFi网络</string>
     <string name="ignore_error_network">Let me in anyway</string>
+    <!-- baseURL -->
 </resources>

@@ -10,9 +10,9 @@
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 6,
-      "versionName": "1.5.3",
-      "outputFile": "snapdrop_v1.5.3.apk"
+      "versionCode": 10,
+      "versionName": "1.6.0",
+      "outputFile": "snapdrop_v1.6.0.apk"
     }
   ]
 }
