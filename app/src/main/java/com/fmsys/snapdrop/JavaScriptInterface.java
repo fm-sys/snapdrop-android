@@ -26,8 +26,10 @@ public class JavaScriptInterface {
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
         File outputDir = context.getCacheDir();
         String[] nameSplit = fileName.split("\\.");
-
-        tempFile = File.createTempFile(fileName, "."+nameSplit[nameSplit.length-1], outputDir);
+        while (nameSplit[0].length() < 3) {
+            nameSplit[0] += nameSplit[0];
+        }
+        tempFile = File.createTempFile(nameSplit[0], "."+nameSplit[nameSplit.length-1], outputDir);
         fileOutputStream = new FileOutputStream(tempFile);
         fileHeader = new FileHeader(fileName, mimeType, fileSize, tempFile);
     }

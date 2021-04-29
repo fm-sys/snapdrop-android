@@ -58,6 +58,9 @@ import androidx.webkit.WebViewFeature;
 
 import com.anggrayudi.storage.callback.FileCallback;
 import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.anggrayudi.storage.media.FileDescription;
+import com.anggrayudi.storage.media.MediaFile;
+import com.anggrayudi.storage.media.MediaStoreCompat;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
@@ -525,10 +528,13 @@ public class MainActivity extends Activity {
                 @Override
                 public void onFailed(@NotNull FileCallback.ErrorCode errorCode) {
                     Log.d("SimpleStorage", errorCode.toString());
+                    //UI Thread
+                    handler.post(() -> Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show());
                 }
 
                 @Override
                 public void onCompleted(@NotNull Object file) {
+
                     DocumentFile documentFile = (DocumentFile) file;
                     Uri uri = DocumentFileUtils.isRawFile(documentFile) ? FileProvider.getUriForFile(MainActivity.this, getApplicationContext().getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile)) : documentFile.getUri();
 
@@ -536,10 +542,43 @@ public class MainActivity extends Activity {
                     handler.post(() -> fileDownloadedIntent(uri, fileHeader));
 
                 }
+
+
             });
 
         });
 
+    }
+
+    private FileCallback fileCallback(JavaScriptInterface.FileHeader fileHeader) {
+        return new FileCallback() {
+            @Override
+            public void onFailed(@NotNull FileCallback.ErrorCode errorCode) {
+                Log.d("SimpleStorage", errorCode.toString());
+                //UI Thread
+                handler.post(() -> Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show());
+            }
+
+            @Override
+            public void onCompleted(@NotNull Object file) {
+                Uri uri = null;
+
+                if (file instanceof MediaFile) {
+                    MediaFile mediaFile = (MediaFile) file;
+                    uri = mediaFile.getUri();
+                } else if (file instanceof DocumentFile) {
+                    DocumentFile documentFile = (DocumentFile) file;
+                    uri = DocumentFileUtils.isRawFile(documentFile) ? FileProvider.getUriForFile(MainActivity.this, getApplicationContext().getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile)) : documentFile.getUri();
+                }
+
+                Uri finalUri = uri;
+                //UI Thread
+                handler.post(() -> fileDownloadedIntent(finalUri, fileHeader));
+
+            }
+
+
+        };
     }
 
     private void fileDownloadedIntent(Uri uri, JavaScriptInterface.FileHeader fileHeader) {
