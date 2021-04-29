@@ -527,7 +527,7 @@ public class MainActivity extends Activity {
 
         executor.execute(() -> {
 
-            final FileDescription fileDescription = new FileDescription(fileHeader.getName(),"", fileHeader.getMime());
+            final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 final MediaFile newFile = MediaStoreCompat.createDownload(this, fileDescription, true);

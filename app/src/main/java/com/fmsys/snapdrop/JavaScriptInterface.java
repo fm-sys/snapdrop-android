@@ -24,20 +24,22 @@ public class JavaScriptInterface {
     @JavascriptInterface
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
         final File outputDir = context.getCacheDir();
-        String[] nameSplit = fileName.split("\\.");
+        final String[] nameSplit = fileName.split("\\.");
         while (nameSplit[0].length() < 3) {
             nameSplit[0] += nameSplit[0];
         }
-        File tempFile = File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], outputDir);
+        final File tempFile = File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], outputDir);
         fileOutputStream = new FileOutputStream(tempFile);
         fileHeader = new FileHeader(fileName, mimeType, fileSize, tempFile);
     }
 
     @JavascriptInterface
     public void onBytes(final String dec) throws IOException {
-        if (fileOutputStream == null) { return; }
+        if (fileOutputStream == null) {
+            return;
+        }
         //https://stackoverflow.com/questions/27034897/is-there-a-way-to-pass-an-arraybuffer-from-javascript-to-java-on-android
-        byte[] bytes = dec.getBytes("windows-1252");
+        final byte[] bytes = dec.getBytes("windows-1252");
         fileOutputStream.write(bytes);
         fileOutputStream.flush();
     }
