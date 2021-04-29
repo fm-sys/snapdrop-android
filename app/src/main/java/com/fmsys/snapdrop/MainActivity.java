@@ -528,27 +528,15 @@ public class MainActivity extends Activity {
 
         executor.execute(() -> {
 
-            DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.path), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileHeader.name, new FileCallback() {
-                @Override
-                public void onFailed(@NotNull FileCallback.ErrorCode errorCode) {
-                    Log.d("SimpleStorage", errorCode.toString());
-                    //UI Thread
-                    handler.post(() -> Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                MediaFile newFile = MediaStoreCompat.createDownload(this, new FileDescription(fileHeader.name,"",fileHeader.mime), true);
+                if (newFile != null) {
+                    DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.path), this, newFile, fileCallback(fileHeader));
                 }
+            } else {
+                DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.path), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileHeader.name, fileCallback(fileHeader));
+            }
 
-                @Override
-                public void onCompleted(@NotNull Object file) {
-
-                    DocumentFile documentFile = (DocumentFile) file;
-                    Uri uri = DocumentFileUtils.isRawFile(documentFile) ? FileProvider.getUriForFile(MainActivity.this, getApplicationContext().getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile)) : documentFile.getUri();
-
-                    //UI Thread
-                    handler.post(() -> fileDownloadedIntent(uri, fileHeader));
-
-                }
-
-
-            });
 
         });
 
@@ -580,8 +568,6 @@ public class MainActivity extends Activity {
                 handler.post(() -> fileDownloadedIntent(finalUri, fileHeader));
 
             }
-
-
         };
     }
 
