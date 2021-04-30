@@ -528,8 +528,14 @@ public class MainActivity extends Activity {
         executor.execute(() -> {
 
             final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
-
-            DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileDescription, fileCallback(fileHeader));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                final MediaFile newFile = MediaStoreCompat.createDownload(this, fileDescription, true);
+                if (newFile != null) {
+                    DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, newFile, fileCallback(fileHeader));
+                }
+            } else {
+                DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileDescription, fileCallback(fileHeader));
+            }
 
         });
 
