@@ -71,7 +71,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'com.anggrayudi:storage:0.5.3'
+    implementation 'com.anggrayudi:storage:0.5.3-SNAPSHOT'
 
 }
 

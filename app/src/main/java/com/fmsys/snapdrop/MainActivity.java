@@ -169,7 +169,7 @@ public class MainActivity extends Activity {
 
         webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
             for (JavaScriptInterface.FileHeader file : downloadFilesList) {
-                if (file.size.equals(String.valueOf(contentLength))) {
+                if (file.getSize().equals(String.valueOf(contentLength))) {
                     copyTempToDownloads(file);
                     downloadFilesList.remove(file);
                     break;
@@ -529,15 +529,7 @@ public class MainActivity extends Activity {
 
             final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
 
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                final MediaFile newFile = MediaStoreCompat.createDownload(this, fileDescription, true);
-                if (newFile != null) {
-                    DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, newFile, fileCallback(fileHeader));
-                }
-            } else {
-                DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileDescription, fileCallback(fileHeader));
-            }
-
+            DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileDescription, fileCallback(fileHeader));
 
         });
 
