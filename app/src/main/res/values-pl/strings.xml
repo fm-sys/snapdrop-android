@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">Nie można otworzyć przeglądarki</string>
     <!-- Update -->
     <string name="app_update">Dostępna aktualizacja</string>
     <string name="app_update_summary">Aktualizacje zawierają ważne poprawki błędów i świetne nowe funkcje. \n\nJeśli nie zainstalowałeś tej aplikacji przez Google Play, niestety musisz odinstalować i ponownie zainstalować aplikację, aby pobrać z niej aktualizację.</string>
@@ -39,13 +40,13 @@
         <item>Jasny</item>
         <item>Ciemny</item>
     </string-array>
-    <string name="baseurl_title">Base URL</string>
+    <string name="baseurl_title">Podstawowy adres URL</string>
     <!-- File sharing -->
     <string name="intent_file">Plik jest wybrany do udostępnienia</string>
     <string name="intent_files">Plik jest wybrany do udostępnienia</string>
     <string name="intent_content">Zawartość jest zaznaczona do udostępnienia</string>
     <string name="error_filechooser">Nie można otworzyć wyboru plików</string>
     <string name="error_network">Upewnij się, że jesteś podłączony do sieci WiFi</string>
-    <string name="ignore_error_network">Let me in anyway</string>
+    <string name="ignore_error_network">Spróbuj mimo wszystko</string>
     <!-- baseURL -->
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">无法打开浏览器</string>
     <!-- Update -->
     <string name="app_update">有可用更新</string>
     <string name="app_update_summary">更新包含重要的错误修复和全新功能。 \n\n如果您的应用不是通过 Google Play 安装的，您必须卸载并从 Google Play 重新安装应用程序才能获取更新。</string>
@@ -39,13 +40,13 @@
         <item>浅色</item>
         <item>深色</item>
     </string-array>
-    <string name="baseurl_title">Base URL</string>
+    <string name="baseurl_title">主机 URL</string>
     <!-- File sharing -->
     <string name="intent_file">已选择一个要共享的文件</string>
     <string name="intent_files">已选择多个要共享的文件</string>
     <string name="intent_content">已选择要共享的内容</string>
     <string name="error_filechooser">无法打开文件选择程序</string>
     <string name="error_network">请确保您已经连接到WiFi网络</string>
-    <string name="ignore_error_network">Let me in anyway</string>
+    <string name="ignore_error_network">忽略并继续</string>
     <!-- baseURL -->
 </resources>
