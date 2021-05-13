@@ -3,6 +3,10 @@ package com.fmsys.snapdrop;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.ClipData;
@@ -21,9 +25,12 @@ import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
-import android.util.Pair;
+import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -40,16 +47,28 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.documentfile.provider.DocumentFile;
 import androidx.preference.PreferenceManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
 
+import com.anggrayudi.storage.callback.FileCallback;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.anggrayudi.storage.media.FileDescription;
+import com.anggrayudi.storage.media.MediaFile;
+import com.anggrayudi.storage.media.MediaStoreCompat;
 import com.google.android.material.snackbar.Snackbar;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
@@ -71,7 +90,10 @@ public class MainActivity extends Activity {
     public boolean transfer = false;
     public boolean onlyText = false;
 
-    public List<Pair<String, String>> downloadFilesList = new ArrayList<>(); // name - size
+    public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>(); // name - size
+
+    private final ExecutorService executor = Executors.newSingleThreadExecutor();
+    private final Handler handler = new Handler(Looper.getMainLooper());
 
     public Intent uploadIntent = null;
 
@@ -146,18 +168,13 @@ public class MainActivity extends Activity {
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
         webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
-            String filename = null;
-            int pos = 0;
-            for (Pair<String, String> file : downloadFilesList) {
-                pos++;
-
-                if (file.second.equals(String.valueOf(contentLength))) {
-                    filename = file.first;
+            for (JavaScriptInterface.FileHeader file : downloadFilesList) {
+                if (file.getSize().equals(String.valueOf(contentLength))) {
+                    copyTempToDownloads(file);
+                    downloadFilesList.remove(file);
                     break;
                 }
             }
-            downloadFilesList = downloadFilesList.subList(pos, downloadFilesList.size());
-            webView.loadUrl(JavaScriptInterface.getBase64StringFromBlobUrl(url, filename, mimetype));
         });
 
         refreshWebsite();
@@ -190,7 +207,7 @@ public class MainActivity extends Activity {
             showScreenNoConnection();
         }
     }
-    
+
     private void refreshWebsite() {
         refreshWebsite(false);
     }
@@ -410,13 +427,13 @@ public class MainActivity extends Activity {
 
             if (url.startsWith(baseURL) || currentlyOffline) {
                 currentlyOffline = !url.startsWith(baseURL);
-                
+
                 initSnapdrop();
-                
+
             }
             super.onPageFinished(view, url);
         }
-        
+
         private void initSnapdrop() {
             //website initialisation
             if (!currentlyOffline) {
@@ -505,4 +522,110 @@ public class MainActivity extends Activity {
             }
         }
     }
+
+    private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
+
+        executor.execute(() -> {
+
+            final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                final MediaFile newFile = MediaStoreCompat.createDownload(this, fileDescription, true);
+                if (newFile != null) {
+                    DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, newFile, fileCallback(fileHeader));
+                }
+            } else {
+                DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileDescription, fileCallback(fileHeader));
+            }
+
+        });
+
+    }
+
+    private FileCallback fileCallback(final JavaScriptInterface.FileHeader fileHeader) {
+        return new FileCallback() {
+            @Override
+            public void onFailed(@NotNull final FileCallback.ErrorCode errorCode) {
+                Log.d("SimpleStorage", errorCode.toString());
+                //UI Thread
+                handler.post(() -> Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show());
+            }
+
+            @Override
+            public void onCompleted(@NotNull final Object file) {
+                Uri uri = null;
+
+                if (file instanceof MediaFile) {
+                    final MediaFile mediaFile = (MediaFile) file;
+                    uri = mediaFile.getUri();
+                } else if (file instanceof DocumentFile) {
+                    final DocumentFile documentFile = (DocumentFile) file;
+                    uri = DocumentFileUtils.isRawFile(documentFile) ? FileProvider.getUriForFile(MainActivity.this, getApplicationContext().getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile)) : documentFile.getUri();
+                }
+
+                final Uri finalUri = uri;
+                //UI Thread
+                handler.post(() -> fileDownloadedIntent(finalUri, fileHeader));
+
+            }
+        };
+    }
+
+    private void fileDownloadedIntent(final Uri uri, final JavaScriptInterface.FileHeader fileHeader) {
+        final int notificationId = (int) SystemClock.uptimeMillis();
+
+        final Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.setDataAndType(uri, fileHeader.getMime());
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        final PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+        final String channelId = "MYCHANNEL";
+        final NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            final NotificationChannel notificationChannel = new NotificationChannel(channelId, getString(R.string.notification_channel_name), NotificationManager.IMPORTANCE_DEFAULT);
+            final Notification notification = new Notification.Builder(MainActivity.this, channelId)
+                    .setContentText(fileHeader.getName())
+                    .setContentTitle(getString(R.string.download_successful))
+                    .setContentIntent(pendingIntent)
+                    .setChannelId(channelId)
+                    .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                    .setAutoCancel(true)
+                    .build();
+            if (notificationManager != null) {
+                notificationManager.createNotificationChannel(notificationChannel);
+                notificationManager.notify(notificationId, notification);
+            }
+
+        } else {
+            final NotificationCompat.Builder b = new NotificationCompat.Builder(MainActivity.this, channelId)
+                    .setDefaults(NotificationCompat.DEFAULT_ALL)
+                    .setWhen(System.currentTimeMillis())
+                    .setSmallIcon(android.R.drawable.stat_sys_download_done)
+                    .setContentIntent(pendingIntent)
+                    .setAutoCancel(true)
+                    .setContentTitle(getString(R.string.download_successful))
+                    .setContentText(fileHeader.getName());
+
+            if (notificationManager != null) {
+                notificationManager.notify(notificationId, b.build());
+            }
+        }
+
+        final View coordinatorLayout = MainActivity.this.findViewById(R.id.coordinatorLayout);
+        final Snackbar snackbar = Snackbar.make(coordinatorLayout, R.string.download_successful, Snackbar.LENGTH_LONG)
+                .setAction(R.string.open, button -> {
+                    try {
+                        startActivity(intent);
+                        notificationManager.cancel(notificationId);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                });
+        snackbar.show();
+
+        // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
+        resetUploadIntent();
+    }
+
 }
