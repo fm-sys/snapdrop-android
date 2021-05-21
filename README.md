@@ -56,7 +56,7 @@ But please do not change any translations manually in the `.xml` resource files.
 
 
 ## Credits / Open Source Components
-- **[Snapdrop.net](https://github.com/RobinLinus/snapdrop")**
+- **[Snapdrop.net](https://github.com/RobinLinus/snapdrop)**
   The Snapdrop.net Project and [launcher icon](https://github.com/RobinLinus/snapdrop/blob/663db5cbb39ab804b20f9cb6466effd9ed0e2d0c/client/images/logo_blue_512x512.png) by RobinLinus. Licensed under GPL-3.0 License. 
 - **[SimpleStorage](https://github.com/anggrayudi/SimpleStorage)**
   Copyright © 2020-2021 Anggrayudi Hardiannicko A. Licensed under Apache-2.0 License.
