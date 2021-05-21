@@ -31,6 +31,16 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         initUrlPreference(R.string.pref_twitter, "https://twitter.com/SnapdropAndroid");
         initUrlPreference(R.string.pref_license, "https://www.gnu.org/licenses/gpl-3.0.html");
 
+        final Preference openSourceComponents = findPreference(getString(R.string.pref_components));
+        openSourceComponents.setOnPreferenceClickListener(pref -> {
+            new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.components)
+                    .setMessage(R.string.components_long_text)
+                    .show();
+            return true;
+        });
+
+
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
         deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", null));
         

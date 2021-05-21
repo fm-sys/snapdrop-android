@@ -55,6 +55,12 @@ If you want to help with development, this would be more than welcome! I am very
 But please do not change any translations manually in the `.xml` resource files. Nothing bad would happen though, but anyway these changes will be overwritten by Crowdin. If you add/change any resource strings within your PR, Crowdin will automatically take care of all related translations. 
 
 
-## Credits
-- [RobinLinus](https://github.com/RobinLinus) for Snapdrop website [development](https://github.com/RobinLinus/snapdrop) and [hosting](https://snapdrop.net/), and the [launcher icon](https://github.com/RobinLinus/snapdrop/blob/663db5cbb39ab804b20f9cb6466effd9ed0e2d0c/client/images/logo_blue_512x512.png) used for this app
-- [material design icons](https://material.io/resources/icons/) 
+## Credits / Open Source Components
+- **[Snapdrop.net](https://github.com/RobinLinus/snapdrop")**
+  The Snapdrop.net Project and [launcher icon](https://github.com/RobinLinus/snapdrop/blob/663db5cbb39ab804b20f9cb6466effd9ed0e2d0c/client/images/logo_blue_512x512.png) by RobinLinus. Licensed under GPL-3.0 License. 
+- **[SimpleStorage](https://github.com/anggrayudi/SimpleStorage)**
+  Copyright © 2020-2021 Anggrayudi Hardiannicko A. Licensed under Apache-2.0 License.
+- **[Material Design Components](https://material.io/)**
+  Licensed under Apache-2.0 License.
+- **[okhttp](https://github.com/square/okhttp)**
+  Copyright 2019 Square, Inc. Licensed under Apache-2.0 License.

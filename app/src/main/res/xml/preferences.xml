@@ -39,12 +39,6 @@
         app:iconSpaceReserved="false">
 
         <Preference
-            android:key="@string/pref_developers"
-            android:title="@string/developers"
-            android:summary="@string/developer_notice_settings"
-            app:iconSpaceReserved="false"
-            app:singleLineTitle="false" />
-        <Preference
             android:key="@string/pref_crowdin"
             android:title="@string/crowdin"
             android:summary="@string/crowdin_summary"
@@ -54,6 +48,18 @@
             android:key="@string/pref_twitter"
             android:title="@string/twitter"
             android:summary="@string/twitter_summary"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+        <Preference
+            android:key="@string/pref_developers"
+            android:title="@string/developers"
+            android:summary="@string/developer_notice_settings"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+        <Preference
+            android:key="@string/pref_components"
+            android:title="@string/components"
+            android:summary="@string/components_summary"
             app:iconSpaceReserved="false"
             app:singleLineTitle="false" />
         <Preference
