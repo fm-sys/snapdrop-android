@@ -64,3 +64,6 @@ But please do not change any translations manually in the `.xml` resource files.
   Licensed under Apache-2.0 License.
 - **[okhttp](https://github.com/square/okhttp)**
   Copyright 2019 Square, Inc. Licensed under Apache-2.0 License.
+
+
+I also recommend using this great Firefox Add-on: [Snapdrop Web Extension](https://github.com/ueen/SnapdropFirefoxAddon)
