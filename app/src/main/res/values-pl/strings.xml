@@ -25,6 +25,8 @@
     <string name="license">Licencja</string>
     <string name="pref_category_settings">Ustawienia</string>
     <string name="developers">Twórca</string>
+    <string name="components">Open source components</string>
+    <string name="components_summary">Tap to display</string>
     <string name="crowdin">Tłumaczenia</string>
     <string name="crowdin_summary">Pomóż przetłumaczyć <b>Snapdrop dla Androida</b> na Twój ulubiony język</string>
     <string name="twitter">Twitter</string>

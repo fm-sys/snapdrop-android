@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="err_no_browser">Can\'t open browser</string>
+    <string name="err_no_browser">Browser kann nicht geöffnet werden</string>
     <!-- Update -->
     <string name="app_update">Update verfügbar</string>
     <string name="app_update_summary">Aktualisierungen enthalten wichtige Fehlerbehebungen und großartige neue Funktionen. \n\nWenn Sie diese App nicht über Google Play installiert haben, müssen Sie die App leider deinstallieren und neu installieren, um das Update von dort zu erhalten.</string>
@@ -25,6 +25,8 @@
     <string name="license">Lizenz</string>
     <string name="pref_category_settings">Einstellungen</string>
     <string name="developers">Entwickler</string>
+    <string name="components">Open-Source-Komponenten</string>
+    <string name="components_summary">Zum Anzeigen tippen</string>
     <string name="crowdin">Übersetzung</string>
     <string name="crowdin_summary">Helfen Sie <b>Snapdrop für Android</b> in Ihre bevorzugte Sprache zu übersetzen</string>
     <string name="twitter">Twitter</string>
