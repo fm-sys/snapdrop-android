@@ -25,8 +25,8 @@
     <string name="license">许可证</string>
     <string name="pref_category_settings">设置</string>
     <string name="developers">开发者</string>
-    <string name="components">Open source components</string>
-    <string name="components_summary">Tap to display</string>
+    <string name="components">开源组件</string>
+    <string name="components_summary">点击显示</string>
     <string name="crowdin">本地化</string>
     <string name="crowdin_summary">帮助将 <b>Snapdrop for Android</b> 翻译成您最喜欢的语言</string>
     <string name="twitter">Twitter</string>
