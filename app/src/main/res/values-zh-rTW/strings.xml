@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">無法開啟瀏覽器</string>
     <!-- Update -->
+    <string name="app_update">有可用更新</string>
+    <string name="app_update_install">安裝</string>
+    <string name="app_update_show_details">詳細資訊</string>
     <!-- Welcome -->
+    <string name="app_welcome">歡迎來到 Snapdrop</string>
     <!-- Download -->
+    <string name="download_successful">下載成功</string>
+    <string name="notification_channel_name">下載完成</string>
     <!-- Action Buttons -->
+    <string name="open">開啟</string>
+    <string name="reset">重設</string>
     <!-- Settings / About -->
     <!-- File sharing -->
     <!-- baseURL -->
