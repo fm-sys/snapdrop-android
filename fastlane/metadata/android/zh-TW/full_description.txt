@@ -1,24 +1,24 @@
-Snapdrop for Android is an Android™ client for the free and open source local file sharing solution https://snapdrop.net/.
+Snapdrop for Android is an Android™ 免費且開源的客戶端用以本地端的檔案分享解決辦法https://snapdrop.net/.
 
-Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
+你是否時常因為無法快速的將檔案從手機傳輸到電腦而苦惱呢?
 
-USB? - Old fashioned!
-Bluetooth? - Much too cumbersome and slow!
-E-mail? - Please not another email I write to myself!
+USB? -太low了
+藍牙? -既麻煩又慢!
+E-mail? -拜託別再寄一封信給自己了!
 
 Snapdrop!
 
-Snapdrop is a local file sharing solution which completely works in your browser. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
+Snapdrop 是一個分享本地檔案的解決辦法，僅僅使用您的瀏覽器。 有點像是 Apple 的 Airdrop，但不限於 Apple 的設備。 Windows, Linux, Android, IPhone, Mac - 完全沒有任何問題!
 
-However, even if it theoretically would fully work in your browser, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with.
+然而，即使只需要用瀏覽器就能操作，但當你有頻繁使用的需求時，相信你會愛上 Snapdrop 這個 App。 由於完美整合到 Android 中，檔案傳輸速度更快了。 您還能直接在其他 App 中使用 Snapdrop 來分享檔案。
 
-Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we have don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+簡單快速的 "Snapdrop for Android" 讓數以百計的使用者更加便利。 作為一個開園專案，我們沒有任何的商業利益。但如果您想讓世界變得更美好。 加入並相信自己!
 
-SOURCE CODE:
+開放原始碼:
 https://github.com/fm-sys/snapdrop-android
 
-PRIVACY:
-None of your files are ever sent to any server. Files are sent only between peers in your local network.
+隱私宣告
+所有檔案不會送到任何伺服器。 檔案僅在您的區域網路之間傳送。
 
-CREDIT:
-The app and its icon are based on the Snapdrop Open Source project, which is hosted and maintained by RobinLinus. See also https://www.github.com/robinlinus/snapdrop
+所有權:
+這個 App 以及圖標源於 RobinLinus 建立的開源專案 Snapdrop。 詳情請參見 https://www.github.com/robinlinus/snapdrop
