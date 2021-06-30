@@ -2,11 +2,6 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <!-- Update -->
-    <string name="app_update">Actualizacion disponible</string>
-    <string name="app_update_summary">Las actualizaciones contienen importantes correcciones de errores y grandes nuevas características. \n\nSi no has instalado esta aplicación a través de Google Play, lamentablemente tienes que desinstalar y reinstalar la aplicación para obtener la actualización de allí.</string>
-    <string name="app_update_short_summary">Una nueva actualización está disponible</string>
-    <string name="app_update_install">Instalar</string>
-    <string name="app_update_show_details">Más detalles</string>
     <!-- Welcome -->
     <string name="app_welcome">Bienvenido a Snapdrop</string>
     <string name="app_welcome_summary">1. Abre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicación de Snapdrop en cualquier otro dispositivo de tu red Wi-Fi local.\n2. Toca en el dispositivo con el que quieres compartir los archivos.\n3. ¡Listo! Los archivos se enviarán…</string>
@@ -19,7 +14,6 @@
     <!-- Settings / About -->
     <string name="title_activity_about">Acerca de Snapdrop para Android</string>
     <string name="title_activity_about_short">Acerca de Snapdrop</string>
-    <string name="developer_notice">Snapdrop para Android por <a href="https://github.com/fm-sys">fm-sys</a></string>
     <string name="developer_notice_settings"><b>fm-sys</b> y todos los colaboradores en GitHub</string>
     <string name="license">Licencia</string>
     <string name="pref_category_settings">Ajustes</string>
