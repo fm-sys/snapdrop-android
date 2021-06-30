@@ -14,8 +14,13 @@ public class SnapdropApplication extends Application {
 
     @Override
     public void onCreate() {
-        setAppTheme(getAppTheme(getApplicationContext()));
+        setAppTheme(getApplicationContext());
         super.onCreate();
+    }
+
+    public static void setAppTheme(final @NonNull Context context) {
+        setAppTheme(getAppTheme(context));
+        context.setTheme(R.style.AppTheme);
     }
 
     public static void setAppTheme(final DarkModeSetting setting) {

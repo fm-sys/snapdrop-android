@@ -3,11 +3,6 @@
     <string name="err_no_browser">Can\'t open browser</string>
 
     <!-- Update -->
-    <string name="app_update">Update available</string>
-    <string name="app_update_summary">Updates contain important bug fixes and great new features. \n\nIf you don\'t have installed this app via Google Play, you unfortunately have to uninstall and reinstall the app to get the update from there.</string>
-    <string name="app_update_short_summary">A new update is available</string>
-    <string name="app_update_install">Install</string>
-    <string name="app_update_show_details">More details</string>
 
     <!-- Welcome -->
     <string name="app_welcome">Welcome to Snapdrop</string>
@@ -24,7 +19,6 @@
     <!-- Settings / About -->
     <string name="title_activity_about">About Snapdrop for Android</string>
     <string name="title_activity_about_short">About Snapdrop</string>
-    <string name="developer_notice">Snapdrop for Android by <a href="https://github.com/fm-sys">fm-sys</a></string>
     <string name="developer_notice_settings"><b>fm-sys</b> and all contributors at GitHub</string>
     <string name="license">License</string>
     <string name="pref_category_settings">Settings</string>

@@ -96,4 +96,11 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         builder.create().show();
         return true;
     }
+
+//    final String appPackageName = context.getPackageName();
+//        try {
+//        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+//    } catch (android.content.ActivityNotFoundException anfe) {
+//        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+//    }
 }

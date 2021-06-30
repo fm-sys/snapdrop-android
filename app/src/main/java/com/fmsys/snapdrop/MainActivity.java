@@ -22,7 +22,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -119,9 +118,9 @@ public class MainActivity extends Activity {
     @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility"})
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        SnapdropApplication.setAppTheme(this);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         
@@ -194,7 +193,6 @@ public class MainActivity extends Activity {
         intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
         registerReceiver(receiver, intentFilter);
 
-        new UpdateChecker().execute("");
     }
 
     private void refreshWebsite(final boolean pulled) {
@@ -400,7 +398,7 @@ public class MainActivity extends Activity {
         public boolean onCreateWindow(final WebView view, final boolean dialog, final boolean userGesture, final Message resultMsg) {
             final String url = view.getHitTestResult().getExtra();
             if (url.endsWith("update.html#settings")) {
-                final Intent browserIntent = new Intent(MainActivity.this, AboutActivity.class);
+                final Intent browserIntent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
             } else if (url.endsWith("offlineButForceRefresh")) {
                 forceRefresh = true;
@@ -483,44 +481,6 @@ public class MainActivity extends Activity {
             showScreenNoConnection();
         }
 
-    }
-
-    private class UpdateChecker extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(final String... params) {
-            try {
-                return UpdateUtils.checkUpdate();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(final String result) {
-            try {
-                if (result == null || uploadIntent != null) {
-                    return;
-                }
-
-                if (UpdateUtils.isInstalledViaGooglePlay(MainActivity.this)) { // simplified and less disturbing message for PlayStore users
-                    final Snackbar snackbar = Snackbar
-                            .make(findViewById(R.id.coordinatorLayout), R.string.app_update_short_summary, Snackbar.LENGTH_INDEFINITE)
-                            .setAction(R.string.app_update_install, button -> UpdateUtils.showAppInMarket(MainActivity.this));
-                    snackbar.show();
-                    new Handler().postDelayed(snackbar::dismiss, 10000); // 10 seconds
-                } else {
-                    final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
-                            .setTitle(R.string.app_update)
-                            .setMessage(R.string.app_update_summary)
-                            .setPositiveButton(R.string.app_update_install, (dialog, id) -> UpdateUtils.showAppInMarket(MainActivity.this))
-                            .setNegativeButton(R.string.app_update_show_details, (dialog, id) -> UpdateUtils.showUpdatesInBrowserIntent(MainActivity.this));
-                    builder.create().show();
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
