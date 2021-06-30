@@ -537,6 +537,7 @@ public class MainActivity extends Activity {
         intent.setAction(Intent.ACTION_VIEW);
         intent.setDataAndType(uri, fileHeader.getMime());
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
         final PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 1, intent, PendingIntent.FLAG_CANCEL_CURRENT);
         final String channelId = "MYCHANNEL";
         final NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
