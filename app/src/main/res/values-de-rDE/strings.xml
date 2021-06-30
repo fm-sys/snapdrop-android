@@ -3,11 +3,6 @@
     <string name="app_name">Snapdrop</string>
     <string name="err_no_browser">Browser kann nicht geöffnet werden</string>
     <!-- Update -->
-    <string name="app_update">Update verfügbar</string>
-    <string name="app_update_summary">Aktualisierungen enthalten wichtige Fehlerbehebungen und großartige neue Funktionen. \n\nWenn Sie diese App nicht über Google Play installiert haben, müssen Sie die App leider deinstallieren und neu installieren, um das Update von dort zu erhalten.</string>
-    <string name="app_update_short_summary">Ein neues Update ist verfügbar</string>
-    <string name="app_update_install">Installieren</string>
-    <string name="app_update_show_details">Weitere Infos</string>
     <!-- Welcome -->
     <string name="app_welcome">Willkommen bei Snapdrop</string>
     <string name="app_welcome_summary">1. Öffne <a href="https://snapdrop.net">snapdrop.net</a> oder die Snapdrop-App auf einem anderen Gerät in deinem lokalen WLAN-Netzwerk.\n2. Tippe auf das Gerät, mit dem du die Datei(en) teilen möchtest.\n3. Fertig! Die Datei(en) werden nun gesendet…</string>
@@ -20,7 +15,6 @@
     <!-- Settings / About -->
     <string name="title_activity_about">Über Snapdrop für Android</string>
     <string name="title_activity_about_short">Über Snapdrop</string>
-    <string name="developer_notice">Snapdrop für Android von <a href="https://github.com/fm-sys">fm-sys</a></string>
     <string name="developer_notice_settings"><b>fm-sys</b> und alle Mitwirkenden auf GitHub</string>
     <string name="license">Lizenz</string>
     <string name="pref_category_settings">Einstellungen</string>
