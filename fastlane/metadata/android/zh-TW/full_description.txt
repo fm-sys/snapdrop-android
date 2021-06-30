@@ -18,7 +18,7 @@ Snapdrop 是一個分享本地檔案的解決辦法，僅僅使用您的瀏覽�
 https://github.com/fm-sys/snapdrop-android
 
 隱私宣告
-所有檔案不會送到任何伺服器。 檔案僅在您的區域網路之間傳送。
+This app interacts with https://snapdrop.net/ to be able to discover other devices running Snapdrop in your local network. However, none of your files is ever sent to any server but are transferred directly peer-to-peer between your devices.
 
 所有權:
 這個 App 以及圖標源於 RobinLinus 建立的開源專案 Snapdrop。 詳情請參見 https://www.github.com/robinlinus/snapdrop
