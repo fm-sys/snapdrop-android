@@ -1,24 +1,24 @@
-Snapdrop for Android is an Android™ client for the free and open source local file sharing solution https://snapdrop.net/.
+Snapdrop لـ Android هو عميل AndroidTM لحل مشاركة الملفات المحلية المجانية والمفتوحة المصدر https://snapdrop.net/.
 
-Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
+هل تواجه أيضا في بعض الأحيان مشكلة تحتاج فقط إلى نقل ملف بسرعة من هاتفك إلى جهاز الكمبيوتر؟
 
-USB? - Old fashioned!
-Bluetooth? - Much too cumbersome and slow!
-E-mail? - Please not another email I write to myself!
+USB؟ أفكار قديمة!
+بلوتوث؟ - مرهقة وبطيئة جدا!
+البريد الإلكتروني؟ - من فضلك ليس بريد إلكتروني آخر أكتبه لنفسي!
 
 Snapdrop!
 
-Snapdrop is a local file sharing solution which completely works in your browser. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
+Snapdrop هو حل مشاركة الملفات المحلية والذي يعمل بالكامل في المتصفح الخاص بك. أشبه قليلاً ب أبل دروب, لكن ليس فقط لأجهزة أبل. ويندوز، لينوكس، أندرويد، IPhone، ماك - لا توجد مشكلة على الإطلاق!
 
-However, even if it theoretically would fully work in your browser, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with.
+ومع ذلك، حتى لو كان يعمل نظريا بشكل كامل في المتصفح الخاص بك، سوف تحب هذا التطبيق إذا كنت ترغب في استخدام Snaplop أكثر في حياتك اليومية. وبفضل التكامل المثالي في نظام تشغيل الأندرويد، يتم إرسال الملفات بشكل أسرع. مباشرةً من داخل التطبيقات الأخرى يمكنك تحديد Snapdrop لمشاركتها مع.
 
-Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we have don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+بفضل بساطتها الجذرية، "Snaplow for Android" تجعل الحياة اليومية لمئات المستخدمين أسهل. كمشروع مفتوح المصدر ليس لدينا أي مصالح تجارية ولكن نريد أن نجعل العالم أفضل قليلاً. انضم و اقنع نفسك!
 
-SOURCE CODE:
+الرمز المصدري:
 https://github.com/fm-sys/snapdrop-android
 
-PRIVACY:
-This app interacts with https://snapdrop.net/ to be able to discover other devices running Snapdrop in your local network. However, none of your files is ever sent to any server but are transferred directly peer-to-peer between your devices.
+الخصوصية:
+يتفاعل هذا التطبيق مع https://snapdrop.net/ لتتمكن من اكتشاف الأجهزة الأخرى التي تشغل Snapdrop في شبكتك المحلية. ومع ذلك، لا يتم إرسال أي من الملفات الخاصة بك إلى أي خادم ولكن يتم نقلها مباشرة من النظير إلى النظير بين أجهزتك.
 
-CREDIT:
-The app and its icon are based on the Snapdrop Open Source project, which is hosted and maintained by RobinLinus. See also https://www.github.com/robinlinus/snapdrop
+شكر:
+يستند التطبيق و أيقونته إلى مشروع Snapdrop Open Source الذي تستضيفه وتحفظه روبينلينوس. انظر أيضا https://www.github.com/robinlinus/snapdrop
