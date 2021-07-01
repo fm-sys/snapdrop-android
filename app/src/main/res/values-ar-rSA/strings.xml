@@ -33,8 +33,13 @@
     <string-array name="darkmode_entries">
         <item>افتراضي النظام</item>
         <item>مضيء</item>
-        <item>Dark</item>
+        <item>داكن</item>
     </string-array>
+    <string name="baseurl_title">الرابط الأساسي</string>
     <!-- File sharing -->
+    <string name="intent_file">تم اختيار ملف للمشاركة</string>
+    <string name="intent_files">تمّ تحديد الملفّات للمشاركة</string>
+    <string name="error_filechooser">لا يمكن فتح منتقي الملفات</string>
+    <string name="error_network">الرجاء التحقق من أنك متصل بشبكة WiFi</string>
     <!-- baseURL -->
 </resources>
