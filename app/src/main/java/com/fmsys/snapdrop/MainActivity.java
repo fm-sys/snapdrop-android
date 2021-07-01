@@ -24,7 +24,6 @@ import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -59,7 +58,6 @@ import com.anggrayudi.storage.callback.FileCallback;
 import com.anggrayudi.storage.file.DocumentFileUtils;
 import com.anggrayudi.storage.media.FileDescription;
 import com.anggrayudi.storage.media.MediaFile;
-import com.anggrayudi.storage.media.MediaStoreCompat;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
@@ -92,7 +90,6 @@ public class MainActivity extends Activity {
     public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>(); // name - size
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
-    private final Handler handler = new Handler(Looper.getMainLooper());
 
     public Intent uploadIntent = null;
 
@@ -484,21 +481,11 @@ public class MainActivity extends Activity {
     }
 
     private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
-
         executor.execute(() -> {
-
             final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                final MediaFile newFile = MediaStoreCompat.createDownload(this, fileDescription, true);
-                if (newFile != null) {
-                    DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, newFile, fileCallback(fileHeader));
-                }
-            } else {
-                DocumentFileUtils.moveFileTo(DocumentFile.fromFile(fileHeader.getTempFile()), this, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileDescription, fileCallback(fileHeader));
-            }
-
+            final DocumentFile source = DocumentFile.fromFile(fileHeader.getTempFile());
+            DocumentFileUtils.moveFileToDownloadMedia(source, getApplicationContext(), fileDescription, fileCallback(fileHeader));
         });
-
     }
 
     private FileCallback fileCallback(final JavaScriptInterface.FileHeader fileHeader) {
@@ -506,26 +493,27 @@ public class MainActivity extends Activity {
             @Override
             public void onFailed(@NotNull final FileCallback.ErrorCode errorCode) {
                 Log.d("SimpleStorage", errorCode.toString());
-                //UI Thread
-                handler.post(() -> Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show());
+                Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCompleted(@NotNull final Object file) {
-                Uri uri = null;
+                final Uri uri;
 
                 if (file instanceof MediaFile) {
                     final MediaFile mediaFile = (MediaFile) file;
                     uri = mediaFile.getUri();
                 } else if (file instanceof DocumentFile) {
                     final DocumentFile documentFile = (DocumentFile) file;
-                    uri = DocumentFileUtils.isRawFile(documentFile) ? FileProvider.getUriForFile(MainActivity.this, getApplicationContext().getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile)) : documentFile.getUri();
+                    final Context context = getApplicationContext();
+                    uri = DocumentFileUtils.isRawFile(documentFile)
+                        ? FileProvider.getUriForFile(context, getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile, context))
+                        : documentFile.getUri();
+                } else {
+                    return;
                 }
 
-                final Uri finalUri = uri;
-                //UI Thread
-                handler.post(() -> fileDownloadedIntent(finalUri, fileHeader));
-
+                fileDownloadedIntent(uri, fileHeader);
             }
         };
     }
