@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">No se puede abrir el navegador</string>
     <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Bienvenido a Snapdrop</string>
@@ -18,6 +19,8 @@
     <string name="license">Licencia</string>
     <string name="pref_category_settings">Ajustes</string>
     <string name="developers">Desarrollador</string>
+    <string name="components">Componentes de código abierto</string>
+    <string name="components_summary">Pulse para mostrar</string>
     <string name="crowdin">Localización</string>
     <string name="crowdin_summary">Ayuda a traducir <b>Snapdrop para Android</b> a tu idioma favorito</string>
     <string name="twitter">Twitter</string>
@@ -33,6 +36,7 @@
         <item>Claro</item>
         <item>Oscuro</item>
     </string-array>
+    <string name="baseurl_title">URL base</string>
     <!-- File sharing -->
     <string name="intent_file">Se ha seleccionado un archivo para compartir</string>
     <string name="intent_files">Los archivos están seleccionados para compartir</string>
