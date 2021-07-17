@@ -18,7 +18,7 @@ Snapdrop 是一个本地文件共享解决方案，并且只使用您的浏览�
 https://github.com/fm-sys/snapdrop-android
 
 隐私：
-此应用与https://snapdrop.net/交互，可以发现其他在您的本地网络中运行 Snapdrop的设备。 However, none of your files is ever sent to any server but are transferred directly peer-to-peer between your devices.
+此应用与 https://snapdrop.net/交互，可以发现其他在您的本地网络中运行 Snapdrop的设备。 然而，您的文件没有被发送到任何服务器，而是在您的设备之间对等地直接传输。
 
 所有权：
-本应用及其图标源于 RobinLinus 维护的开源项目 Snapdrop。 参见 https://www.github.com/robinlinus/snapdrop
+本应用及其图标源于 RobinLinus 维护的开源项目 Snapdrop。 请参见 https://www.github.com/robinlinus/snapdrop
