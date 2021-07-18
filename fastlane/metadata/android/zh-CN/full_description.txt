@@ -4,7 +4,7 @@ Snapdrop for Android 是为开源的本地文件共享解决方案 Snapdrop 开�
 
 USB？ ——老式！
 蓝牙？ ——又烦又慢！
-电子邮件？ ——再给我自己写一封邮件？别吧！
+电子邮件？ ——再给我自己写一封邮件？算了吧！
 
 Snapdrop！
 
@@ -18,7 +18,7 @@ Snapdrop 是一个本地文件共享解决方案，并且只使用您的浏览�
 https://github.com/fm-sys/snapdrop-android
 
 隐私：
-您的任一文件都没有发送到任何服务器。 文件仅在您本地网络中的节点之间发送。
+此应用与 https://snapdrop.net/交互，可以发现其他在您的本地网络中运行 Snapdrop的设备。 然而，您的文件没有被发送到任何服务器，而是在您的设备之间对等地直接传输。
 
 所有权：
-本应用及其图标源于 RobinLinus 维护的开源项目 Snapdrop。 参见 https://www.github.com/robinlinus/snapdrop
+本应用及其图标源于 RobinLinus 维护的开源项目 Snapdrop。 请参见 https://www.github.com/robinlinus/snapdrop

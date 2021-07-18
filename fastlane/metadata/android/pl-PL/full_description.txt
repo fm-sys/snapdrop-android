@@ -18,7 +18,7 @@ KOD ŹRÓDŁOWY:
 https://github.com/fm-sys/snapdrop-android
 
 OCHRONA DANYCH:
-Żaden z Twoich plików nie jest nigdy wysyłany na żaden serwer. Pliki są wysyłane tylko pomiędzy uczestnikami sieci lokalnej.
+Ta aplikacja współpracuje z https://snapdrop.net/ aby móc odkryć inne urządzenia z Snapdrop w Twojej sieci lokalnej. Jednak żaden z Twoich plików nie jest nigdy wysyłany do żadnego serwera, ale jest przesyłany bezpośrednio między Twoimi urządzeniami.
 
 TWÓRCY:
 Aplikacja i jej ikona opierają się na projekcie Open Source Snapdrop który jest hostowany i utrzymywany przez RobinLinus. Zobacz również: https://www.github.com/robinlinus/snapdrop

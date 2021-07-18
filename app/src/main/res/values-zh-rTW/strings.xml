@@ -3,11 +3,6 @@
     <string name="app_name">Snapdrop</string>
     <string name="err_no_browser">無法開啟瀏覽器</string>
     <!-- Update -->
-    <string name="app_update">有可用更新</string>
-    <string name="app_update_summary">更新包含重要的錯誤修正以及新功能。\n\n如果您未在 google play 商店安裝，很遺憾地您必須先解除安裝後重新安裝更新來取得新版本</string>
-    <string name="app_update_short_summary">有新的可用更新</string>
-    <string name="app_update_install">安裝</string>
-    <string name="app_update_show_details">詳細資訊</string>
     <!-- Welcome -->
     <string name="app_welcome">歡迎來到 Snapdrop</string>
     <string name="app_welcome_summary">1.打開 <a href="https://snapdrop.net">snapdrop.net</a> 或是 Snapdrop 應用程式在任何連接到區域無線網路的設備上。\n2. 點擊你想要分享的裝置。\n3. 完成! 檔案將會被傳送…</string>
@@ -20,7 +15,6 @@
     <!-- Settings / About -->
     <string name="title_activity_about">關於 Snapdrop for Android</string>
     <string name="title_activity_about_short">關於 Snapdrop</string>
-    <string name="developer_notice">Snapdrop for Android by <a href="https://github.com/fm-sys">fm-sys</a></string>
     <string name="developer_notice_settings"><b>fm-sys</b> 和所有在 Github 的貢獻者</string>
     <string name="license">授權</string>
     <string name="pref_category_settings">設定</string>

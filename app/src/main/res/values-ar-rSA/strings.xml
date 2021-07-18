@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">لا يمكن فتح المتصفح</string>
     <!-- Update -->
     <!-- Welcome -->
+    <string name="app_welcome">مرحبا بك في Snapdrop</string>
+    <string name="app_welcome_summary">1. افتح <a href="https://snapdrop.net">snapdrop.net</a> أو تطبيق Snapdrop على أي جهاز آخر في شبكة الواي فاي المحلية.\n2. اضغط على الجهاز الذي تريد مشاركة الملف (الملفات) معه.\n3. تم! سيتم إرسال الملف (الملفات)…</string>
     <!-- Download -->
+    <string name="download_successful">تم التحميل بنجاح</string>
+    <string name="notification_channel_name">إكتمل التحميل</string>
     <!-- Action Buttons -->
+    <string name="open">فتح</string>
+    <string name="reset">إعادة ضبط</string>
     <!-- Settings / About -->
+    <string name="title_activity_about">حول Snapdrop لنظام الأندرويد</string>
+    <string name="title_activity_about_short">حول Snapdrop</string>
+    <string name="developer_notice_settings"><b>fm-sys</b> وكل المساهمين في GitHub</string>
+    <string name="license">الترخيص</string>
+    <string name="pref_category_settings">الإعدادات</string>
+    <string name="developers">المطور</string>
+    <string name="components">مكونات مفتوحة المصدر</string>
+    <string name="components_summary">انقر للعرض</string>
+    <string name="crowdin">الترجمة</string>
+    <string name="crowdin_summary">المساعدة في ترجمة <b>Snapdrop للأندرويد</b> إلى اللغة المفضلة لديك</string>
+    <string name="twitter">تويتر</string>
+    <string name="twitter_summary">ابقى على اطلاع على <b>Snapdrop for Android</b></string>
+    <string name="version">الإصدار</string>
+    <string name="pref_device_name_title">اسم الجهاز</string>
+    <string name="pref_device_name_summary">تعيين اسم جهاز محدد للمستخدم</string>
+    <string name="keep_on_summary">تمكين إذا كان لديك مشاكل مع عمليات النقل التي يتم مقاطعتها عند إيقاف تشغيل الشاشة</string>
+    <string name="keep_on_title">إبقاء الشاشة قيد التشغيل</string>
+    <string name="settings_theme_title">السمة</string>
+    <string-array name="darkmode_entries">
+        <item>افتراضي النظام</item>
+        <item>مضيء</item>
+        <item>داكن</item>
+    </string-array>
+    <string name="baseurl_title">الرابط الأساسي</string>
     <!-- File sharing -->
+    <string name="intent_file">تم اختيار ملف للمشاركة</string>
+    <string name="intent_files">تمّ تحديد الملفّات للمشاركة</string>
+    <string name="intent_content">تم تحديد المحتوى للمشاركة</string>
+    <string name="error_filechooser">لا يمكن فتح منتقي الملفات</string>
+    <string name="error_network">الرجاء التحقق من أنك متصل بشبكة WiFi</string>
+    <string name="ignore_error_network">دعوني على أية حال</string>
     <!-- baseURL -->
 </resources>
