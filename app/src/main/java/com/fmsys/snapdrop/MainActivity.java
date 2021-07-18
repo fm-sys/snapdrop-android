@@ -437,12 +437,15 @@ public class MainActivity extends Activity {
 
                 // welcome dialog
                 if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
-                    final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
+                    new AlertDialog.Builder(MainActivity.this)
                             .setCancelable(false)
                             .setTitle(R.string.app_welcome)
                             .setMessage(R.string.app_welcome_summary)
-                            .setPositiveButton(android.R.string.ok, (dialog, which) -> prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply());
-                    builder.create().show();
+                            .setPositiveButton(android.R.string.ok, null)
+                            .create()
+                            .show();
+                    
+                    prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply();
                 }
             }
 
