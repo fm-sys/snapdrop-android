@@ -124,7 +124,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
+    public void onSaveInstanceState(final @NonNull Bundle outState) {
         storageHelper.onSaveInstanceState(outState);
         super.onSaveInstanceState(outState);
     }
