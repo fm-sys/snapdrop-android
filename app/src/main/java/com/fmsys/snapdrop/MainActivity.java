@@ -1,7 +1,6 @@
 package com.fmsys.snapdrop;
 
 import com.google.android.material.snackbar.Snackbar;
-
 import com.anggrayudi.storage.callback.FileCallback;
 import com.anggrayudi.storage.file.DocumentFileCompat;
 import com.anggrayudi.storage.file.DocumentFileType;
