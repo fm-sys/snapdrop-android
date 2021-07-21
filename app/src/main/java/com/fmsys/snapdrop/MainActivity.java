@@ -1,5 +1,16 @@
 package com.fmsys.snapdrop;
 
+import com.google.android.material.snackbar.Snackbar;
+
+import com.anggrayudi.storage.callback.FileCallback;
+import com.anggrayudi.storage.file.DocumentFileCompat;
+import com.anggrayudi.storage.file.DocumentFileType;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.anggrayudi.storage.media.FileDescription;
+import com.anggrayudi.storage.media.MediaFile;
+
+import org.jetbrains.annotations.NotNull;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -24,8 +35,8 @@ import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
 import android.util.Log;
@@ -42,6 +53,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.LinearLayoutCompat;
@@ -53,19 +69,6 @@ import androidx.preference.PreferenceManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
-
-import com.anggrayudi.storage.callback.FileCallback;
-import com.anggrayudi.storage.file.DocumentFileUtils;
-import com.anggrayudi.storage.media.FileDescription;
-import com.anggrayudi.storage.media.MediaFile;
-import com.google.android.material.snackbar.Snackbar;
-
-import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
@@ -480,14 +483,20 @@ public class MainActivity extends Activity {
         public void onReceivedError(final WebView view, final WebResourceRequest request, final WebResourceError error) {
             showScreenNoConnection();
         }
-
     }
 
     private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
         executor.execute(() -> {
             final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
             final DocumentFile source = DocumentFile.fromFile(fileHeader.getTempFile());
-            DocumentFileUtils.moveFileToDownloadMedia(source, getApplicationContext(), fileDescription, fileCallback(fileHeader));
+            final String downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
+            final String path = prefs.getString(getString(R.string.pref_save_location), downloadsFolder);
+            final DocumentFile saveLocation = DocumentFileCompat.fromFullPath(getApplicationContext(), path, DocumentFileType.FOLDER, true);
+            if (saveLocation != null) {
+                DocumentFileUtils.moveFileTo(source, getApplicationContext(), saveLocation, fileDescription, fileCallback(fileHeader));
+            } else {
+                DocumentFileUtils.moveFileToDownloadMedia(source, getApplicationContext(), fileDescription, fileCallback(fileHeader));
+            }
         });
     }
 
