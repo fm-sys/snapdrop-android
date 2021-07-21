@@ -1,10 +1,15 @@
 package com.fmsys.snapdrop;
 
+import com.anggrayudi.storage.SimpleStorageHelper;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,11 +22,16 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
-
 public class SettingsFragment extends PreferenceFragmentCompat {
+
+    private final SimpleStorageHelper storageHelper = new SimpleStorageHelper(this);
+
     @Override
     public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey) {
         setPreferencesFromResource(R.xml.preferences, rootKey);
+        if (savedInstanceState != null) {
+            storageHelper.onRestoreInstanceState(savedInstanceState);
+        }
 
         final Preference versionPref = initUrlPreference(R.string.pref_version, "https://github.com/fm-sys/snapdrop-android/releases/latest");
         versionPref.setSummary("v" + BuildConfig.VERSION_NAME);
@@ -43,10 +53,26 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
         deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", null));
-        
+
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
         final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
         baseUrlPref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "", getString(R.string.baseURL), newValue -> baseUrlPref.setSummary(newValue != null ? newValue : getString(R.string.baseURL))));
-        baseUrlPref.setSummary(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(baseUrlPref.getKey(), getString(R.string.baseURL)));
+        baseUrlPref.setSummary(preferences.getString(baseUrlPref.getKey(), getString(R.string.baseURL)));
+
+        final Preference saveLocationPref = findPreference(getString(R.string.pref_save_location));
+        saveLocationPref.setOnPreferenceClickListener(preference -> {
+            storageHelper.openFolderPicker();
+            return true;
+        });
+        final String downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
+        saveLocationPref.setSummary(preferences.getString(saveLocationPref.getKey(), downloadsFolder));
+        storageHelper.setOnFolderSelected((requestCode, folder) -> {
+            final String path = DocumentFileUtils.getAbsolutePath(folder, requireContext());
+            setPreferenceValue(saveLocationPref.getKey(), path, null);
+            saveLocationPref.setSummary(path);
+            return null;
+        });
 
         final Preference themePref = findPreference(getString(R.string.pref_theme_setting));
             themePref.setOnPreferenceChangeListener((Preference preference, Object newValue) -> {
@@ -95,6 +121,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 .setNegativeButton(R.string.reset, (dialog, id) -> setPreferenceValue(pref.getKey(), null, onPreferenceChangeCallback));
         builder.create().show();
         return true;
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        storageHelper.onSaveInstanceState(outState);
+        super.onSaveInstanceState(outState);
     }
 
 //    final String appPackageName = context.getPackageName();

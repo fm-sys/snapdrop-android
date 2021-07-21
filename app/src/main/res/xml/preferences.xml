@@ -31,6 +31,11 @@
             android:title="@string/baseurl_title"
             android:summary="%s"
             app:iconSpaceReserved="false" />
+        <Preference
+            android:key="@string/pref_save_location"
+            android:title="@string/save_location"
+            android:summary="%s"
+            app:iconSpaceReserved="false" />
 
     </PreferenceCategory>
 
