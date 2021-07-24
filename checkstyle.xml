@@ -131,6 +131,13 @@
         <module name="WhitespaceAround">
             <property name="severity" value="info" />
         </module>
+        <module name="ImportOrder">
+            <property name="severity" value="ignore" />
+            <property name="groups" value="android,androidx,com,java,javax,*" />
+            <property name="ordered" value="true" />
+            <property name="separated" value="true" />
+            <property name="option" value="under" />
+        </module>
     </module>
 </module>
 
