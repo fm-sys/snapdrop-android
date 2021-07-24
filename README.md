@@ -22,14 +22,13 @@ Snapdrop is a local file sharing solution which completely works in your browser
 However, even if it theoretically would fully work in your browser and you don't have to install anything, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with. Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
 
 ## Where can I download the app?
-Snapdrop is now available on [Google Play](https://play.google.com/store/apps/details?id=com.fmsys.snapdrop). This is the preferred way to install. For more advanced users, new releases are also always listed up at the [GitHub releases page](https://github.com/fm-sys/snapdrop-android/releases/). If you prefer an F-Droid repo, you can use the binary repo [IzzyOnDroid](https://apt.izzysoft.de/fdroid/repo?fingerprint=3BF0D6ABFEAE2F401707B6D966BE743BF0EEE49C2561B9BA39073711F628937A) which you can add to your F-Droid client. However, I take no responsibility for the content offered in that repo.
-
+**Snapdrop for Android** is available on [Google Play](https://play.google.com/store/apps/details?id=com.fmsys.snapdrop). For more advanced users, you can download the app via [F-Droid](https://f-droid.org/en/packages/com.fmsys.snapdrop/) as well. 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=com.fmsys.snapdrop">
-    <img height="100" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+    <img height="100" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
   </a>
-  <a href="https://apt.izzysoft.de/fdroid/index/apk/com.fmsys.snapdrop">
-    <img height="100" src="docs/download_graphic.png">
+  <a href="https://f-droid.org/en/packages/com.fmsys.snapdrop/">
+    <img height="100" alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png">
   </a>
 </p>
 
