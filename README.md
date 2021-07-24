@@ -24,8 +24,12 @@ However, even if it theoretically would fully work in your browser and you don't
 ## Where can I download the app?
 **Snapdrop for Android** is available on [Google Play](https://play.google.com/store/apps/details?id=com.fmsys.snapdrop). For more advanced users, you can download the app via [F-Droid](https://f-droid.org/en/packages/com.fmsys.snapdrop/) as well. 
 <p align="center">
-  [<img height="100" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">](https://play.google.com/store/apps/details?id=com.fmsys.snapdrop)
-  [<img height="100" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid">](https://f-droid.org/en/packages/com.fmsys.snapdrop/)
+  <a href="https://play.google.com/store/apps/details?id=com.fmsys.snapdrop">
+    <img height="100" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+  </a>
+  <a href="https://f-droid.org/en/packages/com.fmsys.snapdrop/">
+    <img height="100" alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png">
+  </a>
 </p>
 
 ## Screenshots
