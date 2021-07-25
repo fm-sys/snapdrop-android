@@ -57,6 +57,7 @@
         <item>Dark</item>
     </string-array>
     <string name="baseurl_title">Base URL</string>
+    <string name="save_location">Save location</string>
 
     <!-- File sharing -->
     <string name="intent_file">A file is selected for sharing</string>
