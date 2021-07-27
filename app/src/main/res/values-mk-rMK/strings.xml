@@ -18,6 +18,7 @@
     <string name="developer_notice_settings"><b>fm-sys</b> и сите соработници на GitHub</string>
     <string name="license">Лиценца</string>
     <string name="pref_category_settings">Поставки</string>
+    <string name="developers">Инвеститорот</string>
     <string name="components">Компоненти со отворен извор</string>
     <string name="components_summary">Допрете за да се прикаже</string>
     <string name="crowdin">Преводи</string>
@@ -35,6 +36,7 @@
         <item>Светла</item>
         <item>Темна</item>
     </string-array>
+    <string name="baseurl_title">Базна URL-адреса</string>
     <string name="save_location">Зачувај локација</string>
     <!-- File sharing -->
     <string name="intent_file">Датотека е избрана за споделување</string>
