@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Snapdrop</string>
     <!-- Update -->
     <!-- Welcome -->
     <!-- Download -->
+    <string name="download_successful">Преземањето е успешно</string>
     <!-- Action Buttons -->
     <!-- Settings / About -->
     <!-- File sharing -->
