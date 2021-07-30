@@ -37,6 +37,7 @@
         <item>داكن</item>
     </string-array>
     <string name="baseurl_title">الرابط الأساسي</string>
+    <string name="save_location">حفظ الموقع</string>
     <!-- File sharing -->
     <string name="intent_file">تم اختيار ملف للمشاركة</string>
     <string name="intent_files">تمّ تحديد الملفّات للمشاركة</string>
