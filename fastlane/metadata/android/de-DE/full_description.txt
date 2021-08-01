@@ -18,7 +18,7 @@ SOURCE CODE:
 https://github.com/fm-sys/snapdrop-android
 
 DATENSCHUTZ:
-This app interacts with https://snapdrop.net/ to be able to discover other devices running Snapdrop in your local network. However, none of your files is ever sent to any server but are transferred directly peer-to-peer between your devices.
+All However, none of your files is ever sent to any server but are transferred directly peer-to-peer between your devices.
 
 DANKSAGUNG:
 Die App und ihr Symbol basieren auf dem Snapdrop Open-Source-Projekt, das von RobinLinus gehostet und gepflegt wird. Siehe auch https://www.github.com/robinlinus/snapdrop
