@@ -37,6 +37,7 @@
         <item>Ciemny</item>
     </string-array>
     <string name="baseurl_title">Podstawowy adres URL</string>
+    <string name="save_location">Zapisz lokalizację</string>
     <!-- File sharing -->
     <string name="intent_file">Plik jest wybrany do udostępnienia</string>
     <string name="intent_files">Plik jest wybrany do udostępnienia</string>

@@ -37,6 +37,7 @@
         <item>Tema escuro</item>
     </string-array>
     <string name="baseurl_title">URL Base</string>
+    <string name="save_location">Gravar localização</string>
     <!-- File sharing -->
     <string name="intent_file">Um arquivo foi selecionado para o compartilhamento</string>
     <string name="intent_files">Arquivos estão selecionados para compartilhar</string>
