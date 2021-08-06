@@ -37,7 +37,7 @@
         <item>Dunkel</item>
     </string-array>
     <string name="baseurl_title">Basis-URL</string>
-    <string name="save_location">Save location</string>
+    <string name="save_location">Speicherort</string>
     <!-- File sharing -->
     <string name="intent_file">Datei ausgewählt</string>
     <string name="intent_files">Dateien ausgewählt</string>
