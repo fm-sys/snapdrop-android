@@ -10,7 +10,7 @@ android {
         targetSdkVersion 30
 
         // ToDo list - Update Instruction
-        //  -   As first step, always check if unmerged Crowdin updates are available and/or sync Crowdin (https://crowdin.com/project/snapdrop-android/settings#integration-github)
+        //  -   As first step, always check if unmerged crowdin updates are available and/or sync crowdin (https://crowdin.com/project/snapdrop-android/apps/system/github)
         //  -   Don't forget to always **pull** changes into the local repo!!!
         //  -   Change version code and name when releasing a new version
         //  -   Afterwards, build a new version via Build > Generate Signed Bundle / APK...
@@ -20,10 +20,9 @@ android {
         //  -   Upload and publish APK to Google Play
         //  -   Publish the release tag on Github
         //  -   Post release info to Twitter
-        //  -   Optional: At last the output-metadata.json can be moved to the docs folder to trigger the in-app update notification.
 
-        versionCode 13
-        versionName "1.7.1"
+        versionCode 14
+        versionName "1.8.0"
         applicationVariants.all { variant ->
             variant.outputs.all {
                 outputFileName = "snapdrop_v${defaultConfig.versionName}.apk"
