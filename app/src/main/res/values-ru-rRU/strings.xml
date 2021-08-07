@@ -4,8 +4,8 @@
     <string name="err_no_browser">Не удаётся открыть браузер</string>
     <!-- Update -->
     <!-- Welcome -->
-    <string name="app_welcome">Добро пожаловать в Snapdrop</string>
-    <string name="app_welcome_summary">1. Откройте <a href="https://snapdrop.net">snapdrop.net</a> или приложение Snapdrop на любом другом устройстве в вашей локальной WiFi сети.\n2. Нажмите на устройство, с которым вы хотите поделиться файлом (файлами).\n3. Готово! Файл(ы) будет (будут) отправлен(ы)…</string>
+    <string name="app_welcome">Приветствуем в Snapdrop</string>
+    <string name="app_welcome_summary">1. Откройте <a href="https://snapdrop.net">snapdrop.net</a> или приложение Snapdrop на любом другом устройстве в вашей локальной WiFi сети.\n2. Нажмите на устройство, с которым вы хотите поделиться файлом (файлами).\n3. Готово! Файл(ы) будет отправлен…</string>
     <!-- Download -->
     <string name="download_successful">Загрузка завершена</string>
     <string name="notification_channel_name">Загрузка завершена</string>
