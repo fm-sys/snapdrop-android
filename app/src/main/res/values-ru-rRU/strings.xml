@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">Не удаётся открыть браузер</string>
     <!-- Update -->
     <!-- Welcome -->
+    <string name="app_welcome">Добро пожаловать в Snapdrop</string>
+    <string name="app_welcome_summary">1. Откройте <a href="https://snapdrop.net">snapdrop.net</a> или приложение Snapdrop на любом другом устройстве в вашей локальной WiFi сети.\n2. Нажмите на устройство, с которым вы хотите поделиться файлом (файлами).\n3. Готово! Файл(ы) будет (будут) отправлен(ы)…</string>
     <!-- Download -->
+    <string name="download_successful">Загрузка завершена</string>
+    <string name="notification_channel_name">Загрузка завершена</string>
     <!-- Action Buttons -->
+    <string name="open">открыть</string>
+    <string name="reset">сброс</string>
     <!-- Settings / About -->
+    <string name="title_activity_about">О Snapdrop для Android</string>
+    <string name="title_activity_about_short">О Snapdrop</string>
+    <string name="developer_notice_settings"><b>fm-sys</b> и все участники проекта на GitHub</string>
+    <string name="license">Лицензионное соглашение</string>
+    <string name="pref_category_settings">Настройки</string>
+    <string name="developers">Разработчики</string>
+    <string name="components">Компоненты Open Source</string>
+    <string name="components_summary">Коснитесь для отображения</string>
+    <string name="crowdin">Перевод</string>
+    <string name="crowdin_summary">Помогите перевести <b>Snapdrop для Android</b> на Ваш любимый язык</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Будьте в курсе о <b>Snapdrop для Android</b></string>
+    <string name="version">Версия</string>
+    <string name="pref_device_name_title">Имя устройства</string>
+    <string name="pref_device_name_summary">Задать имя устройства, определенного пользователем</string>
+    <string name="keep_on_summary">Включите, если при отключении экрана у вас возникли проблемы с передачей</string>
+    <string name="keep_on_title">Не отключать экран</string>
+    <string name="settings_theme_title">Тема</string>
+    <string-array name="darkmode_entries">
+        <item>Системные настройки</item>
+        <item>Светлая</item>
+        <item>Тёмная</item>
+    </string-array>
+    <string name="baseurl_title">Базовый адрес</string>
+    <string name="save_location">Сохранить расположение</string>
     <!-- File sharing -->
+    <string name="intent_file">Файл выбран для передачи</string>
+    <string name="intent_files">Файлы выбраны для передачи</string>
+    <string name="intent_content">Содержимое выбрано для передачи</string>
+    <string name="error_filechooser">Не удаётся выбрать файл</string>
+    <string name="error_network">Пожалуйста, убедитесь, что вы подключены к сети WiFi</string>
+    <string name="ignore_error_network">Всё равно попробовать</string>
     <!-- baseURL -->
 </resources>
