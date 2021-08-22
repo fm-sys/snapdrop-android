@@ -19,6 +19,8 @@
     <string name="license">Licence</string>
     <string name="pref_category_settings">Réglages</string>
     <string name="developers">Développeur</string>
+    <string name="components">Éléments open source</string>
+    <string name="components_summary">Appuyez pour afficher</string>
     <string name="crowdin">Localisation</string>
     <string name="crowdin_summary">Aider à traduire <b>Snapdrop for Android</b> dans votre langue favorite</string>
     <string name="twitter">Twitter</string>
@@ -35,6 +37,7 @@
         <item>Sombre</item>
     </string-array>
     <string name="baseurl_title">URL de base</string>
+    <string name="save_location">Dossier de sauvegarde</string>
     <!-- File sharing -->
     <string name="intent_file">Un fichier est sélectionné pour partager</string>
     <string name="intent_files">Des fichiers sont sélectionnés pour partager</string>
