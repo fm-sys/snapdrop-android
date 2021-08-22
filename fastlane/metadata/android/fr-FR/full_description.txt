@@ -1,24 +1,25 @@
-Snapdrop pour Android est un client Android libre et open source pour partager des fichiers locaux https://snapdrop.net/.
+Snapdrop pour Android est un client Android™ pour la méthode de partage local de fichier, libre et open source, de https://snapdrop.net/.
 
-Avez-vous aussi parfois le problème que vous avez besoin de transférer rapidement un fichier de votre téléphone vers votre PC?
+Vous avez besoin de transférer rapidement un fichier de votre téléphone à votre PC !
+Comment faire ?
 
-USB? - Ancienne mode !
-Bluetooth? - Beaucoup trop lourd et lent!
-E-mail? - S'il vous plaît pas un autre e-mail que je m'écris à moi-même!
+Avec un câble USB ? - Vieux jeu !
+Via Bluetooth ? - Beaucoup trop pénible et lent !
+Par e-mail ? - Oh non, pas encore un e-mail que je m'écris à moi-même !
 
-Snapdrop!
+Snapdrop !
 
-Snapdrop est une solution de partage de fichiers locaux qui fonctionne depuis votre navigateur. Un peu comme l'Apple Airdrop, mais pas seulement pour les appareils Apple. Windows, Linux, Android, IPhone, Mac - pas de problème!
+Snapdrop est une solution de partage local de fichier qui fonctionne depuis votre navigateur. Un peu comme le Airdrop d'Apple, mais pas uniquement pour les appareils Apple. Windows, Linux, Android, IPhone, Mac - aucun problème !
 
-Cependant, même si théoriquement cela fonctionnerait pleinement dans votre navigateur, vous allez adorer cette application si vous voulez utiliser Snapdrop plus souvent dans votre vie quotidienne. Grâce à une intégration parfaite dans le système d'exploitation Android, les fichiers sont envoyés encore plus rapidement. Directement à partir d'autres applications, vous pouvez sélectionner Snapdrop pour partager.
+Toutefois, même si, en théorie cela fonctionnerait parfaitement depuis votre navigateur, vous adorerez cette application si vous souhaitez utiliser Snapdrop plus souvent dans votre vie quotidienne. Grâce à une intégration parfaite dans le système d'exploitation Android, les fichiers sont envoyés encore plus rapidement. Directement à partir d'autres applications, vous pouvez sélectionner Snapdrop pour partager.
 
-Grâce à sa simplicité radicale, "Snapdrop pour Android" facilite la vie quotidienne de centaines d'utilisateurs. En tant que projet open source, nous n'avons aucun intérêt commercial, mais nous voulons rendre le monde un peu meilleur. Rejoignez et convainquez-vous!
+Grâce à sa simplicité radicale, "Snapdrop pour Android" facilite la vie quotidienne de centaines d'utilisateurs. En tant que projet open source, nous n'avons aucun intérêt commercial, mais nous voulons rendre le monde un peu meilleur. Rejoignez-nous et laissez-vous convaincre !
 
 CODE SOURCE :
 https://github.com/fm-sys/snapdrop-android
 
 CONFIDENTIALITÉ:
-This app interacts with https://snapdrop.net/ to be able to discover other devices running Snapdrop in your local network. However, none of your files is ever sent to any server but are transferred directly peer-to-peer between your devices.
+Cette application communique avec https://snapdrop.net/ afin de découvrir d'autres appareils utilisant Snapdrop dans votre réseau local. Cependant, aucun de vos fichiers ne transite par un serveur, ils sont directement transférés de pair à pair entre vos appareils.
 
 CRÉDIT:
 L'application et son icône sont basées sur le projet Open Source Snapdrop qui est hébergé et maintenu par RobinLinus. Voir aussi https://www.github.com/robinlinus/snapdrop
