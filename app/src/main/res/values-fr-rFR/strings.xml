@@ -5,7 +5,7 @@
     <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Bienvenue sur Snapdrop</string>
-    <string name="app_welcome_summary">1. Ouvrir <a href="https://snapdrop.net">snapdrop.net</a> ou l\'application Snapdrop sur un autre appareil connecté au même réseau wifi.\n2. Selectionnez l\'appareil à appairer.\n3. C\'est fait !Le(s) fichier(s) vont/va être envoyé(s)…</string>
+    <string name="app_welcome_summary">1. Ouvrir <a href="https://snapdrop.net">snapdrop.net</a> ou l\'application Snapdrop sur un autre appareil connecté au même réseau Wi-Fi.\n2. Sélectionner l\'appareil auquel envoyer le(s) fichier(s).\n3. C\'est tout ! Le(s) fichier(s) va/vont être envoyé(s)…</string>
     <!-- Download -->
     <string name="download_successful">Téléchargement réussi</string>
     <string name="notification_channel_name">Téléchargement terminé</string>
@@ -17,33 +17,33 @@
     <string name="title_activity_about_short">À propos de Snapdrop</string>
     <string name="developer_notice_settings"><b>fm-sys</b> et tous les contributeurs de GitHub</string>
     <string name="license">Licence</string>
-    <string name="pref_category_settings">Réglages</string>
+    <string name="pref_category_settings">Paramètres</string>
     <string name="developers">Développeur</string>
     <string name="components">Éléments open source</string>
-    <string name="components_summary">Appuyez pour afficher</string>
-    <string name="crowdin">Localisation</string>
-    <string name="crowdin_summary">Aider à traduire <b>Snapdrop for Android</b> dans votre langue favorite</string>
+    <string name="components_summary">Appuyer pour afficher</string>
+    <string name="crowdin">Traduction</string>
+    <string name="crowdin_summary">Aider à la traduction de <b>Snapdrop pour Android</b> dans votre langue préférée</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Restez informé sur <b>Snapdrop pour Android</b></string>
+    <string name="twitter_summary">Suivre l\'actualité de <b>Snapdrop pour Android</b></string>
     <string name="version">Version</string>
     <string name="pref_device_name_title">Nom de l\'appareil</string>
-    <string name="pref_device_name_summary">Définir un nom d\'appareil</string>
-    <string name="keep_on_summary">Activez cette option si vous avez des transferts arrêtés lorsque votre écran s\'éteint</string>
+    <string name="pref_device_name_summary">Définir un nom d\'appareil personnalisé</string>
+    <string name="keep_on_summary">Activez cette option si vous avez des problèmes d\'interruption des transferts lorsque l\'écran s\'éteint</string>
     <string name="keep_on_title">Garder l\'écran allumé</string>
     <string name="settings_theme_title">Thème</string>
     <string-array name="darkmode_entries">
-        <item>Option du système</item>
+        <item>Suivre le système</item>
         <item>Clair</item>
         <item>Sombre</item>
     </string-array>
-    <string name="baseurl_title">URL de base</string>
+    <string name="baseurl_title">URL du serveur</string>
     <string name="save_location">Dossier de sauvegarde</string>
     <!-- File sharing -->
-    <string name="intent_file">Un fichier est sélectionné pour partager</string>
-    <string name="intent_files">Des fichiers sont sélectionnés pour partager</string>
-    <string name="intent_content">Du contenu est sélectionné pour partager</string>
+    <string name="intent_file">Un fichier est sélectionné pour être partagé</string>
+    <string name="intent_files">Des fichiers sont sélectionnés pour être partagés</string>
+    <string name="intent_content">Du contenu est sélectionné pour être partagé</string>
     <string name="error_filechooser">Impossible d\'ouvrir le fichier sélectionné</string>
-    <string name="error_network">Veuillez vérifier que vous êtes bien connecté à un réseau WiFi</string>
-    <string name="ignore_error_network">Laissez moi quand même entrer</string>
+    <string name="error_network">Veuillez vérifier que vous êtes connecté à un réseau Wi-Fi</string>
+    <string name="ignore_error_network">Laisse-moi quand même entrer</string>
     <!-- baseURL -->
 </resources>
