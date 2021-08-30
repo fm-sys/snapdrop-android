@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">No es pot obrir el navegador</string>
+    <!-- Update -->
+    <!-- Welcome -->
+    <string name="app_welcome">Benvinguts a Snapdrop</string>
+    <string name="app_welcome_summary">1. Obre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicació de Snapdrop en qualsevol altre dispositiu dins de la teva xarxa WiFi local.\n2. Prem sobre el dispositiu amb el que vols compartir els arxius.\n3. Fet! Els arxius seran enviats…</string>
+    <!-- Download -->
+    <string name="download_successful">Descàrrega exitosa</string>
+    <string name="notification_channel_name">Descàrrega completada</string>
+    <!-- Action Buttons -->
+    <string name="open">obrir</string>
+    <string name="reset">restablir</string>
+    <!-- Settings / About -->
+    <string name="title_activity_about">Sobre Snapdrop per Android</string>
+    <string name="title_activity_about_short">Sobre Snapdrop</string>
+    <string name="developer_notice_settings"><b>fm-sys</b> i tots els contribuidors a GitHub</string>
+    <string name="license">Llicència</string>
+    <string name="pref_category_settings">Configuració</string>
+    <string name="developers">Desenvolupador</string>
+    <string name="components">Components de codi obert</string>
+    <string name="components_summary">Prem per mostrar</string>
+    <string name="crowdin">Traduccions</string>
+    <string name="crowdin_summary">Ajuda a traduïr <b>Snapdrop per Android</b> al teu idioma favorit</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Mantigue\'t informat sobre <b>Snapdrop per a Android</b></string>
+    <string name="version">Versió</string>
+    <string name="pref_device_name_title">Nom del dispositiu</string>
+    <string name="pref_device_name_summary">Estableix un nom de dispositiu definit per l\'usuari</string>
+    <string name="keep_on_summary">Activa si tens les transferències s\'interrompen quan la pantalla s\'apaga</string>
+    <string name="keep_on_title">Mantenir la pantalla encesa</string>
+    <string name="settings_theme_title">Tema</string>
+    <string-array name="darkmode_entries">
+        <item>Predeterminat del sistema</item>
+        <item>Clar</item>
+        <item>Fosc</item>
+    </string-array>
+    <string name="baseurl_title">URL base</string>
+    <string name="save_location">Desa a la ubicació</string>
+    <!-- File sharing -->
+    <string name="intent_file">Un arxiu ha estat seleccionat per compartir</string>
+    <string name="intent_files">Arxius han estat seleccionats per compartir</string>
+    <string name="intent_content">El contingut està seleccionat per compartir</string>
+    <string name="error_filechooser">El selector d\'arxius no es pot obrir</string>
+    <string name="error_network">Si us plau, comprova que estas conectat a una xarxa WiFi</string>
+    <string name="ignore_error_network">Deixa\'m intentar-ho igualment</string>
+    <!-- baseURL -->
+</resources>
