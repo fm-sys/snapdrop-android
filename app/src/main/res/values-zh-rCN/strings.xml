@@ -15,15 +15,15 @@
     <!-- Settings / About -->
     <string name="title_activity_about">关于安卓上的 Snapdrop</string>
     <string name="title_activity_about_short">关于 Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> 和 GitHub 上的所有贡献者</string>
+    <string name="developer_notice_settings"><b>fm-sys</b> 等 GitHub 上的贡献者</string>
     <string name="license">许可证</string>
     <string name="pref_category_settings">设置</string>
     <string name="developers">开发者</string>
     <string name="components">开源组件</string>
-    <string name="components_summary">轻按以显示</string>
+    <string name="components_summary">点击查看</string>
     <string name="crowdin">本地化</string>
     <string name="crowdin_summary">帮助将 <b>Snapdrop for Android</b> 翻译成您最喜欢的语言</string>
-    <string name="twitter">推特</string>
+    <string name="twitter">Twitter</string>
     <string name="twitter_summary">持续获取 <b>Snapdrop for Android</b> 的最新消息</string>
     <string name="version">版本</string>
     <string name="pref_device_name_title">设备名称</string>
