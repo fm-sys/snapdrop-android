@@ -12,7 +12,7 @@ Snapdrop és una solució de transferència de fitxers local que funciona comple
 
 Tot i així, encara que en teoria funciona completament en el teu navegador, aquesta aplicació t'encantarà si vols fer servir Snapdrop sovint. Gràcies a la perfecte integració amb el sistema operatiu Android, els fitxers són enviats encara més rapidament. Directament des de dins d'altres aplicacions pots selccionar per compartir amb Snapdrop.
 
-Gràcies a la seva simplicitat radical, "Snapdrop per Android" fa la vida de centenars d'usuaris més fàcil. Com a projecte de codi obert no tenim cap interés comercial pero volem fer mon una mica millor. Uneix-te i convence't!
+Gràcies a la seva simplicitat radical, "Snapdrop per Android" fa la vida de centenars d'usuaris més fàcil. Com a projecte de codi obert no tenim cap interés comercial pero volem fer el mon una mica millor. Uneix-te i convence't!
 
 CODI FONT:
 https://github.com/fm-sys/snapdrop-android
