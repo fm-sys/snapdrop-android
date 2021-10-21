@@ -19,7 +19,7 @@
     <string name="license">Licence</string>
     <string name="pref_category_settings">Paramètres</string>
     <string name="developers">Développeur</string>
-    <string name="components">Éléments open source</string>
+    <string name="components">Composants Open Source</string>
     <string name="components_summary">Appuyer pour afficher</string>
     <string name="crowdin">Traduction</string>
     <string name="crowdin_summary">Aider à la traduction de <b>Snapdrop pour Android</b> dans votre langue préférée</string>
