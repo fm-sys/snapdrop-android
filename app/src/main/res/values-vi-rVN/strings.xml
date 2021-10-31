@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="err_no_browser">Không thể mở trình duyệt</string>
+    <!-- Update -->
+    <!-- Welcome -->
+    <string name="app_welcome">Chào mừng đến với Snapdrop</string>
+    <string name="app_welcome_summary">1. Mở trang web <a href="https://snapdrop.net">snapdrop.net</a> hoặc ứng dụng Snapdrop trên thiết bị khác sử dụng chung mạng WiFi.\n2. Nhấn vào thiết bị mà bạn muốn chuyển file tới.\n3. Đã xong! File của bạn sẽ được chuyển…</string>
+    <!-- Download -->
+    <string name="download_successful">Tải xuống thành công</string>
+    <string name="notification_channel_name">Tải xuống hoàn tất</string>
+    <!-- Action Buttons -->
+    <string name="open">mở</string>
+    <string name="reset">thiết lập lại</string>
+    <!-- Settings / About -->
+    <string name="title_activity_about">Về ứng dụng Snapdrop cho Android</string>
+    <string name="title_activity_about_short">Về Snapdrop</string>
+    <string name="developer_notice_settings"><b>fm-sys</b> và tất cả những người đóng góp tại GitHub</string>
+    <string name="license">Bản quyền</string>
+    <string name="pref_category_settings">Cài đặt</string>
+    <string name="developers">Lập trình viên</string>
+    <string name="components">Các thành phần nguồn mở</string>
+    <string name="components_summary">Chạm để hiển thị</string>
+    <string name="crowdin">Bản địa hóa</string>
+    <string name="crowdin_summary">Giúp dịch <b>Snapdrop for Android</b> sang ngôn ngữ yêu thích của bạn</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Cập nhật thông tin về <b>Snapdrop for Android</b></string>
+    <string name="version">Phiên bản</string>
+    <string name="pref_device_name_title">Tên thiết bị</string>
+    <string name="pref_device_name_summary">Đặt tên thiết bị tùy chỉnh</string>
+    <string name="keep_on_summary">Bật lên nếu bạn gắp vấn đề về truyền file khi màn hình tắt</string>
+    <string name="keep_on_title">Giữ màn hình bật</string>
+    <string name="settings_theme_title">Giao diện</string>
+    <string-array name="darkmode_entries">
+        <item>Mặc định hệ thống</item>
+        <item>Sáng chói</item>
+        <item>Tối đen</item>
+    </string-array>
+    <string name="baseurl_title">URL cơ sở</string>
+    <string name="save_location">Vị trí lưu</string>
+    <!-- File sharing -->
+    <string name="intent_file">Đã chọn 1 file để chia sẻ</string>
+    <string name="intent_files">Đã chọn nhiều file để chia sẻ</string>
+    <string name="intent_content">Nội dung đã được chọn để chia sẻ</string>
+    <string name="error_filechooser">Không thể mở trình chọn file</string>
+    <string name="error_network">Vui lòng xác minh rằng bạn được kết nối với mạng WiFi</string>
+    <string name="ignore_error_network">Cứ cho tôi vào đi</string>
+    <!-- baseURL -->
+</resources>
