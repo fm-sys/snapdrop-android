@@ -44,6 +44,6 @@
     <string name="intent_content">공유할 컨텐츠가 선택되었어요.</string>
     <string name="error_filechooser">파일 선택기를 열 수 없어요.</string>
     <string name="error_network">WiFi 네트워크에 연결되어 있는지 확인해주세요.</string>
-    <string name="ignore_error_network">인터넷 없이 시작</string>
+    <string name="ignore_error_network">무시하고 시작하기</string>
     <!-- baseURL -->
 </resources>
