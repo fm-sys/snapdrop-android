@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.fmsys.snapdrop"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
 
         // ToDo list - Update Instruction
         //  -   As first step, always check if unmerged crowdin updates are available and/or sync crowdin (https://crowdin.com/project/snapdrop-android/apps/system/github)

@@ -30,7 +30,8 @@
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme.Launcher"
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

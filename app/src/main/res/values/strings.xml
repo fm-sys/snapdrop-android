@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="err_no_browser">Can\'t open browser</string>
+    <string name="err_no_app">No app installed to open this file</string>
 
     <!-- Update -->
 

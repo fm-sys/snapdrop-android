@@ -1,15 +1,5 @@
 package com.fmsys.snapdrop;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.anggrayudi.storage.callback.FileCallback;
-import com.anggrayudi.storage.file.DocumentFileCompat;
-import com.anggrayudi.storage.file.DocumentFileType;
-import com.anggrayudi.storage.file.DocumentFileUtils;
-import com.anggrayudi.storage.media.FileDescription;
-import com.anggrayudi.storage.media.MediaFile;
-
-import org.jetbrains.annotations.NotNull;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -52,11 +42,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.LinearLayoutCompat;
@@ -68,6 +54,19 @@ import androidx.preference.PreferenceManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
+
+import com.anggrayudi.storage.callback.FileCallback;
+import com.anggrayudi.storage.file.DocumentFileCompat;
+import com.anggrayudi.storage.file.DocumentFileType;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.anggrayudi.storage.media.FileDescription;
+import com.anggrayudi.storage.media.MediaFile;
+import com.google.android.material.snackbar.Snackbar;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
@@ -502,13 +501,13 @@ public class MainActivity extends Activity {
     private FileCallback fileCallback(final JavaScriptInterface.FileHeader fileHeader) {
         return new FileCallback() {
             @Override
-            public void onFailed(@NotNull final FileCallback.ErrorCode errorCode) {
+            public void onFailed(@NonNull final FileCallback.ErrorCode errorCode) {
                 Log.d("SimpleStorage", errorCode.toString());
                 Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onCompleted(@NotNull final Object file) {
+            public void onCompleted(@NonNull final Object file) {
                 final Uri uri;
 
                 if (file instanceof MediaFile) {
@@ -578,7 +577,7 @@ public class MainActivity extends Activity {
                         startActivity(intent);
                         notificationManager.cancel(notificationId);
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        Snackbar.make(coordinatorLayout, R.string.err_no_app, Snackbar.LENGTH_SHORT).show();
                     }
 
                 });
