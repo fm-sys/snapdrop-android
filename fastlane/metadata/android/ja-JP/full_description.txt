@@ -1,24 +1,24 @@
-Snapdrop for Android is an Android™ client for the free and open source local file sharing solution https://snapdrop.net/.
+Snapdrop for Androidは無料でオープンソースのローカルファイルシェアリングソリューションのhttps://snapdrop.net/のAndroid™クライエントです。
 
-Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
+あなたもたまに携帯からPCにファイルを転送することに問題がありましたか?
 
-USB? - Old fashioned!
-Bluetooth? - Much too cumbersome and slow!
-E-mail? - Please not another email I write to myself!
+USB? - 古すぎます!
+Bluetooth? - 面倒で遅いです!
+メール? - また自分を宛先にしてメールを送るつもりですか?
 
 Snapdrop!
 
-Snapdrop is a local file sharing solution which completely works in your browser. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
+Snapdropはあなたのブラウザで完璧に動作するローカルファイルシェアリングソリューションです。 AppleのAirdropに似ていますが、Appleデバイスだけのソリューションではありません。 Windows、Linux、Android、iPhone、Mac - 全然問題ありません!
 
-However, even if it theoretically would fully work in your browser, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with.
+しかし、理論的にあなたのブラウザで完璧に作動するとしてもSnapdropをよく使うならこのアプリが気にいるでしょう。 Androidに完璧にソリューションを搭載したため、ファイルはさらに早く転送されます。 他のアプリでSnapdropでシェアすることができます。
 
-Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of hundreds of users easier. As an open source project we have don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+根本的なシンプルさのお蔭で、"Snapdrop for Android"は数百人の生活を便利にします。 オープンソースプロジェクトなので商業的利益を出しませんが、私たちは世界をより良くしたいです。 使用してみてください!
 
-SOURCE CODE:
+ソースコード:
 https://github.com/fm-sys/snapdrop-android
 
-PRIVACY:
-This app interacts with https://snapdrop.net/ to be able to discover other devices running Snapdrop in your local network. However, none of your files is ever sent to any server but are transferred directly peer-to-peer between your devices.
+プライバシー:
+このアプリはあなたのローカルネットワークでSnapdropを起動している他のデバイスを探すためにhttps://snapdrop.net/と通信します。 ただし、あなたのファイルはサーバーに転送されることはありませんが、デバイス間でpeer-to-peerで転送されます。
 
-CREDIT:
-The app and its icon are based on the Snapdrop Open Source project, which is hosted and maintained by RobinLinus. See also https://www.github.com/robinlinus/snapdrop
+クレジット:
+このアプリとアプリのアイコンはRobinLinusにより維持されているSnapdropオープンソースプロジェクトに基づきます。 https://www.github.com/robinlinus/snapdropをご参照ください

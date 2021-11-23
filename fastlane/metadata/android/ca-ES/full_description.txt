@@ -1,0 +1,24 @@
+Snapdrop per a Android és un client de Android™ per la solució d'intercanvi local d'arxius lliure i de codi obert https://snapdrop.net.
+
+De vegades també tens el problema de necessitar transferir un arxiu rapidament del teu telèfon al teu PC?
+
+USB? - Passat de moda!
+Bluetooth? - Massa complicat i lent!
+E-mail? - Si us plau no un altre correu que m'envio a mi mateix!
+
+Snapdrop!
+
+Snapdrop és una solució de transferència de fitxers local que funciona completament al teu navegador. Una mica com el Airdrop de Apple, pero no només per els dispositius d'Apple. Windows, Linux, Android, iPhone, Mac - cap mena de problema!
+
+Tot i així, encara que en teoria funciona completament en el teu navegador, aquesta aplicació t'encantarà si vols fer servir Snapdrop sovint. Gràcies a la perfecte integració amb el sistema operatiu Android, els fitxers són enviats encara més rapidament. Directament des de dins d'altres aplicacions pots selccionar per compartir amb Snapdrop.
+
+Gràcies a la seva simplicitat radical, "Snapdrop per Android" fa la vida de centenars d'usuaris més fàcil. Com a projecte de codi obert no tenim cap interés comercial pero volem fer el mon una mica millor. Uneix-te i convence't!
+
+CODI FONT:
+https://github.com/fm-sys/snapdrop-android
+
+PRIVACITAT:
+Aquesta aplicació interactua amb https://snapdrop.net/ per a poder ser descobert per altres dispositius que corren Snapdrop dins de la teva xarxa. Tot i així, cap dels teus fitxers s'envien a cap servidor, sinó que es transferèixen directament d'igual a igual (P2P) entre els teus dispostius.
+
+CRÈDITS:
+La applicació i la seva iconografia estàn basats en el projecte de codi obert Snapdrop, que està allotjat i mantingut per RobinLinus. Vegeu també https://www.github.com/robinlinus/snapdrop

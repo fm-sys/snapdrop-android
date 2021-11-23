@@ -37,6 +37,7 @@
         <item>黑色主題</item>
     </string-array>
     <string name="baseurl_title">主機 URL</string>
+    <string name="save_location">保存位置</string>
     <!-- File sharing -->
     <string name="intent_file">一個選中的檔案等待上傳中</string>
     <string name="intent_files">選中的檔案等待上傳中</string>

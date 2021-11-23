@@ -37,6 +37,7 @@
         <item>Oscuro</item>
     </string-array>
     <string name="baseurl_title">URL base</string>
+    <string name="save_location">Guardar ubicación</string>
     <!-- File sharing -->
     <string name="intent_file">Se ha seleccionado un archivo para compartir</string>
     <string name="intent_files">Los archivos están seleccionados para compartir</string>
