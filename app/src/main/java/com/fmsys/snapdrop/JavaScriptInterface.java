@@ -13,7 +13,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class JavaScriptInterface {
-    private MainActivity context;
+    private final MainActivity context;
+
     private FileOutputStream fileOutputStream;
     private FileHeader fileHeader;
 

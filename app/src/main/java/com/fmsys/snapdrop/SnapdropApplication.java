@@ -1,5 +1,6 @@
 package com.fmsys.snapdrop;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -23,6 +24,7 @@ public class SnapdropApplication extends Application {
         context.setTheme(R.style.AppTheme);
     }
 
+    @SuppressLint("WrongConstant") // setting.getModeId() will always return a compatible value
     public static void setAppTheme(final DarkModeSetting setting) {
         AppCompatDelegate.setDefaultNightMode(setting.getModeId());
     }
