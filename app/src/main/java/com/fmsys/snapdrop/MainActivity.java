@@ -431,6 +431,9 @@ public class MainActivity extends Activity {
         }
 
         private void initSnapdrop() {
+            if (MainActivity.this.isFinishing()) {
+                return; // too late to do anything at this point in time...
+            }
             //website initialisation
             if (!currentlyOffline) {
                 webView.loadUrl(JavaScriptInterface.initialiseWebsite());
