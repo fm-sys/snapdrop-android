@@ -286,7 +286,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        if (webView.getUrl().endsWith("#about")) {
+        if (webView.getUrl() != null && webView.getUrl().endsWith("#about")) {
             webView.loadUrl(baseURL + "#");
         } else {
             super.onBackPressed();
