@@ -119,8 +119,8 @@ public class JavaScriptInterface {
                 "websiteLink.appendChild(websiteLinkText);" +
                 "aboutScreen.appendChild(websiteLinkDiv);" +
 
-                //remove donation button (play guidelines)
-                "document.querySelector('.icon-button[href*=\"paypal\"]').hidden = true;" +
+                //retarget donation button (play guidelines)
+                "document.querySelector('.icon-button[href*=\"paypal\"]').href = 'https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md';" +
             
                 //remove "safari hack"                 
                 "document.body.onclick = null;" +
