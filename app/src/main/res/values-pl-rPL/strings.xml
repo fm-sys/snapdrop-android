@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="err_no_browser">Nie można otworzyć przeglądarki</string>
+    <string name="err_no_app">Nie znaleziono aplikacji do otwarcia tego pliku</string>
     <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Witamy w Snapdrop</string>

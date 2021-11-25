@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">التلاعب</string>
+    <string name="app_name">سناب درُوب</string>
     <string name="err_no_browser">يَتعذَّرُ فَتح المُتَصَفِّح</string>
+    <string name="err_no_app">لا يوجد تطبيق مثبت لفتح هذا الملف</string>
     <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">مَرحبًا بِكَ فِي سناب درُوب</string>

@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="err_no_browser">브라우저를 실행할 수 없어요.</string>
+    <string name="err_no_app">이 파일을 열 수 있는 앱이 없어요.</string>
     <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Snapdrop에 오신 것을 환영합니다!</string>
