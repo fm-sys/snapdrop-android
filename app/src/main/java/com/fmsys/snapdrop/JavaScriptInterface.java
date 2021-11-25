@@ -81,7 +81,7 @@ public class JavaScriptInterface {
                 "            };" +
             
                 //change tweet link
-                "document.querySelector('.icon-button[title~=\"Tweet\"]').href = 'https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20An%20Android%20client%20for https://snapdrop.net%20by%20@robin_linus%20&';" +
+                "document.querySelector('.icon-button[title~=\"Tweet\"]').href = 'https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20https://snapdrop.net&';" +
             
                 //add settings icon-button
                 "let settingsIconButton = document.createElement('a');" +

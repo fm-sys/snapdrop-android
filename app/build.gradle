@@ -15,7 +15,7 @@ android {
         //  -   Afterwards, build a new version via Build > Generate Signed Bundle / APK...
         //  -   Please move the APK to the "./releases/old" folder for archiving purposes
         //  -   Push to GitHub
-        //  -   Write Changelog at GitHub and add APK
+        //  -   Write Changelog at GitHub
         //  -   Upload and publish APK to Google Play
         //  -   Publish the release tag on Github
         //  -   Post release info to Twitter
