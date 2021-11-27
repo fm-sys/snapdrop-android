@@ -64,6 +64,7 @@ import com.anggrayudi.storage.media.MediaFile;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -165,10 +166,12 @@ public class MainActivity extends Activity {
         cookieManager.setAcceptThirdPartyCookies(webView, true);
 
         webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
-            for (JavaScriptInterface.FileHeader file : downloadFilesList) {
+            final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
+            while (iterator.hasNext()) {
+                final JavaScriptInterface.FileHeader file = iterator.next();
                 if (file.getSize().equals(String.valueOf(contentLength))) {
                     copyTempToDownloads(file);
-                    downloadFilesList.remove(file);
+                    iterator.remove();
                     break;
                 }
             }
