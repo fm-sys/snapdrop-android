@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="err_no_browser">无法打开浏览器</string>
+    <string name="err_no_app">未找到用于打开此文件的应用</string>
     <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">欢迎使用 Snapdrop</string>
