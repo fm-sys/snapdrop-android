@@ -188,18 +188,18 @@ public class JavaScriptInterface {
     @JavascriptInterface
     public void setProgress(final float progress) {
         if (progress > 0) {
-            context.transfer = true;
+            context.transfer.set(true);
         } else {
-            context.transfer = false;
+            context.transfer.set(false);
             context.forceRefresh = false; //reset forceRefresh after transfer finished so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         }
     }
 
-    public class FileHeader {
-        private String name;
-        private String mime;
-        private String size;
-        private File file;
+    public static class FileHeader {
+        private final String name;
+        private final String mime;
+        private final String size;
+        private final File file;
 
         public FileHeader(final String name, final String mime, final String size, final File path) {
             this.name = name;

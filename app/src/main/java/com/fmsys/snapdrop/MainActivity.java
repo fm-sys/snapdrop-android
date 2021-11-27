@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
     private boolean currentlyOffline = true;
     private boolean currentlyLoading = false;
     public boolean forceRefresh = false;
-    public boolean transfer = false;
+    public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false);
     public boolean onlyText = false;
 
     public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>(); // name - size
@@ -126,7 +126,13 @@ public class MainActivity extends Activity {
         baseURL = prefs.getString(getString(R.string.pref_baseurl), getString(R.string.baseURL));
 
         if (prefs.getBoolean(getString(R.string.pref_switch_keep_on), false)) {
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            transfer.setOnChangedListener(transferActive -> runOnUiThread(() -> {
+                if (transferActive) {
+                    getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                } else {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                }
+            }));
         }
 
         setContentView(R.layout.activity_main);
@@ -197,10 +203,10 @@ public class MainActivity extends Activity {
     }
 
     private void refreshWebsite(final boolean pulled) {
-        if (isWifiAvailable() && !transfer || forceRefresh) {
+        if (isWifiAvailable() && !transfer.get() || forceRefresh) {
             webView.loadUrl(baseURL);
             forceRefresh = false;
-        } else if (transfer) {
+        } else if (transfer.get()) {
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
             showScreenNoConnection();
