@@ -23,6 +23,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- Opt out to do not share WebView usage statistics -->
+        <meta-data android:name="android.webkit.WebView.MetricsOptOut" android:value="true" />
+
         <activity android:name=".SettingsActivity" />
 
         <activity
