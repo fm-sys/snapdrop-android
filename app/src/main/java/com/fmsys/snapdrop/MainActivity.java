@@ -125,7 +125,7 @@ public class MainActivity extends Activity {
         
         baseURL = prefs.getString(getString(R.string.pref_baseurl), getString(R.string.baseURL));
 
-        if (prefs.getBoolean(getString(R.string.pref_switch_keep_on), false)) {
+        if (prefs.getBoolean(getString(R.string.pref_switch_keep_on), true)) {
             transfer.setOnChangedListener(transferActive -> runOnUiThread(() -> {
                 if (transferActive) {
                     getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);

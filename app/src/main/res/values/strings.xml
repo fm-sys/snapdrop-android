@@ -49,7 +49,7 @@
     <string name="version">Version</string>
     <string name="pref_device_name_title">Device name</string>
     <string name="pref_device_name_summary">Set a user-defined device name</string>
-    <string name="keep_on_summary">Enable if you have problems with transfers being interrupted when the screen turns off</string>
+    <string name="keep_on_summary">(Recommended) Many devices have problems with transfers being interrupted when the screen turns off</string>
     <string name="keep_on_title">Keep screen on while transferring</string>
     <string name="settings_theme_title">Theme</string>
     <string-array name="darkmode_entries">
