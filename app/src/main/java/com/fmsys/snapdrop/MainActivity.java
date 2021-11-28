@@ -40,7 +40,6 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -397,7 +396,7 @@ public class MainActivity extends Activity {
                 startActivityForResult(intent, REQUEST_SELECT_FILE);
             } catch (ActivityNotFoundException e) {
                 uploadMessage = null;
-                Toast.makeText(MainActivity.this, R.string.error_filechooser, Toast.LENGTH_LONG).show();
+                Snackbar.make(coordinatorLayout, R.string.error_filechooser, Snackbar.LENGTH_LONG).show();
                 return false;
             }
             return true;
@@ -418,7 +417,8 @@ public class MainActivity extends Activity {
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                 } catch (ActivityNotFoundException e) {
-                    Toast.makeText(MainActivity.this, R.string.err_no_browser, Toast.LENGTH_SHORT).show();
+                    Snackbar.make(coordinatorLayout, R.string.err_no_browser, Snackbar.LENGTH_SHORT).show();
+                    resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
                 }
             }
             return false;
@@ -500,6 +500,7 @@ public class MainActivity extends Activity {
     private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
         if (Long.parseLong(fileHeader.getSize()) > 25 * 1024 * 1024) {
             Snackbar.make(coordinatorLayout, R.string.download_save_pending, Snackbar.LENGTH_INDEFINITE).show();
+            resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
         }
 
         executor.execute(() -> {
@@ -521,7 +522,8 @@ public class MainActivity extends Activity {
             @Override
             public void onFailed(@NonNull final FileCallback.ErrorCode errorCode) {
                 Log.d("SimpleStorage", errorCode.toString());
-                Toast.makeText(MainActivity.this, errorCode.toString(), Toast.LENGTH_SHORT).show();
+                Snackbar.make(coordinatorLayout, errorCode.toString(), Snackbar.LENGTH_LONG).show();
+                resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
             }
 
             @Override
@@ -600,7 +602,7 @@ public class MainActivity extends Activity {
                 });
         snackbar.show();
 
-        // the shown snackbar will dismiss the older one which tells, that a file was selected for sharing. So to be consistent, we also remove the related intent
+        // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
         resetUploadIntent();
     }
 
