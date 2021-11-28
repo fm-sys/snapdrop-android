@@ -30,7 +30,7 @@
     <string name="pref_device_name_title">Gerätename</string>
     <string name="pref_device_name_summary">Lege einen benutzerdefinierten Gerätenamen fest</string>
     <string name="keep_on_summary">Aktiviere diese Einstellung, wenn die Dateiübertragung bei ausgeschaltetem Bildschirm stockt bzw. abbricht</string>
-    <string name="keep_on_title">Gerät wachhalten</string>
+    <string name="keep_on_title">Bildschirm während der Übertragung angeschaltet lassen</string>
     <string name="settings_theme_title">Erscheinungsbild</string>
     <string-array name="darkmode_entries">
         <item>Systemstandard</item>
