@@ -46,6 +46,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
@@ -80,6 +81,7 @@ public class MainActivity extends Activity {
     public SharedPreferences prefs;
     public LinearLayoutCompat imageViewLayout;
     public SwipeRefreshLayout pullToRefresh;
+    public CoordinatorLayout coordinatorLayout;
 
     public ValueCallback<Uri[]> uploadMessage;
 
@@ -139,6 +141,7 @@ public class MainActivity extends Activity {
 
         webView = findViewById(R.id.webview);
         pullToRefresh = findViewById(R.id.pullToRefresh);
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
         imageViewLayout = findViewById(R.id.splashImage);
         connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -250,7 +253,6 @@ public class MainActivity extends Activity {
             final String clipText = getTextFromUploadIntent();
             webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText));
 
-            final View coordinatorLayout = findViewById(R.id.coordinatorLayout);
             final Snackbar snackbar = Snackbar
                     .make(coordinatorLayout, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
                     .setAction(android.R.string.cancel, button -> resetUploadIntent());
@@ -496,6 +498,10 @@ public class MainActivity extends Activity {
     }
 
     private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
+        if (Long.parseLong(fileHeader.getSize()) > 25 * 1024 * 1024) {
+            Snackbar.make(coordinatorLayout, R.string.download_save_pending, Snackbar.LENGTH_INDEFINITE).show();
+        }
+
         executor.execute(() -> {
             final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
             final DocumentFile source = DocumentFile.fromFile(fileHeader.getTempFile());
@@ -582,7 +588,6 @@ public class MainActivity extends Activity {
             }
         }
 
-        final View coordinatorLayout = MainActivity.this.findViewById(R.id.coordinatorLayout);
         final Snackbar snackbar = Snackbar.make(coordinatorLayout, R.string.download_successful, Snackbar.LENGTH_LONG)
                 .setAction(R.string.open, button -> {
                     try {
