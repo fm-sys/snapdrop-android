@@ -31,7 +31,7 @@
     <string name="pref_device_name_title">Nom de l\'appareil</string>
     <string name="pref_device_name_summary">Définir un nom d\'appareil personnalisé</string>
     <string name="keep_on_summary">(Recommandé) De nombreux appareils ont des problèmes d\"interruption de transfert lorsque l\'écran s\'éteint</string>
-    <string name="keep_on_title">Garder l\'écran allumé pendant le transfert</string>
+    <string name="keep_on_title">Gardez l\'écran allumé pendant le transfert</string>
     <string name="settings_theme_title">Thème</string>
     <string-array name="darkmode_entries">
         <item>Suivre le système</item>
