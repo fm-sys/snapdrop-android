@@ -2,11 +2,13 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="err_no_browser">ブラウザを開けません</string>
+    <string name="err_no_app">このファイルを開くアプリがインストールされていません</string>
     <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Snapdropへようこど</string>
     <string name="app_welcome_summary">1. 同じWiFiに接続しているデバイスで<a href="https://snapdrop.net">snapdrop.net</a>を開くか、Snapdropアプリを起動します。\n2. ファイルをシェアしたいデバイスを選択します。\n3. ファイルが転送されます…</string>
     <!-- Download -->
+    <string name="download_save_pending">ファイルを保存しています。少々お待ちください…</string>
     <string name="download_successful">ダウンロード完了</string>
     <string name="notification_channel_name">ダウンロードが完了しました</string>
     <!-- Action Buttons -->
@@ -28,8 +30,8 @@
     <string name="version">バージョン</string>
     <string name="pref_device_name_title">デバイス名</string>
     <string name="pref_device_name_summary">カスタムデバイス名を設定する</string>
-    <string name="keep_on_summary">画面の消灯時に転送が中断される問題が発生した場合に有効にしてください</string>
-    <string name="keep_on_title">画面を消灯しない</string>
+    <string name="keep_on_summary">（推奨）多くのデバイスは画面の消灯時に転送が中止される問題があります</string>
+    <string name="keep_on_title">転送時に画面を点灯したままにする</string>
     <string name="settings_theme_title">テーマ</string>
     <string-array name="darkmode_entries">
         <item>システムデフォルト</item>
