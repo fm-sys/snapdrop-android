@@ -8,6 +8,7 @@
     <string name="app_welcome">Bienvenue sur Snapdrop</string>
     <string name="app_welcome_summary">1. Ouvrir <a href="https://snapdrop.net">snapdrop.net</a> ou l\'application Snapdrop sur un autre appareil connecté au même réseau Wi-Fi.\n2. Sélectionner l\'appareil auquel envoyer le(s) fichier(s).\n3. C\'est tout ! Le(s) fichier(s) va/vont être envoyé(s)…</string>
     <!-- Download -->
+    <string name="download_save_pending">Enregistrement du fichier. Merci de patienter…</string>
     <string name="download_successful">Téléchargement réussi</string>
     <string name="notification_channel_name">Téléchargement terminé</string>
     <!-- Action Buttons -->
@@ -29,8 +30,8 @@
     <string name="version">Version</string>
     <string name="pref_device_name_title">Nom de l\'appareil</string>
     <string name="pref_device_name_summary">Définir un nom d\'appareil personnalisé</string>
-    <string name="keep_on_summary">Activez cette option si vous avez des problèmes d\'interruption des transferts lorsque l\'écran s\'éteint</string>
-    <string name="keep_on_title">Garder l\'écran allumé</string>
+    <string name="keep_on_summary">(Recommandé) De nombreux appareils ont des problèmes d\"interruption de transfert lorsque l\'écran s\'éteint</string>
+    <string name="keep_on_title">Garder l\'écran allumé pendant le transfert</string>
     <string name="settings_theme_title">Thème</string>
     <string-array name="darkmode_entries">
         <item>Suivre le système</item>

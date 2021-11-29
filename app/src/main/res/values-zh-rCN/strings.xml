@@ -30,7 +30,7 @@
     <string name="pref_device_name_title">设备名称</string>
     <string name="pref_device_name_summary">自定义设备名称</string>
     <string name="keep_on_summary">若遇到熄屏时传输中断的问题，请启用该项</string>
-    <string name="keep_on_title">保持屏幕常亮</string>
+    <string name="keep_on_title">传输时保持屏幕开启</string>
     <string name="settings_theme_title">主题</string>
     <string-array name="darkmode_entries">
         <item>跟随系统</item>
