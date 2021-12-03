@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
+    <string name="app_name">Snapdrom</string>
     <string name="err_no_browser">Impossibile aprire il browser</string>
     <string name="err_no_app">Nessuna app trovata per aprire questo file</string>
     <!-- Update -->
