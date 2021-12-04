@@ -17,10 +17,10 @@
     <!-- Settings / About -->
     <string name="title_activity_about">Tentang Snapdrop untuk Android</string>
     <string name="title_activity_about_short">Tentang Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> dan semua kontributor di GitHub</string>
     <string name="license">Lisensi</string>
     <string name="pref_category_settings">Pengaturan</string>
-    <string name="developers">Pengembang</string>
+    <string name="source">Kode Sumber</string>
+    <string name="source_summary">Lihat kode program di GitHub</string>
     <string name="components">Komponen sumber terbuka</string>
     <string name="components_summary">Ketuk untuk menampilkan</string>
     <string name="crowdin">Lokalisasi</string>
@@ -47,5 +47,4 @@
     <string name="error_filechooser">Tidak dapat membuka pemilih file</string>
     <string name="error_network">Harap verifikasi bahwa Anda terhubung dengan jaringan WiFi</string>
     <string name="ignore_error_network">Biarkan saya masuk</string>
-    <!-- baseURL -->
 </resources>
