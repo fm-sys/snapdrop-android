@@ -14,7 +14,6 @@
             android:key="@string/pref_device_name"
             android:maxLines="1"
             android:title="@string/pref_device_name_title"
-            android:summary="@string/pref_device_name_summary"
             app:iconSpaceReserved="false"
             app:singleLineTitle="false" />
         <ListPreference

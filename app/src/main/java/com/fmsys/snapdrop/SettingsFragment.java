@@ -1,8 +1,5 @@
 package com.fmsys.snapdrop;
 
-import com.anggrayudi.storage.SimpleStorageHelper;
-import com.anggrayudi.storage.file.DocumentFileUtils;
-
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -22,13 +19,20 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
+import com.anggrayudi.storage.SimpleStorageHelper;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+
 public class SettingsFragment extends PreferenceFragmentCompat {
 
     private final SimpleStorageHelper storageHelper = new SimpleStorageHelper(this);
+    private SharedPreferences prefs;
 
     @Override
     public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey) {
         setPreferencesFromResource(R.xml.preferences, rootKey);
+
+        prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+
         if (savedInstanceState != null) {
             storageHelper.onRestoreInstanceState(savedInstanceState);
         }
@@ -52,7 +56,8 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
 
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
-        deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", null));
+        deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", newValue -> updateDeviceNameSummary(deviceNamePref)));
+        updateDeviceNameSummary(deviceNamePref);
 
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
@@ -104,6 +109,14 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         if (onPreferenceChangeCallback != null) {
             onPreferenceChangeCallback.accept(s);
+        }
+    }
+
+    private void updateDeviceNameSummary(final Preference pref) {
+        if (prefs.contains(getString(R.string.pref_device_name))) {
+            pref.setSummary("Android " + prefs.getString(getString(R.string.pref_device_name), getString(R.string.app_name)));
+        } else {
+            pref.setSummary(R.string.pref_device_name_summary);
         }
     }
 
