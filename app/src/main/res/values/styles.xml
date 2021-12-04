@@ -29,10 +29,6 @@
         <item name="animationMode">slide</item>
     </style>
 
-    <style name="AppTheme.Launcher">
-        <item name="android:windowBackground">@drawable/launch_screen</item>
-    </style>
-
     <style name="AlertDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
         <item name="android:colorBackground">@color/dialogBackground</item>
         <item name="dialogCornerRadius">8dp</item>

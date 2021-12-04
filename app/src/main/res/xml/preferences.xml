@@ -49,6 +49,12 @@
             app:iconSpaceReserved="false"
             app:singleLineTitle="false" />
         <Preference
+            android:key="@string/pref_support"
+            android:title="@string/support_us"
+            android:summary="@string/support_us_summary"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+        <Preference
             android:key="@string/pref_twitter"
             android:title="@string/twitter"
             android:summary="@string/twitter_summary"

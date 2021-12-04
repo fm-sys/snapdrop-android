@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop for Android</string>
     <string name="err_no_browser">Can\'t open browser</string>
     <string name="err_no_app">No app installed to open this file</string>
-
-    <!-- Update -->
 
     <!-- Welcome -->
     <string name="app_welcome">Welcome to Snapdrop</string>
@@ -29,8 +28,10 @@
     <string name="components_summary">Tap to display</string>
     <string name="crowdin">Localization</string>
     <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
+    <string name="support_us">Support Snapdrop</string>
+    <string name="support_us_summary">See, how you can support the Snapdrop community</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Stay informed about <b>Snapdrop for Android</b></string>
+    <string name="twitter_summary">Tell about <b>Snapdrop for Android</b></string>
     <string name="version">Version</string>
     <string name="pref_device_name_title">Device name</string>
     <string name="pref_device_name_summary">Set a user-defined device name</string>

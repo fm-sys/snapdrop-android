@@ -29,6 +29,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -44,8 +47,9 @@ import android.webkit.WebViewClient;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
@@ -69,7 +73,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
     private static final int LAUNCH_SETTINGS_ACTIVITY = 12;
     public static final int REQUEST_SELECT_FILE = 100;
@@ -80,7 +84,6 @@ public class MainActivity extends Activity {
     public SharedPreferences prefs;
     public LinearLayoutCompat imageViewLayout;
     public SwipeRefreshLayout pullToRefresh;
-    public CoordinatorLayout coordinatorLayout;
 
     public ValueCallback<Uri[]> uploadMessage;
 
@@ -90,7 +93,7 @@ public class MainActivity extends Activity {
     public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false);
     public boolean onlyText = false;
 
-    public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>(); // name - size
+    public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>();
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
@@ -138,14 +141,18 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
 
+        final Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle(R.string.app_name_long);
+
         webView = findViewById(R.id.webview);
         pullToRefresh = findViewById(R.id.pullToRefresh);
-        coordinatorLayout = findViewById(R.id.coordinatorLayout);
         imageViewLayout = findViewById(R.id.splashImage);
         connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         webView.getSettings().setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath());
-        webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+        webView.getSettings().setAppCacheEnabled(false);
+        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE); // there are transfer problems when using cached resources
         webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setDatabaseEnabled(true);
@@ -204,6 +211,23 @@ public class MainActivity extends Activity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(final Menu menu) {
+        final MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.actionbar, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
+        if (item.getItemId() == R.id.menu_settings) {
+            final Intent browserIntent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void refreshWebsite(final boolean pulled) {
         if (isWifiAvailable() && !transfer.get() || forceRefresh) {
             webView.loadUrl(baseURL);
@@ -253,7 +277,7 @@ public class MainActivity extends Activity {
             webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText));
 
             final Snackbar snackbar = Snackbar
-                    .make(coordinatorLayout, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
+                    .make(pullToRefresh, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
                     .setAction(android.R.string.cancel, button -> resetUploadIntent());
             snackbar.show();
 
@@ -396,7 +420,7 @@ public class MainActivity extends Activity {
                 startActivityForResult(intent, REQUEST_SELECT_FILE);
             } catch (ActivityNotFoundException e) {
                 uploadMessage = null;
-                Snackbar.make(coordinatorLayout, R.string.error_filechooser, Snackbar.LENGTH_LONG).show();
+                Snackbar.make(pullToRefresh, R.string.error_filechooser, Snackbar.LENGTH_LONG).show();
                 return false;
             }
             return true;
@@ -411,13 +435,12 @@ public class MainActivity extends Activity {
             } else if (url.endsWith("offlineButForceRefresh")) {
                 forceRefresh = true;
                 imageViewLayout.setVisibility(View.VISIBLE);
-                pullToRefresh.setVisibility(View.GONE);
                 refreshWebsite();
             } else {
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                 } catch (ActivityNotFoundException e) {
-                    Snackbar.make(coordinatorLayout, R.string.err_no_browser, Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(pullToRefresh, R.string.err_no_browser, Snackbar.LENGTH_SHORT).show();
                     resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
                 }
             }
@@ -465,7 +488,6 @@ public class MainActivity extends Activity {
             }
 
             imageViewLayout.setVisibility(View.GONE);
-            pullToRefresh.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -499,7 +521,7 @@ public class MainActivity extends Activity {
 
     private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
         if (Long.parseLong(fileHeader.getSize()) > 25 * 1024 * 1024) {
-            Snackbar.make(coordinatorLayout, R.string.download_save_pending, Snackbar.LENGTH_INDEFINITE).show();
+            Snackbar.make(pullToRefresh, R.string.download_save_pending, Snackbar.LENGTH_INDEFINITE).show();
             resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
         }
 
@@ -522,7 +544,7 @@ public class MainActivity extends Activity {
             @Override
             public void onFailed(@NonNull final FileCallback.ErrorCode errorCode) {
                 Log.d("SimpleStorage", errorCode.toString());
-                Snackbar.make(coordinatorLayout, errorCode.toString(), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(pullToRefresh, errorCode.toString(), Snackbar.LENGTH_LONG).show();
                 resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
             }
 
@@ -590,13 +612,13 @@ public class MainActivity extends Activity {
             }
         }
 
-        final Snackbar snackbar = Snackbar.make(coordinatorLayout, R.string.download_successful, Snackbar.LENGTH_LONG)
+        final Snackbar snackbar = Snackbar.make(pullToRefresh, R.string.download_successful, Snackbar.LENGTH_LONG)
                 .setAction(R.string.open, button -> {
                     try {
                         startActivity(intent);
                         notificationManager.cancel(notificationId);
                     } catch (Exception e) {
-                        Snackbar.make(coordinatorLayout, R.string.err_no_app, Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(pullToRefresh, R.string.err_no_app, Snackbar.LENGTH_SHORT).show();
                     }
 
                 });

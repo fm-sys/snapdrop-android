@@ -23,5 +23,6 @@
     <string name="pref_developers" translatable="false">app_developers</string>
     <string name="pref_components" translatable="false">app_components</string>
     <string name="pref_crowdin" translatable="false">app_crowdin</string>
+    <string name="pref_support" translatable="false">app_support</string>
     <string name="pref_twitter" translatable="false">app_twitter</string>
 </resources>

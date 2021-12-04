@@ -42,7 +42,8 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         initUrlPreference(R.string.pref_developers, "https://github.com/fm-sys/snapdrop-android");
         initUrlPreference(R.string.pref_crowdin, "https://crowdin.com/project/snapdrop-android");
-        initUrlPreference(R.string.pref_twitter, "https://twitter.com/SnapdropAndroid");
+        initUrlPreference(R.string.pref_support, "https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md");
+        initUrlPreference(R.string.pref_twitter, "https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20https://snapdrop.net&");
         initUrlPreference(R.string.pref_license, "https://www.gnu.org/licenses/gpl-3.0.html");
 
         final Preference openSourceComponents = findPreference(getString(R.string.pref_components));
