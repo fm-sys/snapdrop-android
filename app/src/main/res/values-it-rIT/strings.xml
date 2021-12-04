@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrom</string>
+    <string name="app_name_long">Snapdrop per Android</string>
     <string name="err_no_browser">Impossibile aprire il browser</string>
     <string name="err_no_app">Nessuna app trovata per aprire questo file</string>
-    <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Benvenuti su Snapdrop</string>
     <string name="app_welcome_summary">Apri <a href="https://snapdrop.net">snapdrop.net</a> o l\'app Snapdrop su un qualsiasi dispositivo connesso alla tua rete WiFi.\n2. Premi sul dispositivo al quale vuoi condividere i file.\n3. Fatto! I file saranno inviati…</string>
@@ -25,8 +25,10 @@
     <string name="components_summary">Premi per visualizzare</string>
     <string name="crowdin">Localizzazione</string>
     <string name="crowdin_summary">Aiuta a tradurre <b>Snapdrop per Android</b> nella tua lingua preferita</string>
+    <string name="support_us">Sostieni Snapdrop</string>
+    <string name="support_us_summary">Vedi, come puoi sostenere la community di Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Rimani informato su <b>Snapdrop per Android</b></string>
+    <string name="twitter_summary">Racconta di <b>Snapdrop per Android</b></string>
     <string name="version">Versione</string>
     <string name="pref_device_name_title">Nome del dispositivo</string>
     <string name="pref_device_name_summary">Imposta un nome del dispositivo personalizzato</string>
