@@ -17,10 +17,10 @@
     <!-- Settings / About -->
     <string name="title_activity_about">Informazioni su Snapdrop per Android</string>
     <string name="title_activity_about_short">Informazioni su Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> e tutti i collaboratori su GitHub</string>
     <string name="license">Licenza</string>
     <string name="pref_category_settings">Impostazioni</string>
-    <string name="developers">Sviluppatore</string>
+    <string name="source">Codice sorgente</string>
+    <string name="source_summary">Mostra il codice sorgente su GitHub</string>
     <string name="components">Componenti open source</string>
     <string name="components_summary">Premi per visualizzare</string>
     <string name="crowdin">Localizzazione</string>
@@ -47,5 +47,4 @@
     <string name="error_filechooser">Impossibile aprire il selettore di file</string>
     <string name="error_network">Verifica di essere connesso ad una rete WiFi</string>
     <string name="ignore_error_network">Entra comunque</string>
-    <!-- baseURL -->
 </resources>
