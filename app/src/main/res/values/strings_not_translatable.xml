@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- open source components -->
+    <string name="components_long_text" translatable="false">
+        <big><b><a href="https://github.com/RobinLinus/snapdrop">Snapdrop.net</a></b></big>\n
+        The Snapdrop.net Project and launcher icon by RobinLinus\n
+        Licensed under GPL-3.0 License\n\n
+
+        <big><b><a href="https://github.com/anggrayudi/SimpleStorage">SimpleStorage</a></b></big>\n
+        Copyright © 2020-2021 Anggrayudi Hardiannicko A.\n
+        Licensed under Apache-2.0 License\n\n
+
+        <big><b><a href="https://github.com/square/okhttp">okhttp</a></b></big>\n
+        Copyright 2019 Square, Inc.\n
+        Licensed under Apache-2.0 License\n\n
+
+        <big><b><a href="https://material.io/">Material Design Components</a></b></big>\n
+        Licensed under Apache-2.0 License \n\n
+
+        <big><b><a href="https://github.com/androidx">AndroidX Support Library</a></b></big>\n
+        Licensed under Apache-2.0 License
+    </string>
+
+    <!-- baseURL -->
+    <string name="baseURL" translatable="false">https://snapdrop.net/</string>
+</resources>

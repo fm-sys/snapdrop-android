@@ -27,22 +27,6 @@
     <string name="source_summary">View source code at GitHub</string>
     <string name="components">Open source components</string>
     <string name="components_summary">Tap to display</string>
-    <string name="components_long_text" translatable="false">
-        <big><b><a href="https://github.com/RobinLinus/snapdrop">Snapdrop.net</a></b></big>\n
-        The Snapdrop.net Project and launcher icon by RobinLinus\n
-        Licensed under GPL-3.0 License\n\n
-
-        <big><b><a href="https://github.com/anggrayudi/SimpleStorage">SimpleStorage</a></b></big>\n
-        Copyright © 2020-2021 Anggrayudi Hardiannicko A.\n
-        Licensed under Apache-2.0 License\n\n
-
-        <big><b><a href="https://material.io/">Material Design Components</a></b></big>\n
-        Licensed under Apache-2.0 License \n\n
-
-        <big><b><a href="https://github.com/square/okhttp">okhttp</a></b></big>\n
-        Copyright 2019 Square, Inc.\n
-        Licensed under Apache-2.0 License
-    </string>
     <string name="crowdin">Localization</string>
     <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
     <string name="twitter">Twitter</string>
@@ -68,7 +52,4 @@
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
     <string name="ignore_error_network">Let me in anyway</string>
-
-    <!-- baseURL -->
-    <string name="baseURL" translatable="false">https://snapdrop.net/</string>
 </resources>
