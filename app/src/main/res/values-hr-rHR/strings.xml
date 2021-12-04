@@ -17,10 +17,10 @@
     <!-- Settings / About -->
     <string name="title_activity_about">O Snapdropu za Android</string>
     <string name="title_activity_about_short">O Snapdropu</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> i svi suradnici na GitHubu</string>
     <string name="license">Licenca</string>
     <string name="pref_category_settings">Postavke</string>
-    <string name="developers">Programer</string>
+    <string name="source">Izvorni kod</string>
+    <string name="source_summary">Izvorni kod na GitHubu</string>
     <string name="components">Komponente otvorenog koda</string>
     <string name="components_summary">Pritisni za prikaz</string>
     <string name="crowdin">Lokalizacija</string>
@@ -47,5 +47,4 @@
     <string name="error_filechooser">Izbornik datoteka nedostupan</string>
     <string name="error_network">Molimo provjerite jeste li spojeni na WiFi mrežu</string>
     <string name="ignore_error_network">Svejedno me pusti unutra</string>
-    <!-- baseURL -->
 </resources>
