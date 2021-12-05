@@ -1,0 +1,24 @@
+Snapdrop untuk Android adalah klien Android™ untuk solusi berbagi file lokal sumber terbuka dan gratis https://snapdrop.net/.
+
+Apakah Anda juga terkadang memiliki masalah bahwa Anda hanya perlu mentransfer file dengan cepat dari ponsel ke PC?
+
+USB? - Model lama!
+Bluetooth? - Terlalu rumit dan lambat!
+E-mail? - Tolong jangan email lain yang saya tulis untuk diri saya sendiri!
+
+Snapdrop!
+
+Snapdrop adalah solusi berbagi file lokal yang sepenuhnya berfungsi di browser Anda. Sedikit seperti Airdrop Apple, tetapi tidak hanya untuk perangkat Apple. Windows, Linux, Android, IPhone, Mac - tidak ada masalah sama sekali!
+
+Namun, meskipun secara teoritis akan berfungsi sepenuhnya di browser Anda, Anda akan menyukai aplikasi ini jika Anda ingin lebih sering menggunakan Snapdrop dalam kehidupan sehari-hari. Berkat integrasi sempurna ke dalam sistem operasi Android, file dikirim lebih cepat. Langsung dari dalam aplikasi lain Anda dapat memilih Snapdrop untuk berbagi.
+
+Berkat kesangat-sederhanaannya, "Snapdrop untuk Android" membuat kehidupan sehari-hari ratusan pengguna menjadi lebih mudah. Sebagai proyek open source kami tidak memiliki kepentingan komersial tetapi ingin membuat dunia sedikit lebih baik. Bergabunglah dan yakinkan diri Anda!
+
+KODE SUMBER:
+https://github.com/fm-sys/snapdrop-android
+
+KERAHASIAAN:
+Aplikasi ini berinteraksi dengan https://snapdrop.net/ untuk dapat menemukan perangkat lain yang menjalankan Snapdrop di jaringan lokal Anda. Namun, tidak ada file Anda yang pernah dikirim ke server mana pun tetapi ditransfer langsung antar perangkat Anda secara peer-to-peer.
+
+PENGHARGAAN:
+Aplikasi dan ikonnya didasarkan pada proyek Sumber Terbuka Snapdrop, yang di-host dan dikelola oleh RobinLinus. Lihat juga https://www.github.com/robinlinus/snapdrop
