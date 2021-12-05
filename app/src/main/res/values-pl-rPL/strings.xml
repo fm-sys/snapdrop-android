@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop dla Android</string>
     <string name="err_no_browser">Nie można otworzyć przeglądarki</string>
     <string name="err_no_app">Nie znaleziono aplikacji do otwarcia tego pliku</string>
-    <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Witamy w Snapdrop</string>
     <string name="app_welcome_summary">1. Otwórz <a href="https://snapdrop.net">snapdrop.net</a> lub aplikację Snapdrop na dowolnym innym urządzeniu w lokalnej sieci WiFi.\n2. Zakładka na urządzeniu, z którym chcesz udostępnić plik(i)\n3. Gotowe! Pliki zostaną wysłane…</string>
@@ -17,16 +17,18 @@
     <!-- Settings / About -->
     <string name="title_activity_about">O Snapdrop dla Androida</string>
     <string name="title_activity_about_short">O Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> i wszyscy współtwórcy na GitHub</string>
     <string name="license">Licencja</string>
     <string name="pref_category_settings">Ustawienia</string>
-    <string name="developers">Twórca</string>
+    <string name="source">Kod źródłowy</string>
+    <string name="source_summary">Zobacz kod źródłowy na GitHub\'ie</string>
     <string name="components">Komponenty open source</string>
     <string name="components_summary">Dotknij, aby wyświetlić</string>
     <string name="crowdin">Tłumaczenia</string>
     <string name="crowdin_summary">Pomóż przetłumaczyć <b>Snapdrop dla Androida</b> na Twój ulubiony język</string>
+    <string name="support_us">Wsparcie Snapdrop</string>
+    <string name="support_us_summary">Zobacz, jak możesz wesprzeć społeczność Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Bądź informowany o <b>Snapdrop dla Androida</b></string>
+    <string name="twitter_summary">Opowiedz o <b>Snapdrop dla Androida</b></string>
     <string name="version">Wersja</string>
     <string name="pref_device_name_title">Nazwa urządzenia</string>
     <string name="pref_device_name_summary">Ustaw nazwę urządzenia zdefiniowaną przez użytkownika</string>
@@ -47,5 +49,4 @@
     <string name="error_filechooser">Nie można otworzyć wyboru plików</string>
     <string name="error_network">Upewnij się, że jesteś podłączony do sieci WiFi</string>
     <string name="ignore_error_network">Spróbuj mimo wszystko</string>
-    <!-- baseURL -->
 </resources>
