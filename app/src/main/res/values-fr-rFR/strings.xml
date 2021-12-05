@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop pour Android</string>
     <string name="err_no_browser">Impossible d\'ouvrir le navigateur</string>
     <string name="err_no_app">Aucune application installée pour ouvrir ce fichier</string>
-    <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Bienvenue sur Snapdrop</string>
     <string name="app_welcome_summary">1. Ouvrir <a href="https://snapdrop.net">snapdrop.net</a> ou l\'application Snapdrop sur un autre appareil connecté au même réseau Wi-Fi.\n2. Sélectionner l\'appareil auquel envoyer le(s) fichier(s).\n3. C\'est tout ! Le(s) fichier(s) va/vont être envoyé(s)…</string>
@@ -17,16 +17,18 @@
     <!-- Settings / About -->
     <string name="title_activity_about">À propos de Snapdrop pour Android</string>
     <string name="title_activity_about_short">À propos de Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> et tous les contributeurs de GitHub</string>
     <string name="license">Licence</string>
     <string name="pref_category_settings">Paramètres</string>
-    <string name="developers">Développeur</string>
+    <string name="source">Code source</string>
+    <string name="source_summary">Voir le code source sur GitHub</string>
     <string name="components">Composants Open Source</string>
     <string name="components_summary">Appuyer pour afficher</string>
     <string name="crowdin">Traduction</string>
     <string name="crowdin_summary">Aider à la traduction de <b>Snapdrop pour Android</b> dans votre langue préférée</string>
+    <string name="support_us">Soutenir Snapdrop</string>
+    <string name="support_us_summary">Voir, comment vous pouvez soutenir la communauté Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Suivre l\'actualité de <b>Snapdrop pour Android</b></string>
+    <string name="twitter_summary">Parler de <b>Snapdrop pour Android</b></string>
     <string name="version">Version</string>
     <string name="pref_device_name_title">Nom de l\'appareil</string>
     <string name="pref_device_name_summary">Définir un nom d\'appareil personnalisé</string>
@@ -47,5 +49,4 @@
     <string name="error_filechooser">Impossible d\'ouvrir le sélecteur de fichiers</string>
     <string name="error_network">Veuillez vérifier que vous êtes connecté à un réseau Wi-Fi</string>
     <string name="ignore_error_network">Laisse-moi quand même entrer</string>
-    <!-- baseURL -->
 </resources>
