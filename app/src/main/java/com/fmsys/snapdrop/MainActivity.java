@@ -291,6 +291,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+        } else {
+            super.onNewIntent(intent);
         }
     }
 
