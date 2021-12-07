@@ -46,6 +46,7 @@ import android.webkit.WebViewClient;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.LinearLayoutCompat;
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
     public ValueCallback<Uri[]> uploadMessage;
 
     private boolean currentlyOffline = true;
+    private boolean currentlyOnAboutPage = false;
     private boolean currentlyLoading = false;
     public boolean forceRefresh = false;
     public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false);
@@ -144,6 +146,12 @@ public class MainActivity extends AppCompatActivity {
         final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setTitle(R.string.app_name_long);
+
+        final ActionBar actionbar = getSupportActionBar();
+        if (actionbar != null) {
+            actionbar.setHomeAsUpIndicator(R.drawable.ic_launcher);
+            actionbar.setDisplayHomeAsUpEnabled(true);
+        }
 
         webView = findViewById(R.id.webview);
         pullToRefresh = findViewById(R.id.pullToRefresh);
@@ -220,12 +228,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
-        if (item.getItemId() == R.id.menu_settings) {
+        if (item.getItemId() == android.R.id.home) {
+            toggleAbout();
+            return true;
+        } else if (item.getItemId() == R.id.menu_settings) {
             final Intent browserIntent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void toggleAbout() {
+        if (currentlyOnAboutPage) {
+            webView.loadUrl(baseURL + "#");
+        } else {
+            webView.loadUrl(baseURL + "#about");
+        }
+        currentlyOnAboutPage = !currentlyOnAboutPage;
     }
 
     private void refreshWebsite(final boolean pulled) {
