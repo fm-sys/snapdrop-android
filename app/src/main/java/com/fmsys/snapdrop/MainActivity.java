@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     public ValueCallback<Uri[]> uploadMessage;
 
     private boolean currentlyOffline = true;
-    private boolean currentlyOnAboutPage = false;
+    private boolean currentlyAtAboutPage = false;
     private boolean currentlyLoading = false;
     public boolean forceRefresh = false;
     public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false);
@@ -240,12 +240,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void toggleAbout() {
-        if (currentlyOnAboutPage) {
+        if (currentlyAtAboutPage) {
             webView.loadUrl(baseURL + "#");
         } else {
             webView.loadUrl(baseURL + "#about");
         }
-        currentlyOnAboutPage = !currentlyOnAboutPage;
+        currentlyAtAboutPage = !currentlyAtAboutPage;
     }
 
     private void refreshWebsite(final boolean pulled) {
@@ -344,6 +344,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (webView.getUrl() != null && webView.getUrl().endsWith("#about")) {
             webView.loadUrl(baseURL + "#");
+            currentlyAtAboutPage = false;
         } else {
             super.onBackPressed();
         }
