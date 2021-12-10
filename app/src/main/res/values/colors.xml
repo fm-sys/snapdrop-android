@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#000000</color>
     <color name="textColorWhite">#FFFFFF</color>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <bool name="isLightPrimaryColor">true</bool>
 
     <color name="colorBackground">#FFFFFF</color>
     <color name="snackbarBackground">#323232</color>

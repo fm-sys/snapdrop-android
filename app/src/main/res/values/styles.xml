@@ -1,11 +1,13 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-
+        <!-- Colors -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">?colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">@bool/isLightPrimaryColor</item>
+        <!-- Styles -->
         <item name="snackbarStyle">@style/SnackBarStyle</item>
         <item name="snackbarButtonStyle">@style/SnackBarActionStyle</item>
         <item name="snackbarTextViewStyle">@style/SnackbarTextViewStyle</item>
