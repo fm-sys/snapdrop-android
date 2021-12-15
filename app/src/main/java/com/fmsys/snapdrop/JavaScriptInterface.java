@@ -6,8 +6,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.webkit.JavascriptInterface;
 
-import androidx.webkit.WebViewFeature;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -160,7 +158,10 @@ public class JavaScriptInterface {
                 "               this._oCR(chunk);" +
                 "            };" +
 
-                (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK) ? "document.getElementById('theme').hidden = true;" : "");
+                // some temporary styling workaround, as website CSS seem to not match the current master (see https://github.com/RobinLinus/snapdrop/issues/383)
+                "document.getElementById('img-preview').style.maxHeight='50vh';" +
+                "document.getElementById('fileName').style.textOverflow='ellipsis';" +
+                "document.getElementById('fileName').style.overflow='hidden';";
     }
 
     @JavascriptInterface
