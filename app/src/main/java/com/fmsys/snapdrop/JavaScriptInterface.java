@@ -122,6 +122,13 @@ public class JavaScriptInterface {
             
                 //remove "safari hack"                 
                 "document.body.onclick = null;" +
+
+                //(temporary) styling workaround, as website CSS seem to not match the current master (see https://github.com/RobinLinus/snapdrop/issues/383)
+                "document.getElementById('img-preview').style.maxHeight='50vh';" +
+
+                //avoid text overflow (receive dialog)
+                "document.getElementById('fileName').style.textOverflow='ellipsis';" +
+                "document.getElementById('fileName').style.overflow='hidden';" +
             
                 //change ServerConnection.send(message) to connect to JavaScriptInterface
                 "ServerConnection.prototype.s = ServerConnection.prototype.send;" +
@@ -156,12 +163,7 @@ public class JavaScriptInterface {
                 "               let decoder = new TextDecoder('iso-8859-1');" +
                 "               SnapdropAndroid.onBytes(decoder.decode(chunk));" +
                 "               this._oCR(chunk);" +
-                "            };" +
-
-                // some temporary styling workaround, as website CSS seem to not match the current master (see https://github.com/RobinLinus/snapdrop/issues/383)
-                "document.getElementById('img-preview').style.maxHeight='50vh';" +
-                "document.getElementById('fileName').style.textOverflow='ellipsis';" +
-                "document.getElementById('fileName').style.overflow='hidden';";
+                "            };";
     }
 
     @JavascriptInterface
