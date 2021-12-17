@@ -51,6 +51,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             new AlertDialog.Builder(getContext())
                     .setTitle(R.string.components)
                     .setMessage(R.string.components_long_text)
+                    .setPositiveButton(android.R.string.ok, null)
                     .show();
             return true;
         });
