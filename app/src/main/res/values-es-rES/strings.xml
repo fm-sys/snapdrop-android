@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop para Android</string>
     <string name="err_no_browser">No se puede abrir el navegador</string>
-    <!-- Update -->
+    <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
     <!-- Welcome -->
     <string name="app_welcome">Bienvenido a Snapdrop</string>
     <string name="app_welcome_summary">1. Abre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicación de Snapdrop en cualquier otro dispositivo de tu red Wi-Fi local.\n2. Toca en el dispositivo con el que quieres compartir los archivos.\n3. ¡Listo! Los archivos se enviarán…</string>
     <!-- Download -->
+    <string name="download_save_pending">Guardando el archivo. Por favor, tenga un poco de paciencia…</string>
     <string name="download_successful">Descarga exitosa</string>
     <string name="notification_channel_name">Descarga completada</string>
     <!-- Action Buttons -->
@@ -15,21 +17,23 @@
     <!-- Settings / About -->
     <string name="title_activity_about">Acerca de Snapdrop para Android</string>
     <string name="title_activity_about_short">Acerca de Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> y todos los colaboradores en GitHub</string>
     <string name="license">Licencia</string>
     <string name="pref_category_settings">Ajustes</string>
-    <string name="developers">Desarrollador</string>
+    <string name="source">Código fuente</string>
+    <string name="source_summary">Ver código fuente en GitHub</string>
     <string name="components">Componentes de código abierto</string>
     <string name="components_summary">Pulse para mostrar</string>
     <string name="crowdin">Localización</string>
     <string name="crowdin_summary">Ayuda a traducir <b>Snapdrop para Android</b> a tu idioma favorito</string>
+    <string name="support_us">Apoya a Snapdrop</string>
+    <string name="support_us_summary">Mira cómo puedes apoyar a la comunidad de Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Mantente informado sobre <b>Instantánea para Android</b></string>
+    <string name="twitter_summary">Cuéntales sobre <b>Snapdrop para Android</b></string>
     <string name="version">Versión</string>
     <string name="pref_device_name_title">Nombre del dispositivo</string>
     <string name="pref_device_name_summary">Establece un nombre de dispositivo definido por el usuario</string>
-    <string name="keep_on_summary">Activar si tienes problemas con la interrupción de las transferencias cuando la pantalla se apaga</string>
-    <string name="keep_on_title">Mantener la pantalla encendida</string>
+    <string name="keep_on_summary">(Recomendado) Muchos dispositivos tienen problemas con las interrupciones de transferencias cuando la pantalla se apaga</string>
+    <string name="keep_on_title">Mantener la pantalla encendida mientras se transfiere</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Predeterminado del Sistema</item>
@@ -45,5 +49,4 @@
     <string name="error_filechooser">No se pudo abrir el selector de archivos</string>
     <string name="error_network">Por favor, compruebe que está conectado a una red WiFi</string>
     <string name="ignore_error_network">Déjame intentarlo de todos modos</string>
-    <!-- baseURL -->
 </resources>
