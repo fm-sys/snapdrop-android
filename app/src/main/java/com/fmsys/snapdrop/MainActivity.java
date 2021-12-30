@@ -54,6 +54,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
+import androidx.core.splashscreen.SplashScreen;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.preference.PreferenceManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -124,6 +125,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        final SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
+
+
         SnapdropApplication.setAppTheme(this);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
@@ -217,6 +222,7 @@ public class MainActivity extends AppCompatActivity {
         intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
         registerReceiver(receiver, intentFilter);
 
+        splashScreen.setKeepVisibleCondition(() -> currentlyLoading);
     }
 
     @Override

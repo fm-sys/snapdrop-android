@@ -1,18 +1,22 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Colors -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">?colorPrimary</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">@bool/isLightPrimaryColor</item>
+
         <!-- Styles -->
         <item name="snackbarStyle">@style/SnackBarStyle</item>
         <item name="snackbarButtonStyle">@style/SnackBarActionStyle</item>
         <item name="snackbarTextViewStyle">@style/SnackbarTextViewStyle</item>
         <item name="alertDialogTheme">@style/AlertDialogTheme</item>
 
+    </style>
+
+    <!-- Actual theme that's used for the app -->
+    <style name="AppTheme" parent="BaseAppTheme">
+        <item name="android:statusBarColor">@color/colorAccent</item>
     </style>
 
     <style name="SnackBarActionStyle" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
@@ -36,6 +40,12 @@
         <item name="dialogCornerRadius">8dp</item>
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/colorAccent</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launch_foreground</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
 
 </resources>
