@@ -32,7 +32,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.CookieManager;
@@ -49,15 +48,12 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.preference.PreferenceManager;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
 
@@ -67,6 +63,7 @@ import com.anggrayudi.storage.file.DocumentFileType;
 import com.anggrayudi.storage.file.DocumentFileUtils;
 import com.anggrayudi.storage.media.FileDescription;
 import com.anggrayudi.storage.media.MediaFile;
+import com.fmsys.snapdrop.databinding.ActivityMainBinding;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
@@ -82,10 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
     private String baseURL;
 
-    public WebView webView;
+    private ActivityMainBinding binding;
     public SharedPreferences prefs;
-    public LinearLayoutCompat imageViewLayout;
-    public SwipeRefreshLayout pullToRefresh;
 
     public ValueCallback<Uri[]> uploadMessage;
 
@@ -146,10 +141,10 @@ public class MainActivity extends AppCompatActivity {
             }));
         }
 
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        final Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(binding.toolbar);
         setTitle(R.string.app_name_long);
 
         final ActionBar actionbar = getSupportActionBar();
@@ -158,28 +153,26 @@ public class MainActivity extends AppCompatActivity {
             actionbar.setDisplayHomeAsUpEnabled(true);
         }
 
-        webView = findViewById(R.id.webview);
-        pullToRefresh = findViewById(R.id.pullToRefresh);
-        imageViewLayout = findViewById(R.id.splashImage);
         connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        webView.getSettings().setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath());
-        webView.getSettings().setAppCacheEnabled(false);
-        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE); // there are transfer problems when using cached resources
-        webView.getSettings().setUseWideViewPort(true);
-        webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setDatabaseEnabled(true);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setDomStorageEnabled(true);
-        webView.getSettings().setAllowContentAccess(true);
-        webView.getSettings().setAllowFileAccess(true);
-        webView.getSettings().setSupportMultipleWindows(true);
+        final WebSettings webSettings = binding.webview.getSettings();
+        webSettings.setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath());
+        webSettings.setAppCacheEnabled(false);
+        webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // there are transfer problems when using cached resources
+        webSettings.setUseWideViewPort(true);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setDatabaseEnabled(true);
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setAllowContentAccess(true);
+        webSettings.setAllowFileAccess(true);
+        webSettings.setSupportMultipleWindows(true);
         if (prefs.contains(getString(R.string.pref_device_name))) {
-            webView.getSettings().setUserAgentString("Mozilla/5.0 (Linux; Android " + Build.VERSION.RELEASE + "; Build/HUAWEI" + prefs.getString(getString(R.string.pref_device_name), getString(R.string.app_name)) + ") Version/" + BuildConfig.VERSION_NAME + (isTablet(this) ? " Tablet " : " Mobile ") + "Safari/537.36");
+            webSettings.setUserAgentString("Mozilla/5.0 (Linux; Android " + Build.VERSION.RELEASE + "; Build/HUAWEI" + prefs.getString(getString(R.string.pref_device_name), getString(R.string.app_name)) + ") Version/" + BuildConfig.VERSION_NAME + (isTablet(this) ? " Tablet " : " Mobile ") + "Safari/537.36");
         }
-        webView.addJavascriptInterface(new JavaScriptInterface(MainActivity.this), "SnapdropAndroid");
-        webView.setWebChromeClient(new MyWebChromeClient());
-        webView.setWebViewClient(new CustomWebViewClient());
+        binding.webview.addJavascriptInterface(new JavaScriptInterface(MainActivity.this), "SnapdropAndroid");
+        binding.webview.setWebChromeClient(new MyWebChromeClient());
+        binding.webview.setWebViewClient(new CustomWebViewClient());
 
         // Allow webContentsDebugging if APK was build as debuggable
         if (0 != (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)) {
@@ -187,13 +180,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (SnapdropApplication.isDarkTheme(this) && WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
-            WebSettingsCompat.setForceDark(webView.getSettings(), WebSettingsCompat.FORCE_DARK_ON);
+            WebSettingsCompat.setForceDark(binding.webview.getSettings(), WebSettingsCompat.FORCE_DARK_ON);
         }
 
         final CookieManager cookieManager = CookieManager.getInstance();
-        cookieManager.setAcceptThirdPartyCookies(webView, true);
+        cookieManager.setAcceptThirdPartyCookies(binding.webview, true);
 
-        webView.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
+        binding.webview.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
             final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
             while (iterator.hasNext()) {
                 final JavaScriptInterface.FileHeader file = iterator.next();
@@ -213,9 +206,8 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
         }
 
-        pullToRefresh.setOnRefreshListener(() -> {
+        binding.pullToRefresh.setOnRefreshListener(() -> {
             refreshWebsite(true);
-            pullToRefresh.setRefreshing(false);
         });
 
         final IntentFilter intentFilter = new IntentFilter();
@@ -247,18 +239,19 @@ public class MainActivity extends AppCompatActivity {
 
     private void toggleAbout() {
         if (currentlyAtAboutPage) {
-            webView.loadUrl(baseURL + "#");
+            binding.webview.loadUrl(baseURL + "#");
         } else {
-            webView.loadUrl(baseURL + "#about");
+            binding.webview.loadUrl(baseURL + "#about");
         }
         currentlyAtAboutPage = !currentlyAtAboutPage;
     }
 
     private void refreshWebsite(final boolean pulled) {
         if (isWifiAvailable() && !transfer.get() || forceRefresh) {
-            webView.loadUrl(baseURL);
+            binding.webview.loadUrl(baseURL);
             forceRefresh = false;
         } else if (transfer.get()) {
+            binding.pullToRefresh.setRefreshing(false);
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
             showScreenNoConnection();
@@ -270,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showScreenNoConnection() {
-        webView.loadUrl("file:///android_asset/offline.html?text=" + getString(R.string.error_network) + "&button=" + getString(R.string.ignore_error_network));
+        binding.webview.loadUrl("file:///android_asset/offline.html?text=" + getString(R.string.error_network) + "&button=" + getString(R.string.ignore_error_network));
         currentlyOffline = true;
     }
 
@@ -300,10 +293,10 @@ public class MainActivity extends AppCompatActivity {
             uploadIntent = intent;
 
             final String clipText = getTextFromUploadIntent();
-            webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText));
+            binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText));
 
             final Snackbar snackbar = Snackbar
-                    .make(pullToRefresh, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
+                    .make(binding.pullToRefresh, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
                     .setAction(android.R.string.cancel, button -> resetUploadIntent());
             snackbar.show();
 
@@ -348,8 +341,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (webView.getUrl() != null && webView.getUrl().endsWith("#about")) {
-            webView.loadUrl(baseURL + "#");
+        if (binding.webview.getUrl() != null && binding.webview.getUrl().endsWith("#about")) {
+            binding.webview.loadUrl(baseURL + "#");
             currentlyAtAboutPage = false;
         } else {
             super.onBackPressed();
@@ -374,7 +367,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         unregisterReceiver(receiver);
-        webView.loadUrl("about:blank");
+        binding.webview.loadUrl("about:blank");
         super.onDestroy();
     }
 
@@ -449,7 +442,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_SELECT_FILE);
             } catch (ActivityNotFoundException e) {
                 uploadMessage = null;
-                Snackbar.make(pullToRefresh, R.string.error_filechooser, Snackbar.LENGTH_LONG).show();
+                Snackbar.make(binding.pullToRefresh, R.string.error_filechooser, Snackbar.LENGTH_LONG).show();
                 return false;
             }
             return true;
@@ -463,13 +456,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
             } else if (url.endsWith("offlineButForceRefresh")) {
                 forceRefresh = true;
-                imageViewLayout.setVisibility(View.VISIBLE);
                 refreshWebsite();
             } else {
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                 } catch (ActivityNotFoundException e) {
-                    Snackbar.make(pullToRefresh, R.string.err_no_browser, Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(binding.pullToRefresh, R.string.err_no_browser, Snackbar.LENGTH_SHORT).show();
                     resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
                 }
             }
@@ -483,6 +475,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onPageFinished(final WebView view, final String url) {
             currentlyLoading = false;
+            binding.pullToRefresh.setRefreshing(false);
 
             if (url.startsWith(baseURL) || currentlyOffline) {
                 currentlyOffline = !url.startsWith(baseURL);
@@ -499,8 +492,8 @@ public class MainActivity extends AppCompatActivity {
             }
             //website initialisation
             if (!currentlyOffline) {
-                webView.loadUrl(JavaScriptInterface.initialiseWebsite());
-                webView.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
+                binding.webview.loadUrl(JavaScriptInterface.initialiseWebsite());
+                binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
 
                 // welcome dialog
                 if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
@@ -515,8 +508,6 @@ public class MainActivity extends AppCompatActivity {
                     prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply();
                 }
             }
-
-            imageViewLayout.setVisibility(View.GONE);
         }
 
         @Override
@@ -550,7 +541,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
         if (Long.parseLong(fileHeader.getSize()) > 25 * 1024 * 1024) {
-            Snackbar.make(pullToRefresh, R.string.download_save_pending, Snackbar.LENGTH_INDEFINITE).show();
+            Snackbar.make(binding.pullToRefresh, R.string.download_save_pending, Snackbar.LENGTH_INDEFINITE).show();
             resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
         }
 
@@ -573,7 +564,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailed(@NonNull final FileCallback.ErrorCode errorCode) {
                 Log.d("SimpleStorage", errorCode.toString());
-                Snackbar.make(pullToRefresh, errorCode.toString(), Snackbar.LENGTH_LONG).show();
+                Snackbar.make(binding.pullToRefresh, errorCode.toString(), Snackbar.LENGTH_LONG).show();
                 resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
             }
 
@@ -641,13 +632,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        final Snackbar snackbar = Snackbar.make(pullToRefresh, R.string.download_successful, Snackbar.LENGTH_LONG)
+        final Snackbar snackbar = Snackbar.make(binding.pullToRefresh, R.string.download_successful, Snackbar.LENGTH_LONG)
                 .setAction(R.string.open, button -> {
                     try {
                         startActivity(intent);
                         notificationManager.cancel(notificationId);
                     } catch (Exception e) {
-                        Snackbar.make(pullToRefresh, R.string.err_no_app, Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(binding.pullToRefresh, R.string.err_no_app, Snackbar.LENGTH_SHORT).show();
                     }
 
                 });

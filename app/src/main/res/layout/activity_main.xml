@@ -24,19 +24,6 @@
                 app:titleCentered="true" />
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/splashImage"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:gravity="center">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_snapdrop"
-                android:visibility="visible" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
         <WebView
             android:id="@+id/webview"
             android:layout_width="fill_parent"
