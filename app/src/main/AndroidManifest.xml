@@ -28,7 +28,13 @@
 
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/pref_category_settings" />
+            android:label="@string/pref_category_settings"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".MainActivity"
