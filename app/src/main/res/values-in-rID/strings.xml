@@ -16,7 +16,6 @@
     <string name="reset">atur ulang</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Tentang Snapdrop untuk Android</string>
-    <string name="title_activity_about_short">Tentang Snapdrop</string>
     <string name="license">Lisensi</string>
     <string name="pref_category_settings">Pengaturan</string>
     <string name="source">Kode Sumber</string>

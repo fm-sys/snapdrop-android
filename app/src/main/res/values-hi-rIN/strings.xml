@@ -14,11 +14,8 @@
     <string name="reset">रीसेट करें</string>
     <!-- Settings / About -->
     <string name="title_activity_about">स्नैप्ड्रोप एंड्राइड के बारे में</string>
-    <string name="title_activity_about_short">स्नैप्ड्रोप के बारे में</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> और GitHub के सभी योगदानकर्ता</string>
     <string name="license">लाइसेंस</string>
     <string name="pref_category_settings">सेटिंग्स</string>
-    <string name="developers">डेवलपर</string>
     <string name="twitter">ट्विटर</string>
     <string name="pref_device_name_title">डिवाइस का नाम</string>
     <string-array name="darkmode_entries">

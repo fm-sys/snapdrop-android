@@ -19,7 +19,6 @@
 
     <!-- Settings / About -->
     <string name="title_activity_about">About Snapdrop for Android</string>
-    <string name="title_activity_about_short">About Snapdrop</string>
     <string name="license">License</string>
     <string name="pref_category_settings">Settings</string>
     <string name="source">Source Code</string>

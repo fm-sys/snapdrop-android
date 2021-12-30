@@ -16,7 +16,6 @@
     <string name="reset">zurücksetzen</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Über Snapdrop für Android</string>
-    <string name="title_activity_about_short">Über Snapdrop</string>
     <string name="license">Lizenz</string>
     <string name="pref_category_settings">Einstellungen</string>
     <string name="source">Quellcode</string>

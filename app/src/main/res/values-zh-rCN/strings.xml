@@ -15,11 +15,8 @@
     <string name="reset">重置</string>
     <!-- Settings / About -->
     <string name="title_activity_about">关于安卓上的 Snapdrop</string>
-    <string name="title_activity_about_short">关于 Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> 等 GitHub 上的贡献者</string>
     <string name="license">许可证</string>
     <string name="pref_category_settings">设置</string>
-    <string name="developers">开发者</string>
     <string name="components">开源组件</string>
     <string name="components_summary">点击查看</string>
     <string name="crowdin">本地化</string>

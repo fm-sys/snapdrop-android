@@ -14,11 +14,8 @@
     <string name="reset">重設</string>
     <!-- Settings / About -->
     <string name="title_activity_about">關於 Snapdrop for Android</string>
-    <string name="title_activity_about_short">關於 Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> 和所有在 Github 的貢獻者</string>
     <string name="license">授權</string>
     <string name="pref_category_settings">設定</string>
-    <string name="developers">開發者</string>
     <string name="components">開源元件</string>
     <string name="components_summary">點擊顯示</string>
     <string name="crowdin">語言在地化</string>

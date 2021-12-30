@@ -14,11 +14,8 @@
     <string name="reset">reset</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Over Snapdrop voor Android</string>
-    <string name="title_activity_about_short">Over Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> en alle bijdragers op GitHub</string>
     <string name="license">Licentie</string>
     <string name="pref_category_settings">Instellingen</string>
-    <string name="developers">Ontwikkelaar</string>
     <string name="components">Open source componenten</string>
     <string name="components_summary">Tik om weer te geven</string>
     <string name="crowdin">Localisatie</string>

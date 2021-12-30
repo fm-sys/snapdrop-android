@@ -11,11 +11,8 @@
     <string name="reset">restaurar</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
-    <string name="title_activity_about_short">Sobre o Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> e todos os colaboradores do GitHub</string>
     <string name="license">Licença</string>
     <string name="pref_category_settings">Configurações</string>
-    <string name="developers">Desenvolvedor</string>
     <string name="version">Versão</string>
     <string name="pref_device_name_title">Nome do Dispositivo</string>
     <string name="pref_device_name_summary">Definir um nome de dispositivo definido pelo usuário</string>

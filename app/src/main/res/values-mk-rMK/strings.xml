@@ -14,11 +14,8 @@
     <string name="reset">ресетирај</string>
     <!-- Settings / About -->
     <string name="title_activity_about">За Snapdrop за Android</string>
-    <string name="title_activity_about_short">За Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> и сите соработници на GitHub</string>
     <string name="license">Лиценца</string>
     <string name="pref_category_settings">Поставки</string>
-    <string name="developers">Инвеститорот</string>
     <string name="components">Компоненти со отворен извор</string>
     <string name="components_summary">Допрете за да се прикаже</string>
     <string name="crowdin">Преводи</string>

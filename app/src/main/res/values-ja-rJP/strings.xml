@@ -16,11 +16,8 @@
     <string name="reset">リセット</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Snapdrop for Androidについて</string>
-    <string name="title_activity_about_short">Snapdropについて</string>
-    <string name="developer_notice_settings"><b>fm-sys</b>とGitHubのすべての貢献者</string>
     <string name="license">ライセンス</string>
     <string name="pref_category_settings">設定</string>
-    <string name="developers">開発者</string>
     <string name="components">オープンソースコンポーネント</string>
     <string name="components_summary">タップして表示</string>
     <string name="crowdin">翻訳</string>

@@ -14,11 +14,8 @@
     <string name="reset">Redefinir</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
-    <string name="title_activity_about_short">Sobre o Snapdrop</string>
-    <string name="developer_notice_settings"><b>Fmsys</b> e todos os colaboradores no GitHub</string>
     <string name="license">Licença</string>
     <string name="pref_category_settings">Preferências</string>
-    <string name="developers">Desenvolvedor</string>
     <string name="components">Componentes de código aberto</string>
     <string name="components_summary">Toque para exibir</string>
     <string name="crowdin">Tradução e localização</string>

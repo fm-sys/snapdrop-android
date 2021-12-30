@@ -16,7 +16,6 @@
     <string name="reset">thiết lập lại</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Về ứng dụng Snapdrop cho Android</string>
-    <string name="title_activity_about_short">Về Snapdrop</string>
     <string name="license">Bản quyền</string>
     <string name="pref_category_settings">Cài đặt</string>
     <string name="source">Mã nguồn mở</string>

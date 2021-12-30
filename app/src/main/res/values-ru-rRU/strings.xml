@@ -14,11 +14,8 @@
     <string name="reset">сброс</string>
     <!-- Settings / About -->
     <string name="title_activity_about">О Snapdrop для Android</string>
-    <string name="title_activity_about_short">О Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> и все участники проекта на GitHub</string>
     <string name="license">Лицензионное соглашение</string>
     <string name="pref_category_settings">Настройки</string>
-    <string name="developers">Разработчики</string>
     <string name="components">Компоненты Open Source</string>
     <string name="components_summary">Коснитесь для отображения</string>
     <string name="crowdin">Перевод</string>

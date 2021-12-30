@@ -14,11 +14,8 @@
     <string name="reset">restablir</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Sobre Snapdrop per Android</string>
-    <string name="title_activity_about_short">Sobre Snapdrop</string>
-    <string name="developer_notice_settings"><b>fm-sys</b> i tots els contribuidors a GitHub</string>
     <string name="license">Llicència</string>
     <string name="pref_category_settings">Configuració</string>
-    <string name="developers">Desenvolupador</string>
     <string name="components">Components de codi obert</string>
     <string name="components_summary">Prem per mostrar</string>
     <string name="crowdin">Traduccions</string>
