@@ -16,7 +16,6 @@
     <string name="reset">إعادَةُ الضَّبط</string>
     <!-- Settings / About -->
     <string name="title_activity_about">حَول سناب درُوب لِنِظامِ أندُروِيد</string>
-    <string name="title_activity_about_short">حَول سناب درُوب</string>
     <string name="license">الترخيص</string>
     <string name="pref_category_settings">الإعدادات</string>
     <string name="source">شفرة المصدر</string>
