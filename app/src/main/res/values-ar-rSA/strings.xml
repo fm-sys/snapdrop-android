@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">سناب درُوب</string>
-    <string name="app_name_long">سناب درُوب لِنِظامِ أندُروِيد</string>
+    <string name="app_name_long">Snapdrop for Android</string>
     <string name="err_no_browser">يَتعذَّرُ فَتح المُتَصَفِّح</string>
     <string name="err_no_app">لا يوجد تطبيق مثبت لفتح هذا الملف</string>
     <!-- Welcome -->
