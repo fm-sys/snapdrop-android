@@ -16,7 +16,6 @@
     <string name="reset">ponovno pokreni</string>
     <!-- Settings / About -->
     <string name="title_activity_about">O Snapdropu za Android</string>
-    <string name="title_activity_about_short">O Snapdropu</string>
     <string name="license">Licenca</string>
     <string name="pref_category_settings">Postavke</string>
     <string name="source">Izvorni kod</string>
