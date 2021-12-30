@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
         final ActionBar actionbar = getSupportActionBar();
         if (actionbar != null) {
-            actionbar.setHomeAsUpIndicator(R.drawable.ic_launcher);
+            actionbar.setHomeAsUpIndicator(R.drawable.ic_launcher_actionbar);
             actionbar.setDisplayHomeAsUpEnabled(true);
         }
 
