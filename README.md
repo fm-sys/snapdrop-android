@@ -43,7 +43,7 @@ We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our
 
 <p align="center">
   <a href="https://crowdin.com/project/snapdrop-android" rel="nofollow">
-    <img width="200" height="57" src="https://badges.crowdin.net/badge/dark/crowdin-on-light.png" srcset="https://badges.crowdin.net/badge/dark/crowdin-on-light.png 1x,https://badges.crowdin.net/badge/crowdin-on-light@2x.png 2x"  alt="Crowdin | Agile localization for tech companies" />
+    <img width="200" src="https://support.crowdin.com/assets/badges/localization-at-dark-rounded@1x.svg" alt="Crowdin | Agile localization for tech companies" />
   </a>
 </p>
 
