@@ -47,12 +47,11 @@ We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our
   </a>
 </p>
 
+One additional hint:
+Please do not change any translations manually in the `.xml` resource files. Nothing bad would happen though, but these changes would be deleted/overwritten automatically by Crowdin. If you add/change any resource strings within your PR, Crowdin will automatically take care of all related translations. 
 
 ### Development
 If you want to help with development, this would be more than welcome! I am very glad about every pull request. Just fork the repo and start coding. However, if you plan to implement larger changes, please tell us in the [issue tracker](https://github.com/fm-sys/snapdrop-android/issues) before hacking on your great new feature. 
-
-But please do not change any translations manually in the `.xml` resource files. Nothing bad would happen though, but anyway these changes will be overwritten by Crowdin. If you add/change any resource strings within your PR, Crowdin will automatically take care of all related translations. 
-
 
 ## Credits / Open Source Components
 - **[Snapdrop](https://github.com/RobinLinus/snapdrop)**
