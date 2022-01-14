@@ -33,7 +33,7 @@
     <string name="pref_device_name_summary">Lege einen benutzerdefinierten Gerätenamen fest</string>
     <string name="keep_on_summary">(Empfohlen) Viele Geräte haben Probleme mit Übertragungen, wenn der Bildschirm ausgeschaltet wird</string>
     <string name="keep_on_title">Bildschirm während der Übertragung angeschaltet lassen</string>
-    <string name="settings_theme_title">Erscheinungsbild</string>
+    <string name="settings_theme_title">Design</string>
     <string-array name="darkmode_entries">
         <item>Systemstandard</item>
         <item>Hell</item>
