@@ -492,7 +492,7 @@ public class MainActivity extends AppCompatActivity {
             }
             //website initialisation
             if (!currentlyOffline) {
-                binding.webview.loadUrl(JavaScriptInterface.initialiseWebsite());
+                binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"));
                 binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
 
                 // welcome dialog
