@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean currentlyOffline = true;
     private boolean currentlyAtAboutPage = false;
-    private boolean currentlyLoading = false;
+    private boolean currentlyLoading = true;
     public boolean forceRefresh = false;
     public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false);
     public boolean onlyText = false;
@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
         intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
         registerReceiver(receiver, intentFilter);
 
-        splashScreen.setKeepVisibleCondition(() -> currentlyLoading);
+        splashScreen.setKeepOnScreenCondition(() -> currentlyLoading);
     }
 
     @Override
