@@ -68,6 +68,11 @@ document.getElementById('img-preview').style.maxHeight='50vh';
 document.getElementById('fileName').style.textOverflow='ellipsis';
 document.getElementById('fileName').style.overflow='hidden';
 
+//move about background to the left side (for better opening animation)
+let aboutBackground = document.querySelector('#about>x-background');
+aboutBackground.style.left = 'calc(32px - 200px)';
+aboutBackground.style.right = null;
+
 //change ServerConnection.send(message) to connect to JavaScriptInterface
 ServerConnection.prototype.s = ServerConnection.prototype.send;
 ServerConnection.prototype.send = function(message){
