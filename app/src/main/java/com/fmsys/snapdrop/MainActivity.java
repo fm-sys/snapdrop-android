@@ -18,8 +18,6 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -97,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
 
     public Intent uploadIntent = null;
 
-    private ConnectivityManager connMgr = null;
     private BroadcastReceiver receiver = new BroadcastReceiver() {
 
         @Override
@@ -105,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
             if ((!isInitialStickyBroadcast()) && currentlyOffline) {
                 final Handler handler = new Handler();
                 handler.postDelayed(() -> {
-                    if (isWifiAvailable()) {
+                    if (NetworkUtils.isWifiAvailable()) {
                         refreshWebsite();
                     }
                 }, 1500); // wait a bit until connection is ready
@@ -152,8 +149,6 @@ public class MainActivity extends AppCompatActivity {
             actionbar.setHomeAsUpIndicator(R.drawable.ic_launcher_actionbar);
             actionbar.setDisplayHomeAsUpEnabled(true);
         }
-
-        connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         final WebSettings webSettings = binding.webview.getSettings();
         webSettings.setAppCachePath(getApplicationContext().getCacheDir().getAbsolutePath());
@@ -247,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void refreshWebsite(final boolean pulled) {
-        if (isWifiAvailable() && !transfer.get() || forceRefresh) {
+        if (NetworkUtils.isWifiAvailable() && !transfer.get() || forceRefresh) {
             binding.webview.loadUrl(baseURL);
             forceRefresh = false;
         } else if (transfer.get()) {
@@ -265,22 +260,6 @@ public class MainActivity extends AppCompatActivity {
     private void showScreenNoConnection() {
         binding.webview.loadUrl("file:///android_asset/offline.html?text=" + getString(R.string.error_network) + "&button=" + getString(R.string.ignore_error_network));
         currentlyOffline = true;
-    }
-
-    private boolean isWifiAvailable() {
-        if (connMgr != null) {
-            final NetworkInfo activeNetworkInfo = connMgr.getActiveNetworkInfo();
-            return activeNetworkInfo != null && activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI;
-        }
-        return false;
-    }
-
-    private boolean isInternetAvailable() {
-        if (connMgr != null) {
-            final NetworkInfo activeNetworkInfo = connMgr.getActiveNetworkInfo();
-            return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-        }
-        return false;
     }
 
     public static boolean isTablet(final Context ctx) {
@@ -522,7 +501,7 @@ public class MainActivity extends AppCompatActivity {
                 public void run() {
                     //do something
                     if (currentlyLoading) {
-                        if (isInternetAvailable()) {
+                        if (NetworkUtils.isInternetAvailable()) {
                             handler.postDelayed(this, delay);
                         } else {
                             refreshWebsite();

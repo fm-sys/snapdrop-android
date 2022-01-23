@@ -9,8 +9,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 
 public class SnapdropApplication extends Application {
+
+    private static SnapdropApplication instance;
+    private static final AtomicInteger notificationCounter = new AtomicInteger(0);
+
+    public SnapdropApplication() {
+        instance = this;
+    }
+
+    public static Application getInstance() {
+        return instance;
+    }
 
     @Override
     public void onCreate() {
