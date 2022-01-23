@@ -22,7 +22,7 @@
     <string name="source">Izvorni kod</string>
     <string name="source_summary">Izvorni kod na GitHubu</string>
     <string name="components">Komponente otvorenog koda</string>
-    <string name="logs">Popis riješenih grešaka</string>
+    <string name="logs">Debug Dnevnici</string>
     <string name="components_summary">Pritisni za prikaz</string>
     <string name="crowdin">Lokalizacija</string>
     <string name="crowdin_summary">Pomozite prevesti <b>Snapdrop za Android</b> na svoj preferirani jezik</string>
