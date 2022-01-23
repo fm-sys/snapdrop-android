@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">안드로이드용 Snapdrop</string>
     <string name="err_no_browser">브라우저를 실행할 수 없어요.</string>
     <string name="err_no_app">이 파일을 열 수 있는 앱이 없어요.</string>
-    <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Snapdrop에 오신 것을 환영합니다!</string>
     <string name="app_welcome_summary">1. 같은 WiFi에 연결된 다른 장치에서 <a href="https://snapdrop.net">snapdrop.net</a>에 접속하거나 Snapdrop을 실행하세요.\n2. 파일을 공유하고자 하는 기기를 탭하세요.\n3. 파일이 잘 전송될 거예요...</string>
     <!-- Download -->
     <string name="download_save_pending">파일을 저장중입니다. 잠시 기다려주세요...</string>
-    <string name="download_successful">다운로드 성공</string>
+    <string name="download_successful">다운로드가 완료되었습니다.</string>
     <string name="notification_channel_name">다운로드가 완료되었습니다.</string>
     <!-- Action Buttons -->
     <string name="open">열기</string>
     <string name="reset">초기화</string>
+    <string name="copy">복사</string>
     <!-- Settings / About -->
     <string name="title_activity_about">안드로이드용 Snapdrop 정보</string>
     <string name="license">라이선스</string>
     <string name="pref_category_settings">설정</string>
+    <string name="source">소스 코드</string>
+    <string name="source_summary">GitHub에서 소스 코드 보기</string>
     <string name="components">오픈소스 라이선스</string>
+    <string name="logs">디버그 로그</string>
     <string name="components_summary">눌러서 보기</string>
     <string name="crowdin">번역</string>
     <string name="crowdin_summary">당신이 좋아하는 언어로 <b>안드로이드용 Snapdrop</b>를 번역하는데 도움을 주세요!</string>
+    <string name="support_us">Snapdrop 지원하기</string>
+    <string name="support_us_summary">Snapdrop 커뮤니티를 도울 수 있는 방법 알아보기</string>
     <string name="twitter">트위터</string>
-    <string name="twitter_summary"><b>안드로이드용 Snapdrop</b>의 소식에 대한 알림을 받아보세요.</string>
+    <string name="twitter_summary"><b>안드로이드용 Snapdrop</b> 에 대해 대화하기</string>
     <string name="version">버전</string>
     <string name="pref_device_name_title">기기 이름</string>
     <string name="pref_device_name_summary">기기 별칭을 정하세요.</string>
     <string name="keep_on_summary">(권장함) 많은 기기에 화면이 꺼지면 전송이 중단되는 문제가 있습니다.</string>
-    <string name="keep_on_title">전송 중에는 화면을 켜놓으세요</string>
+    <string name="keep_on_title">전송 중일때 화면 켜짐 유지</string>
     <string name="settings_theme_title">테마</string>
     <string-array name="darkmode_entries">
         <item>시스템 기본값</item>
@@ -44,5 +50,4 @@
     <string name="error_filechooser">파일 선택기를 열 수 없어요.</string>
     <string name="error_network">WiFi 네트워크에 연결되어 있는지 확인해주세요.</string>
     <string name="ignore_error_network">무시하고 시작하기</string>
-    <!-- baseURL -->
 </resources>
