@@ -73,12 +73,22 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void updateLastOnlineTime() {
-        context.prefs.edit().putLong(context.getString(R.string.pref_last_server_connection), System.currentTimeMillis()).apply();
+        context.setLastServerConnection(System.currentTimeMillis());
     }
 
     @JavascriptInterface
     public boolean shouldOpenSendTextDialog() {
         return context.onlyText;
+    }
+
+    @JavascriptInterface
+    public void dialogShown() {
+        context.dialogVisible = true;
+    }
+
+    @JavascriptInterface
+    public void dialogHidden() {
+        context.dialogVisible = false;
     }
     
     @JavascriptInterface

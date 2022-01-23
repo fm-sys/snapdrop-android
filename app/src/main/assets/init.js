@@ -108,3 +108,15 @@ Peer.prototype._onChunkReceived = function(chunk){
     SnapdropAndroid.onBytes(decoder.decode(chunk));
     this._oCR(chunk);
 };
+
+Dialog.prototype._shw = Dialog.prototype.show;
+Dialog.prototype.show = function(){
+    SnapdropAndroid.dialogShown();
+    this._shw();
+};
+
+Dialog.prototype._hde = Dialog.prototype.hide;
+Dialog.prototype.hide = function(){
+    SnapdropAndroid.dialogHidden();
+    this._hde();
+};

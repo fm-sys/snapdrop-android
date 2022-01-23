@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onlyText = false;
 
     public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>();
+    public boolean dialogVisible = false;
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
@@ -181,9 +182,6 @@ public class MainActivity extends AppCompatActivity {
 
         CookieManager.getInstance().setAcceptThirdPartyCookies(binding.webview, true);
 
-        // avoid direct double-refreshing when launching app
-        prefs.edit().putLong(getString(R.string.pref_last_server_connection), System.currentTimeMillis()).apply();
-
         binding.webview.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
             final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
             while (iterator.hasNext()) {
@@ -205,10 +203,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
-
-        final IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
-        registerReceiver(receiver, intentFilter);
 
         splashScreen.setKeepOnScreenCondition(() -> currentlyLoading);
     }
@@ -244,10 +238,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void refreshWebsite(final boolean pulled) {
         Log.w("SnapdropAndroid", "refresh triggered");
-        if (NetworkUtils.isWifiAvailable() && !transfer.get() || forceRefresh) {
+        if (NetworkUtils.isWifiAvailable() && !transfer.get() && !dialogVisible || forceRefresh) {
             binding.webview.loadUrl(baseURL);
             forceRefresh = false;
-        } else if (transfer.get()) {
+        } else if (transfer.get() || dialogVisible) {
             binding.pullToRefresh.setRefreshing(false);
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
@@ -325,6 +319,8 @@ public class MainActivity extends AppCompatActivity {
         if (binding.webview.getUrl() != null && binding.webview.getUrl().endsWith("#about")) {
             binding.webview.loadUrl(baseURL + "#");
             currentlyAtAboutPage = false;
+        } else if (dialogVisible) {
+            binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(this, "closeDialogs.js"));
         } else {
             super.onBackPressed();
         }
@@ -337,22 +333,40 @@ public class MainActivity extends AppCompatActivity {
         return System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60;
     }
 
+    public void setLastServerConnection(final long timestamp) {
+        prefs.edit().putLong(getString(R.string.pref_last_server_connection), timestamp).apply();
+    }
+
     @Override
     public void onResume() {
         super.onResume();
+
+        final IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
+        registerReceiver(receiver, intentFilter);
+    }
+
+    @Override
+    public void onRestart() {
+        super.onRestart();
         if (isServerConnectionLost()) {
             refreshWebsite();
         }
     }
 
     @Override
-    protected void onDestroy() {
+    protected void onStop() {
+        super.onStop();
         unregisterReceiver(receiver);
+        if (!transfer.get() && !dialogVisible && uploadMessage == null) {
+            binding.webview.loadUrl("about:blank");
+            setLastServerConnection(0);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
         binding.webview.loadUrl("about:blank");
-        binding.webview.onPause();
-        binding.webview.removeAllViews();
-        binding.webview.pauseTimers();
-        binding.webview.destroy();
         CookieManager.getInstance().flush();
         super.onDestroy();
     }
@@ -460,6 +474,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onPageFinished(final WebView view, final String url) {
+            Log.w("SnapdropAndroid", "refresh finished");
             currentlyLoading = false;
             binding.pullToRefresh.setRefreshing(false);
 
