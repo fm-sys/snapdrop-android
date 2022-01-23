@@ -179,8 +179,10 @@ public class MainActivity extends AppCompatActivity {
             WebSettingsCompat.setForceDark(binding.webview.getSettings(), WebSettingsCompat.FORCE_DARK_ON);
         }
 
-        final CookieManager cookieManager = CookieManager.getInstance();
-        cookieManager.setAcceptThirdPartyCookies(binding.webview, true);
+        CookieManager.getInstance().setAcceptThirdPartyCookies(binding.webview, true);
+
+        // avoid direct double-refreshing when launching app
+        prefs.edit().putLong(getString(R.string.pref_last_server_connection), System.currentTimeMillis()).apply();
 
         binding.webview.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
             final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
@@ -202,9 +204,7 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
         }
 
-        binding.pullToRefresh.setOnRefreshListener(() -> {
-            refreshWebsite(true);
-        });
+        binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
 
         final IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
@@ -243,6 +243,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void refreshWebsite(final boolean pulled) {
+        Log.w("SnapdropAndroid", "refresh triggered");
         if (NetworkUtils.isWifiAvailable() && !transfer.get() || forceRefresh) {
             binding.webview.loadUrl(baseURL);
             forceRefresh = false;
@@ -330,16 +331,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * @return true if there was no server connection for more than three minutes
+     * @return true if there was no server connection for more than a minute
      */
-    private boolean onlinePastThreeMin() {
-        return System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60 * 3;
+    private boolean isServerConnectionLost() {
+        return System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        if (onlinePastThreeMin()) {
+        if (isServerConnectionLost()) {
             refreshWebsite();
         }
     }
@@ -348,6 +349,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         unregisterReceiver(receiver);
         binding.webview.loadUrl("about:blank");
+        binding.webview.onPause();
+        binding.webview.removeAllViews();
+        binding.webview.pauseTimers();
+        binding.webview.destroy();
+        CookieManager.getInstance().flush();
         super.onDestroy();
     }
 
