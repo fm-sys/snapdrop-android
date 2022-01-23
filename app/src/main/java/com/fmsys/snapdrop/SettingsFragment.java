@@ -21,6 +21,8 @@ import androidx.preference.PreferenceManager;
 
 import com.anggrayudi.storage.SimpleStorageHelper;
 import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.fmsys.snapdrop.utils.ClipboardUtils;
+import com.fmsys.snapdrop.utils.LogUtils;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 

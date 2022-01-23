@@ -1,4 +1,4 @@
-package com.fmsys.snapdrop;
+package com.fmsys.snapdrop.utils;
 
 import android.util.Log;
 
