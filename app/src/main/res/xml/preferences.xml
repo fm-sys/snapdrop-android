@@ -73,6 +73,12 @@
             app:iconSpaceReserved="false"
             app:singleLineTitle="false" />
         <Preference
+            android:key="@string/pref_logs"
+            android:title="@string/logs"
+            android:summary="@string/components_summary"
+            app:iconSpaceReserved="false"
+            app:singleLineTitle="false" />
+        <Preference
             android:key="@string/pref_license"
             android:title="@string/license"
             android:summary="GNU General Public License v3.0"

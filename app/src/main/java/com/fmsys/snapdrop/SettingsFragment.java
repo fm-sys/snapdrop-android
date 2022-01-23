@@ -56,6 +56,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
 
+        final Preference logsPref = findPreference(getString(R.string.pref_logs));
+        logsPref.setOnPreferenceClickListener(pref -> {
+            new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.logs)
+                    .setMessage(LogUtils.requestLogcatLogs())
+                    .setPositiveButton(android.R.string.ok, null)
+                    .setNeutralButton(R.string.copy, (d, id) -> ClipboardUtils.copy(this.getContext(), LogUtils.logcatLogs))
+                    .show();
+            return true;
+        });
+
 
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
         deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", newValue -> updateDeviceNameSummary(deviceNamePref)));

@@ -1,7 +1,5 @@
 package com.fmsys.snapdrop;
 
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
@@ -63,9 +61,7 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void copyToClipboard(final String text) {
-        final ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-        final ClipData clip = ClipData.newPlainText("SnapdropAndroid", text);
-        clipboard.setPrimaryClip(clip);
+        ClipboardUtils.copy(context, text);
     }
 
     @JavascriptInterface

@@ -16,6 +16,7 @@
     <!-- Action Buttons -->
     <string name="open">open</string>
     <string name="reset">reset</string>
+    <string name="copy">copy</string>
 
     <!-- Settings / About -->
     <string name="title_activity_about">About Snapdrop for Android</string>
@@ -24,6 +25,7 @@
     <string name="source">Source Code</string>
     <string name="source_summary">View source code at GitHub</string>
     <string name="components">Open source components</string>
+    <string name="logs">Debug Logs</string>
     <string name="components_summary">Tap to display</string>
     <string name="crowdin">Localization</string>
     <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
