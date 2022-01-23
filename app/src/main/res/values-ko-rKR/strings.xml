@@ -14,6 +14,7 @@
     <!-- Action Buttons -->
     <string name="open">열기</string>
     <string name="reset">초기화</string>
+    <string name="copy">복사</string>
     <!-- Settings / About -->
     <string name="title_activity_about">안드로이드용 Snapdrop 정보</string>
     <string name="license">라이선스</string>
@@ -21,6 +22,7 @@
     <string name="source">소스 코드</string>
     <string name="source_summary">GitHub에서 소스 코드 보기</string>
     <string name="components">오픈소스 라이선스</string>
+    <string name="logs">디버그 로그</string>
     <string name="components_summary">눌러서 보기</string>
     <string name="crowdin">번역</string>
     <string name="crowdin_summary">당신이 좋아하는 언어로 <b>안드로이드용 Snapdrop</b>를 번역하는데 도움을 주세요!</string>
