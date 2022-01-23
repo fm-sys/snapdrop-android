@@ -20,7 +20,7 @@ android {
         //  -   Publish the release tag on Github
         //  -   Post release info to Twitter
 
-        versionCode 19
+        versionCode 20
         versionName "1.9.1"
         applicationVariants.all { variant ->
             variant.outputs.all {
