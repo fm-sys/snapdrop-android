@@ -14,6 +14,7 @@
     <!-- Action Buttons -->
     <string name="open">öffnen</string>
     <string name="reset">zurücksetzen</string>
+    <string name="copy">kopieren</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Über Snapdrop für Android</string>
     <string name="license">Lizenz</string>
@@ -21,6 +22,7 @@
     <string name="source">Quellcode</string>
     <string name="source_summary">Quellcode auf GitHub</string>
     <string name="components">Open-Source-Komponenten</string>
+    <string name="logs">Fehlersuchprotokolle</string>
     <string name="components_summary">Zum Anzeigen tippen</string>
     <string name="crowdin">Übersetzung</string>
     <string name="crowdin_summary">Helfen Sie <b>Snapdrop für Android</b> in Ihre bevorzugte Sprache zu übersetzen</string>
