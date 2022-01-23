@@ -14,6 +14,7 @@
     <!-- Action Buttons -->
     <string name="open">buka</string>
     <string name="reset">atur ulang</string>
+    <string name="copy">salin</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Tentang Snapdrop untuk Android</string>
     <string name="license">Lisensi</string>
@@ -21,6 +22,7 @@
     <string name="source">Kode Sumber</string>
     <string name="source_summary">Lihat kode program di GitHub</string>
     <string name="components">Komponen sumber terbuka</string>
+    <string name="logs">Catatan Debug</string>
     <string name="components_summary">Ketuk untuk menampilkan</string>
     <string name="crowdin">Lokalisasi</string>
     <string name="crowdin_summary">Bantu untuk menerjemahkan <b>Snapdrop untuk Android</b> ke dalam bahasa favorit Anda</string>
