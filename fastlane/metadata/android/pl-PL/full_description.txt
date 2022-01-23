@@ -1,4 +1,4 @@
-SnapDrop dla Android jest aplikacją na Android™ dla darmowego i otwartego oprogramowania do udostępniania plików lokalnych https://snapdrop.net/.
+Snapdrop dla Android jest darmową i otwarto-źródłową aplikacją na Android™ do udostępniania plików https://snapdrop.net/.
 
 Czasami masz również problem, że musisz szybko przenieść plik z telefonu do komputera?
 
