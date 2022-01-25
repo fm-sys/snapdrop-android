@@ -11,6 +11,12 @@ To allow discovering of other devices running Snapdrop in your local network, th
 ## Users rights
 
 We cannot provide you an option to delete your user data, because we simply store nothing permanently. All data we process is required for the service to work and is used for nothing else than as described here. We do not share any personal data with third parties. 
+If you don't want to use our app any longer, just uninstall the app from your device. This will delete all app data (except user files which where received). 
+
+## Permissions 
+
+This app requires storage access on your device. This permission is necessary for using this app, if you want to share (send) and receive (download) files. We will not process your files (even not locally!), except the ones you have explicitly selected for sharing. 
+Furthermore, the app can read the WiFi state. This status info is only progressed locally and will not leave your device. 
 
 ## Progressed data
 
