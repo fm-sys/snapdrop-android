@@ -17,8 +17,5 @@ Berkat kesangat-sederhanaannya, "Snapdrop untuk Android" membuat kehidupan sehar
 KODE SUMBER:
 https://github.com/fm-sys/snapdrop-android
 
-KERAHASIAAN:
-Aplikasi ini berinteraksi dengan https://snapdrop.net/ untuk dapat menemukan perangkat lain yang menjalankan Snapdrop di jaringan lokal Anda. Namun, tidak ada file Anda yang pernah dikirim ke server mana pun tetapi ditransfer langsung antar perangkat Anda secara peer-to-peer.
-
 PENGHARGAAN:
-Aplikasi dan ikonnya didasarkan pada proyek Sumber Terbuka Snapdrop, yang di-host dan dikelola oleh RobinLinus. Lihat juga https://www.github.com/robinlinus/snapdrop
+Aplikasi ini didukung oleh proyek Sumber Terbuka Snapdrop, yang di-host dan dikelola oleh RobinLinus. Lihat juga https://www.github.com/robinlinus/snapdrop
