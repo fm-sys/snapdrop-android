@@ -12,13 +12,10 @@ Snapdrop ist eine Lösung für den Austausch von Dateien im Heimnetzwerk, die vo
 
 Aber selbst wenn es theoretisch vollständig in Ihrem Browser funktionieren würde, werden Sie diese App dennoch lieben, wenn Sie Snapdrop häufiger in ihrem täglichen Leben verwenden möchten. Dank perfekter Integration in das Android-Betriebssystem, könne sie ihre Dateien noch schneller versenden. Direkt von anderen Apps aus können Sie Snapdrop zum Teilen auswählen.
 
-Dank seiner radikalen Einfachheit erleichtert "Snapdrop for Android" den Alltag von Hunderten von Benutzern. Als Open-Source-Projekt haben wir keinerlei kommerzielles Interesse, sondern wollen viel lieber die Welt ein Stückchen besser machen. Schließen Sie sich an und überzeugen Sie sich selbst!
+Dank seiner radikalen Einfachheit erleichtert "Snapdrop for Android" den Alltag von tausenden Benutzern. Als Open-Source-Projekt haben wir keinerlei kommerzielles Interesse, sondern wollen viel lieber die Welt ein Stückchen besser machen. Schließen Sie sich an und überzeugen Sie sich selbst!
 
 SOURCE CODE:
 https://github.com/fm-sys/snapdrop-android
 
-DATENSCHUTZ:
-Diese App interagiert mit https://snapdrop.net/ um andere Geräte zu entdecken, die Snapdrop in Ihrem lokalen Netzwerk verwenden. Allerdings wird keine Ihrer Dateien jemals an einen Server gesendet, sondern direkt Peer-to-Peer zwischen Ihren Geräten übertragen.
-
 DANKSAGUNG:
-Die App und ihr Symbol basieren auf dem Snapdrop Open-Source-Projekt, das von RobinLinus gehostet und gepflegt wird. Siehe auch https://www.github.com/robinlinus/snapdrop
+Die App basiert auf dem Snapdrop Open-Source-Projekt, das von RobinLinus gehostet und gepflegt wird. Siehe auch https://www.github.com/robinlinus/snapdrop
