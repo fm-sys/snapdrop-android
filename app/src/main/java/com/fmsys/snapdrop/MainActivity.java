@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     public Intent uploadIntent = null;
 
-    private BroadcastReceiver receiver = new BroadcastReceiver() {
+    private final BroadcastReceiver receiver = new BroadcastReceiver() {
 
         @Override
         public void onReceive(final Context context, final Intent intent) {
