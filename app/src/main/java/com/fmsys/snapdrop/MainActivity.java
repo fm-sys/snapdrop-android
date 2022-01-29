@@ -66,6 +66,7 @@ import com.fmsys.snapdrop.utils.NetworkUtils;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false);
     public boolean onlyText = false;
 
-    public List<JavaScriptInterface.FileHeader> downloadFilesList = new ArrayList<>();
+    public final List<JavaScriptInterface.FileHeader> downloadFilesList = Collections.synchronizedList(new ArrayList<>());
     public boolean dialogVisible = false;
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -183,13 +184,15 @@ public class MainActivity extends AppCompatActivity {
         CookieManager.getInstance().setAcceptThirdPartyCookies(binding.webview, true);
 
         binding.webview.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
-            final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
-            while (iterator.hasNext()) {
-                final JavaScriptInterface.FileHeader file = iterator.next();
-                if (file.getSize().equals(String.valueOf(contentLength))) {
-                    copyTempToDownloads(file);
-                    iterator.remove();
-                    break;
+            synchronized (downloadFilesList) {
+                final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
+                while (iterator.hasNext()) {
+                    final JavaScriptInterface.FileHeader file = iterator.next();
+                    if (file.getSize().equals(String.valueOf(contentLength))) {
+                        copyTempToDownloads(file);
+                        iterator.remove();
+                        break;
+                    }
                 }
             }
         });
