@@ -357,7 +357,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        unregisterReceiver(receiver);
+        try {
+            unregisterReceiver(receiver);
+        } catch (IllegalArgumentException ignored) {
+            Log.w("MainActivity.onStop", "No BroadcastReceiver registered");
+        }
         if (!transfer.get() && !dialogVisible && uploadMessage == null) {
             binding.webview.loadUrl("about:blank");
             setLastServerConnection(0);
