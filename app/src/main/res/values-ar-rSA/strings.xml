@@ -14,6 +14,7 @@
     <!-- Action Buttons -->
     <string name="open">فَتح</string>
     <string name="reset">إعادَةُ الضَّبط</string>
+    <string name="copy">نسخ</string>
     <!-- Settings / About -->
     <string name="title_activity_about">حَول سناب درُوب لِنِظامِ أندُروِيد</string>
     <string name="license">الترخيص</string>
@@ -21,6 +22,7 @@
     <string name="source">شفرة المصدر</string>
     <string name="source_summary">افحص شفرة المصدر على GitHub</string>
     <string name="components">مُكوِناتٌ مَفتُوحَةُ المَصدَر</string>
+    <string name="logs">سجلات تتبع الأخطاء</string>
     <string name="components_summary">اِنقر للعَرض</string>
     <string name="crowdin">التَرجَمَة</string>
     <string name="crowdin_summary">سَاعِد فِي تَرجَمَةِ <b>سناب درُوب لِنِظامِ أندُروِيد</b> إلى لُغَتِكَ المُفضَّلة</string>
