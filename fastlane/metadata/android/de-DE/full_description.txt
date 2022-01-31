@@ -1,4 +1,4 @@
-Snapdrop für Android ist ein Android™ Client für https://snapdrop.net/, einer kostenlosen Open-Source-Lösung zum Teilen lokaler Dateien.
+Snapdrop für Android ist ein Android™ Client für https://snapdrop.net/, eine kostenlose Open-Source-Lösung zum Teilen lokaler Dateien.
 
 Haben Sie auch manchmal das Problem, dass Sie nur schnell eine Datei von Ihrem Telefon auf den PC übertragen müssen?
 
