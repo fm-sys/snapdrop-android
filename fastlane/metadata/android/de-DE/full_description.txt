@@ -10,7 +10,7 @@ Snapdrop!
 
 Snapdrop ist eine Lösung für den Austausch von Dateien im Heimnetzwerk, die vollständig in Ihrem Browser funktioniert. Ein bisschen wie Apple's Airdrop, aber eben nicht nur für Apple-Geräte. Windows, Linux, Android, IPhone, Mac - alles kein Problem!
 
-Aber selbst wenn es theoretisch vollständig in Ihrem Browser funktionieren würde, werden Sie diese App dennoch lieben, wenn Sie Snapdrop häufiger in ihrem täglichen Leben verwenden möchten. Dank perfekter Integration in das Android-Betriebssystem, könne sie ihre Dateien noch schneller versenden. Direkt von anderen Apps aus können Sie Snapdrop zum Teilen auswählen.
+Aber selbst wenn es theoretisch vollständig in Ihrem Browser funktionieren würde, werden Sie diese App dennoch lieben, wenn Sie Snapdrop häufiger in ihrem täglichen Leben verwenden möchten. Dank perfekter Integration in das Android-Betriebssystem, können sie ihre Dateien noch schneller versenden. Direkt von anderen Apps aus können Sie Snapdrop zum Teilen auswählen.
 
 Dank seiner radikalen Einfachheit erleichtert "Snapdrop for Android" den Alltag von tausenden Benutzern. Als Open-Source-Projekt haben wir keinerlei kommerzielles Interesse, sondern wollen viel lieber die Welt ein Stückchen besser machen. Schließen Sie sich an und überzeugen Sie sich selbst!
 
