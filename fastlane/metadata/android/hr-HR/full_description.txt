@@ -18,4 +18,4 @@ IZVORNI KOD:
 https://github.com/fm-sys/snapdrop-android
 
 ZASLUGE:
-Ova aplikacija je na temelju Snapdrop Open Source projekta, koju RobinLinus održava. Također pogledajte https://www.github.com/robinlinus/snapdrop
+Ova aplikacija je na temelju otvorenog koda projekta Snapdropu, koju RobinLinus održava. Također pogledajte https://www.github.com/robinlinus/snapdrop
