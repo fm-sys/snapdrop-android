@@ -12,13 +12,10 @@ Snapdrop je usluga za lokalno dijeljenje datoteka koja radi u potpunosti unutar 
 
 Međutim, čak iako bi teoretski funkcionirao u potpunosti unutar web preglednika, ova aplikacija je savršena za češće korištenje Snapdropa u svakodnevnom životu. Zahvaljujući savršenoj integraciji u Android operativni sustav, datoteke se mogu slati još brže. Iz drugih aplikacija možete direktno odabrati Snapdrop za dijeljenje datoteka.
 
-Zahvaljujući temeljnoj jednostavnosti, "Snapdrop za Android" čini svakodnevnicu lakšom tisućama korisnika. Kao projekt otvorenog koda, nemamo nikakve komercijalne namjere, već samo želimo učiniti svijet nešto boljim. Pridružite se i uvjerite se sami!
+Zahvaljujući jednostavnosti, "Snapdrop za Androida" olakšava dnevni dan za hiljadu od korisnika. Kao projekt otvorenog koda, nemamo nikakve komercijalne namjere, već samo želimo učiniti svijet nešto boljim. Pridružite se i uvjerite se sami!
 
 IZVORNI KOD:
 https://github.com/fm-sys/snapdrop-android
 
-OBAVIJEST O PRIVATNOSTI:
-Ova aplikacija je u interakciji s https://snapdrop.net/ kako bi mogla pronaći druge uređaje koji koriste Snapdrop na vašoj lokalnoj mreži. Međutim, nijedna vaša datoteka neće biti poslana nijednom serveru, već direktno razmijenjena između vaših uređaja peer-to-peer metodom.
-
 ZASLUGE:
-Ova aplikacija i njezina ikona su bazirani na Snapdrop projektu otvorenog koda, koji vodi i održava RobinLinus. Također pogledajte https://www.github.com/robinlinus/snapdrop
+Ova aplikacija je na temelju Snapdrop Open Source projekta, koju RobinLinus održava. Također pogledajte https://www.github.com/robinlinus/snapdrop
