@@ -1,4 +1,4 @@
-Snapdrop for Android is een Android™ app voor de gratis en open source lokale oplossing voor het delen van bestanden https://snapdrop.net/.
+Snapdrop voor Android is een Android™-client voor de gratis en open source oplossing voor het lokaal delen van bestanden https://snapdrop.net/.
 
 Heeft u soms ook het probleem dat u gewoon alleen snel een bestand van uw telefoon naar uw PC wilt overzetten?
 
