@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop voor Android</string>
     <string name="err_no_browser">Browser kan niet worden geopend</string>
-    <!-- Update -->
+    <string name="err_no_app">Geen app gevonden om dit bestand te openen</string>
     <!-- Welcome -->
     <string name="app_welcome">Welkom bij Snapdrop</string>
     <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> of de Snapdrop app op een ander apparaat op uw lokale WiFi-netwerk.\n2. Tik op het apparaat waarmee je de bestand(en) wilt delen.\n3. Klaar! De bestand(en) worden verstuurd…</string>
     <!-- Download -->
+    <string name="download_save_pending">Het bestand opslaan. Even geduld…</string>
     <string name="download_successful">Download succesvol</string>
     <string name="notification_channel_name">Download voltooid</string>
     <!-- Action Buttons -->
     <string name="open">open</string>
     <string name="reset">reset</string>
+    <string name="copy">kopiëren</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Over Snapdrop voor Android</string>
     <string name="license">Licentie</string>
     <string name="pref_category_settings">Instellingen</string>
+    <string name="source">Sourcecode</string>
+    <string name="source_summary">Source Code op GitHub</string>
     <string name="components">Open source componenten</string>
+    <string name="logs">Foutopsporingslogboek</string>
     <string name="components_summary">Tik om weer te geven</string>
     <string name="crowdin">Localisatie</string>
     <string name="crowdin_summary">Help <b>Snapdrop voor Android</b> te vertalen naar uw favoriete taal</string>
+    <string name="support_us">Snapdrop steunen</string>
+    <string name="support_us_summary">Zie hoe u de Snapdrop community kunt ondersteunen</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Blijf op de hoogte over <b>Snapdrop for Android</b></string>
+    <string name="twitter_summary">Vertel over <b>Snapdrop voor Android</b></string>
     <string name="version">Versie</string>
     <string name="pref_device_name_title">Apparaatnaam</string>
     <string name="pref_device_name_summary">Stel een apparaatnaam in</string>
-    <string name="keep_on_summary">Schakel in als u problemen ondervindt met bestandsoverdrachten die worden onderbroken wanneer het scherm wordt uitgeschakeld</string>
-    <string name="keep_on_title">Scherm aanhouden</string>
+    <string name="keep_on_summary">(Aanbevolen) Veel apparaten hebben problemen met onderbroken overdrachten waneer het scherm wordt uitgeschakeld</string>
+    <string name="keep_on_title">Houd het scherm aan tijdens de overdracht</string>
     <string name="settings_theme_title">Thema</string>
     <string-array name="darkmode_entries">
         <item>Systeeminstelling</item>
@@ -34,7 +42,7 @@
         <item>Donker</item>
     </string-array>
     <string name="baseurl_title">Standaard URL</string>
-    <string name="save_location">Sla locatie op</string>
+    <string name="save_location">Locatie opslaan</string>
     <!-- File sharing -->
     <string name="intent_file">Een bestand is geselecteerd om te delen</string>
     <string name="intent_files">Bestanden zijn geselecteerd om te delen</string>
@@ -42,5 +50,4 @@
     <string name="error_filechooser">Kan bestandskiezer niet openen</string>
     <string name="error_network">Controleer alstublieft of u met een WiFi netwerk verbonden bent</string>
     <string name="ignore_error_network">Toch proberen</string>
-    <!-- baseURL -->
 </resources>
