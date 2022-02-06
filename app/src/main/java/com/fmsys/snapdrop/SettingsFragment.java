@@ -62,9 +62,9 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         logsPref.setOnPreferenceClickListener(pref -> {
             new AlertDialog.Builder(getContext())
                     .setTitle(R.string.logs)
-                    .setMessage(LogUtils.requestLogcatLogs())
+                    .setMessage(LogUtils.getLogs(prefs, true))
                     .setPositiveButton(android.R.string.ok, null)
-                    .setNeutralButton(R.string.copy, (d, id) -> ClipboardUtils.copy(this.getContext(), LogUtils.logcatLogs))
+                    .setNeutralButton(R.string.copy, (d, id) -> ClipboardUtils.copy(this.getContext(), LogUtils.getLogs(prefs, false)))
                     .show();
             return true;
         });

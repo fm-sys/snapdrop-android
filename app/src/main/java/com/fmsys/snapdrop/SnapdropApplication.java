@@ -1,5 +1,6 @@
 package com.fmsys.snapdrop;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,13 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
 
-import java.util.concurrent.atomic.AtomicInteger;
+import com.fmsys.snapdrop.utils.LogUtils;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 
 public class SnapdropApplication extends Application {
 
     private static SnapdropApplication instance;
-    private static final AtomicInteger notificationCounter = new AtomicInteger(0);
+
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm:ss.SSS", Locale.US);
 
     public SnapdropApplication() {
         instance = this;
@@ -27,6 +33,7 @@ public class SnapdropApplication extends Application {
 
     @Override
     public void onCreate() {
+        installUncaughtExceptionHandler();
         setAppTheme(getApplicationContext());
         super.onCreate();
     }
@@ -60,5 +67,22 @@ public class SnapdropApplication extends Application {
 
     public static boolean isDarkTheme(final @NonNull Context context) {
         return isDarkThemeActive(context, getAppTheme(context));
+    }
+
+    @SuppressLint("ApplySharedPref")
+    private void installUncaughtExceptionHandler() {
+        final Thread.UncaughtExceptionHandler previousHandler = Thread.getDefaultUncaughtExceptionHandler();
+        Thread.setDefaultUncaughtExceptionHandler((thread, ex) -> {
+
+
+            PreferenceManager.getDefaultSharedPreferences(this).edit()
+                    .putString(getString(R.string.pref_last_crash), "--------- Last crash\n" + sdf.format(new Date()) + " " + LogUtils.getStacktrace(ex))
+                    .commit();
+
+            // Call the default handler
+            if (previousHandler != null) {
+                previousHandler.uncaughtException(thread, ex);
+            }
+        });
     }
 }
