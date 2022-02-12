@@ -1,0 +1,21 @@
+Snapdrop voor Android is een Android™-client voor de gratis en open source oplossing voor het lokaal delen van bestanden https://snapdrop.net/.
+
+Heeft u soms ook het probleem dat u gewoon alleen snel een bestand van uw telefoon naar uw PC wilt overzetten?
+
+USB? - Oubollig!
+Bluetooth? - Veel te omslachtig en traag!
+E-mail? - Alstublieft, niet nog een e-mail die ik naar mijzelf moet schrijven!
+
+Snapdrop!
+
+Snapdrop is een lokale oplossing voor het delen van bestanden die volledig werkt in uw browser. Een beetje zoals Apple's Airdrop, maar niet alleen voor Apple apparaten. Windows, Linux, Android, iPhone, Mac - helemaal geen probleem!
+
+Maar zelfs als het theoretisch gezien volledig in uw browser werkt, zult u deze app geweldig vinden als u Snapdrop vaak gebruikt in uw dagelijks leven. Dankzij de perfecte integratie in het Android™ besturingssysteem worden bestanden nog sneller verzonden. Vanuit andere apps kunt u Snapdrop selecteren om te delen.
+
+Dankzij zijn eenvoud maakt "Snapdrop voor Android" het dagelijkse leven van duizenden gebruikers gemakkelijker. Als open source project hebben we geen commerciële belangen, maar willen we de wereld een beetje beter maken. Doe mee en overtuig jezelf!
+
+SOURCE CODE:
+https://github.com/fm-sys/snapdrop-android
+
+CREDIT:
+De app is gebaseerd op het Snapdrop Open Source project, dat wordt gehost en onderhouden door RobinLinus. Zie ook https://www.github.com/robinlinus/snapdrop

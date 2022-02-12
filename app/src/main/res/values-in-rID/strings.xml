@@ -3,7 +3,7 @@
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop untuk Android</string>
     <string name="err_no_browser">Tidak bisa membuka browser</string>
-    <string name="err_no_app">Tidak ada aplikasi yang diinstal untuk membuka file ini</string>
+    <string name="err_no_app">Tidak ada aplikasi yang terpasang untuk membuka file ini</string>
     <!-- Welcome -->
     <string name="app_welcome">Selamat datang di Snapdrop</string>
     <string name="app_welcome_summary">1. Buka <a href="https://snapdrop.net">snapdrop.net</a> atau aplikasi Snapdrop di perangkat lain di jaringan WiFi lokal Anda.\n2. Ketuk perangkat yang ingin Anda bagikan file.\n3. Selesai! Berkas akan dikirim…</string>
@@ -24,7 +24,7 @@
     <string name="components">Komponen sumber terbuka</string>
     <string name="logs">Catatan Debug</string>
     <string name="components_summary">Ketuk untuk menampilkan</string>
-    <string name="crowdin">Lokalisasi</string>
+    <string name="crowdin">Terjemahan Lokal</string>
     <string name="crowdin_summary">Bantu untuk menerjemahkan <b>Snapdrop untuk Android</b> ke dalam bahasa favorit Anda</string>
     <string name="support_us">Dukung Snapdrop</string>
     <string name="support_us_summary">Lihat, bagaimana Anda dapat mendukung komunitas Snapdrop</string>
@@ -33,11 +33,11 @@
     <string name="version">Versi</string>
     <string name="pref_device_name_title">Nama perangkat</string>
     <string name="pref_device_name_summary">Tetapkan nama perangkat sesuai keinginan anda</string>
-    <string name="keep_on_summary">(Disarankan) Banyak perangkat mengalami masalah dengan transfer yang terputus saat layar mati</string>
+    <string name="keep_on_summary">(Disarankan) Kebanyakan perangkat mengalami masalah transfer terputus ketika layar dalam keadaan mati</string>
     <string name="keep_on_title">Tetap aktifkan layar saat mentransfer</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
-        <item>Sistem Standar</item>
+        <item>Bawaan Sistem</item>
         <item>Terang</item>
         <item>Gelap</item>
     </string-array>
