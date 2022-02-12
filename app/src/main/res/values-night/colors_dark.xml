@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#282828</color>
-    <bool name="isLightPrimaryColor">false</bool>
+    <bool name="isLightTheme">false</bool>
 
     <color name="colorBackground">#121212</color>
     <color name="dialogBackground">#424242</color>

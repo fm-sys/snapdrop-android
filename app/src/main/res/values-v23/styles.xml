@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="BaseAppTheme">
+    <style name="AppTheme_v23" parent="AppTheme_v21">
         <item name="android:statusBarColor">@color/colorPrimary</item>
-        <item name="android:windowLightStatusBar">@bool/isLightPrimaryColor</item>
+        <item name="android:windowLightStatusBar">@bool/isLightTheme</item>
     </style>
+
+    <style name="AppTheme" parent="AppTheme_v23" />
 </resources>
