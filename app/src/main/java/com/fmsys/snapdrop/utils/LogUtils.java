@@ -1,8 +1,10 @@
 package com.fmsys.snapdrop.utils;
 
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.util.Log;
 
+import com.fmsys.snapdrop.BuildConfig;
 import com.fmsys.snapdrop.R;
 import com.fmsys.snapdrop.SnapdropApplication;
 
@@ -21,7 +23,13 @@ public class LogUtils {
 
     public static String getLogs(final SharedPreferences prefs, final boolean refresh) {
         if (refresh) {
-            logcatLogs = prefs.getString(SnapdropApplication.getInstance().getApplicationContext().getString(R.string.pref_last_crash), "") + requestLogcatLogs();
+            logcatLogs = "--------- System Information" +
+                    "\n- Device type: " + Build.MODEL + " (" + Build.PRODUCT + ", " + Build.BRAND + ')' +
+                    "\n- Android version: " + Build.VERSION.RELEASE +
+                    "\n- Snapdrop app version: " + BuildConfig.VERSION_NAME +
+                    "\n" +
+                    prefs.getString(SnapdropApplication.getInstance().getApplicationContext().getString(R.string.pref_last_crash), "") +
+                    requestLogcatLogs();
         }
         return logcatLogs;
     }
