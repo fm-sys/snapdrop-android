@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Android用Snapdrop</string>
     <string name="err_no_browser">ブラウザを開けません</string>
     <string name="err_no_app">このファイルを開くアプリがインストールされていません</string>
-    <!-- Update -->
     <!-- Welcome -->
     <string name="app_welcome">Snapdropへようこど</string>
     <string name="app_welcome_summary">1. 同じWiFiに接続しているデバイスで<a href="https://snapdrop.net">snapdrop.net</a>を開くか、Snapdropアプリを起動します。\n2. ファイルをシェアしたいデバイスを選択します。\n3. ファイルが転送されます…</string>
@@ -14,16 +14,22 @@
     <!-- Action Buttons -->
     <string name="open">開く</string>
     <string name="reset">リセット</string>
+    <string name="copy">コピー</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Snapdrop for Androidについて</string>
     <string name="license">ライセンス</string>
     <string name="pref_category_settings">設定</string>
+    <string name="source">ソースコード</string>
+    <string name="source_summary">GitHub でソースコードを参照</string>
     <string name="components">オープンソースコンポーネント</string>
+    <string name="logs">デバッグ ログ</string>
     <string name="components_summary">タップして表示</string>
     <string name="crowdin">翻訳</string>
     <string name="crowdin_summary"><b>Snapdrop for Android</b>を好きな言語で翻訳することを手伝ってください</string>
+    <string name="support_us">Snapdropをサポート</string>
+    <string name="support_us_summary">Snapdropコミュニティをサポートする方法</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary"><b>Snapdrop for Android</b>についての情報を受け取る</string>
+    <string name="twitter_summary"><b>Snapdrop for Android</b>について</string>
     <string name="version">バージョン</string>
     <string name="pref_device_name_title">デバイス名</string>
     <string name="pref_device_name_summary">カスタムデバイス名を設定する</string>
@@ -44,5 +50,4 @@
     <string name="error_filechooser">ファイル選択を開けません</string>
     <string name="error_network">WiFiネットワークに接続されているか確認してください</string>
     <string name="ignore_error_network">とにかく進む</string>
-    <!-- baseURL -->
 </resources>
