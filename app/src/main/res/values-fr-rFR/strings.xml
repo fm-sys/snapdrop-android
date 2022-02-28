@@ -50,4 +50,11 @@
     <string name="error_filechooser">Impossible d\'ouvrir le sélecteur de fichiers</string>
     <string name="error_network">Veuillez vérifier que vous êtes connecté à un réseau Wi-Fi</string>
     <string name="ignore_error_network">Laisse-moi quand même entrer</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Ouvrez Snapdrop sur d\'autres appareils pour envoyer des fichiers</string>
+    <string name="website_instruction">Touchez pour envoyer des fichiers ou appuyez longuement pour envoyer un message</string>
+    <string name="website_file_received">Fichier reçu</string>
+    <string name="website_file_ask_always">Demander de sauvegarder chaque fichier avant le téléchargement</string>
+    <string name="website_file_download">Enregistrer</string>
+    <string name="website_footer_discovery">Vous pouvez être découvert par tous les utilisateurs de ce réseau</string>
 </resources>

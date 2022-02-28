@@ -50,4 +50,13 @@
     <string name="error_filechooser">Impossibile aprire il selettore di file</string>
     <string name="error_network">Verifica di essere connesso ad una rete WiFi</string>
     <string name="ignore_error_network">Entra comunque</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Apri Snapdrop su altri dispositivi per inviare i file</string>
+    <string name="website_instruction">Premi per inviare i file o tieni premuto per inviare un messaggio</string>
+    <string name="website_file_received">File ricevuto</string>
+    <string name="website_file_ask_always">Chiedi di salvare ogni file prima di scaricarlo</string>
+    <string name="website_file_download">Salva</string>
+    <string name="website_footer_discovery">Potresti essere individuato da tutti su questa rete</string>
+    <string name="website_footer_known_as">Il tuo soprannome è %s</string>
+    <string name="website_about_subheading">Il modo più semplice per trasferire file tra dispositivi</string>
 </resources>
