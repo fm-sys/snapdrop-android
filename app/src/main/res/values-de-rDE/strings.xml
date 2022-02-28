@@ -22,7 +22,7 @@
     <string name="source">Quelltext</string>
     <string name="source_summary">Quelltext auf GitHub ansehen</string>
     <string name="components">Open-Source-Komponenten</string>
-    <string name="logs">Fehlersuchprotokolle</string>
+    <string name="logs">Debug-Protokolle</string>
     <string name="components_summary">Zum Anzeigen tippen</string>
     <string name="crowdin">Übersetzung</string>
     <string name="crowdin_summary">Helfen Sie <b>Snapdrop für Android</b> in Ihre bevorzugte Sprache zu übersetzen</string>
@@ -50,4 +50,11 @@
     <string name="error_filechooser">Dateiauswahl kann nicht gestartet werden</string>
     <string name="error_network">Sie müssen mit einem WLAN verbunden sein, um Snapdrop nutzen zu können</string>
     <string name="ignore_error_network">Trotzdem laden</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Öffne Snapdrop auf anderen Geräten um Dateien zu senden</string>
+    <string name="website_instruction">Tippen, um Dateien zu senden, oder lange tippen, um eine Nachricht zu senden</string>
+    <string name="website_file_received">Datei empfangen</string>
+    <string name="website_file_ask_always">Bei jeder Datei fragen, ob sie gespeichert werden soll</string>
+    <string name="website_file_download">Speichern</string>
+    <string name="website_footer_discovery">Sie können von jedem in diesem Netzwerk entdeckt werden</string>
 </resources>
