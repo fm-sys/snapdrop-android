@@ -62,4 +62,5 @@
     <string name="website_file_ask_always">Ask to save each file before downloading</string>
     <string name="website_file_download">Save</string>
     <string name="website_footer_discovery">You can be discovered by everyone on this network</string>
+    <string name="website_footer_known_as">You are known as %s</string>
 </resources>

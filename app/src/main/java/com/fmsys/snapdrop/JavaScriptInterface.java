@@ -67,6 +67,11 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
+    public String getYouAreKnownAsTranslationString(final String displayName) {
+        return context.getString(R.string.website_footer_known_as, displayName);
+    }
+
+    @JavascriptInterface
     public int getVersionId() {
         return BuildConfig.VERSION_CODE;
     }

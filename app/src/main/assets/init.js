@@ -109,6 +109,7 @@ Peer.prototype._onChunkReceived = function(chunk){
     this._oCR(chunk);
 };
 
+//detect dialogs
 Dialog.prototype._shw = Dialog.prototype.show;
 Dialog.prototype.show = function(){
     SnapdropAndroid.dialogShown();
@@ -120,3 +121,15 @@ Dialog.prototype.hide = function(){
     SnapdropAndroid.dialogHidden();
     this._hde();
 };
+
+//show localized display name
+let localizeDisplayName = function(str){
+    document.getElementById('displayName').textContent = SnapdropAndroid.getYouAreKnownAsTranslationString(str);
+};
+
+window.addEventListener('display-name', e => window.setTimeout(_ => localizeDisplayName(e.detail.message.displayName), 100), false);
+
+let currentText = document.getElementById('displayName').textContent;
+if(currentText.startsWith("You are known as ")){
+    localizeDisplayName(currentText.split("You are known as ")[1]);
+}
