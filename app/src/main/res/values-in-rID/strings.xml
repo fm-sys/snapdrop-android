@@ -57,4 +57,6 @@
     <string name="website_file_ask_always">Minta untuk menyimpan setiap file sebelum mengunduh</string>
     <string name="website_file_download">Simpan</string>
     <string name="website_footer_discovery">Anda dapat ditemukan oleh semua orang di jaringan ini</string>
+    <string name="website_footer_known_as">Anda dikenal sebagai %s</string>
+    <string name="website_about_subheading">Cara termudah untuk mentransfer file antar perangkat</string>
 </resources>
