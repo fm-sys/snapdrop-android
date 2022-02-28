@@ -9,7 +9,7 @@
     <string name="app_welcome_summary">1. Abre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicación Snapdrop en cualquier otro dispositivo de tu red WiFi local.\n2. Pulse en el dispositivo con el que desea compartir los archivos.\n3. ¡Listo! Los archivos se enviarán…</string>
     <!-- Download -->
     <string name="download_save_pending">Almacenando el archivo. Por favor, tenga un poco de paciencia…</string>
-    <string name="download_successful">Descargar realizada con éxito</string>
+    <string name="download_successful">Descarga exitosa</string>
     <string name="notification_channel_name">Descarga de archivos completado</string>
     <!-- Action Buttons -->
     <string name="open">Abrir</string>
@@ -17,14 +17,14 @@
     <string name="copy">Copiar</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Cuéntales sobre Snapdrop para Android</string>
-    <string name="license">Toda la vida</string>
+    <string name="license">Licencia</string>
     <string name="pref_category_settings">Configuraciones</string>
     <string name="source">Cód. origen</string>
     <string name="source_summary">Ver el código fuente en GitHub</string>
-    <string name="components">Componentes Open Source</string>
+    <string name="components">Componentes de código abierto</string>
     <string name="logs">Depurar Registro</string>
     <string name="components_summary">Toque para mostrar</string>
-    <string name="crowdin">Notificar sobre el registro de nuevos clientes</string>
+    <string name="crowdin">Localización</string>
     <string name="crowdin_summary">Ayuda a traducir <b>Snapdrop para Android</b> en tu idioma favorito</string>
     <string name="support_us">Apoya a Snapdrop</string>
     <string name="support_us_summary">Mira cómo puedes apoyar a la comunidad de Snapdrop</string>
