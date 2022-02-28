@@ -54,4 +54,12 @@
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
     <string name="ignore_error_network">Let me in anyway</string>
+
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Open Snapdrop on other devices to send files</string>
+    <string name="website_instruction">Tap to send files or long tap to send a message</string>
+    <string name="website_file_received">File Received</string>
+    <string name="website_file_ask_always">Ask to save each file before downloading</string>
+    <string name="website_file_download">Save</string>
+    <string name="website_footer_discovery">You can be discovered by everyone on this network</string>
 </resources>

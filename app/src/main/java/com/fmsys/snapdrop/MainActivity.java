@@ -502,6 +502,7 @@ public class MainActivity extends AppCompatActivity {
             if (!currentlyOffline) {
                 binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"));
                 binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
+                WebsiteLocalizer.localize(binding.webview);
 
                 // welcome dialog
                 if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
