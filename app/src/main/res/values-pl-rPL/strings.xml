@@ -50,4 +50,11 @@
     <string name="error_filechooser">Nie można otworzyć wyboru plików</string>
     <string name="error_network">Upewnij się, że jesteś podłączony do sieci WiFi</string>
     <string name="ignore_error_network">Spróbuj mimo wszystko</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Otwórz Snapdrop na innych urządzeniach aby wysyłać pliki</string>
+    <string name="website_instruction">Dotknij, aby wysłać pliki lub długie dotknięcie aby wysłać wiadomość</string>
+    <string name="website_file_received">Otrzymano plik</string>
+    <string name="website_file_ask_always">Pytaj, gdzie zapisywać każdy plik przed jego pobraniem</string>
+    <string name="website_file_download">Zapisz</string>
+    <string name="website_footer_discovery">Możesz zostać odkryty przez wszystkich w tej sieci</string>
 </resources>
