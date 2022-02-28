@@ -17,6 +17,7 @@ public class WebsiteLocalizer {
         FILE_ASK_EACH_TIME("label[for='autoDownload']", R.string.website_file_ask_always),
         FILE_DOWNLOAD("#download", R.string.website_file_download),
         FOOTER_DISCOVERY("footer>div.font-body2", R.string.website_footer_discovery),
+        ABOUT_SUBHEADING("x-about>section>div.font-subheading", R.string.website_about_subheading),
         ;
 
         final String selector;

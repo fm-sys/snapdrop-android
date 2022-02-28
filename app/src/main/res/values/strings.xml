@@ -63,4 +63,5 @@
     <string name="website_file_download">Save</string>
     <string name="website_footer_discovery">You can be discovered by everyone on this network</string>
     <string name="website_footer_known_as">You are known as %s</string>
+    <string name="website_about_subheading">The easiest way to transfer files across devices</string>
 </resources>
