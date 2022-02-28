@@ -57,4 +57,6 @@
     <string name="website_file_ask_always">Chiedi di salvare ogni file prima di scaricarlo</string>
     <string name="website_file_download">Salva</string>
     <string name="website_footer_discovery">Potresti essere individuato da tutti su questa rete</string>
+    <string name="website_footer_known_as">Il tuo soprannome è %s</string>
+    <string name="website_about_subheading">Il modo più semplice per trasferire file tra dispositivi</string>
 </resources>
