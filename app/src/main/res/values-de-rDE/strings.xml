@@ -57,4 +57,6 @@
     <string name="website_file_ask_always">Bei jeder Datei fragen, ob sie gespeichert werden soll</string>
     <string name="website_file_download">Speichern</string>
     <string name="website_footer_discovery">Sie können von jedem in diesem Netzwerk entdeckt werden</string>
+    <string name="website_footer_known_as">Sie heißen %s</string>
+    <string name="website_about_subheading">Die einfachste Möglichkeit, um Dateien zwischen Geräten zu übertragen</string>
 </resources>
