@@ -14,7 +14,7 @@ Aber selbst wenn es theoretisch vollständig in Ihrem Browser funktionieren wür
 
 Dank seiner radikalen Einfachheit erleichtert "Snapdrop for Android" den Alltag von tausenden Benutzern. Als Open-Source-Projekt haben wir keinerlei kommerzielles Interesse, sondern wollen viel lieber die Welt ein Stückchen besser machen. Schließen Sie sich an und überzeugen Sie sich selbst!
 
-SOURCE CODE:
+QUELLCODE:
 https://github.com/fm-sys/snapdrop-android
 
 DANKSAGUNG:
