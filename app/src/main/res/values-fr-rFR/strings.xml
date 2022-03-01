@@ -57,4 +57,6 @@
     <string name="website_file_ask_always">Demander de sauvegarder chaque fichier avant le téléchargement</string>
     <string name="website_file_download">Enregistrer</string>
     <string name="website_footer_discovery">Vous pouvez être découvert par tous les utilisateurs de ce réseau</string>
+    <string name="website_footer_known_as">Vous êtes identifié en tant que %s</string>
+    <string name="website_about_subheading">Le moyen le plus simple de transférer des fichiers sur tous les appareils</string>
 </resources>

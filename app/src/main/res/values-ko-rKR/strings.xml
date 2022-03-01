@@ -57,4 +57,6 @@
     <string name="website_file_ask_always">다운로드 전 항상 묻기</string>
     <string name="website_file_download">저장</string>
     <string name="website_footer_discovery">이 네트워크의 모두가 당신을 찾을 수 있습니다</string>
+    <string name="website_footer_known_as">당신의 이름은 %s 입니다</string>
+    <string name="website_about_subheading">기기간 파일을 전송하는 가장 쉬운 방법</string>
 </resources>
