@@ -6,14 +6,6 @@ body:
     attributes:
       value: |
         Welcome! Thanks for taking the time to submit a feature request.
-        
-  - type: checkboxes
-    id: checklist_feature
-    attributes:
-      label: Checklist
-      options:
-        - label: "I have searched the existing feature requests. This is a new ticket, NOT a duplicate or related to another open issue."
-          required: true
 
   - type: textarea
     id: feature_description
@@ -34,7 +26,7 @@ body:
       required: true
 
   - type: textarea
-    id: additional_context
+    id: feature_additional_context
     attributes:
       label: Additional context
       description: |
