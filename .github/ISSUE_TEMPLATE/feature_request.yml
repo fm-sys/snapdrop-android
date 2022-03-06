@@ -8,7 +8,7 @@ body:
         Welcome! Thanks for taking the time to submit a feature request.
         
   - type: checkboxes
-    id: checklist
+    id: checklist_feature
     attributes:
       label: Checklist
       options:
