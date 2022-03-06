@@ -1,0 +1,45 @@
+name: Feature request
+description: Suggest an idea for the "Snapdrop for Android" app.
+labels: feature request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Welcome! Thanks for taking the time to submit a feature request.
+        
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: "I have searched the existing feature requests. This is a new ticket, NOT a duplicate or related to another open issue."
+          required: true
+
+  - type: textarea
+    id: feature_description
+    attributes:
+      label: Describe the feature
+      description: Write a clear and concise description of what feature you are missing and why. Please also write the solution you'd like to see.
+      placeholder: E.g.: I'm always frustrated when [...]
+    validations:
+      required: true
+
+- type: textarea
+    id: feature_alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+      placeholder: Are there any alternatives?
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: |
+        If applicable, add screenshots to help explain your problem. You can also use this section to write any further context about the problem here.
+      placeholder: |
+        Drag the screenshot files here to attach them.
+    validations:
+      required: false
