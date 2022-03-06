@@ -12,7 +12,8 @@ body:
     attributes:
       label: Describe the feature
       description: Write a clear and concise description of what feature you are missing and why. Please also write the solution you'd like to see.
-      placeholder: "E.g.: I'm always frustrated when [...]"
+      placeholder: |
+        E.g.: I'm always frustrated when [...]
     validations:
       required: true
 
