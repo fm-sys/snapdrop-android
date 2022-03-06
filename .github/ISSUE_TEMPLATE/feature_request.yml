@@ -1,6 +1,6 @@
 name: Feature request
 description: Suggest an idea for the "Snapdrop for Android" app.
-labels: feature request
+labels: "feature request"
 body:
   - type: markdown
     attributes:
