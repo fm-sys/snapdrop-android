@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Snapdrop.net Repository
+    url: https://github.com/RobinLinus/snapdrop
+    about: If you have encountered a general https://snapdrop.net issue, please open a ticket in their repository.
