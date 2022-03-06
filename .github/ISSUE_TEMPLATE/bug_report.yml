@@ -1,5 +1,6 @@
 name: Bug report
 description: Create a bug report for the "Snapdrop for Android" app.
+labels: bug
 body:
   - type: markdown
     attributes:
@@ -13,7 +14,7 @@ body:
       options:
         - label: "I have searched the existing issues for my problem. This is a new ticket, NOT a duplicate or related to another open issue."
           required: true
-        - label: "I have updated "Snapdrop for Android" to the latest version. The bug is reproducible on this latest version."
+        - label: "I have updated \"Snapdrop for Android\" to the latest version. The bug is reproducible on this latest version."
           required: true
         - label: "I have checked, that this is NOT a general Snapdrop bug. It is only related to the Android app, and not reproducible with the website as well."
           required: true
