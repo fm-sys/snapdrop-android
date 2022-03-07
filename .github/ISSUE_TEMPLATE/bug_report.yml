@@ -55,6 +55,7 @@ body:
     attributes:
       label: Describe the bug
       description: Write a clear and concise description of the bug.
+      placeholder: What went wrong? 
     validations:
       required: true
 
