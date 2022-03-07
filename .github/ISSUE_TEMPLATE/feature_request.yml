@@ -17,7 +17,7 @@ body:
     validations:
       required: true
 
-- type: textarea
+  - type: textarea
     id: feature_alternatives
     attributes:
       label: Describe alternatives you've considered
