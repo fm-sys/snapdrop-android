@@ -12,13 +12,12 @@ Snapdrop là một giải pháp chia sẻ tệp tin nội bộ hoạt động ho
 
 Tuy nhiên, ngay cả khi nó hoàn toàn hoạt động trên nền web, bạn sẽ thích ứng dụng này nếu bạn muốn sử dụng Snapdrop thường xuyên hơn trong cuộc sống của mình. Nhờ tích hợp hoàn hảo vào hệ điều hành Android, các tệp được gửi nhanh hơn. Trực tiếp ở ứng dụng khác, bạn có thể chọn Snapdrop để chia sẻ.
 
-Nhờ tính đơn giản, "Snapdrop cho Android" giúp cuộc sống hàng ngày của hàng trăm người dùng trở nên dễ dàng hơn. Là một dự án mã nguồn mở, chúng tôi không có bất kỳ lợi ích thương mại nào mà muốn làm cho thế giới tốt đẹp hơn một chút. Hãy dùng thử nó!
+Nhờ tính đơn giản, "Snapdrop for Android" giúp cuộc sống hằng ngày của hàng trăm người dùng trở nên dễ dàng hơn. Là một dự án mã nguồn mở, chúng tôi không có bất kỳ lợi ích thương mại nào mà muốn làm cho thế giới tốt đẹp hơn một chút. Hãy dùng thử nó!
 
 MÃ NGUỒN:
 https://github.com/fm-sys/snapdrop-android
 
-SỰ RIÊNG TƯ:
-Ứng dụng này tương tác với https://snapdrop.net/ để có thể khám phá các thiết bị khác đang chạy Snapdrop trong mạng cục bộ của bạn. Tuy nhiên, không có tệp nào của bạn được gửi đến máy chủ nào mà được chuyển trực tiếp ngang hàng giữa các thiết bị của bạn.
-
 CREDIT:
-Ứng dụng và biểu tượng của nó dựa trên dự án Nguồn mở Snapdrop, được lưu trữ và duy trì bởi RobinLinus. Xem thêm https://www.github.com/robinlinus/snapdrop
+Ứng dụng và biểu tượng của nó dựa trên dự
+án Nguồn mở Snapdrop, được lưu trữ và duy
+trì bởi RobinLinus. Xem thêm https://www.github.com/robinlinus/snapdrop
