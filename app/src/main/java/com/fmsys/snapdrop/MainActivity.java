@@ -127,6 +127,14 @@ public class MainActivity extends AppCompatActivity {
         SnapdropApplication.setAppTheme(this);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+
+        final Intent intent = new Intent(this, BackgroundService.class);
+        ContextCompat.startForegroundService(this, intent);
+
+        if (true) { //for testing purposes only!!!
+            return;
+        }
+
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         
         baseURL = prefs.getString(getString(R.string.pref_baseurl), getString(R.string.baseURL));
