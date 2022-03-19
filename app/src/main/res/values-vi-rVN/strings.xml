@@ -14,6 +14,7 @@
     <!-- Action Buttons -->
     <string name="open">mở</string>
     <string name="reset">thiết lập lại</string>
+    <string name="copy">Sao chép</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Về ứng dụng Snapdrop cho Android</string>
     <string name="license">Bản quyền</string>
@@ -21,6 +22,7 @@
     <string name="source">Mã nguồn mở</string>
     <string name="source_summary">Xem mã nguồn mở của Snapdrop tại GitHub</string>
     <string name="components">Các thành phần nguồn mở</string>
+    <string name="logs">Nhật ký hoạt động</string>
     <string name="components_summary">Chạm để hiển thị</string>
     <string name="crowdin">Bản địa hóa</string>
     <string name="crowdin_summary">Giúp dịch <b>Snapdrop for Android</b> sang ngôn ngữ yêu thích của bạn</string>
@@ -48,4 +50,13 @@
     <string name="error_filechooser">Không thể mở trình chọn file</string>
     <string name="error_network">Vui lòng xác minh rằng bạn được kết nối với mạng WiFi</string>
     <string name="ignore_error_network">Cứ cho tôi vào đi</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Mở Snapdrop trên thiết bị khác để truyền file</string>
+    <string name="website_instruction">Nhấn để truyền file hoặc nhấn giữ để gửi tin nhắn</string>
+    <string name="website_file_received">Đã nhận file</string>
+    <string name="website_file_ask_always">Hỏi lưu file trước khi tải xuống</string>
+    <string name="website_file_download">Lưu</string>
+    <string name="website_footer_discovery">Bạn có thể được khám phá bởi bất kì ai trong cùng mạng bạn đang kết nối</string>
+    <string name="website_footer_known_as">Tên hiển thị của bạn là %s</string>
+    <string name="website_about_subheading">Cách dễ nhất để truyền file giữa các thiết bị</string>
 </resources>

@@ -1,4 +1,4 @@
-Snapdrop for Android 是为开源的本地文件共享解决方案 Snapdrop 开发的 Android™ 客户端。访问 https://snapdrop.net/ 来了解 Snapdrop。
+Snapdrop for Android 是免费且开源的本地文件共享解决方案的Android™客户端。访问 https://snapdrop.net/ 来了解 Snapdrop。
 
 您是否总是为无法便捷地将文件从您的手机传输到PC而苦恼？
 
@@ -12,13 +12,10 @@ Snapdrop 是一个本地文件共享解决方案，并且只使用您的浏览�
 
 然而，即使讲道理您只需要浏览器就能使用 Snapdrop，但这个应用会使频繁使用 Snapdrop 变得更舒适。 由于完全整合到 Android 操作系统，文件发送速度更快。 您还能直接从其他应用中选择用 Snapdrop 来分享文件。
 
-简单快捷的“Snapdrop for Android”使得数以百计的用户的日常生活更加便利。 作为一个开源项目，我们没有获得任何商业利益，只是想让世界变得更加美好。 立即下载，体验便捷！
+得益于其操作轻松方便，“Snapdrop 安卓版”已为成千上万的用户的日常生活中带来了便利。 作为一个开源项目，我们没有获得任何商业利益，只是想让世界变得更加美好。 立即下载，体验便捷！
 
 源代码：
 https://github.com/fm-sys/snapdrop-android
 
-隐私：
-此应用与 https://snapdrop.net/交互，可以发现其他在您的本地网络中运行 Snapdrop的设备。 然而，您的文件没有被发送到任何服务器，而是在您的设备之间对等地直接传输。
-
-所有权：
-本应用及其图标源于 RobinLinus 维护的开源项目 Snapdrop。 请参见 https://www.github.com/robinlinus/snapdrop
+致谢：
+本程序由Snapdrop开源项目提供支持，该项目由RobinLinus托管和维护。 请参见 https://www.github.com/robinlinus/snapdrop
