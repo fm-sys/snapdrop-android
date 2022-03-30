@@ -27,6 +27,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -63,6 +64,7 @@ import com.anggrayudi.storage.media.FileDescription;
 import com.anggrayudi.storage.media.MediaFile;
 import com.fmsys.snapdrop.databinding.ActivityMainBinding;
 import com.fmsys.snapdrop.utils.NetworkUtils;
+import com.fmsys.snapdrop.utils.ShareUtils;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
@@ -195,6 +197,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+        });
+
+        binding.webview.setLongClickable(true);
+        binding.webview.setOnLongClickListener(view -> {
+            final WebView.HitTestResult hitTestResult = ((WebView) view).getHitTestResult();
+            if (hitTestResult.getExtra() == null || !Patterns.WEB_URL.matcher(hitTestResult.getExtra()).matches()) {
+                return false;
+            }
+            ShareUtils.shareUrl(this, hitTestResult.getExtra());
+            return true;
         });
 
         refreshWebsite();

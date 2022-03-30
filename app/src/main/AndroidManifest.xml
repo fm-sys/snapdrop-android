@@ -44,6 +44,12 @@
         <meta-data android:name="android.webkit.WebView.MetricsOptOut" android:value="true" />
 
         <activity
+            android:name=".OpenUrlActivity"
+            android:exported="false"
+            android:label="@string/open_url"
+            android:icon="@drawable/ic_open_url"/>
+
+        <activity
             android:name=".SettingsActivity"
             android:label="@string/pref_category_settings"
             android:exported="false">
