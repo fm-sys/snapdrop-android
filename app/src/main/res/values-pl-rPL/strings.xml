@@ -4,6 +4,7 @@
     <string name="app_name_long">Snapdrop dla Android</string>
     <string name="err_no_browser">Nie można otworzyć przeglądarki</string>
     <string name="err_no_app">Nie znaleziono aplikacji do otwarcia tego pliku</string>
+    <string name="open_url">Otwórz URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Witamy w Snapdrop</string>
     <string name="app_welcome_summary">1. Otwórz <a href="https://snapdrop.net">snapdrop.net</a> lub aplikację Snapdrop na dowolnym innym urządzeniu w lokalnej sieci WiFi.\n2. Zakładka na urządzeniu, z którym chcesz udostępnić plik(i)\n3. Gotowe! Pliki zostaną wysłane…</string>
