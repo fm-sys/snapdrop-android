@@ -4,6 +4,7 @@
     <string name="app_name_long">Snapdrop para Android</string>
     <string name="err_no_browser">Não foi possível abrir o navegador</string>
     <string name="err_no_app">Nenhum aplicativo instalado para abrir esta url</string>
+    <string name="open_url">Abrir URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Bem-vindo ao Snapdrop</string>
     <string name="app_welcome_summary">1. Abra o <a href="https://snapdrop.net">snapdrop.net</a> ou o aplicativo Snapdrop em qualquer outro dispositivo na sua rede Wi-Fi local.\n2. Toque no dispositivo com o qual você deseja compartilhar o(s) arquivo(s).\n3. Feito! O(s) arquivo(s) será(ão) enviado(s)…</string>
@@ -14,6 +15,7 @@
     <!-- Action Buttons -->
     <string name="open">Abrir</string>
     <string name="reset">Redefinir</string>
+    <string name="copy">Copiar</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
     <string name="license">Licenças</string>
@@ -21,6 +23,7 @@
     <string name="source">Código-fonte</string>
     <string name="source_summary">Veja o código-fonte no GitHub</string>
     <string name="components">Componentes de código aberto</string>
+    <string name="logs">Debug Logs</string>
     <string name="components_summary">Toque para exibir</string>
     <string name="crowdin">Tradução e localização</string>
     <string name="crowdin_summary">Ajude a traduzir o <b>Snapdrop para Android</b> para seu idioma favorito</string>
@@ -48,4 +51,13 @@
     <string name="error_filechooser">Não é possível abrir o gerenciador de arquivos</string>
     <string name="error_network">Por favor, certifique-se de que você está conectado a uma rede WiFi</string>
     <string name="ignore_error_network">Deixe-me prosseguir</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Abra o Snapdrop em outros dispositivos para enviar arquivos</string>
+    <string name="website_instruction">Toque para enviar arquivos ou toque longo para enviar uma mensagem</string>
+    <string name="website_file_received">Arquivo Recebido</string>
+    <string name="website_file_ask_always">Ask to save each file before downloading</string>
+    <string name="website_file_download">Salvo</string>
+    <string name="website_footer_discovery">You can be discovered by everyone on this network</string>
+    <string name="website_footer_known_as">You are known as %s</string>
+    <string name="website_about_subheading">The easiest way to transfer files across devices</string>
 </resources>
