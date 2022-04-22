@@ -55,7 +55,7 @@
     <string name="website_no_peers_info">Öffne Snapdrop auf anderen Geräten um Dateien zu senden</string>
     <string name="website_instruction">Tippen, um Dateien zu senden, oder lange tippen, um eine Nachricht zu senden</string>
     <string name="website_file_received">Datei empfangen</string>
-    <string name="website_file_ask_always">Vor dem Speichern immer fragen</string>
+    <string name="website_file_ask_before_download">Vor dem Speichern immer fragen</string>
     <string name="website_file_download">Speichern</string>
     <string name="website_footer_discovery">Sie können von jedem in diesem Netzwerk entdeckt werden</string>
     <string name="website_footer_known_as">Sie heißen %s</string>
