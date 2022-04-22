@@ -55,7 +55,7 @@
     <string name="website_no_peers_info">Buka Snapdrop di perangkat lain untuk mengirim berkas</string>
     <string name="website_instruction">Ketuk untuk mengirim file atau ketuk lama untuk mengirim pesan</string>
     <string name="website_file_received">File Diterima</string>
-    <string name="website_file_ask_always">Minta untuk menyimpan setiap file sebelum mengunduh</string>
+    <string name="website_file_ask_before_download">Selalu tanyakan sebelum menyimpan file</string>
     <string name="website_file_download">Simpan</string>
     <string name="website_footer_discovery">Anda dapat ditemukan oleh semua orang di jaringan ini</string>
     <string name="website_footer_known_as">Anda dikenal sebagai %s</string>
