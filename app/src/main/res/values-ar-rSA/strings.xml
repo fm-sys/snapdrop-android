@@ -4,6 +4,7 @@
     <string name="app_name_long">سناب درُوب لِنِظامِ أندُروِيد</string>
     <string name="err_no_browser">لا يمكن فتح المستعرض</string>
     <string name="err_no_app">لا يوجد تطبيق لفتح هذا الملف</string>
+    <string name="open_url">فتح الرابط</string>
     <!-- Welcome -->
     <string name="app_welcome">مَرحبًا بِكَ فِي سناب درُوب</string>
     <string name="app_welcome_summary">1. اِفتَح <a href="https://snapdrop.net">snapdrop.net</a> أو تَطبيق سناب درُوب (Snapdrop) عَلَى أي جِهاز آخر فِي شبكة الواي فاي المَحليَّة.\n2. اِنقر عَلَى الجِهاز الَّذي تَرغَب فِي مُشاركَة المِلَف\ـات مَعه.\n3. تمّ! سوف تُرسَل المِلَف\ـات…</string>
@@ -50,4 +51,13 @@
     <string name="error_filechooser">يتعَذّرُ فَتح مُنتَقي المِلفَات</string>
     <string name="error_network">يُرجى التَّحَقُقُ مِنَ اِتِّصَالِكَ بِشَبَكَةِ واي فاي</string>
     <string name="ignore_error_network">اِسمَح لِي بالدُخُولِ عَلَى أيِّ حال</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">افتح Snapdrop على الأجهزة الأخرى لإرسال الملفات</string>
+    <string name="website_instruction">انقر لإرسال الملفات أو انقر مطولاً لإرسال رسالة</string>
+    <string name="website_file_received">تم استلام الملف</string>
+    <string name="website_file_ask_always">السؤال اين يتم حفظ كل ملف قبل تحميله</string>
+    <string name="website_file_download">حفظ</string>
+    <string name="website_footer_discovery">يمكنك اكتشافك من قبل الجميع على هذه الشبكة</string>
+    <string name="website_footer_known_as">أنت معروف باسم %s</string>
+    <string name="website_about_subheading">أسهل طريقة لنقل الملفات عبر الأجهزة</string>
 </resources>

@@ -4,6 +4,7 @@
     <string name="app_name_long">Snapdrop для Android</string>
     <string name="err_no_browser">Не удаётся открыть браузер</string>
     <string name="err_no_app">Нет установленных приложений для открытия этого файла</string>
+    <string name="open_url">Открыть URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Приветствуем в Snapdrop</string>
     <string name="app_welcome_summary">1. Откройте <a href="https://snapdrop.net">snapdrop.net</a> или приложение Snapdrop на любом другом устройстве в вашей локальной WiFi сети.\n2. Нажмите на устройство, с которым вы хотите поделиться файлом (файлами).\n3. Готово! Файл(ы) будет отправлен…</string>
@@ -50,4 +51,13 @@
     <string name="error_filechooser">Не удаётся выбрать файл</string>
     <string name="error_network">Пожалуйста, убедитесь, что вы подключены к сети WiFi</string>
     <string name="ignore_error_network">Всё равно попробовать</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Откройте Snapdrop на других устройствах для передачи файлов</string>
+    <string name="website_instruction">Нажмите для отправки файлов или удерживайте для отправки сообщения</string>
+    <string name="website_file_received">Файл получен</string>
+    <string name="website_file_ask_always">Запрашивать сохранить каждый файл перед его загрузкой</string>
+    <string name="website_file_download">Сохранить</string>
+    <string name="website_footer_discovery">Вы можете быть обнаружены всеми в этой сети</string>
+    <string name="website_footer_known_as">Вы известны как %s</string>
+    <string name="website_about_subheading">Самый простой способ передачи файлов между устройствами</string>
 </resources>
