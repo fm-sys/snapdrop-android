@@ -14,7 +14,7 @@ public class WebsiteLocalizer {
         INSTRUCTION_DESKTOP("x-instructions", "setAttribute('desktop', %s)", R.string.website_instruction),
         INSTRUCTION_MOBILE("x-instructions", "setAttribute('mobile', %s)", R.string.website_instruction),
         FILE_RECEIVED("#receiveDialog>x-background>x-paper>h3", R.string.website_file_received),
-        FILE_ASK_EACH_TIME("label[for='autoDownload']", R.string.website_file_ask_always),
+        FILE_ASK_EACH_TIME("label[for='autoDownload']", R.string.website_file_ask_before_download),
         FILE_DOWNLOAD("#download", R.string.website_file_download),
         FOOTER_DISCOVERY("footer>div.font-body2", R.string.website_footer_discovery),
         ABOUT_SUBHEADING("x-about>section>div.font-subheading", R.string.website_about_subheading),
