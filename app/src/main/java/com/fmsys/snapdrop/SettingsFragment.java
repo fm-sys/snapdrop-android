@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -60,9 +61,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         final Preference logsPref = findPreference(getString(R.string.pref_logs));
         logsPref.setOnPreferenceClickListener(pref -> {
+            final View dialogView = this.getLayoutInflater().inflate(R.layout.debug_logs_dialog, null);
+            final TextView textView = dialogView.findViewById(R.id.textview);
+            textView.setText(LogUtils.getLogs(prefs, true));
+
             new AlertDialog.Builder(getContext())
                     .setTitle(R.string.logs)
-                    .setMessage(LogUtils.getLogs(prefs, true))
+                    .setView(dialogView)
                     .setPositiveButton(android.R.string.ok, null)
                     .setNeutralButton(R.string.copy, (d, id) -> ClipboardUtils.copy(this.getContext(), LogUtils.getLogs(prefs, false)))
                     .show();

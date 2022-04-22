@@ -27,7 +27,7 @@ public class LogUtils {
                     "\n- Device type: " + Build.MODEL + " (" + Build.PRODUCT + ", " + Build.BRAND + ')' +
                     "\n- Android version: " + Build.VERSION.RELEASE +
                     "\n- Snapdrop app version: " + BuildConfig.VERSION_NAME +
-                    "\n" +
+                    "\n\n" +
                     prefs.getString(SnapdropApplication.getInstance().getApplicationContext().getString(R.string.pref_last_crash), "") +
                     requestLogcatLogs();
         }
