@@ -2,8 +2,7 @@
 <resources>
     <string name="app_name">سناب درُوب</string>
     <string name="app_name_long">سناب درُوب لِنِظامِ أندُروِيد</string>
-    <string name="err_no_browser">Saleh_zahrani19
-Dr.classic55</string>
+    <string name="err_no_browser">لا يمكن فتح المستعرض</string>
     <string name="err_no_app">لا يوجد تطبيق لفتح هذا الملف</string>
     <string name="open_url">فتح الرابط</string>
     <!-- Welcome -->
