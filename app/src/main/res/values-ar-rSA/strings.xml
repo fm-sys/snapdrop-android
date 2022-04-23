@@ -3,7 +3,7 @@
     <string name="app_name">سناب درُوب</string>
     <string name="app_name_long">سناب درُوب لِنِظامِ أندُروِيد</string>
     <string name="err_no_browser">لا يمكن فتح المستعرض</string>
-    <string name="err_no_app">لا يوجد تطبيق لفتح هذا الملف</string>
+    <string name="err_no_app">لا يوجد تطبيق لفتح هذا المِلَفّ</string>
     <string name="open_url">فتح الرابط</string>
     <!-- Welcome -->
     <string name="app_welcome">مَرحبًا بِكَ فِي سناب درُوب</string>
@@ -55,7 +55,7 @@
     <string name="website_no_peers_info">افتح Snapdrop على الأجهزة الأخرى لإرسال الملفات</string>
     <string name="website_instruction">انقر لإرسال الملفات أو انقر مطولاً لإرسال رسالة</string>
     <string name="website_file_received">تم استلام الملف</string>
-    <string name="website_file_ask_always">السؤال اين يتم حفظ كل ملف قبل تحميله</string>
+    <string name="website_file_ask_before_download">اسأل كل مرة قبل حفض مِلَفّا</string>
     <string name="website_file_download">حفظ</string>
     <string name="website_footer_discovery">يمكنك اكتشافك من قبل الجميع على هذه الشبكة</string>
     <string name="website_footer_known_as">أنت معروف باسم %s</string>
