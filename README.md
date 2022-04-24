@@ -69,3 +69,5 @@ If you want to help with development, this would be more than welcome! I am very
 
 
 I also recommend using this great Firefox Add-on: [Snapdrop Web Extension](https://github.com/ueen/SnapdropFirefoxAddon)
+
+Oh, and thanks [Mrwhosetheboss](https://youtu.be/lmIO18kLcZU?t=397) for recommending this app! 
