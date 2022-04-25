@@ -1,4 +1,4 @@
-Snapdrop for Android is an Android™ client for the free and open source local file sharing solution https://snapdrop.net/.
+O Snapdrop para o Android é um cliente android para a solução de compartilhamento de arquivos local gratuita e de código aberto https://snapdrop.net/.
 
 Você também às vezes tem o problema de que você só precisa transferir rapidamente um arquivo do seu telefone para o PC?
 
@@ -10,15 +10,12 @@ Snapdrop!
 
 O Snapdrop é uma solução local de compartilhamento de arquivos que funciona completamente em seu navegador. Um pouco como o Airdrop da Apple, mas não apenas para dispositivos Apple. Windows, Linux, Android, IPhone, Mac - sem qualquer problema!
 
-However, even if it theoretically would fully work in your browser, you will love this app if you want to use Snapdrop more often in your daily life. Graças a uma integração perfeita no sistema operacional Android, os arquivos são enviados ainda mais rápido. Você pode selecionar Snapdrop direto de outros aplicativos para compartilhar.
+No entanto, mesmo que teoricamente funcione totalmente no seu navegador, você vai adorar este aplicativo se quiser usar o Snapdrop com mais frequência em sua vida diária. Graças a uma integração perfeita no sistema operacional Android, os arquivos são enviados ainda mais rápido. Você pode selecionar Snapdrop direto de outros aplicativos para compartilhar.
 
 Graças à sua simplicidade radical, "Snapdrop para Android" torna a vida cotidiana de centenas de usuários mais fácil. Como um projeto de código aberto, não temos nenhum interesse comercial, mas queremos tornar o mundo um pouco melhor. Junte-se e convença-se!
 
-SOURCE CODE:
+CÓDIGO DE FONTE:
 https://github.com/fm-sys/snapdrop-android
 
-PRIVACY:
-This app interacts with https://snapdrop.net/ to be able to discover other devices running Snapdrop in your local network. However, none of your files is ever sent to any server but are transferred directly peer-to-peer between your devices.
-
-CREDIT:
-The app and its icon are based on the Snapdrop Open Source project, which is hosted and maintained by RobinLinus. See also https://www.github.com/robinlinus/snapdrop
+CRÉDITOS:
+O aplicativo é fornecido pelo projeto Snapdrop Open Source, que é hospedado e mantido por RobinLinus. Veja também https://www.github.com/robinlinus/snapdrop
