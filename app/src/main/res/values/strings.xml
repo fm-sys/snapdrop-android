@@ -55,6 +55,8 @@
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
     <string name="ignore_error_network">Let me in anyway</string>
+    <string name="error_not_reachable_title">Ups, sorry!</string>
+    <string name="error_not_reachable">The Snapdrop-Server cannot be reached. \n\nIf your internet connection is working and this does happen anyway, we might have server issues currently. We know this can be very frustrating, but please don\'t leave bad reviews on Google Play. \n\nThis app is completely ad-free, so we don\'t earn money with it. It\'s just a hobby project, but we\'re doing everything to get it back running quickly.</string>
 
     <!-- Website Localization -->
     <string name="website_no_peers_info">Open Snapdrop on other devices to send files</string>

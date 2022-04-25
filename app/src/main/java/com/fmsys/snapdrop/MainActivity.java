@@ -555,10 +555,17 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public void onReceivedError(final WebView view, final WebResourceRequest request, final WebResourceError error) {
-            //
-            Log.e("onReceivedError", error.toString());
+            if (error.getErrorCode() == -6) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle(R.string.error_not_reachable_title)
+                        .setMessage(R.string.error_not_reachable)
+                        .setPositiveButton(android.R.string.ok, null)
+                        .show();
+            }
+            Log.e("WebViewError", "Cannot reach " + request.getUrl() + " (ErrorCode " + error.getErrorCode() + ")");
             showScreenNoConnection();
         }
     }
