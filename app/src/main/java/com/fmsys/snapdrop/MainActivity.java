@@ -271,6 +271,7 @@ public class MainActivity extends AppCompatActivity {
     private void showScreenNoConnection() {
         binding.webview.loadUrl("file:///android_asset/offline.html?text=" + getString(R.string.error_network) + "&button=" + getString(R.string.ignore_error_network));
         currentlyOffline = true;
+        currentlyLoading = false;
     }
 
     public static boolean isTablet(final Context ctx) {
@@ -556,6 +557,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onReceivedError(final WebView view, final WebResourceRequest request, final WebResourceError error) {
+            //
+            Log.e("onReceivedError", error.toString());
             showScreenNoConnection();
         }
     }
