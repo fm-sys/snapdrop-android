@@ -4,6 +4,7 @@
     <string name="app_name_long">Snapdrop za Android</string>
     <string name="err_no_browser">Preglednik nedostupan</string>
     <string name="err_no_app">Nema aplikacije za otvaranje datoteke ovog tipa</string>
+    <string name="open_url">Otvori URL adresu</string>
     <!-- Welcome -->
     <string name="app_welcome">Dobrodošli u Snapdrop</string>
     <string name="app_welcome_summary">1. Otvorite <a href="https://snapdrop.net">snapdrop.net</a> ili Snapdrop aplikaciju na bilo kojem drugom uređaju unutar lokalne WiFi mreže.\n2. Pritisnite na uređaj s kojim želite podijeliti datoteke.\n3. Gotovo! Datoteke će biti poslane…</string>
@@ -50,4 +51,13 @@
     <string name="error_filechooser">Izbornik datoteka nedostupan</string>
     <string name="error_network">Molimo provjerite jeste li spojeni na WiFi mrežu</string>
     <string name="ignore_error_network">Svejedno me pusti unutra</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Otvorite Snapdrop na drugim uređajima za slanje datoteka</string>
+    <string name="website_instruction">Kliknite za slanje datoteka ili držite za slanje poruke</string>
+    <string name="website_file_received">Datoteka primljena</string>
+    <string name="website_file_ask_before_download">Uvijek pitaj prije spremanja datoteke</string>
+    <string name="website_file_download">Spremi</string>
+    <string name="website_footer_discovery">Možete biti otkriveni sa svakog na istom internetu</string>
+    <string name="website_footer_known_as">Budete prepoznati kao %s</string>
+    <string name="website_about_subheading">Najlakši način prijenos datoteka preko uređaja</string>
 </resources>
