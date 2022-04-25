@@ -1,28 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <!-- Update -->
+    <string name="app_name_long">Snapdrop para Android</string>
+    <string name="err_no_browser">Não é possível abrir o browser [navegador]</string>
+    <string name="err_no_app">Nenhuma aplicação descarregada para ter acesso a este arquivo</string>
+    <string name="open_url">Abrir URL</string>
     <!-- Welcome -->
+    <string name="app_welcome">Bem-vindo ao Snapdrop</string>
+    <string name="app_welcome_summary">1. Abra o <a href="https://snapdrop.net">snapdrop.net</a> ou o aplicativo Snapdrop em qualquer outro dispositivo na sua rede Wi-Fi local.\n2. Toque no dispositivo que você deseja compartilhar o(s) ficheiro(s) com.\n3. Feito! O(s) ficheiro(s) será enviado…</string>
     <!-- Download -->
+    <string name="download_save_pending">Armazenando o arquivo. Por favor, tenha um cadinho de paciência…</string>
     <string name="download_successful">Foi baixado com sucesso</string>
     <string name="notification_channel_name">Download concluído</string>
     <!-- Action Buttons -->
     <string name="open">abrir</string>
     <string name="reset">restaurar</string>
+    <string name="copy">copiar</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
     <string name="license">Licença</string>
     <string name="pref_category_settings">Configurações</string>
+    <string name="source">Código Fonte</string>
+    <string name="source_summary">Veja o código em GitHub</string>
+    <string name="components">Componentes do Código Aberto</string>
+    <string name="logs">Dados de Depuração</string>
+    <string name="components_summary">Pressione para exibir</string>
+    <string name="crowdin">Localização</string>
+    <string name="crowdin_summary">Ajude a traduzir o <b>Snapdrop para Android</b> para o seu idioma favorito</string>
+    <string name="support_us">Suporte Snapdrop</string>
+    <string name="support_us_summary">Veja, como tu podes apoiar a comunidade do Snapdrop</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Fale sobre o <b>Snapdrop para Android</b></string>
     <string name="version">Versão</string>
     <string name="pref_device_name_title">Nome do Dispositivo</string>
     <string name="pref_device_name_summary">Definir um nome de dispositivo definido pelo usuário</string>
-    <string name="keep_on_summary">Ativar se você tiver as transferências interrompidas quando a tela for desligada</string>
-    <string name="keep_on_title">Mantenha a tela ligada</string>
+    <string name="keep_on_summary">(Recomendado) Muitos dispositivos têm problemas com transferências interrompidas quando a tela é desligada</string>
+    <string name="keep_on_title">Mantenha a tela ligada durante a transferência</string>
+    <string name="settings_theme_title">Tema</string>
+    <string-array name="darkmode_entries">
+        <item>Padrão do Sistema</item>
+        <item>Claro</item>
+        <item>Escuro</item>
+    </string-array>
+    <string name="baseurl_title">URL base</string>
+    <string name="save_location">Guardar localização</string>
     <!-- File sharing -->
     <string name="intent_file">O arquivo é selecionado para ser compartilhado</string>
     <string name="intent_files">Os arquivos são selecionados para ser compartilhados</string>
     <string name="intent_content">O conteúdo é selecionado para ser compartilhado</string>
     <string name="error_filechooser">Não foi possível abrir um seletor de arquivos</string>
     <string name="error_network">Favor verificar se você está conectado a uma rede WiFi</string>
-    <!-- baseURL -->
+    <string name="ignore_error_network">Deixe-me entrar a mesma</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Abra o Snapdrop nos outros dispositivos para enviar arquivos</string>
+    <string name="website_instruction">Toque para enviar arquivos ou toque longo para enviar uma mensagem</string>
+    <string name="website_file_received">Ficheiro Recebido</string>
+    <string name="website_file_ask_before_download">Perguntar sempre antes de salvar um ficheiro</string>
+    <string name="website_file_download">Guardar</string>
+    <string name="website_footer_discovery">Você pode ser descoberto por todos nesta rede</string>
+    <string name="website_footer_known_as">Você é conhecido como %s</string>
+    <string name="website_about_subheading">A maneira mais fácil de transferir arquivos entre dispositivos</string>
 </resources>
