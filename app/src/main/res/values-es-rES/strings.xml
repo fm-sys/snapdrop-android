@@ -51,6 +51,8 @@
     <string name="error_filechooser">No se pudo abrir el selector de archivos</string>
     <string name="error_network">Por favor, compruebe que está conectado a una red WiFi</string>
     <string name="ignore_error_network">Déjame intentarlo de todos modos</string>
+    <string name="error_not_reachable_title">¡Ups, lo sentimos!</string>
+    <string name="error_not_reachable">No se puede acceder al Servidor de Snapdrop. \n\nSi tu conexión a internet está funcionando y esto sucede de todos modos, probablemente tengamos problemas con el servidor actualmente. Sabemos que esto puede ser muy frustrante, pero no dejes malas reseñas en Google Play. \n\nEsta aplicación está completamente libre de anuncios, por lo que no ganamos nada de dinero con ella. Es solo un proyecto de hobby, pero estamos haciendo todo lo que se puede para que vuelva a funcionar rápidamente.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Abrir Snapdrop en otros dispositivos para enviar archivos</string>
     <string name="website_instruction">Pulsa para enviar archivos o pulsación larga para enviar un mensaje</string>

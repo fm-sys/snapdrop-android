@@ -51,11 +51,13 @@
     <string name="error_filechooser">无法打开文件选择程序</string>
     <string name="error_network">请确保您已经连接到WiFi网络</string>
     <string name="ignore_error_network">忽略并继续</string>
+    <string name="error_not_reachable_title">啊哦，很抱歉！</string>
+    <string name="error_not_reachable">无法连接到 Snapdrop 服务器。 \n\n如果您的网络连接正常，但是仍然出现这种情况，则可能是我们服务器目前遇到了问题。 我们知道这可能令人沮丧，但请不要在 Google Play 上留下差评。\n\n此应用完全没有广告，所以我们不会用它赚任何钱。 它只是一个公益项目，但我们正在努力使它尽快恢复。</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">在其他设备上打开Snapdrop以传输文件</string>
     <string name="website_instruction">点击发送文件或长按发送消息</string>
     <string name="website_file_received">文件已接收</string>
-    <string name="website_file_ask_always">在下载前询问保存每个文件</string>
+    <string name="website_file_ask_before_download">保存文件前总是询问</string>
     <string name="website_file_download">保存</string>
     <string name="website_footer_discovery">您可以在这个网络上被所有人发现</string>
     <string name="website_footer_known_as">您的设备昵称为 %s</string>
