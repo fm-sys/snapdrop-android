@@ -51,6 +51,8 @@
     <string name="error_filechooser">يتعَذّرُ فَتح مُنتَقي المِلفَات</string>
     <string name="error_network">يُرجى التَّحَقُقُ مِنَ اِتِّصَالِكَ بِشَبَكَةِ واي فاي</string>
     <string name="ignore_error_network">اِسمَح لِي بالدُخُولِ عَلَى أيِّ حال</string>
+    <string name="error_not_reachable_title">عذرًا، آسف!</string>
+    <string name="error_not_reachable">لا يمكن الوصول إلى خادم Snapdrop-. \n\nإذا كان اتصالك بالإنترنت يعمل ويحدث هذا على أي حال، فقد يكون لدينا مشاكل في الخادم حاليا. نحن نعلم أن هذا يمكن أن يكون محبطاً جداً، ولكن من فضلك لا تترك مراجعات سيئة في Google Play. \n\nهذا التطبيق خال تماما من الإعلانات، لذلك نحن لا نكسب أي مال به. إنه مجرد مشروع هواية، لكننا نفعل كل ما في وسعنا لإعادته إلى العمل بسرعة.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">افتح Snapdrop على الأجهزة الأخرى لإرسال الملفات</string>
     <string name="website_instruction">انقر لإرسال الملفات أو انقر مطولاً لإرسال رسالة</string>
