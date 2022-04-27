@@ -1,0 +1,22 @@
+Android için Snapdrop; Ücretsiz ve açık kaynak kodlu Android™ için yerel dosya paylaşma çözümü
+https://snapdrop.net/.
+
+Sen de telefondan PC'ye hızlıca dosya transfer etmek istediğinde problem yaşıyor musun?
+
+USB? - Eski moda!
+Bluetooth? - Çok hantal ve yavaş!
+E-posta? - Kendi kendime yazdığım bir başka mail daha!
+
+Snapdrop!
+
+Snapdrop tamamen tarayıcıda çalışan bir yerel paylaşım çözümüdür. Apple'ın Airdrop'u gibi fakat sadece Apple cihazları için değil. Windows, Linux, Android, IPhone, Mac - hiç problem değil!
+
+Her ne kadar tarayıcı ile tamamen uyumlu çalışsa da Snapdrop'u günlük hayatınızda sıkça kullanmaya başladıkça daha çok seveceksiniz. Android işletim sistemi ile olan harika uyumu sayesinde dosya göndermek çok daha hızlı. Direkt olarak diğer uygulamaların içinden paylaşım yapmak için Snapdrop'u kullanmak mümkün.
+
+"Android için Snapdroid" radikal sadeliği sayesinde binlerce kullanıcının gününü kolaylaştırmakta. Açık kaynak kodlu bir proje olarak herhangi bir ticari çıkarımız yok ama dünyayı biraz daha iyi hale getirmek istiyoruz. Katılın ve kendinizi ikna edin!
+
+KAYNAK KODU:
+https://github.com/fm-sys/snapdrop-android
+
+JENERİK:
+Bu uygulama RobinLinus tarafından barındırılan ve bakılan Snapdrop Açık Kaynak projesi ile hayat bulmuştur. Ayrıca bakın https://www.github.com/robinlinus/snapdrop
