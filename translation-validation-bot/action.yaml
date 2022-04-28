@@ -1,0 +1,12 @@
+name: Translation Checker
+description: Create computer-generated reverse translations
+
+inputs:
+  pr: # name of variable. In action script it will be available in workflow as environment variable with name INPUT_PR
+    required: true
+    description: The number of the PR
+
+# definition how we want our action
+runs:
+  using: docker
+  image: 'Dockerfile'

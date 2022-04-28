@@ -1,0 +1,33 @@
+name: Generate reverse translations
+on:
+  pull_request:
+
+jobs:
+  translate:
+    if: ${{ github.head_ref == 'l10n_master' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get Pull Request Number
+        id: pr
+        run: echo "::set-output name=pull_request_number::$(gh pr view l10n_master --json number -q .number || echo "")"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Translate
+        id: translate
+        # we can give directory path that contains action.yaml or repo address in username/repository_name@version format
+        # in our case it would be nashmaniac/create-issue-action@v1.0 where v1.0 is the version of action
+        # for now we will give directory path. The directory must contain action.yaml
+        uses: ./translation-validation-bot/
+        # pass user input as arguments
+        with:
+          pr: ${{ steps.pr.outputs.pull_request_number }}
+      - name: Display translations
+        run: |
+          echo "${{ steps.translate.outputs.content }}"
+      - name: Update PR description
+        uses: riskledger/update-pr-description@v2
+        with:
+          body: ${{ steps.translate.outputs.content }}
+          token: ${{ secrets.GITHUB_TOKEN }}
