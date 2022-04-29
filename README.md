@@ -64,8 +64,6 @@ If you want to help with development, this would be more than welcome! I am very
   Copyright © 2020-2021 Anggrayudi Hardiannicko A. Licensed under Apache-2.0 License.
 - **[Material Design Components](https://material.io/)**
   Licensed under Apache-2.0 License.
-- **[okhttp](https://github.com/square/okhttp)**
-  Copyright 2019 Square, Inc. Licensed under Apache-2.0 License.
 
 
 I also recommend using this great Firefox Add-on: [Snapdrop Web Extension](https://github.com/ueen/SnapdropFirefoxAddon)
