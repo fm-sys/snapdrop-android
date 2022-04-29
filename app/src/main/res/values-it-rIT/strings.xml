@@ -51,11 +51,13 @@
     <string name="error_filechooser">Impossibile aprire il selettore di file</string>
     <string name="error_network">Verifica di essere connesso ad una rete WiFi</string>
     <string name="ignore_error_network">Entra comunque</string>
+    <string name="error_not_reachable_title">Ops, mi dispiace!</string>
+    <string name="error_not_reachable">Impossibile raggiungere il server di Snapdrop. \n\nSe la tua connessione internet funziona e questo accade comunque, potremmo avere problemi con il server al momento. Sappiamo che questo può essere molto frustrante, ma per favore non lasciare recensioni negative su Google Play. \n\nQuesta app è completamente priva di pubblicità, quindi non guadagniamo soldi con essa. È solo un progetto amatoriale, ma stiamo facendo tutto per farlo tornare a funzionare velocemente.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Apri Snapdrop su altri dispositivi per inviare i file</string>
     <string name="website_instruction">Premi per inviare i file o tieni premuto per inviare un messaggio</string>
     <string name="website_file_received">File ricevuto</string>
-    <string name="website_file_ask_always">Chiedi di salvare ogni file prima di scaricarlo</string>
+    <string name="website_file_ask_before_download">Chiedi sempre prima di salvare un file</string>
     <string name="website_file_download">Salva</string>
     <string name="website_footer_discovery">Potresti essere individuato da tutti su questa rete</string>
     <string name="website_footer_known_as">Il tuo soprannome è %s</string>

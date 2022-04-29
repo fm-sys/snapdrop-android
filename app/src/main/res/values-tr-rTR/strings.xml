@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Android için Snapdrop</string>
+    <string name="err_no_browser">Tarayıcı açılamıyor</string>
+    <string name="err_no_app">Bu dosyayı açmak için yüklü bir uygulama yok</string>
+    <string name="open_url">URL\'yi Aç</string>
+    <!-- Welcome -->
+    <string name="app_welcome">Snapdrop\'a Hoşgeldin</string>
+    <string name="app_welcome_summary">Aç <a href="https://snapdrop.net">snapdrop.net</a> veya yerel WiFi ağınızdaki bir cihazda Snapdrop\'u açın.\n2. Dosya(lar) göndermek istediğiniz cihaza dokunun.\n3. Bitti! Dosya(lar) gönderilecek…</string>
+    <!-- Download -->
+    <string name="download_save_pending">Dosya depolanıyor. Lütfen bekleyiniz…</string>
+    <string name="download_successful">İndirme başarılı</string>
+    <string name="notification_channel_name">İndirme tamamlandı</string>
+    <!-- Action Buttons -->
+    <string name="open">aç</string>
+    <string name="reset">sıfırla</string>
+    <string name="copy">kopyala</string>
+    <!-- Settings / About -->
+    <string name="title_activity_about">Android için Snapdrop Hakkında</string>
+    <string name="license">Lisans</string>
+    <string name="pref_category_settings">Ayarlar</string>
+    <string name="source">Kaynak kodu</string>
+    <string name="source_summary">Kaynak kodunu GitHub\'da görüntüle</string>
+    <string name="components">Açık kaynaklı bileşenler</string>
+    <string name="logs">Hata Ayıklama Günlükleri</string>
+    <string name="components_summary">Ekrana dokun</string>
+    <string name="crowdin">Yerelleştirme</string>
+    <string name="crowdin_summary">Favori dil tercihiniz için <b>Snapdrop for Android</b> çevirilmesine yardımcı olun</string>
+    <string name="support_us">Snapdrop Destek</string>
+    <string name="support_us_summary">Snapdrop topluluğuna nasıl destek olabileceğinizi görün</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Bahset <b>Android için Snapdrop</b></string>
+    <string name="version">Sürüm</string>
+    <string name="pref_device_name_title">Cihaz Adı</string>
+    <string name="pref_device_name_summary">Kullanıcı-tanımlı bir cihaz adı belirleyin</string>
+    <string name="keep_on_summary">(Önerilen) Bir çok cihaz ekranın transfer esnasında kapanması sebebiyle problem yaşamakta</string>
+    <string name="keep_on_title">Transfer sırasında ekranı açık tut</string>
+    <string name="settings_theme_title">Tema</string>
+    <string-array name="darkmode_entries">
+        <item>Sistem Varsayılanı</item>
+        <item>Aydınlık</item>
+        <item>Karanlık</item>
+    </string-array>
+    <string name="baseurl_title">Temel URL</string>
+    <string name="save_location">Kayıt konumu</string>
+    <!-- File sharing -->
+    <string name="intent_file">Bir dosya paylaşım için seçildi</string>
+    <string name="intent_files">Dosyalar paylaşım için seçildi</string>
+    <string name="intent_content">İçerik paylaşım için seçildi</string>
+    <string name="error_filechooser">Dosya seçici açılamıyor</string>
+    <string name="error_network">Bir WiFi ağına bağlı olduğunuzdan emin olun</string>
+    <string name="ignore_error_network">Yine de dene</string>
+    <string name="error_not_reachable_title">Ups, üzgünüm!</string>
+    <string name="error_not_reachable">Snapdrop-Server\'a erişilemiyor. \n\nİnternet bağlantınız çalışıyorsa ve bu durumu yaşamaya devam ediyorsanız anlık olarak serverlarımız ile alakalı sorun yaşıyor olabiliriz. Bunun ne kadar can sıkıcı olduğunun farkındayız fakat lütfen Google Play\'de kötü yorum bırakmayınız. \n\nBu uygulama tamamen reklamsızdır, dolayısıyla herhangi bir ücret kazanmıyoruz. Hobi amaçlı bir uygulamadan ibaret sadece. Yaşadığınız sorunu bir an önce düzeltmek için elimizden gelen her şeyi yapıyoruz.</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Dosya göndermek için Snapdrop\'u diğer cihazlarda açınız</string>
+    <string name="website_instruction">Dosya göndermek için dokun veya mesaj göndermek için basılı tut</string>
+    <string name="website_file_received">Dosya alındı</string>
+    <string name="website_file_ask_before_download">Bir dosya kaydetmeden önce her zaman sor</string>
+    <string name="website_file_download">Kaydet</string>
+    <string name="website_footer_discovery">Bu ağda bulunan herkes sizi keşfedebilir</string>
+    <string name="website_footer_known_as">Böyle görünüyorsunuz %s</string>
+    <string name="website_about_subheading">Cihazlar arası dosya transferinin en kolay yolu</string>
+</resources>

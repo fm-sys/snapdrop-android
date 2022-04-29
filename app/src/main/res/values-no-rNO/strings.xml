@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop for Android</string>
+    <string name="err_no_browser">Kan ikke åpne nettleseren</string>
+    <string name="err_no_app">Du har ingen apper installert for å åpne denne filen</string>
+    <string name="open_url">Åpne URL</string>
+    <!-- Welcome -->
+    <string name="app_welcome">Velkommen til Snapdrop</string>
+    <string name="app_welcome_summary">1. Åpne <a href="https://snapdrop.net">snapdrop.net</a> eller Snapdrop appen på alle andre enheter i ditt lokale WiFi-nettverk.\n2. Trykk på enheten du vil dele filen(e) med.\n3. Ferdig! Filen(e) vil bli sendt…</string>
+    <!-- Download -->
+    <string name="download_save_pending">Lagrer filen. Vennligst ha litt tålmodighet…</string>
+    <string name="download_successful">Nedlasting vellykket</string>
+    <string name="notification_channel_name">Nedlastingen er fullført</string>
+    <!-- Action Buttons -->
+    <string name="open">åpne</string>
+    <string name="reset">nullstill</string>
+    <string name="copy">kopier</string>
+    <!-- Settings / About -->
+    <string name="title_activity_about">Om Snapdrop for Android</string>
+    <string name="license">Lisens</string>
+    <string name="pref_category_settings">Innstillinger</string>
+    <string name="source">Kildekode</string>
+    <string name="source_summary">Vis kildekode på GitHub</string>
+    <string name="components">Åpne kildekode komponenter</string>
+    <string name="logs">Feilsøk-logger</string>
+    <string name="components_summary">Trykk for å vise</string>
+    <string name="crowdin">Lokalisering</string>
+    <string name="crowdin_summary">Hjelp til med å oversette <b>Snapdrop for Android</b> til ditt favorittspråk</string>
+    <string name="support_us">Støtt Snapdrop</string>
+    <string name="support_us_summary">Se hvordan du kan støtte Snapdrop-samfunnet</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Fortell om <b>Snapdrop for Android</b></string>
+    <string name="version">Versjon</string>
+    <string name="pref_device_name_title">Enhetsnavn</string>
+    <string name="pref_device_name_summary">Angi et brukerdefinert enhetsnavn</string>
+    <string name="keep_on_summary">(Anbefalt) Mange enheter har problemer med at overføring blir avbrutt når skjermen slås av</string>
+    <string name="keep_on_title">Hold skjermen påslått mens du overfører</string>
+    <string name="settings_theme_title">Tema</string>
+    <string-array name="darkmode_entries">
+        <item>Systemstandard</item>
+        <item>Lys</item>
+        <item>Mørk</item>
+    </string-array>
+    <string name="baseurl_title">Base-URL</string>
+    <string name="save_location">Lagringssted</string>
+    <!-- File sharing -->
+    <string name="intent_file">En fil er valgt for deling</string>
+    <string name="intent_files">Filer er valgt for deling</string>
+    <string name="intent_content">Innhold er valgt for deling</string>
+    <string name="error_filechooser">Kan ikke åpne filvelgeren</string>
+    <string name="error_network">Bekreft at du er tilkoblet et WiFi-nettverk</string>
+    <string name="ignore_error_network">Slipp meg inn likevel</string>
+    <string name="error_not_reachable_title">Oops, beklager!</string>
+    <string name="error_not_reachable">Snapdrop-serveren kan ikke nås. \n\nHvis Internett-tilkoblingen din fungerer og dette skjer likevel, kan vi ha serverproblemer for tiden. Vi vet at dette kan være veldig frustrerende, men vennligst ikke etterlat dårlige anmeldelser på Google Play. \n\nDenne appen er helt uten annonser, så vi tjener ikke noen penger med den. Det er bare et hobby-prosjekt, men vi gjør alt for å få det tilbake til å gå raskt.</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Åpne Snapdrop på andre enheter for å sende filer</string>
+    <string name="website_instruction">Trykk for å sende filer eller trykk lenge for å sende en melding</string>
+    <string name="website_file_received">Fil mottatt</string>
+    <string name="website_file_ask_before_download">Spør alltid før lagring av filer</string>
+    <string name="website_file_download">Lagre</string>
+    <string name="website_footer_discovery">Du kan bli funnet av alle i dette nettverket</string>
+    <string name="website_footer_known_as">Du er kjent som %s</string>
+    <string name="website_about_subheading">Den enkleste måten å overføre filer mellom enheter</string>
+</resources>
