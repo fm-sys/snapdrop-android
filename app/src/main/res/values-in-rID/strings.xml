@@ -3,7 +3,7 @@
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop untuk Android</string>
     <string name="err_no_browser">Tidak bisa membuka browser</string>
-    <string name="err_no_app">Tidak ada aplikasi yang terpasang untuk membuka file ini</string>
+    <string name="err_no_app">Tidak ada aplikasi yang diinstal untuk membuka file ini</string>
     <string name="open_url">Buka URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Selamat datang di Snapdrop</string>
@@ -43,6 +43,8 @@
         <item>Gelap</item>
     </string-array>
     <string name="baseurl_title">URL Dasar</string>
+    <string name="baseurl_no_snapdrop_instance">Sepertinya bukan untuk Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Gagal memverifikasi instans Snapdrop</string>
     <string name="save_location">Lokasi penyimpanan</string>
     <!-- File sharing -->
     <string name="intent_file">Sebuah file dipilih untuk dibagikan</string>
