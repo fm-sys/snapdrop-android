@@ -1,6 +1,7 @@
 package com.fmsys.snapdrop;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,10 +21,14 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.anggrayudi.storage.SimpleStorageHelper;
 import com.anggrayudi.storage.file.DocumentFileUtils;
 import com.fmsys.snapdrop.utils.ClipboardUtils;
 import com.fmsys.snapdrop.utils.LogUtils;
+import com.google.android.material.snackbar.Snackbar;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -82,7 +87,37 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
-        baseUrlPref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "", getString(R.string.baseURL), newValue -> baseUrlPref.setSummary(newValue != null ? newValue : getString(R.string.baseURL))));
+        baseUrlPref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "", getString(R.string.baseURL), newValue -> {
+
+            if (newValue == null) {
+                baseUrlPref.setSummary(getString(R.string.baseURL));
+            } else {
+                final Dialog dialog = new Dialog(getContext());
+                dialog.setContentView(R.layout.progress_dialog);
+
+                final RequestQueue queue = Volley.newRequestQueue(getContext());
+                final StringRequest request = new StringRequest(newValue,
+                        response -> {
+                            dialog.cancel();
+                            if (response.toLowerCase().contains("snapdrop")) {
+                                baseUrlPref.setSummary(newValue);
+                            } else {
+                                Snackbar.make(requireView(), R.string.baseurl_no_snapdrop_instance, Snackbar.LENGTH_LONG).show();
+                                baseUrlPref.setSummary(getString(R.string.baseURL));
+                                setPreferenceValue(baseUrlPref.getKey(), null, null);
+                            }
+                        }, error -> {
+                    dialog.cancel();
+                    Snackbar.make(requireView(), R.string.baseurl_check_instance_failed, Snackbar.LENGTH_LONG).show();
+                    baseUrlPref.setSummary(getString(R.string.baseURL));
+                    setPreferenceValue(baseUrlPref.getKey(), null, null);
+                });
+
+                queue.add(request);
+                dialog.setOnDismissListener(d -> request.cancel());
+                dialog.show();
+            }
+        }));
         baseUrlPref.setSummary(preferences.getString(baseUrlPref.getKey(), getString(R.string.baseURL)));
 
         final Preference saveLocationPref = findPreference(getString(R.string.pref_save_location));
@@ -100,13 +135,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         });
 
         final Preference themePref = findPreference(getString(R.string.pref_theme_setting));
-            themePref.setOnPreferenceChangeListener((Preference preference, Object newValue) -> {
-                final DarkModeSetting darkTheme = DarkModeSetting.valueOf((String) newValue);
-                SnapdropApplication.setAppTheme(darkTheme);
-                requireActivity().setResult(Activity.RESULT_OK);
-                requireActivity().recreate();
-                return true;
-            });
+        themePref.setOnPreferenceChangeListener((Preference preference, Object newValue) -> {
+            final DarkModeSetting darkTheme = DarkModeSetting.valueOf((String) newValue);
+            SnapdropApplication.setAppTheme(darkTheme);
+            requireActivity().setResult(Activity.RESULT_OK);
+            requireActivity().recreate();
+            return true;
+        });
     }
 
     private Preference initUrlPreference(final @StringRes int pref, final String url) {
@@ -150,7 +185,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getContext())
                 .setTitle(pref.getTitle())
                 .setView(dialogView)
-                .setPositiveButton(android.R.string.ok, (dialog, id) -> setPreferenceValue(pref.getKey(), editText.getText().toString(), onPreferenceChangeCallback))
+                .setPositiveButton(android.R.string.ok, (dialog, id) -> setPreferenceValue(pref.getKey(), editText.getText().toString().trim(), onPreferenceChangeCallback))
                 .setNegativeButton(R.string.reset, (dialog, id) -> setPreferenceValue(pref.getKey(), null, onPreferenceChangeCallback));
         builder.create().show();
         return true;
