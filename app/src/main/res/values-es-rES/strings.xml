@@ -43,6 +43,8 @@
         <item>Oscuro</item>
     </string-array>
     <string name="baseurl_title">URL base</string>
+    <string name="baseurl_no_snapdrop_instance">No parece ser una instancia de Snapdrop</string>
+    <string name="baseurl_check_instance_failed">No se pudo verificar la instancia de Snapdrop</string>
     <string name="save_location">Guardar ubicación</string>
     <!-- File sharing -->
     <string name="intent_file">Se ha seleccionado un archivo para compartir</string>
