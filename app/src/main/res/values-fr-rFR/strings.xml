@@ -43,6 +43,8 @@
         <item>Sombre</item>
     </string-array>
     <string name="baseurl_title">URL du serveur</string>
+    <string name="baseurl_no_snapdrop_instance">Ne semble pas être une instance Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Échec de la vérification de l\'instance Snapdrop</string>
     <string name="save_location">Dossier de sauvegarde</string>
     <!-- File sharing -->
     <string name="intent_file">Un fichier est sélectionné pour être partagé</string>
