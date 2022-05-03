@@ -4,7 +4,7 @@
     <string name="app_name_long">سناب درُوب لِنِظامِ أندُروِيد</string>
     <string name="err_no_browser">لا يمكن فتح المستعرض</string>
     <string name="err_no_app">لا يوجد تطبيق لفتح هذا المِلَفّ</string>
-    <string name="open_url">فتح الرابط</string>
+    <string name="open_url">افتح الرابط</string>
     <!-- Welcome -->
     <string name="app_welcome">مَرحبًا بِكَ فِي سناب درُوب</string>
     <string name="app_welcome_summary">1. اِفتَح <a href="https://snapdrop.net">snapdrop.net</a> أو تَطبيق سناب درُوب (Snapdrop) عَلَى أي جِهاز آخر فِي شبكة الواي فاي المَحليَّة.\n2. اِنقر عَلَى الجِهاز الَّذي تَرغَب فِي مُشاركَة المِلَف\ـات مَعه.\n3. تمّ! سوف تُرسَل المِلَف\ـات…</string>
