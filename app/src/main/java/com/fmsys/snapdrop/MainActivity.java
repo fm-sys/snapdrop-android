@@ -606,7 +606,7 @@ public class MainActivity extends AppCompatActivity {
         final String downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
         final Context context = SnapdropApplication.getInstance();
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        final String path = preferences.getString(context.getString(R.string.pref_save_location), downloadsFolder + "/Snapdrop");
+        final String path = preferences.getString(context.getString(R.string.pref_save_location), downloadsFolder);
         return DocumentFileCompat.fromFullPath(context, path, DocumentFileType.FOLDER, true);
     }
 

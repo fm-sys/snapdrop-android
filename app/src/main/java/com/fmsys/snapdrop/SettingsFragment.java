@@ -182,7 +182,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
         final String downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-        saveLocationPref.setSummary(preferences.getString(saveLocationPref.getKey(), downloadsFolder + "/Snapdrop"));
+        saveLocationPref.setSummary(preferences.getString(saveLocationPref.getKey(), downloadsFolder));
         storageHelper.setOnFolderSelected((requestCode, folder) -> {
             final String path = DocumentFileUtils.getAbsolutePath(folder, requireContext());
             setPreferenceValue(saveLocationPref.getKey(), path, null);
