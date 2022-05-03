@@ -3,7 +3,7 @@
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop for Android</string>
     <string name="err_no_browser">Kan ikke åpne nettleseren</string>
-    <string name="err_no_app">Du har ingen apper installert for å åpne denne filen</string>
+    <string name="err_no_app">Ingen apper installert for å åpne denne filen</string>
     <string name="open_url">Åpne URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Velkommen til Snapdrop</string>
@@ -51,7 +51,7 @@
     <string name="intent_files">Filer er valgt for deling</string>
     <string name="intent_content">Innhold er valgt for deling</string>
     <string name="error_filechooser">Kan ikke åpne filvelgeren</string>
-    <string name="error_network">Bekreft at du er tilkoblet et WiFi-nettverk</string>
+    <string name="error_network">Vennligst bekreft at du er tilkoblet et WiFi-nettverk</string>
     <string name="ignore_error_network">Slipp meg inn likevel</string>
     <string name="error_not_reachable_title">Oops, beklager!</string>
     <string name="error_not_reachable">Snapdrop-serveren kan ikke nås. \n\nHvis Internett-tilkoblingen din fungerer og dette skjer likevel, kan vi ha serverproblemer for tiden. Vi vet at dette kan være veldig frustrerende, men vennligst ikke etterlat dårlige anmeldelser på Google Play. \n\nDenne appen er helt uten annonser, så vi tjener ikke noen penger med den. Det er bare et hobby-prosjekt, men vi gjør alt for å få det tilbake til å gå raskt.</string>
