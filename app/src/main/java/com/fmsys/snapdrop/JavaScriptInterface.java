@@ -50,7 +50,7 @@ public class JavaScriptInterface {
                 }
             }
             if (fileUri == null) {
-                final FileDescription description = new FileDescription(fileName, "Snapdrop", mimeType);
+                final FileDescription description = new FileDescription(fileName, "", mimeType);
                 fileUri = DocumentFileCompat.createDownloadWithMediaStoreFallback(context, description);
             }
         } else {
