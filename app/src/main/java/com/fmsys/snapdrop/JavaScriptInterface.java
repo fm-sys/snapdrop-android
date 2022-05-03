@@ -1,23 +1,31 @@
 package com.fmsys.snapdrop;
 
+import com.anggrayudi.storage.extension.UriUtils;
+import com.anggrayudi.storage.file.DocumentFileCompat;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.anggrayudi.storage.media.FileDescription;
+import com.fmsys.snapdrop.utils.ClipboardUtils;
+
 import android.content.Context;
+import android.net.Uri;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 
-import com.fmsys.snapdrop.utils.ClipboardUtils;
-
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+
+import androidx.documentfile.provider.DocumentFile;
 
 public class JavaScriptInterface {
     private final MainActivity context;
 
-    private FileOutputStream fileOutputStream;
+    private OutputStream fileOutputStream;
     private FileHeader fileHeader;
 
     public JavaScriptInterface(final MainActivity context) {
@@ -26,14 +34,44 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
-        final File outputDir = context.getCacheDir();
-        final String[] nameSplit = fileName.split("\\.");
-        while (nameSplit[0].length() < 3) {
-            nameSplit[0] += nameSplit[0];
+        final Context context = this.context.getApplicationContext();
+        Uri fileUri = null;
+        if (Build.VERSION.SDK_INT > 28) {
+            /*
+            Make file transfer faster 2x on scoped storage by writing to media store database directly,
+            instead of writing to temporary file first. It could save storage lifetime because
+            the file is written once only.
+             */
+            final DocumentFile saveLocation = MainActivity.getSaveLocation();
+            if (saveLocation != null) {
+                final DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context, fileName, mimeType);
+                if (file != null) {
+                    fileUri = file.getUri();
+                }
+            }
+            if (fileUri == null) {
+                final FileDescription description = new FileDescription(fileName, "Snapdrop", mimeType);
+                fileUri = DocumentFileCompat.createDownloadWithMediaStoreFallback(context, description);
+            }
+        } else {
+            /*
+            Prior to scoped storage restriction, SimpleStorage will use File#renameTo(), so no need to worry
+            about the storage's lifetime.
+             */
+            final String[] nameSplit = fileName.split("\\.");
+            while (nameSplit[0].length() < 3) {
+                nameSplit[0] += nameSplit[0];
+            }
+            fileUri = Uri.fromFile(File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], context.getCacheDir()));
         }
-        final File tempFile = File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], outputDir);
-        fileOutputStream = new FileOutputStream(tempFile);
-        fileHeader = new FileHeader(fileName, mimeType, fileSize, tempFile);
+        if (fileUri == null) {
+            throw new IOException("Missing storage permissions");
+        }
+        fileOutputStream = UriUtils.openOutputStream(fileUri, context);
+        if (fileOutputStream == null) {
+            throw new IOException("Cannot write target file");
+        }
+        fileHeader = new FileHeader(fileName, mimeType, fileSize, fileUri);
     }
 
     @JavascriptInterface
@@ -90,7 +128,7 @@ public class JavaScriptInterface {
     public void dialogHidden() {
         context.dialogVisible = false;
     }
-    
+
     @JavascriptInterface
     public void setProgress(final float progress) {
         if (progress > 0) {
@@ -105,13 +143,13 @@ public class JavaScriptInterface {
         private final String name;
         private final String mime;
         private final String size;
-        private final File file;
+        private final Uri fileUri;
 
-        public FileHeader(final String name, final String mime, final String size, final File path) {
+        public FileHeader(final String name, final String mime, final String size, final Uri fileUri) {
             this.name = name;
             this.mime = mime;
             this.size = size;
-            this.file = path;
+            this.fileUri = fileUri;
         }
 
         public String getName() {
@@ -126,8 +164,8 @@ public class JavaScriptInterface {
             return size;
         }
 
-        public File getTempFile() {
-            return file;
+        public Uri getFileUri() {
+            return fileUri;
         }
     }
 
