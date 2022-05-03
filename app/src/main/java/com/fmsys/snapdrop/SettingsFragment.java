@@ -1,5 +1,15 @@
 package com.fmsys.snapdrop;
 
+import com.google.android.material.snackbar.Snackbar;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.anggrayudi.storage.SimpleStorageHelper;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.fmsys.snapdrop.utils.ClipboardUtils;
+import com.fmsys.snapdrop.utils.LogUtils;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
@@ -20,15 +30,6 @@ import androidx.core.util.Consumer;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.anggrayudi.storage.SimpleStorageHelper;
-import com.anggrayudi.storage.file.DocumentFileUtils;
-import com.fmsys.snapdrop.utils.ClipboardUtils;
-import com.fmsys.snapdrop.utils.LogUtils;
-import com.google.android.material.snackbar.Snackbar;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -126,7 +127,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
         final String downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-        saveLocationPref.setSummary(preferences.getString(saveLocationPref.getKey(), downloadsFolder));
+        saveLocationPref.setSummary(preferences.getString(saveLocationPref.getKey(), downloadsFolder + "/Snapdrop"));
         storageHelper.setOnFolderSelected((requestCode, folder) -> {
             final String path = DocumentFileUtils.getAbsolutePath(folder, requireContext());
             setPreferenceValue(saveLocationPref.getKey(), path, null);

@@ -1,5 +1,17 @@
 package com.fmsys.snapdrop;
 
+import com.google.android.material.snackbar.Snackbar;
+
+import com.anggrayudi.storage.callback.FileCallback;
+import com.anggrayudi.storage.file.DocumentFileCompat;
+import com.anggrayudi.storage.file.DocumentFileType;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.anggrayudi.storage.media.FileDescription;
+import com.anggrayudi.storage.media.MediaFile;
+import com.fmsys.snapdrop.databinding.ActivityMainBinding;
+import com.fmsys.snapdrop.utils.NetworkUtils;
+import com.fmsys.snapdrop.utils.ShareUtils;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -24,6 +36,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
 import android.util.Log;
@@ -42,6 +55,14 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
@@ -55,24 +76,6 @@ import androidx.documentfile.provider.DocumentFile;
 import androidx.preference.PreferenceManager;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
-
-import com.anggrayudi.storage.callback.FileCallback;
-import com.anggrayudi.storage.file.DocumentFileCompat;
-import com.anggrayudi.storage.file.DocumentFileType;
-import com.anggrayudi.storage.file.DocumentFileUtils;
-import com.anggrayudi.storage.media.FileDescription;
-import com.anggrayudi.storage.media.MediaFile;
-import com.fmsys.snapdrop.databinding.ActivityMainBinding;
-import com.fmsys.snapdrop.utils.NetworkUtils;
-import com.fmsys.snapdrop.utils.ShareUtils;
-import com.google.android.material.snackbar.Snackbar;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
@@ -97,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean dialogVisible = false;
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
+    private final Handler handler = new Handler(Looper.getMainLooper());
 
     public Intent uploadIntent = null;
 
@@ -130,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        
+
         baseURL = prefs.getString(getString(R.string.pref_baseurl), getString(R.string.baseURL));
 
         if (prefs.getBoolean(getString(R.string.pref_switch_keep_on), true)) {
@@ -526,7 +530,7 @@ public class MainActivity extends AppCompatActivity {
                             .setPositiveButton(android.R.string.ok, null)
                             .create()
                             .show();
-                    
+
                     prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply();
                 }
             }
@@ -576,27 +580,43 @@ public class MainActivity extends AppCompatActivity {
             resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
         }
 
-        executor.execute(() -> {
-            final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
-            final DocumentFile source = DocumentFile.fromFile(fileHeader.getTempFile());
-            final String downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-            final String path = prefs.getString(getString(R.string.pref_save_location), downloadsFolder);
-            final DocumentFile saveLocation = DocumentFileCompat.fromFullPath(getApplicationContext(), path, DocumentFileType.FOLDER, true);
-            if (saveLocation != null) {
-                DocumentFileUtils.moveFileTo(source, getApplicationContext(), saveLocation, fileDescription, fileCallback(fileHeader));
-            } else {
-                DocumentFileUtils.moveFileToDownloadMedia(source, getApplicationContext(), fileDescription, fileCallback(fileHeader));
-            }
-        });
+        if (Build.VERSION.SDK_INT > 28) {
+            fileDownloadedIntent(fileHeader.getFileUri(), fileHeader);
+        } else {
+            executor.execute(() -> {
+                final FileDescription fileDescription = new FileDescription(fileHeader.getName(), "", fileHeader.getMime());
+                final DocumentFile saveLocation = getSaveLocation();
+                final DocumentFile source = DocumentFile.fromFile(new File(fileHeader.getFileUri().getPath()));
+                if (saveLocation != null) {
+                    DocumentFileUtils.moveFileTo(source, getApplicationContext(), saveLocation, fileDescription, fileCallback(fileHeader));
+                } else {
+                    onFailedMovingTempFile("Missing storage permissions");
+                }
+            });
+        }
+    }
+
+    public static DocumentFile getSaveLocation() {
+        final String downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
+        final Context context = SnapdropApplication.getInstance();
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        final String path = preferences.getString(context.getString(R.string.pref_save_location), downloadsFolder + "/Snapdrop");
+        return DocumentFileCompat.fromFullPath(context, path, DocumentFileType.FOLDER, true);
+    }
+
+    private void onFailedMovingTempFile(final String errorMessage) {
+        Log.d("SimpleStorage", errorMessage);
+        handler.post(() -> {
+            Snackbar.make(binding.pullToRefresh, errorMessage, Snackbar.LENGTH_LONG).show();
+            resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
+       });
     }
 
     private FileCallback fileCallback(final JavaScriptInterface.FileHeader fileHeader) {
         return new FileCallback() {
             @Override
             public void onFailed(@NonNull final FileCallback.ErrorCode errorCode) {
-                Log.d("SimpleStorage", errorCode.toString());
-                Snackbar.make(binding.pullToRefresh, errorCode.toString(), Snackbar.LENGTH_LONG).show();
-                resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
+                onFailedMovingTempFile(errorCode.toString());
             }
 
             @Override
