@@ -43,6 +43,8 @@
         <item>داكِن</item>
     </string-array>
     <string name="baseurl_title">عنوان URL الأساسي</string>
+    <string name="baseurl_no_snapdrop_instance">لا يبدو أنه مثيل سناب دروب</string>
+    <string name="baseurl_check_instance_failed">فشل في التحقق من مثيل سناب دروب</string>
     <string name="save_location">حِفظُ المَوقِع</string>
     <!-- File sharing -->
     <string name="intent_file">تمَّ اِختيارُ مِلَف للمُشارَكَة</string>
