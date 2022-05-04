@@ -1,0 +1,21 @@
+Snapdrop for Android je Android™ klient pro bezplatné a open source lokální sdílení souborů https://snapdrop.net/.
+
+Taky míváte problém, kdy potřebujete rychle přesunout soubor z telefonu do počítače?
+
+USB? - Staromódní!
+Bluetooth? - Příliš těžkopádné a pomalé!
+E-mail? - Prosím ne, další email který píšu sám sobě!
+
+Snapdrop!
+
+Snapdrop je lokální řešení pro sdílení souborů, které plně funguje ve vašem prohlížeči. Trochu jako Apple Airdrop, ale nejen pro Apple zařízení. Windows, Linux, Android, IPhone, Mac - žádný problém!
+
+I kdyby to teoreticky fungovalo v prohlížeči, tuto aplikaci budete milovat, pokud chcete používat Snapdrop častěji ve svém každodenním životě. Díky dokonalé integraci do operačního systému Android jsou soubory posílány ještě rychleji. Můžete sdílet přímo z ostatních aplikací do Snapdropu.
+
+Díky své radikální jednoduchosti usnadňuje Snapdrop pro Android každodenní život tisícům uživatelů. Jako open source projekt nemáme žádné komerční zájmy, ale chceme svět trochu lepší. Připojte se a přesvědčte se sami!
+
+ZDROJOVÝ KÓD:
+https://github.com/fm-sys/snapdrop-android
+
+TVŮRCI:
+Aplikace je poháněna projektem Snapdrop Open Source hostujícím a spravovaným RobinLinus. Viz také https://www.github.com/robinlinus/snapdrop
