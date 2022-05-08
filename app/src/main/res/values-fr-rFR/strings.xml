@@ -14,7 +14,7 @@
     <string name="notification_channel_name">Téléchargement terminé</string>
     <!-- Action Buttons -->
     <string name="open">ouvrir</string>
-    <string name="reset">réinitialiser</string>
+    <string name="reset">reste</string>
     <string name="copy">copier</string>
     <!-- Settings / About -->
     <string name="title_activity_about">À propos de Snapdrop pour Android</string>
