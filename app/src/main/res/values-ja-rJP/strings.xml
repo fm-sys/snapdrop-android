@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Android用Snapdrop</string>
-    <string name="err_no_browser">ブラウザを開けません</string>
+    <string name="app_name_long">Snapdrop for Android</string>
+    <string name="err_no_browser">ブラウザを開くことができません</string>
     <string name="err_no_app">このファイルを開くアプリがインストールされていません</string>
+    <string name="open_url">URLから開く</string>
     <!-- Welcome -->
-    <string name="app_welcome">Snapdropへようこど</string>
+    <string name="app_welcome">Snapdropへようこそ</string>
     <string name="app_welcome_summary">1. 同じWiFiに接続しているデバイスで<a href="https://snapdrop.net">snapdrop.net</a>を開くか、Snapdropアプリを起動します。\n2. ファイルをシェアしたいデバイスを選択します。\n3. ファイルが転送されます…</string>
     <!-- Download -->
-    <string name="download_save_pending">ファイルを保存しています。少々お待ちください…</string>
+    <string name="download_save_pending">ファイルを保存しています。少しお待ちください…</string>
     <string name="download_successful">ダウンロード完了</string>
     <string name="notification_channel_name">ダウンロードが完了しました</string>
     <!-- Action Buttons -->
@@ -42,6 +43,8 @@
         <item>ダーク</item>
     </string-array>
     <string name="baseurl_title">ベースURL</string>
+    <string name="baseurl_no_snapdrop_instance">Snapdropインスタンスではありません</string>
+    <string name="baseurl_check_instance_failed">Snapdropインスタンスの確認に失敗しました</string>
     <string name="save_location">保存先</string>
     <!-- File sharing -->
     <string name="intent_file">シェアするファイルが選択されています</string>
@@ -50,4 +53,15 @@
     <string name="error_filechooser">ファイル選択を開けません</string>
     <string name="error_network">WiFiネットワークに接続されているか確認してください</string>
     <string name="ignore_error_network">とにかく進む</string>
+    <string name="error_not_reachable_title">申し訳ありません</string>
+    <string name="error_not_reachable">Snapdropサーバーにアクセスできません。\n\nインターネット接続が機能していて発生する場合、サーバー側の問題の可能性があります。大変ご迷惑をおかけしますが、Google Playストアに低評価レビューを残さないようにお願いします。 \n\nこのアプリは広告なしで運営しており収益化はしていません。このプロジェクトは趣味のプロジェクトであり、できるだけ早く再開できるよう、全力を尽くしています。</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">他のデバイスでSnapdropを開き、ファイルを送信することができます。</string>
+    <string name="website_instruction">タップしてファイルを送信するか、長押しでメッセージを送信します</string>
+    <string name="website_file_received">受信したファイル</string>
+    <string name="website_file_ask_before_download">ファイルを保存する前に常に確認</string>
+    <string name="website_file_download">保存</string>
+    <string name="website_footer_discovery">このネットワーク上のすべての人に発見される可能性があります</string>
+    <string name="website_footer_known_as">あなたは %sとして知られています</string>
+    <string name="website_about_subheading">デバイス間でファイルを転送する最も簡単な方法</string>
 </resources>
