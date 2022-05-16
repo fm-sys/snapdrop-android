@@ -1,4 +1,4 @@
-A Snapdrop Androidra, egy Android™ kliens az ingyenes és nyilt forráskódú helyi fájlmegosztáshoz https://snapdrop.net/.
+A Snapdrop Androidra, egy Android™ kliens az ingyenes és nyílt forráskódú helyi fájlmegosztáshoz https://snapdrop.net/.
 
 Te is néha abban a helyzetben vagy, hogy gyorsan át kell küldened fájlokat a telefonodról a számítógépedre?
 
