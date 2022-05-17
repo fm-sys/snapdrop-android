@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop para Android</string>
+    <string name="app_name_long">Sandro para Androide</string>
     <string name="err_no_browser">Nose puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
     <string name="open_url">Abrir URL</string>
