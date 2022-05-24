@@ -135,6 +135,12 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
+    public void ignoreClickedListener() {
+        //Do stuff...
+        Log.w("ignoreClickListener", "ignore was clicked in the download dialog, however no event specified yet");
+    }
+
+    @JavascriptInterface
     public void setProgress(final float progress) {
         if (progress > 0) {
             context.transfer.set(true);

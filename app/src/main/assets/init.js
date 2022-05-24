@@ -122,6 +122,10 @@ Dialog.prototype.hide = function(){
     this._hde();
 };
 
+let downloadCancel = document.querySelector('#receiveDialog>x-background>x-paper>div.row-reverse>button');
+downloadCancel.addEventListener('click', function() { SnapdropAndroid.ignoreClickedListener(); });
+
+
 //show localized display name
 let localizeDisplayName = function(str){
     document.getElementById('displayName').textContent = SnapdropAndroid.getYouAreKnownAsTranslationString(str);
