@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop pre Android</string>
+    <string name="err_no_browser">Nemožno otvoriť prehliadač</string>
+    <string name="err_no_app">Nebola nájdená žiadna nainštalovaná aplikácia na otvorenie tohto súboru</string>
+    <string name="open_url">Otvoriť URL</string>
+    <!-- Welcome -->
+    <string name="app_welcome">Vitajte v Snapdrop</string>
+    <string name="app_welcome_summary">1. Otvorte <a href="https://snapdrop.net">snapdrop.net</a> alebo Snapdrop aplikáciu na ďalšom zariadení v rovnakej WiFi sieti.\n2. Klepnite na zariadenie s ktorým chcete zdieľať súbor(y).\n3. Hotovo! Súbor(y) budú odoslané…</string>
+    <!-- Download -->
+    <string name="download_save_pending">Ukladanie súboru. Trochu strpenia prosím…</string>
+    <string name="download_successful">Sťahovanie bolo úspešné</string>
+    <string name="notification_channel_name">Sťahovanie dokončené</string>
+    <!-- Action Buttons -->
+    <string name="open">otvoriť</string>
+    <string name="reset">obnoviť</string>
+    <string name="copy">kopírovať</string>
+    <!-- Settings / About -->
+    <string name="title_activity_about">O Snapdrop pre Android</string>
+    <string name="license">Licencia</string>
+    <string name="pref_category_settings">Nastavenia</string>
+    <string name="source">Zdrojový kód</string>
+    <string name="source_summary">Zobraziť zdrojový kód na GitHub</string>
+    <string name="components">Otvoriť zdrojové súčasti</string>
+    <string name="logs">Záznamy ladení</string>
+    <string name="components_summary">Klepnutím zobrazíte</string>
+    <string name="crowdin">Preklad</string>
+    <string name="crowdin_summary">Pomôžte preložiť <b>Snapdrop pre Android</b> do vášho obľúbeného jazyka</string>
+    <string name="support_us">Podporiť Snapdrop</string>
+    <string name="support_us_summary">Pozrite sa, ako môžete podporiť Snapdrop komunitu</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Hovorte o <b>Snapdrop pre Android</b></string>
+    <string name="version">Verzia</string>
+    <string name="pref_device_name_title">Názov zariadenia</string>
+    <string name="pref_device_name_summary">Nastaviť si vlastný názov zariadenia</string>
+    <string name="keep_on_summary">(Odporúčané) Mnohé zariadenia majú problémy s prerušovaním prenosov keď majú vypnutú obrazovku</string>
+    <string name="keep_on_title">Počas prenosu majte zapnutú obrazovku</string>
+    <string name="settings_theme_title">Motív</string>
+    <string-array name="darkmode_entries">
+        <item>Predvolený systémom</item>
+        <item>Svetlý</item>
+        <item>Tmavý</item>
+    </string-array>
+    <string name="baseurl_title">Základná URL</string>
+    <string name="baseurl_no_snapdrop_instance">Zdá sa, že sa nejedná o Snapdrop inštanciu</string>
+    <string name="baseurl_check_instance_failed">Nepodarilo sa o overiť Snapdrop inštanciu</string>
+    <string name="save_location">Uložiť umiestnenie</string>
+    <!-- File sharing -->
+    <string name="intent_file">Súbor je označený pre zdieľanie</string>
+    <string name="intent_files">Súbory sú označené pre zdieľanie</string>
+    <string name="intent_content">Obsah je označený pre zdieľanie</string>
+    <string name="error_filechooser">Nemožno otvoriť vyberač súborov</string>
+    <string name="error_network">Prosím skontrolujte, či ste pripojení k WiFi sieti</string>
+    <string name="ignore_error_network">Napriek tomu pokračovať</string>
+    <string name="error_not_reachable_title">Ups, prepáčte!</string>
+    <string name="error_not_reachable">Nemožno dosiahnuť Snapdrop server. \n\nAk vaše internetové pripojenie funguje a toto sa ajtak stane, je možné že momentálne máme problémy. Vieme že toto dokáže byť veľmi frustrujúce, ale prosím nedávajte nám na Google Play zlé hodnotenia. \n\nTáto aplikácia je úplne bez reklám, takže z nej nezarabame žiadne peniaze. Tento projekt je iba koníček, ale robíme všetko preto aby všetko rýchlo začalo bežať.</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Otvorte Snapdrop na ďalších zariadeniach pre posielanie súborov</string>
+    <string name="website_instruction">Klepnutím pošlete súbory a podržaním pošlete správu</string>
+    <string name="website_file_received">Súbor bol prijatý</string>
+    <string name="website_file_ask_before_download">Vždy sa opýtať pred ukladaním súboru</string>
+    <string name="website_file_download">Uložiť</string>
+    <string name="website_footer_discovery">Môže vás tu objaviť každý na tejto sieti</string>
+    <string name="website_footer_known_as">Ste tu pod menom %s</string>
+    <string name="website_about_subheading">Najjednoduchší spôsob prenášania súborov medzi zariadeniami</string>
+</resources>
