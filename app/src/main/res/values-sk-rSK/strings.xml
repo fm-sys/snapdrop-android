@@ -25,7 +25,7 @@
     <string name="components">Otvoriť zdrojové súčasti</string>
     <string name="logs">Záznamy ladení</string>
     <string name="components_summary">Klepnutím zobrazíte</string>
-    <string name="crowdin">Preklad</string>
+    <string name="crowdin">Lokalizácia</string>
     <string name="crowdin_summary">Pomôžte preložiť <b>Snapdrop pre Android</b> do vášho obľúbeného jazyka</string>
     <string name="support_us">Podporiť Snapdrop</string>
     <string name="support_us_summary">Pozrite sa, ako môžete podporiť Snapdrop komunitu</string>
@@ -35,7 +35,7 @@
     <string name="pref_device_name_title">Názov zariadenia</string>
     <string name="pref_device_name_summary">Nastaviť si vlastný názov zariadenia</string>
     <string name="keep_on_summary">(Odporúčané) Mnohé zariadenia majú problémy s prerušovaním prenosov keď majú vypnutú obrazovku</string>
-    <string name="keep_on_title">Počas prenosu majte zapnutú obrazovku</string>
+    <string name="keep_on_title">Nechať obrazovku zapnutú počas prenosu</string>
     <string name="settings_theme_title">Motív</string>
     <string-array name="darkmode_entries">
         <item>Predvolený systémom</item>
@@ -45,7 +45,7 @@
     <string name="baseurl_title">Základná URL</string>
     <string name="baseurl_no_snapdrop_instance">Zdá sa, že sa nejedná o Snapdrop inštanciu</string>
     <string name="baseurl_check_instance_failed">Nepodarilo sa o overiť Snapdrop inštanciu</string>
-    <string name="save_location">Uložiť umiestnenie</string>
+    <string name="save_location">Ukladacia lokácia</string>
     <!-- File sharing -->
     <string name="intent_file">Súbor je označený pre zdieľanie</string>
     <string name="intent_files">Súbory sú označené pre zdieľanie</string>
