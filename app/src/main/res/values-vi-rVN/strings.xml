@@ -4,6 +4,7 @@
     <string name="app_name_long">Snapdrop cho Android</string>
     <string name="err_no_browser">Không thể mở trình duyệt</string>
     <string name="err_no_app">Không có ứng dụng nào có thể mở tệp này</string>
+    <string name="open_url">Mở liên kết URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Chào mừng đến với Snapdrop</string>
     <string name="app_welcome_summary">1. Mở trang web <a href="https://snapdrop.net">snapdrop.net</a> hoặc ứng dụng Snapdrop trên thiết bị khác sử dụng chung mạng WiFi.\n2. Nhấn vào thiết bị mà bạn muốn chuyển file tới.\n3. Đã xong! File của bạn sẽ được chuyển…</string>
@@ -42,6 +43,8 @@
         <item>Tối đen</item>
     </string-array>
     <string name="baseurl_title">URL cơ sở</string>
+    <string name="baseurl_no_snapdrop_instance">Có vẻ như đây không phải là một yêu cầu của Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Không thể xác nhận yêu cầu của Snapdrop</string>
     <string name="save_location">Vị trí lưu</string>
     <!-- File sharing -->
     <string name="intent_file">Đã chọn 1 file để chia sẻ</string>
@@ -50,11 +53,13 @@
     <string name="error_filechooser">Không thể mở trình chọn file</string>
     <string name="error_network">Vui lòng xác minh rằng bạn được kết nối với mạng WiFi</string>
     <string name="ignore_error_network">Cứ cho tôi vào đi</string>
+    <string name="error_not_reachable_title">Ầu, xin lỗi!</string>
+    <string name="error_not_reachable">Máy chủ Snapdrop không thể hoàn thành tác vụ. \n\n Nếu kết nối internet của bạn vẫn bình thường nhưng điều này vẫn xảy ra thì có vẻ như máy chủ của chúng tôi đang gặp vấn đề. Chúng tôi biết điều này có thể rất khó chịu, nhưng đừng đánh giá xấu chúng tôi trên Cửa Hàng Play nhé. \n\n Phần mềm này hoàn toàn miễn phí và không có quảng cáo cho nên chúng tôi không hề kiếm được thu nhập từ nó. Đây là một dự án vì cộng đồng, chúng tôi sẽ cố gắng khắc phục mọi thứ nhanh nhất có thể.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Mở Snapdrop trên thiết bị khác để truyền file</string>
     <string name="website_instruction">Nhấn để truyền file hoặc nhấn giữ để gửi tin nhắn</string>
     <string name="website_file_received">Đã nhận file</string>
-    <string name="website_file_ask_always">Hỏi lưu file trước khi tải xuống</string>
+    <string name="website_file_ask_before_download">Luôn hỏi trước khi lưu tập tin</string>
     <string name="website_file_download">Lưu</string>
     <string name="website_footer_discovery">Bạn có thể được khám phá bởi bất kì ai trong cùng mạng bạn đang kết nối</string>
     <string name="website_footer_known_as">Tên hiển thị của bạn là %s</string>
