@@ -1,10 +1,10 @@
 Snapdrop voor Android is een Android™-client voor de gratis en open source oplossing voor het lokaal delen van bestanden https://snapdrop.net/.
 
-Heeft u soms ook het probleem dat u gewoon alleen snel een bestand van uw telefoon naar uw PC wilt overzetten?
+Heeft u soms ook het probleem dat u alleen maar snel een bestand van uw telefoon naar uw PC wilt overzetten?
 
 USB? - Oubollig!
 Bluetooth? - Veel te omslachtig en traag!
-E-mail? - Alstublieft, niet nog een e-mail die ik naar mijzelf moet schrijven!
+E-mail? - Alsjeblieft, niet wéér een e-mail naar mezelf schrijven!
 
 Snapdrop!
 
