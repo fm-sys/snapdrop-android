@@ -4,6 +4,7 @@
     <string name="app_name_long">Snapdrop voor Android</string>
     <string name="err_no_browser">Browser kan niet worden geopend</string>
     <string name="err_no_app">Geen app gevonden om dit bestand te openen</string>
+    <string name="open_url">URL openen</string>
     <!-- Welcome -->
     <string name="app_welcome">Welkom bij Snapdrop</string>
     <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> of de Snapdrop app op een ander apparaat op uw lokale WiFi-netwerk.\n2. Tik op het apparaat waarmee je de bestand(en) wilt delen.\n3. Klaar! De bestand(en) worden verstuurd…</string>
@@ -42,6 +43,8 @@
         <item>Donker</item>
     </string-array>
     <string name="baseurl_title">Standaard URL</string>
+    <string name="baseurl_no_snapdrop_instance">Dit lijkt geen Snapdrop instantie te zijn</string>
+    <string name="baseurl_check_instance_failed">Kon Snapdrop instantie niet verifiëren</string>
     <string name="save_location">Locatie opslaan</string>
     <!-- File sharing -->
     <string name="intent_file">Een bestand is geselecteerd om te delen</string>
@@ -50,4 +53,15 @@
     <string name="error_filechooser">Kan bestandskiezer niet openen</string>
     <string name="error_network">Controleer alstublieft of u met een WiFi netwerk verbonden bent</string>
     <string name="ignore_error_network">Toch proberen</string>
+    <string name="error_not_reachable_title">Oeps, sorry!</string>
+    <string name="error_not_reachable">De Snapdrop-server kan niet worden bereikt. \n\nAls je internetverbinding werkt en dit gebeurt toch, hebben we mogelijk serverproblemen momenteel. We weten dat dit zeer frustrerend kan zijn, maar laat alsjeblieft geen slechte beoordelingen achter in Google Play.\n\nDeze app is volledig advertentievrij, dus wij verdienen er geen geld mee. Het is maar een hobbyproject, maar we doen er alles aan om de boel snel weer draaiende te krijgen.</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Open Snapdrop op andere apparaten om bestanden te versturen</string>
+    <string name="website_instruction">Tik om bestanden te verzenden of houd ingedrukt om een bericht te sturen</string>
+    <string name="website_file_received">Bestand ontvangen</string>
+    <string name="website_file_ask_before_download">Altijd vragen voordat een bestand wordt opgeslagen</string>
+    <string name="website_file_download">Opslaan</string>
+    <string name="website_footer_discovery">Je kunt door iedereen op dit netwerk worden ontdekt</string>
+    <string name="website_footer_known_as">Jij bent %s</string>
+    <string name="website_about_subheading">De makkelijkste manier om bestanden te verplaatsen tussen apparaten</string>
 </resources>
