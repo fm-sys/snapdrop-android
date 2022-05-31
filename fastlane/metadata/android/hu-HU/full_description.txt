@@ -1,0 +1,21 @@
+A Snapdrop Androidra, egy Android™ kliens az ingyenes és nyílt forráskódú helyi fájlmegosztáshoz https://snapdrop.net/.
+
+Te is néha abban a helyzetben vagy, hogy gyorsan át kell küldened fájlokat a telefonodról a számítógépedre?
+
+USB? - Régimódi!
+Bluetooth? - Nehézkes és lassú!
+E-mail? - Ne, mégegy email amit magamnak írok!
+
+Snapdrop!
+
+A Snapdrop egy helyi fájlmegosztási megoldás, ami teljes mértékben a böngésződben működik. Egy kicsit hasonlít az Apple Airdrop-ra, de ez nem csak Apple eszközökre elérhető. Windows, Linux, Android, iPhone, Mac - semmi probléma!
+
+Azonban, bármennyire tökéletesen működik a böngésződben, szeretni fogod az alkalmazást ha gyakrabban akarod használni a Snapdropot a mindennapi életedben. A tökéletes Android rendszerbe való integrációnak köszönhetően a fájlok küldése méggyorsabb. Közvetlenül más alkalmazásokból választhatod a Snapdrop-ot a megosztáshoz.
+
+Az alapvető egyszerűségnek köszönhetően, a "Snapdrop Androidra" többezer felhasználó mindennapi életét könnyíti meg. Nyílt forráskódú projektként nincsen kereskedelmi érdeklődésünk, de szeretnénk a világot egy kicsit jobbá tenni. Csatlakozz, és győzd meg magad!
+
+FORRÁSKÓD:
+https://github.com/fm-sys/snapdrop-android
+
+KÉSZÍTŐK:
+Az alkalmazást a Snapdrop Nyilt Forráskódú projekt alapján működik, aminek gazdája és karbantartója RobinLinus. Továbbá: https://www.github.com/robinlinus/snapdrop

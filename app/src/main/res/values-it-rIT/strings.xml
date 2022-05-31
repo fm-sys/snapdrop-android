@@ -43,6 +43,8 @@
         <item>Scuro</item>
     </string-array>
     <string name="baseurl_title">URL di base</string>
+    <string name="baseurl_no_snapdrop_instance">Non sembra essere un\'istanza di Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Impossibile verificare l\'istanza di Snapdrop</string>
     <string name="save_location">Percorso di salvataggio</string>
     <!-- File sharing -->
     <string name="intent_file">Un file è selezionato per la condivisione</string>

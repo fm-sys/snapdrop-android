@@ -8,17 +8,14 @@ Bluetooth? - 面倒で遅いです!
 
 Snapdrop!
 
-Snapdropはあなたのブラウザで完璧に動作するローカルファイルシェアリングソリューションです。 AppleのAirdropに似ていますが、Appleデバイスだけのソリューションではありません。 Windows、Linux、Android、iPhone、Mac - 全然問題ありません!
+Snapdropはあなたのブラウザで完璧に動作するローカルファイルシェアリングソリューションです。 AppleのAirdropに似ていますが、Appleのデバイスだけではありません。 Windows、Linux、Android、iPhone、Mac - 全然問題ありません!
 
-しかし、理論的にあなたのブラウザで完璧に作動するとしてもSnapdropをよく使うならこのアプリが気にいるでしょう。 Androidに完璧にソリューションを搭載したため、ファイルはさらに早く転送されます。 他のアプリでSnapdropでシェアすることができます。
+しかし、理論的にあなたのブラウザで完璧に作動するとしてもSnapdropをよく使うならこのアプリが気にいるでしょう。 Android OSとの完璧な統合により、ファイルはさらに早く送信されます。 他のアプリでSnapdropでシェアすることができます。
 
-根本的なシンプルさのお蔭で、"Snapdrop for Android"は数百人の生活を便利にします。 オープンソースプロジェクトなので商業的利益を出しませんが、私たちは世界をより良くしたいです。 使用してみてください!
+Snapdrop for Android は究極のシンプルさにより、何千人ものユーザーの日常生活を向上させます。 オープンソースプロジェクトなので商業的利益を出しませんが、私たちは世界をより良くしたいです。 使用してみてください!
 
 ソースコード:
 https://github.com/fm-sys/snapdrop-android
 
-プライバシー:
-このアプリはあなたのローカルネットワークでSnapdropを起動している他のデバイスを探すためにhttps://snapdrop.net/と通信します。 ただし、あなたのファイルはサーバーに転送されることはありませんが、デバイス間でpeer-to-peerで転送されます。
-
 クレジット:
-このアプリとアプリのアイコンはRobinLinusにより維持されているSnapdropオープンソースプロジェクトに基づきます。 https://www.github.com/robinlinus/snapdropをご参照ください
+このアプリはRobinLinusにより維持されているSnapdropオープンソースプロジェクトに基づきます。 https://www.github.com/robinlinus/snapdropをご参照ください

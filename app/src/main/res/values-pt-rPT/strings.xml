@@ -43,6 +43,8 @@
         <item>Escuro</item>
     </string-array>
     <string name="baseurl_title">URL base</string>
+    <string name="baseurl_no_snapdrop_instance">Não parece ser uma instância do Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Falha ao verificar a instância do Snapdrop</string>
     <string name="save_location">Guardar localização</string>
     <!-- File sharing -->
     <string name="intent_file">O arquivo é selecionado para ser compartilhado</string>
@@ -51,6 +53,8 @@
     <string name="error_filechooser">Não foi possível abrir um seletor de arquivos</string>
     <string name="error_network">Favor verificar se você está conectado a uma rede WiFi</string>
     <string name="ignore_error_network">Deixe-me entrar a mesma</string>
+    <string name="error_not_reachable_title">Ups, desculpa!</string>
+    <string name="error_not_reachable">Não foi possível acessar o Snapdrop-Server. \n\nSe sua conexão de internet está funcionando e isso acontece de qualquer forma, podemos ter problemas com o servidor atualmente. Sabemos que isso pode ser muito frustrante, mas por favor, não deixe comentários ruins no Google Play. \n\nEste app está completamente livre de anúncios, então não ganhamos nenhum dinheiro com ele. É apenas um projeto hobby, mas estamos fazendo tudo para que ele volte a funcionar rapidamente.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Abra o Snapdrop nos outros dispositivos para enviar arquivos</string>
     <string name="website_instruction">Toque para enviar arquivos ou toque longo para enviar uma mensagem</string>

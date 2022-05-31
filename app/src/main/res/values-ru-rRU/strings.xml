@@ -43,6 +43,8 @@
         <item>Тёмная</item>
     </string-array>
     <string name="baseurl_title">Базовый адрес</string>
+    <string name="baseurl_no_snapdrop_instance">Не похоже на экземпляр Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Не удалось проверить копию Snapdrop</string>
     <string name="save_location">Сохранить расположение</string>
     <!-- File sharing -->
     <string name="intent_file">Файл выбран для передачи</string>
@@ -51,11 +53,13 @@
     <string name="error_filechooser">Не удаётся выбрать файл</string>
     <string name="error_network">Пожалуйста, убедитесь, что вы подключены к сети WiFi</string>
     <string name="ignore_error_network">Всё равно попробовать</string>
+    <string name="error_not_reachable_title">Извините!</string>
+    <string name="error_not_reachable">Сервер Snapdrop-Server недоступен. \n\nЕсли ваше подключение к Интернету работает, и это происходит в любом случае, у нас могут возникнуть проблемы с сервером. Мы знаем, что это может быть очень разочарованным, но пожалуйста, не оставляйте плохих отзывов на Google Play. \n\nЭто приложение не содержит рекламы, поэтому мы не можем зарабатывать с ним деньги. Это всего лишь проект хобби, но мы делаем все, чтобы заставить его работать быстро.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Откройте Snapdrop на других устройствах для передачи файлов</string>
     <string name="website_instruction">Нажмите для отправки файлов или удерживайте для отправки сообщения</string>
     <string name="website_file_received">Файл получен</string>
-    <string name="website_file_ask_always">Запрашивать сохранить каждый файл перед его загрузкой</string>
+    <string name="website_file_ask_before_download">Всегда спрашивать перед сохранением файла</string>
     <string name="website_file_download">Сохранить</string>
     <string name="website_footer_discovery">Вы можете быть обнаружены всеми в этой сети</string>
     <string name="website_footer_known_as">Вы известны как %s</string>

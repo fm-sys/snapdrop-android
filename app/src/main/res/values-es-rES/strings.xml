@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop para Android</string>
+    <string name="app_name_long">Sandro para Androide</string>
     <string name="err_no_browser">Nose puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
     <string name="open_url">Abrir URL</string>
@@ -43,6 +43,8 @@
         <item>Oscuro</item>
     </string-array>
     <string name="baseurl_title">URL base</string>
+    <string name="baseurl_no_snapdrop_instance">No parece ser una instancia de Snapdrop</string>
+    <string name="baseurl_check_instance_failed">No se pudo verificar la instancia de Snapdrop</string>
     <string name="save_location">Guardar ubicación</string>
     <!-- File sharing -->
     <string name="intent_file">Se ha seleccionado un archivo para compartir</string>
