@@ -15,8 +15,10 @@ public class QuickTileService extends TileService {
         super.onStartListening();
 
         final Tile tile = getQsTile();
-        tile.setState(Tile.STATE_INACTIVE);
-        tile.updateTile();
+        if (tile != null) {
+            tile.setState(Tile.STATE_INACTIVE);
+            tile.updateTile();
+        }
     }
 
     @Override
