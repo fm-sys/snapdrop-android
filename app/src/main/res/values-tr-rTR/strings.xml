@@ -62,6 +62,6 @@
     <string name="website_file_ask_before_download">Bir dosya kaydetmeden önce her zaman sor</string>
     <string name="website_file_download">Kaydet</string>
     <string name="website_footer_discovery">Bu ağda bulunan herkes sizi keşfedebilir</string>
-    <string name="website_footer_known_as">Böyle görünüyorsunuz %s</string>
+    <string name="website_footer_known_as">%s olarak görünüyorsunuz</string>
     <string name="website_about_subheading">Cihazlar arası dosya transferinin en kolay yolu</string>
 </resources>
