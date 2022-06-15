@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Android için Snapdrop</string>
+    <string name="app_name_long">Android için Snapdrop Hakkında</string>
     <string name="err_no_browser">Tarayıcı açılamıyor</string>
     <string name="err_no_app">Bu dosyayı açmak için yüklü bir uygulama yok</string>
     <string name="open_url">URL\'yi Aç</string>
