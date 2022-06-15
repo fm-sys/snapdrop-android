@@ -14,7 +14,7 @@
     <string name="notification_channel_name">İndirme tamamlandı</string>
     <!-- Action Buttons -->
     <string name="open">aç</string>
-    <string name="reset">sıfırla</string>
+    <string name="reset">Sıfırla</string>
     <string name="copy">kopyala</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Android için Snapdrop Hakkında</string>
@@ -34,7 +34,7 @@
     <string name="version">Sürüm</string>
     <string name="pref_device_name_title">Cihaz Adı</string>
     <string name="pref_device_name_summary">Kullanıcı-tanımlı bir cihaz adı belirleyin</string>
-    <string name="keep_on_summary">(Önerilir) Bir çok cihaz ekranın transfer esnasında kapanması sebebiyle problem yaşamakta</string>
+    <string name="keep_on_summary">(Önerilir) Bir çok cihaz ekranın transfer anında kapanması sebebiyle problem yaşamakta</string>
     <string name="keep_on_title">Transfer sırasında ekranı açık tut</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
@@ -54,7 +54,7 @@
     <string name="error_network">Bir WiFi ağına bağlı olduğunuzdan emin olun</string>
     <string name="ignore_error_network">Yine de devam et</string>
     <string name="error_not_reachable_title">Ups, üzgünüm!</string>
-    <string name="error_not_reachable">Snapdrop-Server\'a erişilemiyor. \n\nİnternet bağlantınız çalışıyorsa ve bu durumu yaşamaya devam ediyorsanız anlık olarak serverlarımız ile alakalı sorun yaşıyor olabiliriz. Bunun ne kadar can sıkıcı olduğunun farkındayız fakat lütfen Google Play\'de kötü yorum bırakmayınız. \n\nBu uygulama tamamen reklamsızdır, dolayısıyla herhangi bir ücret kazanmıyoruz. Hobi amaçlı bir uygulamadan ibaret sadece. Yaşadığınız sorunu bir an önce düzeltmek için elimizden gelen her şeyi yapıyoruz.</string>
+    <string name="error_not_reachable">Snapdrop sunucusuna erişilemiyor. \n\nİnternet bağlantınız çalışıyorsa ve bu durumu yaşamaya devam ediyorsanız anlık olarak sunucularımız ile alakalı sorun yaşıyor olabiliriz. Bunun ne kadar can sıkıcı olduğunun farkındayız fakat lütfen Google Play\'de kötü yorum bırakmayınız. \n\nBu uygulama tamamen reklamsızdır, dolayısıyla herhangi bir ücret kazanmıyoruz. Hobi amaçlı bir uygulamadan ibaret sadece. Yaşadığınız sorunu bir an önce düzeltmek için elimizden gelen her şeyi yapıyoruz.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Dosya göndermek için Snapdrop\'u diğer cihazlarda açınız</string>
     <string name="website_instruction">Dosya göndermek için dokun veya mesaj göndermek için basılı tut</string>
