@@ -3,8 +3,10 @@ package com.fmsys.snapdrop;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -79,6 +81,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
 
+        final Preference floatingTextSelectionPref = findPreference(getString(R.string.pref_floating_text_selection));
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            floatingTextSelectionPref.setVisible(true);
+            floatingTextSelectionPref.setOnPreferenceChangeListener((pref, newValue) -> {
+                getContext().getPackageManager().setComponentEnabledSetting(
+                        new ComponentName(getContext(), FloatingTextActivity.class),
+                        (Boolean) newValue ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                        PackageManager.DONT_KILL_APP);
+                return true;
+            });
+        }
 
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
         deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", newValue -> updateDeviceNameSummary(deviceNamePref)));

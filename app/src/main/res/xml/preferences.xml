@@ -10,6 +10,13 @@
             android:summary="@string/keep_on_summary"
             android:title="@string/keep_on_title"
             app:iconSpaceReserved="false" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/pref_floating_text_selection"
+            android:summary="@string/floating_text_selection_summary"
+            android:title="@string/floating_text_selection_title"
+            app:isPreferenceVisible="false"
+            app:iconSpaceReserved="false" />
         <Preference
             android:key="@string/pref_device_name"
             android:maxLines="1"

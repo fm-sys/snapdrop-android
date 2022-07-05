@@ -19,6 +19,15 @@
         <item name="android:statusBarColor">@color/colorAccent</item>
     </style>
 
+    <!-- Helper Theme for FloatingTextActivity to avoid doubled splash screen -->
+    <style name="TransparentBackgroundTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
     <style name="SnackBarActionStyle" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@color/colorAccent</item>

@@ -39,6 +39,10 @@
     <string name="pref_device_name_summary">Set a user-defined device name</string>
     <string name="keep_on_summary">(Recommended) Many devices have problems with transfers being interrupted when the screen turns off</string>
     <string name="keep_on_title">Keep screen on while transferring</string>
+    <string name="floating_text_selection_title">Floating text selection</string>
+    <string name="floating_text_selection_summary">When selecting text in other apps, an option \"Send with Snapdrop\" will be shown</string>
+    <string name="floating_text_selection_activity_label">Send with Snapdrop</string>
+
     <string name="settings_theme_title">Theme</string>
     <string-array name="darkmode_entries">
         <item>System Default</item>

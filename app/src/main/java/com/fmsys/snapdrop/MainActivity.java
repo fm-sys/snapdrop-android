@@ -280,8 +280,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onNewIntent(final Intent intent) {
-        if ((Intent.ACTION_SEND.equals(intent.getAction()) || Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction())) && intent.getType() != null) {
+        if ((Intent.ACTION_SEND.equals(intent.getAction()) || Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) || Intent.ACTION_PROCESS_TEXT.equals(intent.getAction())) && intent.getType() != null) {
             uploadIntent = intent;
+
+            binding.webview.clearFocus(); // remove potential text selections
 
             final String clipText = getTextFromUploadIntent();
             binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText));
@@ -422,6 +424,11 @@ public class MainActivity extends AppCompatActivity {
     private String getTextFromUploadIntent() {
         final StringBuilder result = new StringBuilder();
         if (uploadIntent != null) {
+
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M && uploadIntent.hasExtra(Intent.EXTRA_PROCESS_TEXT)) {
+                result.append(uploadIntent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT));
+            }
+
             final ClipData clip = uploadIntent.getClipData();
             if (clip != null && clip.getItemCount() > 0) {
                 for (int i = 0; i < clip.getItemCount(); i++) {
