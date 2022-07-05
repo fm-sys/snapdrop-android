@@ -18,4 +18,4 @@ Snapdrop은 브라우저에서 완벽하게 작동하는 로컬 파일 공유 �
 https://github.com/fm-sys/snapdrop-android
 
 개발자:
-이 앱은 Robinlinus가 운영하고 관리하는 Snapdrop 오픈 소스 프로젝트에 기반해 만들어졌습니다. https://www.github.com/robinlinus/snapdrop 에서 자세한 정보를 확인하세요.
+이 앱은 Robinlinus가 운영하고 관리하는 Snapdrop 오픈 소스 프로젝트에 기반해 만들어졌어요. https://www.github.com/robinlinus/snapdrop 에서 자세한 정보를 확인하세요.

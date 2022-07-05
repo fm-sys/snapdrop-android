@@ -43,6 +43,8 @@
         <item>深色</item>
     </string-array>
     <string name="baseurl_title">主机 URL</string>
+    <string name="baseurl_no_snapdrop_instance">这似乎不是一个Snapdrop实例</string>
+    <string name="baseurl_check_instance_failed">验证Snapdrop实例失败</string>
     <string name="save_location">保存位置</string>
     <!-- File sharing -->
     <string name="intent_file">已选择一个要共享的文件</string>

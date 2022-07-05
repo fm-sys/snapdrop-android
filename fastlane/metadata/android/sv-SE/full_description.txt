@@ -1,0 +1,22 @@
+Snapdrop för Android är en Android™-klient för den lokala fildelningslösningen för öppen källkod https://snapdrop.net/.
+
+Har du också behovet att snabbt kunna föra över filer från mobilen till datorn?
+
+USB? - Gammaldags!
+Bluetooth? - Alltför besvärligt och långsamt!
+E-post? - Snälla inte ett till email, skriver jag till mig själv!
+
+Snapdrop!
+
+Snapdrop är en lokal fildelningslösning som fungerar helt i din webbläsare. Lite som Apples Airdrop, fast inte bara för Apple-enheter. Windows, Linux, Android, iPhone, Mac - inga problem alls!
+
+Men även om det teoretiskt skulle fungera fullt ut i din webbläsare, du kommer att älska denna app om du vill använda Snapdrop oftare i ditt dagliga liv. Tack vare perfekt integration i Android-operativsystemet, skickas filer ännu snabbare. Direkt från andra appar kan du välja Snapdrop att dela med.
+
+Tack vare sin radikala enkelhet, gör "Snapdrop för Android" vardagen enklare för tusentals användare. Som ett öppen-källkodsprojekt har vi inga kommersiella intressen men vill göra världen lite bättre. Gå med och övertyga dig själv!
+
+KÄLLKOD:
+https://github.com/fm-sys/snapdrop-android
+
+CREDIT:
+Appen drivs av projektet Snapdrop Open Source, som drivs och underhålls av RobinLinus. Se även
+https://www.github.com/robinlinus/snapdrop

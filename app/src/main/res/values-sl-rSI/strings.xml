@@ -17,7 +17,7 @@
     <string name="reset">ponastavi</string>
     <string name="copy">kopiraj</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">O Snapdrop za Android</string>
+    <string name="title_activity_about">O Snapdropu za Android</string>
     <string name="license">Licenca</string>
     <string name="pref_category_settings">Nastavitve</string>
     <string name="source">Odprta koda</string>
