@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Tetapkan nama perangkat sesuai keinginan anda</string>
     <string name="keep_on_summary">(Disarankan) Kebanyakan perangkat mengalami masalah transfer terputus ketika layar dalam keadaan mati</string>
     <string name="keep_on_title">Tetap aktifkan layar saat mentransfer</string>
+    <string name="floating_text_selection_title">Pilihan teks mengambang</string>
+    <string name="floating_text_selection_summary">Saat memilih teks di aplikasi lain, opsi \"Kirim dengan Snapdrop\" akan ditampilkan</string>
+    <string name="floating_text_selection_activity_label">Kirim dengan Snapdrop</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Bawaan Sistem</item>
@@ -43,7 +46,7 @@
         <item>Gelap</item>
     </string-array>
     <string name="baseurl_title">URL Dasar</string>
-    <string name="baseurl_no_snapdrop_instance">Sepertinya bukan untuk Snapdrop</string>
+    <string name="baseurl_no_snapdrop_instance">Sepertinya bukan instans Snapdrop</string>
     <string name="baseurl_check_instance_failed">Gagal memverifikasi instans Snapdrop</string>
     <string name="save_location">Lokasi penyimpanan</string>
     <!-- File sharing -->
