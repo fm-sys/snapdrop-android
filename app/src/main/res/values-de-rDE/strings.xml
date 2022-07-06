@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Lege einen benutzerdefinierten Gerätenamen fest</string>
     <string name="keep_on_summary">(Empfohlen) Viele Geräte haben Probleme mit Übertragungen, wenn der Bildschirm ausgeschaltet wird</string>
     <string name="keep_on_title">Bildschirm während der Übertragung angeschaltet lassen</string>
+    <string name="floating_text_selection_title">Schwebende Textauswahl</string>
+    <string name="floating_text_selection_summary">Bei der Auswahl von Text in anderen Apps wird die Option \"Mit Snapdrop senden\" angezeigt</string>
+    <string name="floating_text_selection_activity_label">Mit Snapdrop senden</string>
     <string name="settings_theme_title">Design</string>
     <string-array name="darkmode_entries">
         <item>Systemstandard</item>
