@@ -23,9 +23,10 @@ jobs:
         # pass user input as arguments
         with:
           pr: ${{ steps.pr.outputs.pull_request_number }}
-      - name: Display translations
-        run: |
-          echo "${{ steps.translate.outputs.content }}"
+      # Temporarily disable console output, as it can't handle <"> characters correctly 
+      #- name: Display translations
+      #  run: |
+      #    echo "${{ steps.translate.outputs.content }}"
       - name: Update PR description
         uses: riskledger/update-pr-description@v2
         with:
