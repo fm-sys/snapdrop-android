@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Establece un nombre de dispositivo definido por el usuario</string>
     <string name="keep_on_summary">(Recomendado) Muchos dispositivos tienen problemas con las interrupciones de transferencias cuando la pantalla se apaga</string>
     <string name="keep_on_title">Mantener la pantalla encendida mientras se transfiere</string>
+    <string name="floating_text_selection_title">Selección flotante de texto</string>
+    <string name="floating_text_selection_summary">Al seleccionar texto en otras aplicaciones, se mostrará una opción \"Enviar con Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Enviar con Snapdrop</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Predeterminado del Sistema</item>
