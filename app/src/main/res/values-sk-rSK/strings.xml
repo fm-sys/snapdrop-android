@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Nastaviť si vlastný názov zariadenia</string>
     <string name="keep_on_summary">(Odporúčané) Mnohé zariadenia majú problémy s prerušovaním prenosov keď majú vypnutú obrazovku</string>
     <string name="keep_on_title">Nechať obrazovku zapnutú počas prenosu</string>
+    <string name="floating_text_selection_title">Výber plávajúceho textu</string>
+    <string name="floating_text_selection_summary">Keď budete označovať text v iných aplikáciách, zobrazí sa možnosť \"Poslať cez Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Poslať cez Snapdrop</string>
     <string name="settings_theme_title">Motív</string>
     <string-array name="darkmode_entries">
         <item>Predvolený systémom</item>
@@ -54,7 +57,7 @@
     <string name="error_network">Prosím skontrolujte, či ste pripojení k WiFi sieti</string>
     <string name="ignore_error_network">Napriek tomu pokračovať</string>
     <string name="error_not_reachable_title">Ups, prepáčte!</string>
-    <string name="error_not_reachable">Nemožno dosiahnuť Snapdrop server. \n\nAk vaše internetové pripojenie funguje a toto sa ajtak stane, je možné že momentálne máme problémy. Vieme že toto dokáže byť veľmi frustrujúce, ale prosím nedávajte nám na Google Play zlé hodnotenia. \n\nTáto aplikácia je úplne bez reklám, takže z nej nezarabame žiadne peniaze. Tento projekt je iba koníček, ale robíme všetko preto aby všetko rýchlo začalo bežať.</string>
+    <string name="error_not_reachable">Nemožno dosiahnuť Snapdrop server. \n\nAk vaše internetové pripojenie funguje a toto sa ajtak stane, je možné že momentálne máme problémy so servermi. Vieme že toto dokáže byť veľmi frustrujúce, ale prosím nedávajte nám na Google Play zlé hodnotenia. \n\nTáto aplikácia je úplne bez reklám, takže z nej nezarabame žiadne peniaze. Tento projekt je iba koníček, ale robíme všetko preto aby všetko rýchlo začalo bežať.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Otvorte Snapdrop na ďalších zariadeniach pre posielanie súborov</string>
     <string name="website_instruction">Klepnutím pošlete súbory a podržaním pošlete správu</string>
