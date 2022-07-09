@@ -1,5 +1,7 @@
 package com.fmsys.snapdrop;
 
+import com.anggrayudi.storage.FileWrapper;
+import com.anggrayudi.storage.extension.IOUtils;
 import com.anggrayudi.storage.extension.UriUtils;
 import com.anggrayudi.storage.file.DocumentFileCompat;
 import com.anggrayudi.storage.file.DocumentFileUtils;
@@ -35,7 +37,7 @@ public class JavaScriptInterface {
     @JavascriptInterface
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
         final Context context = this.context.getApplicationContext();
-        Uri fileUri = null;
+        FileWrapper fileWrapper = null;
         if (Build.VERSION.SDK_INT > 28) {
             /*
             Make file transfer faster 2x on scoped storage by writing to media store database directly,
@@ -44,14 +46,14 @@ public class JavaScriptInterface {
              */
             final DocumentFile saveLocation = MainActivity.getSaveLocation();
             if (saveLocation != null) {
-                final DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context, fileName, mimeType);
+                DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context, fileName, mimeType);
                 if (file != null) {
-                    fileUri = file.getUri();
+                    fileWrapper = new FileWrapper.Document(file);
                 }
             }
-            if (fileUri == null) {
+            if (fileWrapper == null) {
                 final FileDescription description = new FileDescription(fileName, "", mimeType);
-                fileUri = DocumentFileCompat.createDownloadWithMediaStoreFallback(context, description);
+                fileWrapper = DocumentFileCompat.createDownloadWithMediaStoreFallback(context, description);
             }
         } else {
             /*
@@ -62,16 +64,17 @@ public class JavaScriptInterface {
             while (nameSplit[0].length() < 3) {
                 nameSplit[0] += nameSplit[0];
             }
-            fileUri = Uri.fromFile(File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], context.getCacheDir()));
+            DocumentFile file = DocumentFile.fromFile(File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], context.getCacheDir()));
+            fileWrapper = new FileWrapper.Document(file);
         }
-        if (fileUri == null) {
+        if (fileWrapper == null) {
             throw new IOException("Missing storage permissions");
         }
-        fileOutputStream = UriUtils.openOutputStream(fileUri, context);
+        fileOutputStream = UriUtils.openOutputStream(fileWrapper.getUri(), context);
         if (fileOutputStream == null) {
             throw new IOException("Cannot write target file");
         }
-        fileHeader = new FileHeader(fileName, mimeType, fileSize, fileUri);
+        fileHeader = new FileHeader(fileName, mimeType, fileSize, fileWrapper);
     }
 
     @JavascriptInterface
@@ -131,8 +134,10 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void ignoreClickedListener() {
-        //Do stuff...
-        Log.w("ignoreClickListener", "ignore was clicked in the download dialog, however no event specified yet");
+        IOUtils.closeStreamQuietly(fileOutputStream);
+        if (fileHeader != null && fileHeader.file.delete()) {
+            Log.d("ignoreClickListener", "File was deleted from SAF database");
+        }
     }
 
     @JavascriptInterface
@@ -149,13 +154,13 @@ public class JavaScriptInterface {
         private final String name;
         private final String mime;
         private final String size;
-        private final Uri fileUri;
+        private final FileWrapper file;
 
-        public FileHeader(final String name, final String mime, final String size, final Uri fileUri) {
+        public FileHeader(final String name, final String mime, final String size, final FileWrapper file) {
             this.name = name;
             this.mime = mime;
             this.size = size;
-            this.fileUri = fileUri;
+            this.file = file;
         }
 
         public String getName() {
@@ -171,7 +176,7 @@ public class JavaScriptInterface {
         }
 
         public Uri getFileUri() {
-            return fileUri;
+            return file.getUri();
         }
     }
 
