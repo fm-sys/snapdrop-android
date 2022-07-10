@@ -17,8 +17,5 @@ Graças à sua extrema simplicidade, "Snapdrop para Android" facilita a vida cot
 CÓDIGO-FONTE:
 https://github.com/fm-sys/snapdrop-android
 
-PRIVACIDADE:
-Este aplicativo interage com https://snapdrop.net/ para descobrir outros dispositivos que rodam o Snapdrop em sua rede local. Entretanto, nenhum dos seus arquivos é enviado para qualquer servidor, eles são transferidos de ponta-a-ponta entre seus dispositivos.
-
 CRÉDITOS:
-O aplicativo e seu ícone são baseados no projeto Snapdrop Open Source, que é hospedado e mantido por RobinLinus. Veja também https://www.github.com/robinlinus/snapdrop
+O app é movido pelo projeto Snapdrop Open Source, que é hospedado e mantido pelo RobinLinus. Veja também https://www.github.com/robinlinus/snapdrop
