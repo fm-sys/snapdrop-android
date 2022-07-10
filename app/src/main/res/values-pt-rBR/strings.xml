@@ -27,32 +27,32 @@
     <string name="components_summary">Toque para exibir</string>
     <string name="crowdin">Traduções</string>
     <string name="crowdin_summary">Ajude a traduzir o <b>Snapdrop para Android</b> para seu idioma favorito</string>
-    <string name="support_us">Apoie-nos</string>
+    <string name="support_us">Apoiar o Snapdrop</string>
     <string name="support_us_summary">Veja, como você pode apoiar a comunidade do Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Fale sobre o <b>Snapdrop para Android</b></string>
+    <string name="twitter_summary">Divulge o <b>Snapdrop para Android</b></string>
     <string name="version">Versão</string>
     <string name="pref_device_name_title">Nome do dispositivo</string>
     <string name="pref_device_name_summary">Utilizar um nome de dispositivo definido pelo usuário</string>
-    <string name="keep_on_summary">(Recomendado) Muitos dispositivos têm problemas com transferências interrompidas quando a tela se desliga</string>
+    <string name="keep_on_summary">(Recomendado) Muitos dispositivos têm problemas com transferências interrompidas quando a tela for desligada</string>
     <string name="keep_on_title">Manter a tela ligada durante a transferência</string>
     <string name="floating_text_selection_title">Seleção de texto flutuante</string>
-    <string name="floating_text_selection_summary">When selecting text in other apps, an option \"Send with Snapdrop\" will be shown</string>
-    <string name="floating_text_selection_activity_label">Enviar com Snapdrop</string>
+    <string name="floating_text_selection_summary">Ao selecionar texto em outros apps, será exibida uma opção \"Enviar via Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Enviar via Snapdrop</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
-        <item>Padrão do Sistema</item>
-        <item>Tema claro</item>
-        <item>Tema escuro</item>
+        <item>Padrão do sistema</item>
+        <item>Claro</item>
+        <item>Escuro</item>
     </string-array>
-    <string name="baseurl_title">URL Base</string>
-    <string name="baseurl_no_snapdrop_instance">Não parece ser uma instância Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Notebook </string>
-    <string name="save_location">Gravar localização</string>
+    <string name="baseurl_title">URL base</string>
+    <string name="baseurl_no_snapdrop_instance">Não parece ser uma instância do Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Falha ao verificar instância do Snapdrop</string>
+    <string name="save_location">Salvar localização</string>
     <!-- File sharing -->
-    <string name="intent_file">Um arquivo foi selecionado para o compartilhamento</string>
-    <string name="intent_files">Arquivos estão selecionados para compartilhar</string>
-    <string name="intent_content">O conteúdo está selecionado para compartilhamento</string>
+    <string name="intent_file">Um arquivo foi selecionado para compartilhar</string>
+    <string name="intent_files">Arquivos foram selecionados para compartilhar</string>
+    <string name="intent_content">O conteúdo foi selecionado para compartilhar</string>
     <string name="error_filechooser">Não é possível abrir o gerenciador de arquivos</string>
     <string name="error_network">Por favor, certifique-se de que você está conectado a uma rede WiFi</string>
     <string name="ignore_error_network">Deixe-me prosseguir</string>
@@ -60,11 +60,11 @@
     <string name="error_not_reachable">Não foi possível acessar o servidor do Snapdrop. \n\nSe a sua conexão com a internet está funcionando e mesmo assim isso acontece, pode ser que temos alguns problemas temporários com o servidor. Sabemos que isso pode ser muito frustrante, mas por favor, não deixe comentários ruins no Google Play. \n\nEste app não tem anúncios e não ganhamos nenhum dinheiro com ele. É apenas um projeto hobby e estamos fazendo tudo para que ele volte a funcionar o mais rápido possível.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Abra o Snapdrop em outros dispositivos para enviar arquivos</string>
-    <string name="website_instruction">Toque para enviar arquivos ou toque longo para enviar uma mensagem</string>
-    <string name="website_file_received">Arquivo Recebido</string>
+    <string name="website_instruction">Toque para enviar arquivos ou faça toque longo para enviar uma mensagem</string>
+    <string name="website_file_received">Arquivo recebido</string>
     <string name="website_file_ask_before_download">Sempre pergunte antes de salvar um arquivo</string>
-    <string name="website_file_download">Salvo</string>
-    <string name="website_footer_discovery">You can be discovered by everyone on this network</string>
-    <string name="website_footer_known_as">You are known as %s</string>
-    <string name="website_about_subheading">The easiest way to transfer files across devices</string>
+    <string name="website_file_download">Salvar</string>
+    <string name="website_footer_discovery">Você pode ser descoberto por todas as pessoas nesta rede</string>
+    <string name="website_footer_known_as">Você é identificado como %s</string>
+    <string name="website_about_subheading">O modo mais fácil para transferir arquivos entre dispositivos</string>
 </resources>
