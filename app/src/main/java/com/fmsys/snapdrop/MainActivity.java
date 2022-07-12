@@ -70,6 +70,7 @@ import com.fmsys.snapdrop.utils.ShareUtils;
 import com.fmsys.snapdrop.utils.StateHandler;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
