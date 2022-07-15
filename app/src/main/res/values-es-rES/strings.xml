@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Sandro para Androide</string>
+    <string name="app_name_long">Snapdrop para Android</string>
     <string name="err_no_browser">Nose puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
     <string name="open_url">Abrir URL</string>
@@ -11,7 +11,7 @@
     <!-- Download -->
     <string name="download_save_pending">Almacenando el archivo. Por favor, tenga un poco de paciencia…</string>
     <string name="download_successful">Descarga exitosa</string>
-    <string name="notification_channel_name">Descarga de archivos completado</string>
+    <string name="notification_channel_name">Descarga de archivos completada</string>
     <!-- Action Buttons -->
     <string name="open">Abrir</string>
     <string name="reset">reiniciar</string>
@@ -20,7 +20,7 @@
     <string name="title_activity_about">Cuéntales sobre Snapdrop para Android</string>
     <string name="license">Licencia</string>
     <string name="pref_category_settings">Configuraciones</string>
-    <string name="source">Cód. origen</string>
+    <string name="source">Código fuente</string>
     <string name="source_summary">Ver el código fuente en GitHub</string>
     <string name="components">Componentes de código abierto</string>
     <string name="logs">Depurar Registro</string>
