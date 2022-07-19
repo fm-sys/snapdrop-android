@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Задать имя устройства, определенного пользователем</string>
     <string name="keep_on_summary">(Рекомендуется) На многих устройствах наблюдаются проблемы с прерыванием передачи при выключенном экране</string>
     <string name="keep_on_title">Не выключать экран</string>
+    <string name="floating_text_selection_title">Поделиться выделенным текстом</string>
+    <string name="floating_text_selection_summary">При выборе текста в других приложениях, будет предложено \"Отправить в Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Отправить в Snapdrop</string>
     <string name="settings_theme_title">Тема</string>
     <string-array name="darkmode_entries">
         <item>Системные настройки</item>
