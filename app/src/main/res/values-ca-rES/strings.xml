@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop per a Android</string>
     <string name="err_no_browser">No es pot obrir el navegador</string>
-    <!-- Update -->
+    <string name="err_no_app">No hi ha cap aplicació per a obrir el fitxer</string>
+    <string name="open_url">Obrir enllaç</string>
     <!-- Welcome -->
     <string name="app_welcome">Benvinguts a Snapdrop</string>
     <string name="app_welcome_summary">1. Obre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicació de Snapdrop en qualsevol altre dispositiu dins de la teva xarxa WiFi local.\n2. Prem sobre el dispositiu amb el que vols compartir els arxius.\n3. Fet! Els arxius seran enviats…</string>
     <!-- Download -->
+    <string name="download_save_pending">Descarregant, tingui una mica de paciència…</string>
     <string name="download_successful">S\'ha baixat amb èxit</string>
     <string name="notification_channel_name">Descàrrega completada</string>
     <!-- Action Buttons -->
     <string name="open">obrir</string>
     <string name="reset">restablir</string>
+    <string name="copy">copiar</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Sobre Snapdrop per Android</string>
     <string name="license">Llicència</string>
     <string name="pref_category_settings">Configuració</string>
+    <string name="source">Codi font</string>
+    <string name="source_summary">Veure codi font a GitHub</string>
     <string name="components">Components de codi obert</string>
+    <string name="logs">Registres per diagnòstics</string>
     <string name="components_summary">Prem per mostrar</string>
     <string name="crowdin">Traduccions</string>
     <string name="crowdin_summary">Ajuda a traduïr <b>Snapdrop per Android</b> al teu idioma favorit</string>
+    <string name="support_us">Donar suport a Snapdrop</string>
+    <string name="support_us_summary">Mira com pots donar suport a la comunitat de Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Mantigue\'t informat sobre <b>Snapdrop per a Android</b></string>
+    <string name="twitter_summary">Parlar sobre <b>Snapdrop per a Android</b></string>
     <string name="version">Versió</string>
     <string name="pref_device_name_title">Nom del dispositiu</string>
     <string name="pref_device_name_summary">Estableix un nom de dispositiu definit per l\'usuari</string>
-    <string name="keep_on_summary">Activa si tens les transferències s\'interrompen quan la pantalla s\'apaga</string>
-    <string name="keep_on_title">Mantenir la pantalla encesa</string>
+    <string name="keep_on_summary">(Recomanat) Molts dispositius tenen problemes amb transferiments detinguts degut a que la pantalla s\'apagui</string>
+    <string name="keep_on_title">Deixar la pantalla encesa mentre es transfereix</string>
+    <string name="floating_text_selection_title">Selecció del text flotant</string>
+    <string name="floating_text_selection_summary">Quan se seleccioni text en altres aplicacions, l\'opció \"Enviar amb snapdrop\" sortirà</string>
+    <string name="floating_text_selection_activity_label">Enviar amb snapdrop</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Predeterminat del sistema</item>
@@ -34,6 +46,8 @@
         <item>Fosc</item>
     </string-array>
     <string name="baseurl_title">URL base</string>
+    <string name="baseurl_no_snapdrop_instance">No sembla haver-hi una instància de Snapdrop</string>
+    <string name="baseurl_check_instance_failed">No s\'ha pogut verificar la instància de Snapdrop</string>
     <string name="save_location">Desa a la ubicació</string>
     <!-- File sharing -->
     <string name="intent_file">Un arxiu ha estat seleccionat per compartir</string>
@@ -42,5 +56,15 @@
     <string name="error_filechooser">El selector d\'arxius no es pot obrir</string>
     <string name="error_network">Si us plau, comprova que estas conectat a una xarxa WiFi</string>
     <string name="ignore_error_network">Deixa\'m intentar-ho igualment</string>
-    <!-- baseURL -->
+    <string name="error_not_reachable_title">Ups, perdó!</string>
+    <string name="error_not_reachable">No es pot contactar amb el servidor Snapdrop. \n\nSi la teva connexió a internet funciona però això ocorre, podríem estar tenint problemes del servidor ara. Sabem que això pot frustrar a molts, però no deixis m¡ressenyes dolentes a Google Joc, si us plau. \n\nAquesta aplicació no té cap annci, així que no guanyem diners amb això. Només es un projecte d\'aficionats, però estem fent tot el possible per a que tot torni a funcionar ràpidament.</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Obri Snapdrop a altres dispositius per a enviar arxius</string>
+    <string name="website_instruction">Premeu per a enviar arxius o manteniu premut per a enviar un missatge</string>
+    <string name="website_file_received">Arxiu rebut</string>
+    <string name="website_file_ask_before_download">Pregunta sempre abans de guardar un arxiu</string>
+    <string name="website_file_download">Guardar</string>
+    <string name="website_footer_discovery">Pots ser trobat per qualsevol en aquesta xarxa</string>
+    <string name="website_footer_known_as">Ets conegut com a %s</string>
+    <string name="website_about_subheading">La manera més fàcil per a passar arxius entre dispositius</string>
 </resources>
