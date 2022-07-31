@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop para Android</string>
-    <string name="err_no_browser">Nose puede abrir el navegador</string>
+    <string name="err_no_browser">No se puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
     <string name="open_url">Abrir URL</string>
     <!-- Welcome -->
@@ -17,16 +17,16 @@
     <string name="reset">reiniciar</string>
     <string name="copy">Copiar</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">Cuéntales sobre Snapdrop para Android</string>
+    <string name="title_activity_about">Acerca de Snapdrop para Android</string>
     <string name="license">Licencia</string>
     <string name="pref_category_settings">Configuraciones</string>
     <string name="source">Código fuente</string>
-    <string name="source_summary">Ver el código fuente en GitHub</string>
+    <string name="source_summary">Ver código fuente en GitHub</string>
     <string name="components">Componentes de código abierto</string>
-    <string name="logs">Depurar Registro</string>
+    <string name="logs">Registros de depuración</string>
     <string name="components_summary">Toque para mostrar</string>
     <string name="crowdin">Localización</string>
-    <string name="crowdin_summary">Ayuda a traducir <b>Snapdrop para Android</b> en tu idioma favorito</string>
+    <string name="crowdin_summary">Ayuda a traducir <b>Snapdrop para Android</b> a tu idioma favorito</string>
     <string name="support_us">Apoya a Snapdrop</string>
     <string name="support_us_summary">Mira cómo puedes apoyar a la comunidad de Snapdrop</string>
     <string name="twitter">Twitter</string>
@@ -36,7 +36,7 @@
     <string name="pref_device_name_summary">Establece un nombre de dispositivo definido por el usuario</string>
     <string name="keep_on_summary">(Recomendado) Muchos dispositivos tienen problemas con las interrupciones de transferencias cuando la pantalla se apaga</string>
     <string name="keep_on_title">Mantener la pantalla encendida mientras se transfiere</string>
-    <string name="floating_text_selection_title">Selección flotante de texto</string>
+    <string name="floating_text_selection_title">Selección de texto flotante</string>
     <string name="floating_text_selection_summary">Al seleccionar texto en otras aplicaciones, se mostrará una opción \"Enviar con Snapdrop\"</string>
     <string name="floating_text_selection_activity_label">Enviar con Snapdrop</string>
     <string name="settings_theme_title">Tema</string>
