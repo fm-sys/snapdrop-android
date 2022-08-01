@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Stel een apparaatnaam in</string>
     <string name="keep_on_summary">(Aanbevolen) Veel apparaten hebben problemen met onderbroken overdrachten waneer het scherm wordt uitgeschakeld</string>
     <string name="keep_on_title">Houd het scherm aan tijdens de overdracht</string>
+    <string name="floating_text_selection_title">Zwevende-tekstselectie</string>
+    <string name="floating_text_selection_summary">Bij het selecteren van tekst in andere apps wordt een optie \"Verstuur met Snapdrop\" getoond</string>
+    <string name="floating_text_selection_activity_label">Verstuur met Snapdrop</string>
     <string name="settings_theme_title">Thema</string>
     <string-array name="darkmode_entries">
         <item>Systeeminstelling</item>
