@@ -1,19 +1,19 @@
-Snapdrop pentru Android este un client Android™ gratuit și sursă deschisă pentru partajarea fișierelor locale
+Snapdrop pentru Android este un client Android™ gratuit și care are codul sursă disponibil pentru toată lumea și este folosit pentru partajarea fișierelor
 https://snapdrop.net/.
 
-Ai uneori și problema că trebuie doar să transferi rapid un fișier de pe telefon pe PC?
+Și tu întâmpini situația în care ai de transferat rapid un fișier de pe telefonul pe PC?
 
-USB? - modă veche!
+USB? - demodat!
 Bluetooth? - Mult prea greoi și lent!
-E-Mail? Vă rog nu alt email pe care mi-l scriu!
+E-Mail? Nu încă un email pe care mi-l scriu singur!
 
 Snapdrop!
 
 Snapdrop este o soluție locală de partajare a fișierelor care funcționează complet în browser-ul dvs. Un pic ca Airdrop de la Apple, dar nu doar pentru dispozitivele Apple. Windows, Linux, Android, IPhone, Mac - nicio problemă!
 
-Cu toate acestea, chiar dacă teoretic ar funcționa complet în browser-ul dvs., vei iubi această aplicație dacă vrei să folosești Snapdrop mai des în viața ta de zi cu zi. Datorită integrării perfecte în sistemul de operare Android, fișierele sunt trimise și mai rapid. Direct din interiorul altor aplicații puteți selecta Snapdrop cu care să partajați.
+Cu toate acestea, chiar dacă teoretic ar funcționa complet în browser-ul dvs., vei iubi această aplicație dacă vrei să folosești Snapdrop mai des în viața ta de zi cu zi. Datorită integrării perfecte în sistemul de operare Android, fișierele sunt trimise și mai rapid. Direct din interiorul altor aplicații puteți selecta Snapdrop ca și cale de partajare.
 
-Datorită simplității sale radicale, "Snapdrop for Android" ușurează viața de zi cu zi a mii de utilizatori. Ca proiect cu sursă deschisă nu avem interese comerciale, ci vrem să facem lumea un pic mai bună. Alătură-te și convinge-te!
+Datorită simplității sale radicale, "Snapdrop pentru Android" ușurează viața de zi cu zi a mii de utilizatori. Ca proiect care are codul sursă deschisă nu avem interese comerciale, ci vrem să facem lumea un pic mai bună. Alătură-te și convinge-te!
 
 CODUL SURSĂ:
 https://github.com/fm-sys/snapdrop-android
