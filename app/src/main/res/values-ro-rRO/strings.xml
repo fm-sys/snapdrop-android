@@ -3,7 +3,7 @@
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop pentru Android</string>
     <string name="err_no_browser">Nu se poate deschide browser-ul</string>
-    <string name="err_no_app">Nicio aplicație instalată pentru a deschide acest fișier</string>
+    <string name="err_no_app">Nu s-a găsit nici o aplicație pentru a deschide acest fișier</string>
     <string name="open_url">Deschide URL-ul</string>
     <!-- Welcome -->
     <string name="app_welcome">Bine ai venit la Snapdrop</string>
