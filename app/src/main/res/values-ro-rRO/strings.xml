@@ -34,21 +34,21 @@
     <string name="version">Versiune</string>
     <string name="pref_device_name_title">Numele dispozitivului</string>
     <string name="pref_device_name_summary">Setează un nume de dispozitiv definit de utilizator</string>
-    <string name="keep_on_summary">(Recomandat) Multe dispozitive au probleme cu transferurile întrerupte atunci când ecranul se oprește</string>
+    <string name="keep_on_summary">(Recomandat) Multe dispozitive întrerup transferurile atunci când ecranul se oprește</string>
     <string name="keep_on_title">Păstrează ecranul pornit în timpul transferului</string>
     <string name="floating_text_selection_title">Selecție de text plutitoare</string>
     <string name="floating_text_selection_summary">La selectarea textului în alte aplicații, o opțiune \"Trimite cu Snapdrop\" va fi afișată</string>
     <string name="floating_text_selection_activity_label">Trimite prin Snapdrop</string>
     <string name="settings_theme_title">Temă</string>
     <string-array name="darkmode_entries">
-        <item>Prestabil a Sistemului</item>
+        <item>Prestabilit din sistem</item>
         <item>Luminos</item>
         <item>Întunecat</item>
     </string-array>
     <string name="baseurl_title">URL-ul de bază</string>
     <string name="baseurl_no_snapdrop_instance">Nu pare să fie o instanță Snapdrop</string>
     <string name="baseurl_check_instance_failed">Verificarea instanței Snapdrop a eșuat</string>
-    <string name="save_location">Locaţie de salvare</string>
+    <string name="save_location">Locaţia pentru salvare</string>
     <!-- File sharing -->
     <string name="intent_file">Un fișier este selectat pentru partajare</string>
     <string name="intent_files">Fișierele sunt selectate pentru partajare</string>
@@ -57,14 +57,14 @@
     <string name="error_network">Te rugăm să verifici dacă ești conectat la o rețea WiFi</string>
     <string name="ignore_error_network">Lasă-mă să intru oricum</string>
     <string name="error_not_reachable_title">Ups, scuze!</string>
-    <string name="error_not_reachable">Serverul Snapdrop-Server nu poate fi atins. \n\nDacă conexiunea ta la internet funcționează și acest lucru se întâmplă oricum, am putea avea probleme la server în prezent. Știm că acest lucru poate fi foarte frustrant, dar vă rugăm să nu lăsați recenzii greșite pe Google Play. \n\nAceastă aplicație este complet fără reclame, astfel încât nu câștigăm bani cu ea. E doar un proiect de hobby, dar facem totul pentru a-l readuce în funcţiune rapid.</string>
+    <string name="error_not_reachable">Conectarea la serverul Snapdrop nu poate fi realizată. \n\nDacă conexiunea ta la internet funcționează și acest lucru se întâmplă oricum, am putea avea probleme la server în prezent. Știm că acest lucru poate fi foarte frustrant, dar vă rugăm să nu lăsați recenzii rele pe Google Play. \n\nAceastă aplicație este complet fără reclame, deci nu câștigăm bani cu ea. E doar un proiect de hobby, dar facem totul pentru a-l readuce în funcţiune rapid.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Deschide Snapdrop pe alte dispozitive pentru a trimite fișiere</string>
     <string name="website_instruction">Atingeți pentru a trimite fișiere sau atingeți lung pentru a trimite un mesaj</string>
     <string name="website_file_received">Fișier primit</string>
     <string name="website_file_ask_before_download">Întreabă întotdeauna înainte de a salva un fișier</string>
     <string name="website_file_download">Salvează</string>
-    <string name="website_footer_discovery">Poți fi descoperit de toată lumea din această rețea</string>
-    <string name="website_footer_known_as">Ești cunoscut ca %s</string>
+    <string name="website_footer_discovery">Toată lumea din această rețea poate să-ți vadă dispozitivul</string>
+    <string name="website_footer_known_as">Apari pe alte dispozitive ca %s</string>
     <string name="website_about_subheading">Cel mai simplu mod de a transfera fișiere între dispozitive</string>
 </resources>
