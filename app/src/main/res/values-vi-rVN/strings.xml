@@ -3,44 +3,47 @@
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop cho Android</string>
     <string name="err_no_browser">Không thể mở trình duyệt</string>
-    <string name="err_no_app">Không có ứng dụng nào có thể mở tệp này</string>
+    <string name="err_no_app">Không có ứng dụng nào có thể mở tập tin này</string>
     <string name="open_url">Mở liên kết URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Chào mừng đến với Snapdrop</string>
-    <string name="app_welcome_summary">1. Mở trang web <a href="https://snapdrop.net">snapdrop.net</a> hoặc ứng dụng Snapdrop trên thiết bị khác sử dụng chung mạng WiFi.\n2. Nhấn vào thiết bị mà bạn muốn chuyển file tới.\n3. Đã xong! File của bạn sẽ được chuyển…</string>
+    <string name="app_welcome_summary">1. Mở <a href="https://snapdrop.net">snapdrop.net</a> hoặc ứng dụng Snapdrop trên thiết bị khác sử dụng chung mạng WiFi.\n2. Nhấn vào thiết bị mà bạn muốn chuyển (các) tập tin tới.\n3. Đã xong! (các) tập tin của bạn sẽ được chuyển…</string>
     <!-- Download -->
     <string name="download_save_pending">Đang tải về tệp. Vui lòng đợi…</string>
     <string name="download_successful">Tải xuống thành công</string>
     <string name="notification_channel_name">Tải xuống hoàn tất</string>
     <!-- Action Buttons -->
     <string name="open">mở</string>
-    <string name="reset">thiết lập lại</string>
-    <string name="copy">Sao chép</string>
+    <string name="reset">đặt lại</string>
+    <string name="copy">sao chép</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">Về ứng dụng Snapdrop cho Android</string>
+    <string name="title_activity_about">Thông tin về Snapdrop cho Android</string>
     <string name="license">Bản quyền</string>
     <string name="pref_category_settings">Cài đặt</string>
     <string name="source">Mã nguồn mở</string>
-    <string name="source_summary">Xem mã nguồn mở của Snapdrop tại GitHub</string>
+    <string name="source_summary">Xem mã nguồn trên Github</string>
     <string name="components">Các thành phần nguồn mở</string>
     <string name="logs">Nhật ký hoạt động</string>
     <string name="components_summary">Chạm để hiển thị</string>
     <string name="crowdin">Bản địa hóa</string>
-    <string name="crowdin_summary">Giúp dịch <b>Snapdrop for Android</b> sang ngôn ngữ yêu thích của bạn</string>
+    <string name="crowdin_summary">Giúp dịch <b>Snapdrop cho Android</b> sang ngôn ngữ yêu thích của bạn</string>
     <string name="support_us">Hỗ trợ Snapdrop</string>
-    <string name="support_us_summary">Xem :3, bạn có thể hỗ trợ cộng đồng Snapdrop không</string>
+    <string name="support_us_summary">Tìm hiểu cách bạn có thể hỗ trợ cộng đồng Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Giới thiệu Snapdrop cho Android</string>
+    <string name="twitter_summary">Giới thiệu <b>Snapdrop cho Android</b></string>
     <string name="version">Phiên bản</string>
     <string name="pref_device_name_title">Tên thiết bị</string>
     <string name="pref_device_name_summary">Đặt tên thiết bị tùy chỉnh</string>
-    <string name="keep_on_summary">(Khuyến cáo) Một số thiết bị có thể gặp vấn đề về truyền tải File khi màn hình bị tắt</string>
+    <string name="keep_on_summary">(Khuyến khích) Một số thiết bị trong lúc truyền sẽ bị ngắt nếu màn hình bị tắt</string>
     <string name="keep_on_title">Giữ màn hình bật khi đang truyền</string>
+    <string name="floating_text_selection_title">Hộp thoại nổi khi bôi đen chữ</string>
+    <string name="floating_text_selection_summary">Khi bôi đen văn bản trên ứng dụng khác, lựa chọn \"Gửi bằng Snapdrop\" sẽ hiện lên</string>
+    <string name="floating_text_selection_activity_label">Gửi bằng Snapdrop</string>
     <string name="settings_theme_title">Giao diện</string>
     <string-array name="darkmode_entries">
-        <item>Mặc định hệ thống</item>
-        <item>Sáng chói</item>
-        <item>Tối đen</item>
+        <item>Mặc định theo hệ thống</item>
+        <item>Sáng</item>
+        <item>Tối</item>
     </string-array>
     <string name="baseurl_title">URL cơ sở</string>
     <string name="baseurl_no_snapdrop_instance">Có vẻ như đây không phải là một yêu cầu của Snapdrop</string>
@@ -48,20 +51,20 @@
     <string name="save_location">Vị trí lưu</string>
     <!-- File sharing -->
     <string name="intent_file">Đã chọn 1 file để chia sẻ</string>
-    <string name="intent_files">Đã chọn nhiều file để chia sẻ</string>
+    <string name="intent_files">Các tập tin đã được chọn để chia sẻ</string>
     <string name="intent_content">Nội dung đã được chọn để chia sẻ</string>
-    <string name="error_filechooser">Không thể mở trình chọn file</string>
+    <string name="error_filechooser">Không thể mở trình chọn tập tin</string>
     <string name="error_network">Vui lòng xác minh rằng bạn được kết nối với mạng WiFi</string>
     <string name="ignore_error_network">Cứ cho tôi vào đi</string>
     <string name="error_not_reachable_title">Ầu, xin lỗi!</string>
     <string name="error_not_reachable">Máy chủ Snapdrop không thể hoàn thành tác vụ. \n\n Nếu kết nối internet của bạn vẫn bình thường nhưng điều này vẫn xảy ra thì có vẻ như máy chủ của chúng tôi đang gặp vấn đề. Chúng tôi biết điều này có thể rất khó chịu, nhưng đừng đánh giá xấu chúng tôi trên Cửa Hàng Play nhé. \n\n Phần mềm này hoàn toàn miễn phí và không có quảng cáo cho nên chúng tôi không hề kiếm được thu nhập từ nó. Đây là một dự án vì cộng đồng, chúng tôi sẽ cố gắng khắc phục mọi thứ nhanh nhất có thể.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Mở Snapdrop trên thiết bị khác để truyền file</string>
-    <string name="website_instruction">Nhấn để truyền file hoặc nhấn giữ để gửi tin nhắn</string>
-    <string name="website_file_received">Đã nhận file</string>
+    <string name="website_no_peers_info">Mở Snapdrop trên thiết bị khác để truyền các tập tin</string>
+    <string name="website_instruction">Nhấn để truyền tập tin hoặc nhấn giữ để gửi tin nhắn</string>
+    <string name="website_file_received">Tập tin đã được nhận</string>
     <string name="website_file_ask_before_download">Luôn hỏi trước khi lưu tập tin</string>
     <string name="website_file_download">Lưu</string>
-    <string name="website_footer_discovery">Bạn có thể được khám phá bởi bất kì ai trong cùng mạng bạn đang kết nối</string>
+    <string name="website_footer_discovery">Bạn có thể được tìn thấy bởi bất kì ai trong cùng mạng bạn đang kết nối</string>
     <string name="website_footer_known_as">Tên hiển thị của bạn là %s</string>
-    <string name="website_about_subheading">Cách dễ nhất để truyền file giữa các thiết bị</string>
+    <string name="website_about_subheading">Cách dễ nhất để truyền các tập tin giữa các thiết bị</string>
 </resources>
