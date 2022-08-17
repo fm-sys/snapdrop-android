@@ -6,10 +6,10 @@
     <string name="err_no_app">No hi ha cap aplicació per a obrir el fitxer</string>
     <string name="open_url">Obrir enllaç</string>
     <!-- Welcome -->
-    <string name="app_welcome">Benvinguts a Snapdrop</string>
-    <string name="app_welcome_summary">1. Obre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicació de Snapdrop en qualsevol altre dispositiu dins de la teva xarxa WiFi local.\n2. Prem sobre el dispositiu amb el que vols compartir els arxius.\n3. Fet! Els arxius seran enviats…</string>
+    <string name="app_welcome">Benvingut a Snapdrop</string>
+    <string name="app_welcome_summary">1. Obre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicació de Snapdrop en qualsevol altre dispositiu dins de la teva xarxa WiFi local.\n2. Prem sobre el dispositiu amb el que vols compartir els arxius.\n3. Fet! El(s) arxiu(s) seran enviats…</string>
     <!-- Download -->
-    <string name="download_save_pending">Descarregant, tingui una mica de paciència…</string>
+    <string name="download_save_pending">Descarregant l\'arxiu. Siusplau, tingui una mica de paciència…</string>
     <string name="download_successful">S\'ha baixat amb èxit</string>
     <string name="notification_channel_name">Descàrrega completada</string>
     <!-- Action Buttons -->
@@ -30,12 +30,12 @@
     <string name="support_us">Donar suport a Snapdrop</string>
     <string name="support_us_summary">Mira com pots donar suport a la comunitat de Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Parlar sobre <b>Snapdrop per a Android</b></string>
+    <string name="twitter_summary">Parla sobre <b>Snapdrop per a Android</b></string>
     <string name="version">Versió</string>
     <string name="pref_device_name_title">Nom del dispositiu</string>
     <string name="pref_device_name_summary">Estableix un nom de dispositiu definit per l\'usuari</string>
     <string name="keep_on_summary">(Recomanat) Molts dispositius tenen problemes amb transferiments detinguts degut a que la pantalla s\'apagui</string>
-    <string name="keep_on_title">Deixar la pantalla encesa mentre es transfereix</string>
+    <string name="keep_on_title">Deixa la pantalla encesa mentre es transfereix</string>
     <string name="floating_text_selection_title">Selecció del text flotant</string>
     <string name="floating_text_selection_summary">Quan se seleccioni text en altres aplicacions, l\'opció \"Enviar amb snapdrop\" sortirà</string>
     <string name="floating_text_selection_activity_label">Enviar amb snapdrop</string>
