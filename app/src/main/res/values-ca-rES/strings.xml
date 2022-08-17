@@ -38,7 +38,7 @@
     <string name="keep_on_title">Deixa la pantalla encesa mentre es transfereix</string>
     <string name="floating_text_selection_title">Selecció del text flotant</string>
     <string name="floating_text_selection_summary">Quan se seleccioni text en altres aplicacions, l\'opció \"Enviar amb snapdrop\" sortirà</string>
-    <string name="floating_text_selection_activity_label">Enviar amb snapdrop</string>
+    <string name="floating_text_selection_activity_label">Envia amb Snapdrop</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Predeterminat del sistema</item>
