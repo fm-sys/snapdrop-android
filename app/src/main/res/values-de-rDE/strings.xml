@@ -59,7 +59,7 @@
     <string name="error_not_reachable_title">Tut mir leid!</string>
     <string name="error_not_reachable">Der Snapdrop-Server kann nicht erreicht werden. \n\nWenn Ihre Internetverbindung funktioniert und dies trotzdem geschieht, könnten Serverprobleme vorliegen. Wir wissen, dass dies sehr frustrierend sein kann, aber bitte hinterlassen Sie keine schlechten Bewertungen auf Google Play. \n\nDiese App ist völlig werbefrei, weshalb wir kein Geld damit verdienen. Es ist nur ein Hobbyprojekt, aber wir tun alles, um es schnell wieder zum Laufen zu bringen.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Öffne Snapdrop auf anderen Geräten um Dateien zu senden</string>
+    <string name="website_no_peers_info">Öffne Snapdrop auf anderen Geräten, um Dateien zu senden</string>
     <string name="website_instruction">Tippen, um Dateien zu senden, oder lange tippen, um eine Nachricht zu senden</string>
     <string name="website_file_received">Datei empfangen</string>
     <string name="website_file_ask_before_download">Vor dem Speichern immer fragen</string>
