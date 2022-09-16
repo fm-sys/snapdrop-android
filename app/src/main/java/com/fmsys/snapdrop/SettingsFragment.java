@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -58,11 +59,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         final Preference openSourceComponents = findPreference(getString(R.string.pref_components));
         openSourceComponents.setOnPreferenceClickListener(pref -> {
-            new AlertDialog.Builder(getContext())
+            final AlertDialog dialog = new AlertDialog.Builder(getContext())
                     .setTitle(R.string.components)
                     .setMessage(R.string.components_long_text)
                     .setPositiveButton(android.R.string.ok, null)
                     .show();
+            ((TextView) dialog.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
             return true;
         });
 
@@ -209,11 +211,4 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         storageHelper.onSaveInstanceState(outState);
         super.onSaveInstanceState(outState);
     }
-
-//    final String appPackageName = context.getPackageName();
-//        try {
-//        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-//    } catch (android.content.ActivityNotFoundException anfe) {
-//        context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
-//    }
 }
