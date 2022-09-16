@@ -57,15 +57,14 @@ Please do not change any translations manually in the `.xml` resource files. Not
 ### Development
 If you want to help with development, this would be more than welcome! I am very glad about every pull request. Just fork the repo and start coding. However, if you plan to implement larger changes, please tell us in the [issue tracker](https://github.com/fm-sys/snapdrop-android/issues) before hacking on your great new feature. 
 
-## Credits / Open Source Components
-- **[Snapdrop](https://github.com/RobinLinus/snapdrop)**
-  The Snapdrop.net Project and [launcher icon](https://github.com/RobinLinus/snapdrop/blob/663db5cbb39ab804b20f9cb6466effd9ed0e2d0c/client/images/logo_blue_512x512.png) by [@RobinLinus](https://github.com/RobinLinus/). Licensed under GPL-3.0 License. 
-- **[SimpleStorage](https://github.com/anggrayudi/SimpleStorage)**
-  Copyright © 2020-2021 Anggrayudi Hardiannicko A. Licensed under Apache-2.0 License.
-- **[Material Design Components](https://material.io/)**
-  Licensed under Apache-2.0 License.
+## Other software
+### Other Snapdrop software
+- Firefox Add-on for desktop platforms: [Snapdrop Web Extension](https://github.com/ueen/SnapdropFirefoxAddon)
+- And for sure, Snapdrop directly inside the browser - just use it everywhere: https://snapdrop.net/
 
+Oh, and thanks [Mrwhosetheboss](https://youtu.be/lmIO18kLcZU?t=397) for recommending this app on your youtube channel! 
 
-I also recommend using this great Firefox Add-on: [Snapdrop Web Extension](https://github.com/ueen/SnapdropFirefoxAddon)
-
-Oh, and thanks [Mrwhosetheboss](https://youtu.be/lmIO18kLcZU?t=397) for recommending this app! 
+### Alternatives
+- Apple Airdrop (Mac and IOS only)
+- Google Nearby Share (Android and Chrome OS only, a Windows version is anounced for end of 2022)
+- Windows Nearby Sharing (Windows only, there is a FLOSS implementation for android - [link](https://github.com/ShortDevelopment/Nearby-Sharing-Windows))
