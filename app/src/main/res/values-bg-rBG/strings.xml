@@ -55,7 +55,7 @@
     <string name="intent_content">Избрано е съдържание за споделяне</string>
     <string name="error_filechooser">Не може да се отвори файлов мениджър</string>
     <string name="error_network">Моля, провери дали си свързан с WiFi мрежа</string>
-    <string name="ignore_error_network">Все пак ме пусни</string>
+    <string name="ignore_error_network">Пусни ме въпреки това</string>
     <string name="error_not_reachable_title">Опа, съжалявам!</string>
     <string name="error_not_reachable">Сървърът на Snapdrop не бе достигнат. \n\nАко интернет връзката ти работи и тази грешка се случва често, може би имаме проблеми със сървърите в момента. Знаем, че това може да е неприятно, но моля не оставяй лошо ревю в Google Play. Знай, че правим всичко възможно да оправим проблема възможно най-скоро. \n\nТова приложение е напълно безплатно и ние не печелим пари от него. Това е просто хоби проект.</string>
     <!-- Website Localization -->
