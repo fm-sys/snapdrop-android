@@ -3,7 +3,7 @@
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop pentru Android</string>
     <string name="err_no_browser">Nu se poate deschide browser-ul</string>
-    <string name="err_no_app">Nu s-a găsit nici o aplicație pentru a deschide acest fișier</string>
+    <string name="err_no_app">Nicio aplicație instalată pentru a deschide acest fișier</string>
     <string name="open_url">Deschide URL-ul</string>
     <!-- Welcome -->
     <string name="app_welcome">Bine ai venit la Snapdrop</string>
@@ -34,14 +34,14 @@
     <string name="version">Versiune</string>
     <string name="pref_device_name_title">Numele dispozitivului</string>
     <string name="pref_device_name_summary">Setează un nume de dispozitiv definit de utilizator</string>
-    <string name="keep_on_summary">(Recomandat) Multe dispozitive întrerup transferurile atunci când ecranul se oprește</string>
+    <string name="keep_on_summary">(Recomandat) Multe dispozitive au probleme cu transferurile întrerupte atunci când ecranul se oprește</string>
     <string name="keep_on_title">Păstrează ecranul pornit în timpul transferului</string>
     <string name="floating_text_selection_title">Selecție de text plutitoare</string>
     <string name="floating_text_selection_summary">La selectarea textului în alte aplicații, o opțiune \"Trimite cu Snapdrop\" va fi afișată</string>
     <string name="floating_text_selection_activity_label">Trimite prin Snapdrop</string>
     <string name="settings_theme_title">Temă</string>
     <string-array name="darkmode_entries">
-        <item>Prestabilit din sistem</item>
+        <item>Implicit sistem</item>
         <item>Luminos</item>
         <item>Întunecat</item>
     </string-array>
@@ -64,7 +64,7 @@
     <string name="website_file_received">Fișier primit</string>
     <string name="website_file_ask_before_download">Întreabă întotdeauna înainte de a salva un fișier</string>
     <string name="website_file_download">Salvează</string>
-    <string name="website_footer_discovery">Toată lumea din această rețea poate să-ți vadă dispozitivul</string>
-    <string name="website_footer_known_as">Apari pe alte dispozitive ca %s</string>
+    <string name="website_footer_discovery">Oricine conectat la aceeași rețea te poate vedea</string>
+    <string name="website_footer_known_as">Ești cunoscut ca %s</string>
     <string name="website_about_subheading">Cel mai simplu mod de a transfera fișiere între dispozitive</string>
 </resources>
