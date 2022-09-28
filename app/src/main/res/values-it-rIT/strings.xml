@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Imposta un nome del dispositivo personalizzato</string>
     <string name="keep_on_summary">(Consigliato) Molti dispositivi interrompono il trasferimento quando lo schermo si spegne</string>
     <string name="keep_on_title">Mantieni lo schermo attivo durante il trasferimento</string>
+    <string name="floating_text_selection_title">Selezione testo fluttuante</string>
+    <string name="floating_text_selection_summary">Se selezioni il testo in altre app, comparirà un\'opzione \"invia con Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Invia con Snapdrop</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Predefinito</item>

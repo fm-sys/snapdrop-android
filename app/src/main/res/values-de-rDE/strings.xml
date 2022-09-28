@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Lege einen benutzerdefinierten Gerätenamen fest</string>
     <string name="keep_on_summary">(Empfohlen) Viele Geräte haben Probleme mit Übertragungen, wenn der Bildschirm ausgeschaltet wird</string>
     <string name="keep_on_title">Bildschirm während der Übertragung angeschaltet lassen</string>
+    <string name="floating_text_selection_title">Schwebende Textauswahl</string>
+    <string name="floating_text_selection_summary">Bei der Auswahl von Text in anderen Apps wird die Option \"Mit Snapdrop senden\" angezeigt</string>
+    <string name="floating_text_selection_activity_label">Mit Snapdrop senden</string>
     <string name="settings_theme_title">Design</string>
     <string-array name="darkmode_entries">
         <item>Systemstandard</item>
@@ -56,7 +59,7 @@
     <string name="error_not_reachable_title">Tut mir leid!</string>
     <string name="error_not_reachable">Der Snapdrop-Server kann nicht erreicht werden. \n\nWenn Ihre Internetverbindung funktioniert und dies trotzdem geschieht, könnten Serverprobleme vorliegen. Wir wissen, dass dies sehr frustrierend sein kann, aber bitte hinterlassen Sie keine schlechten Bewertungen auf Google Play. \n\nDiese App ist völlig werbefrei, weshalb wir kein Geld damit verdienen. Es ist nur ein Hobbyprojekt, aber wir tun alles, um es schnell wieder zum Laufen zu bringen.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Öffne Snapdrop auf anderen Geräten um Dateien zu senden</string>
+    <string name="website_no_peers_info">Öffne Snapdrop auf anderen Geräten, um Dateien zu senden</string>
     <string name="website_instruction">Tippen, um Dateien zu senden, oder lange tippen, um eine Nachricht zu senden</string>
     <string name="website_file_received">Datei empfangen</string>
     <string name="website_file_ask_before_download">Vor dem Speichern immer fragen</string>

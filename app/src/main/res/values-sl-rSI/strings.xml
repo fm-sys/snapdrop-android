@@ -26,7 +26,7 @@
     <string name="logs">Dnevniki odpravljanja napak</string>
     <string name="components_summary">Kliknite za prikaz</string>
     <string name="crowdin">Lokalizacija</string>
-    <string name="crowdin_summary">Pomagajte pri prevajanju <b>Snapdrop za Android</b> v vaš najljubši jezik</string>
+    <string name="crowdin_summary">Pomagajte nam pri prevajanju <b>Snapdrop za Android</b> v vaš jezik</string>
     <string name="support_us">Podprite Snapdrop</string>
     <string name="support_us_summary">Oglejte si, kako lahko podprete skupnost Snapdrop</string>
     <string name="twitter">Twitter</string>
@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Nastavite uporabniško določeno ime naprave</string>
     <string name="keep_on_summary">(Priporočeno) Številne naprave imajo težave s prekinitvijo prenosov, ko se zaslon izklopi</string>
     <string name="keep_on_title">Med prenosom imejte zaslon vklopljen</string>
+    <string name="floating_text_selection_title">Lebdeči izbor besedila</string>
+    <string name="floating_text_selection_summary">Pri izbiri besedila v drugih aplikacijah se prikaže možnost \"Pošlji s Snapdropom\"</string>
+    <string name="floating_text_selection_activity_label">Pošlji s Snapdropom</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Privzeto sistemsko</item>
@@ -54,7 +57,7 @@
     <string name="error_network">Preverite, ali ste povezani z omrežjem WiFi</string>
     <string name="ignore_error_network">Vseeno me spusti noter</string>
     <string name="error_not_reachable_title">Ups, oprosti!</string>
-    <string name="error_not_reachable">Strežnika Snapdrop ni mogoče doseči. \n\nČe vaša internetna povezava deluje in se to vseeno zgodi, imamo morda trenutno težave s strežnikom. Vemo, da je to lahko zelo frustrirajuče, vendar ne puščajte slabih ocen v Googlu Play. \n\nTa aplikacija je popolnoma brez oglasov, zato z njo ne zaslužimo denarja. To je le hobi projekt, ampak delamo vse, da bo spet hitro delovala.</string>
+    <string name="error_not_reachable">Strežnika Snapdrop ni mogoče doseči. \n\nČe vaša internetna povezava deluje in se to vseeno zgodi, imamo morda trenutno težave s strežnikom. Vemo, da je to lahko zelo frustrirajuče, vendar ne puščajte slabih ocen v Googl Play-u. \n\nTa aplikacija je popolnoma brez oglasov, zato z njo ne zaslužimo denarja. To je le hobi projekt, ampak delamo vse, da bo spet hitro delovala.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Za pošiljanje datotek odprite Snapdrop na drugih napravah</string>
     <string name="website_instruction">Kliknite za pošiljanje datotek ali pridržite za pošiljanje sporočila</string>

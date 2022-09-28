@@ -1,24 +1,21 @@
-Snapdrop para Android é um cliente Android™ para a solução de compartilhamento de arquivos gratuita e de código aberto https://snapdrop.net/.
+Snapdrop para Android é um cliente Android™ de compartilhamento de arquivos, gratuito e de código aberto https://snapdrop.net/.
 
-Você às vezes tem o problema em que você só precisa transferir rapidamente um arquivo do seu telefone para o PC?
+Você às vezes tem problema, porque só precisa transferir rapidamente um arquivo do seu telefone para o PC?
 
-USB? - Antiquado!
+USB? - À moda antiga!
 Bluetooth? - Muito complicado e lento!
-Email? - Por favor, não quero escrever mais um e-mail para mim mesmo!
+Email? - Por favor, não quero escrever outro e-mail para mim mesmo!
 
 Snapdrop!
 
-O Snapdrop é uma solução local de compartilhamento de arquivos que funciona diretamente do seu navegador. Um pouco como o Airdrop da Apple, mas não somente para dispositivos Apple. Windows, Linux, Android, IPhone, Mac - sem qualquer problema!
+O Snapdrop é uma solução local de compartilhamento de arquivos que funciona diretamente do seu navegador. É quase como o Airdrop da Apple, mas não restrito apenas para dispositivos da Apple. Windows, Linux, Android, IPhone, Mac - sem problema nenhum!
 
-No entanto, mesmo que teoricamente funcione direto do seu navegador, você vai adorar este app se você quiser utilizá-lo com mais frequência em sua vida cotidiana. Graças a uma integração perfeita no sistema operacional Android, os arquivos serão enviados ainda mais rápido. Você pode selecionar Snapdrop direto de outros aplicativos para compartilhar.
+No entanto, mesmo que teoricamente funcione direto do seu navegador, você vai adorar este app se você quiser utilizá-lo com mais frequência em sua vida cotidiana. Graças a uma integração perfeita com Android, os arquivos serão enviados ainda mais rápido. Você pode selecionar Snapdrop direto de outros aplicativos para compartilhar.
 
 Graças à sua extrema simplicidade, "Snapdrop para Android" facilita a vida cotidiana de centenas de usuários. Como um projeto de código aberto, não temos nenhum interesse comercial, apenas queremos tornar o mundo um pouco melhor. Participe e se convença!
 
 CÓDIGO-FONTE:
 https://github.com/fm-sys/snapdrop-android
 
-PRIVACIDADE:
-Este aplicativo interage com https://snapdrop.net/ para descobrir outros dispositivos que rodam o Snapdrop em sua rede local. Entretanto, nenhum dos seus arquivos é enviado para qualquer servidor, eles são transferidos de ponta-a-ponta entre seus dispositivos.
-
 CRÉDITOS:
-O aplicativo e seu ícone são baseados no projeto Snapdrop Open Source, que é hospedado e mantido por RobinLinus. Veja também https://www.github.com/robinlinus/snapdrop
+O app é movido pelo projeto Snapdrop Open Source, que é hospedado e mantido pelo RobinLinus. Veja também https://www.github.com/robinlinus/snapdrop

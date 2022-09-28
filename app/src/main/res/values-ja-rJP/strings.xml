@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">カスタムデバイス名を設定する</string>
     <string name="keep_on_summary">（推奨）多くのデバイスは画面の消灯時に転送が中止される問題があります</string>
     <string name="keep_on_title">転送時に画面を点灯したままにする</string>
+    <string name="floating_text_selection_title">Floating text selection</string>
+    <string name="floating_text_selection_summary">他のアプリでテキストを選択すると､「Snapdropで送信」オプションが表示されます</string>
+    <string name="floating_text_selection_activity_label">Snapdropで送信</string>
     <string name="settings_theme_title">テーマ</string>
     <string-array name="darkmode_entries">
         <item>システムデフォルト</item>

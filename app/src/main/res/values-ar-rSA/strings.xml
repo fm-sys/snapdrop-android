@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">تَعيين اِسم جِهاز مُعَرَّف مِن قِبَل المُستَخدِم</string>
     <string name="keep_on_summary">(مستحسن) العديد من الأجهزة تواجه مشاكل مع انقطاع عمليات النقل عند ايقاف تشغيل الشاشة</string>
     <string name="keep_on_title">إبقاء الشاشة قيد التشغيل أثناء النقل</string>
+    <string name="floating_text_selection_title">اختيار النص العائم</string>
+    <string name="floating_text_selection_summary">عند تحديد النص في تطبيقات أخرى، سيتم عرض خيار \"إرسال مع Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">مشاركة مع سناب درُوب</string>
     <string name="settings_theme_title">السِّمَة</string>
     <string-array name="darkmode_entries">
         <item>اِفتِراضِيَّة تبعًا للنِظام</item>

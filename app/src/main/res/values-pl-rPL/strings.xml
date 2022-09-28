@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Ustaw nazwę urządzenia zdefiniowaną przez użytkownika</string>
     <string name="keep_on_summary">(Zalecane) Wiele urządzeń ma problemy z przerywaniem transferu po wyłączeniu ekranu</string>
     <string name="keep_on_title">Pozostaw włączony ekran podczas przesyłania</string>
+    <string name="floating_text_selection_title">Wybór pływającego tekstu</string>
+    <string name="floating_text_selection_summary">Podczas wybierania tekstu w innych aplikacjach zostanie wyświetlona opcja \"Wyślij za pomocą Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Wyślij przez Snapdrop</string>
     <string name="settings_theme_title">Motyw</string>
     <string-array name="darkmode_entries">
         <item>Domyślne ustawienia</item>

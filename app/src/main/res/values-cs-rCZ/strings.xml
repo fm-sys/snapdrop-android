@@ -36,6 +36,9 @@
     <string name="pref_device_name_summary">Nastavte vlastní název zařízení</string>
     <string name="keep_on_summary">(Doporučeno) Mnoho zařízení má problémy s přerušením přenosu při vypnutí obrazovky</string>
     <string name="keep_on_title">Během přenosu udržujte obrazovku zapnutou</string>
+    <string name="floating_text_selection_title">Výběr plovoucího textu</string>
+    <string name="floating_text_selection_summary">Při výběru textu v jiných aplikacích bude zobrazena možnost \"Odeslat aplikací Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Odeslat aplikací Snapdrop</string>
     <string name="settings_theme_title">Motiv</string>
     <string-array name="darkmode_entries">
         <item>Podle systému</item>
@@ -56,7 +59,7 @@
     <string name="error_not_reachable_title">Ajajaj, pardon!</string>
     <string name="error_not_reachable">Nejde se připojit na servery Snapdrop. \n\nPokud Vaše internetové připojení funguje a stále se nejde připojit, mohl nám momentálně vypadnout server. Víme, že to může být velmi frustrující, ale prosím nedávejte nám špatné recenze na Google Play. \n\n Tato aplikace je zcela bez reklam, takže s ní nevyděláváme žádné peníze. Je to jen hobby projekt, ale děláme vše pro to, abychom ho rychle zprovoznili.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Otevřít Snapdrop na jiných zařízeních pro odesílání souborů</string>
+    <string name="website_no_peers_info">Otevřete Snapdrop na více zařízeních pro přesun souborů</string>
     <string name="website_instruction">Klepněte pro odeslání souboru nebo klepněte a podržte pro odeslání zprávy</string>
     <string name="website_file_received">Soubor přijat</string>
     <string name="website_file_ask_before_download">Vždy se zeptat před uložením souboru</string>
