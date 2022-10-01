@@ -9,7 +9,7 @@
     <string name="app_welcome">Vitajte v Snapdrop</string>
     <string name="app_welcome_summary">1. Otvorte <a href="https://snapdrop.net">snapdrop.net</a> alebo Snapdrop aplikáciu na ďalšom zariadení v rovnakej WiFi sieti.\n2. Klepnite na zariadenie s ktorým chcete zdieľať súbor(y).\n3. Hotovo! Súbor(y) budú odoslané…</string>
     <!-- Download -->
-    <string name="download_save_pending">Ukladanie súboru. Trochu strpenia prosím…</string>
+    <string name="download_save_pending">Ukladanie súboru. Trochu strpenia, prosím…</string>
     <string name="download_successful">Sťahovanie bolo úspešné</string>
     <string name="notification_channel_name">Sťahovanie dokončené</string>
     <!-- Action Buttons -->
@@ -30,11 +30,11 @@
     <string name="support_us">Podporiť Snapdrop</string>
     <string name="support_us_summary">Pozrite sa, ako môžete podporiť Snapdrop komunitu</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Hovorte o <b>Snapdrop pre Android</b></string>
+    <string name="twitter_summary">Povedzte o <b>Snapdrop pre Android</b></string>
     <string name="version">Verzia</string>
     <string name="pref_device_name_title">Názov zariadenia</string>
     <string name="pref_device_name_summary">Nastaviť si vlastný názov zariadenia</string>
-    <string name="keep_on_summary">(Odporúčané) Mnohé zariadenia majú problémy s prerušovaním prenosov keď majú vypnutú obrazovku</string>
+    <string name="keep_on_summary">(Odporúčané) Mnohé zariadenia majú problémy s prerušovaním prenosov, keď majú vypnutú obrazovku</string>
     <string name="keep_on_title">Nechať obrazovku zapnutú počas prenosu</string>
     <string name="floating_text_selection_title">Výber plávajúceho textu</string>
     <string name="floating_text_selection_summary">Keď budete označovať text v iných aplikáciách, zobrazí sa možnosť \"Poslať cez Snapdrop\"</string>
@@ -46,9 +46,9 @@
         <item>Tmavý</item>
     </string-array>
     <string name="baseurl_title">Základná URL</string>
-    <string name="baseurl_no_snapdrop_instance">Zdá sa, že sa nejedná o Snapdrop inštanciu</string>
+    <string name="baseurl_no_snapdrop_instance">Zdá sa, že nejde o Snapdrop inštanciu</string>
     <string name="baseurl_check_instance_failed">Nepodarilo sa o overiť Snapdrop inštanciu</string>
-    <string name="save_location">Ukladacia lokácia</string>
+    <string name="save_location">Uložiť umiestnenie</string>
     <!-- File sharing -->
     <string name="intent_file">Súbor je označený pre zdieľanie</string>
     <string name="intent_files">Súbory sú označené pre zdieľanie</string>
