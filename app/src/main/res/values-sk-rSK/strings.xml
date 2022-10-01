@@ -53,18 +53,18 @@
     <string name="intent_file">Súbor je označený pre zdieľanie</string>
     <string name="intent_files">Súbory sú označené pre zdieľanie</string>
     <string name="intent_content">Obsah je označený pre zdieľanie</string>
-    <string name="error_filechooser">Nemožno otvoriť vyberač súborov</string>
-    <string name="error_network">Prosím skontrolujte, či ste pripojení k WiFi sieti</string>
+    <string name="error_filechooser">Nemožno otvoriť výber súborov</string>
+    <string name="error_network">Prosím, skontrolujte, či ste pripojení k WiFi sieti</string>
     <string name="ignore_error_network">Napriek tomu pokračovať</string>
     <string name="error_not_reachable_title">Ups, prepáčte!</string>
-    <string name="error_not_reachable">Nemožno dosiahnuť Snapdrop server. \n\nAk vaše internetové pripojenie funguje a toto sa ajtak stane, je možné že momentálne máme problémy so servermi. Vieme že toto dokáže byť veľmi frustrujúce, ale prosím nedávajte nám na Google Play zlé hodnotenia. \n\nTáto aplikácia je úplne bez reklám, takže z nej nezarabame žiadne peniaze. Tento projekt je iba koníček, ale robíme všetko preto aby všetko rýchlo začalo bežať.</string>
+    <string name="error_not_reachable">Nemožno nadviazať spojenie s Snapdrop serverom. \n\nAk vaše internetové pripojenie funguje a toto sa aj tak stane, je možné že momentálne máme problémy so servermi. Vieme, že to môže byť veľmi frustrujúce, ale prosím, nedávajte nám na Google Play zlé hodnotenia. \n\nTáto aplikácia je úplne bez reklám, takže na nej nezarábame žiadne peniaze. Tento projekt je iba koníček, ale robíme všetko preto, aby všetko rýchlo začalo bežať.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Otvorte Snapdrop na ďalších zariadeniach pre posielanie súborov</string>
     <string name="website_instruction">Klepnutím pošlete súbory a podržaním pošlete správu</string>
     <string name="website_file_received">Súbor bol prijatý</string>
     <string name="website_file_ask_before_download">Vždy sa opýtať pred ukladaním súboru</string>
     <string name="website_file_download">Uložiť</string>
-    <string name="website_footer_discovery">Môže vás tu objaviť každý na tejto sieti</string>
+    <string name="website_footer_discovery">Ste viditeľný všetkým na tejto sieti</string>
     <string name="website_footer_known_as">Ste tu pod menom %s</string>
     <string name="website_about_subheading">Najjednoduchší spôsob prenášania súborov medzi zariadeniami</string>
 </resources>
