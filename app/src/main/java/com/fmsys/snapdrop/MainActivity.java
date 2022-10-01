@@ -65,6 +65,7 @@ import com.anggrayudi.storage.media.MediaFile;
 import com.fmsys.snapdrop.databinding.ActivityMainBinding;
 import com.fmsys.snapdrop.utils.NetworkUtils;
 import com.fmsys.snapdrop.utils.ShareUtils;
+import com.fmsys.snapdrop.utils.StateHandler;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
@@ -86,9 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     public ValueCallback<Uri[]> uploadMessage;
 
-    private boolean currentlyOffline = true;
-    private boolean currentlyAtAboutPage = false;
-    private boolean currentlyLoading = true;
+    private final StateHandler state = new StateHandler();
     public boolean forceRefresh = false;
     public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false);
     public boolean onlyText = false;
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onReceive(final Context context, final Intent intent) {
-            if ((!isInitialStickyBroadcast()) && currentlyOffline) {
+            if (state.isCurrentlyOffline()) {
                 final Handler handler = new Handler();
                 handler.postDelayed(() -> {
                     if (NetworkUtils.isWifiAvailable()) {
@@ -219,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
 
-        splashScreen.setKeepOnScreenCondition(() -> currentlyLoading);
+        splashScreen.setKeepOnScreenCondition(state::isCurrentlyStarting);
     }
 
     @Override
@@ -243,12 +242,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void toggleAbout() {
-        if (currentlyAtAboutPage) {
+        if (binding.webview.getUrl() != null && binding.webview.getUrl().endsWith("#about")) {
             binding.webview.loadUrl(baseURL + "#");
         } else {
             binding.webview.loadUrl(baseURL + "#about");
         }
-        currentlyAtAboutPage = !currentlyAtAboutPage;
     }
 
     private void refreshWebsite(final boolean pulled) {
@@ -260,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
             binding.pullToRefresh.setRefreshing(false);
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
+            state.setCurrentlyLoading(false);
             showScreenNoConnection();
         }
     }
@@ -269,9 +268,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showScreenNoConnection() {
+        state.setCurrentlyOffline(true);
         binding.webview.loadUrl("file:///android_asset/offline.html?text=" + getString(R.string.error_network) + "&button=" + getString(R.string.ignore_error_network));
-        currentlyOffline = true;
-        currentlyLoading = false;
     }
 
     public static boolean isTablet(final Context ctx) {
@@ -336,23 +334,11 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (binding.webview.getUrl() != null && binding.webview.getUrl().endsWith("#about")) {
             binding.webview.loadUrl(baseURL + "#");
-            currentlyAtAboutPage = false;
         } else if (dialogVisible) {
             binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(this, "closeDialogs.js"));
         } else {
             super.onBackPressed();
         }
-    }
-
-    /**
-     * @return true if there was no server connection for more than a minute
-     */
-    private boolean isServerConnectionLost() {
-        return System.currentTimeMillis() - prefs.getLong(getString(R.string.pref_last_server_connection), 0) > 1000 * 60;
-    }
-
-    public void setLastServerConnection(final long timestamp) {
-        prefs.edit().putLong(getString(R.string.pref_last_server_connection), timestamp).apply();
     }
 
     @Override
@@ -367,7 +353,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestart() {
         super.onRestart();
-        if (isServerConnectionLost()) {
+        if (binding.webview.getUrl() == null || !binding.webview.getUrl().startsWith(baseURL)) {
             refreshWebsite();
         }
     }
@@ -382,7 +368,6 @@ public class MainActivity extends AppCompatActivity {
         }
         if (!transfer.get() && !dialogVisible && uploadMessage == null) {
             binding.webview.loadUrl("about:blank");
-            setLastServerConnection(0);
         }
     }
 
@@ -502,12 +487,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onPageFinished(final WebView view, final String url) {
             Log.w("SnapdropAndroid", "refresh finished");
-            currentlyLoading = false;
+
+            state.setCurrentlyLoading(false);
             binding.pullToRefresh.setRefreshing(false);
 
-            if (url.startsWith(baseURL) || currentlyOffline) {
-                currentlyOffline = !url.startsWith(baseURL);
-
+            if (url.startsWith(baseURL)) {
+                state.setCurrentlyOffline(false);
                 initSnapdrop();
 
             }
@@ -519,23 +504,21 @@ public class MainActivity extends AppCompatActivity {
                 return; // too late to do anything at this point in time...
             }
             //website initialisation
-            if (!currentlyOffline) {
-                binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"));
-                binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
-                WebsiteLocalizer.localize(binding.webview);
+            binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"));
+            binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
+            WebsiteLocalizer.localize(binding.webview);
 
-                // welcome dialog
-                if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
-                    new AlertDialog.Builder(MainActivity.this)
-                            .setCancelable(false)
-                            .setTitle(R.string.app_welcome)
-                            .setMessage(R.string.app_welcome_summary)
-                            .setPositiveButton(android.R.string.ok, null)
-                            .create()
-                            .show();
-                    
-                    prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply();
-                }
+            // welcome dialog
+            if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setCancelable(false)
+                        .setTitle(R.string.app_welcome)
+                        .setMessage(R.string.app_welcome_summary)
+                        .setPositiveButton(android.R.string.ok, null)
+                        .create()
+                        .show();
+
+                prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply();
             }
         }
 
@@ -545,12 +528,12 @@ public class MainActivity extends AppCompatActivity {
 
             final Handler handler = new Handler();
             final int delay = 500; // milliseconds
-            currentlyLoading = true;
+            state.setCurrentlyLoading(true);
 
             handler.postDelayed(new Runnable() {
                 public void run() {
                     //do something
-                    if (currentlyLoading) {
+                    if (state.isCurrentlyLoading()) {
                         if (NetworkUtils.isInternetAvailable()) {
                             handler.postDelayed(this, delay);
                         } else {
@@ -565,15 +548,19 @@ public class MainActivity extends AppCompatActivity {
         @RequiresApi(api = Build.VERSION_CODES.M)
         @Override
         public void onReceivedError(final WebView view, final WebResourceRequest request, final WebResourceError error) {
-            if (error.getErrorCode() == -6) {
+
+            state.setCurrentlyLoading(false);
+
+            Log.e("WebViewError", "Error on accessing " + request.getUrl() + ", " + error.getDescription() + " (ErrorCode " + error.getErrorCode() + ")");
+            showScreenNoConnection();
+
+            if (error.getErrorCode() == ERROR_CONNECT || error.getErrorCode() == ERROR_TIMEOUT) {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle(R.string.error_not_reachable_title)
                         .setMessage(R.string.error_not_reachable)
                         .setPositiveButton(android.R.string.ok, null)
                         .show();
             }
-            Log.e("WebViewError", "Cannot reach " + request.getUrl() + " (ErrorCode " + error.getErrorCode() + ")");
-            showScreenNoConnection();
         }
     }
 

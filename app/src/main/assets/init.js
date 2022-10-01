@@ -73,15 +73,6 @@ let aboutBackground = document.querySelector('#about>x-background');
 aboutBackground.style.left = 'calc(32px - 200px)';
 aboutBackground.style.right = null;
 
-//change ServerConnection.send(message) to connect to JavaScriptInterface
-ServerConnection.prototype.s = ServerConnection.prototype.send;
-ServerConnection.prototype.send = function(message){
-    this.s(message);
-    if (message.type == 'pong') {
-        SnapdropAndroid.updateLastOnlineTime();
-    }
-};
-
 //change PeerUI._onTouchEnd(e) to connect to JavaScriptInterface
 PeerUI.prototype._oTE = PeerUI.prototype._onTouchEnd;
 PeerUI.prototype._onTouchEnd = function(e){

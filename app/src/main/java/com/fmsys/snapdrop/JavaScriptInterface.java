@@ -77,11 +77,6 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
-    public void updateLastOnlineTime() {
-        context.setLastServerConnection(System.currentTimeMillis());
-    }
-
-    @JavascriptInterface
     public boolean shouldOpenSendTextDialog() {
         return context.onlyText;
     }
