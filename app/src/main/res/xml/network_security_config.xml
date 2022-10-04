@@ -6,4 +6,7 @@
             <certificates src="user" />
         </trust-anchors>
     </base-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">snapdrop.net</domain>
+    </domain-config>
 </network-security-config>
