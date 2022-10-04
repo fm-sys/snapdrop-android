@@ -17,7 +17,7 @@ PeerUI.prototype.setProgress = function(progress){
  };
 
 //change tweet link
-document.querySelector('.icon-button[title~="Tweet"]').href = 'https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20https://snapdrop.net&';
+document.querySelector('.icon-button[title~="Tweet"]').href = 'https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20%23snapdrop%0A%0Ahttps://snapdrop.net';
 
 //add settings icon-button
 let settingsIconButton = document.createElement('a');
