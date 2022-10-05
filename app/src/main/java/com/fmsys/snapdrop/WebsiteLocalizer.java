@@ -43,7 +43,7 @@ public class WebsiteLocalizer {
 
     public static void localize(final WebView webView) {
         for (TranslationElement element : TranslationElement.values()) {
-            webView.loadUrl(getTranslationJS(element, webView.getContext()));
+            webView.evaluateJavascript(getTranslationJS(element, webView.getContext()), null);
         }
     }
 

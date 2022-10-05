@@ -33,6 +33,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.ConsoleMessage;
 import android.webkit.CookieManager;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
@@ -284,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
             binding.webview.clearFocus(); // remove potential text selections
 
             final String clipText = getTextFromUploadIntent();
-            binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText));
+            binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText), null);
 
             final Snackbar snackbar = Snackbar
                     .make(binding.pullToRefresh, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
@@ -480,22 +481,35 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
 
+        @Override
+        public boolean onConsoleMessage(final ConsoleMessage consoleMessage) {
+            if (consoleMessage.messageLevel().equals(ConsoleMessage.MessageLevel.ERROR)) {
+                Log.e("WebViewConsole", consoleMessage.message());
+            } else if (consoleMessage.messageLevel().equals(ConsoleMessage.MessageLevel.WARNING)) {
+                Log.w("WebViewConsole", consoleMessage.message());
+            } else {
+                Log.d("WebViewConsole", consoleMessage.message());
+            }
+            return true;
+        }
     }
 
     private class CustomWebViewClient extends WebViewClient {
 
         @Override
         public void onPageFinished(final WebView view, final String url) {
-            Log.w("SnapdropAndroid", "refresh finished");
 
             state.setCurrentlyLoading(false);
             binding.pullToRefresh.setRefreshing(false);
 
             if (url.startsWith(baseURL)) {
+                Log.w("WebView", "refresh finished, init snapdrop...");
                 state.setCurrentlyOffline(false);
                 initSnapdrop();
-
+            } else {
+                Log.w("WebView", "finished loading " + url);
             }
+
             super.onPageFinished(view, url);
         }
 
@@ -504,9 +518,12 @@ public class MainActivity extends AppCompatActivity {
                 return; // too late to do anything at this point in time...
             }
             //website initialisation
-            binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"));
-            binding.webview.loadUrl(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()));
+            Log.w("WebView", "load init script...");
+            binding.webview.evaluateJavascript(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"), null);
+            binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()), null);
             WebsiteLocalizer.localize(binding.webview);
+            Log.w("WebView", "init end.");
+
 
             // welcome dialog
             if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
