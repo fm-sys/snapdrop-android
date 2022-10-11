@@ -10,7 +10,7 @@
     <string name="app_welcome_summary">1. Odpri <a href="https://snapdrop.net">snapdrop.net</a> ali Snapdrop aplikacijo na katerikoli napravi v vašem lokalnem WiFi omrežju.\n2. Tapnite na napravo z katero želite deliti vaše datoteke.\n3. Končano! Datoteke bodo poslane…</string>
     <!-- Download -->
     <string name="download_save_pending">Shranjevanje datoteke. Prosimo počakajte trenutek…</string>
-    <string name="download_successful">Prenos je uspel</string>
+    <string name="download_successful">Prenos uspešen</string>
     <string name="notification_channel_name">Prenos končan</string>
     <!-- Action Buttons -->
     <string name="open">odpri</string>
@@ -20,34 +20,34 @@
     <string name="title_activity_about">O Snapdropu za Android</string>
     <string name="license">Licenca</string>
     <string name="pref_category_settings">Nastavitve</string>
-    <string name="source">Odprta koda</string>
-    <string name="source_summary">Poglej odprtokodo na GitHub</string>
+    <string name="source">Izvorna koda</string>
+    <string name="source_summary">Oglej si izvorno kodo na GitHubu</string>
     <string name="components">Odprtokodne komponente</string>
     <string name="logs">Dnevniki odpravljanja napak</string>
-    <string name="components_summary">Kliknite za prikaz</string>
+    <string name="components_summary">Tapnite za prikaz</string>
     <string name="crowdin">Lokalizacija</string>
-    <string name="crowdin_summary">Pomagajte nam pri prevajanju <b>Snapdrop za Android</b> v vaš jezik</string>
+    <string name="crowdin_summary">Pomagajte nam z prevajanjem <b>Snapdropa za Android</b> v vam ljub jezik</string>
     <string name="support_us">Podprite Snapdrop</string>
     <string name="support_us_summary">Oglejte si, kako lahko podprete skupnost Snapdrop</string>
     <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Povejte o <b>Snapdrop za Android</b></string>
+    <string name="twitter_summary">Deli <b>Snapdrop za Android</b></string>
     <string name="version">Različica</string>
     <string name="pref_device_name_title">Ime naprave</string>
-    <string name="pref_device_name_summary">Nastavite uporabniško določeno ime naprave</string>
-    <string name="keep_on_summary">(Priporočeno) Številne naprave imajo težave s prekinitvijo prenosov, ko se zaslon izklopi</string>
-    <string name="keep_on_title">Med prenosom imejte zaslon vklopljen</string>
+    <string name="pref_device_name_summary">Nastavite prilagojeno ime naprave</string>
+    <string name="keep_on_summary">(Priporočeno) Številne naprave imajo težave s prekinitvijo prenosa, ko se zaslon izklopi</string>
+    <string name="keep_on_title">Med prenosom, ne izklopi zaslona</string>
     <string name="floating_text_selection_title">Lebdeči izbor besedila</string>
     <string name="floating_text_selection_summary">Pri izbiri besedila v drugih aplikacijah se prikaže možnost \"Pošlji s Snapdropom\"</string>
     <string name="floating_text_selection_activity_label">Pošlji s Snapdropom</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
-        <item>Privzeto sistemsko</item>
+        <item>Sistemsko privzeto</item>
         <item>Svetlo</item>
         <item>Temno</item>
     </string-array>
     <string name="baseurl_title">Osnovna povezava</string>
-    <string name="baseurl_no_snapdrop_instance">Zdi se, da ni Snapdrop uporabnika v bližini</string>
-    <string name="baseurl_check_instance_failed">Uporabnika Snapdrop ni bilo mogoče preveriti</string>
+    <string name="baseurl_no_snapdrop_instance">Ne zdi se kot Snapdrop primerek</string>
+    <string name="baseurl_check_instance_failed">Snapdrop primerka ni bilo mogoče preveriti</string>
     <string name="save_location">Shrani lokacijo</string>
     <!-- File sharing -->
     <string name="intent_file">Datoteka je izbrana za deljenje</string>
@@ -55,16 +55,16 @@
     <string name="intent_content">Vsebina je izbrana za deljenje</string>
     <string name="error_filechooser">Izbirnika datotek ni mogoče odpreti</string>
     <string name="error_network">Preverite, ali ste povezani z omrežjem WiFi</string>
-    <string name="ignore_error_network">Vseeno me spusti noter</string>
+    <string name="ignore_error_network">Vseeno mi pokaži vsebino</string>
     <string name="error_not_reachable_title">Ups, oprosti!</string>
     <string name="error_not_reachable">Strežnika Snapdrop ni mogoče doseči. \n\nČe vaša internetna povezava deluje in se to vseeno zgodi, imamo morda trenutno težave s strežnikom. Vemo, da je to lahko zelo frustrirajuče, vendar ne puščajte slabih ocen v Googl Play-u. \n\nTa aplikacija je popolnoma brez oglasov, zato z njo ne zaslužimo denarja. To je le hobi projekt, ampak delamo vse, da bo spet hitro delovala.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Za pošiljanje datotek odprite Snapdrop na drugih napravah</string>
-    <string name="website_instruction">Kliknite za pošiljanje datotek ali pridržite za pošiljanje sporočila</string>
+    <string name="website_instruction">Tapnite za pošiljanje datotek ali pridržite za pošiljanje sporočila</string>
     <string name="website_file_received">Datoteka prejeta</string>
-    <string name="website_file_ask_before_download">Vedno vprašaj, predeno shraniš datoteko</string>
+    <string name="website_file_ask_before_download">Vedno vprašaj, pred shranjevanjem datoteke</string>
     <string name="website_file_download">Shrani</string>
-    <string name="website_footer_discovery">V tem omrežju vas lahko odkrijejo vsi uporabniki</string>
+    <string name="website_footer_discovery">V tem omrežju ste vidni vsem uporabnikom</string>
     <string name="website_footer_known_as">Znani ste kot %s</string>
     <string name="website_about_subheading">Najlažji način za prenos datotek med napravami</string>
 </resources>
