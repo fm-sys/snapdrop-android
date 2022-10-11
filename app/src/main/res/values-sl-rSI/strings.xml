@@ -7,7 +7,7 @@
     <string name="open_url">Odpri povezavo</string>
     <!-- Welcome -->
     <string name="app_welcome">Dobrodošli v Snapdrop</string>
-    <string name="app_welcome_summary">1. Odpri <a href="https://snapdrop.net">snapdrop.net</a> ali aplikacijo Snapdrop na katerikoli napravi v vašem lokalnem WiFi omrežju.\n2. Kliknite na napravo z katero želite deliti vaše datoteke.\n3. Končano! Datoteke bodo poslane…</string>
+    <string name="app_welcome_summary">1. Odpri <a href="https://snapdrop.net">snapdrop.net</a> ali Snapdrop aplikacijo na katerikoli napravi v vašem lokalnem WiFi omrežju.\n2. Tapnite na napravo z katero želite deliti vaše datoteke.\n3. Končano! Datoteke bodo poslane…</string>
     <!-- Download -->
     <string name="download_save_pending">Shranjevanje datoteke. Prosimo počakajte trenutek…</string>
     <string name="download_successful">Prenos je uspel</string>
