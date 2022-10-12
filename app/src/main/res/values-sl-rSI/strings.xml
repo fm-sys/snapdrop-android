@@ -54,10 +54,10 @@
     <string name="intent_files">Datoteke so izbrane za deljenje</string>
     <string name="intent_content">Vsebina je izbrana za deljenje</string>
     <string name="error_filechooser">Izbirnika datotek ni mogoče odpreti</string>
-    <string name="error_network">Preverite, ali ste povezani z omrežjem WiFi</string>
-    <string name="ignore_error_network">Vseeno mi pokaži vsebino</string>
-    <string name="error_not_reachable_title">Ups, oprosti!</string>
-    <string name="error_not_reachable">Strežnika Snapdrop ni mogoče doseči. \n\nČe vaša internetna povezava deluje in se to vseeno zgodi, imamo morda trenutno težave s strežnikom. Vemo, da je to lahko zelo frustrirajuče, vendar ne puščajte slabih ocen v Googl Play-u. \n\nTa aplikacija je popolnoma brez oglasov, zato z njo ne zaslužimo denarja. To je le hobi projekt, ampak delamo vse, da bo spet hitro delovala.</string>
+    <string name="error_network">Prosimo, preverite, če ste povezani z omrežjem WiFi</string>
+    <string name="ignore_error_network">Vseeno me spusti naprej</string>
+    <string name="error_not_reachable_title">Ups, oprostite!</string>
+    <string name="error_not_reachable">Strežnika Snapdrop ni mogoče doseči. \n\nČe vaša internetna povezava deluje in se to vseeno zgodi, imamo trenutno morda težave s strežnikom. Vemo, da je to lahko zelo frustrirajuče, vendar prosimo da ne puščate slabih ocen na Googl Play-u. \n\nTa aplikacija je popolnoma brez oglasov, zato z njo ne služimo denarja. Ta projekt je le kot hobi, ampak delamo vse, da bo spet hitro deloval.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Za pošiljanje datotek odprite Snapdrop na drugih napravah</string>
     <string name="website_instruction">Tapnite za pošiljanje datotek ali pridržite za pošiljanje sporočila</string>
