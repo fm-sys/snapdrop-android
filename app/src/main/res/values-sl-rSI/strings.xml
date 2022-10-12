@@ -21,12 +21,12 @@
     <string name="license">Licenca</string>
     <string name="pref_category_settings">Nastavitve</string>
     <string name="source">Izvorna koda</string>
-    <string name="source_summary">Oglej si izvorno kodo na GitHubu</string>
+    <string name="source_summary">Oglej si izvorno kodo na GitHub-u</string>
     <string name="components">Odprtokodne komponente</string>
     <string name="logs">Dnevniki odpravljanja napak</string>
     <string name="components_summary">Tapnite za prikaz</string>
     <string name="crowdin">Lokalizacija</string>
-    <string name="crowdin_summary">Pomagajte nam z prevajanjem <b>Snapdropa za Android</b> v vam ljub jezik</string>
+    <string name="crowdin_summary">Pomagajte nam s prevajanjem <b>Snapdropa za Android</b> v vaš najljubši jezik</string>
     <string name="support_us">Podprite Snapdrop</string>
     <string name="support_us_summary">Oglejte si, kako lahko podprete skupnost Snapdrop</string>
     <string name="twitter">Twitter</string>
@@ -35,15 +35,15 @@
     <string name="pref_device_name_title">Ime naprave</string>
     <string name="pref_device_name_summary">Nastavite prilagojeno ime naprave</string>
     <string name="keep_on_summary">(Priporočeno) Številne naprave imajo težave s prekinitvijo prenosa, ko se zaslon izklopi</string>
-    <string name="keep_on_title">Med prenosom, ne izklopi zaslona</string>
+    <string name="keep_on_title">Med prenosom ne izklopi zaslona</string>
     <string name="floating_text_selection_title">Lebdeči izbor besedila</string>
-    <string name="floating_text_selection_summary">Pri izbiri besedila v drugih aplikacijah se prikaže možnost \"Pošlji s Snapdropom\"</string>
-    <string name="floating_text_selection_activity_label">Pošlji s Snapdropom</string>
+    <string name="floating_text_selection_summary">Pri izbiri besedila v drugih aplikacijah se bo prikazala možnost \"Pošlji s Snapdrop-om\"</string>
+    <string name="floating_text_selection_activity_label">Pošlji s Snapdrop-om</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Sistemsko privzeto</item>
-        <item>Svetlo</item>
-        <item>Temno</item>
+        <item>Svetla</item>
+        <item>Temna</item>
     </string-array>
     <string name="baseurl_title">Osnovna povezava</string>
     <string name="baseurl_no_snapdrop_instance">Ne zdi se kot Snapdrop primerek</string>
