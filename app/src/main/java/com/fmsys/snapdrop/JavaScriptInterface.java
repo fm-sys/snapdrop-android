@@ -1,5 +1,14 @@
 package com.fmsys.snapdrop;
 
+import android.content.Context;
+import android.net.Uri;
+import android.os.Build;
+import android.text.TextUtils;
+import android.util.Log;
+import android.webkit.JavascriptInterface;
+
+import androidx.documentfile.provider.DocumentFile;
+
 import com.anggrayudi.storage.FileWrapper;
 import com.anggrayudi.storage.extension.IOUtils;
 import com.anggrayudi.storage.extension.UriUtils;
@@ -8,21 +17,12 @@ import com.anggrayudi.storage.file.DocumentFileUtils;
 import com.anggrayudi.storage.media.FileDescription;
 import com.fmsys.snapdrop.utils.ClipboardUtils;
 
-import android.content.Context;
-import android.net.Uri;
-import android.os.Build;
-import android.text.TextUtils;
-import android.util.Log;
-import android.webkit.JavascriptInterface;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-
-import androidx.documentfile.provider.DocumentFile;
 
 public class JavaScriptInterface {
     private final MainActivity context;
@@ -46,7 +46,7 @@ public class JavaScriptInterface {
              */
             final DocumentFile saveLocation = MainActivity.getSaveLocation();
             if (saveLocation != null) {
-                DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context, fileName, mimeType);
+                final DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context, fileName, mimeType);
                 if (file != null) {
                     fileWrapper = new FileWrapper.Document(file);
                 }
@@ -64,7 +64,7 @@ public class JavaScriptInterface {
             while (nameSplit[0].length() < 3) {
                 nameSplit[0] += nameSplit[0];
             }
-            DocumentFile file = DocumentFile.fromFile(File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], context.getCacheDir()));
+            final DocumentFile file = DocumentFile.fromFile(File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], context.getCacheDir()));
             fileWrapper = new FileWrapper.Document(file);
         }
         if (fileWrapper == null) {
