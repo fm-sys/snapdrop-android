@@ -36,12 +36,11 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
-        final Context context = this.context.getApplicationContext();
         final FileWrapper fileWrapper = createFileWrapper(fileName, mimeType);
         if (fileWrapper == null) {
             throw new IOException("Missing storage permissions");
         }
-        fileOutputStream = UriUtils.openOutputStream(fileWrapper.getUri(), context);
+        fileOutputStream = UriUtils.openOutputStream(fileWrapper.getUri(), context.getApplicationContext());
         if (fileOutputStream == null) {
             throw new IOException("Cannot write target file");
         }
@@ -57,13 +56,13 @@ public class JavaScriptInterface {
              */
             final DocumentFile saveLocation = MainActivity.getSaveLocation();
             if (saveLocation != null) {
-                final DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context, fileName, mimeType);
+                final DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context.getApplicationContext(), fileName, mimeType);
                 if (file != null) {
                     return new FileWrapper.Document(file);
                 }
             }
             final FileDescription description = new FileDescription(fileName, "", mimeType);
-            return DocumentFileCompat.createDownloadWithMediaStoreFallback(context, description);
+            return DocumentFileCompat.createDownloadWithMediaStoreFallback(context.getApplicationContext(), description);
         } else {
             /*
             Prior to scoped storage restriction, SimpleStorage will use File#renameTo(), so no need to worry
