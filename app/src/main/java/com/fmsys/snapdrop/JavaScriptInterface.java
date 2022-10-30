@@ -37,7 +37,18 @@ public class JavaScriptInterface {
     @JavascriptInterface
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
         final Context context = this.context.getApplicationContext();
-        FileWrapper fileWrapper = null;
+        final FileWrapper fileWrapper = createFileWrapper(fileName, mimeType);
+        if (fileWrapper == null) {
+            throw new IOException("Missing storage permissions");
+        }
+        fileOutputStream = UriUtils.openOutputStream(fileWrapper.getUri(), context);
+        if (fileOutputStream == null) {
+            throw new IOException("Cannot write target file");
+        }
+        fileHeader = new FileHeader(fileName, mimeType, fileSize, fileWrapper);
+    }
+
+    private FileWrapper createFileWrapper(final String fileName, final String mimeType) throws IOException {
         if (Build.VERSION.SDK_INT > 28) {
             /*
             Make file transfer faster 2x on scoped storage by writing to media store database directly,
@@ -48,13 +59,11 @@ public class JavaScriptInterface {
             if (saveLocation != null) {
                 final DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context, fileName, mimeType);
                 if (file != null) {
-                    fileWrapper = new FileWrapper.Document(file);
+                    return new FileWrapper.Document(file);
                 }
             }
-            if (fileWrapper == null) {
-                final FileDescription description = new FileDescription(fileName, "", mimeType);
-                fileWrapper = DocumentFileCompat.createDownloadWithMediaStoreFallback(context, description);
-            }
+            final FileDescription description = new FileDescription(fileName, "", mimeType);
+            return DocumentFileCompat.createDownloadWithMediaStoreFallback(context, description);
         } else {
             /*
             Prior to scoped storage restriction, SimpleStorage will use File#renameTo(), so no need to worry
@@ -65,16 +74,8 @@ public class JavaScriptInterface {
                 nameSplit[0] += nameSplit[0];
             }
             final DocumentFile file = DocumentFile.fromFile(File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], context.getCacheDir()));
-            fileWrapper = new FileWrapper.Document(file);
+            return new FileWrapper.Document(file);
         }
-        if (fileWrapper == null) {
-            throw new IOException("Missing storage permissions");
-        }
-        fileOutputStream = UriUtils.openOutputStream(fileWrapper.getUri(), context);
-        if (fileOutputStream == null) {
-            throw new IOException("Cannot write target file");
-        }
-        fileHeader = new FileHeader(fileName, mimeType, fileSize, fileWrapper);
     }
 
     @JavascriptInterface
