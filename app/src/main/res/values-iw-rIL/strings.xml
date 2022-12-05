@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">סנאפדרופ</string>
+    <string name="app_name_long">סנאפדרופ לאנדרואיד</string>
+    <string name="err_no_browser">אין אפשרות לפתוח דפדפן</string>
+    <string name="err_no_app">לא נמצא יישום מתאים לפתיחת קובץ זה</string>
+    <string name="open_url">פתח קישור אינטרנט</string>
+    <!-- Welcome -->
+    <string name="app_welcome">ברוך הבא אל סנאפדרופ</string>
+    <string name="app_welcome_summary">1. פתח<a href="https://snapdrop.net"> snapdrop.net</a> או את ישום סנאפדרופ בכל מכשיר אחר שמחובר לרשת המקומית שלך.\n2. לחץ על המכשיר שאתה חפץ לשתף איתו קבצים.\n3. בוצע! הקובץ/קבצים ישלחו מיד...</string>
+    <!-- Download -->
+    <string name="download_save_pending">מאחסן את הקובץ. בבקשה הראה קצת סבלנות...</string>
+    <string name="download_successful">ההורדה הושלמה</string>
+    <string name="notification_channel_name">ההורדה הושלמה</string>
+    <!-- Action Buttons -->
+    <string name="open">פתח</string>
+    <string name="reset">אפס</string>
+    <string name="copy">העתק</string>
+    <!-- Settings / About -->
+    <string name="title_activity_about">אודות סנאפדרופ לאנדרואיד</string>
+    <string name="license">רישיון</string>
+    <string name="pref_category_settings">הגדרות</string>
+    <string name="source">קוד מקור</string>
+    <string name="source_summary">צפייה בקוד המקור ב־GitHub</string>
+    <string name="components">פתח מקור רכיבים</string>
+    <string name="logs">יומני איתור באגים</string>
+    <string name="components_summary">לחץ להצגה</string>
+    <string name="crowdin">שפה</string>
+    <string name="crowdin_summary">עזור לתרגם את <b> סנאפדרופ לאנדרואיד</b> לשפה המועדפת עליך</string>
+    <string name="support_us">תמוך בסנאפדרופ</string>
+    <string name="support_us_summary">בדוק איך אתה יכול לתמוך בקהילת סנאפדרופ</string>
+    <string name="twitter">טוויטר</string>
+    <string name="twitter_summary">ספר על <b>סנאפדרופ לאנדרואיד</b></string>
+    <string name="version">גירסה</string>
+    <string name="pref_device_name_title">שם המכשיר</string>
+    <string name="pref_device_name_summary">בחר שם משתמש למכשירך</string>
+    <string name="keep_on_summary">(מומלץ) להמון מכשירים יש בעיות שהעברת הקבצים נקטעת כשמכבים את מסך המכשיר</string>
+    <string name="keep_on_title">השאר מסך דולק במשך העברת הקבצים</string>
+    <string name="floating_text_selection_title">בחירת טקסט צף</string>
+    <string name="floating_text_selection_summary">כשתבחר שורת טקסט ביישום אחר, יפתח אפשרות של \"שתף עם סנאפדרופ\"</string>
+    <string name="floating_text_selection_activity_label">שתף עם סנאפדרופ</string>
+    <string name="settings_theme_title">ערכת נושא</string>
+    <string-array name="darkmode_entries">
+        <item>ברירת מחדל של המערכת</item>
+        <item>בהיר</item>
+        <item>כהה</item>
+    </string-array>
+    <string name="baseurl_title">קישור בסיס</string>
+    <string name="baseurl_no_snapdrop_instance">זה לא נראה כמו קישור של סנאפדרופ</string>
+    <string name="baseurl_check_instance_failed">נכשל באימות קישור של סנאפדרופ</string>
+    <string name="save_location">שמור מיקום</string>
+    <!-- File sharing -->
+    <string name="intent_file">קובץ מצורף נבחר לשיתוף</string>
+    <string name="intent_files">קבצים מצורפים נבחרו לשיתוף</string>
+    <string name="intent_content">תוכן נבחר לשיתוף</string>
+    <string name="error_filechooser">אין אפשרות לפתוח את בוחר הקבצים</string>
+    <string name="error_network">אנא ודא שאתה מחובר לרשת WiFi</string>
+    <string name="ignore_error_network">תן לי להיכנס בכל מקרה</string>
+    <string name="error_not_reachable_title">אופס, סליחה!</string>
+    <string name="error_not_reachable">אין גישה לשרת הסנאפדרופ .\n\nאם חיבור האינטרנט שלך עובד והגישה לשרת עדיין חסומה, כנראה שיש בעיה כרגע בשרת. אנחנו יודעים שזה יכול להיות מאוד מתסכל, אבל בבקשה אל תדרגו את היישום שלנו לרעה בחנות האפליקציות.
+\n\nהיישום הזה הוא חינמי וללא כל פרסומת.
+אנחנו עושים הכל כדי להחזיר את השרת לפעולה במהירות האפשרית.</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">פתח את סנאפדרופ במכשיר אחר לשלוח קבצים</string>
+    <string name="website_instruction">לחץ כדי לשלוח קבצים או לחץ לחיצה ארוכה כדי לשלוח הודעה</string>
+    <string name="website_file_received">הקובץ התקבל</string>
+    <string name="website_file_ask_before_download">שאל תמיד לפני שמירת קובץ</string>
+    <string name="website_file_download">שמור</string>
+    <string name="website_footer_discovery">כולם ברשת זו יכולים לגלות אותך</string>
+    <string name="website_footer_known_as">אתה ידוע בתור %s</string>
+    <string name="website_about_subheading">הדרך הקלה ביותר לשלוח קבצים בין מכשירים</string>
+</resources>
