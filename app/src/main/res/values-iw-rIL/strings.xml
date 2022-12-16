@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">סנאפדרופ</string>
     <string name="app_name_long">סנאפדרופ לאנדרואיד</string>
-    <string name="err_no_browser">אין אפשרות לפתוח דפדפן</string>
-    <string name="err_no_app">לא נמצא יישום מתאים לפתיחת קובץ זה</string>
+    <string name="err_no_browser">אי אפשר לפתוח דפדפן</string>
+    <string name="err_no_app">לא נמצא יישום לפתיחת קובץ זה</string>
     <string name="open_url">פתח קישור אינטרנט</string>
     <!-- Welcome -->
     <string name="app_welcome">ברוך הבא אל סנאפדרופ</string>
