@@ -25,7 +25,7 @@
     <string name="components">Componentes de código aberto</string>
     <string name="logs">Logs de depuração</string>
     <string name="components_summary">Toque para exibir</string>
-    <string name="crowdin">Traduções</string>
+    <string name="crowdin">Localização</string>
     <string name="crowdin_summary">Ajude a traduzir o <b>Snapdrop para Android</b> para seu idioma favorito</string>
     <string name="support_us">Apoiar o Snapdrop</string>
     <string name="support_us_summary">Veja, como você pode apoiar a comunidade do Snapdrop</string>
