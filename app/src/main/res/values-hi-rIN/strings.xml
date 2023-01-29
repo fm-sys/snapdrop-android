@@ -1,28 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">स्नैपड्रॉप</string>
+    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Android के लिए Snapdrop</string>
     <string name="err_no_browser">ब्राउज़र नहीं खुल रहा</string>
-    <!-- Update -->
+    <string name="err_no_app">इस फ़ाइल को खोलने के लिए कोई ऐप मौजूद नहीं है</string>
+    <string name="open_url">url_खोलें</string>
     <!-- Welcome -->
     <string name="app_welcome">स्नैप्ड्रोप में आपका स्वागत है</string>
     <string name="app_welcome_summary">1. अपने स्थानीय वाई-फ़ाई नेटवर्क में किसी अन्य डिवाइस पर <a href="https://snapdrop.net">snapdrop.net</a> या Snapdrop ऐप खोलें।\n2. उस डिवाइस पर टैप करें जिसके साथ आप फ़ाइल भेजना चाहते हैं।\n3. बस, फाइल वहाँ पहुँच जाएगा</string>
     <!-- Download -->
+    <string name="download_save_pending">फ़ाइल संग्रहीत करना। कृपया थोड़ा धैर्य रखें...</string>
     <string name="download_successful">डाउनलोड पूरा हुआ है</string>
     <string name="notification_channel_name">डाउनलोड सम्पन्न हुआ</string>
     <!-- Action Buttons -->
     <string name="open">खोलें</string>
     <string name="reset">रीसेट करें</string>
+    <string name="copy">नकल बनाएँ</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">स्नैप्ड्रोप एंड्राइड के बारे में</string>
-    <string name="license">लाइसेंस</string>
-    <string name="pref_category_settings">सेटिंग्स</string>
+    <string name="title_activity_about">About Snapdrop for Android</string>
+    <string name="license">License</string>
+    <string name="pref_category_settings">Settings</string>
+    <string name="source">सोर्स कोड</string>
+    <string name="source_summary">Github पर सोर्स कोड देखें</string>
+    <string name="components">Open source components</string>
+    <string name="logs">डीबग लॉग</string>
+    <string name="components_summary">Tap to display</string>
+    <string name="crowdin">स्थानीयकरण...</string>
+    <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
+    <string name="support_us">Snapdrop की सहायता करें</string>
+    <string name="support_us_summary">आप Snapdrop की सहायता कैसे कर सकते हैं</string>
     <string name="twitter">ट्विटर</string>
+    <string name="twitter_summary">हमें <b>Snapdrop for Android</b> के बारे में बताएं</string>
+    <string name="version">रूपांतर</string>
     <string name="pref_device_name_title">डिवाइस का नाम</string>
+    <string name="pref_device_name_summary">अपनी पसंद का डिवाइस नेम रखें</string>
+    <string name="keep_on_summary">(अनुशंसित) स्क्रीन बंद होने पर कई उपकरणों में स्थानांतरण बाधित होने की समस्या होती है</string>
+    <string name="keep_on_title">ट्रांसफर करते समय स्क्रीन ऑन रखें।</string>
+    <string name="floating_text_selection_title">फ्लोटिंग टेक्स्ट सिलेक्शन</string>
+    <string name="floating_text_selection_summary">अन्य ऐप्स में टेक्स्ट को सिलेक्ट करते समय, \"स्नैपड्रॉप के साथ भेजें\" विकल्प दिखाया जाएगा।</string>
+    <string name="floating_text_selection_activity_label">स्नैपड्रॉप के साथ भेजें</string>
+    <string name="settings_theme_title">थीम</string>
     <string-array name="darkmode_entries">
-        <item>System Default</item>
+        <item>सिस्टम डिफ़ॉल्ट का इस्तेमाल करें</item>
         <item>प्रकाश</item>
         <item>डार्क</item>
     </string-array>
+    <string name="baseurl_title">Use Diffchecker to quickly identify the difference(s) between two versions. of a document, excel file or pdf or image</string>
+    <string name="baseurl_no_snapdrop_instance">Snapdrop उदाहरण नहीं लगता</string>
+    <string name="baseurl_check_instance_failed">Snapdrop इंस्टेंस को सत्यापित करने में विफल</string>
+    <string name="save_location">स्थान सहेजें</string>
     <!-- File sharing -->
-    <!-- baseURL -->
+    <string name="intent_file">साझा करने के लिए एक फ़ाइल का चयन किया गया है</string>
+    <string name="intent_files">फ़ाइलें साझा करने के लिए चुनी गई हैं</string>
+    <string name="intent_content">सामग्री को साझा करने के लिए चुना गया है</string>
+    <string name="error_filechooser">फ़ाइल चयनकर्ता खोला नहीं जा सकता</string>
+    <string name="error_network">कृपया सत्यापित करें कि आप वाईफाई नेटवर्क से जुड़े हुए हैं</string>
+    <string name="ignore_error_network">मुझे वैसे भी आने दो</string>
+    <string name="error_not_reachable_title">क्षमा करें!</string>
+    <string name="error_not_reachable">Snapdrop-सर्वर तक पहुंचा नहीं जा सकता। \n\nअगर आपका इंटरनेट कनेक्शन काम कर रहा है और फिर भी ऐसा होता है, तो हो सकता है कि हमें इस समय सर्वर में समस्या आ रही हो। हम जानते हैं कि यह बहुत निराशाजनक हो सकता है, लेकिन कृपया Google Play पर खराब समीक्षा न छोड़ें। \n\nयह ऐप पूरी तरह से विज्ञापन-मुक्त है, इसलिए हम इससे कोई पैसा नहीं कमाते हैं। यह सिर्फ एक हॉबी प्रोजेक्ट है, लेकिन हम इसे जल्दी से वापस चलाने के लिए सब कुछ कर रहे हैं।</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">फ़ाइलें भेजने के लिए अन्य उपकरणों पर स्नैपड्रॉप खोलें</string>
+    <string name="website_instruction">फ़ाइलें भेजने के लिए टैप करें या संदेश भेजने के लिए लंबा टैप करें</string>
+    <string name="website_file_received">फाइल प्राप्त हुई</string>
+    <string name="website_file_ask_before_download">फ़ाइल सहेजने से पहले हमेशा पूछें</string>
+    <string name="website_file_download">बचाना</string>
+    <string name="website_footer_discovery">आप इस नेटवर्क पर सभी के द्वारा खोजे जा सकते हैं</string>
+    <string name="website_footer_known_as">आप %s के नाम से जाने जाते हैं</string>
+    <string name="website_about_subheading">सभी डिवाइस में फ़ाइलें स्थानांतरित करने का सबसे आसान तरीका</string>
 </resources>
