@@ -11,6 +11,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.method.LinkMovementMethod;
+import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -191,7 +193,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private boolean showEditTextPreferenceWithResetPossibility(final Preference pref, final String prefix, final @NonNull String defaultValue, final Consumer<String> onPreferenceChangeCallback) {
-        final View dialogView = this.getLayoutInflater().inflate(R.layout.edit_text_dialog, null);
+        final View dialogView = LayoutInflater.from(new ContextThemeWrapper(this.getContext(), R.style.AlertDialogTheme)).inflate(R.layout.edit_text_dialog, null);
         final EditText editText = dialogView.findViewById(R.id.textInput);
         editText.setTag(prefix);
         editText.setText(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(pref.getKey(), defaultValue));
