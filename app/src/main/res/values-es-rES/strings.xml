@@ -46,8 +46,10 @@
         <item>Oscuro</item>
     </string-array>
     <string name="baseurl_title">URL base</string>
+    <string name="baseurl_instance_verified">La instancia de Snapdrop ha sido verificada correctamente</string>
     <string name="baseurl_no_snapdrop_instance">No parece ser una instancia de Snapdrop</string>
     <string name="baseurl_check_instance_failed">No se pudo verificar la instancia de Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Echa un vistazo a las <a href="">FAQ</a> para ver una lista de instancias no oficiales. Por favor, ten en cuenta que algunas instancias pueden no funcionar correctamente dentro de la aplicación.</string>
     <string name="save_location">Guardar ubicación</string>
     <!-- File sharing -->
     <string name="intent_file">Se ha seleccionado un archivo para compartir</string>
