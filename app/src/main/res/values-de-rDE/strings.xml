@@ -46,8 +46,10 @@
         <item>Dunkel</item>
     </string-array>
     <string name="baseurl_title">Basis-URL</string>
+    <string name="baseurl_instance_verified">Snapdrop-Instanz wurde erfolgreich verifiziert</string>
     <string name="baseurl_no_snapdrop_instance">Dies scheint keine Snapdrop-Instanz zu sein</string>
     <string name="baseurl_check_instance_failed">Fehler beim Überprüfen der Snapdrop-Instanz</string>
+    <string name="baseurl_unofficial_instances">Schauen Sie sich die <a href="">FAQ</a> für eine Liste inoffizieller Instanzen an. Bitte beachten Sie, dass einige Instanzen möglicherweise nicht korrekt innerhalb der App funktionieren.</string>
     <string name="save_location">Speicherort</string>
     <!-- File sharing -->
     <string name="intent_file">Datei ausgewählt</string>
