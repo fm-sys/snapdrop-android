@@ -37,11 +37,13 @@ public class PrefixEditText extends TextInputEditText {
     private void calculatePrefix() {
         if (mOriginalLeftPadding == -1) {
             final String prefix = (String) getTag();
-            final float[] widths = new float[prefix.length()];
-            getPaint().getTextWidths(prefix, widths);
             float textWidth = 0;
-            for (float w : widths) {
-                textWidth += w;
+            if (prefix != null) {
+                final float[] widths = new float[prefix.length()];
+                getPaint().getTextWidths(prefix, widths);
+                for (float w : widths) {
+                    textWidth += w;
+                }
             }
             mOriginalLeftPadding = getCompoundPaddingLeft();
             setPadding((int) (textWidth + mOriginalLeftPadding),
@@ -54,7 +56,9 @@ public class PrefixEditText extends TextInputEditText {
     protected void onDraw(final Canvas canvas) {
         super.onDraw(canvas);
         final String prefix = (String) getTag();
-        canvas.drawText(prefix, mOriginalLeftPadding,
-                getLineBounds(0, null), getPaint());
+        if (prefix != null) {
+            canvas.drawText(prefix, mOriginalLeftPadding,
+                    getLineBounds(0, null), getPaint());
+        }
     }
 }

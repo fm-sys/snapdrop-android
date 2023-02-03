@@ -11,12 +11,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
@@ -26,14 +26,18 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.anggrayudi.storage.SimpleStorageHelper;
 import com.anggrayudi.storage.file.DocumentFileUtils;
 import com.fmsys.snapdrop.utils.ClipboardUtils;
+import com.fmsys.snapdrop.utils.Link;
 import com.fmsys.snapdrop.utils.LogUtils;
 import com.google.android.material.snackbar.Snackbar;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -98,42 +102,51 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
 
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
-        deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", newValue -> updateDeviceNameSummary(deviceNamePref)));
+        deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", null, newValue -> updateDeviceNameSummary(deviceNamePref)));
         updateDeviceNameSummary(deviceNamePref);
 
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
-        baseUrlPref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "", getString(R.string.baseURL), newValue -> {
+        baseUrlPref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "", getString(R.string.baseURL), Link.bind("https://github.com/RobinLinus/snapdrop/blob/master/docs/faq.md#inofficial-instances", R.string.baseurl_unofficial_instances), newValue -> {
 
             if (newValue == null) {
                 baseUrlPref.setSummary(getString(R.string.baseURL));
-            } else {
-                final Dialog dialog = new Dialog(getContext());
-                dialog.setContentView(R.layout.progress_dialog);
-
-                final RequestQueue queue = Volley.newRequestQueue(getContext());
-                final StringRequest request = new StringRequest(newValue,
-                        response -> {
-                            dialog.cancel();
-                            if (response.toLowerCase().contains("snapdrop")) {
-                                baseUrlPref.setSummary(newValue);
-                            } else {
-                                Snackbar.make(requireView(), R.string.baseurl_no_snapdrop_instance, Snackbar.LENGTH_LONG).show();
-                                baseUrlPref.setSummary(getString(R.string.baseURL));
-                                setPreferenceValue(baseUrlPref.getKey(), null, null);
-                            }
-                        }, error -> {
-                    dialog.cancel();
-                    Snackbar.make(requireView(), R.string.baseurl_check_instance_failed, Snackbar.LENGTH_LONG).show();
-                    baseUrlPref.setSummary(getString(R.string.baseURL));
-                    setPreferenceValue(baseUrlPref.getKey(), null, null);
-                });
-
-                queue.add(request);
-                dialog.setOnDismissListener(d -> request.cancel());
-                dialog.show();
+                return;
             }
+
+            final Dialog dialog = new Dialog(getContext());
+            dialog.setContentView(R.layout.progress_dialog);
+
+            Future<?> request = Executors.newSingleThreadExecutor().submit(() -> {
+                try {
+                    Document doc = Jsoup.connect(newValue).get();
+                    assert doc != null;
+                    requireActivity().runOnUiThread(() -> {
+                        if (doc.selectFirst(".icon-button[href=\"#about\"]") != null && doc.selectFirst("#about>x-background") != null) {
+                            // website seems to be similar to snapdrop... The check could be improved of course.
+                            baseUrlPref.setSummary(newValue);
+                            Snackbar.make(requireView(), R.string.baseurl_instance_verified, Snackbar.LENGTH_LONG).show();
+                        } else {
+                            Snackbar.make(requireView(), R.string.baseurl_no_snapdrop_instance, Snackbar.LENGTH_LONG).show();
+                            baseUrlPref.setSummary(getString(R.string.baseURL));
+                            setPreferenceValue(baseUrlPref.getKey(), null, null);
+                        }
+                    });
+                } catch (Exception e) {
+                    Log.e("BaseUrlChange", "Failed to verify Snapdrop instance: " + e.getMessage());
+                    requireActivity().runOnUiThread(() -> {
+                        Snackbar.make(requireView(), R.string.baseurl_check_instance_failed, Snackbar.LENGTH_LONG).show();
+                        baseUrlPref.setSummary(getString(R.string.baseURL));
+                        setPreferenceValue(baseUrlPref.getKey(), null, null);
+                    });
+                }
+                dialog.dismiss();
+            });
+
+            dialog.setOnDismissListener(d -> request.cancel(true));
+            dialog.show();
+
         }));
         baseUrlPref.setSummary(preferences.getString(baseUrlPref.getKey(), getString(R.string.baseURL)));
 
@@ -165,15 +178,19 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final Preference preference = findPreference(getString(pref));
         if (preference != null) {
             preference.setOnPreferenceClickListener(p -> {
-                try {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-                } catch (ActivityNotFoundException e) {
-                    Toast.makeText(this.getContext(), R.string.err_no_browser, Toast.LENGTH_SHORT).show();
-                }
+                openUrl(url);
                 return true;
             });
         }
         return preference;
+    }
+
+    private void openUrl(final String url) {
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        } catch (ActivityNotFoundException e) {
+            Snackbar.make(requireView(), R.string.err_no_browser, Snackbar.LENGTH_LONG).show();
+        }
     }
 
     private void setPreferenceValue(final String preferenceKey, final String s, final Consumer<String> onPreferenceChangeCallback) {
@@ -192,12 +209,19 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         }
     }
 
-    private boolean showEditTextPreferenceWithResetPossibility(final Preference pref, final String prefix, final @NonNull String defaultValue, final Consumer<String> onPreferenceChangeCallback) {
-        final View dialogView = LayoutInflater.from(new ContextThemeWrapper(this.getContext(), R.style.AlertDialogTheme)).inflate(R.layout.edit_text_dialog, null);
+    private boolean showEditTextPreferenceWithResetPossibility(final Preference pref, final String prefix, final @NonNull String defaultValue, final Link link, final Consumer<String> onPreferenceChangeCallback) {
+        final View dialogView = LayoutInflater.from(new ContextThemeWrapper(getContext(), R.style.AlertDialogTheme)).inflate(R.layout.edit_text_dialog, null);
         final EditText editText = dialogView.findViewById(R.id.textInput);
         editText.setTag(prefix);
         editText.setText(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(pref.getKey(), defaultValue));
         editText.requestFocus();
+
+        if (link != null) {
+            final TextView helperText = dialogView.findViewById(R.id.helperText);
+            helperText.setVisibility(View.VISIBLE);
+            helperText.setText(link.description);
+            helperText.setOnClickListener(v -> openUrl(link.url));
+        }
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(getContext())
                 .setTitle(pref.getTitle())

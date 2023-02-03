@@ -50,8 +50,11 @@
         <item>Dark</item>
     </string-array>
     <string name="baseurl_title">Base URL</string>
+    <string name="baseurl_instance_verified">Snapdrop instance was successfully verified</string>
     <string name="baseurl_no_snapdrop_instance">Doesn\'t seem to be a Snapdrop instance</string>
     <string name="baseurl_check_instance_failed">Failed to verify Snapdrop instance</string>
+    <string name="baseurl_unofficial_instances">Check out the <a href="">FAQ</a> for a list of unofficial instances. Please note that some instances might not work correctly inside the app.</string>
+
     <string name="save_location">Save location</string>
 
     <!-- File sharing -->

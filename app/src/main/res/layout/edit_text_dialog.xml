@@ -7,11 +7,9 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:gravity="bottom"
         app:endIconMode="clear_text">
 
         <com.fmsys.snapdrop.PrefixEditText
@@ -22,5 +20,12 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/helperText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
 
 </LinearLayout>
