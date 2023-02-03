@@ -1,18 +1,18 @@
-Snapdrop za Android je aplikacija, na platformi Android™, za brezplačno in odprtokodno lokalno skupno rabo datotek https://snapdrop.net/.
+Snapdrop za Android je aplikacija na platformi Android™ za brezplačno in odprtokodno lokalno deljenje datotek https://snapdrop.net/.
 
-Ali imate včasih tudi vi težave, ko morate na hitro prenesti datoteko iz telefona v računalnik?
+Ali imate tudi vi včasih težavo, da morate na hitro prenesti datoteko iz telefona na računalnik?
 
 USB? - Staromodno!
-Bluetooth? - Preveč zapleteno in počasno!
-E-pošta? - Prosim ne že spet en email, ki si ga pišem sam/a sebi!
+Bluetooth? - Preveč okorno in počasno!
+E-pošta? - Prosim ne še eno e-poštno sporočilo, ki ga pišem sam/a sebi!
 
 Snapdrop!
 
-Snapdrop je rešitev za lokalno skupno rabo datotek, ki popolnoma deluje v vašem brskalniku. Podobno kot Applov Airdrop, vendar ne samo za Apple naprave. Windows, Linux, Android, IPhone, Mac - sploh ni problema!
+Snapdrop je rešitev za lokalno deljenje datotek, ki deluje celotno v vašem brskalniku. Podobno kot Applov Airdrop, vendar ne samo za Apple naprave. Windows, Linux, Android, IPhone, Mac - sploh ni problema!
 
-Kakorkoli, tudi če bi teoretično v celoti delovala v vašem brskalniku, vam bo ta aplikacija všeč, če želite Snapdrop pogosteje uporabljati v vsakdanjem življenju. Zahvaljujoč popolni integraciji v operacijski sistem Android se datoteke pošiljajo še hitreje. Neposredno lahko v drugih aplikacijah izberete Snapdrop za skupno rabo.
+Kakorkoli, tudi če teoretično v celoti deluje v vašem brskalniku, vam bo ta aplikacija všeč, če želite Snapdrop pogosteje uporabljati v vsakdanjem življenju. Zahvaljujoč popolni integraciji v operacijski sistem Android se datoteke pošiljajo še hitreje. V drugih aplikacijah lahko neposredno izberete Snapdrop kot način deljenja.
 
-Zahvaljujoč svoji radikalni preprostosti "Snapdrop za Android" olajša vsakdanje življenje tisočem uporabnikov. Kot odprtokodni projekt nimamo nobenih komercialnih interesov, ampak želimo narediti svet malo boljši. Pridružite se nam in se prepričajte!
+Zahvaljujoč svoji radikalni preprostosti "Snapdrop za Android" olajša vsakdanje življenje tisočem uporabnikov. Kot odprtokodni projekt nimamo nobenih komercialnih interesov, ampak želimo svet malo izboljšati. Pridružite se nam in se prepričajte!
 
 IZVORNA KODA:
 https://github.com/fm-sys/snapdrop-android
