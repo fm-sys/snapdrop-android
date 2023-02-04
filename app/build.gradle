@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'com.fmsys.snapdrop'
     compileSdkVersion 33
 
     defaultConfig {
@@ -41,9 +42,8 @@ android {
         viewBinding true
     }
 
-    lintOptions {
-        disable 'MissingTranslation'
-        disable 'ExtraTranslation'
+    lint {
+        disable 'MissingTranslation', 'ExtraTranslation'
     }
 
     // use Java 8 to make use of lamda-expressions, etc.
