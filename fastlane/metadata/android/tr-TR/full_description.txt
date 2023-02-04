@@ -1,5 +1,4 @@
 Android için Snapdrop; Android™ için ücretsiz ve açık kaynak kodlu  yerel dosya paylaşım çözümüdür
-https://snapdrop.net/.
 
 Sen de telefondan PC'ye hızlıca dosya transfer etmek istediğinde problem yaşıyor musun?
 
