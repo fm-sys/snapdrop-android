@@ -4,7 +4,7 @@ Snapdrop для Android - это Android™ клиент бесплатного 
 
 USB? - Старомодно!
 Bluetooth? - Слишком громоздкий и медленный!
-почта? - Пожалуйста, только не еще одно письмо, которое я пишу сам себе!
+Эл. почта? - Пожалуйста, только не еще одно письмо, которое я пишу сам себе!
 
 Snapdrop!
 
@@ -18,4 +18,4 @@ Snapdrop - это решение для локального обмена фай
 https://github.com/fm-sys/snapdrop-android
 
 АВТОРЫ:
-Приложение работает на основе "Snapdrop Open Source project", который размещен и поддерживается RobinLinus. также https://www.github.com/robinlinus/snapdrop
+Приложение работает на основе "Snapdrop Open Source project", который размещен и поддерживается RobinLinus. См. также https://www.github.com/robinlinus/snapdrop
