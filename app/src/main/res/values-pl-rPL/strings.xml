@@ -46,8 +46,10 @@
         <item>Ciemny</item>
     </string-array>
     <string name="baseurl_title">Podstawowy adres URL</string>
+    <string name="baseurl_instance_verified">Instancja Snapdrop została pomyślnie zweryfikowana</string>
     <string name="baseurl_no_snapdrop_instance">Wygląda na to, że nie jest instancją Snapdrop</string>
     <string name="baseurl_check_instance_failed">Nie udało się zweryfikować instancji Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Sprawdź <a href="">FAQ</a> dla listy nieoficjalnych instancji. Pamiętaj, że niektóre instancje mogą nie działać poprawnie wewnątrz aplikacji.</string>
     <string name="save_location">Zapisz lokalizację</string>
     <!-- File sharing -->
     <string name="intent_file">Plik jest wybrany do udostępnienia</string>
