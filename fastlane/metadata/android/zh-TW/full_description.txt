@@ -8,17 +8,14 @@ E-mail? -拜託別再寄一封信給自己了!
 
 Snapdrop!
 
-Snapdrop 是一個分享本地檔案的解決辦法，僅僅使用您的瀏覽器。 有點像是 Apple 的 Airdrop，但不限於 Apple 的設備。 Windows, Linux, Android, IPhone, Mac - 完全沒有任何問題!
+Snapdrop 是一個分享本地檔案的解決辦法，僅僅使用您的瀏覽器。 有點像是 Apple 的 Airdrop，但不限於 Apple 的設備。 Windows, Linux, Android, IPhone, Mac - 完全沒有任何問題! 有點像是 Apple 的 Airdrop，但不限於 Apple 的設備。 Windows, Linux, Android, IPhone, Mac - 完全沒有任何問題!
 
 然而，即使只需要用瀏覽器就能操作，但當你有頻繁使用的需求時，相信你會愛上 Snapdrop 這個 App。 由於完美整合到 Android 中，檔案傳輸速度更快了。 您還能直接在其他 App 中使用 Snapdrop 來分享檔案。
 
-簡單快速的 "Snapdrop for Android" 讓數以百計的使用者更加便利。 作为一个开源项目，我们没有获得任何商业利益，只是想让世界变得更加美好。 加入並相信自己!
+Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of thousands of users easier. 作为一个开源项目，我们没有获得任何商业利益，只是想让世界变得更加美好。 加入並相信自己!
 
 開放原始碼:
 https://github.com/fm-sys/snapdrop-android
 
-隱私宣告
-此應用與 https://snapdrop.net/交互，可以發現其他在您的本地網絡中運行 Snapdrop的設備。 然而，您的文件沒有被發送到任何服務器，而是在您的設備之間對等地直接傳輸。
-
 所有權:
-這個 App 以及圖標源於 RobinLinus 建立的開源專案 Snapdrop。 詳情請參見 https://www.github.com/robinlinus/snapdrop
+這個 App 以及圖標源於 RobinLinus 建立的開源專案 Snapdrop。 詳情請參見 https://www.github.com/robinlinus/snapdrop 然而，即使只需要用瀏覽器就能操作，但當你有頻繁使用的需求時，相信你會愛上 Snapdrop 這個 App。 由於完美整合到 Android 中，檔案傳輸速度更快了。 您還能直接在其他 App 中使用 Snapdrop 來分享檔案。

@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop за Android</string>
     <string name="err_no_browser">Не може да се отвори прелистувачот</string>
-    <!-- Update -->
+    <string name="err_no_app">Нема апликација инсталирана за да се отвори оваа датотека</string>
+    <string name="open_url">Отвори URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Добредојдовте во Snapdrop</string>
     <string name="app_welcome_summary">1. Отворте <a href="https://snapdrop.net">snapdrop.net</a> или Snapdrop апликација на кој било друг уред во вашата локална WiFi мрежа.\n2. Допрете на уредот со кој сакате да ги споделите датотеките.\n3. Направено! Датотеките ќе бидат испратени…</string>
     <!-- Download -->
+    <string name="download_save_pending">Се зачувува датотеката. Ве молиме имајте стрплење…</string>
     <string name="download_successful">Преземањето е успешно</string>
     <string name="notification_channel_name">Преземањето е завршено</string>
     <!-- Action Buttons -->
     <string name="open">отвори</string>
     <string name="reset">ресетирај</string>
+    <string name="copy">копирај</string>
     <!-- Settings / About -->
     <string name="title_activity_about">За Snapdrop за Android</string>
     <string name="license">Лиценца</string>
     <string name="pref_category_settings">Поставки</string>
+    <string name="source">Изворен код</string>
+    <string name="source_summary">Погледнете го изворниот код на GitHub</string>
     <string name="components">Компоненти со отворен извор</string>
+    <string name="logs">Дебагирани влезови</string>
     <string name="components_summary">Допрете за да се прикаже</string>
     <string name="crowdin">Преводи</string>
     <string name="crowdin_summary">Помогнете во преводот на <b>Snapdrop за Android</b> на вашиот омилен јазик</string>
+    <string name="support_us">Подржете snapdrop</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Бидете информирани за <b>Snapdrop за Android</b></string>
     <string name="version">Верзија</string>
@@ -42,5 +50,5 @@
     <string name="error_filechooser">Не може да се отвори избирачот на датотеки</string>
     <string name="error_network">Ве молиме, проверете дали сте поврзани со WiFi мрежа</string>
     <string name="ignore_error_network">Игнорирај и продолжи</string>
-    <!-- baseURL -->
+    <!-- Website Localization -->
 </resources>

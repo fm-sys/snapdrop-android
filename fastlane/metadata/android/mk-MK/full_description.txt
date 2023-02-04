@@ -12,13 +12,10 @@ Snapdrop е локално решение за споделување датот
 
 Сепак, дури и теоретски да работи целосно во вашиот прелистувач, оваа апликација ќе ја обожавате доколку сакате да користите Snapdrop почесто во вашиот секојдневен живот. Благодарение на совршената интеграција во оперативниот систем Android, датотеките се испраќаат уште побрзо. Директно од другите апликации можете да изберете Snapdrop за споделување.
 
-Благодарение на неговата радикална едноставност, „Snapdrop за Android“ им го олеснува секојдневието на стотици корисници. Како проект со отворен извор, немаме никакви комерцијални интереси, и сакаме да го направиме светот малку подобар. Придружете се и убедете се!
+Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of thousands of users easier. As an open source project we don't have any commercial interests but want to make the world a little bit better. Придружете се и убедете се!
 
 ИЗВОРЕН КОД:
 https://github.com/fm-sys/snapdrop-android
 
-ПРИВАТНОСТ:
-Оваа апликација комуницира со https://snapdrop.net/ за да може да открие други уреди кои работат со Snapdrop во вашата локална мрежа. Сепак, ниту една од вашите датотеки никогаш не е испратена до кој било сервер, туку се пренесува директно peer-to-peer помеѓу вашите уреди.
-
 КРЕДИТ:
-Апликацијата и нејзината икона се базираат на проектот Open Source Snapdrop, кој е домаќин и одржуван од RobinLinus. Исто така види https://www.github.com/robinlinus/snapdrop
+The app is powered by the Snapdrop Open Source project, which is hosted and maintained by RobinLinus. Исто така види https://www.github.com/robinlinus/snapdrop
