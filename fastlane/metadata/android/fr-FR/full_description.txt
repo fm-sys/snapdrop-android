@@ -1,7 +1,6 @@
 Snapdrop pour Android est un client Android™ pour la méthode de partage local de fichier, gratuite et open source, de https://snapdrop.net/.
 
 Vous avez besoin de transférer rapidement un fichier de votre téléphone à votre PC !
-Comment faire ?
 
 Avec un câble USB ? - Vieux jeu !
 Via Bluetooth ? - Beaucoup trop pénible et lent !
