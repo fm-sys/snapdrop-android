@@ -2,20 +2,20 @@ Snapdrop for Android 是免费且开源的本地文件共享解决方案的Andro
 
 您是否总是为无法便捷地将文件从您的手机传输到PC而苦恼？
 
-USB？ ——老式！
-蓝牙？ ——又烦又慢！
-电子邮件？ ——再给我自己写一封邮件？算了吧！
+USB？ ——老式！ ——老式！
+蓝牙？ ——又烦又慢！ ——又烦又慢！
+电子邮件？ 电子邮件？ ——再给我自己写一封邮件？算了吧！
 
 Snapdrop！
 
-Snapdrop 是一个本地文件共享解决方案，并且只使用您的浏览器。 有点像苹果的 Airdrop ，但不限于苹果设备。 Windows，Linux，Android，IPhone，Mac ——完全没有问题！
+Snapdrop 是一个本地文件共享解决方案，并且只使用您的浏览器。 有点像苹果的 Airdrop ，但不限于苹果设备。 Windows，Linux，Android，IPhone，Mac ——完全没有问题！ 有点像苹果的 Airdrop ，但不限于苹果设备。 Windows，Linux，Android，IPhone，Mac ——完全没有问题！
 
-然而，即使讲道理您只需要浏览器就能使用 Snapdrop，但这个应用会使频繁使用 Snapdrop 变得更舒适。 由于完全整合到 Android 操作系统，文件发送速度更快。 您还能直接从其他应用中选择用 Snapdrop 来分享文件。
+然而，即使讲道理您只需要浏览器就能使用 Snapdrop，但这个应用会使频繁使用 Snapdrop 变得更舒适。 由于完全整合到 Android 操作系统，文件发送速度更快。 您还能直接从其他应用中选择用 Snapdrop 来分享文件。 由于完全整合到 Android 操作系统，文件发送速度更快。 您还能直接从其他应用中选择用 Snapdrop 来分享文件。
 
-得益于其操作轻松方便，“Snapdrop 安卓版”已为成千上万的用户的日常生活中带来了便利。 作为一个开源项目，我们没有获得任何商业利益，只是想让世界变得更加美好。 立即下载，体验便捷！
+得益于其操作轻松方便，“Snapdrop 安卓版”已为成千上万的用户的日常生活中带来了便利。 作为一个开源项目，我们没有获得任何商业利益，只是想让世界变得更加美好。 立即下载，体验便捷！ 作为一个开源项目，我们没有获得任何商业利益，只是想让世界变得更加美好。 立即下载，体验便捷！
 
 源代码：
 https://github.com/fm-sys/snapdrop-android
 
 致谢：
-本程序由Snapdrop开源项目提供支持，该项目由RobinLinus托管和维护。 请参见 https://www.github.com/robinlinus/snapdrop
+本程序由Snapdrop开源项目提供支持，该项目由RobinLinus托管和维护。 请参见 https://www.github.com/robinlinus/snapdrop 致谢：
