@@ -3,7 +3,7 @@
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop para Android</string>
     <string name="err_no_browser">Não foi possível abrir o navegador</string>
-    <string name="err_no_app">Nenhum app instalado que pode abrir esta url</string>
+    <string name="err_no_app">Nenhum app instalado que pode abrir este arquivo</string>
     <string name="open_url">Abrir URL</string>
     <!-- Welcome -->
     <string name="app_welcome">Bem-vindo ao Snapdrop</string>
@@ -25,7 +25,7 @@
     <string name="components">Componentes de código aberto</string>
     <string name="logs">Logs de depuração</string>
     <string name="components_summary">Toque para exibir</string>
-    <string name="crowdin">Traduções</string>
+    <string name="crowdin">Localização</string>
     <string name="crowdin_summary">Ajude a traduzir o <b>Snapdrop para Android</b> para seu idioma favorito</string>
     <string name="support_us">Apoiar o Snapdrop</string>
     <string name="support_us_summary">Veja, como você pode apoiar a comunidade do Snapdrop</string>
