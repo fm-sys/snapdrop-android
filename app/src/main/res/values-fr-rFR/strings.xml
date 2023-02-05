@@ -14,6 +14,7 @@
     <string name="notification_channel_name">Téléchargement terminé</string>
     <!-- Action Buttons -->
     <string name="open">ouvrir</string>
+    <string name="install">installer</string>
     <string name="reset">reste</string>
     <string name="copy">copier</string>
     <!-- Settings / About -->
@@ -48,6 +49,7 @@
     <string name="baseurl_title">URL du serveur</string>
     <string name="baseurl_no_snapdrop_instance">Ne semble pas être une instance Snapdrop</string>
     <string name="baseurl_check_instance_failed">Échec de la vérification de l\'instance Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Consultez la <a href="">FAQ</a> pour obtenir une liste d\'instances non officielles. Veuillez noter que certaines instances peuvent ne pas fonctionner correctement dans l\'application.</string>
     <string name="save_location">Dossier de sauvegarde</string>
     <!-- File sharing -->
     <string name="intent_file">Un fichier est sélectionné pour être partagé</string>
