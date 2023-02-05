@@ -633,10 +633,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void fileDownloadedIntent(final Uri uri, final JavaScriptInterface.FileHeader fileHeader) {
         final int notificationId = (int) SystemClock.uptimeMillis();
+        boolean isApk = fileHeader.getName().toLowerCase().endsWith(".apk");
 
         final Intent intent = new Intent();
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.setDataAndType(uri, fileHeader.getMime());
+        intent.setAction(isApk ? Intent.ACTION_INSTALL_PACKAGE : Intent.ACTION_VIEW);
+        intent.setDataAndType(uri, isApk ? "application/vnd.android.package-archive" : fileHeader.getMime());
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
         final PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 1, intent, Build.VERSION.SDK_INT >= 23 ? PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_CANCEL_CURRENT : PendingIntent.FLAG_CANCEL_CURRENT);
@@ -674,7 +675,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         final Snackbar snackbar = Snackbar.make(binding.pullToRefresh, R.string.download_successful, Snackbar.LENGTH_LONG)
-                .setAction(R.string.open, button -> {
+                .setAction(isApk ? R.string.install : R.string.open, button -> {
                     try {
                         startActivity(intent);
                         notificationManager.cancel(notificationId);

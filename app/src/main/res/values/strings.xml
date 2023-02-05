@@ -16,6 +16,7 @@
 
     <!-- Action Buttons -->
     <string name="open">open</string>
+    <string name="install">install</string>
     <string name="reset">reset</string>
     <string name="copy">copy</string>
 
