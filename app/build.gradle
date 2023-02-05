@@ -21,8 +21,8 @@ android {
         //  -   Publish the release tag on Github
         //  -   Post release info to Twitter
 
-        versionCode 29
-        versionName "1.11.3"
+        versionCode 31
+        versionName "1.11.5"
         applicationVariants.all { variant ->
             variant.outputs.all {
                 outputFileName = "snapdrop_v${defaultConfig.versionName}.apk"
