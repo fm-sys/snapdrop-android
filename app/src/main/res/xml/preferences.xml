@@ -6,42 +6,42 @@
         app:iconSpaceReserved="false">
         <SwitchPreference
             android:defaultValue="true"
+            android:icon="@drawable/pref_screen"
             android:key="@string/pref_switch_keep_on"
             android:summary="@string/keep_on_summary"
-            android:title="@string/keep_on_title"
-            app:iconSpaceReserved="false" />
+            android:title="@string/keep_on_title" />
         <SwitchPreference
             android:defaultValue="false"
             android:key="@string/pref_floating_text_selection"
             android:summary="@string/floating_text_selection_summary"
+            android:icon="@drawable/pref_floatingtext"
             android:title="@string/floating_text_selection_title"
-            app:isPreferenceVisible="false"
-            app:iconSpaceReserved="false" />
+            app:isPreferenceVisible="false" />
         <Preference
             android:key="@string/pref_device_name"
             android:maxLines="1"
             android:title="@string/pref_device_name_title"
-            app:iconSpaceReserved="false"
+            android:icon="@drawable/pref_name"
             app:singleLineTitle="false" />
         <ListPreference
             android:defaultValue="@string/pref_value_theme_system_default"
             android:entries="@array/darkmode_entries"
             android:entryValues="@array/darkMode_values"
+            android:icon="@drawable/pref_theme"
             android:key="@string/pref_theme_setting"
-            android:title="@string/settings_theme_title"
             android:summary="%s"
-            app:iconSpaceReserved="false" />
+            android:title="@string/settings_theme_title" />
         <Preference
             android:defaultValue="@string/baseURL"
+            android:icon="@drawable/pref_baseurl"
             android:key="@string/pref_baseurl"
-            android:title="@string/baseurl_title"
             android:summary="%s"
-            app:iconSpaceReserved="false" />
+            android:title="@string/baseurl_title" />
         <Preference
+            android:icon="@drawable/pref_savelocation"
             android:key="@string/pref_save_location"
-            android:title="@string/save_location"
             android:summary="%s"
-            app:iconSpaceReserved="false" />
+            android:title="@string/save_location" />
 
     </PreferenceCategory>
 
@@ -51,51 +51,51 @@
 
         <Preference
             android:key="@string/pref_crowdin"
-            android:title="@string/crowdin"
             android:summary="@string/crowdin_summary"
-            app:iconSpaceReserved="false"
+            android:title="@string/crowdin"
+            android:icon="@drawable/pref_localization"
             app:singleLineTitle="false" />
         <Preference
             android:key="@string/pref_support"
-            android:title="@string/support_us"
             android:summary="@string/support_us_summary"
-            app:iconSpaceReserved="false"
+            android:title="@string/support_us"
+            android:icon="@drawable/pref_community"
             app:singleLineTitle="false" />
         <Preference
+            android:icon="@drawable/pref_twitter"
             android:key="@string/pref_twitter"
-            android:title="@string/twitter"
             android:summary="@string/twitter_summary"
-            app:iconSpaceReserved="false"
+            android:title="@string/twitter"
             app:singleLineTitle="false" />
         <Preference
+            android:icon="@drawable/pref_github"
             android:key="@string/pref_developers"
-            android:title="@string/source"
             android:summary="@string/source_summary"
-            app:iconSpaceReserved="false"
+            android:title="@string/source"
             app:singleLineTitle="false" />
         <Preference
             android:key="@string/pref_components"
-            android:title="@string/components"
             android:summary="@string/components_summary"
-            app:iconSpaceReserved="false"
+            android:icon="@drawable/pref_flosscomponents"
+            android:title="@string/components"
             app:singleLineTitle="false" />
         <Preference
+            android:icon="@drawable/pref_debug"
             android:key="@string/pref_logs"
-            android:title="@string/logs"
             android:summary="@string/components_summary"
-            app:iconSpaceReserved="false"
+            android:title="@string/logs"
             app:singleLineTitle="false" />
         <Preference
             android:key="@string/pref_license"
-            android:title="@string/license"
             android:summary="GNU General Public License v3.0"
-            app:iconSpaceReserved="false"
+            android:title="@string/license"
+            android:icon="@drawable/pref_license"
             app:singleLineTitle="false" />
         <Preference
-        android:key="@string/pref_version"
-        android:title="@string/version"
-        app:iconSpaceReserved="false"
-        app:singleLineTitle="false" />
+            android:key="@string/pref_version"
+            android:title="@string/version"
+            android:icon="@drawable/pref_version"
+            app:singleLineTitle="false" />
 
     </PreferenceCategory>
 </PreferenceScreen>
