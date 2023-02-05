@@ -15,7 +15,7 @@
     <!-- Action Buttons -->
     <string name="open">ouvrir</string>
     <string name="install">installer</string>
-    <string name="reset">reste</string>
+    <string name="reset">réinitialiser</string>
     <string name="copy">copier</string>
     <!-- Settings / About -->
     <string name="title_activity_about">À propos de Snapdrop pour Android</string>
@@ -47,6 +47,7 @@
         <item>Sombre</item>
     </string-array>
     <string name="baseurl_title">URL du serveur</string>
+    <string name="baseurl_instance_verified">L\'instance de Snapdrop a été vérifiée avec succès</string>
     <string name="baseurl_no_snapdrop_instance">Ne semble pas être une instance Snapdrop</string>
     <string name="baseurl_check_instance_failed">Échec de la vérification de l\'instance Snapdrop</string>
     <string name="baseurl_unofficial_instances">Consultez la <a href="">FAQ</a> pour obtenir une liste d\'instances non officielles. Veuillez noter que certaines instances peuvent ne pas fonctionner correctement dans l\'application.</string>
