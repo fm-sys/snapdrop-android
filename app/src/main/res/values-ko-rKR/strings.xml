@@ -14,6 +14,7 @@
     <string name="notification_channel_name">다운로드가 완료되었습니다.</string>
     <!-- Action Buttons -->
     <string name="open">열기</string>
+    <string name="install">설치</string>
     <string name="reset">초기화</string>
     <string name="copy">복사</string>
     <!-- Settings / About -->
@@ -46,8 +47,10 @@
         <item>어두움</item>
     </string-array>
     <string name="baseurl_title">서버 URL</string>
+    <string name="baseurl_instance_verified">Snapdrop 인스턴스가 성공적으로 확인되었습니다.</string>
     <string name="baseurl_no_snapdrop_instance">Snapdrop 인스턴스가 아닌 듯 해요</string>
     <string name="baseurl_check_instance_failed">Snapdrop 인스턴스 검증을 실패하였습니다</string>
+    <string name="baseurl_unofficial_instances"><a href="">FAQ</a>를 확인하여 비공식 인스턴스 목록을 확인하세요. 일부 인스턴스는 앱 내에서 정상적으로 작동하지 않을 수 있습니다.</string>
     <string name="save_location">저장할 경로</string>
     <!-- File sharing -->
     <string name="intent_file">공유할 파일이 선택되었어요.</string>
