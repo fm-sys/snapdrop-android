@@ -14,6 +14,7 @@
     <string name="notification_channel_name">下載完成</string>
     <!-- Action Buttons -->
     <string name="open">開啟</string>
+    <string name="install">安裝</string>
     <string name="reset">重設</string>
     <string name="copy">複製</string>
     <!-- Settings / About -->
