@@ -463,10 +463,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onCreateWindow(final WebView view, final boolean dialog, final boolean userGesture, final Message resultMsg) {
             final String url = view.getHitTestResult().getExtra();
-            if (url.endsWith("update.html#settings")) {
-                final Intent browserIntent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
-            } else if (url.endsWith("offlineButForceRefresh")) {
+            if (url.endsWith("offlineButForceRefresh")) {
                 forceRefresh = true;
                 refreshWebsite();
             } else {
