@@ -24,8 +24,44 @@ public class JavaScriptInterface {
         this.context = context;
     }
 
+    /**
+     * This method is really slow. Use only as fallback.
+     */
+    public static String downloadBlobUrlIntoTemp(final String blobUrl, final String filename, final String mimetype, final long size) {
+        if (blobUrl.startsWith("blob")) {
+            return "javascript: " +
+                    (filename != null ? "fileName = \"" + filename + "\";" : "fileName = document.querySelector('a[href=\"" + blobUrl + "\"]').getAttribute('download');") + // querySelector sometimes returns null - that's why we try to hand over the filename explicitly
+                    "var decoder = new TextDecoder(\"iso-8859-1\");" +
+                    "var xhr = new XMLHttpRequest();" +
+                    "xhr.open('GET', '" + blobUrl + "', true);" +
+                    "xhr.setRequestHeader('Content-type','" + mimetype + "');" +
+                    "xhr.responseType = 'blob';" +
+                    "xhr.onload = function(e) {" +
+                    "    if (this.status == 200) {" +
+                    "        var blobFile = this.response;" +
+                    "        SnapdropAndroid.newFile(fileName,'" + mimetype + "', '" + size + "');" +
+                    "        const reader = blobFile.stream().getReader();" +
+                    "        function push() {" +
+                    "            reader.read().then(({ done, value }) => {" +
+                    "               if (done) {" +
+                    "                   SnapdropAndroid.saveDownloadFileName(fileName, '" + size + "');" +
+                    "                   return;" +
+                    "               }" +
+                    "               SnapdropAndroid.onBytes(decoder.decode(value));" +
+                    "               push();" +
+                    "            });" +
+                    "        };" +
+                    "        push();" +
+                    "    }" +
+                    "};" +
+                    "xhr.send();";
+        }
+        return "javascript: console.log('It is not a Blob URL');";
+    }
+
     @JavascriptInterface
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
+        Log.e("DownloadListener", "Create file of size " + fileSize);
         final File outputDir = context.getCacheDir();
         final String[] nameSplit = fileName.split("\\.");
         while (nameSplit[0].length() < 3) {
@@ -38,7 +74,10 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void onBytes(final String dec) throws IOException {
+        Log.e("DownloadListener", "Write bytes...");
+
         if (fileOutputStream == null) {
+            Log.e("DownloadListener", "No input stream open!");
             return;
         }
         //https://stackoverflow.com/questions/27034897/is-there-a-way-to-pass-an-arraybuffer-from-javascript-to-java-on-android
@@ -49,10 +88,15 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void saveDownloadFileName(final String name, final String size) throws IOException {
+        Log.e("DownloadListener", "Finished file of size " + size);
+
         fileOutputStream.flush();
         fileOutputStream.close();
 
         context.downloadFilesList.add(fileHeader);
+
+        fileOutputStream = null;
+        fileHeader = null;
     }
 
 

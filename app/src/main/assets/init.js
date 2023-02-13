@@ -113,6 +113,10 @@ try {
         SnapdropAndroid.onBytes(decoder.decode(chunk));
         this._oCR(chunk);
     };
+
+    window.addEventListener('file-received', e => {
+        SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);
+    }, false);
 } catch (e) {
     console.error(e);
 }
@@ -149,7 +153,3 @@ try {
 } catch (e) {
     console.error(e);
 }
-
-window.addEventListener('file-received', e => {
-    SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);
-}, false);

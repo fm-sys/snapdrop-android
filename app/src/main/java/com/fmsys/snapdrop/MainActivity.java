@@ -186,16 +186,13 @@ public class MainActivity extends AppCompatActivity {
         CookieManager.getInstance().setAcceptThirdPartyCookies(binding.webview, true);
 
         binding.webview.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
-            synchronized (downloadFilesList) {
-                final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
-                while (iterator.hasNext()) {
-                    final JavaScriptInterface.FileHeader file = iterator.next();
-                    if (file.getSize().equals(String.valueOf(contentLength))) {
-                        copyTempToDownloads(file);
-                        iterator.remove();
-                        break;
-                    }
-                }
+            Log.e("DownloadListener", "New file of size " + contentLength);
+
+            boolean fileFound = findAndDownloadTempFile(url, userAgent, contentDisposition, mimetype, contentLength);
+
+            if (!fileFound && url.startsWith("blob")) {
+                binding.webview.evaluateJavascript(JavaScriptInterface.downloadBlobUrlIntoTemp(url, contentDisposition, mimetype, contentLength),
+                        result -> findAndDownloadTempFile(url, userAgent, contentDisposition, mimetype, contentLength));
             }
         });
 
@@ -576,6 +573,21 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         }
+    }
+
+    private boolean findAndDownloadTempFile(final String url, final String userAgent, final String contentDisposition, final String mimetype, final long contentLength) {
+        synchronized (downloadFilesList) {
+            final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
+            while (iterator.hasNext()) {
+                final JavaScriptInterface.FileHeader file = iterator.next();
+                if (file.getSize().equals(String.valueOf(contentLength))) {
+                    copyTempToDownloads(file);
+                    iterator.remove();
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private void copyTempToDownloads(final JavaScriptInterface.FileHeader fileHeader) {
