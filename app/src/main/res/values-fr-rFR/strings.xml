@@ -18,10 +18,13 @@
     <string name="reset">réinitialiser</string>
     <string name="copy">copier</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">À propos</string>
     <string name="title_activity_about">À propos de Snapdrop pour Android</string>
+    <string name="pref_about_title">À propos de cette application</string>
     <string name="license">Licence</string>
     <string name="pref_category_settings">Paramètres</string>
     <string name="source">Code source</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Voir le code source sur GitHub</string>
     <string name="components">Composants Open Source</string>
     <string name="logs">Journaux de débogage</string>
@@ -30,6 +33,7 @@
     <string name="crowdin_summary">Aider à la traduction de <b>Snapdrop pour Android</b> dans votre langue préférée</string>
     <string name="support_us">Soutenir Snapdrop</string>
     <string name="support_us_summary">Voir, comment vous pouvez soutenir la communauté Snapdrop</string>
+    <string name="read_more">en lire plus</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Parler de <b>Snapdrop pour Android</b></string>
     <string name="version">Version</string>
