@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- open source components -->
-    <string name="components_long_text" translatable="false"><big><b><a href="https://github.com/RobinLinus/snapdrop">Snapdrop.net Project</a></b></big>
-        \nThe <a href="https://snapdrop.net/">Snapdrop.net</a> Project and <a href="https://github.com/RobinLinus/snapdrop/blob/663db5cbb39ab804b20f9cb6466effd9ed0e2d0c/client/images/logo_blue_512x512.png">launcher icon</a> by RobinLinus
-        \nLicensed under GPL-3.0 License
-        \n
-        \n<big><b><a href="https://github.com/anggrayudi/SimpleStorage">SimpleStorage</a></b></big>
-        \nCopyright © 2020-2022 Anggrayudi Hardiannicko A.
-        \nLicensed under Apache-2.0 License
-        \n
-        \n<big><b><a href="https://material.io/">Material Design Components</a></b></big>
-        \nLicensed under Apache-2.0 License
-        \n
-        \n<big><b><a href="https://github.com/androidx">AndroidX Support Library</a></b></big>
-        \nLicensed under Apache-2.0 License
-    </string>
-
     <!-- baseURL -->
     <string name="baseURL" translatable="false">https://snapdrop.net/</string>
 </resources>

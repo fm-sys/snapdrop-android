@@ -23,9 +23,11 @@
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">About</string>
     <string name="title_activity_about">About Snapdrop for Android</string>
+    <string name="pref_about_title">About this app</string>
     <string name="license">License</string>
     <string name="pref_category_settings">Settings</string>
     <string name="source">Source Code</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">View source code at GitHub</string>
     <string name="components">Open source components</string>
     <string name="logs">Debug Logs</string>
@@ -34,6 +36,7 @@
     <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
     <string name="support_us">Support Snapdrop</string>
     <string name="support_us_summary">See, how you can support the Snapdrop community</string>
+    <string name="read_more">read more</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Tell about <b>Snapdrop for Android</b></string>
     <string name="version">Version</string>

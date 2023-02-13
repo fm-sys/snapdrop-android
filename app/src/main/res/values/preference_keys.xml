@@ -21,7 +21,7 @@
     <string name="pref_version" translatable="false">app_version</string>
     <string name="pref_license" translatable="false">app_license</string>
     <string name="pref_developers" translatable="false">app_developers</string>
-    <string name="pref_components" translatable="false">app_components</string>
+    <string name="pref_about" translatable="false">app_components</string>
     <string name="pref_logs" translatable="false">app_logs</string>
     <string name="pref_crowdin" translatable="false">app_crowdin</string>
     <string name="pref_support" translatable="false">app_support</string>

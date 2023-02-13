@@ -33,7 +33,7 @@
         android:largeHeap="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.SplashScreen">
+        android:theme="@style/AppTheme">
 
         <!-- Opt out to do not share WebView usage statistics -->
         <meta-data
@@ -60,7 +60,8 @@
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:launchMode="singleTask"
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/AppTheme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

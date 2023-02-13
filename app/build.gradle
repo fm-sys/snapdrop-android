@@ -1,4 +1,8 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+    id 'checkstyle'
+    id 'com.mikepenz.aboutlibraries.plugin'
+}
 
 android {
     namespace 'com.fmsys.snapdrop'
@@ -65,6 +69,8 @@ dependencies {
     implementation 'androidx.webkit:webkit:1.6.0'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'org.jsoup:jsoup:1.15.3'
+    implementation "com.mikepenz:aboutlibraries-core:10.5.2"
+    implementation "com.mikepenz:aboutlibraries:10.5.2"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -76,7 +82,6 @@ dependencies {
  * own checkstyle configuration
  * Android plugin doesn't interoperate with the Checkstyle plugin
  */
-apply plugin: 'checkstyle'
 
 tasks.register('checkstyle', Checkstyle) {
     configFile file("${project.rootDir}/checkstyle.xml")

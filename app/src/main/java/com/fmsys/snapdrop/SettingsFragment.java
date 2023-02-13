@@ -10,7 +10,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -19,7 +18,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.util.Consumer;
 import androidx.preference.Preference;
@@ -32,12 +30,15 @@ import com.fmsys.snapdrop.utils.ClipboardUtils;
 import com.fmsys.snapdrop.utils.Link;
 import com.fmsys.snapdrop.utils.LogUtils;
 import com.google.android.material.snackbar.Snackbar;
+import com.mikepenz.aboutlibraries.LibsBuilder;
+import com.mikepenz.aboutlibraries.util.SpecialButton;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -54,38 +55,64 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             storageHelper.onRestoreInstanceState(savedInstanceState);
         }
 
-        final Preference versionPref = initUrlPreference(R.string.pref_version, "https://github.com/fm-sys/snapdrop-android/releases/latest");
-        versionPref.setSummary("v" + BuildConfig.VERSION_NAME);
-
-        initUrlPreference(R.string.pref_developers, "https://github.com/fm-sys/snapdrop-android");
-        initUrlPreference(R.string.pref_crowdin, "https://crowdin.com/project/snapdrop-android");
-        initUrlPreference(R.string.pref_support, "https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md");
-        initUrlPreference(R.string.pref_twitter, "https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20%23snapdrop%0A%0Ahttps://snapdrop.net");
-        initUrlPreference(R.string.pref_license, "https://www.gnu.org/licenses/gpl-3.0.html");
-
-        final Preference openSourceComponents = findPreference(getString(R.string.pref_components));
+        final Preference openSourceComponents = findPreference(getString(R.string.pref_about));
         openSourceComponents.setOnPreferenceClickListener(pref -> {
-            final AlertDialog dialog = new AlertDialog.Builder(getContext())
-                    .setTitle(R.string.components)
-                    .setMessage(R.string.components_long_text)
-                    .setPositiveButton(android.R.string.ok, null)
-                    .show();
-            ((TextView) dialog.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
-            return true;
-        });
+            new LibsBuilder()
+                    .withAboutAppName(getString(R.string.app_name_long))
+                    .withAboutIconShown(true)
+                    .withAboutVersionShownName(true)
+                    .withAboutDescription("<big><b>Credits</b></big><br><br>" +
+                            "This app and it's launcher icon is based on the snapdrop.net project by RobinLinus<br>" +
+                            "<a href=\"https://github.com/RobinLinus/snapdrop\">github.com/RobinLinus/snapdrop</a><br><br>" +
+                            "<big><b>" + getString(R.string.support_us) + "</b></big><br><br>" +
+                            getString(R.string.support_us_summary) + "<br>" +
+                            "<a href=\"https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md\">" + getString(R.string.read_more) + "</a>")
+                    .withAboutSpecial1("GitHub")
+                    .withAboutSpecial2("Twitter")
+                    .withAboutSpecial3("Crowdin")
+                    .withListener(new AboutLibrariesListener() {
+                        @Override
+                        public boolean onIconLongClicked(final @NonNull View view) {
+                            final Dialog dialog = new Dialog(view.getContext());
+                            dialog.setContentView(R.layout.progress_dialog);
+                            dialog.show();
 
-        final Preference logsPref = findPreference(getString(R.string.pref_logs));
-        logsPref.setOnPreferenceClickListener(pref -> {
-            final View dialogView = this.getLayoutInflater().inflate(R.layout.debug_logs_dialog, null);
-            final TextView textView = dialogView.findViewById(R.id.textview);
-            textView.setText(LogUtils.getLogs(prefs, true));
+                            Executors.newSingleThreadExecutor().submit(() -> {
+                                final View dialogView = SettingsFragment.this.getLayoutInflater().inflate(R.layout.debug_logs_dialog, null);
+                                final TextView textView = dialogView.findViewById(R.id.textview);
+                                textView.setText(LogUtils.getLogs(prefs, true));
+                                dialog.dismiss();
 
-            new AlertDialog.Builder(getContext())
-                    .setTitle(R.string.logs)
-                    .setView(dialogView)
-                    .setPositiveButton(android.R.string.ok, null)
-                    .setNeutralButton(R.string.copy, (d, id) -> ClipboardUtils.copy(this.getContext(), LogUtils.getLogs(prefs, false)))
-                    .show();
+                                view.post(() -> new AlertDialog.Builder(view.getContext())
+                                        .setIcon(R.drawable.pref_debug)
+                                        .setTitle(R.string.logs)
+                                        .setView(dialogView)
+                                        .setPositiveButton(android.R.string.ok, null)
+                                        .setNeutralButton(R.string.copy, (d, id) -> ClipboardUtils.copy(view.getContext(), LogUtils.getLogs(prefs, false)))
+                                        .show());
+                            });
+
+                            return true;
+                        }
+
+                        @Override
+                        public void onIconClicked(final @NonNull View view) {
+                            openUrl("https://github.com/fm-sys/snapdrop-android");
+                        }
+
+                        @Override
+                        public boolean onExtraClicked(final @NonNull View view, final @NonNull SpecialButton specialButton) {
+                            if (specialButton == SpecialButton.SPECIAL1) {
+                                openUrl("https://github.com/fm-sys/snapdrop-android");
+                            } else if (specialButton == SpecialButton.SPECIAL2) {
+                                openUrl("https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20%23snapdrop%0A%0Ahttps://snapdrop.net");
+                            } else if (specialButton == SpecialButton.SPECIAL3) {
+                                openUrl("https://crowdin.com/project/snapdrop-android");
+                            }
+                            return true;
+                        }
+                    })
+                    .start(requireContext());
             return true;
         });
 
@@ -118,10 +145,9 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             final Dialog dialog = new Dialog(getContext());
             dialog.setContentView(R.layout.progress_dialog);
 
-            Future<?> request = Executors.newSingleThreadExecutor().submit(() -> {
+            final Future<?> request = Executors.newSingleThreadExecutor().submit(() -> {
                 try {
-                    Document doc = Jsoup.connect(newValue).get();
-                    assert doc != null;
+                    final Document doc = Jsoup.connect(newValue).get();
                     requireActivity().runOnUiThread(() -> {
                         if (doc.selectFirst(".icon-button[href=\"#about\"]") != null && doc.selectFirst("#about>x-background") != null) {
                             // website seems to be similar to snapdrop... The check could be improved of course.
@@ -144,7 +170,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 dialog.dismiss();
             });
 
-            dialog.setOnDismissListener(d -> request.cancel(true));
+            dialog.setOnCancelListener(d -> request.cancel(true));
             dialog.show();
 
         }));
@@ -172,17 +198,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             requireActivity().recreate();
             return true;
         });
-    }
-
-    private Preference initUrlPreference(final @StringRes int pref, final String url) {
-        final Preference preference = findPreference(getString(pref));
-        if (preference != null) {
-            preference.setOnPreferenceClickListener(p -> {
-                openUrl(url);
-                return true;
-            });
-        }
-        return preference;
     }
 
     private void openUrl(final String url) {
