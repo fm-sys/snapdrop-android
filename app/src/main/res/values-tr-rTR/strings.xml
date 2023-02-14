@@ -36,7 +36,7 @@
     <string name="pref_device_name_summary">Kullanıcı-tanımlı bir cihaz adı belirleyin</string>
     <string name="keep_on_summary">(Önerilir) Bir çok cihaz ekranın transfer anında kapanması sebebiyle problem yaşamakta</string>
     <string name="keep_on_title">Transfer sırasında ekranı açık tut</string>
-    <string name="floating_text_selection_title">Yüzen metin seçimi</string>
+    <string name="floating_text_selection_title">Kayan metin seçimi</string>
     <string name="floating_text_selection_summary">Diğer uygulamalarda metin seçerken \"Snapdrop ile gönder\" seçeneği gösterilecek</string>
     <string name="floating_text_selection_activity_label">Snapdrop ile gönder</string>
     <string name="settings_theme_title">Tema</string>

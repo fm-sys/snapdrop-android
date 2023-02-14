@@ -14,6 +14,7 @@
     <string name="notification_channel_name">Descărcare finalizată</string>
     <!-- Action Buttons -->
     <string name="open">deschideți</string>
+    <string name="install">instalează</string>
     <string name="reset">resetează</string>
     <string name="copy">copiați</string>
     <!-- Settings / About -->
@@ -46,8 +47,10 @@
         <item>Întunecat</item>
     </string-array>
     <string name="baseurl_title">URL-ul de bază</string>
+    <string name="baseurl_instance_verified">Instanța Snapdrop a fost verificată cu succes</string>
     <string name="baseurl_no_snapdrop_instance">Nu pare să fie o instanță Snapdrop</string>
     <string name="baseurl_check_instance_failed">Verificarea instanței Snapdrop a eșuat</string>
+    <string name="baseurl_unofficial_instances">Verificați <a href="">FAQ</a> pentru o listă de instanțe neoficiale. Vă rugăm să rețineți că unele cazuri ar putea să nu funcționeze corect în interiorul aplicației.</string>
     <string name="save_location">Locaţia pentru salvare</string>
     <!-- File sharing -->
     <string name="intent_file">Un fișier este selectat pentru partajare</string>

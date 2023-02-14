@@ -14,13 +14,17 @@
     <string name="notification_channel_name">Téléchargement terminé</string>
     <!-- Action Buttons -->
     <string name="open">ouvrir</string>
-    <string name="reset">reste</string>
+    <string name="install">installer</string>
+    <string name="reset">réinitialiser</string>
     <string name="copy">copier</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">À propos</string>
     <string name="title_activity_about">À propos de Snapdrop pour Android</string>
+    <string name="pref_about_title">À propos de cette application</string>
     <string name="license">Licence</string>
     <string name="pref_category_settings">Paramètres</string>
     <string name="source">Code source</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Voir le code source sur GitHub</string>
     <string name="components">Composants Open Source</string>
     <string name="logs">Journaux de débogage</string>
@@ -29,6 +33,7 @@
     <string name="crowdin_summary">Aider à la traduction de <b>Snapdrop pour Android</b> dans votre langue préférée</string>
     <string name="support_us">Soutenir Snapdrop</string>
     <string name="support_us_summary">Voir, comment vous pouvez soutenir la communauté Snapdrop</string>
+    <string name="read_more">en lire plus</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Parler de <b>Snapdrop pour Android</b></string>
     <string name="version">Version</string>
@@ -46,8 +51,10 @@
         <item>Sombre</item>
     </string-array>
     <string name="baseurl_title">URL du serveur</string>
+    <string name="baseurl_instance_verified">L\'instance de Snapdrop a été vérifiée avec succès</string>
     <string name="baseurl_no_snapdrop_instance">Ne semble pas être une instance Snapdrop</string>
     <string name="baseurl_check_instance_failed">Échec de la vérification de l\'instance Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Consultez la <a href="">FAQ</a> pour obtenir une liste d\'instances non officielles. Veuillez noter que certaines instances peuvent ne pas fonctionner correctement dans l\'application.</string>
     <string name="save_location">Dossier de sauvegarde</string>
     <!-- File sharing -->
     <string name="intent_file">Un fichier est sélectionné pour être partagé</string>

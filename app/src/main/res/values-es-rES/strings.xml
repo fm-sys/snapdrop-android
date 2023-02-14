@@ -14,13 +14,17 @@
     <string name="notification_channel_name">Descarga completada</string>
     <!-- Action Buttons -->
     <string name="open">Abrir</string>
+    <string name="install">instalar</string>
     <string name="reset">reiniciar</string>
     <string name="copy">copiar</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Acerca de</string>
     <string name="title_activity_about">Acerca de Snapdrop para Android</string>
+    <string name="pref_about_title">Acerca de esta aplicación</string>
     <string name="license">Licencia</string>
     <string name="pref_category_settings">Ajustes</string>
     <string name="source">Código fuente</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Ver código fuente en GitHub</string>
     <string name="components">Componentes de código abierto</string>
     <string name="logs">Registros de depuración</string>
@@ -29,6 +33,7 @@
     <string name="crowdin_summary">Ayuda a traducir <b>Snapdrop para Android</b> a tu idioma favorito</string>
     <string name="support_us">Apoya a Snapdrop</string>
     <string name="support_us_summary">Mira cómo puedes apoyar a la comunidad de Snapdrop</string>
+    <string name="read_more">leer más</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Cuéntales sobre <b>Snapdrop para Android</b></string>
     <string name="version">Versión</string>

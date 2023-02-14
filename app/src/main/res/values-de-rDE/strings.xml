@@ -14,6 +14,7 @@
     <string name="notification_channel_name">Download abgeschlossen</string>
     <!-- Action Buttons -->
     <string name="open">öffnen</string>
+    <string name="install">installieren</string>
     <string name="reset">zurücksetzen</string>
     <string name="copy">kopieren</string>
     <!-- Settings / About -->

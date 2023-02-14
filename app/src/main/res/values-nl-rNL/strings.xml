@@ -14,6 +14,7 @@
     <string name="notification_channel_name">Download voltooid</string>
     <!-- Action Buttons -->
     <string name="open">openen</string>
+    <string name="install">installeren</string>
     <string name="reset">resetten</string>
     <string name="copy">kopiëren</string>
     <!-- Settings / About -->
@@ -46,8 +47,10 @@
         <item>Donker</item>
     </string-array>
     <string name="baseurl_title">Standaard URL</string>
+    <string name="baseurl_instance_verified">Snapdrop-instantie is succesvol geverifieerd</string>
     <string name="baseurl_no_snapdrop_instance">Dit lijkt geen Snapdrop-instantie te zijn</string>
     <string name="baseurl_check_instance_failed">Fout bij het verifiëren van de Snapdrop-instantie</string>
+    <string name="baseurl_unofficial_instances">Bekijk de <a href="">FAQ</a> voor een lijst met niet-officiële instanties. Houd er rekening mee dat sommige instanties mogelijk niet goed werken in de app.</string>
     <string name="save_location">Locatie opslaan</string>
     <!-- File sharing -->
     <string name="intent_file">Een bestand is geselecteerd om te delen</string>

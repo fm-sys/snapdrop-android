@@ -17,10 +17,13 @@
     <string name="reset">restablir</string>
     <string name="copy">copiar</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Quant a</string>
     <string name="title_activity_about">Sobre Snapdrop per Android</string>
+    <string name="pref_about_title">Sobre aquesta aplicació</string>
     <string name="license">Llicència</string>
     <string name="pref_category_settings">Configuració</string>
     <string name="source">Codi font</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Veure codi font a GitHub</string>
     <string name="components">Components de codi obert</string>
     <string name="logs">Registres per diagnòstics</string>
@@ -29,6 +32,7 @@
     <string name="crowdin_summary">Ajuda a traduïr <b>Snapdrop per Android</b> al teu idioma favorit</string>
     <string name="support_us">Donar suport a Snapdrop</string>
     <string name="support_us_summary">Mira com pots donar suport a la comunitat de Snapdrop</string>
+    <string name="read_more">Més informació</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Parla sobre <b>Snapdrop per a Android</b></string>
     <string name="version">Versió</string>
