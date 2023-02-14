@@ -13,6 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            android:textCursorDrawable="@color/colorAccent" />
+
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -23,13 +30,6 @@
                 android:layout_height="?attr/actionBarSize"
                 app:titleCentered="true" />
         </com.google.android.material.appbar.AppBarLayout>
-
-        <WebView
-            android:id="@+id/webview"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scrollbars="none"
-            android:textCursorDrawable="@color/colorAccent" />
 
     </RelativeLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
