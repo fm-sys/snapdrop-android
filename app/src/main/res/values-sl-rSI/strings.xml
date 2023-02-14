@@ -18,10 +18,13 @@
     <string name="reset">ponastavi</string>
     <string name="copy">kopiraj</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">O programu</string>
     <string name="title_activity_about">O Snapdropu za Android</string>
+    <string name="pref_about_title">O tej aplikaciji</string>
     <string name="license">Licenca</string>
     <string name="pref_category_settings">Nastavitve</string>
     <string name="source">Izvorna koda</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Oglej si izvorno kodo na GitHub-u</string>
     <string name="components">Odprtokodne komponente</string>
     <string name="logs">Dnevniki odpravljanja napak</string>
@@ -30,6 +33,7 @@
     <string name="crowdin_summary">Pomagajte nam s prevajanjem <b>Snapdropa za Android</b> v vaš najljubši jezik</string>
     <string name="support_us">Podprite Snapdrop</string>
     <string name="support_us_summary">Oglejte si, kako lahko podprete skupnost Snapdrop</string>
+    <string name="read_more">preberi več</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Deli <b>Snapdrop za Android</b></string>
     <string name="version">Različica</string>
@@ -47,8 +51,10 @@
         <item>Temna</item>
     </string-array>
     <string name="baseurl_title">Osnovna povezava</string>
+    <string name="baseurl_instance_verified">Primerek Snapdrop je bil uspešno preverjen</string>
     <string name="baseurl_no_snapdrop_instance">Ne zdi se kot Snapdrop primerek</string>
     <string name="baseurl_check_instance_failed">Snapdrop primerka ni bilo mogoče preveriti</string>
+    <string name="baseurl_unofficial_instances">Oglejte si <a href="">FAQ</a> seznam neuradnih primerov. Upoštevajte, da nekateri primeri v aplikaciji morda ne bodo delovali pravilno.</string>
     <string name="save_location">Shrani lokacijo</string>
     <!-- File sharing -->
     <string name="intent_file">Datoteka je izbrana za deljenje</string>
