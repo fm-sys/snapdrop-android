@@ -51,8 +51,10 @@
         <item>Gelap</item>
     </string-array>
     <string name="baseurl_title">URL Dasar</string>
+    <string name="baseurl_instance_verified">Instalasi Snapdrop berhasil diverifikasi</string>
     <string name="baseurl_no_snapdrop_instance">Sepertinya bukan instans Snapdrop</string>
     <string name="baseurl_check_instance_failed">Gagal memverifikasi instans Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Lihat <a href="">FAQ</a> untuk mengetahui daftar kejadian tidak resmi. Harap perhatikan bahwa beberapa bagian mungkin tidak berfungsi dengan benar di dalam aplikasi.</string>
     <string name="save_location">Lokasi penyimpanan</string>
     <!-- File sharing -->
     <string name="intent_file">Sebuah file dipilih untuk dibagikan</string>
