@@ -41,7 +41,8 @@
         <item name="android:textColor">@color/textColorWhite</item>
     </style>
 
-    <style name="SnackBarStyle" parent="Widget.Material3.Snackbar">
+    <!-- Use MaterialComponents (M2) base theme as M3 doesn't seem to work with background tint -->
+    <style name="SnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
         <item name="android:backgroundTint">@color/snackbarBackground</item>
         <item name="android:background">@drawable/snackbar_larger_margin</item>
         <item name="actionTextColorAlpha">1.0</item>
