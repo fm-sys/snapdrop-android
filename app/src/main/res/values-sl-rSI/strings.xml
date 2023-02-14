@@ -14,6 +14,7 @@
     <string name="notification_channel_name">Prenos končan</string>
     <!-- Action Buttons -->
     <string name="open">odpri</string>
+    <string name="install">namesti</string>
     <string name="reset">ponastavi</string>
     <string name="copy">kopiraj</string>
     <!-- Settings / About -->
