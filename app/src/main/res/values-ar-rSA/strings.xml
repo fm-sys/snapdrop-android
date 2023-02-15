@@ -18,10 +18,13 @@
     <string name="reset">إعادَةُ الضَّبط</string>
     <string name="copy">نسخ</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">حول</string>
     <string name="title_activity_about">حَول سناب درُوب لِنِظامِ أندُروِيد</string>
+    <string name="pref_about_title">حول التطبيق</string>
     <string name="license">الترخيص</string>
     <string name="pref_category_settings">الإعدادات</string>
     <string name="source">شفرة المصدر</string>
+    <string name="github">غِت‌ هَب</string>
     <string name="source_summary">افحص شفرة المصدر على GitHub</string>
     <string name="components">مُكوِناتٌ مَفتُوحَةُ المَصدَر</string>
     <string name="logs">سجلات تتبع الأخطاء</string>
@@ -30,6 +33,7 @@
     <string name="crowdin_summary">سَاعِد فِي تَرجَمَةِ <b>سناب درُوب لِنِظامِ أندُروِيد</b> إلى لُغَتِكَ المُفضَّلة</string>
     <string name="support_us">دَعم سناب درُوب</string>
     <string name="support_us_summary">انظر كيف يمكنك دعم مجتمع سناب درُوب</string>
+    <string name="read_more">إقرأ المزيد</string>
     <string name="twitter">تويتر</string>
     <string name="twitter_summary">أخبِر الناس حول <b>سناب درُوب</b></string>
     <string name="version">الإصدار</string>
