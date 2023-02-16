@@ -14,13 +14,16 @@
     <string name="notification_channel_name">Transferência concluída</string>
     <!-- Action Buttons -->
     <string name="open">abrir</string>
+    <string name="install">instalar</string>
     <string name="reset">redefinir</string>
     <string name="copy">copiar</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
+    <string name="pref_about_title">Sobre este \'app\'</string>
     <string name="license">Licenças</string>
     <string name="pref_category_settings">Configurações</string>
     <string name="source">Código-fonte</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Veja o código-fonte no GitHub</string>
     <string name="components">Componentes de código aberto</string>
     <string name="logs">Logs de depuração</string>
