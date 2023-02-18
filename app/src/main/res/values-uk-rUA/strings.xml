@@ -4,7 +4,7 @@
     <string name="app_name_long">Snapdrop для Android</string>
     <string name="err_no_browser">Не вдається відкрити браузер</string>
     <string name="err_no_app">Немає встановлених програм, щоб відкрити цей файл</string>
-    <string name="open_url">Відкрити URL</string>
+    <string name="open_url">Відкрити URL-адресу</string>
     <!-- Welcome -->
     <string name="app_welcome">Вітаємо у Snapdrop</string>
     <string name="app_welcome_summary">1. Відкрийте <a href="https://snapdrop.net">snapdrop.net</a> або програму Snapdrop на будь-якому іншому пристрої у вашій локальній Wi-Fi мережі.\n2. Виберіть пристрій, з яким потрібно поділитися файлом (файлами).\n3. Готово! Файл (и) буде надіслано…</string>
@@ -18,6 +18,60 @@
     <string name="reset">скинути</string>
     <string name="copy">копіювати</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Про</string>
+    <string name="title_activity_about">Про Snapdrop для Android</string>
+    <string name="pref_about_title">Про цю програму</string>
+    <string name="license">Ліцензійна угода</string>
+    <string name="pref_category_settings">Налаштування</string>
+    <string name="source">Вихідний код</string>
+    <string name="github">GitHub</string>
+    <string name="source_summary">Переглянути вихідний код на GitHub</string>
+    <string name="components">Компоненти Open Source</string>
+    <string name="logs">Журнал налагодження</string>
+    <string name="components_summary">Натисніть для відображення</string>
+    <string name="crowdin">Переклад</string>
+    <string name="crowdin_summary">Допоможіть перекласти <b>Snapdrop для Android</b> Вашою улюбленою мовою</string>
+    <string name="support_us">Підтримати Snapdrop</string>
+    <string name="support_us_summary">Дізнайтесь, як ви можете підтримати спільноту Snapdrop</string>
+    <string name="read_more">читати далі</string>
+    <string name="twitter">Twitter</string>
+    <string name="twitter_summary">Розповісти про <b>Snapdrop для Android</b></string>
+    <string name="version">Версія</string>
+    <string name="pref_device_name_title">Ім\'я пристрою</string>
+    <string name="pref_device_name_summary">Задати назву пристрою самостійно</string>
+    <string name="keep_on_summary">(Рекомендується) На багатьох пристроях спостерігаються проблеми з перериванням передачі при вимкненому екрані</string>
+    <string name="keep_on_title">Не вимикати екран під час передачі</string>
+    <string name="floating_text_selection_title">Поділитись виділеним текстом</string>
+    <string name="floating_text_selection_summary">При виборі тексту в інших програмах буде запропоновано опцію \"Надіслати за допомогою Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Надіслати за допомогою Snapdrop</string>
+    <string name="settings_theme_title">Тема</string>
+    <string-array name="darkmode_entries">
+        <item>Використовувати тему системи</item>
+        <item>Світла</item>
+        <item>Темна</item>
+    </string-array>
+    <string name="baseurl_title">Базова URL-адреса</string>
+    <string name="baseurl_instance_verified">Екземпляр Snapdrop успішно перевірено</string>
+    <string name="baseurl_no_snapdrop_instance">Здається, це не екземпляр Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Не вдалося перевірити екземпляр Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Перегляньте <a href="">FAQ</a>, щоб отримати список неофіційних екземплярів. Зверніть увагу, що деякі екземпляри можуть не працювати належним чином у програмі.</string>
+    <string name="save_location">Зберегти розташування</string>
     <!-- File sharing -->
+    <string name="intent_file">Файл, обраний для надсилання</string>
+    <string name="intent_files">Файли, обрані для надсилання</string>
+    <string name="intent_content">Вміст, обраний для надсилання</string>
+    <string name="error_filechooser">Не вдалося вибрати файл</string>
+    <string name="error_network">Будь ласка, переконайтесь, що ви підключені до мережі Wi-Fi</string>
+    <string name="ignore_error_network">Все одно спробувати</string>
+    <string name="error_not_reachable_title">Упс, вибачте!</string>
+    <string name="error_not_reachable">Сервер Snapdrop недоступний. \n\nЯкщо ваше підключення до Інтернету працює належним чином, а Ви дальше отримуєте це повідомлення, тоді проблеми із сервером, можуть бути з нашої сторони. Ми розуміємо, що це може дратувати і розчаровувати, але, будь ласка, не залишайте поганих відгуків на Google Play. \n\nЦя програма не містить жодної реклами, тому й ніяк не монетизується. Цей проект — лише наше хобі, але ми робимо все можливе, щоб змусити його працювати швидко та безперебійно.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Відкрийте Snapdrop на інших пристроях для передачі файлів</string>
+    <string name="website_instruction">Натисніть, щоб надіслати файли або утримуйте, щоб надіслати повідомлення</string>
+    <string name="website_file_received">Файл отримано</string>
+    <string name="website_file_ask_before_download">Завжди запитувати перед збереженням файлу</string>
+    <string name="website_file_download">Зберегти</string>
+    <string name="website_footer_discovery">Вас можуть знайти всі в цій мережі</string>
+    <string name="website_footer_known_as">Ваше ім\'я/ідентифікатор: %s</string>
+    <string name="website_about_subheading">Найпростіший спосіб передачі файлів між пристроями</string>
 </resources>
