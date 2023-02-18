@@ -8,14 +8,14 @@ E-mail? – Будь ласка, тільки не ще один лист, як�
 
 Snapdrop!
 
-Snapdrop – це рішення для локального обміну файлами, яке повністю працює у вашому браузері. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
+Snapdrop – це рішення для локального обміну файлами, яке повністю працює у вашому браузері. Воно дещо нагадує Airdrop від Apple, але працює не тільки з пристроями від Apple. Windows, Linux, Android, iPhone, Mac – жодних проблем!
 
-However, even if it theoretically would fully work in your browser, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with.
+Однак, навіть якщо теоретично все повністю працюватиме й у вашому браузері, Вам точно сподобається дана програма, якщо Ви хочете використовувати Snapdrop частіше у своєму повсякденному житті. Завдяки ідеальній інтеграції в операційну систему Android, файли надсилаються ще швидше. Прямо з інших програм Ви зможете вибрати Snapdrop для надсилання.
 
-Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of thousands of users easier. As an open source project we don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+Завдяки своїй радикальній простоті, "Snapdrop для Android" полегшує повсякденне життя сотням користувачів. Як проєкт з відкритим вихідним кодом, ми не переслідуємо жодних комерційних інтересів і хочемо зробити світ трішки кращим. Приєднуйтесь та переконайтесь самі!
 
-SOURCE CODE:
+ВИХІДНИЙ КОД:
 https://github.com/fm-sys/snapdrop-android
 
-CREDIT:
-The app is powered by the Snapdrop Open Source project, which is hosted and maintained by RobinLinus. See also https://www.github.com/robinlinus/snapdrop
+АВТОРИ:
+Програма працює на основі "Snapdrop Open Source project", який розміщений на GitHub та підтримується RobinLinus. Дивитися також: https://www.github.com/robinlinus/snapdrop
