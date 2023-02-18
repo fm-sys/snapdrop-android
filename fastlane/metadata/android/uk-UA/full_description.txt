@@ -1,14 +1,14 @@
-Snapdrop for Android is an Android™ client for the free and open source local file sharing solution https://snapdrop.net/.
+Snapdrop для Android – це Android™ клієнт, безкоштовного та відкритого сервісу локального обміну файлами https://snapdrop.net/.
 
-Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
+У Вас також іноді виникає проблема, коли вам просто необхідно швидко передати файл з телефону на ПК?
 
-USB? - Old fashioned!
-Bluetooth? - Much too cumbersome and slow!
-E-mail? - Please not another email I write to myself!
+USB? – Старомодно!
+Bluetooth? – Занадто громіздкий та повільний!
+E-mail? – Будь ласка, тільки не ще один лист, який я пишу сам собі!
 
 Snapdrop!
 
-Snapdrop is a local file sharing solution which completely works in your browser. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
+Snapdrop – це рішення для локального обміну файлами, яке повністю працює у вашому браузері. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
 
 However, even if it theoretically would fully work in your browser, you will love this app if you want to use Snapdrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with.
 
