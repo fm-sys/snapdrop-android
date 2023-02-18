@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop для Android</string>
+    <string name="err_no_browser">Не вдається відкрити браузер</string>
+    <string name="err_no_app">Немає встановлених програм, щоб відкрити цей файл</string>
+    <string name="open_url">Відкрити URL</string>
     <!-- Welcome -->
+    <string name="app_welcome">Вітаємо у Snapdrop</string>
+    <string name="app_welcome_summary">1. Відкрийте <a href="https://snapdrop.net">snapdrop.net</a> або програму Snapdrop на будь-якому іншому пристрої у вашій локальній Wi-Fi мережі.\n2. Виберіть пристрій, з яким потрібно поділитися файлом (файлами).\n3. Готово! Файл (и) буде надіслано…</string>
     <!-- Download -->
+    <string name="download_save_pending">Збереження файлу. Будь ласка зачекайте…</string>
+    <string name="download_successful">Завантажено успішно</string>
+    <string name="notification_channel_name">Завантаження завершено</string>
     <!-- Action Buttons -->
+    <string name="open">відкрити</string>
+    <string name="install">встановити</string>
+    <string name="reset">скинути</string>
+    <string name="copy">копіювати</string>
     <!-- Settings / About -->
     <!-- File sharing -->
     <!-- Website Localization -->
