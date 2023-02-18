@@ -32,7 +32,7 @@
     <string name="crowdin">Переклад</string>
     <string name="crowdin_summary">Допоможіть перекласти <b>Snapdrop для Android</b> Вашою улюбленою мовою</string>
     <string name="support_us">Підтримати Snapdrop</string>
-    <string name="support_us_summary">Дізнайтесь, як ви можете підтримати спільноту Snapdrop</string>
+    <string name="support_us_summary">Дізнайтесь, як Ви можете підтримати спільноту Snapdrop</string>
     <string name="read_more">читати далі</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Розповісти про <b>Snapdrop для Android</b></string>
@@ -61,7 +61,7 @@
     <string name="intent_files">Файли, обрані для надсилання</string>
     <string name="intent_content">Вміст, обраний для надсилання</string>
     <string name="error_filechooser">Не вдалося вибрати файл</string>
-    <string name="error_network">Будь ласка, переконайтесь, що ви підключені до мережі Wi-Fi</string>
+    <string name="error_network">Будь ласка, переконайтесь, що Ви підключені до мережі Wi-Fi</string>
     <string name="ignore_error_network">Все одно спробувати</string>
     <string name="error_not_reachable_title">Упс, вибачте!</string>
     <string name="error_not_reachable">Сервер Snapdrop недоступний. \n\nЯкщо ваше підключення до Інтернету працює належним чином, а Ви дальше отримуєте це повідомлення, тоді проблеми із сервером, можуть бути з нашої сторони. Ми розуміємо, що це може дратувати і розчаровувати, але, будь ласка, не залишайте поганих відгуків на Google Play. \n\nЦя програма не містить жодної реклами, тому й ніяк не монетизується. Цей проект — лише наше хобі, але ми робимо все можливе, щоб змусити його працювати швидко та безперебійно.</string>
