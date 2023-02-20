@@ -14,13 +14,17 @@
     <string name="notification_channel_name">İndirme tamamlandı</string>
     <!-- Action Buttons -->
     <string name="open">aç</string>
+    <string name="install">yükle</string>
     <string name="reset">Sıfırla</string>
     <string name="copy">kopyala</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Hakkında</string>
     <string name="title_activity_about">Android için Snapdrop Hakkında</string>
+    <string name="pref_about_title">Uygulama hakkında</string>
     <string name="license">Lisans</string>
     <string name="pref_category_settings">Ayarlar</string>
     <string name="source">Kaynak kodu</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Kaynak kodunu GitHub\'da görüntüle</string>
     <string name="components">Açık kaynaklı bileşenler</string>
     <string name="logs">Hata Ayıklama Günlükleri</string>
