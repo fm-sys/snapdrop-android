@@ -14,13 +14,17 @@
     <string name="notification_channel_name">Nedladdning klar</string>
     <!-- Action Buttons -->
     <string name="open">öppna</string>
+    <string name="install">installera</string>
     <string name="reset">återställ</string>
     <string name="copy">kopiera</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Om</string>
     <string name="title_activity_about">Om Snapdrop för Android</string>
+    <string name="pref_about_title">Om denna app</string>
     <string name="license">Licens</string>
     <string name="pref_category_settings">Inställningar</string>
     <string name="source">Källkod</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Se källkod på GitHub</string>
     <string name="components">Öppen källkodskomponenter</string>
     <string name="logs">Felsökningsloggar</string>
@@ -29,6 +33,7 @@
     <string name="crowdin_summary">Hjälp till att översätta <b>Snapdrop för Android</b> till ditt favoritspråk</string>
     <string name="support_us">Stöd Snapdrop</string>
     <string name="support_us_summary">Se hur du kan stödja Snapdrop-communityn</string>
+    <string name="read_more">läs mer</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Berätta om <b>Snapdrop för Android</b></string>
     <string name="version">Version</string>
