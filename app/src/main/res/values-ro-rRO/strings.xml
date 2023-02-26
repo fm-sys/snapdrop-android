@@ -18,10 +18,13 @@
     <string name="reset">resetează</string>
     <string name="copy">copiați</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Despre</string>
     <string name="title_activity_about">Despre Snapdrop pentru Android</string>
+    <string name="pref_about_title">Despre această aplicație</string>
     <string name="license">Licență</string>
     <string name="pref_category_settings">Setări</string>
     <string name="source">Codul sursă</string>
+    <string name="github">Github</string>
     <string name="source_summary">Vezi codul sursă pe GitHub</string>
     <string name="components">Componente open source</string>
     <string name="logs">Jurnal Depanare</string>
@@ -30,6 +33,7 @@
     <string name="crowdin_summary">Ajută la traducerea <b>Snapdrop pentru Android</b> în limba ta preferată</string>
     <string name="support_us">Susține Snapdrop</string>
     <string name="support_us_summary">Vezi, cum poți susține comunitatea Snapdrop</string>
+    <string name="read_more">citește mai mult</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Spune despre <b>Snapdrop pentru Android</b></string>
     <string name="version">Versiune</string>
