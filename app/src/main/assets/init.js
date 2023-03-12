@@ -99,14 +99,30 @@ try {
     console.error(e);
 }
 
-//catch chunks
+//get header
 try {
-    Peer.prototype._oFH = Peer.prototype._onFileHeader;
+   Peer.prototype._oFH = Peer.prototype._onFileHeader;
     Peer.prototype._onFileHeader = function(header){
-        SnapdropAndroid.newFile(header.name,header.mime, header.size);
+        SnapdropAndroid.newFile(header.name, header.mime, header.size);
         this._oFH(header);
     };
+} catch (e) {
+    console.error(e);
+}
 
+//get header for pairdrop compatibility
+try {
+    Peer.prototype._oFH = Peer.prototype._onFilesHeader;
+    Peer.prototype._onFilesHeader = function(header){
+        SnapdropAndroid.newFile(header.name, header.mime, header.size);
+        this._oFH(header);
+    };
+} catch (e) {
+    console.error(e);
+}
+
+//catch chunks
+try {
     Peer.prototype._oCR = Peer.prototype._onChunkReceived;
     Peer.prototype._onChunkReceived = function(chunk){
         let decoder = new TextDecoder('iso-8859-1');
