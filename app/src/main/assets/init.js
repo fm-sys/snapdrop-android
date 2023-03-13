@@ -80,7 +80,8 @@ try {
 //move about background to the left side (for better opening animation)
 try {
     let aboutBackground = document.querySelector('#about>x-background');
-    aboutBackground.style.left = 'calc(32px - 200px)';
+    aboutBackground.style.top = 'calc(-32px - 250px)';
+    aboutBackground.style.left = 'calc(32px - 250px)';
     aboutBackground.style.right = null;
 } catch (e) {
     console.error(e);
@@ -146,7 +147,10 @@ try {
 //show localized display name
 try {
     let localizeDisplayName = function(str){
-        document.getElementById('displayName').textContent = SnapdropAndroid.getYouAreKnownAsTranslationString(str);
+        const displayNameNode = document.getElementById('displayName');
+        if (displayNameNode.textContent.substring(0, 17) === "You are known as ") {
+            displayNameNode.textContent = SnapdropAndroid.getYouAreKnownAsTranslationString(str);
+        }
     };
 
     window.addEventListener('display-name', e => window.setTimeout(_ => localizeDisplayName(e.detail.message.displayName), 100), false);
@@ -162,3 +166,11 @@ try {
 window.addEventListener('file-received', e => {
     SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);
 }, false);
+
+try {
+    document.querySelector('#theme').style.display = "none";
+    document.querySelector('.icon-button[href="#about"]').style.display = "none";
+    document.querySelector('.icon-button[href="#"]').style.display = "none";
+} catch (e) {
+    console.error(e);
+}
