@@ -149,7 +149,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 try {
                     final Document doc = Jsoup.connect(newValue).get();
                     requireActivity().runOnUiThread(() -> {
-                        if (doc.selectFirst(".icon-button[href=\"#about\"]") != null && doc.selectFirst("#about>x-background") != null) {
+                        if (doc.selectFirst("x-peers") != null) {
                             // website seems to be similar to snapdrop... The check could be improved of course.
                             baseUrlPref.setSummary(newValue);
                             Snackbar.make(requireView(), R.string.baseurl_instance_verified, Snackbar.LENGTH_LONG).show();
