@@ -14,13 +14,17 @@
     <string name="notification_channel_name">Изтеглянето бе завършено</string>
     <!-- Action Buttons -->
     <string name="open">отвори</string>
+    <string name="install">инсталирай</string>
     <string name="reset">нулирай</string>
     <string name="copy">копирай</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Относно</string>
     <string name="title_activity_about">Повече за Snapdrop за Андроид</string>
+    <string name="pref_about_title">Относно приложението</string>
     <string name="license">Лиценз</string>
     <string name="pref_category_settings">Настройки</string>
     <string name="source">Сорс код</string>
+    <string name="github">GitHub</string>
     <string name="source_summary">Преглед на сорс кода в GitHub</string>
     <string name="components">Компоненти с отворен код</string>
     <string name="logs">Логове</string>
@@ -29,6 +33,7 @@
     <string name="crowdin_summary">Как можеш да преведеш <b>Snapdrop for Android</b> на твоя език</string>
     <string name="support_us">Подкрепи Snapdrop</string>
     <string name="support_us_summary">Виж как можеш да подкрепиш Snapdrop общността</string>
+    <string name="read_more">прочети още</string>
     <string name="twitter">Туитър</string>
     <string name="twitter_summary">Разкажи за <b>Snapdrop за Андроид</b></string>
     <string name="version">Версия</string>
@@ -46,6 +51,7 @@
         <item>Тъмна</item>
     </string-array>
     <string name="baseurl_title">Основен линк</string>
+    <string name="baseurl_instance_verified">Snapdrop сесията бе успешно заверена</string>
     <string name="baseurl_no_snapdrop_instance">Това не изглежда да е част от Snapdrop</string>
     <string name="baseurl_check_instance_failed">Не успях да потвърдя, че това е част от Snapdrop</string>
     <string name="save_location">Запази местоположението</string>
