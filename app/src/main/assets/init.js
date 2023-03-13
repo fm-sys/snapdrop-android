@@ -134,8 +134,13 @@ try {
     console.error(e);
 }
 
-let downloadCancel = document.querySelector("#receiveDialog>x-background>x-paper>div.row-reverse>button");
-downloadCancel.addEventListener("click", function() { SnapdropAndroid.ignoreClickedListener(); });
+//register ignoreClickedListener
+try {
+    let downloadCancel = document.querySelector("#receiveDialog>x-background>x-paper>div.row-reverse>button");
+    downloadCancel.addEventListener("click", function() { SnapdropAndroid.ignoreClickedListener(); });
+} catch (e) {
+    console.error(e);
+}
 
 
 //show localized display name

@@ -189,15 +189,17 @@ public class MainActivity extends AppCompatActivity {
         CookieManager.getInstance().setAcceptThirdPartyCookies(binding.webview, true);
 
         binding.webview.setDownloadListener((url, userAgent, contentDisposition, mimetype, contentLength) -> {
+            Log.d("download listener", "search file of size " + contentLength);
             synchronized (downloadFilesList) {
                 final Iterator<JavaScriptInterface.FileHeader> iterator = downloadFilesList.iterator();
                 while (iterator.hasNext()) {
                     final JavaScriptInterface.FileHeader file = iterator.next();
-                    if (file.getSize().equals(String.valueOf(contentLength))) {
+                    Log.d("download listener", file.toString());
+//                    if (file.getSize().equals(String.valueOf(contentLength))) {
                         copyTempToDownloads(file);
                         iterator.remove();
-                        break;
-                    }
+//                        break;
+//                    }
                 }
             }
         });

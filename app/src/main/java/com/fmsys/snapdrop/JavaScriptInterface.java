@@ -137,6 +137,8 @@ public class JavaScriptInterface {
         IOUtils.closeStreamQuietly(fileOutputStream);
         if (fileHeader != null && fileHeader.file.delete()) {
             Log.d("ignoreClickListener", "File was deleted from SAF database");
+        } else {
+            Log.d("ignoreClickListener", "Ignore was clicked, however we haven't recognized that a file was downloaded at all");
         }
     }
 
@@ -177,6 +179,15 @@ public class JavaScriptInterface {
 
         public Uri getFileUri() {
             return file.getUri();
+        }
+
+        @Override
+        public String toString() {
+            return "FileHeader{" +
+                    "name='" + name + '\'' +
+                    ", mime='" + mime + '\'' +
+                    ", size='" + size + '\'' +
+                    '}';
         }
     }
 
