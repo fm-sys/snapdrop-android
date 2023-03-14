@@ -18,6 +18,9 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Animatable2;
+import android.graphics.drawable.AnimatedVectorDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -221,7 +224,14 @@ public class MainActivity extends AppCompatActivity {
 
         binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
 
-//        splashScreen.setKeepOnScreenCondition(state::isCurrentlyStarting);
+        AnimatedVectorDrawable loadAnimationDrawable = (AnimatedVectorDrawable) binding.loadAnimator.getDrawable();
+        loadAnimationDrawable.registerAnimationCallback(new Animatable2.AnimationCallback() {
+            @Override
+            public void onAnimationEnd(Drawable drawable) {
+                loadAnimationDrawable.start();
+            }
+        });
+        loadAnimationDrawable.start();
     }
 
     @Override
@@ -521,7 +531,7 @@ public class MainActivity extends AppCompatActivity {
             //website initialisation
             Log.w("WebView", "load init script...");
             binding.webview.evaluateJavascript(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"),
-                    returnValue -> binding.progress.getRoot().animate().alpha(0).withEndAction(() -> binding.webview.animate().alpha(1).start()));
+                    returnValue -> binding.loadAnimator.animate().alpha(0).withEndAction(() -> binding.webview.animate().alpha(1).start()));
             binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()), null);
             WebsiteLocalizer.localize(binding.webview);
             Log.w("WebView", "init end.");

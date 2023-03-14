@@ -35,9 +35,12 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <include
-                    android:id="@+id/progress"
-                    layout="@layout/progress_dialog" />
+                <ImageView
+                    android:id="@+id/load_animator"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/snapdrop_anim"
+                    app:tint="@color/colorAccent" />
             </LinearLayout>
 
             <WebView
