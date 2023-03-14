@@ -1,23 +1,33 @@
 package com.fmsys.snapdrop;
 
 import android.content.Context;
+import android.net.Uri;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 
+import androidx.documentfile.provider.DocumentFile;
+
+import com.anggrayudi.storage.FileWrapper;
+import com.anggrayudi.storage.extension.IOUtils;
+import com.anggrayudi.storage.extension.UriUtils;
+import com.anggrayudi.storage.file.DocumentFileCompat;
+import com.anggrayudi.storage.file.DocumentFileUtils;
+import com.anggrayudi.storage.media.FileDescription;
 import com.fmsys.snapdrop.utils.ClipboardUtils;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
 public class JavaScriptInterface {
     private final MainActivity context;
 
-    private FileOutputStream fileOutputStream;
+    private OutputStream fileOutputStream;
     private FileHeader fileHeader;
 
     public JavaScriptInterface(final MainActivity context) {
@@ -26,14 +36,45 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void newFile(final String fileName, final String mimeType, final String fileSize) throws IOException {
-        final File outputDir = context.getCacheDir();
-        final String[] nameSplit = fileName.split("\\.");
-        while (nameSplit[0].length() < 3) {
-            nameSplit[0] += nameSplit[0];
+        final FileWrapper fileWrapper = createFileWrapper(fileName, mimeType);
+        if (fileWrapper == null) {
+            throw new IOException("Missing storage permissions");
         }
-        final File tempFile = File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], outputDir);
-        fileOutputStream = new FileOutputStream(tempFile);
-        fileHeader = new FileHeader(fileName, mimeType, fileSize, tempFile);
+        fileOutputStream = UriUtils.openOutputStream(fileWrapper.getUri(), context.getApplicationContext());
+        if (fileOutputStream == null) {
+            throw new IOException("Cannot write target file");
+        }
+        fileHeader = new FileHeader(fileName, mimeType, fileSize, fileWrapper);
+    }
+
+    private FileWrapper createFileWrapper(final String fileName, final String mimeType) throws IOException {
+        if (Build.VERSION.SDK_INT > 28) {
+            /*
+            Make file transfer faster 2x on scoped storage by writing to media store database directly,
+            instead of writing to temporary file first. It could save storage lifetime because
+            the file is written once only.
+             */
+            final DocumentFile saveLocation = MainActivity.getSaveLocation();
+            if (saveLocation != null) {
+                final DocumentFile file = DocumentFileUtils.makeFile(saveLocation, context.getApplicationContext(), fileName, mimeType);
+                if (file != null) {
+                    return new FileWrapper.Document(file);
+                }
+            }
+            final FileDescription description = new FileDescription(fileName, "", mimeType);
+            return DocumentFileCompat.createDownloadWithMediaStoreFallback(context.getApplicationContext(), description);
+        } else {
+            /*
+            Prior to scoped storage restriction, SimpleStorage will use File#renameTo(), so no need to worry
+            about the storage's lifetime.
+             */
+            final String[] nameSplit = fileName.split("\\.");
+            while (nameSplit[0].length() < 3) {
+                nameSplit[0] += nameSplit[0];
+            }
+            final DocumentFile file = DocumentFile.fromFile(File.createTempFile(nameSplit[0], "." + nameSplit[nameSplit.length - 1], context.getCacheDir()));
+            return new FileWrapper.Document(file);
+        }
     }
 
     @JavascriptInterface
@@ -90,7 +131,17 @@ public class JavaScriptInterface {
     public void dialogHidden() {
         context.dialogVisible = false;
     }
-    
+
+    @JavascriptInterface
+    public void ignoreClickedListener() {
+        IOUtils.closeStreamQuietly(fileOutputStream);
+        if (fileHeader != null && fileHeader.file.delete()) {
+            Log.d("ignoreClickListener", "File was deleted from SAF database");
+        } else {
+            Log.d("ignoreClickListener", "Ignore was clicked, however we haven't recognized that a file was downloaded at all");
+        }
+    }
+
     @JavascriptInterface
     public void setProgress(final float progress) {
         if (progress > 0) {
@@ -105,13 +156,13 @@ public class JavaScriptInterface {
         private final String name;
         private final String mime;
         private final String size;
-        private final File file;
+        private final FileWrapper file;
 
-        public FileHeader(final String name, final String mime, final String size, final File path) {
+        public FileHeader(final String name, final String mime, final String size, final FileWrapper file) {
             this.name = name;
             this.mime = mime;
             this.size = size;
-            this.file = path;
+            this.file = file;
         }
 
         public String getName() {
@@ -126,8 +177,17 @@ public class JavaScriptInterface {
             return size;
         }
 
-        public File getTempFile() {
-            return file;
+        public Uri getFileUri() {
+            return file.getUri();
+        }
+
+        @Override
+        public String toString() {
+            return "FileHeader{" +
+                    "name='" + name + '\'' +
+                    ", mime='" + mime + '\'' +
+                    ", size='" + size + '\'' +
+                    '}';
         }
     }
 
