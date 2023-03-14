@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
 
-        splashScreen.setKeepOnScreenCondition(state::isCurrentlyStarting);
+//        splashScreen.setKeepOnScreenCondition(state::isCurrentlyStarting);
     }
 
     @Override
@@ -257,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
         if (NetworkUtils.isWifiAvailable() && !transfer.get() && !dialogVisible || forceRefresh) {
             binding.webview.loadUrl(baseURL);
             forceRefresh = false;
+            binding.webview.animate().alpha(0).start();
         } else if (transfer.get() || dialogVisible) {
             binding.pullToRefresh.setRefreshing(false);
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
@@ -506,6 +507,7 @@ public class MainActivity extends AppCompatActivity {
                 state.setCurrentlyOffline(false);
                 initSnapdrop();
             } else {
+                binding.webview.animate().alpha(1).start();
                 Log.w("WebView", "finished loading " + url);
             }
 
@@ -518,7 +520,8 @@ public class MainActivity extends AppCompatActivity {
             }
             //website initialisation
             Log.w("WebView", "load init script...");
-            binding.webview.evaluateJavascript(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"), null);
+            binding.webview.evaluateJavascript(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"),
+                    returnValue -> binding.progress.getRoot().animate().alpha(0).withEndAction(() -> binding.webview.animate().alpha(1).start()));
             binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()), null);
             WebsiteLocalizer.localize(binding.webview);
             Log.w("WebView", "init end.");
