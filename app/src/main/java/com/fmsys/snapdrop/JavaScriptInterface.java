@@ -196,7 +196,7 @@ public class JavaScriptInterface {
             final StringBuilder text = new StringBuilder("javascript:");
             String currentLine;
             while ((currentLine = reader.readLine()) != null) {
-                if (!currentLine.startsWith("//")) {
+                if (!currentLine.trim().startsWith("//")) {
                     text.append(currentLine);
                 }
             }

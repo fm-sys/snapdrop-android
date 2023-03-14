@@ -148,6 +148,7 @@ try {
 try {
     let localizeDisplayName = function(str){
         const displayNameNode = document.getElementById('displayName');
+        // don't change it e.g. for pairdrop.net
         if (displayNameNode.textContent.substring(0, 17) === "You are known as ") {
             displayNameNode.textContent = SnapdropAndroid.getYouAreKnownAsTranslationString(str);
         }
@@ -167,6 +168,7 @@ window.addEventListener('file-received', e => {
     SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);
 }, false);
 
+//hide unnecessary web toolbar buttons
 try {
     document.querySelector('#theme').style.display = "none";
     document.querySelector('.icon-button[href="#about"]').style.display = "none";
