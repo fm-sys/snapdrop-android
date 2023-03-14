@@ -37,7 +37,7 @@ However, even if it theoretically would fully work in your browser and you don't
 <img src="https://raw.githubusercontent.com/fm-sys/snapdrop-android/master/fastlane/metadata/android/en-US/images/featureGraphic.png" width="43.3%"></img> <img src="https://raw.githubusercontent.com/fm-sys/snapdrop-android/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="10%"></img> <img src="https://raw.githubusercontent.com/fm-sys/snapdrop-android/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="10%"></img> <img src="https://raw.githubusercontent.com/fm-sys/snapdrop-android/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="10%"></img> <img src="https://raw.githubusercontent.com/fm-sys/snapdrop-android/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" width="10%"></img> <img src="https://raw.githubusercontent.com/fm-sys/snapdrop-android/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" width="10%"></img> 
 
 ## Support Snapdrop
-🔗 [See how you can support this app and the snapdrop community](https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md)
+➡️ [See how you can support this app and the snapdrop community](https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md)
 
 ## Contributing
 **Snapdrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
