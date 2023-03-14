@@ -195,11 +195,8 @@ public class MainActivity extends AppCompatActivity {
                 while (iterator.hasNext()) {
                     final JavaScriptInterface.FileHeader file = iterator.next();
                     Log.d("download listener", file.toString());
-//                    if (file.getSize().equals(String.valueOf(contentLength))) {
-                        copyTempToDownloads(file);
-                        iterator.remove();
-//                        break;
-//                    }
+                    copyTempToDownloads(file);
+                    iterator.remove();
                 }
             }
         });
