@@ -5,7 +5,7 @@
     <string name="err_no_browser">Browser kan niet worden geopend</string>
     <string name="err_no_app">Geen app gevonden om dit bestand te openen</string>
     <string name="open_url">URL openen</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Welkom bij Snapdrop</string>
     <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> of de Snapdrop app op een ander apparaat op uw lokale WiFi-netwerk.\n2. Tik op het apparaat waarmee je de bestand(en) wilt delen.\n3. Klaar! De bestand(en) worden verstuurd…</string>
     <!-- Download -->
