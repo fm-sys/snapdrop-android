@@ -28,7 +28,7 @@
         android:layout_below="@id/title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="@string/app_welcome_summary"
+        android:text="@string/onboarding_howto_summary"
         android:textAlignment="center"
         android:textColor="@color/textColorWhite"
         android:textSize="16sp" />
@@ -41,7 +41,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         app:shapeAppearanceOverlay="@style/roundedCornersImage"
-        app:srcCompat="@drawable/snapdrop_screenshot" />
+        app:srcCompat="@drawable/instance_in_browser" />
 
     <Button
         android:id="@+id/continue_button"
