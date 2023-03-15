@@ -577,7 +577,7 @@ public class MainActivity extends AppCompatActivity {
             if (error.getErrorCode() == ERROR_CONNECT || error.getErrorCode() == ERROR_TIMEOUT) {
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle(R.string.error_not_reachable_title)
-                        .setMessage(R.string.error_not_reachable)
+                        .setMessage(R.string.error_server_not_reachable)
                         .setPositiveButton(android.R.string.ok, null)
                         .show();
             }
