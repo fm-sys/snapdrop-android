@@ -14,6 +14,7 @@
     <string name="onboarding_choose_server_description">Questa app è un client ottimizzato per le applicazioni web Snapdrop e PairDrop.\nScegli una delle seguenti istanze o specifica un URL personalizzato a cui connettersi.\n\nNota: Devi scegliere lo stesso URL su tutti i dispositivi.</string>
     <string name="onboarding_storage_permission">Autorizzazione di archiviazione</string>
     <string name="onboarding_storage_permission_description">Questa app è un\'utilità di condivisione di file. Pertanto, è richiesta l\'autorizzazione di archiviazione per utilizzarla.</string>
+    <string name="onboarding_server_pairdrop_summary">(raccomandato)\nFunzionalità di collegamento, trasferimento internet e si concentra sulla stabilità.</string>
     <string name="onboarding_server_snapdrop_summary">Il classico snapdrop. Pulito e semplice.</string>
     <string name="onboarding_server_custom">URL personalizzato</string>
     <string name="onboarding_server_custom_summary">Gli esperti possono anche utilizzare i propri server.</string>
