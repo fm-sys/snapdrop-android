@@ -1,6 +1,5 @@
 import os
 import time
-import github_action_utils as gha_utils
 from googletrans import Translator
 import requests
 import re
@@ -45,4 +44,14 @@ for line in text.splitlines():
             table_initialized = False
 
 
-gha_utils.set_output("content", printcache.strip())
+ACTION_ENV_DELIMITER = "__ENV_DELIMITER__"
+def _build_file_input(name, value):
+    return (
+        f"{name}"
+        f"<<{ACTION_ENV_DELIMITER}\n"
+        f"{value}\n"
+        f"{ACTION_ENV_DELIMITER}\n".encode("utf-8")
+    )
+
+with open(os.environ["GITHUB_OUTPUT"], "ab") as f:
+    f.write(_build_file_input("content", printcache.strip()))
