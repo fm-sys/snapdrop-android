@@ -8,14 +8,18 @@
     <string name="open_url">Abrir URL</string>
     <!-- Onboarding -->
     <string name="onboarding_button_continue">continuar</string>
+    <string name="onboarding_button_grant">otorgar permiso</string>
     <string name="onboarding_button_finish">terminar</string>
     <string name="onboarding_choose_server">Selecciona un servidor</string>
+    <string name="onboarding_choose_server_description">Esta aplicación necesita conectarse a un servidor para establecer la conexión entre dispositivos. Tus archivos permanecerán privados todo el tiempo.\n\nNota: Debes elegir el mismo servidor para todos tus dispositivos.</string>
+    <string name="onboarding_storage_permission">Permiso de almacenamiento</string>
+    <string name="onboarding_storage_permission_description">Esta aplicación es una utilidad para compartir archivos. Por lo tanto, el permiso de almacenamiento es necesario para usarla.</string>
     <string name="onboarding_server_pairdrop_summary">(recomendado) Una versión de Snapdrop más avanzada. Viene con características extra interesantes y servidores más fiables.</string>
     <string name="onboarding_server_snapdrop_summary">El Snapdrop clásico. Limpio y simple.</string>
     <string name="onboarding_server_custom">URL personalizada</string>
     <string name="onboarding_server_custom_summary">Los expertos también pueden alojar sus propios servidores.</string>
     <string name="onboarding_howto">Cómo usar Snapdrop</string>
-    <string name="onboarding_howto_summary">1. Abre  o la aplicación de Snapdrop en cualquier otro dispositivo de tu red Wi-Fi local.\n\n2. Toca en el dispositivo con el que quieres compartir los archivos.\n\n3. ¡Listo! Los archivos se enviarán…</string>
+    <string name="onboarding_howto_summary">1. Abre esta aplicación o %s en cualquier otro dispositivo en tu red WiFi local.\n\n2. Toca en el dispositivo con el que quieres compartir los archivos.\n\n3. ¡Listo! Los archivos se enviarán…</string>
     <string name="app_welcome">Bienvenido a Snapdrop</string>
     <string name="app_welcome_summary">1. Abre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicación Snapdrop en cualquier otro dispositivo de tu red WiFi local.\n2. Pulse en el dispositivo con el que desea compartir los archivos.\n3. ¡Listo! Los archivos se enviarán…</string>
     <!-- Download -->
