@@ -9,11 +9,8 @@
     <string name="onboarding_button_continue">weiter</string>
     <string name="onboarding_button_grant">Zugriff gewähren</string>
     <string name="onboarding_button_finish">fertigstellen</string>
-    <string name="onboarding_choose_server">Server auswählen</string>
-    <string name="onboarding_choose_server_description">Diese App muss sich mit einem Server verbinden, um eine Verbindung zwischen Geräten herstellen zu können. Ihre Dateien sind zu keiner Zeit für den Server lesbar.\n\nHinweis: Sie müssen den gleichen Server für alle Ihre Geräte wählen.</string>
     <string name="onboarding_storage_permission">Speicherberechtigung</string>
     <string name="onboarding_storage_permission_description">Diese App ist ein Datei-Freigabe-Programm. Daher ist die Speicher-Berechtigung erforderlich, um funktionieren zu können.</string>
-    <string name="onboarding_server_pairdrop_summary">(empfohlen) Eine erweiterte Snapdrop-Version, mit coolen Extra-Features und zuverlässigeren Servern.</string>
     <string name="onboarding_server_snapdrop_summary">Das klassische Snapdrop. Schlicht und simpel.</string>
     <string name="onboarding_server_custom">Eigene URL</string>
     <string name="onboarding_server_custom_summary">Experten können auch ihre eigenen Server hosten.</string>
