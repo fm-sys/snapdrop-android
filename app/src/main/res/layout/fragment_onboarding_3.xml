@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/onboarding_button_finish"
+        android:backgroundTint="@color/textColorWhite"
         android:textColor="@color/colorAccent" />
 
 </RelativeLayout>
