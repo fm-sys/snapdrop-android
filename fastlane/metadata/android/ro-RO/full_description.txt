@@ -1,7 +1,7 @@
 Snapdrop pentru Android este un client Android™ gratuit și care are codul sursă disponibil pentru toată lumea și este folosit pentru partajarea fișierelor
 https://snapdrop.net/.
 
-Și tu întâmpini situația în care ai de transferat rapid un fișier de pe telefonul pe PC?
+Și tu întâmpini situația în care ai de transferat rapid un fișier de pe telefon pe PC?
 
 USB? - demodat!
 Bluetooth? - Mult prea greoi și lent!
