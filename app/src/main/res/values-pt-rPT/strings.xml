@@ -5,9 +5,7 @@
     <string name="err_no_browser">Não é possível abrir o browser [navegador]</string>
     <string name="err_no_app">Nenhuma aplicação instalada para abrir este ficheiro</string>
     <string name="open_url">Abrir URL</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Bem vindo ao Snapdrop</string>
-    <string name="app_welcome_summary">1. Abra o <a href="https://snapdrop.net">snapdrop.net</a> ou o aplicativo Snapdrop em qualquer outro dispositivo na sua rede Wi-Fi local.\n2. Toque no dispositivo que você deseja compartilhar o(s) ficheiro(s) com.\n3. Feito! O(s) ficheiro(s) será enviado…</string>
+    <!-- Onboarding -->
     <!-- Download -->
     <string name="download_save_pending">Armazenando o arquivo. Por favor, tenha um cadinho de paciência…</string>
     <string name="download_successful">Foi baixado com sucesso</string>
@@ -18,19 +16,9 @@
     <string name="copy">copiar</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Sobre o Snapdrop para Android</string>
-    <string name="license">Licença</string>
     <string name="pref_category_settings">Configurações</string>
-    <string name="source">Código Fonte</string>
-    <string name="source_summary">Veja o código em GitHub</string>
-    <string name="components">Componentes do Código Aberto</string>
     <string name="logs">Dados de Depuração</string>
     <string name="components_summary">Pressione para exibir</string>
-    <string name="crowdin">Localização</string>
-    <string name="crowdin_summary">Ajude a traduzir o <b>Snapdrop para Android</b> para o seu idioma favorito</string>
-    <string name="support_us">Suporte Snapdrop</string>
-    <string name="support_us_summary">Veja, como tu podes apoiar a comunidade do Snapdrop</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Fale sobre o <b>Snapdrop para Android</b></string>
     <string name="version">Versão</string>
     <string name="pref_device_name_title">Nome do Dispositivo</string>
     <string name="pref_device_name_summary">Definir um nome de dispositivo definido pelo usuário</string>
@@ -57,7 +45,6 @@
     <string name="error_network">Favor verificar se você está conectado a uma rede WiFi</string>
     <string name="ignore_error_network">Deixe-me entrar a mesma</string>
     <string name="error_not_reachable_title">Ups, desculpa!</string>
-    <string name="error_not_reachable">Não foi possível acessar o Snapdrop-Server. \n\nSe sua conexão de internet está funcionando e isso acontece de qualquer forma, podemos ter problemas com o servidor atualmente. Sabemos que isso pode ser muito frustrante, mas por favor, não deixe comentários ruins no Google Play. \n\nEste app está completamente livre de anúncios, então não ganhamos nenhum dinheiro com ele. É apenas um projeto hobby, mas estamos fazendo tudo para que ele volte a funcionar rapidamente.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Abra o Snapdrop nos outros dispositivos para enviar arquivos</string>
     <string name="website_instruction">Toque para enviar arquivos ou toque longo para enviar uma mensagem</string>
