@@ -5,32 +5,24 @@
     <string name="err_no_browser">Brskalnika ni mogoče odpreti</string>
     <string name="err_no_app">Ni najdene aplikacije za odpiranje te vrste datoteke</string>
     <string name="open_url">Odpri povezavo</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Dobrodošli v Snapdrop</string>
-    <string name="app_welcome_summary">1. Odpri <a href="https://snapdrop.net">snapdrop.net</a> ali Snapdrop aplikacijo na katerikoli napravi v vašem lokalnem WiFi omrežju.\n2. Tapnite na napravo z katero želite deliti vaše datoteke.\n3. Končano! Datoteke bodo poslane…</string>
+    <!-- Onboarding -->
     <!-- Download -->
     <string name="download_save_pending">Shranjevanje datoteke. Prosimo počakajte trenutek…</string>
     <string name="download_successful">Prenos uspešen</string>
     <string name="notification_channel_name">Prenos končan</string>
     <!-- Action Buttons -->
     <string name="open">odpri</string>
+    <string name="install">namesti</string>
     <string name="reset">ponastavi</string>
     <string name="copy">kopiraj</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">O programu</string>
     <string name="title_activity_about">O Snapdropu za Android</string>
-    <string name="license">Licenca</string>
+    <string name="pref_about_title">O tej aplikaciji</string>
     <string name="pref_category_settings">Nastavitve</string>
-    <string name="source">Izvorna koda</string>
-    <string name="source_summary">Oglej si izvorno kodo na GitHub-u</string>
-    <string name="components">Odprtokodne komponente</string>
     <string name="logs">Dnevniki odpravljanja napak</string>
     <string name="components_summary">Tapnite za prikaz</string>
-    <string name="crowdin">Lokalizacija</string>
-    <string name="crowdin_summary">Pomagajte nam s prevajanjem <b>Snapdropa za Android</b> v vaš najljubši jezik</string>
-    <string name="support_us">Podprite Snapdrop</string>
-    <string name="support_us_summary">Oglejte si, kako lahko podprete skupnost Snapdrop</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Deli <b>Snapdrop za Android</b></string>
+    <string name="read_more">preberi več</string>
     <string name="version">Različica</string>
     <string name="pref_device_name_title">Ime naprave</string>
     <string name="pref_device_name_summary">Nastavite prilagojeno ime naprave</string>
@@ -46,8 +38,10 @@
         <item>Temna</item>
     </string-array>
     <string name="baseurl_title">Osnovna povezava</string>
+    <string name="baseurl_instance_verified">Primerek Snapdrop je bil uspešno preverjen</string>
     <string name="baseurl_no_snapdrop_instance">Ne zdi se kot Snapdrop primerek</string>
     <string name="baseurl_check_instance_failed">Snapdrop primerka ni bilo mogoče preveriti</string>
+    <string name="baseurl_unofficial_instances">Oglejte si <a href="">FAQ</a> seznam neuradnih primerov. Upoštevajte, da nekateri primeri v aplikaciji morda ne bodo delovali pravilno.</string>
     <string name="save_location">Shrani lokacijo</string>
     <!-- File sharing -->
     <string name="intent_file">Datoteka je izbrana za deljenje</string>
@@ -57,7 +51,6 @@
     <string name="error_network">Prosimo, preverite, če ste povezani z omrežjem WiFi</string>
     <string name="ignore_error_network">Vseeno me spusti naprej</string>
     <string name="error_not_reachable_title">Ups, oprostite!</string>
-    <string name="error_not_reachable">Strežnika Snapdrop ni mogoče doseči. \n\nČe vaša internetna povezava deluje in se to vseeno zgodi, imamo trenutno morda težave s strežnikom. Vemo, da je to lahko zelo frustrirajuče, vendar prosimo da ne puščate slabih ocen na Googl Play-u. \n\nTa aplikacija je popolnoma brez oglasov, zato z njo ne služimo denarja. Ta projekt je le kot hobi, ampak delamo vse, da bo spet hitro deloval.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Za pošiljanje datotek odprite Snapdrop na drugih napravah</string>
     <string name="website_instruction">Tapnite za pošiljanje datotek ali pridržite za pošiljanje sporočila</string>
