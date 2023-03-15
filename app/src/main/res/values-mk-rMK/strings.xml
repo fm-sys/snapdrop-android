@@ -5,7 +5,7 @@
     <string name="err_no_browser">Не може да се отвори прелистувачот</string>
     <string name="err_no_app">Нема апликација инсталирана за да се отвори оваа датотека</string>
     <string name="open_url">Отвори URL</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Добредојдовте во Snapdrop</string>
     <string name="app_welcome_summary">1. Отворте <a href="https://snapdrop.net">snapdrop.net</a> или Snapdrop апликација на кој било друг уред во вашата локална WiFi мрежа.\n2. Допрете на уредот со кој сакате да ги споделите датотеките.\n3. Направено! Датотеките ќе бидат испратени…</string>
     <!-- Download -->
