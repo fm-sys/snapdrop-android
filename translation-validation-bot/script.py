@@ -1,5 +1,5 @@
 import os
-import github
+import time
 
 from googletrans import Translator
 import requests
@@ -31,7 +31,14 @@ for line in text.splitlines():
             if not table_initialized:
                 table_initialized = True
                 print2cache("ID|Translation|Reverse translated source string\n-|-|-")
-            translation = translator.translate(match.group(2).replace("\\n", " \\n "))
+            success = False
+            while not success:
+                try:
+                    translation = translator.translate(match.group(2).replace("\\n", " \\n "))
+                    success = True
+                except:
+                    print("API call blocked, wait some seconds and try again...")
+                    time.sleep(10)
             print2cache(f"{match.group(1)}|{translation.origin} ({translation.src})|{translation.text} ({translation.dest})")
         elif line.startswith("+++"):
             print2cache("\n\n" + line + "\n")
