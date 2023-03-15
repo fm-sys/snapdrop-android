@@ -55,7 +55,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"
                 android:text="@string/onboarding_server_pairdrop"
                 android:textAlignment="center"
                 android:textColor="@color/textColorWhite"
@@ -93,8 +94,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/onboarding_server_snapdrop"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"                android:text="@string/onboarding_server_snapdrop"
                 android:textAlignment="center"
                 android:textColor="@color/textColorWhite"
                 android:textSize="20sp" />
@@ -132,8 +133,8 @@
                 android:id="@+id/customUrl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/onboarding_server_custom"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"                android:text="@string/onboarding_server_custom"
                 android:textAlignment="center"
                 android:textColor="@color/textColorWhite"
                 android:textSize="20sp" />
