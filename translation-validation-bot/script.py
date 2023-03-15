@@ -1,6 +1,6 @@
 import os
 import time
-
+import github_action_utils as gha_utils
 from googletrans import Translator
 import requests
 import re
@@ -45,4 +45,4 @@ for line in text.splitlines():
             table_initialized = False
 
 
-print("::set-output name=content::"+printcache.replace("%", "%25").replace("\n", "%0D").strip())
+gha_utils.set_output("content", printcache.replace("%", "%25").replace("\n", "%0D").strip())
