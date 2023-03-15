@@ -5,7 +5,7 @@
     <string name="err_no_browser">Не удаётся открыть браузер</string>
     <string name="err_no_app">Нет установленных приложений для открытия этого файла</string>
     <string name="open_url">Открыть URL</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Приветствуем в Snapdrop</string>
     <string name="app_welcome_summary">1. Откройте <a href="https://snapdrop.net">snapdrop.net</a> или приложение Snapdrop на любом другом устройстве в вашей локальной WiFi сети.\n2. Нажмите на устройство, с которым вы хотите поделиться файлом (файлами).\n3. Готово! Файл(ы) будет отправлен…</string>
     <!-- Download -->
