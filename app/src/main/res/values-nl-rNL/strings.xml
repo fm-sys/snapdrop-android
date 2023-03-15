@@ -6,8 +6,6 @@
     <string name="err_no_app">Geen app gevonden om dit bestand te openen</string>
     <string name="open_url">URL openen</string>
     <!-- Onboarding -->
-    <string name="app_welcome">Welkom bij Snapdrop</string>
-    <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> of de Snapdrop app op een ander apparaat op uw lokale WiFi-netwerk.\n2. Tik op het apparaat waarmee je de bestand(en) wilt delen.\n3. Klaar! De bestand(en) worden verstuurd…</string>
     <!-- Download -->
     <string name="download_save_pending">Het bestand opslaan. Even geduld…</string>
     <string name="download_successful">Download geslaagd</string>
@@ -19,17 +17,9 @@
     <string name="copy">kopiëren</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Over Snapdrop voor Android</string>
-    <string name="license">Licentie</string>
     <string name="pref_category_settings">Instellingen</string>
-    <string name="source">Source code</string>
-    <string name="source_summary">Bekijk de source code op GitHub</string>
-    <string name="components">Open source componenten</string>
     <string name="logs">Foutopsporingslogboek</string>
     <string name="components_summary">Tik om weer te geven</string>
-    <string name="crowdin">Vertalen</string>
-    <string name="crowdin_summary">Help <b>Snapdrop voor Android</b> te vertalen naar uw favoriete taal</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Vertel over <b>Snapdrop voor Android</b></string>
     <string name="version">Versie</string>
     <string name="pref_device_name_title">Apparaatnaam</string>
     <string name="pref_device_name_summary">Stel een apparaatnaam in</string>
@@ -58,7 +48,6 @@
     <string name="error_network">Controleer of u verbonden bent met een WiFi-netwerk</string>
     <string name="ignore_error_network">Toch proberen</string>
     <string name="error_not_reachable_title">Oeps, sorry!</string>
-    <string name="error_not_reachable">De Snapdrop-server kan niet worden bereikt. \n\nAls uw internetverbinding werkt en dit gebeurt toch, hebben we mogelijk serverproblemen momenteel. We weten dat dit zeer frustrerend kan zijn, maar laat alstublieft geen slechte beoordelingen achter in Google Play.\n\nDeze app is volledig advertentievrij, dus wij verdienen er geen geld mee. Het is maar een hobbyproject, maar we doen er alles aan om de boel snel weer draaiende te krijgen.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Open Snapdrop op andere apparaten om bestanden te delen</string>
     <string name="website_instruction">Tik om bestanden te delen of houd ingedrukt om een bericht te sturen</string>
