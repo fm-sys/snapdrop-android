@@ -10,6 +10,8 @@
     <string name="onboarding_button_continue">continua</string>
     <string name="onboarding_button_grant">concedi l\'autorizzazione</string>
     <string name="onboarding_button_finish">fine</string>
+    <string name="onboarding_choose_server">Scegli un indirizzo del server</string>
+    <string name="onboarding_choose_server_description">Questa app è un client ottimizzato per le applicazioni web Snapdrop e PairDrop.\nScegli una delle seguenti istanze o specifica un URL personalizzato a cui connettersi.\n\nNota: Devi scegliere lo stesso URL su tutti i dispositivi.</string>
     <string name="onboarding_storage_permission">Autorizzazione di archiviazione</string>
     <string name="onboarding_storage_permission_description">Questa app è un\'utilità di condivisione di file. Pertanto, è richiesta l\'autorizzazione di archiviazione per utilizzarla.</string>
     <string name="onboarding_server_snapdrop_summary">Il classico snapdrop. Pulito e semplice.</string>
