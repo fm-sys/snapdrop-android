@@ -5,9 +5,7 @@
     <string name="err_no_browser">Không thể mở trình duyệt</string>
     <string name="err_no_app">Không có ứng dụng nào có thể mở tập tin này</string>
     <string name="open_url">Mở liên kết URL</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Chào mừng đến với Snapdrop</string>
-    <string name="app_welcome_summary">1. Mở <a href="https://snapdrop.net">snapdrop.net</a> hoặc ứng dụng Snapdrop trên thiết bị khác sử dụng chung mạng WiFi.\n2. Nhấn vào thiết bị mà bạn muốn chuyển (các) tập tin tới.\n3. Đã xong! (các) tập tin của bạn sẽ được chuyển…</string>
+    <!-- Onboarding -->
     <!-- Download -->
     <string name="download_save_pending">Đang tải về tệp. Vui lòng đợi…</string>
     <string name="download_successful">Tải xuống thành công</string>
@@ -18,19 +16,9 @@
     <string name="copy">sao chép</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Thông tin về Snapdrop cho Android</string>
-    <string name="license">Bản quyền</string>
     <string name="pref_category_settings">Cài đặt</string>
-    <string name="source">Mã nguồn mở</string>
-    <string name="source_summary">Xem mã nguồn trên Github</string>
-    <string name="components">Các thành phần nguồn mở</string>
     <string name="logs">Nhật ký hoạt động</string>
     <string name="components_summary">Chạm để hiển thị</string>
-    <string name="crowdin">Bản địa hóa</string>
-    <string name="crowdin_summary">Giúp dịch <b>Snapdrop cho Android</b> sang ngôn ngữ yêu thích của bạn</string>
-    <string name="support_us">Hỗ trợ Snapdrop</string>
-    <string name="support_us_summary">Tìm hiểu cách bạn có thể hỗ trợ cộng đồng Snapdrop</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Giới thiệu <b>Snapdrop cho Android</b></string>
     <string name="version">Phiên bản</string>
     <string name="pref_device_name_title">Tên thiết bị</string>
     <string name="pref_device_name_summary">Đặt tên thiết bị tùy chỉnh</string>
@@ -57,7 +45,6 @@
     <string name="error_network">Vui lòng xác minh rằng bạn được kết nối với mạng WiFi</string>
     <string name="ignore_error_network">Cứ cho tôi vào đi</string>
     <string name="error_not_reachable_title">Ầu, xin lỗi!</string>
-    <string name="error_not_reachable">Máy chủ Snapdrop không thể hoàn thành tác vụ. \n\n Nếu kết nối internet của bạn vẫn bình thường nhưng điều này vẫn xảy ra thì có vẻ như máy chủ của chúng tôi đang gặp vấn đề. Chúng tôi biết điều này có thể rất khó chịu, nhưng đừng đánh giá xấu chúng tôi trên Cửa Hàng Play nhé. \n\n Phần mềm này hoàn toàn miễn phí và không có quảng cáo cho nên chúng tôi không hề kiếm được thu nhập từ nó. Đây là một dự án vì cộng đồng, chúng tôi sẽ cố gắng khắc phục mọi thứ nhanh nhất có thể.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Mở Snapdrop trên thiết bị khác để truyền các tập tin</string>
     <string name="website_instruction">Nhấn để truyền tập tin hoặc nhấn giữ để gửi tin nhắn</string>
