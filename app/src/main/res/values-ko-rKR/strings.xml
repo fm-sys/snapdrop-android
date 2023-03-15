@@ -7,8 +7,6 @@
     <string name="open_url">URL 열기</string>
     <!-- Onboarding -->
     <string name="onboarding_button_grant">권한 부여</string>
-    <string name="app_welcome">Snapdrop에 오신 것을 환영합니다!</string>
-    <string name="app_welcome_summary">1. 같은 WiFi에 연결된 다른 장치에서 <a href="https://snapdrop.net">snapdrop.net</a>에 접속하거나 Snapdrop을 실행하세요.\n2. 파일을 공유하고자 하는 기기를 탭하세요.\n3. 파일이 잘 전송될 거예요...</string>
     <!-- Download -->
     <string name="download_save_pending">파일을 저장중입니다. 잠시 기다려주세요...</string>
     <string name="download_successful">다운로드가 완료되었습니다.</string>
@@ -20,17 +18,9 @@
     <string name="copy">복사</string>
     <!-- Settings / About -->
     <string name="title_activity_about">안드로이드용 Snapdrop 정보</string>
-    <string name="license">라이선스</string>
     <string name="pref_category_settings">설정</string>
-    <string name="source">소스 코드</string>
-    <string name="source_summary">GitHub에서 소스 코드 보기</string>
-    <string name="components">오픈소스 라이선스</string>
     <string name="logs">디버그 로그</string>
     <string name="components_summary">눌러서 보기</string>
-    <string name="crowdin">번역</string>
-    <string name="crowdin_summary">당신이 좋아하는 언어로 <b>안드로이드용 Snapdrop</b>을 번역하는데 도움을 주세요!</string>
-    <string name="twitter">트위터</string>
-    <string name="twitter_summary"><b>안드로이드용 Snapdrop</b>에 대해 대화하기</string>
     <string name="version">버전</string>
     <string name="pref_device_name_title">기기 이름</string>
     <string name="pref_device_name_summary">기기 별칭을 정하세요.</string>
@@ -59,7 +49,6 @@
     <string name="error_network">WiFi 네트워크에 연결되어 있는지 확인해주세요.</string>
     <string name="ignore_error_network">무시하고 시작하기</string>
     <string name="error_not_reachable_title">앗, 죄송합니다!</string>
-    <string name="error_not_reachable">SnapDrop 서버에 연결할 수 없습니다. \n\n인터넷이 연결되어 있는데도 이 현상이 일어난다면, 서버에 문제가 있을 수 있습니다. 이런 상황이 불편할 수 있겠지만, 바로 플레이 스토어에 나쁜 리뷰를 달지는 말아주세요. \n\n이 앱에는 광고가 없으므로, 저희는 수익을 얻지 않습니다. 비록 취미 프로젝트이지만, 최대한 빨리 복구하기 위해 노력하고 있습니다.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">파일 전송을 위해 다른 기기에서 Snapdrop을 열어주세요.</string>
     <string name="website_instruction">탭하여 파일을 보내거나 길게 눌러 메세지를 보내세요</string>
