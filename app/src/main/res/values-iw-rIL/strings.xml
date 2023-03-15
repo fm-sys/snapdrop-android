@@ -27,8 +27,6 @@
     <string name="components_summary">לחץ להצגה</string>
     <string name="crowdin">שפה</string>
     <string name="crowdin_summary">עזור לתרגם את <b> סנאפדרופ לאנדרואיד</b> לשפה המועדפת עליך</string>
-    <string name="support_us">תמוך בסנאפדרופ</string>
-    <string name="support_us_summary">בדוק איך אתה יכול לתמוך בקהילת סנאפדרופ</string>
     <string name="twitter">טוויטר</string>
     <string name="twitter_summary">ספר על <b>סנאפדרופ לאנדרואיד</b></string>
     <string name="version">גירסה</string>
