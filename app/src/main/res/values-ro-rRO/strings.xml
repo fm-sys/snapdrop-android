@@ -10,11 +10,11 @@
     <string name="onboarding_button_continue">continuă</string>
     <string name="onboarding_button_grant">Acordă permisiuni</string>
     <string name="onboarding_button_finish">Finalizare</string>
-    <string name="onboarding_choose_server">Alege un server</string>
-    <string name="onboarding_choose_server_description">Această aplicație trebuie să fie conectată la server pentru a face legătura între dispozitive. Fișierele vor fi private întotdeauna.\n\nNotă: Trebuie să alegi același server pentru toate dispozitivele.</string>
+    <string name="onboarding_choose_server">Alege o adresă de server</string>
+    <string name="onboarding_choose_server_description">Această aplicație este un client optimizat pentru aplicația web Snapdrop și PairDrop.\nAlege una dintre următoarele instanțe sau specifică un URL personalizat la care să te conectezi.\n\nNotă: Trebuie să alegeți același URL pe toate dispozitivele.</string>
     <string name="onboarding_storage_permission">Permisiuni pentru stocare</string>
     <string name="onboarding_storage_permission_description">Această aplicație este pentru partajări. De aceea sunt necesare permisiuni pentru stocare.</string>
-    <string name="onboarding_server_pairdrop_summary">(recomandare) O versiune avansată de Snapdrop. Vine cu noi funcții și servere de încredere.</string>
+    <string name="onboarding_server_pairdrop_summary">(recomandat)\nFuncția de asociere, transfer internet și concentrare asupra stabilității.</string>
     <string name="onboarding_server_snapdrop_summary">Snapdrop classic. Simplu și curat.</string>
     <string name="onboarding_server_custom">URL personalizat</string>
     <string name="onboarding_server_custom_summary">Experţii îşi pot găzdui şi propriile servere.</string>
