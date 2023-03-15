@@ -28,8 +28,6 @@
     <string name="components_summary">輕觸顯示</string>
     <string name="crowdin">翻譯</string>
     <string name="crowdin_summary">協助翻譯 <b>Snapdrop for Android</b> 為你喜歡的語言</string>
-    <string name="support_us">協助 Snapdrop</string>
-    <string name="support_us_summary">了解您可以如何協助 Snapdrop 社群</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">持續接收<b>Snapdrop for Android</b>的最新消息</string>
     <string name="version">版本</string>
