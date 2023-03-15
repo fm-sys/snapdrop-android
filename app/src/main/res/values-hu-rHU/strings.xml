@@ -6,8 +6,6 @@
     <string name="err_no_app">Nincs megfelelő alkalmazás a fájl megnyitásához</string>
     <string name="open_url">URL megnyitása</string>
     <!-- Onboarding -->
-    <string name="app_welcome">Üdvözöllek a Snapdrop-ban</string>
-    <string name="app_welcome_summary">1. Nyisd meg a <a href="https://snapdrop.net">snapdrop.net</a> vagy a Snapdrop alkalmazást bármilyen másik eszközön a helyi hálózaton belül.\n2. Kattints az eszközre amire meg akarod osztani a fájl(oka)t.\n3. Kész. A fájlok küldése megkezdődik…</string>
     <!-- Download -->
     <string name="download_save_pending">Fájl tárolása. Egy kis türelmet…</string>
     <string name="download_successful">Sikeresen letöltve</string>
@@ -18,17 +16,9 @@
     <string name="copy">másolás</string>
     <!-- Settings / About -->
     <string name="title_activity_about">A Snapdrop-ról Android készülékre</string>
-    <string name="license">Licensz</string>
     <string name="pref_category_settings">Beállítások</string>
-    <string name="source">Forráskód</string>
-    <string name="source_summary">Forráskód megtekintése a GitHub-on</string>
-    <string name="components">Nyilt forráskódú összetevők</string>
     <string name="logs">Hibakeresési naplók</string>
     <string name="components_summary">Érintsd meg a megjelenítéshez</string>
-    <string name="crowdin">Lokalizáció</string>
-    <string name="crowdin_summary">Segítsd a <b>Snapdrop Androidra</b> fordítását a kedvenc nyelvedre</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Beszélj a <b>Snapdrop Androidról</b></string>
     <string name="version">Verzió</string>
     <string name="pref_device_name_title">Az eszköz neve</string>
     <string name="pref_device_name_summary">Állíts be egy saját eszköznevet</string>
@@ -55,7 +45,6 @@
     <string name="error_network">Ellenőrizd, hogy csatlakozva vagy-e egy WiFi hálózathoz</string>
     <string name="ignore_error_network">Belépés mindenképpen</string>
     <string name="error_not_reachable_title">Hoppá, elnézést!</string>
-    <string name="error_not_reachable">A Snapdrop-Szerver nem elérhető. \n\nHa az interneted működik, és akkor is ez történik, akkor lehetséges, hogy jelenleg szerveroldali problémáink vannak. Elhisszük, hogy ez nagyon idegesítő lehet, de kérjük ne írj rossz értékelést a Google Play-en. \n\nAz alkalmazás teljesen hírdetésmentes, szóval nem kapunk semmi pénzt belőle. Csak egy hobbi projekt, de mindent megteszünk, hogy újra működjön.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Nyisd meg a Snapdrop-ot más eszközökön a fájlküldéshez</string>
     <string name="website_instruction">Érintsd meg a fájlküldéshez, vagy nyomd hosszan az üzenetküldéshez</string>
