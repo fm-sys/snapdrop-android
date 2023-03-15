@@ -143,6 +143,13 @@ try {
     console.error(e);
 }
 
+//avoid redundant pairdrop.net dialog
+try {
+    ReceiveFileDialog.prototype._shw = Dialog.prototype.show;
+    ReceiveFileDialog.prototype.show = function(){ };
+} catch (e) {
+    console.error(e);
+}
 
 //show localized display name
 try {
