@@ -6,8 +6,6 @@
     <string name="err_no_app">未找到用于打开此文件的应用</string>
     <string name="open_url">打开网址</string>
     <!-- Onboarding -->
-    <string name="app_welcome">欢迎使用 Snapdrop</string>
-    <string name="app_welcome_summary">1. 在您的WiFi局域网络中的任意设备上打开 <a href="https://snapdrop.net">snapdrop.net</a> 或 Snapdrop 应用。\n 2. 轻按您想要与之共享文件的设备。\n 3. 好了！文件将立即被发送…</string>
     <!-- Download -->
     <string name="download_save_pending">存储文件。请稍等…</string>
     <string name="download_successful">下载成功</string>
@@ -18,17 +16,9 @@
     <string name="copy">复制</string>
     <!-- Settings / About -->
     <string name="title_activity_about">关于Snapdrop安卓版</string>
-    <string name="license">许可证</string>
     <string name="pref_category_settings">设置</string>
-    <string name="source">源码</string>
-    <string name="source_summary">在 GitHub 上查看源代码</string>
-    <string name="components">开源组件</string>
     <string name="logs">调试日志</string>
     <string name="components_summary">点击查看</string>
-    <string name="crowdin">本地化</string>
-    <string name="crowdin_summary">帮助将 <b>Snapdrop for Android</b> 翻译成您最喜欢的语言</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">关于<b>Snapdrop for Android</b></string>
     <string name="version">版本</string>
     <string name="pref_device_name_title">设备名称</string>
     <string name="pref_device_name_summary">自定义设备名称</string>
@@ -55,7 +45,6 @@
     <string name="error_network">请确保您已经连接到WiFi网络</string>
     <string name="ignore_error_network">忽略并继续</string>
     <string name="error_not_reachable_title">啊哦，很抱歉！</string>
-    <string name="error_not_reachable">无法连接到 Snapdrop 服务器。 \n\n如果您的网络连接正常，但是仍然出现这种情况，则可能是我们服务器目前遇到了问题。 我们知道这可能令人沮丧，但请不要在 Google Play 上留下差评。\n\n此应用完全没有广告，所以我们不会用它赚任何钱。 它只是一个公益项目，但我们正在努力使它尽快恢复。</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">在其他设备上打开Snapdrop以传输文件</string>
     <string name="website_instruction">点击发送文件或长按发送消息</string>
