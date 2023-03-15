@@ -6,6 +6,18 @@
     <string name="err_no_app">Keine App zum Öffnen dieser Datei gefunden</string>
     <string name="open_url">URL öffnen</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">weiter</string>
+    <string name="onboarding_button_grant">Zugriff gewähren</string>
+    <string name="onboarding_button_finish">fertigstellen</string>
+    <string name="onboarding_choose_server">Server auswählen</string>
+    <string name="onboarding_choose_server_description">Diese App muss sich mit einem Server verbinden, um eine Verbindung zwischen Geräten herstellen zu können. Ihre Dateien sind zu keiner Zeit für den Server lesbar.\n\nHinweis: Sie müssen den gleichen Server für alle Ihre Geräte wählen.</string>
+    <string name="onboarding_storage_permission">Speicherberechtigung</string>
+    <string name="onboarding_storage_permission_description">Diese App ist ein Datei-Freigabe-Programm. Daher ist die Speicher-Berechtigung erforderlich, um funktionieren zu können.</string>
+    <string name="onboarding_server_pairdrop_summary">(empfohlen) Eine erweiterte Snapdrop-Version, mit coolen Extra-Features und zuverlässigeren Servern.</string>
+    <string name="onboarding_server_snapdrop_summary">Das klassische Snapdrop. Schlicht und simpel.</string>
+    <string name="onboarding_server_custom">Eigene URL</string>
+    <string name="onboarding_server_custom_summary">Experten können auch ihre eigenen Server hosten.</string>
+    <string name="onboarding_howto_summary">1. Öffne diese App oder %s auf einem anderen Gerät in deinem lokalen WLAN-Netzwerk.\n\n2. Tippe auf das Gerät, mit dem du die Datei(en) teilen möchtest.\n\n3. Fertig! Die Datei(en) werden nun gesendet…</string>
     <string name="app_welcome">Willkommen bei Snapdrop</string>
     <string name="app_welcome_summary">1. Öffne <a href="https://snapdrop.net">snapdrop.net</a> oder die Snapdrop-App auf einem anderen Gerät in deinem lokalen WLAN-Netzwerk.\n2. Tippe auf das Gerät, mit dem du die Datei(en) teilen möchtest.\n3. Fertig! Die Datei(en) werden nun gesendet…</string>
     <!-- Download -->
