@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop для Android</string>
+    <string name="err_no_browser">Не вдається відкрити браузер</string>
+    <string name="err_no_app">Немає встановлених програм, щоб відкрити цей файл</string>
+    <string name="open_url">Відкрити URL-адресу</string>
+    <!-- Onboarding -->
+    <!-- Download -->
+    <string name="download_save_pending">Збереження файлу. Будь ласка зачекайте…</string>
+    <string name="download_successful">Завантажено успішно</string>
+    <string name="notification_channel_name">Завантаження завершено</string>
+    <!-- Action Buttons -->
+    <string name="open">відкрити</string>
+    <string name="install">встановити</string>
+    <string name="reset">скинути</string>
+    <string name="copy">копіювати</string>
+    <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Про</string>
+    <string name="title_activity_about">Про Snapdrop для Android</string>
+    <string name="pref_about_title">Про цю програму</string>
+    <string name="pref_category_settings">Налаштування</string>
+    <string name="logs">Журнал налагодження</string>
+    <string name="components_summary">Натисніть для відображення</string>
+    <string name="read_more">читати далі</string>
+    <string name="version">Версія</string>
+    <string name="pref_device_name_title">Ім\'я пристрою</string>
+    <string name="pref_device_name_summary">Задати назву пристрою самостійно</string>
+    <string name="keep_on_summary">(Рекомендується) На багатьох пристроях спостерігаються проблеми з перериванням передачі при вимкненому екрані</string>
+    <string name="keep_on_title">Не вимикати екран під час передачі</string>
+    <string name="floating_text_selection_title">Поділитись виділеним текстом</string>
+    <string name="floating_text_selection_summary">При виборі тексту в інших програмах буде запропоновано опцію \"Надіслати за допомогою Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Надіслати за допомогою Snapdrop</string>
+    <string name="settings_theme_title">Тема</string>
+    <string-array name="darkmode_entries">
+        <item>Використовувати тему системи</item>
+        <item>Світла</item>
+        <item>Темна</item>
+    </string-array>
+    <string name="baseurl_title">Базова URL-адреса</string>
+    <string name="baseurl_instance_verified">Екземпляр Snapdrop успішно перевірено</string>
+    <string name="baseurl_no_snapdrop_instance">Здається, це не екземпляр Snapdrop</string>
+    <string name="baseurl_check_instance_failed">Не вдалося перевірити екземпляр Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Перегляньте <a href="">FAQ</a>, щоб отримати список неофіційних екземплярів. Зверніть увагу, що деякі екземпляри можуть не працювати належним чином у програмі.</string>
+    <string name="save_location">Зберегти розташування</string>
+    <!-- File sharing -->
+    <string name="intent_file">Файл, обраний для надсилання</string>
+    <string name="intent_files">Файли, обрані для надсилання</string>
+    <string name="intent_content">Вміст, обраний для надсилання</string>
+    <string name="error_filechooser">Не вдалося вибрати файл</string>
+    <string name="error_network">Будь ласка, переконайтесь, що Ви підключені до мережі Wi-Fi</string>
+    <string name="ignore_error_network">Все одно спробувати</string>
+    <string name="error_not_reachable_title">Упс, вибачте!</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Відкрийте Snapdrop на інших пристроях для передачі файлів</string>
+    <string name="website_instruction">Натисніть, щоб надіслати файли або утримуйте, щоб надіслати повідомлення</string>
+    <string name="website_file_received">Файл отримано</string>
+    <string name="website_file_ask_before_download">Завжди запитувати перед збереженням файлу</string>
+    <string name="website_file_download">Зберегти</string>
+    <string name="website_footer_discovery">Вас можуть знайти всі в цій мережі</string>
+    <string name="website_footer_known_as">Ваше ім\'я/ідентифікатор: %s</string>
+    <string name="website_about_subheading">Найпростіший спосіб передачі файлів між пристроями</string>
+</resources>
