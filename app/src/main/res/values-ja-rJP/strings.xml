@@ -6,8 +6,6 @@
     <string name="err_no_app">このファイルを開くアプリがインストールされていません</string>
     <string name="open_url">URLから開く</string>
     <!-- Onboarding -->
-    <string name="app_welcome">Snapdropへようこそ</string>
-    <string name="app_welcome_summary">1. 同じWiFiに接続しているデバイスで<a href="https://snapdrop.net">snapdrop.net</a>を開くか、Snapdropアプリを起動します。\n2. ファイルをシェアしたいデバイスを選択します。\n3. ファイルが転送されます…</string>
     <!-- Download -->
     <string name="download_save_pending">ファイルを保存しています。少しお待ちください…</string>
     <string name="download_successful">ダウンロード完了</string>
@@ -18,17 +16,9 @@
     <string name="copy">コピー</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Snapdrop for Androidについて</string>
-    <string name="license">ライセンス</string>
     <string name="pref_category_settings">設定</string>
-    <string name="source">ソースコード</string>
-    <string name="source_summary">GitHub でソースコードを参照</string>
-    <string name="components">オープンソースコンポーネント</string>
     <string name="logs">デバッグ ログ</string>
     <string name="components_summary">タップして表示</string>
-    <string name="crowdin">翻訳</string>
-    <string name="crowdin_summary"><b>Snapdrop for Android</b>を好きな言語で翻訳することを手伝ってください</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary"><b>Snapdrop for Android</b>について</string>
     <string name="version">バージョン</string>
     <string name="pref_device_name_title">デバイス名</string>
     <string name="pref_device_name_summary">カスタムデバイス名を設定する</string>
@@ -55,7 +45,6 @@
     <string name="error_network">WiFiネットワークに接続されているか確認してください</string>
     <string name="ignore_error_network">とにかく進む</string>
     <string name="error_not_reachable_title">申し訳ありません</string>
-    <string name="error_not_reachable">Snapdropサーバーにアクセスできません。\n\nインターネット接続が機能していて発生する場合、サーバー側の問題の可能性があります。大変ご迷惑をおかけしますが、Google Playストアに低評価レビューを残さないようにお願いします。 \n\nこのアプリは広告なしで運営しており収益化はしていません。このプロジェクトは趣味のプロジェクトであり、できるだけ早く再開できるよう、全力を尽くしています。</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">他のデバイスでSnapdropを開き、ファイルを送信することができます。</string>
     <string name="website_instruction">タップしてファイルを送信するか、長押しでメッセージを送信します</string>
