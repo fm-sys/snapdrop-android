@@ -5,7 +5,7 @@
     <string name="err_no_browser">Kan inte öppna webbläsare</string>
     <string name="err_no_app">Ingen applikation hittades som kan öppna denna fil</string>
     <string name="open_url">Öppna URL</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Välkommen till Snapdrop</string>
     <string name="app_welcome_summary">1. Öppna <a href="https://snapdrop.net">snapdrop.net</a> eller Snapdrop-appen på någon annan enhet i ditt lokala WiFi-nätverk.\n2. Tryck på enheten du vill dela filen(filerna) med.\n3. Klart! Filen (filerna) kommer att skickas…</string>
     <!-- Download -->
