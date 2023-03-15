@@ -20,8 +20,6 @@
     <string name="onboarding_server_custom_summary">Los expertos también pueden alojar sus propios servidores.</string>
     <string name="onboarding_howto">Cómo usar</string>
     <string name="onboarding_howto_summary">1. Abre esta aplicación o %s en cualquier otro dispositivo en tu red WiFi local.\n\n2. Toca en el dispositivo con el que quieres compartir los archivos.\n\n3. ¡Listo! Los archivos se enviarán…</string>
-    <string name="app_welcome">Bienvenido a Snapdrop</string>
-    <string name="app_welcome_summary">1. Abre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicación Snapdrop en cualquier otro dispositivo de tu red WiFi local.\n2. Pulse en el dispositivo con el que desea compartir los archivos.\n3. ¡Listo! Los archivos se enviarán…</string>
     <!-- Download -->
     <string name="download_save_pending">Guardando el archivo. Por favor, tenga un poco de paciencia…</string>
     <string name="download_successful">Descarga exitosa</string>
@@ -35,19 +33,12 @@
     <string name="home_as_up_indicator_about">Acerca de</string>
     <string name="title_activity_about">Acerca de Snapdrop para Android</string>
     <string name="pref_about_title">Acerca de esta aplicación</string>
-    <string name="license">Licencia</string>
     <string name="pref_category_settings">Ajustes</string>
-    <string name="source">Código fuente</string>
-    <string name="github">GitHub</string>
-    <string name="source_summary">Ver código fuente en GitHub</string>
-    <string name="components">Componentes de código abierto</string>
     <string name="logs">Registros de depuración</string>
     <string name="components_summary">Pulsa para mostrar</string>
-    <string name="crowdin">Localización</string>
-    <string name="crowdin_summary">Ayuda a traducir <b>Snapdrop para Android</b> a tu idioma favorito</string>
+    <string name="support_us">Apóyanos</string>
+    <string name="support_us_summary">Ver cómo puedes apoyar este proyecto</string>
     <string name="read_more">leer más</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Cuéntales sobre <b>Snapdrop para Android</b></string>
     <string name="version">Versión</string>
     <string name="pref_device_name_title">Nombre del dispositivo</string>
     <string name="pref_device_name_summary">Establece un nombre de dispositivo definido por el usuario</string>
@@ -63,6 +54,7 @@
         <item>Oscuro</item>
     </string-array>
     <string name="baseurl_title">URL base</string>
+    <string name="baseurl_not_set">No establecido</string>
     <string name="baseurl_instance_verified">La instancia de Snapdrop ha sido verificada correctamente</string>
     <string name="baseurl_no_snapdrop_instance">No parece ser una instancia de Snapdrop</string>
     <string name="baseurl_check_instance_failed">No se pudo verificar la instancia de Snapdrop</string>
@@ -76,8 +68,6 @@
     <string name="error_network">Por favor, compruebe que está conectado a una red WiFi</string>
     <string name="ignore_error_network">Déjame intentarlo de todos modos</string>
     <string name="error_not_reachable_title">¡Ups, lo sentimos!</string>
-    <string name="error_not_reachable">No se puede acceder al Servidor de Snapdrop. \n\nSi tu conexión a internet está funcionando y esto sucede de todos modos, probablemente tengamos problemas con el servidor actualmente. Sabemos que esto puede ser muy frustrante, pero no dejes malas reseñas en Google Play. \n\nEsta aplicación está completamente libre de anuncios, por lo que no ganamos nada de dinero con ella. Es solo un proyecto de hobby, pero estamos haciendo todo lo que se puede para que vuelva a funcionar rápidamente.</string>
-    <string name="error_server_not_reachable">El servidor no puede ser alcanzado. \n\nSi tu conexión a internet funciona y esto sucede de todos modos, por favor intenta seleccionar un servidor diferente.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Abrir Snapdrop en otros dispositivos para enviar archivos</string>
     <string name="website_instruction">Pulsa para enviar archivos o pulsación larga para enviar un mensaje</string>
