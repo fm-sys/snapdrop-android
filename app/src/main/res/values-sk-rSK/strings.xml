@@ -5,7 +5,7 @@
     <string name="err_no_browser">Nemožno otvoriť prehliadač</string>
     <string name="err_no_app">Nebola nájdená žiadna nainštalovaná aplikácia na otvorenie tohto súboru</string>
     <string name="open_url">Otvoriť URL</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Vitajte v Snapdrop</string>
     <string name="app_welcome_summary">1. Otvorte <a href="https://snapdrop.net">snapdrop.net</a> alebo Snapdrop aplikáciu na ďalšom zariadení v rovnakej WiFi sieti.\n2. Klepnite na zariadenie s ktorým chcete zdieľať súbor(y).\n3. Hotovo! Súbor(y) budú odoslané…</string>
     <!-- Download -->
