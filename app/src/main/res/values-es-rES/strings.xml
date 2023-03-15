@@ -10,7 +10,6 @@
     <string name="onboarding_button_continue">continuar</string>
     <string name="onboarding_button_finish">terminar</string>
     <string name="onboarding_choose_server">Selecciona un servidor</string>
-    <string name="onboarding_choose_server_description">Esta aplicación necesita conectarse a un servidor para establecer una conexión entre dispositivos. Tus archivos permanecerán privados todo el tiempo.</string>
     <string name="onboarding_server_pairdrop_summary">(recomendado) Una versión de Snapdrop más avanzada. Viene con características extra interesantes y servidores más fiables.</string>
     <string name="onboarding_server_snapdrop_summary">El Snapdrop clásico. Limpio y simple.</string>
     <string name="onboarding_server_custom">URL personalizada</string>
