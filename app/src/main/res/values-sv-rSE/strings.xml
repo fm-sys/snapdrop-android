@@ -5,32 +5,24 @@
     <string name="err_no_browser">Kan inte öppna webbläsare</string>
     <string name="err_no_app">Ingen applikation hittades som kan öppna denna fil</string>
     <string name="open_url">Öppna URL</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Välkommen till Snapdrop</string>
-    <string name="app_welcome_summary">1. Öppna <a href="https://snapdrop.net">snapdrop.net</a> eller Snapdrop-appen på någon annan enhet i ditt lokala WiFi-nätverk.\n2. Tryck på enheten du vill dela filen(filerna) med.\n3. Klart! Filen (filerna) kommer att skickas…</string>
+    <!-- Onboarding -->
     <!-- Download -->
     <string name="download_save_pending">Lagrar filen. Var god och vänta…</string>
     <string name="download_successful">Nerladdning lyckades</string>
     <string name="notification_channel_name">Nedladdning klar</string>
     <!-- Action Buttons -->
     <string name="open">öppna</string>
+    <string name="install">installera</string>
     <string name="reset">återställ</string>
     <string name="copy">kopiera</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Om</string>
     <string name="title_activity_about">Om Snapdrop för Android</string>
-    <string name="license">Licens</string>
+    <string name="pref_about_title">Om denna app</string>
     <string name="pref_category_settings">Inställningar</string>
-    <string name="source">Källkod</string>
-    <string name="source_summary">Se källkod på GitHub</string>
-    <string name="components">Öppen källkodskomponenter</string>
     <string name="logs">Felsökningsloggar</string>
     <string name="components_summary">Tryck för att visa</string>
-    <string name="crowdin">Lokalisering</string>
-    <string name="crowdin_summary">Hjälp till att översätta <b>Snapdrop för Android</b> till ditt favoritspråk</string>
-    <string name="support_us">Stöd Snapdrop</string>
-    <string name="support_us_summary">Se hur du kan stödja Snapdrop-communityn</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Berätta om <b>Snapdrop för Android</b></string>
+    <string name="read_more">läs mer</string>
     <string name="version">Version</string>
     <string name="pref_device_name_title">Enhetsnamn</string>
     <string name="pref_device_name_summary">Ange ett användardefinierat enhetsnamn</string>
@@ -54,7 +46,6 @@
     <string name="error_network">Kontrollera att du är ansluten till ett WiFi-nätverk</string>
     <string name="ignore_error_network">Släpp in mig ändå</string>
     <string name="error_not_reachable_title">Oops, sorry!</string>
-    <string name="error_not_reachable">Snapdrop-servern kan inte nås. \n\nOm din internetanslutning fungerar och detta händer ändå, kan vi ha serverproblem för närvarande. Vi vet att detta kan vara mycket frustrerande, men lämna inte dåliga recensioner på Google Play. \n\nDenna app är helt annonsfri, så vi tjänar inga pengar på den. Det är bara ett hobbyprojekt, men vi gör allt för att få det tillbaka igång snabbt.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Öppna Snapdrop på andra enheter för att skicka filer</string>
     <string name="website_instruction">Tryck för att skicka filer eller tryck och håll ned för att skicka ett meddelande</string>
