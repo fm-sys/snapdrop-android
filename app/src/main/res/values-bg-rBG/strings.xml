@@ -6,8 +6,6 @@
     <string name="err_no_app">Няма инсталирано приложение, което да отвори този файл</string>
     <string name="open_url">Отвори линк</string>
     <!-- Onboarding -->
-    <string name="app_welcome">Добре дошъл в Snapdrop</string>
-    <string name="app_welcome_summary">1. Влез на <a href="https://snapdrop.net">snapdrop.net</a> или в приложението Snapdrop на което и да е устройство свързано в локалната WiFi мрежа.\n2. Натисни върху устройството с което искаш да споделяш файлове.\n3. Готово! Файловете ще бъдат споделени…</string>
     <!-- Download -->
     <string name="download_save_pending">Запазвам файла. Моля, имай малко търпение…</string>
     <string name="download_successful">Изтеглянето бе успешно</string>
@@ -21,19 +19,10 @@
     <string name="home_as_up_indicator_about">Относно</string>
     <string name="title_activity_about">Повече за Snapdrop за Андроид</string>
     <string name="pref_about_title">Относно приложението</string>
-    <string name="license">Лиценз</string>
     <string name="pref_category_settings">Настройки</string>
-    <string name="source">Сорс код</string>
-    <string name="github">GitHub</string>
-    <string name="source_summary">Преглед на сорс кода в GitHub</string>
-    <string name="components">Компоненти с отворен код</string>
     <string name="logs">Логове</string>
     <string name="components_summary">Натисни за преглед</string>
-    <string name="crowdin">Преводи</string>
-    <string name="crowdin_summary">Как можеш да преведеш <b>Snapdrop for Android</b> на твоя език</string>
     <string name="read_more">прочети още</string>
-    <string name="twitter">Туитър</string>
-    <string name="twitter_summary">Разкажи за <b>Snapdrop за Андроид</b></string>
     <string name="version">Версия</string>
     <string name="pref_device_name_title">Име на устройството</string>
     <string name="pref_device_name_summary">Задай собствено име на устройството</string>
@@ -61,7 +50,6 @@
     <string name="error_network">Моля, провери дали си свързан с WiFi мрежа</string>
     <string name="ignore_error_network">Пусни ме въпреки това</string>
     <string name="error_not_reachable_title">Опа, съжалявам!</string>
-    <string name="error_not_reachable">Сървърът на Snapdrop не бе достигнат. \n\nАко интернет връзката ти работи и тази грешка се случва често, може би имаме проблеми със сървърите в момента. Знаем, че това може да е неприятно, но моля не оставяй лошо ревю в Google Play. Знай, че правим всичко възможно да оправим проблема възможно най-скоро. \n\nТова приложение е напълно безплатно и ние не печелим пари от него. Това е просто хоби проект.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Отвори Snapdrop и на друго устройство, за да изпратиш файлове помежду им</string>
     <string name="website_instruction">Натисни, за да изпратиш файлове или задръж, за да изпратиш съобщение</string>
