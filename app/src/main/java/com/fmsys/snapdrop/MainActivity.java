@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
 
         final ActionBar actionbar = getSupportActionBar();
         if (actionbar != null) {
+            actionbar.setSubtitle(baseURL);
             actionbar.setHomeAsUpIndicator(R.drawable.ic_launcher_actionbar);
             actionbar.setHomeActionContentDescription(R.string.home_as_up_indicator_about);
             actionbar.setDisplayHomeAsUpEnabled(true);
