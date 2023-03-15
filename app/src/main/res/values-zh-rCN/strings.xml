@@ -5,7 +5,7 @@
     <string name="err_no_browser">无法打开浏览器</string>
     <string name="err_no_app">未找到用于打开此文件的应用</string>
     <string name="open_url">打开网址</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">欢迎使用 Snapdrop</string>
     <string name="app_welcome_summary">1. 在您的WiFi局域网络中的任意设备上打开 <a href="https://snapdrop.net">snapdrop.net</a> 或 Snapdrop 应用。\n 2. 轻按您想要与之共享文件的设备。\n 3. 好了！文件将立即被发送…</string>
     <!-- Download -->
