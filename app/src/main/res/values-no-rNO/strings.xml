@@ -6,8 +6,6 @@
     <string name="err_no_app">Ingen apper installert for å åpne denne filen</string>
     <string name="open_url">Åpne URL</string>
     <!-- Onboarding -->
-    <string name="app_welcome">Velkommen til Snapdrop</string>
-    <string name="app_welcome_summary">1. Åpne <a href="https://snapdrop.net">snapdrop.net</a> eller Snapdrop appen på alle andre enheter i ditt lokale WiFi-nettverk.\n2. Trykk på enheten du vil dele filen(e) med.\n3. Ferdig! Filen(e) vil bli sendt…</string>
     <!-- Download -->
     <string name="download_save_pending">Lagrer filen. Vennligst ha litt tålmodighet…</string>
     <string name="download_successful">Nedlasting vellykket</string>
@@ -18,17 +16,9 @@
     <string name="copy">kopier</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Om Snapdrop for Android</string>
-    <string name="license">Lisens</string>
     <string name="pref_category_settings">Innstillinger</string>
-    <string name="source">Kildekode</string>
-    <string name="source_summary">Vis kildekode på GitHub</string>
-    <string name="components">Åpne kildekode komponenter</string>
     <string name="logs">Feilsøk-logger</string>
     <string name="components_summary">Trykk for å vise</string>
-    <string name="crowdin">Lokalisering</string>
-    <string name="crowdin_summary">Hjelp til med å oversette <b>Snapdrop for Android</b> til ditt favorittspråk</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Fortell om <b>Snapdrop for Android</b></string>
     <string name="version">Versjon</string>
     <string name="pref_device_name_title">Enhetsnavn</string>
     <string name="pref_device_name_summary">Angi et brukerdefinert enhetsnavn</string>
@@ -52,7 +42,6 @@
     <string name="error_network">Vennligst bekreft at du er tilkoblet et WiFi-nettverk</string>
     <string name="ignore_error_network">Slipp meg inn likevel</string>
     <string name="error_not_reachable_title">Oops, beklager!</string>
-    <string name="error_not_reachable">Snapdrop-serveren kan ikke nås. \n\nHvis Internett-tilkoblingen din fungerer og dette skjer likevel, kan vi ha serverproblemer for tiden. Vi vet at dette kan være veldig frustrerende, men vennligst ikke etterlat dårlige anmeldelser på Google Play. \n\nDenne appen er helt uten annonser, så vi tjener ikke noen penger med den. Det er bare et hobby-prosjekt, men vi gjør alt for å få det tilbake til å gå raskt.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Åpne Snapdrop på andre enheter for å sende filer</string>
     <string name="website_instruction">Trykk for å sende filer eller trykk lenge for å sende en melding</string>
