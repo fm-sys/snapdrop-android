@@ -18,6 +18,7 @@
     <string name="onboarding_server_snapdrop_summary">Il classico snapdrop. Pulito e semplice.</string>
     <string name="onboarding_server_custom">URL personalizzato</string>
     <string name="onboarding_server_custom_summary">Gli esperti possono anche utilizzare i propri server.</string>
+    <string name="onboarding_howto">Come si usa</string>
     <string name="onboarding_howto_summary">1. Apri questa app o %s su qualsiasi altro dispositivo nella tua rete WiFi locale.\n\n2. Tocca il dispositivo con cui vuoi condividere i file.\n\n3. Fatto! I file verranno inviati…</string>
     <string name="app_welcome">Benvenuti su Snapdrop</string>
     <string name="app_welcome_summary">Apri <a href="https://snapdrop.net">snapdrop.net</a> o l\'app Snapdrop su un qualsiasi dispositivo connesso alla tua rete WiFi.\n2. Premi sul dispositivo al quale vuoi condividere i file.\n3. Fatto! I file saranno inviati…</string>
@@ -78,6 +79,7 @@
     <string name="ignore_error_network">Entra comunque</string>
     <string name="error_not_reachable_title">Ops, mi dispiace!</string>
     <string name="error_not_reachable">Impossibile raggiungere il server di Snapdrop. \n\nSe la tua connessione internet funziona e questo accade comunque, potremmo avere problemi con il server al momento. Sappiamo che questo può essere molto frustrante, ma per favore non lasciare recensioni negative su Google Play. \n\nQuesta app è completamente priva di pubblicità, quindi non guadagniamo soldi con essa. È solo un progetto amatoriale, ma stiamo facendo tutto per farlo tornare a funzionare velocemente.</string>
+    <string name="error_server_not_reachable">Il server non può essere raggiunto. \n\nSe la tua connessione internet funziona e il problema accade comunque, prova a selezionare un server diverso.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Apri Snapdrop su altri dispositivi per inviare i file</string>
     <string name="website_instruction">Premi per inviare i file o tieni premuto per inviare un messaggio</string>
