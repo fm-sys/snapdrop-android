@@ -6,8 +6,6 @@
     <string name="err_no_app">لا يوجد تطبيق لفتح هذا المِلَفّ</string>
     <string name="open_url">افتح الرابط</string>
     <!-- Onboarding -->
-    <string name="app_welcome">مَرحبًا بِكَ فِي سناب درُوب</string>
-    <string name="app_welcome_summary">1. اِفتَح <a href="https://snapdrop.net">snapdrop.net</a> أو تَطبيق سناب درُوب (Snapdrop) عَلَى أي جِهاز آخر فِي شبكة الواي فاي المَحليَّة.\n2. اِنقر عَلَى الجِهاز الَّذي تَرغَب فِي مُشاركَة المِلَف\ـات مَعه.\n3. تمّ! سوف تُرسَل المِلَف\ـات…</string>
     <!-- Download -->
     <string name="download_save_pending">يتم تخزين الملف. يرجى التحلي بالصبر قليلاً…</string>
     <string name="download_successful">تمَّ التَنزيل بِنَجاح</string>
@@ -21,19 +19,10 @@
     <string name="home_as_up_indicator_about">حول</string>
     <string name="title_activity_about">حَول سناب درُوب لِنِظامِ أندُروِيد</string>
     <string name="pref_about_title">حول التطبيق</string>
-    <string name="license">الترخيص</string>
     <string name="pref_category_settings">الإعدادات</string>
-    <string name="source">شفرة المصدر</string>
-    <string name="github">غِت‌ هَب</string>
-    <string name="source_summary">افحص شفرة المصدر على GitHub</string>
-    <string name="components">مُكوِناتٌ مَفتُوحَةُ المَصدَر</string>
     <string name="logs">سجلات تتبع الأخطاء</string>
     <string name="components_summary">اِنقر للعَرض</string>
-    <string name="crowdin">الترجمة</string>
-    <string name="crowdin_summary">سَاعِد فِي تَرجَمَةِ <b>سناب درُوب لِنِظامِ أندُروِيد</b> إلى لُغَتِكَ المُفضَّلة</string>
     <string name="read_more">إقرأ المزيد</string>
-    <string name="twitter">تويتر</string>
-    <string name="twitter_summary">أخبِر الناس حول <b>سناب درُوب</b></string>
     <string name="version">الإصدار</string>
     <string name="pref_device_name_title">اِسمُ الجِهاز</string>
     <string name="pref_device_name_summary">تَعيين اِسم جِهاز مُعَرَّف مِن قِبَل المُستَخدِم</string>
@@ -62,7 +51,6 @@
     <string name="error_network">يُرجى التَّحَقُقُ مِنَ اِتِّصَالِكَ بِشَبَكَةِ واي فاي</string>
     <string name="ignore_error_network">اِسمَح لِي بالدُخُولِ عَلَى أيِّ حال</string>
     <string name="error_not_reachable_title">عذرًا، آسف!</string>
-    <string name="error_not_reachable">لا يمكن الوصول إلى خادم Snapdrop-. \n\nإذا كان اتصالك بالإنترنت يعمل ويحدث هذا على أي حال، فقد يكون لدينا مشاكل في الخادم حاليا. نحن نعلم أن هذا يمكن أن يكون محبطاً جداً، ولكن من فضلك لا تترك مراجعات سيئة في Google Play. \n\nهذا التطبيق خال تماما من الإعلانات، لذلك نحن لا نكسب أي مال به. إنه مجرد مشروع هواية، لكننا نفعل كل ما في وسعنا لإعادته إلى العمل بسرعة.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">افتح Snapdrop على الأجهزة الأخرى لإرسال الملفات</string>
     <string name="website_instruction">انقر لإرسال الملفات أو انقر مطولاً لإرسال رسالة</string>
