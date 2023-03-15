@@ -2,10 +2,21 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop dla Android</string>
+    <string name="app_name_slogan">Przesyłaj pliki bezproblemowo pomiędzy wszystkimi urządzeniami.</string>
     <string name="err_no_browser">Nie można otworzyć przeglądarki</string>
     <string name="err_no_app">Nie znaleziono aplikacji do otwarcia tego pliku</string>
     <string name="open_url">Otwórz URL</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">kontynuuj</string>
+    <string name="onboarding_button_finish">zakończ</string>
+    <string name="onboarding_choose_server">Wybierz serwer</string>
+    <string name="onboarding_choose_server_description">Ta aplikacja musi połączyć się z serwerem w celu nawiązania połączenia między urządzeniami. Twoje pliki pozostaną przez cały czas prywatne.</string>
+    <string name="onboarding_server_pairdrop_summary">(zalecane) Bardziej zaawansowana wersja Snapupa. Ma fajne dodatkowe funkcje i bardziej niezawodne serwery.</string>
+    <string name="onboarding_server_snapdrop_summary">Klasyczny snapdrop. Czysty i prosty.</string>
+    <string name="onboarding_server_custom">Niestandardowy URL</string>
+    <string name="onboarding_server_custom_summary">Eksperci mogą również hostować swoje własne serwery.</string>
+    <string name="onboarding_howto">Jak używać Snapdrop</string>
+    <string name="onboarding_howto_summary">1. Otwórz tę aplikację lub %s na innym urządzeniu w lokalnej sieci WiFi.\n\n2. Dotknij urządzenia, z którym chcesz udostępnić plik(i)\n\n3. Gotowe! Pliki zostaną wysłane…</string>
     <string name="app_welcome">Witamy w Snapdrop</string>
     <string name="app_welcome_summary">1. Otwórz <a href="https://snapdrop.net">snapdrop.net</a> lub aplikację Snapdrop na dowolnym innym urządzeniu w lokalnej sieci WiFi.\n2. Zakładka na urządzeniu, z którym chcesz udostępnić plik(i)\n3. Gotowe! Pliki zostaną wysłane…</string>
     <!-- Download -->
