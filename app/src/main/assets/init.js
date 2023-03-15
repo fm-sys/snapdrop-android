@@ -39,12 +39,12 @@ try {
     websiteLinkDiv.style.cssText = 'height:10%; position:absolute; bottom:0px;';
 
     let websiteLink = document.createElement('a');
-    websiteLink.href = 'https://snapdrop.net/';
+    websiteLink.href = window.location.host;
     websiteLink.target = '_blank';
 
     let websiteLinkText = document.createElement('h4');
     websiteLinkText.style.cssText = 'font-size: 16px; font-weight: 400; letter-spacing: .5em; margin: 16px 0;';
-    websiteLinkText.innerText = 'WWW.SNAPDROP.NET';
+    websiteLinkText.innerText = window.location.host.toUpperCase();
 
     let aboutScreen = document.querySelector('#about>section');
     websiteLinkDiv.appendChild(websiteLink);
