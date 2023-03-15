@@ -133,11 +133,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         SnapdropApplication.setAppTheme(this);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-        baseURL = prefs.getString(getString(R.string.pref_baseurl), getString(R.string.baseURL));
+        baseURL = prefs.getString(getString(R.string.pref_baseurl), null);
+
+        if (prefs.getBoolean(getString(R.string.pref_first_use), true) || baseURL == null) {
+            startActivity(new Intent(this, OnboardingActivity.class));
+            finish();
+            return; // all this doesn't make sense if we have no base URL
+        }
+
 
         if (prefs.getBoolean(getString(R.string.pref_switch_keep_on), true)) {
             transfer.setOnChangedListener(transferActive -> runOnUiThread(() -> {
@@ -234,10 +241,6 @@ public class MainActivity extends AppCompatActivity {
         });
         loadAnimationDrawable.start();
 
-        if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
-            startActivity(new Intent(this, OnboardingActivity.class));
-            finish();
-        }
     }
 
     @Override
@@ -393,7 +396,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        binding.webview.loadUrl("about:blank");
+        if (binding != null) {
+            binding.webview.loadUrl("about:blank");
+        }
         CookieManager.getInstance().flush();
         super.onDestroy();
     }

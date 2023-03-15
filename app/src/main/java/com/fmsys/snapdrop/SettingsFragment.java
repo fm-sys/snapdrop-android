@@ -129,10 +129,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
-        baseUrlPref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "", getString(R.string.baseURL), Link.bind("https://github.com/RobinLinus/snapdrop/blob/master/docs/faq.md#inofficial-instances", R.string.baseurl_unofficial_instances), newValue -> {
+        baseUrlPref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "", "", Link.bind("https://github.com/RobinLinus/snapdrop/blob/master/docs/faq.md#inofficial-instances", R.string.baseurl_unofficial_instances), newValue -> {
 
             if (newValue == null) {
-                baseUrlPref.setSummary(getString(R.string.baseURL));
+                baseUrlPref.setSummary(getString(R.string.baseurl_not_set));
                 return;
             }
 
@@ -140,12 +140,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 if (result) {
                     baseUrlPref.setSummary(newValue);
                 } else {
-                    baseUrlPref.setSummary(getString(R.string.baseURL));
+                    baseUrlPref.setSummary(getString(R.string.baseurl_not_set));
                     setPreferenceValue(baseUrlPref.getKey(), null, null);
                 }
             });
         }));
-        baseUrlPref.setSummary(preferences.getString(baseUrlPref.getKey(), getString(R.string.baseURL)));
+        baseUrlPref.setSummary(preferences.getString(baseUrlPref.getKey(), getString(R.string.baseurl_not_set)));
 
         final Preference saveLocationPref = findPreference(getString(R.string.pref_save_location));
         saveLocationPref.setOnPreferenceClickListener(preference -> {
