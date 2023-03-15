@@ -2,18 +2,16 @@ package com.fmsys.snapdrop;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.util.Consumer;
 import androidx.preference.Preference;
@@ -26,8 +24,8 @@ import com.fmsys.snapdrop.utils.ClipboardUtils;
 import com.fmsys.snapdrop.utils.Link;
 import com.fmsys.snapdrop.utils.LogUtils;
 import com.fmsys.snapdrop.utils.NetworkUtils;
+import com.fmsys.snapdrop.utils.ShareUtils;
 import com.fmsys.snapdrop.utils.ViewUtils;
-import com.google.android.material.snackbar.Snackbar;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 import com.mikepenz.aboutlibraries.util.SpecialButton;
 
@@ -48,6 +46,8 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         if (savedInstanceState != null) {
             storageHelper.onRestoreInstanceState(savedInstanceState);
         }
+
+        initUrlPreference(R.string.pref_support, "https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md");
 
         final Preference openSourceComponents = findPreference(getString(R.string.pref_about));
         openSourceComponents.setOnPreferenceClickListener(pref -> {
@@ -91,17 +91,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
                         @Override
                         public void onIconClicked(final @NonNull View view) {
-                            openUrl("https://github.com/fm-sys/snapdrop-android");
+                            ShareUtils.openUrl(SettingsFragment.this, "https://github.com/fm-sys/snapdrop-android");
                         }
 
                         @Override
                         public boolean onExtraClicked(final @NonNull View view, final @NonNull SpecialButton specialButton) {
                             if (specialButton == SpecialButton.SPECIAL1) {
-                                openUrl("https://github.com/fm-sys/snapdrop-android");
+                                ShareUtils.openUrl(SettingsFragment.this, "https://github.com/fm-sys/snapdrop-android");
                             } else if (specialButton == SpecialButton.SPECIAL2) {
-                                openUrl("https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20%23snapdrop%0A%0Ahttps://snapdrop.net");
+                                ShareUtils.openUrl(SettingsFragment.this, "https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20%23snapdrop%0A%0Ahttps://snapdrop.net");
                             } else if (specialButton == SpecialButton.SPECIAL3) {
-                                openUrl("https://crowdin.com/project/snapdrop-android");
+                                ShareUtils.openUrl(SettingsFragment.this, "https://crowdin.com/project/snapdrop-android");
                             }
                             return true;
                         }
@@ -171,14 +171,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         });
     }
 
-    private void openUrl(final String url) {
-        try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-        } catch (ActivityNotFoundException e) {
-            Snackbar.make(requireView(), R.string.err_no_browser, Snackbar.LENGTH_LONG).show();
-        }
-    }
-
     private void setPreferenceValue(final String preferenceKey, final String s, final Consumer<String> onPreferenceChangeCallback) {
         PreferenceManager.getDefaultSharedPreferences(getContext()).edit().putString(preferenceKey, s).apply();
 
@@ -193,6 +185,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         } else {
             pref.setSummary(R.string.pref_device_name_summary);
         }
+    }
+
+    private Preference initUrlPreference(final @StringRes int pref, final String url) {
+        final Preference preference = findPreference(getString(pref));
+        if (preference != null) {
+            preference.setOnPreferenceClickListener(p -> {
+                ShareUtils.openUrl(this, url);
+                return true;
+            });
+        }
+        return preference;
     }
 
     private boolean showEditTextPreferenceWithResetPossibility(final Preference pref, final String prefix, final @NonNull String defaultValue, final Link link, final Consumer<String> onPreferenceChangeCallback) {

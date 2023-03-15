@@ -54,6 +54,12 @@
             android:summary="@string/components_summary"
             android:title="@string/pref_about_title"
             app:singleLineTitle="false" />
+        <Preference
+            android:key="@string/pref_support"
+            android:summary="@string/support_us_summary"
+            android:title="@string/support_us"
+            android:icon="@drawable/pref_community"
+            app:singleLineTitle="false" />
 
     </PreferenceCategory>
 </PreferenceScreen>

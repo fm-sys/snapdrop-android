@@ -50,8 +50,8 @@
     <string name="components_summary">Tap to display</string>
     <string name="crowdin">Localization</string>
     <string name="crowdin_summary">Help to translate <b>Snapdrop for Android</b> into your favorite language</string>
-    <string name="support_us">Support Snapdrop</string>
-    <string name="support_us_summary">See, how you can support the Snapdrop community</string>
+    <string name="support_us">Support us</string>
+    <string name="support_us_summary">See, how you can support this project</string>
     <string name="read_more">read more</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Tell about <b>Snapdrop for Android</b></string>
