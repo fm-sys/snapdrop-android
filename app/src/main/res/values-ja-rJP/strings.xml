@@ -27,8 +27,6 @@
     <string name="components_summary">タップして表示</string>
     <string name="crowdin">翻訳</string>
     <string name="crowdin_summary"><b>Snapdrop for Android</b>を好きな言語で翻訳することを手伝ってください</string>
-    <string name="support_us">Snapdropをサポート</string>
-    <string name="support_us_summary">Snapdropコミュニティをサポートする方法</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary"><b>Snapdrop for Android</b>について</string>
     <string name="version">バージョン</string>
