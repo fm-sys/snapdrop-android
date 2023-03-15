@@ -27,8 +27,6 @@
     <string name="components_summary">Pritisni za prikaz</string>
     <string name="crowdin">Lokalizacija</string>
     <string name="crowdin_summary">Pomozite prevesti <b>Snapdrop za Android</b> na svoj preferirani jezik</string>
-    <string name="support_us">Podržite Snapdrop</string>
-    <string name="support_us_summary">Pogledajte kako možete podržati Snapdrop zajednicu</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Podijelite o <b>Snapdropu za Android</b></string>
     <string name="version">Verzija</string>
