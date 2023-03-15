@@ -27,8 +27,6 @@
     <string name="components_summary">点击查看</string>
     <string name="crowdin">本地化</string>
     <string name="crowdin_summary">帮助将 <b>Snapdrop for Android</b> 翻译成您最喜欢的语言</string>
-    <string name="support_us">支持Snapdrop</string>
-    <string name="support_us_summary">嗨，查看您如何能支持Snapdrop社区</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">关于<b>Snapdrop for Android</b></string>
     <string name="version">版本</string>
