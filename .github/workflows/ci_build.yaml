@@ -16,7 +16,7 @@ jobs:
       - name: Build the app
         run: |
           chmod +x gradlew
-          ./gradlew build --stacktrace
+          ./gradlew build
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
