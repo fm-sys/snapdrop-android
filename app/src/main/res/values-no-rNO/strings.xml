@@ -27,8 +27,6 @@
     <string name="components_summary">Trykk for å vise</string>
     <string name="crowdin">Lokalisering</string>
     <string name="crowdin_summary">Hjelp til med å oversette <b>Snapdrop for Android</b> til ditt favorittspråk</string>
-    <string name="support_us">Støtt Snapdrop</string>
-    <string name="support_us_summary">Se hvordan du kan støtte Snapdrop-samfunnet</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Fortell om <b>Snapdrop for Android</b></string>
     <string name="version">Versjon</string>
