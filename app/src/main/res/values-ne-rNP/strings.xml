@@ -5,9 +5,7 @@
     <string name="err_no_browser">ब्राउजर खोल्न सकिएन</string>
     <string name="err_no_app">यो फाईल खोल्न सक्ने कुनै एप भेटिएन</string>
     <string name="open_url">URL खोल्नुहोस्</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Snapdrop मा स्वागत छ</string>
-    <string name="app_welcome_summary">१. आफ्नो स्थानीय WiFi नेटवर्कमा रहेको कुनै अन्य यन्त्रमा <a href="https://snapdrop.net">snapdrop.net</a> वा Snapdrop एप खोल्नुहोस्।\n२. तपाईंले फाइल(हरू) आदान प्रदान गर्न चाहनुभएको यन्त्रमा ट्याप गर्नुहोस्।\n३. सकियो! फाइल(हरू) पठाइनेछ…</string>
+    <!-- Onboarding -->
     <!-- Download -->
     <string name="download_save_pending">फाइल सेभ गरिदै छ । कृपया पर्खनुहोस्</string>
     <string name="download_successful">डाउनलोड सफल भयो</string>
@@ -18,19 +16,9 @@
     <string name="copy">कापी</string>
     <!-- Settings / About -->
     <string name="title_activity_about">Android को लागी Snapdrop को बारेमा</string>
-    <string name="license">इजाजतपत्र</string>
     <string name="pref_category_settings">सेटिङहरू</string>
-    <string name="source">स्रोत कोड</string>
-    <string name="source_summary">GitHub मा स्रोत कोड हेर्नुहोस्</string>
-    <string name="components">खुला स्रोत घटकहरू</string>
     <string name="logs">डिबग लगहरू</string>
     <string name="components_summary">प्रदर्शन गर्न ट्याप गर्नुहोस्</string>
-    <string name="crowdin">स्थानीयकरण</string>
-    <string name="crowdin_summary"><b>Android को लागि Snapdrop</b> लाई आफ्नो मनपर्ने भाषामा अनुवाद गर्न मद्दत गर्नुहोस्</string>
-    <string name="support_us">स्न्यापड्रपलाई समर्थन गर्नुहोस</string>
-    <string name="support_us_summary">तपाइँ कसरी Snapdrop समुदायलाई समर्थन गर्न सक्नुहुन्छ, हेर्नुहोस्</string>
-    <string name="twitter">ट्विटर</string>
-    <string name="twitter_summary"><b>Android को लागि Snapdrop</b> को बारेमा बताउनुहोस्</string>
     <string name="version">संस्करण</string>
     <string name="pref_device_name_title">उपकरणको नाम</string>
     <string name="pref_device_name_summary">प्रयोगकर्ता-परिभाषित उपकरण नाम सेट गर्नुहोस्</string>
@@ -57,7 +45,6 @@
     <string name="error_network">तपाईं WiFi नेटवर्कमा जडान हुनुहुन्छ भनी प्रमाणित गर्नुहोस्</string>
     <string name="ignore_error_network">जसरी पनि मलाई भित्र जान दिनुहोस्</string>
     <string name="error_not_reachable_title">ओहो, माफ गर्नुहोस् !</string>
-    <string name="error_not_reachable">Snapdrop-सर्भरमा पुग्न सकिएन। \n\nयदि तपाईंको इन्टरनेट जडान काम गरिरहेको छ र यो जसरी पनि हुन्छ भने, हामीसँग हाल सर्भर समस्याहरू हुन सक्छ। हामीलाई थाहा छ यो धेरै निराशाजनक हुन सक्छ, तर कृपया Google Play मा खराब समीक्षाहरू नछोड्नुहोस्। \n\nयो एप पूर्ण रूपमा विज्ञापन-रहित छ, त्यसैले हामीले यसबाट कुनै पनि पैसा कमाउँदैनौं। यो केवल एक शौक परियोजना हो, तर हामी यसलाई छिटो चलाउनको लागि सबै गर्दैछौं।</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">फाइलहरू पठाउन अन्य उपकरणहरूमा Snapdrop खोल्नुहोस्</string>
     <string name="website_instruction">फाइलहरू पठाउन ट्याप गर्नुहोस् वा सन्देश पठाउन लामो ट्याप गर्नुहोस्</string>
