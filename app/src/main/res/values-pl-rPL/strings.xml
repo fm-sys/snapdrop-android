@@ -8,12 +8,17 @@
     <string name="open_url">Otwórz URL</string>
     <!-- Onboarding -->
     <string name="onboarding_button_continue">kontynuuj</string>
+    <string name="onboarding_button_grant">Przyznaj uprawnienia</string>
     <string name="onboarding_button_finish">zakończ</string>
     <string name="onboarding_choose_server">Wybierz serwer</string>
+    <string name="onboarding_choose_server_description">Ta aplikacja musi połączyć się z serwerem w celu nawiązania połączenia między urządzeniami. Twoje pliki będą przez cały czas prywatne.\n\nUwaga: Musisz wybrać ten sam serwer dla wszystkich swoich urządzeń.</string>
+    <string name="onboarding_storage_permission">Uprawnienia do przechowywania danych</string>
+    <string name="onboarding_storage_permission_description">Ta aplikacja jest narzędziem udostępniania plików. W związku z tym wymagane jest pozwolenie na przechowywanie plików, aby z niej korzystać.</string>
     <string name="onboarding_server_pairdrop_summary">(zalecane) Bardziej zaawansowana wersja Snapupa. Ma fajne dodatkowe funkcje i bardziej niezawodne serwery.</string>
     <string name="onboarding_server_snapdrop_summary">Klasyczny snapdrop. Czysty i prosty.</string>
     <string name="onboarding_server_custom">Niestandardowy URL</string>
     <string name="onboarding_server_custom_summary">Eksperci mogą również hostować swoje własne serwery.</string>
+    <string name="onboarding_howto">Jak używać</string>
     <string name="onboarding_howto_summary">1. Otwórz tę aplikację lub %s na innym urządzeniu w lokalnej sieci WiFi.\n\n2. Dotknij urządzenia, z którym chcesz udostępnić plik(i)\n\n3. Gotowe! Pliki zostaną wysłane…</string>
     <string name="app_welcome">Witamy w Snapdrop</string>
     <string name="app_welcome_summary">1. Otwórz <a href="https://snapdrop.net">snapdrop.net</a> lub aplikację Snapdrop na dowolnym innym urządzeniu w lokalnej sieci WiFi.\n2. Zakładka na urządzeniu, z którym chcesz udostępnić plik(i)\n3. Gotowe! Pliki zostaną wysłane…</string>
@@ -74,6 +79,7 @@
     <string name="ignore_error_network">Spróbuj mimo wszystko</string>
     <string name="error_not_reachable_title">Ups, przepraszam!</string>
     <string name="error_not_reachable">Serwer Snapdrop nie może być osiągnięty. \n\nJeśli Twoje połączenie internetowe działa i tak się dzieje, możemy mieć problemy z serwerem. Wiemy, że to może być bardzo frustrujące, ale nie pozostawiaj złych recenzji w Google Play. \n\nTa aplikacja jest całkowicie pozbawiona reklam, więc nie zarabiamy za jej pomocą. To tylko projekt hobby, ale robimy wszystko, aby go szybko uruchomić.</string>
+    <string name="error_server_not_reachable">Nie można połączyć się z serwerem. \n\nJeśli Twoje połączenie internetowe działa i tak się dzieje, spróbuj wybrać inny serwer</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Otwórz Snapdrop na innych urządzeniach aby wysyłać pliki</string>
     <string name="website_instruction">Dotknij, aby wysłać pliki lub długie dotknięcie aby wysłać wiadomość</string>
