@@ -5,7 +5,7 @@
     <string name="err_no_browser">Не мога да отворя браузъра</string>
     <string name="err_no_app">Няма инсталирано приложение, което да отвори този файл</string>
     <string name="open_url">Отвори линк</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Добре дошъл в Snapdrop</string>
     <string name="app_welcome_summary">1. Влез на <a href="https://snapdrop.net">snapdrop.net</a> или в приложението Snapdrop на което и да е устройство свързано в локалната WiFi мрежа.\n2. Натисни върху устройството с което искаш да споделяш файлове.\n3. Готово! Файловете ще бъдат споделени…</string>
     <!-- Download -->
