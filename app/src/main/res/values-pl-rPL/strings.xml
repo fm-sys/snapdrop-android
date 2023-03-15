@@ -10,7 +10,6 @@
     <string name="onboarding_button_continue">kontynuuj</string>
     <string name="onboarding_button_finish">zakończ</string>
     <string name="onboarding_choose_server">Wybierz serwer</string>
-    <string name="onboarding_choose_server_description">Ta aplikacja musi połączyć się z serwerem w celu nawiązania połączenia między urządzeniami. Twoje pliki pozostaną przez cały czas prywatne.</string>
     <string name="onboarding_server_pairdrop_summary">(zalecane) Bardziej zaawansowana wersja Snapupa. Ma fajne dodatkowe funkcje i bardziej niezawodne serwery.</string>
     <string name="onboarding_server_snapdrop_summary">Klasyczny snapdrop. Czysty i prosty.</string>
     <string name="onboarding_server_custom">Niestandardowy URL</string>
