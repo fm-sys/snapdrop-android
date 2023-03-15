@@ -9,8 +9,6 @@
     <!-- Onboarding -->
     <string name="onboarding_button_continue">continuar</string>
     <string name="onboarding_button_finish">terminar</string>
-    <string name="onboarding_choose_server">Escolha um servidor</string>
-    <string name="onboarding_server_pairdrop_summary">(recomendado) Uma versão mais avançada do Snapdrop vem com recursos extras e servidores mais confiáveis.</string>
     <string name="onboarding_server_snapdrop_summary">O snapdrop clássico. Limpo e simples.</string>
     <string name="onboarding_server_custom">URL personalizada</string>
     <string name="onboarding_server_custom_summary">Especialistas também podem hospedar seus próprios servidores.</string>
