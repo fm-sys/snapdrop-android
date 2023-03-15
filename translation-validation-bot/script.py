@@ -45,4 +45,4 @@ for line in text.splitlines():
             table_initialized = False
 
 
-gha_utils.set_output("content", printcache.replace("%", "%25").replace("\n", "%0D").strip())
+gha_utils.set_output("content", printcache.strip())
