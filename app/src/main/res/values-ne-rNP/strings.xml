@@ -27,8 +27,6 @@
     <string name="components_summary">प्रदर्शन गर्न ट्याप गर्नुहोस्</string>
     <string name="crowdin">स्थानीयकरण</string>
     <string name="crowdin_summary"><b>Android को लागि Snapdrop</b> लाई आफ्नो मनपर्ने भाषामा अनुवाद गर्न मद्दत गर्नुहोस्</string>
-    <string name="support_us">स्न्यापड्रपलाई समर्थन गर्नुहोस</string>
-    <string name="support_us_summary">तपाइँ कसरी Snapdrop समुदायलाई समर्थन गर्न सक्नुहुन्छ, हेर्नुहोस्</string>
     <string name="twitter">ट्विटर</string>
     <string name="twitter_summary"><b>Android को लागि Snapdrop</b> को बारेमा बताउनुहोस्</string>
     <string name="version">संस्करण</string>
