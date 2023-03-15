@@ -5,15 +5,15 @@
     <string name="err_no_browser">No se puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
     <string name="open_url">Abrir URL</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Bienvenido a Snapdrop</string>
     <string name="app_welcome_summary">1. Abre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicación Snapdrop en cualquier otro dispositivo de tu red WiFi local.\n2. Pulse en el dispositivo con el que desea compartir los archivos.\n3. ¡Listo! Los archivos se enviarán…</string>
     <!-- Download -->
     <string name="download_save_pending">Guardando el archivo. Por favor, tenga un poco de paciencia…</string>
-    <string name="download_successful">Descarga finalizada satisfactoriamente</string>
+    <string name="download_successful">Descarga exitosa</string>
     <string name="notification_channel_name">Descarga completada</string>
     <!-- Action Buttons -->
-    <string name="open">Abrir</string>
+    <string name="open">abrir</string>
     <string name="install">instalar</string>
     <string name="reset">reiniciar</string>
     <string name="copy">copiar</string>
