@@ -6,8 +6,6 @@
     <string name="err_no_app">Немає встановлених програм, щоб відкрити цей файл</string>
     <string name="open_url">Відкрити URL-адресу</string>
     <!-- Onboarding -->
-    <string name="app_welcome">Вітаємо у Snapdrop</string>
-    <string name="app_welcome_summary">1. Відкрийте <a href="https://snapdrop.net">snapdrop.net</a> або програму Snapdrop на будь-якому іншому пристрої у вашій локальній Wi-Fi мережі.\n2. Виберіть пристрій, з яким потрібно поділитися файлом (файлами).\n3. Готово! Файл (и) буде надіслано…</string>
     <!-- Download -->
     <string name="download_save_pending">Збереження файлу. Будь ласка зачекайте…</string>
     <string name="download_successful">Завантажено успішно</string>
@@ -21,19 +19,10 @@
     <string name="home_as_up_indicator_about">Про</string>
     <string name="title_activity_about">Про Snapdrop для Android</string>
     <string name="pref_about_title">Про цю програму</string>
-    <string name="license">Ліцензійна угода</string>
     <string name="pref_category_settings">Налаштування</string>
-    <string name="source">Вихідний код</string>
-    <string name="github">GitHub</string>
-    <string name="source_summary">Переглянути вихідний код на GitHub</string>
-    <string name="components">Компоненти Open Source</string>
     <string name="logs">Журнал налагодження</string>
     <string name="components_summary">Натисніть для відображення</string>
-    <string name="crowdin">Переклад</string>
-    <string name="crowdin_summary">Допоможіть перекласти <b>Snapdrop для Android</b> Вашою улюбленою мовою</string>
     <string name="read_more">читати далі</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Розповісти про <b>Snapdrop для Android</b></string>
     <string name="version">Версія</string>
     <string name="pref_device_name_title">Ім\'я пристрою</string>
     <string name="pref_device_name_summary">Задати назву пристрою самостійно</string>
@@ -62,7 +51,6 @@
     <string name="error_network">Будь ласка, переконайтесь, що Ви підключені до мережі Wi-Fi</string>
     <string name="ignore_error_network">Все одно спробувати</string>
     <string name="error_not_reachable_title">Упс, вибачте!</string>
-    <string name="error_not_reachable">Сервер Snapdrop недоступний. \n\nЯкщо ваше підключення до Інтернету працює належним чином, а Ви дальше отримуєте це повідомлення, тоді проблеми із сервером, можуть бути з нашої сторони. Ми розуміємо, що це може дратувати і розчаровувати, але, будь ласка, не залишайте поганих відгуків на Google Play. \n\nЦя програма не містить жодної реклами, тому й ніяк не монетизується. Цей проект — лише наше хобі, але ми робимо все можливе, щоб змусити його працювати швидко та безперебійно.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Відкрийте Snapdrop на інших пристроях для передачі файлів</string>
     <string name="website_instruction">Натисніть, щоб надіслати файли або утримуйте, щоб надіслати повідомлення</string>
