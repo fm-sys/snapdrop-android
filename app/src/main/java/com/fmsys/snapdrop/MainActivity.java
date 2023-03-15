@@ -224,14 +224,19 @@ public class MainActivity extends AppCompatActivity {
 
         binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
 
-        AnimatedVectorDrawable loadAnimationDrawable = (AnimatedVectorDrawable) binding.loadAnimator.getDrawable();
+        final AnimatedVectorDrawable loadAnimationDrawable = (AnimatedVectorDrawable) binding.loadAnimator.getDrawable();
         loadAnimationDrawable.registerAnimationCallback(new Animatable2.AnimationCallback() {
             @Override
-            public void onAnimationEnd(Drawable drawable) {
+            public void onAnimationEnd(final Drawable drawable) {
                 loadAnimationDrawable.start();
             }
         });
         loadAnimationDrawable.start();
+
+        if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
+            startActivity(new Intent(this, OnboardingActivity.class));
+            finish();
+        }
     }
 
     @Override
@@ -535,20 +540,6 @@ public class MainActivity extends AppCompatActivity {
             binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()), null);
             WebsiteLocalizer.localize(binding.webview);
             Log.w("WebView", "init end.");
-
-
-            // welcome dialog
-            if (prefs.getBoolean(getString(R.string.pref_first_use), true)) {
-                new AlertDialog.Builder(MainActivity.this)
-                        .setCancelable(false)
-                        .setTitle(R.string.app_welcome)
-                        .setMessage(R.string.app_welcome_summary)
-                        .setPositiveButton(android.R.string.ok, null)
-                        .create()
-                        .show();
-
-                prefs.edit().putBoolean(getString(R.string.pref_first_use), false).apply();
-            }
         }
 
         @Override
@@ -662,7 +653,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void fileDownloadedIntent(final Uri uri, final JavaScriptInterface.FileHeader fileHeader) {
         final int notificationId = (int) SystemClock.uptimeMillis();
-        boolean isApk = fileHeader.getName().toLowerCase().endsWith(".apk");
+        final boolean isApk = fileHeader.getName().toLowerCase().endsWith(".apk");
 
         final Intent intent = new Intent();
         intent.setAction(isApk ? Intent.ACTION_INSTALL_PACKAGE : Intent.ACTION_VIEW);

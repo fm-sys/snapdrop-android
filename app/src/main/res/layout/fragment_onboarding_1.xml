@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:theme="@style/AppTheme.Fullscreen"
+    tools:context=".OnboardingActivity">
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        app:tint="@color/textColorWhite"
+        tools:src="@drawable/snapdrop_anim" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_icon"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:text="@string/app_name_long"
+        android:textAlignment="center"
+        android:textColor="@color/textColorWhite"
+        android:textSize="28sp"
+        tools:alpha="1" />
+
+    <TextView
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:alpha="0"
+        android:text="@string/app_name_slogan"
+        android:textAlignment="center"
+        android:textColor="@color/textColorWhite"
+        android:textSize="16sp"
+        tools:alpha="1" />
+
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:alpha="0"
+        android:text="@string/onboarding_button_continue"
+        android:textColor="@color/colorAccent"
+        tools:alpha="1" />
+
+</RelativeLayout>

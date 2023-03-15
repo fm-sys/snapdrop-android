@@ -1,9 +1,15 @@
 package com.fmsys.snapdrop.utils;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+
+import androidx.fragment.app.Fragment;
 
 import com.fmsys.snapdrop.OpenUrlActivity;
+import com.fmsys.snapdrop.R;
+import com.google.android.material.snackbar.Snackbar;
 
 public class ShareUtils {
     private ShareUtils() {
@@ -23,5 +29,13 @@ public class ShareUtils {
         shareIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, extraIntents);
 
         context.startActivity(shareIntent);
+    }
+
+    public static void openUrl(final Fragment fragment, final String url) {
+        try {
+            fragment.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        } catch (ActivityNotFoundException e) {
+            Snackbar.make(fragment.requireView(), R.string.err_no_browser, Snackbar.LENGTH_LONG).show();
+        }
     }
 }

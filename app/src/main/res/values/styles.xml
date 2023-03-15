@@ -20,6 +20,14 @@
         <item name="android:statusBarColor">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Fullscreen" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/Widget.AppTheme.ActionBar.Fullscreen</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:statusBarColor">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/colorAccent</item>
+    </style>
+
     <!-- Helper Theme for FloatingTextActivity to avoid doubled splash screen -->
     <style name="TransparentBackgroundTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
@@ -30,7 +38,7 @@
     </style>
 
     <!-- Workaround, cause the AboutLibraries lib was still using the M2 button design -->
-    <style name="Widget.MaterialComponents.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton"/>
+    <style name="Widget.MaterialComponents.Button.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton" />
 
     <style name="SnackBarActionStyle" parent="Widget.Material3.Button.TextButton.Snackbar">
         <item name="android:background">@android:color/transparent</item>
@@ -60,6 +68,15 @@
         <item name="windowSplashScreenBackground">@color/colorAccent</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
         <item name="postSplashScreenTheme">@style/AppTheme</item>
+    </style>
+
+    <style name="Widget.AppTheme.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.AppTheme.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 
 </resources>

@@ -10,11 +10,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
-import android.view.ContextThemeWrapper;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,15 +25,13 @@ import com.anggrayudi.storage.file.DocumentFileUtils;
 import com.fmsys.snapdrop.utils.ClipboardUtils;
 import com.fmsys.snapdrop.utils.Link;
 import com.fmsys.snapdrop.utils.LogUtils;
+import com.fmsys.snapdrop.utils.NetworkUtils;
+import com.fmsys.snapdrop.utils.ViewUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 import com.mikepenz.aboutlibraries.util.SpecialButton;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 
 public class SettingsFragment extends PreferenceFragmentCompat {
@@ -142,37 +136,14 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return;
             }
 
-            final Dialog dialog = new Dialog(getContext());
-            dialog.setContentView(R.layout.progress_dialog);
-
-            final Future<?> request = Executors.newSingleThreadExecutor().submit(() -> {
-                try {
-                    final Document doc = Jsoup.connect(newValue).get();
-                    requireActivity().runOnUiThread(() -> {
-                        if (doc.selectFirst("x-peers") != null) {
-                            // website seems to be similar to snapdrop... The check could be improved of course.
-                            baseUrlPref.setSummary(newValue);
-                            Snackbar.make(requireView(), R.string.baseurl_instance_verified, Snackbar.LENGTH_LONG).show();
-                        } else {
-                            Snackbar.make(requireView(), R.string.baseurl_no_snapdrop_instance, Snackbar.LENGTH_LONG).show();
-                            baseUrlPref.setSummary(getString(R.string.baseURL));
-                            setPreferenceValue(baseUrlPref.getKey(), null, null);
-                        }
-                    });
-                } catch (Exception e) {
-                    Log.e("BaseUrlChange", "Failed to verify Snapdrop instance: " + e.getMessage());
-                    requireActivity().runOnUiThread(() -> {
-                        Snackbar.make(requireView(), R.string.baseurl_check_instance_failed, Snackbar.LENGTH_LONG).show();
-                        baseUrlPref.setSummary(getString(R.string.baseURL));
-                        setPreferenceValue(baseUrlPref.getKey(), null, null);
-                    });
+            NetworkUtils.checkInstance(this, newValue, result -> {
+                if (result) {
+                    baseUrlPref.setSummary(newValue);
+                } else {
+                    baseUrlPref.setSummary(getString(R.string.baseURL));
+                    setPreferenceValue(baseUrlPref.getKey(), null, null);
                 }
-                dialog.dismiss();
             });
-
-            dialog.setOnCancelListener(d -> request.cancel(true));
-            dialog.show();
-
         }));
         baseUrlPref.setSummary(preferences.getString(baseUrlPref.getKey(), getString(R.string.baseURL)));
 
@@ -225,25 +196,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     }
 
     private boolean showEditTextPreferenceWithResetPossibility(final Preference pref, final String prefix, final @NonNull String defaultValue, final Link link, final Consumer<String> onPreferenceChangeCallback) {
-        final View dialogView = LayoutInflater.from(new ContextThemeWrapper(getContext(), R.style.AlertDialogTheme)).inflate(R.layout.edit_text_dialog, null);
-        final EditText editText = dialogView.findViewById(R.id.textInput);
-        editText.setTag(prefix);
-        editText.setText(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(pref.getKey(), defaultValue));
-        editText.requestFocus();
-
-        if (link != null) {
-            final TextView helperText = dialogView.findViewById(R.id.helperText);
-            helperText.setVisibility(View.VISIBLE);
-            helperText.setText(link.description);
-            helperText.setOnClickListener(v -> openUrl(link.url));
-        }
-
-        final AlertDialog.Builder builder = new AlertDialog.Builder(getContext())
-                .setTitle(pref.getTitle())
-                .setView(dialogView)
-                .setPositiveButton(android.R.string.ok, (dialog, id) -> setPreferenceValue(pref.getKey(), editText.getText().toString().trim(), onPreferenceChangeCallback))
-                .setNegativeButton(R.string.reset, (dialog, id) -> setPreferenceValue(pref.getKey(), null, onPreferenceChangeCallback));
-        builder.create().show();
+        ViewUtils.showEditTextWithResetPossibility(this, pref.getTitle(), prefix, PreferenceManager.getDefaultSharedPreferences(requireContext()).getString(pref.getKey(), defaultValue), link, newValue -> setPreferenceValue(pref.getKey(), newValue, onPreferenceChangeCallback));
         return true;
     }
 

@@ -1,11 +1,26 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop for Android</string>
+    <string name="app_name_slogan">Transfer files seamlessly between all your devices.</string>
     <string name="err_no_browser">Can\'t open browser</string>
     <string name="err_no_app">No app installed to open this file</string>
     <string name="open_url">Open URL</string>
 
-    <!-- Welcome -->
+    <!-- Onboarding -->
+    <string name="onboarding_button_continue">continue</string>
+    <string name="onboarding_button_finish">finish</string>
+    <string name="onboarding_choose_server">Choose a server</string>
+    <string name="onboarding_choose_server_description">This app needs to connects to a server for establishing connection between devices. Your files will stay private all the time.</string>
+    <string name="onboarding_server_pairdrop" translatable="false">https://pairdrop.net</string>
+    <string name="onboarding_server_pairdrop_summary">(recommended) A more advanced Snapdrop version. Comes with cool extra features and more reliable servers.</string>
+    <string name="onboarding_server_snapdrop" translatable="false">https://snapdrop.net</string>
+    <string name="onboarding_server_snapdrop_summary">The classic snapdrop. Clean and simple.</string>
+    <string name="onboarding_server_custom">Custom URL</string>
+    <string name="onboarding_server_custom_summary">Experts can also host their own servers.</string>
+
+    <string name="onboarding_howto">How to use Snapdrop</string>
+    <string name="onboarding_howto_summary">1. Open this app or %s on any other device in your local WiFi network.\n\n2. Tap on the device you want to share the file(s) with.\n\n3. Done! The file(s) will be sent…</string>
+
     <string name="app_welcome">Welcome to Snapdrop</string>
     <string name="app_welcome_summary">1. Open <a href="https://snapdrop.net">snapdrop.net</a> or the Snapdrop app on any other device in your local WiFi network.\n2. Tap on the device you want to share the file(s) with.\n3. Done! The file(s) will be sent…</string>
 
@@ -81,4 +96,5 @@
     <string name="website_footer_discovery">You can be discovered by everyone on this network</string>
     <string name="website_footer_known_as">You are known as %s</string>
     <string name="website_about_subheading">The easiest way to transfer files across devices</string>
+
 </resources>
