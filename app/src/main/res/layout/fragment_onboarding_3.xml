@@ -41,7 +41,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         app:shapeAppearanceOverlay="@style/roundedCornersImage"
-        app:srcCompat="@drawable/instance_in_browser" />
+        app:srcCompat="@drawable/onboarding_sample_devices" />
 
     <Button
         android:id="@+id/continue_button"
