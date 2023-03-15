@@ -8,9 +8,12 @@
 
     <!-- Onboarding -->
     <string name="onboarding_button_continue">continue</string>
+    <string name="onboarding_button_grant">grant permission</string>
     <string name="onboarding_button_finish">finish</string>
     <string name="onboarding_choose_server">Choose a server</string>
-    <string name="onboarding_choose_server_description">This app needs to connects to a server for establishing connection between devices. Your files will stay private all the time.</string>
+    <string name="onboarding_choose_server_description">This app needs to connect to a server for establishing connection between devices. Your files will stay private all the time.</string>
+    <string name="onboarding_storage_permission">Storage permission</string>
+    <string name="onboarding_storage_permission_description">This app is a file sharing utility. Therefore, storage permission is required order to use it.</string>
     <string name="onboarding_server_pairdrop" translatable="false">https://pairdrop.net</string>
     <string name="onboarding_server_pairdrop_summary">(recommended) A more advanced Snapdrop version. Comes with cool extra features and more reliable servers.</string>
     <string name="onboarding_server_snapdrop" translatable="false">https://snapdrop.net</string>

@@ -1,11 +1,14 @@
 package com.fmsys.snapdrop;
 
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
@@ -40,6 +43,13 @@ public class OnboardingFragment1 extends Fragment {
             loadAnimationDrawable.start();
         }, 500);
 
-        binding.continueButton.setOnClickListener(v -> viewModel.launchFragment(OnboardingFragment2.class));
+        binding.continueButton.setOnClickListener(v -> {
+            if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q)
+                    && (ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
+                viewModel.launchFragment(OnboardingFragmentPermission.class);
+            } else {
+                viewModel.launchFragment(OnboardingFragment2.class);
+            }
+        });
     }
 }
