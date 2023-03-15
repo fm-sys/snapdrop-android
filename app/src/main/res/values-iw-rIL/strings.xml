@@ -6,8 +6,6 @@
     <string name="err_no_app">לא נמצא יישום לפתיחת קובץ זה</string>
     <string name="open_url">פתח קישור אינטרנט</string>
     <!-- Onboarding -->
-    <string name="app_welcome">ברוכים הבאים אל סנאפדרופ</string>
-    <string name="app_welcome_summary">1. פתח<a href="https://snapdrop.net"> snapdrop.net</a> או את ישום סנאפדרופ בכל מכשיר אחר שמחובר לרשת המקומית שלך.\n2. לחץ על המכשיר שאתה חפץ לשתף איתו קבצים.\n3. בוצע! הקובץ/קבצים ישלחו מיד...</string>
     <!-- Download -->
     <string name="download_save_pending">מאחסן את הקובץ. בבקשה הראה קצת סבלנות...</string>
     <string name="download_successful">ההורדה הושלמה</string>
@@ -18,17 +16,9 @@
     <string name="copy">העתק</string>
     <!-- Settings / About -->
     <string name="title_activity_about">אודות סנאפדרופ לאנדרואיד</string>
-    <string name="license">רישיון</string>
     <string name="pref_category_settings">הגדרות</string>
-    <string name="source">קוד מקור</string>
-    <string name="source_summary">צפייה בקוד המקור ב־GitHub</string>
-    <string name="components">פתח מקור רכיבים</string>
     <string name="logs">יומני איתור באגים</string>
     <string name="components_summary">לחץ להצגה</string>
-    <string name="crowdin">שפה</string>
-    <string name="crowdin_summary">עזור לתרגם את <b> סנאפדרופ לאנדרואיד</b> לשפה המועדפת עליך</string>
-    <string name="twitter">טוויטר</string>
-    <string name="twitter_summary">ספר על <b>סנאפדרופ לאנדרואיד</b></string>
     <string name="version">גירסה</string>
     <string name="pref_device_name_title">שם המכשיר</string>
     <string name="pref_device_name_summary">בחר שם משתמש למכשירך</string>
@@ -55,9 +45,6 @@
     <string name="error_network">אנא ודא שאתה מחובר לרשת WiFi</string>
     <string name="ignore_error_network">תן לי להיכנס בכל מקרה</string>
     <string name="error_not_reachable_title">אופס, סליחה!</string>
-    <string name="error_not_reachable">אין גישה לשרת הסנאפדרופ .\n\nאם חיבור האינטרנט שלך עובד והגישה לשרת עדיין חסומה, כנראה שיש בעיה כרגע בשרת. אנחנו יודעים שזה יכול להיות מאוד מתסכל, אבל בבקשה אל תדרגו את היישום שלנו לרעה בחנות האפליקציות.
-\n\nהיישום הזה הוא חינמי וללא כל פרסומת.
-אנחנו עושים הכל כדי להחזיר את השרת לפעולה במהירות האפשרית.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">פתח את סנאפדרופ במכשיר אחר לשלוח קבצים</string>
     <string name="website_instruction">לחץ כדי לשלוח קבצים או לחץ לחיצה ארוכה כדי לשלוח הודעה</string>
