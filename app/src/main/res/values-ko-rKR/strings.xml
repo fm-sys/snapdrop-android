@@ -29,8 +29,6 @@
     <string name="components_summary">눌러서 보기</string>
     <string name="crowdin">번역</string>
     <string name="crowdin_summary">당신이 좋아하는 언어로 <b>안드로이드용 Snapdrop</b>을 번역하는데 도움을 주세요!</string>
-    <string name="support_us">Snapdrop 지원하기</string>
-    <string name="support_us_summary">Snapdrop 커뮤니티를 도울 수 있는 방법 알아보기</string>
     <string name="twitter">트위터</string>
     <string name="twitter_summary"><b>안드로이드용 Snapdrop</b>에 대해 대화하기</string>
     <string name="version">버전</string>
