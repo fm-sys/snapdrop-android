@@ -33,6 +33,16 @@
         android:textColor="@color/textColorWhite"
         android:textSize="16sp" />
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:layout_marginTop="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:shapeAppearanceOverlay="@style/roundedCornersImage"
+        app:srcCompat="@drawable/snapdrop_screenshot" />
+
     <Button
         android:id="@+id/continue_button"
         android:layout_width="match_parent"

@@ -56,6 +56,11 @@
         <item name="animationMode">slide</item>
     </style>
 
+    <style name="roundedCornersImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">25dp</item>
+    </style>
+
     <style name="AlertDialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
         <item name="android:colorBackground">@color/dialogBackground</item>
         <item name="dialogCornerRadius">8dp</item>
