@@ -27,8 +27,6 @@
     <string name="components_summary">Chạm để hiển thị</string>
     <string name="crowdin">Bản địa hóa</string>
     <string name="crowdin_summary">Giúp dịch <b>Snapdrop cho Android</b> sang ngôn ngữ yêu thích của bạn</string>
-    <string name="support_us">Hỗ trợ Snapdrop</string>
-    <string name="support_us_summary">Tìm hiểu cách bạn có thể hỗ trợ cộng đồng Snapdrop</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Giới thiệu <b>Snapdrop cho Android</b></string>
     <string name="version">Phiên bản</string>
