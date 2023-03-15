@@ -31,8 +31,6 @@
     <string name="components_summary">Görüntülemek için dokun</string>
     <string name="crowdin">Yerelleştirme</string>
     <string name="crowdin_summary">Favori dil tercihiniz için <b>Snapdrop for Android</b> çevirilmesine yardımcı olun</string>
-    <string name="support_us">Snapdrop Destek</string>
-    <string name="support_us_summary">Snapdrop topluluğuna nasıl destek olabileceğinizi görün</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary"><b>Android için Snapdrop</b>\'tan bahset</string>
     <string name="version">Sürüm</string>
