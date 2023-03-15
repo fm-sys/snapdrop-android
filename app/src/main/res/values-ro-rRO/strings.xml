@@ -2,10 +2,24 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop pentru Android</string>
+    <string name="app_name_slogan">Transferă fișiere între dispozitive, fără efort.</string>
     <string name="err_no_browser">Nu se poate deschide browser-ul</string>
     <string name="err_no_app">Nicio aplicație instalată pentru a deschide acest fișier</string>
     <string name="open_url">Deschide URL-ul</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">continuă</string>
+    <string name="onboarding_button_grant">Acordă permisiuni</string>
+    <string name="onboarding_button_finish">Finalizare</string>
+    <string name="onboarding_choose_server">Alege un server</string>
+    <string name="onboarding_choose_server_description">Această aplicație trebuie să fie conectată la server pentru a face legătura între dispozitive. Fișierele vor fi private întotdeauna.\n\nNotă: Trebuie să alegi același server pentru toate dispozitivele.</string>
+    <string name="onboarding_storage_permission">Permisiuni pentru stocare</string>
+    <string name="onboarding_storage_permission_description">Această aplicație este pentru partajări. De aceea sunt necesare permisiuni pentru stocare.</string>
+    <string name="onboarding_server_pairdrop_summary">(recomandare) O versiune avansată de Snapdrop. Vine cu noi funcții și servere de încredere.</string>
+    <string name="onboarding_server_snapdrop_summary">Snapdrop classic. Simplu și curat.</string>
+    <string name="onboarding_server_custom">URL personalizat</string>
+    <string name="onboarding_server_custom_summary">Experţii îşi pot găzdui şi propriile servere.</string>
+    <string name="onboarding_howto">Instrucțiuni de folosire</string>
+    <string name="onboarding_howto_summary">1. Deschide această aplicație sau %s pe orice alt dispozitiv din rețeaua locală Wireless.\n\n2. Alege dispozitivul cu care vrei sa partajezi fișierele.\n\n3. Gata! Fișierele sunt trimise…</string>
     <string name="app_welcome">Bine ai venit la Snapdrop</string>
     <string name="app_welcome_summary">1. Deschide <a href="https://snapdrop.net">snapdrop.net</a> sau deschide aplicația Snapdrop pe orice dispozitiv în rețeaua ta WiFi.\n2. Atingeți dispozitivul pe care doriți să partajați fișierul(ele) cu.\n3. Gata! Fișierul(ele) va fi trimis...</string>
     <!-- Download -->
@@ -65,6 +79,7 @@
     <string name="ignore_error_network">Lasă-mă să intru oricum</string>
     <string name="error_not_reachable_title">Ups, scuze!</string>
     <string name="error_not_reachable">Conectarea la serverul Snapdrop nu poate fi realizată. \n\nDacă conexiunea ta la internet funcționează și acest lucru se întâmplă oricum, am putea avea probleme la server în prezent. Știm că acest lucru poate fi foarte frustrant, dar vă rugăm să nu lăsați recenzii rele pe Google Play. \n\nAceastă aplicație este complet fără reclame, deci nu câștigăm bani cu ea. E doar un proiect de hobby, dar facem totul pentru a-l readuce în funcţiune rapid.</string>
+    <string name="error_server_not_reachable">Serverul nu poate fi accesat.\n\nDacă conexiunea la internet este bună și tot se întâmplă, încearcă să selectezi alt server.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Deschide Snapdrop pe alte dispozitive pentru a trimite fișiere</string>
     <string name="website_instruction">Atingeți pentru a trimite fișiere sau atingeți lung pentru a trimite un mesaj</string>
