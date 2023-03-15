@@ -39,7 +39,7 @@ try {
     websiteLinkDiv.style.cssText = 'height:10%; position:absolute; bottom:0px;';
 
     let websiteLink = document.createElement('a');
-    websiteLink.href = window.location.host;
+    websiteLink.href = '/';
     websiteLink.target = '_blank';
 
     let websiteLinkText = document.createElement('h4');
