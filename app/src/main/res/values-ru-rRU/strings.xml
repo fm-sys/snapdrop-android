@@ -27,8 +27,6 @@
     <string name="components_summary">Коснитесь для отображения</string>
     <string name="crowdin">Перевод</string>
     <string name="crowdin_summary">Помогите перевести <b>Snapdrop для Android</b> на Ваш любимый язык</string>
-    <string name="support_us">Поддержать Snapdrop</string>
-    <string name="support_us_summary">Узнайте, как вы можете поддержать сообщество Snapdrop</string>
     <string name="twitter">Twitter</string>
     <string name="twitter_summary">Рассказать о <b>Snapdrop for Android</b></string>
     <string name="version">Версия</string>
