@@ -5,7 +5,7 @@
     <string name="err_no_browser">ब्राउजर खोल्न सकिएन</string>
     <string name="err_no_app">यो फाईल खोल्न सक्ने कुनै एप भेटिएन</string>
     <string name="open_url">URL खोल्नुहोस्</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Snapdrop मा स्वागत छ</string>
     <string name="app_welcome_summary">१. आफ्नो स्थानीय WiFi नेटवर्कमा रहेको कुनै अन्य यन्त्रमा <a href="https://snapdrop.net">snapdrop.net</a> वा Snapdrop एप खोल्नुहोस्।\n२. तपाईंले फाइल(हरू) आदान प्रदान गर्न चाहनुभएको यन्त्रमा ट्याप गर्नुहोस्।\n३. सकियो! फाइल(हरू) पठाइनेछ…</string>
     <!-- Download -->
