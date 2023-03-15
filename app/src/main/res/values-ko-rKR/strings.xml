@@ -5,7 +5,7 @@
     <string name="err_no_browser">브라우저를 실행할 수 없어요.</string>
     <string name="err_no_app">이 파일을 열 수 있는 앱이 없어요.</string>
     <string name="open_url">URL 열기</string>
-    <!-- Welcome -->
+    <!-- Onboarding -->
     <string name="app_welcome">Snapdrop에 오신 것을 환영합니다!</string>
     <string name="app_welcome_summary">1. 같은 WiFi에 연결된 다른 장치에서 <a href="https://snapdrop.net">snapdrop.net</a>에 접속하거나 Snapdrop을 실행하세요.\n2. 파일을 공유하고자 하는 기기를 탭하세요.\n3. 파일이 잘 전송될 거예요...</string>
     <!-- Download -->
