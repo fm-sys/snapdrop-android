@@ -18,7 +18,6 @@
     <string name="onboarding_server_snapdrop_summary">El Snapdrop clásico. Limpio y simple.</string>
     <string name="onboarding_server_custom">URL personalizada</string>
     <string name="onboarding_server_custom_summary">Los expertos también pueden alojar sus propios servidores.</string>
-    <string name="onboarding_howto">Cómo usar Snapdrop</string>
     <string name="onboarding_howto_summary">1. Abre esta aplicación o %s en cualquier otro dispositivo en tu red WiFi local.\n\n2. Toca en el dispositivo con el que quieres compartir los archivos.\n\n3. ¡Listo! Los archivos se enviarán…</string>
     <string name="app_welcome">Bienvenido a Snapdrop</string>
     <string name="app_welcome_summary">1. Abre <a href="https://snapdrop.net">snapdrop.net</a> o la aplicación Snapdrop en cualquier otro dispositivo de tu red WiFi local.\n2. Pulse en el dispositivo con el que desea compartir los archivos.\n3. ¡Listo! Los archivos se enviarán…</string>
