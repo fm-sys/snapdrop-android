@@ -15,6 +15,6 @@
 
 <br/>
 
-<h3 align="center">Buy be a hot chocolate</h3>
+<h3 align="center">Buy me a coffee</h3>
 <p align="center">If you want to support the developer of Snapdrop for Android, you are welcome to by me a coffe or hot chocolate :)</p>
 <p align="center"><a href="https://www.buymeacoffee.com/snapdropandroid"><img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg"></a></p>
