@@ -36,6 +36,8 @@
     <string name="pref_category_settings">Ustawienia</string>
     <string name="logs">Dzienniki debugowania</string>
     <string name="components_summary">Dotknij, aby wyświetlić</string>
+    <string name="support_us">Wesprzyj nasz projekt</string>
+    <string name="support_us_summary">Zobacz, jak możesz wesprzeć ten projekt</string>
     <string name="read_more">Pokaż więcej</string>
     <string name="version">Wersja</string>
     <string name="pref_device_name_title">Nazwa urządzenia</string>
@@ -52,6 +54,7 @@
         <item>Ciemny</item>
     </string-array>
     <string name="baseurl_title">Podstawowy adres URL</string>
+    <string name="baseurl_not_set">Nie ustawiono</string>
     <string name="baseurl_instance_verified">Instancja Snapdrop została pomyślnie zweryfikowana</string>
     <string name="baseurl_no_snapdrop_instance">Wygląda na to, że nie jest instancją Snapdrop</string>
     <string name="baseurl_check_instance_failed">Nie udało się zweryfikować instancji Snapdrop</string>
@@ -65,6 +68,7 @@
     <string name="error_network">Upewnij się, że jesteś podłączony do sieci WiFi</string>
     <string name="ignore_error_network">Spróbuj mimo wszystko</string>
     <string name="error_not_reachable_title">Ups, przepraszam!</string>
+    <string name="error_server_not_reachable">Nie można połączyć się z serwerem. \n\nJeśli Twoje połączenie internetowe działa i tak się dzieje, spróbuj wybrać inny serwer</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Otwórz Snapdrop na innych urządzeniach aby wysyłać pliki</string>
     <string name="website_instruction">Dotknij, aby wysłać pliki lub długie dotknięcie aby wysłać wiadomość</string>
