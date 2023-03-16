@@ -324,6 +324,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+        } else if (Intent.ACTION_VIEW.equals(intent.getAction()) && intent.getData().getHost().equals(Uri.parse(baseURL).getHost())) {
+            binding.webview.loadUrl(intent.getDataString()); // e.g. paring URL
         } else {
             super.onNewIntent(intent);
         }
