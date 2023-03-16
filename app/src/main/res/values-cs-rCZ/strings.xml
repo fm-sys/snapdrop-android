@@ -5,9 +5,7 @@
     <string name="err_no_browser">Nelze spustit prohlížeč</string>
     <string name="err_no_app">Pro otevření tohoto souboru není nainstalována žádná aplikace</string>
     <string name="open_url">Otevřít odkaz</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Vítejte ve Snapdrop</string>
-    <string name="app_welcome_summary">1. Navštivte stránku <a href="https://snapdrop.net">snapdrop.net</a> nebo otevřete aplikaci Snapdrop na jakémkoliv jiném zařízení připojené k WiFi.\n2. Klepněte na zařízení, se kterým chcete sdílet soubor(y).\n3. Hotovo! Soubory budou odeslány…</string>
+    <!-- Onboarding -->
     <!-- Download -->
     <string name="download_save_pending">Ukládání souboru. Chvíli strpení…</string>
     <string name="download_successful">Úspěšně staženo</string>
@@ -18,19 +16,9 @@
     <string name="copy">kopírovat</string>
     <!-- Settings / About -->
     <string name="title_activity_about">O aplikaci Snapdrop pro Android</string>
-    <string name="license">Licence</string>
     <string name="pref_category_settings">Nastavení</string>
-    <string name="source">Zdrojový kód</string>
-    <string name="source_summary">Zobrazit zdrojový kód na GitHub</string>
-    <string name="components">Open source komponenty</string>
     <string name="logs">Protokoly ladění</string>
     <string name="components_summary">Klepněte pro zobrazení</string>
-    <string name="crowdin">Lokalizace</string>
-    <string name="crowdin_summary">Pomozte přeložit <b>Snapdrop pro Android</b> do Vašeho oblíbeného jazyka</string>
-    <string name="support_us">Podpořit Snapdrop</string>
-    <string name="support_us_summary">Podívejte se, jak můžete vylepšit Snapdrop komunitu</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Vyprávějte o <b>Snapdrop pro Android</b></string>
     <string name="version">Verze</string>
     <string name="pref_device_name_title">Název zařízení</string>
     <string name="pref_device_name_summary">Nastavte vlastní název zařízení</string>
@@ -57,7 +45,6 @@
     <string name="error_network">Ověřte prosím, zda jste připojeni k síti WiFi</string>
     <string name="ignore_error_network">Stejně mě pusťte dovnitř</string>
     <string name="error_not_reachable_title">Ajajaj, pardon!</string>
-    <string name="error_not_reachable">Nejde se připojit na servery Snapdrop. \n\nPokud Vaše internetové připojení funguje a stále se nejde připojit, mohl nám momentálně vypadnout server. Víme, že to může být velmi frustrující, ale prosím nedávejte nám špatné recenze na Google Play. \n\n Tato aplikace je zcela bez reklam, takže s ní nevyděláváme žádné peníze. Je to jen hobby projekt, ale děláme vše pro to, abychom ho rychle zprovoznili.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Otevřete Snapdrop na více zařízeních pro přesun souborů</string>
     <string name="website_instruction">Klepněte pro odeslání souboru nebo klepněte a podržte pro odeslání zprávy</string>

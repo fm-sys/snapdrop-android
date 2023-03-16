@@ -5,32 +5,24 @@
     <string name="err_no_browser">Tidak bisa membuka browser</string>
     <string name="err_no_app">Tidak ada aplikasi yang diinstal untuk membuka file ini</string>
     <string name="open_url">Buka URL</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Selamat datang di Snapdrop</string>
-    <string name="app_welcome_summary">1. Buka <a href="https://snapdrop.net">snapdrop.net</a> atau aplikasi Snapdrop di perangkat lain di jaringan WiFi lokal Anda.\n2. Ketuk perangkat yang ingin Anda bagikan file.\n3. Selesai! Berkas akan dikirim…</string>
+    <!-- Onboarding -->
     <!-- Download -->
     <string name="download_save_pending">Menyimpan file. Mohon bersabar…</string>
     <string name="download_successful">Berhasil mengunduh</string>
     <string name="notification_channel_name">Unduhan selesai</string>
     <!-- Action Buttons -->
     <string name="open">buka</string>
+    <string name="install">pasang</string>
     <string name="reset">atur ulang</string>
     <string name="copy">salin</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Tentang</string>
     <string name="title_activity_about">Tentang Snapdrop untuk Android</string>
-    <string name="license">Lisensi</string>
+    <string name="pref_about_title">Tentang aplikasi ini</string>
     <string name="pref_category_settings">Pengaturan</string>
-    <string name="source">Kode Sumber</string>
-    <string name="source_summary">Lihat kode program di GitHub</string>
-    <string name="components">Komponen sumber terbuka</string>
     <string name="logs">Catatan Debug</string>
     <string name="components_summary">Ketuk untuk menampilkan</string>
-    <string name="crowdin">Terjemahan Lokal</string>
-    <string name="crowdin_summary">Bantu untuk menerjemahkan <b>Snapdrop untuk Android</b> ke dalam bahasa favorit Anda</string>
-    <string name="support_us">Dukung Snapdrop</string>
-    <string name="support_us_summary">Lihat, bagaimana Anda dapat mendukung komunitas Snapdrop</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Ceritakan tentang <b>Snapdrop untuk Android</b></string>
+    <string name="read_more">baca selengkapnya</string>
     <string name="version">Versi</string>
     <string name="pref_device_name_title">Nama perangkat</string>
     <string name="pref_device_name_summary">Tetapkan nama perangkat sesuai keinginan anda</string>
@@ -46,8 +38,10 @@
         <item>Gelap</item>
     </string-array>
     <string name="baseurl_title">URL Dasar</string>
+    <string name="baseurl_instance_verified">Instalasi Snapdrop berhasil diverifikasi</string>
     <string name="baseurl_no_snapdrop_instance">Sepertinya bukan instans Snapdrop</string>
     <string name="baseurl_check_instance_failed">Gagal memverifikasi instans Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Lihat <a href="">FAQ</a> untuk mengetahui daftar kejadian tidak resmi. Harap perhatikan bahwa beberapa bagian mungkin tidak berfungsi dengan benar di dalam aplikasi.</string>
     <string name="save_location">Lokasi penyimpanan</string>
     <!-- File sharing -->
     <string name="intent_file">Sebuah file dipilih untuk dibagikan</string>
@@ -57,7 +51,6 @@
     <string name="error_network">Harap verifikasi bahwa Anda terhubung dengan jaringan WiFi</string>
     <string name="ignore_error_network">Biarkan saya masuk</string>
     <string name="error_not_reachable_title">Ups, maaf!</string>
-    <string name="error_not_reachable">Snapdrop-Server tidak dapat dihubungi. \n\nJika koneksi internet Anda berfungsi dan ini tetap terjadi, kami mungkin mengalami masalah server saat ini. Kami tahu ini bisa sangat membuat frustrasi, tapi tolong jangan tinggalkan ulasan buruk di Google Play. \n\nAplikasi ini benar-benar bebas iklan, jadi kami tidak menghasilkan uang dengannya. Ini hanya proyek hobi, tetapi kami melakukan segalanya untuk membuatnya kembali berjalan dengan secepatnya.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Buka Snapdrop di perangkat lain untuk mengirim berkas</string>
     <string name="website_instruction">Ketuk untuk mengirim file atau ketuk lama untuk mengirim pesan</string>

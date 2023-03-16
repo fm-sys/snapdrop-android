@@ -5,32 +5,23 @@
     <string name="err_no_browser">Tarayıcı açılamıyor</string>
     <string name="err_no_app">Bu dosyayı açmak için yüklü bir uygulama yok</string>
     <string name="open_url">URL\'yi Aç</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Snapdrop\'a Hoşgeldiniz</string>
-    <string name="app_welcome_summary"><a href="https://snapdrop.net">snapdrop.net</a> veya yerel WiFi ağınızdaki bir cihazda Snapdrop\'u açın.\n2. Dosya(lar)ı göndermek istediğiniz cihaza dokunun.\n3. Bitti! Dosya(lar) gönderilecek…</string>
+    <!-- Onboarding -->
     <!-- Download -->
     <string name="download_save_pending">Dosya depolanıyor. Lütfen bekleyiniz…</string>
     <string name="download_successful">İndirme başarılı</string>
     <string name="notification_channel_name">İndirme tamamlandı</string>
     <!-- Action Buttons -->
     <string name="open">aç</string>
+    <string name="install">yükle</string>
     <string name="reset">Sıfırla</string>
     <string name="copy">kopyala</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Hakkında</string>
     <string name="title_activity_about">Android için Snapdrop Hakkında</string>
-    <string name="license">Lisans</string>
+    <string name="pref_about_title">Uygulama hakkında</string>
     <string name="pref_category_settings">Ayarlar</string>
-    <string name="source">Kaynak kodu</string>
-    <string name="source_summary">Kaynak kodunu GitHub\'da görüntüle</string>
-    <string name="components">Açık kaynaklı bileşenler</string>
     <string name="logs">Hata Ayıklama Günlükleri</string>
     <string name="components_summary">Görüntülemek için dokun</string>
-    <string name="crowdin">Yerelleştirme</string>
-    <string name="crowdin_summary">Favori dil tercihiniz için <b>Snapdrop for Android</b> çevirilmesine yardımcı olun</string>
-    <string name="support_us">Snapdrop Destek</string>
-    <string name="support_us_summary">Snapdrop topluluğuna nasıl destek olabileceğinizi görün</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary"><b>Android için Snapdrop</b>\'tan bahset</string>
     <string name="version">Sürüm</string>
     <string name="pref_device_name_title">Cihaz Adı</string>
     <string name="pref_device_name_summary">Kullanıcı-tanımlı bir cihaz adı belirleyin</string>
@@ -57,7 +48,6 @@
     <string name="error_network">Bir WiFi ağına bağlı olduğunuzdan emin olun</string>
     <string name="ignore_error_network">Yine de devam et</string>
     <string name="error_not_reachable_title">Ups, üzgünüm!</string>
-    <string name="error_not_reachable">Snapdrop sunucusuna erişilemiyor. \n\nİnternet bağlantınız çalışıyorsa ve bu durumu yaşamaya devam ediyorsanız anlık olarak sunucularımız ile alakalı sorun yaşıyor olabiliriz. Bunun ne kadar can sıkıcı olduğunun farkındayız fakat lütfen Google Play\'de kötü yorum bırakmayınız. \n\nBu uygulama tamamen reklamsızdır, dolayısıyla herhangi bir ücret kazanmıyoruz. Hobi amaçlı bir uygulamadan ibaret sadece. Yaşadığınız sorunu bir an önce düzeltmek için elimizden gelen her şeyi yapıyoruz.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Dosya göndermek için Snapdrop\'u diğer cihazlarda açınız</string>
     <string name="website_instruction">Dosya göndermek için dokun veya mesaj göndermek için basılı tut</string>

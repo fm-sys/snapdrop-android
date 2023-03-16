@@ -2,35 +2,43 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop per Android</string>
+    <string name="app_name_slogan">Trasferisci i file in modo semplice e veloce tra i tuoi dispositivi.</string>
     <string name="err_no_browser">Impossibile aprire il browser</string>
     <string name="err_no_app">Nessuna app trovata per aprire questo file</string>
     <string name="open_url">Apri URL</string>
-    <!-- Welcome -->
-    <string name="app_welcome">Benvenuti su Snapdrop</string>
-    <string name="app_welcome_summary">Apri <a href="https://snapdrop.net">snapdrop.net</a> o l\'app Snapdrop su un qualsiasi dispositivo connesso alla tua rete WiFi.\n2. Premi sul dispositivo al quale vuoi condividere i file.\n3. Fatto! I file saranno inviati…</string>
+    <!-- Onboarding -->
+    <string name="onboarding_button_continue">continua</string>
+    <string name="onboarding_button_grant">concedi l\'autorizzazione</string>
+    <string name="onboarding_button_finish">fine</string>
+    <string name="onboarding_choose_server">Scegli un indirizzo del server</string>
+    <string name="onboarding_choose_server_description">Questa app è un client ottimizzato per le applicazioni web Snapdrop e PairDrop.\nScegli una delle seguenti istanze o specifica un URL personalizzato a cui connettersi.\n\nNota: Devi scegliere lo stesso URL su tutti i dispositivi.</string>
+    <string name="onboarding_storage_permission">Autorizzazione di archiviazione</string>
+    <string name="onboarding_storage_permission_description">Questa app è un\'utilità di condivisione di file. Pertanto, è richiesta l\'autorizzazione di archiviazione per utilizzarla.</string>
+    <string name="onboarding_server_pairdrop_summary">(raccomandato)\nFunzionalità di collegamento, trasferimento internet e si concentra sulla stabilità.</string>
+    <string name="onboarding_server_snapdrop_summary">Il classico snapdrop. Pulito e semplice.</string>
+    <string name="onboarding_server_custom">URL personalizzato</string>
+    <string name="onboarding_server_custom_summary">Gli esperti possono anche utilizzare i propri server.</string>
+    <string name="onboarding_howto">Come si usa</string>
+    <string name="onboarding_howto_summary">1. Apri questa app o %s su qualsiasi altro dispositivo nella tua rete WiFi locale.\n\n2. Tocca il dispositivo con cui vuoi condividere i file.\n\n3. Fatto! I file verranno inviati…</string>
     <!-- Download -->
     <string name="download_save_pending">Salvataggio del file. Si prega di attendere…</string>
     <string name="download_successful">Download riuscito</string>
     <string name="notification_channel_name">Download completato</string>
     <!-- Action Buttons -->
     <string name="open">apri</string>
+    <string name="install">installa</string>
     <string name="reset">reset</string>
     <string name="copy">copia</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Informazioni</string>
     <string name="title_activity_about">Informazioni su Snapdrop per Android</string>
-    <string name="license">Licenza</string>
+    <string name="pref_about_title">Informazioni sull\'app</string>
     <string name="pref_category_settings">Impostazioni</string>
-    <string name="source">Codice sorgente</string>
-    <string name="source_summary">Mostra il codice sorgente su GitHub</string>
-    <string name="components">Componenti open source</string>
     <string name="logs">Log di debug</string>
     <string name="components_summary">Premi per visualizzare</string>
-    <string name="crowdin">Localizzazione</string>
-    <string name="crowdin_summary">Aiuta a tradurre <b>Snapdrop per Android</b> nella tua lingua preferita</string>
-    <string name="support_us">Sostieni Snapdrop</string>
-    <string name="support_us_summary">Vedi, come puoi sostenere la community di Snapdrop</string>
-    <string name="twitter">Twitter</string>
-    <string name="twitter_summary">Racconta di <b>Snapdrop per Android</b></string>
+    <string name="support_us">Sostienici</string>
+    <string name="support_us_summary">Scopri come puoi supportare questo progetto</string>
+    <string name="read_more">continua a leggere</string>
     <string name="version">Versione</string>
     <string name="pref_device_name_title">Nome del dispositivo</string>
     <string name="pref_device_name_summary">Imposta un nome del dispositivo personalizzato</string>
@@ -46,8 +54,11 @@
         <item>Scuro</item>
     </string-array>
     <string name="baseurl_title">URL di base</string>
+    <string name="baseurl_not_set">Non impostato</string>
+    <string name="baseurl_instance_verified">L\'istanza Snapdrop è stata verificata con successo</string>
     <string name="baseurl_no_snapdrop_instance">Non sembra essere un\'istanza di Snapdrop</string>
     <string name="baseurl_check_instance_failed">Impossibile verificare l\'istanza di Snapdrop</string>
+    <string name="baseurl_unofficial_instances">Dai un\'occhiata alle <a href="">FAQ</a> per una lista di istanze non ufficiali. Si informa che alcune istanze potrebbero non funzionare correttamente all\'interno dell\'app.</string>
     <string name="save_location">Percorso di salvataggio</string>
     <!-- File sharing -->
     <string name="intent_file">Un file è selezionato per la condivisione</string>
@@ -57,7 +68,6 @@
     <string name="error_network">Verifica di essere connesso ad una rete WiFi</string>
     <string name="ignore_error_network">Entra comunque</string>
     <string name="error_not_reachable_title">Ops, mi dispiace!</string>
-    <string name="error_not_reachable">Impossibile raggiungere il server di Snapdrop. \n\nSe la tua connessione internet funziona e questo accade comunque, potremmo avere problemi con il server al momento. Sappiamo che questo può essere molto frustrante, ma per favore non lasciare recensioni negative su Google Play. \n\nQuesta app è completamente priva di pubblicità, quindi non guadagniamo soldi con essa. È solo un progetto amatoriale, ma stiamo facendo tutto per farlo tornare a funzionare velocemente.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Apri Snapdrop su altri dispositivi per inviare i file</string>
     <string name="website_instruction">Premi per inviare i file o tieni premuto per inviare un messaggio</string>
