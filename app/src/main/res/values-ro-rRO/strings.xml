@@ -36,6 +36,8 @@
     <string name="pref_category_settings">Setări</string>
     <string name="logs">Jurnal Depanare</string>
     <string name="components_summary">Atinge pentru a afișa</string>
+    <string name="support_us">Susține-ne</string>
+    <string name="support_us_summary">Vezi, cum poți sprijini acest proiect</string>
     <string name="read_more">citește mai mult</string>
     <string name="version">Versiune</string>
     <string name="pref_device_name_title">Numele dispozitivului</string>
@@ -52,6 +54,7 @@
         <item>Întunecat</item>
     </string-array>
     <string name="baseurl_title">URL-ul de bază</string>
+    <string name="baseurl_not_set">Nesetat</string>
     <string name="baseurl_instance_verified">Instanța Snapdrop a fost verificată cu succes</string>
     <string name="baseurl_no_snapdrop_instance">Nu pare să fie o instanță Snapdrop</string>
     <string name="baseurl_check_instance_failed">Verificarea instanței Snapdrop a eșuat</string>
@@ -65,6 +68,7 @@
     <string name="error_network">Te rugăm să verifici dacă ești conectat la o rețea WiFi</string>
     <string name="ignore_error_network">Lasă-mă să intru oricum</string>
     <string name="error_not_reachable_title">Ups, scuze!</string>
+    <string name="error_server_not_reachable">Serverul nu poate fi accesat. \n\nDacă conexiunea la internet este bună și tot se întâmplă, încearcă să selectezi alt server.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Deschide Snapdrop pe alte dispozitive pentru a trimite fișiere</string>
     <string name="website_instruction">Atingeți pentru a trimite fișiere sau atingeți lung pentru a trimite un mesaj</string>
