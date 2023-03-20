@@ -2,10 +2,13 @@
 <resources>
     <string name="app_name">سناب درُوب</string>
     <string name="app_name_long">سناب درُوب لِنِظامِ أندُروِيد</string>
+    <string name="app_name_slogan">نقل الملفات بسلاسة بين جميع أجهزتك.</string>
     <string name="err_no_browser">لا يمكن فتح المستعرض</string>
     <string name="err_no_app">لا يوجد تطبيق لفتح هذا المِلَفّ</string>
     <string name="open_url">افتح الرابط</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">استمرار</string>
+    <string name="onboarding_button_grant">منح الإذن</string>
     <!-- Download -->
     <string name="download_save_pending">يتم تخزين الملف. يرجى التحلي بالصبر قليلاً…</string>
     <string name="download_successful">تمَّ التَنزيل بِنَجاح</string>
