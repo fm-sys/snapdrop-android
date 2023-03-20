@@ -8,10 +8,17 @@
     <string name="open_url">Abrir URL</string>
     <!-- Onboarding -->
     <string name="onboarding_button_continue">continuar</string>
+    <string name="onboarding_button_grant">fornecer permissão</string>
     <string name="onboarding_button_finish">terminar</string>
+    <string name="onboarding_choose_server">Escolha o endereço do servidor</string>
+    <string name="onboarding_choose_server_description">Este app é um cliente otimizado para o Snapdrop e o PairDrop.\nEscolha uma das seguintes instâncias ou especifique uma url personalizada para se conectar.\n\nNota: Você tem que escolher a mesma URL em todos os dispositivos.</string>
+    <string name="onboarding_storage_permission">Permissão de armazenamento</string>
+    <string name="onboarding_storage_permission_description">Este aplicativo é usado para compartilhamento de arquivos. Portanto, a permissão de armazenamento é necessária para usá-lo.</string>
+    <string name="onboarding_server_pairdrop_summary">(recomendado)\nrecurso de emparelhamento, transferência de internet e foco na estabilidade.</string>
     <string name="onboarding_server_snapdrop_summary">O snapdrop clássico. Limpo e simples.</string>
     <string name="onboarding_server_custom">URL personalizada</string>
     <string name="onboarding_server_custom_summary">Especialistas também podem hospedar seus próprios servidores.</string>
+    <string name="onboarding_howto">Como usar</string>
     <string name="onboarding_howto_summary">1. Abra esse aplicativo ou %s em qualquer outro dispositivo na sua rede Wifi local.\n\n2. Aperte no dispositivo que você quer compartilhar os arquivos.\n\n3. Pronto! Os arquivos serão enviados…</string>
     <!-- Download -->
     <string name="download_save_pending">Armazenando o arquivo. Por favor, tenha um pouco de paciência…</string>
@@ -29,6 +36,8 @@
     <string name="pref_category_settings">Configurações</string>
     <string name="logs">Logs de depuração</string>
     <string name="components_summary">Toque para exibir</string>
+    <string name="support_us">Nos ajude</string>
+    <string name="support_us_summary">Veja, como você pode apoiar este projeto</string>
     <string name="read_more">Acesse mais informações</string>
     <string name="version">Versão</string>
     <string name="pref_device_name_title">Nome do dispositivo</string>
@@ -45,6 +54,7 @@
         <item>Escuro</item>
     </string-array>
     <string name="baseurl_title">URL base</string>
+    <string name="baseurl_not_set">Não definido</string>
     <string name="baseurl_instance_verified">Versão do \"Snapdrop\" foi verificada com sucesso</string>
     <string name="baseurl_no_snapdrop_instance">Não parece ser uma instância do Snapdrop</string>
     <string name="baseurl_check_instance_failed">Falha ao verificar instância do Snapdrop</string>
@@ -58,6 +68,7 @@
     <string name="error_network">Por favor, certifique-se de que você está conectado a uma rede WiFi</string>
     <string name="ignore_error_network">Deixe-me prosseguir</string>
     <string name="error_not_reachable_title">Opa, desculpa!</string>
+    <string name="error_server_not_reachable">O servidor não pode ser alcançado. \n\nSe sua conexão de internet está funcionando e isso acontece sempre, por favor, tente selecionar um servidor diferente.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Abra o Snapdrop em outros dispositivos para enviar arquivos</string>
     <string name="website_instruction">Toque para enviar arquivos ou faça toque longo para enviar uma mensagem</string>
