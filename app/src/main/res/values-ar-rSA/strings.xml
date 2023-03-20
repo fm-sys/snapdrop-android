@@ -9,6 +9,17 @@
     <!-- Onboarding -->
     <string name="onboarding_button_continue">استمرار</string>
     <string name="onboarding_button_grant">منح الإذن</string>
+    <string name="onboarding_button_finish">اكتمل</string>
+    <string name="onboarding_choose_server">اختر عنوان الخادم</string>
+    <string name="onboarding_choose_server_description">هذا التطبيق هو عميل مُحسَّن لتطبيقات الويب Snaplop و PairDrop.\nاختر واحدة من الأمثلة التالية أو حدد عنوان URL مخصص للاتصال به.\n\nملاحظة: يجب عليك اختيار نفس الرابط على جميع الأجهزة.</string>
+    <string name="onboarding_storage_permission">إذن التخزين</string>
+    <string name="onboarding_storage_permission_description">هذا التطبيق هو أداة مشاركة للملفات. لذلك، إذن التخزين مطلوب لاستخدامه.</string>
+    <string name="onboarding_server_pairdrop_summary">(موصى به)\nميزة الاقتران ، نقل الإنترنت والتركيز على الاستقرار.</string>
+    <string name="onboarding_server_snapdrop_summary">سناب دروب الكلاسيكي والبسيط.</string>
+    <string name="onboarding_server_custom">عنوان URL مخصص</string>
+    <string name="onboarding_server_custom_summary">ويمكن للخبراء أيضا أن يستضيفوا خوادمهم الخاصة.</string>
+    <string name="onboarding_howto">كيفية الاستخدام</string>
+    <string name="onboarding_howto_summary">1. افتح هذا التطبيق أو %s على أي جهاز آخر في شبكة الواي فاي المحلية الخاصة بك.\n\n2. اضغط على الجهاز الذي تريد مشاركة الملف (الملفات) معه.\n\n3. تم! سيتم إرسال الملف (الملفات)…</string>
     <!-- Download -->
     <string name="download_save_pending">يتم تخزين الملف. يرجى التحلي بالصبر قليلاً…</string>
     <string name="download_successful">تمَّ التَنزيل بِنَجاح</string>
@@ -23,8 +34,10 @@
     <string name="title_activity_about">حَول سناب درُوب لِنِظامِ أندُروِيد</string>
     <string name="pref_about_title">حول التطبيق</string>
     <string name="pref_category_settings">الإعدادات</string>
-    <string name="logs">سجلات تتبع الأخطاء</string>
+    <string name="logs">سجل تصحيح الأخطاء</string>
     <string name="components_summary">اِنقر للعَرض</string>
+    <string name="support_us">ادعمنا</string>
+    <string name="support_us_summary">انظر كيف يمكنك دعم هذا المشروع</string>
     <string name="read_more">إقرأ المزيد</string>
     <string name="version">الإصدار</string>
     <string name="pref_device_name_title">اِسمُ الجِهاز</string>
@@ -41,6 +54,7 @@
         <item>داكِن</item>
     </string-array>
     <string name="baseurl_title">عنوان URL الأساسي</string>
+    <string name="baseurl_not_set">لم يتم التعيين</string>
     <string name="baseurl_instance_verified">تم التحقق من خادم Snapdrop بنجاح</string>
     <string name="baseurl_no_snapdrop_instance">لا يبدو أنه مثيل سناب دروب</string>
     <string name="baseurl_check_instance_failed">فشل في التحقق من مثيل سناب دروب</string>
@@ -54,6 +68,7 @@
     <string name="error_network">يُرجى التَّحَقُقُ مِنَ اِتِّصَالِكَ بِشَبَكَةِ واي فاي</string>
     <string name="ignore_error_network">اِسمَح لِي بالدُخُولِ عَلَى أيِّ حال</string>
     <string name="error_not_reachable_title">عذرًا، آسف!</string>
+    <string name="error_server_not_reachable">لا يمكن الوصول إلى الخادم. \n\nإذا كان اتصالك بالإنترنت يعمل ويحدث هذا على أي حال، الرجاء محاولة تحديد عنوان خادم مختلف.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">افتح Snapdrop على الأجهزة الأخرى لإرسال الملفات</string>
     <string name="website_instruction">انقر لإرسال الملفات أو انقر مطولاً لإرسال رسالة</string>
