@@ -68,7 +68,7 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'androidx.webkit:webkit:1.6.0'
     implementation 'com.google.android.material:material:1.8.0'
-    implementation 'org.jsoup:jsoup:1.15.3'
+    implementation 'org.jsoup:jsoup:1.15.4'
     implementation "com.mikepenz:aboutlibraries-core:10.6.1"
     implementation "com.mikepenz:aboutlibraries:10.6.1"
     testImplementation 'junit:junit:4.13.2'
