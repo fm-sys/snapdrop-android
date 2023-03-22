@@ -66,7 +66,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.preference:preference:1.2.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation 'androidx.webkit:webkit:1.6.0'
+    implementation 'androidx.webkit:webkit:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'org.jsoup:jsoup:1.15.3'
     implementation "com.mikepenz:aboutlibraries-core:10.6.1"
