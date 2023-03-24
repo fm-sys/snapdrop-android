@@ -56,7 +56,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                     .withAboutIconShown(true)
                     .withAboutVersionShownName(true)
                     .withAboutDescription("<big><b>Credits</b></big><br><br>" +
-                            "This app and it's launcher icon is based on the snapdrop.net project by RobinLinus<br>" +
+                            "This app and its launcher icon is based on the snapdrop.net project by RobinLinus<br>" +
                             "<a href=\"https://github.com/RobinLinus/snapdrop\">github.com/RobinLinus/snapdrop</a><br><br>" +
                             "<big><b>" + getString(R.string.support_us) + "</b></big><br><br>" +
                             getString(R.string.support_us_summary) + "<br>" +
