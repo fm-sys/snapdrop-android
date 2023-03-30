@@ -290,6 +290,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showScreenNoConnection() {
+        state.setCurrentlyLoading(false);
         state.setCurrentlyOffline(true);
         binding.webview.loadUrl("file:///android_asset/offline.html?text=" + getString(R.string.error_network) + "&button=" + getString(R.string.ignore_error_network));
     }
@@ -557,6 +558,7 @@ public class MainActivity extends AppCompatActivity {
             final int delay = 500; // milliseconds
             state.setCurrentlyLoading(true);
 
+            // discover network loss while currently loading
             handler.postDelayed(new Runnable() {
                 public void run() {
                     //do something
@@ -570,6 +572,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, delay);
 
+            // progress returns 10% even if server is unavailable.
+            // Discover timeouts way before net::ERR_CONNECTION_TIMED_OUT gets triggered
+            handler.postDelayed(() -> {
+                if (view.getProgress() < 15) {
+                    handleTimeout();
+                }
+            }, 3000);
+
         }
 
         @RequiresApi(api = Build.VERSION_CODES.M)
@@ -582,13 +592,19 @@ public class MainActivity extends AppCompatActivity {
             showScreenNoConnection();
 
             if (error.getErrorCode() == ERROR_CONNECT || error.getErrorCode() == ERROR_TIMEOUT) {
-                new AlertDialog.Builder(MainActivity.this)
-                        .setTitle(R.string.error_not_reachable_title)
-                        .setMessage(R.string.error_server_not_reachable)
-                        .setPositiveButton(android.R.string.ok, null)
-                        .setNegativeButton(R.string.onboarding_choose_server_short, (d, w) -> OnboardingActivity.launchServerSelection(MainActivity.this))
-                        .show();
+                handleTimeout();
             }
+        }
+
+        private void handleTimeout() {
+            Log.e("WebViewError", "Connection timed out!");
+            showScreenNoConnection();
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle(R.string.error_not_reachable_title)
+                    .setMessage(R.string.error_server_not_reachable)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .setNegativeButton(R.string.onboarding_choose_server_short, (d, w) -> OnboardingActivity.launchServerSelection(MainActivity.this))
+                    .show();
         }
     }
 
