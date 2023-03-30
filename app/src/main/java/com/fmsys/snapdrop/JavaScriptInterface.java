@@ -196,7 +196,7 @@ public class JavaScriptInterface {
             final StringBuilder text = new StringBuilder("javascript:");
             String currentLine;
             while ((currentLine = reader.readLine()) != null) {
-                if (!currentLine.trim().startsWith("//")) {
+                if (!currentLine.trim().startsWith("//")) { // should support inline comments as well, however keep in mind that '//' might occur inside a string as well
                     text.append(currentLine);
                 }
             }

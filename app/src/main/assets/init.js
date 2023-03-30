@@ -177,7 +177,19 @@ window.addEventListener('file-received', e => {
 
 //hide unnecessary web toolbar buttons
 try {
+    // snapdrop.net
     document.querySelector('#theme').style.display = "none";
+} catch (e) {
+    console.error(e);
+}
+try {
+    // pairdrop.net
+    document.querySelector('#theme-wrapper').style.display = "none";
+    //document.querySelector('#theme-auto').click(); TODO: we need a solution to switch back to 'auto'
+} catch (e) {
+    console.error(e);
+}
+try {
     document.querySelector('.icon-button[href="#about"]').style.display = "none";
     document.querySelector('.icon-button[href="#"]').style.display = "none";
 } catch (e) {
