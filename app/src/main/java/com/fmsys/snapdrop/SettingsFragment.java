@@ -23,7 +23,6 @@ import com.anggrayudi.storage.file.DocumentFileUtils;
 import com.fmsys.snapdrop.utils.ClipboardUtils;
 import com.fmsys.snapdrop.utils.Link;
 import com.fmsys.snapdrop.utils.LogUtils;
-import com.fmsys.snapdrop.utils.NetworkUtils;
 import com.fmsys.snapdrop.utils.ShareUtils;
 import com.fmsys.snapdrop.utils.ViewUtils;
 import com.mikepenz.aboutlibraries.LibsBuilder;
@@ -129,22 +128,10 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
-        baseUrlPref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "", "", Link.bind("https://github.com/RobinLinus/snapdrop/blob/master/docs/faq.md#inofficial-instances", R.string.baseurl_unofficial_instances), newValue -> {
-
-            if (newValue == null) {
-                baseUrlPref.setSummary(getString(R.string.baseurl_not_set));
-                return;
-            }
-
-            NetworkUtils.checkInstance(this, newValue, result -> {
-                if (result) {
-                    baseUrlPref.setSummary(newValue);
-                } else {
-                    baseUrlPref.setSummary(getString(R.string.baseurl_not_set));
-                    setPreferenceValue(baseUrlPref.getKey(), null, null);
-                }
-            });
-        }));
+        baseUrlPref.setOnPreferenceClickListener(pref -> {
+            OnboardingActivity.launchServerSelection(requireActivity());
+            return true;
+        });
         baseUrlPref.setSummary(preferences.getString(baseUrlPref.getKey(), getString(R.string.baseurl_not_set)));
 
         final Preference saveLocationPref = findPreference(getString(R.string.pref_save_location));

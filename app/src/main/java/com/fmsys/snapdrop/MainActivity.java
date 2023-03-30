@@ -140,8 +140,7 @@ public class MainActivity extends AppCompatActivity {
         baseURL = prefs.getString(getString(R.string.pref_baseurl), null);
 
         if (prefs.getBoolean(getString(R.string.pref_first_use), true) || baseURL == null) {
-            startActivity(new Intent(this, OnboardingActivity.class));
-            finish();
+            OnboardingActivity.launchOnboarding(this);
             return; // all this doesn't make sense if we have no base URL
         }
 
@@ -587,6 +586,7 @@ public class MainActivity extends AppCompatActivity {
                         .setTitle(R.string.error_not_reachable_title)
                         .setMessage(R.string.error_server_not_reachable)
                         .setPositiveButton(android.R.string.ok, null)
+                        .setNegativeButton(R.string.onboarding_choose_server_short, (d, w) -> OnboardingActivity.launchServerSelection(MainActivity.this))
                         .show();
             }
         }

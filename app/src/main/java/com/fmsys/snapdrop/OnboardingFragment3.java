@@ -1,6 +1,5 @@
 package com.fmsys.snapdrop;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -22,11 +21,6 @@ public class OnboardingFragment3 extends Fragment {
         final OnboardingViewModel viewModel = new ViewModelProvider(requireActivity()).get(OnboardingViewModel.class);
 
         binding.description.setText(getString(R.string.onboarding_howto_summary, viewModel.getUrl().getValue()));
-
-        binding.continueButton.setOnClickListener(v -> {
-//            viewModel.launchFragment()
-            startActivity(new Intent(requireContext(), MainActivity.class));
-            requireActivity().finish();
-        });
+        binding.continueButton.setOnClickListener(v -> viewModel.finishActivity());
     }
 }
