@@ -22,6 +22,7 @@
 
     <string name="onboarding_howto">How to use</string>
     <string name="onboarding_howto_summary">1. Open this app or %s on any other device in your local WiFi network.\n\n2. Tap on the device you want to share the file(s) with.\n\n3. Done! The file(s) will be sent…</string>
+    <string name="onboarding_howto_troubleshoot">Hint: Devices need to be connected with the same WiFi network. It may not work if a VPN is enabled.</string>
 
     <!-- Download -->
     <string name="download_save_pending">Storing the file. Please have a little patience…</string>
