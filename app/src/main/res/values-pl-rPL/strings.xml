@@ -11,6 +11,7 @@
     <string name="onboarding_button_grant">Przyznaj uprawnienia</string>
     <string name="onboarding_button_finish">zakończ</string>
     <string name="onboarding_choose_server">Wybierz adres serwera</string>
+    <string name="onboarding_choose_server_short">Wybierz serwer</string>
     <string name="onboarding_choose_server_description">Ta aplikacja jest zoptymalizowanym klientem aplikacji webowych Snapdrop i PairDrop.\nWybierz jedną z następujących instancji lub określ niestandardowy adres url do połączenia\n\nUwaga: musisz wybrać ten sam URL na wszystkich urządzeniach.</string>
     <string name="onboarding_storage_permission">Uprawnienia do przechowywania danych</string>
     <string name="onboarding_storage_permission_description">Ta aplikacja jest narzędziem udostępniania plików. W związku z tym wymagane jest pozwolenie na przechowywanie plików, aby z niej korzystać.</string>
@@ -20,6 +21,7 @@
     <string name="onboarding_server_custom_summary">Eksperci mogą również hostować swoje własne serwery.</string>
     <string name="onboarding_howto">Jak używać</string>
     <string name="onboarding_howto_summary">1. Otwórz tę aplikację lub %s na innym urządzeniu w lokalnej sieci WiFi.\n\n2. Dotknij urządzenia, z którym chcesz udostępnić plik(i)\n\n3. Gotowe! Pliki zostaną wysłane…</string>
+    <string name="onboarding_howto_troubleshoot">Wskazówka: Urządzenia muszą być podłączone do tej samej sieci WiFi. Może to nie działać, jeśli VPN jest włączony.</string>
     <!-- Download -->
     <string name="download_save_pending">Zapisywanie pliku. Prosimy o cierpliwość…</string>
     <string name="download_successful">Pobieranie zakończone</string>
