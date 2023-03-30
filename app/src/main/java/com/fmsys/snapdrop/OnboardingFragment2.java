@@ -35,7 +35,7 @@ public class OnboardingFragment2 extends Fragment {
 
         binding.card1.setOnClickListener(v -> tempUrl.setValue("https://pairdrop.net"));
         binding.card2.setOnClickListener(v -> tempUrl.setValue("https://snapdrop.net"));
-        binding.card3.setOnClickListener(v -> ViewUtils.showEditTextWithResetPossibility(this, "Custom URL", null, null, Link.bind("https://github.com/RobinLinus/snapdrop/blob/master/docs/faq.md#inofficial-instances", R.string.baseurl_unofficial_instances), url -> {
+        binding.card3.setOnClickListener(v -> ViewUtils.showEditTextWithResetPossibility(this, "Custom URL", null, isCustomUrl() ? tempUrl.getValue() : null, Link.bind("https://github.com/RobinLinus/snapdrop/blob/master/docs/faq.md#inofficial-instances", R.string.baseurl_unofficial_instances), url -> {
             if (url == null) {
                 binding.customUrl.setText(R.string.onboarding_server_custom);
                 if (binding.card3.isChecked()) {
@@ -47,7 +47,6 @@ public class OnboardingFragment2 extends Fragment {
             NetworkUtils.checkInstance(this, url, result -> {
                 if (result) {
                     tempUrl.setValue(url);
-                    binding.customUrl.setText(url);
                 }
             });
         }));
@@ -55,7 +54,9 @@ public class OnboardingFragment2 extends Fragment {
         tempUrl.observe(requireActivity(), url -> {
             binding.card1.setChecked("https://pairdrop.net".equals(url));
             binding.card2.setChecked("https://snapdrop.net".equals(url));
-            binding.card3.setChecked(!(binding.card1.isChecked() || binding.card2.isChecked()));
+
+            binding.card3.setChecked(isCustomUrl());
+            binding.customUrl.setText(isCustomUrl() ? url : getString(R.string.onboarding_server_custom));
         });
 
         binding.continueButton.setOnClickListener(v -> {
@@ -66,5 +67,9 @@ public class OnboardingFragment2 extends Fragment {
                 viewModel.launchFragment(OnboardingFragment3.class);
             }
         });
+    }
+
+    private boolean isCustomUrl() {
+        return !binding.card1.isChecked() && !binding.card2.isChecked();
     }
 }
