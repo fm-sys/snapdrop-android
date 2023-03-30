@@ -6,6 +6,7 @@
     <string name="err_no_app">Ingen apper installert for å åpne denne filen</string>
     <string name="open_url">Åpne URL</string>
     <!-- Onboarding -->
+    <string name="onboarding_choose_server_short">Velg Server</string>
     <!-- Download -->
     <string name="download_save_pending">Lagrer filen. Vennligst ha litt tålmodighet…</string>
     <string name="download_successful">Nedlasting vellykket</string>
