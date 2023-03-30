@@ -11,6 +11,7 @@
     <string name="onboarding_button_grant">Zugriff gewähren</string>
     <string name="onboarding_button_finish">fertigstellen</string>
     <string name="onboarding_choose_server">Serveradresse wählen</string>
+    <string name="onboarding_choose_server_short">Server wählen</string>
     <string name="onboarding_choose_server_description">Diese App ist ein optimierter Client für die Webanwendungen Snapdrop und PairDrop.\nWählen Sie eine der folgenden Instanzen oder geben Sie eine benutzerdefinierte URL an, mit der Sie sich verbinden möchten.\n\nHinweis: Sie müssen auf allen Geräten die gleiche URL wählen.</string>
     <string name="onboarding_storage_permission">Speicherberechtigung</string>
     <string name="onboarding_storage_permission_description">Diese App ist ein Datei-Freigabe-Programm. Daher ist die Speicher-Berechtigung erforderlich, um funktionieren zu können.</string>
@@ -20,6 +21,7 @@
     <string name="onboarding_server_custom_summary">Experten können auch ihre eigenen Server hosten.</string>
     <string name="onboarding_howto">Wie funktioniert es?</string>
     <string name="onboarding_howto_summary">1. Öffne diese App oder %s auf einem anderen Gerät in deinem lokalen WLAN-Netzwerk.\n\n2. Tippe auf das Gerät, mit dem du die Datei(en) teilen möchtest.\n\n3. Fertig! Die Datei(en) werden nun gesendet…</string>
+    <string name="onboarding_howto_troubleshoot">Hinweis: Geräte müssen mit demselben WLAN-Netzwerk verbunden sein. Möglicherweise funktioniert es nicht, wenn ein VPN aktiviert ist.</string>
     <!-- Download -->
     <string name="download_save_pending">Datei wird gespeichert. Bitte haben Sie etwas Geduld…</string>
     <string name="download_successful">Download erfolgreich</string>
@@ -65,7 +67,7 @@
     <string name="intent_files">Dateien ausgewählt</string>
     <string name="intent_content">Inhalt ausgewählt</string>
     <string name="error_filechooser">Dateiauswahl kann nicht gestartet werden</string>
-    <string name="error_network">Sie müssen mit einem WLAN verbunden sein, um Snapdrop nutzen zu können</string>
+    <string name="error_network">Bitte stelle sicher, dass du mit einem WiFi-Netzwerk verbunden bist</string>
     <string name="ignore_error_network">Trotzdem laden</string>
     <string name="error_not_reachable_title">Tut mir leid!</string>
     <string name="error_server_not_reachable">Der Server kann nicht erreicht werden. \n\nWenn Ihre Internetverbindung funktioniert und dies trotzdem geschieht, versuchen Sie bitte, eine andere Server-Adresse auszuwählen.</string>
