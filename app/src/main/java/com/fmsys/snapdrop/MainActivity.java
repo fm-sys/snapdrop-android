@@ -515,6 +515,12 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         }
+
+        @Override
+        public void onProgressChanged(final WebView view, final int newProgress) {
+            super.onProgressChanged(view, newProgress);
+            state.setLoadProgress(newProgress);
+        }
     }
 
     private class CustomWebViewClient extends WebViewClient {
@@ -573,9 +579,10 @@ public class MainActivity extends AppCompatActivity {
             }, delay);
 
             // progress returns 10% even if server is unavailable.
-            // Discover timeouts way before net::ERR_CONNECTION_TIMED_OUT gets triggered
+            // Discover timeouts way before net::ERR_CONNECTION_TIMED_OUT gets triggered.
+            // Don't use WebView.getProgress() as it will return zero if load is finished.
             handler.postDelayed(() -> {
-                if (view.getProgress() < 15) {
+                if (state.getLoadProgress() <= 10) {
                     handleTimeout();
                 }
             }, 5000);
