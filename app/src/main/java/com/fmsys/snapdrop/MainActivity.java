@@ -578,7 +578,7 @@ public class MainActivity extends AppCompatActivity {
                 if (view.getProgress() < 15) {
                     handleTimeout();
                 }
-            }, 3000);
+            }, 5000);
 
         }
 
