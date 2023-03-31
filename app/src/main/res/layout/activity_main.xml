@@ -40,8 +40,8 @@
                     android:id="@+id/load_animator"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
-                    android:src="@drawable/snapdrop_anim"
-                    app:tint="@color/colorAccent" />
+                    app:tint="@color/colorAccent"
+                    tools:src="@drawable/snapdrop_anim" />
             </LinearLayout>
 
             <WebView

@@ -18,8 +18,6 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Animatable2;
-import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
@@ -58,6 +56,8 @@ import androidx.core.content.FileProvider;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.documentfile.provider.DocumentFile;
 import androidx.preference.PreferenceManager;
+import androidx.vectordrawable.graphics.drawable.Animatable2Compat;
+import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
 
@@ -231,11 +231,12 @@ public class MainActivity extends AppCompatActivity {
 
         binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
 
-        final AnimatedVectorDrawable loadAnimationDrawable = (AnimatedVectorDrawable) binding.loadAnimator.getDrawable();
-        loadAnimationDrawable.registerAnimationCallback(new Animatable2.AnimationCallback() {
+        final AnimatedVectorDrawableCompat loadAnimationDrawable = AnimatedVectorDrawableCompat.create(this, R.drawable.snapdrop_anim);
+        binding.loadAnimator.setImageDrawable(loadAnimationDrawable);
+        loadAnimationDrawable.registerAnimationCallback(new Animatable2Compat.AnimationCallback() {
             @Override
             public void onAnimationEnd(final Drawable drawable) {
-                loadAnimationDrawable.start();
+                binding.loadAnimator.post(loadAnimationDrawable::start);
             }
         });
         loadAnimationDrawable.start();
