@@ -2,10 +2,23 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Android için Snapdrop Hakkında</string>
+    <string name="app_name_slogan">Dosyaları tüm cihazlarınız arasında sorunsuz bir şekilde aktarın.</string>
     <string name="err_no_browser">Tarayıcı açılamıyor</string>
     <string name="err_no_app">Bu dosyayı açmak için yüklü bir uygulama yok</string>
     <string name="open_url">URL\'yi Aç</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">devam et</string>
+    <string name="onboarding_button_grant">izin ver</string>
+    <string name="onboarding_button_finish">bitir</string>
+    <string name="onboarding_choose_server">Server adresi seçin</string>
+    <string name="onboarding_choose_server_short">Server seç</string>
+    <string name="onboarding_storage_permission">Depolama izni</string>
+    <string name="onboarding_storage_permission_description">Bu uygulama bir dosya aktarım aracıdır. Uygulamayı kullanabilmek için depolama izni gerekir.</string>
+    <string name="onboarding_server_pairdrop_summary">(önerilir)\nEşleştirme özelliği, internet aktarımı ve stabilite üzerine odaklı.</string>
+    <string name="onboarding_server_snapdrop_summary">Klasik snapdrop. Temiz ve basit.</string>
+    <string name="onboarding_server_custom">Özel URL</string>
+    <string name="onboarding_server_custom_summary">Uzman kullanıcılar kendi serverlarını depolayabilir.</string>
+    <string name="onboarding_howto">Nasıl kullanılır</string>
     <!-- Download -->
     <string name="download_save_pending">Dosya depolanıyor. Lütfen bekleyiniz…</string>
     <string name="download_successful">İndirme başarılı</string>
@@ -22,6 +35,7 @@
     <string name="pref_category_settings">Ayarlar</string>
     <string name="logs">Hata Ayıklama Günlükleri</string>
     <string name="components_summary">Görüntülemek için dokun</string>
+    <string name="support_us">Bize destek ol</string>
     <string name="version">Sürüm</string>
     <string name="pref_device_name_title">Cihaz Adı</string>
     <string name="pref_device_name_summary">Kullanıcı-tanımlı bir cihaz adı belirleyin</string>
@@ -37,6 +51,8 @@
         <item>Karanlık</item>
     </string-array>
     <string name="baseurl_title">Temel URL</string>
+    <string name="baseurl_not_set">Belirlenmemiş</string>
+    <string name="baseurl_instance_verified">Snapdrop istemcisi başarıyla onaylandı</string>
     <string name="baseurl_no_snapdrop_instance">Snapdrop isteği bulunamadı</string>
     <string name="baseurl_check_instance_failed">Snapdrop istek doğrulaması başarısız oldu</string>
     <string name="save_location">Kayıt konumu</string>
