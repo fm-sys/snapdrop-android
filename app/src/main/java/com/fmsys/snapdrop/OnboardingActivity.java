@@ -60,5 +60,8 @@ public class OnboardingActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    public void onBackPressed() {
+        // suppress back key
+    }
 }
