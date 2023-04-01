@@ -129,6 +129,7 @@
                 android:checkable="true"
                 android:clickable="true"
                 android:focusable="true"
+                android:nextFocusDown="@id/continue_button"
                 app:cardBackgroundColor="@color/colorAccent"
                 app:checkedIconTint="@color/textColorWhite"
                 app:strokeColor="@color/textColorWhite">
@@ -166,12 +167,10 @@
 
     <Button
         android:id="@+id/continue_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/OnboardingButtonStyle"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="10dp"
-        android:backgroundTint="@color/textColorWhite"
-        android:text="@string/onboarding_button_continue"
-        android:textColor="@color/colorAccent" />
+        android:nextFocusUp="@id/card3"
+        android:text="@string/onboarding_button_continue" />
 
 </RelativeLayout>

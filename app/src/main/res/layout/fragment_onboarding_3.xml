@@ -58,12 +58,9 @@
         android:textSize="16sp" />
 
     <Button
+        style="@style/OnboardingButtonStyle"
         android:id="@+id/continue_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="@string/onboarding_button_finish"
-        android:backgroundTint="@color/textColorWhite"
-        android:textColor="@color/colorAccent" />
+        android:text="@string/onboarding_button_finish" />
 
 </RelativeLayout>

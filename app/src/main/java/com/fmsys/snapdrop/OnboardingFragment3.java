@@ -22,5 +22,6 @@ public class OnboardingFragment3 extends Fragment {
 
         binding.description.setText(getString(R.string.onboarding_howto_summary, viewModel.getUrl().getValue()));
         binding.continueButton.setOnClickListener(v -> viewModel.finishActivity());
+        binding.continueButton.requestFocus();
     }
 }

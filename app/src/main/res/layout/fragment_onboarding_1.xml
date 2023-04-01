@@ -48,14 +48,11 @@
 
 
     <Button
+        style="@style/OnboardingButtonStyle"
         android:id="@+id/continue_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:alpha="0"
         android:text="@string/onboarding_button_continue"
-        android:backgroundTint="@color/textColorWhite"
-        android:textColor="@color/colorAccent"
         tools:alpha="1" />
 
 </RelativeLayout>

@@ -67,6 +67,7 @@ public class OnboardingFragment2 extends Fragment {
                 viewModel.launchFragment(OnboardingFragment3.class);
             }
         });
+        binding.continueButton.requestFocus();
     }
 
     private boolean isCustomUrl() {

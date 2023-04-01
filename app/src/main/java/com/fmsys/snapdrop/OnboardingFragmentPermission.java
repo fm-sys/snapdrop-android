@@ -41,5 +41,6 @@ public class OnboardingFragmentPermission extends Fragment {
                 viewModel.launchFragment(OnboardingFragment2.class);
             }
         });
+        binding.continueButton.requestFocus();
     }
 }
