@@ -36,6 +36,8 @@
     <string name="logs">Hata Ayıklama Günlükleri</string>
     <string name="components_summary">Görüntülemek için dokun</string>
     <string name="support_us">Bize destek ol</string>
+    <string name="support_us_summary">Bu projeye nasıl destek verebileceğinizi görün</string>
+    <string name="read_more">daha fazla</string>
     <string name="version">Sürüm</string>
     <string name="pref_device_name_title">Cihaz Adı</string>
     <string name="pref_device_name_summary">Kullanıcı-tanımlı bir cihaz adı belirleyin</string>
