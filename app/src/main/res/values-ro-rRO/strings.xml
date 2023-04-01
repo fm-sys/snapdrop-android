@@ -11,6 +11,7 @@
     <string name="onboarding_button_grant">Acordă permisiuni</string>
     <string name="onboarding_button_finish">Finalizare</string>
     <string name="onboarding_choose_server">Alege o adresă de server</string>
+    <string name="onboarding_choose_server_short">Alege un server</string>
     <string name="onboarding_choose_server_description">Această aplicație este un client optimizat pentru aplicația web Snapdrop și PairDrop.\nAlege una dintre următoarele instanțe sau specifică un URL personalizat la care să te conectezi.\n\nNotă: Trebuie să alegeți același URL pe toate dispozitivele.</string>
     <string name="onboarding_storage_permission">Permisiuni pentru stocare</string>
     <string name="onboarding_storage_permission_description">Această aplicație este pentru partajări. De aceea sunt necesare permisiuni pentru stocare.</string>
@@ -20,6 +21,7 @@
     <string name="onboarding_server_custom_summary">Experţii îşi pot găzdui şi propriile servere.</string>
     <string name="onboarding_howto">Instrucțiuni de folosire</string>
     <string name="onboarding_howto_summary">1. Deschide această aplicație sau %s pe orice alt dispozitiv din rețeaua locală Wireless.\n\n2. Alege dispozitivul cu care vrei sa partajezi fișierele.\n\n3. Gata! Fișierele sunt trimise…</string>
+    <string name="onboarding_howto_troubleshoot">Sugestie: Dispozitivele trebuie să fie conectate la aceeași rețea WiFi. Nu va funcționa dacă un VPN este activat.</string>
     <!-- Download -->
     <string name="download_save_pending">Se stochează fișierul. Vă rugăm să aveți puțină răbdare...</string>
     <string name="download_successful">Descărcare reușită</string>
