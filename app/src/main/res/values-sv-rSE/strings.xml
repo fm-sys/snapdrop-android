@@ -6,6 +6,7 @@
     <string name="err_no_app">Ingen applikation hittades som kan öppna denna fil</string>
     <string name="open_url">Öppna URL</string>
     <!-- Onboarding -->
+    <string name="onboarding_howto_troubleshoot">Tips: Enheter måste vara anslutna till samma WiFi-nätverk. Det kanske inte fungerar om en VPN är aktiverad.</string>
     <!-- Download -->
     <string name="download_save_pending">Lagrar filen. Var god och vänta…</string>
     <string name="download_successful">Nerladdning lyckades</string>
