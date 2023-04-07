@@ -44,11 +44,30 @@ public class OnboardingFragment2 extends Fragment {
                 return;
             }
 
-            NetworkUtils.checkInstance(this, url, result -> {
-                if (result) {
-                    tempUrl.setValue(url);
-                }
-            });
+            if (url.startsWith("http")) {
+                NetworkUtils.checkInstance(this, url, result -> {
+                    if (result) {
+                        tempUrl.setValue(url);
+                    }
+                });
+            } else {
+
+                // do some magic in case user forgot to specify the protocol
+
+                String mightBeHttpsUrl = "https://" + url;
+                NetworkUtils.checkInstance(this, mightBeHttpsUrl, resultHttps -> {
+                    if (resultHttps) {
+                        tempUrl.setValue(mightBeHttpsUrl);
+                    } else {
+                        String mightBeHttpUrl = "http://" + url;
+                        NetworkUtils.checkInstance(this, mightBeHttpUrl, resultHttp -> {
+                            if (resultHttp) {
+                                tempUrl.setValue(mightBeHttpUrl);
+                            }
+                        });
+                    }
+                });
+            }
         }));
 
         tempUrl.observe(requireActivity(), url -> {
