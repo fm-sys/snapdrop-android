@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop for Android</string>
+    <string name="app_name_slogan">在您的裝置間無縫傳輸檔案。</string>
     <string name="err_no_browser">無法開啟瀏覽器</string>
     <string name="err_no_app">找不到可開啟此檔案格式的應用程式</string>
     <string name="open_url">開啟連結</string>
@@ -9,8 +10,12 @@
     <string name="onboarding_button_continue">繼續</string>
     <string name="onboarding_button_grant">授予權限</string>
     <string name="onboarding_button_finish">完成</string>
+    <string name="onboarding_choose_server">選擇一個伺服器位址</string>
     <string name="onboarding_choose_server_short">選擇伺服器</string>
     <string name="onboarding_storage_permission">儲存空間權限</string>
+    <string name="onboarding_storage_permission_description">這是一個用於檔案分享的公用程式，因此，若要使用它，需要授予儲存空間權限。</string>
+    <string name="onboarding_server_custom">自訂 URL</string>
+    <string name="onboarding_howto">如何使用</string>
     <!-- Download -->
     <string name="download_save_pending">正在儲存檔案。請稍待片刻…</string>
     <string name="download_successful">下載成功</string>
@@ -28,6 +33,8 @@
     <string name="logs">除錯日誌</string>
     <string name="components_summary">輕觸顯示</string>
     <string name="support_us">支持我們</string>
+    <string name="support_us_summary">看一看，您能如何支持本專案</string>
+    <string name="read_more">瞭解更多</string>
     <string name="version">版本</string>
     <string name="pref_device_name_title">裝置名稱</string>
     <string name="pref_device_name_summary">自訂裝置名稱</string>
@@ -39,10 +46,12 @@
     <string name="settings_theme_title">主題</string>
     <string-array name="darkmode_entries">
         <item>系統預設</item>
-        <item>明亮主題</item>
-        <item>黑色主題</item>
+        <item>淺色</item>
+        <item>深色</item>
     </string-array>
     <string name="baseurl_title">主機 URL</string>
+    <string name="baseurl_not_set">未設定</string>
+    <string name="baseurl_instance_verified">Snapdrop 執行個體已成功驗證</string>
     <string name="baseurl_no_snapdrop_instance">請輸入 Snapdrop 實例</string>
     <string name="baseurl_check_instance_failed">無法驗證 Snapdrop 實例</string>
     <string name="save_location">儲存位置</string>
