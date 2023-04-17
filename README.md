@@ -66,5 +66,5 @@ Oh, and thanks [Mrwhosetheboss](https://youtu.be/lmIO18kLcZU?t=397) for recommen
 
 ### Alternatives
 - Apple Airdrop (Mac and IOS only)
-- Google Nearby Share (Android, Chrome OS and [Windows](https://www.android.com/better-together/nearby-share-app/), )
-- Windows Nearby Sharing (Windows only, there is a FLOSS implementation for android - [link](https://github.com/ShortDevelopment/Nearby-Sharing-Windows))
+- Google Nearby Share (Android, Chrome OS and [Windows](https://www.android.com/better-together/nearby-share-app/), plus an unofficial [IOS client](https://github.com/grishka/NearDrop))
+- Windows Nearby Sharing (Windows only, there is a [FLOSS implementation](https://github.com/ShortDevelopment/Nearby-Sharing-Windows) for android)
