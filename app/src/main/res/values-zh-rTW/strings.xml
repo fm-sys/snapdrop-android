@@ -67,16 +67,17 @@
     <string name="intent_files">已選取的等候分享的檔案</string>
     <string name="intent_content">已選取的等候分享的內容</string>
     <string name="error_filechooser">無法開啟檔案選擇器</string>
-    <string name="error_network">請確保已連線至可用的無線網路</string>
+    <string name="error_network">請確保您已連線至 WiFi 網路</string>
     <string name="ignore_error_network">忽略並繼續</string>
     <string name="error_not_reachable_title">噢，不好意思！</string>
+    <string name="error_server_not_reachable">無法連線至伺服器。\n\n如果您的網際網路連線是正常運作，而且確實發生了這種狀況，請嘗試選取一個不同的伺服器位址。</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">在其他裝置上開啟 Snapdrop 來傳輸檔案</string>
+    <string name="website_no_peers_info">在其他裝置上開啟 Snapdrop 以傳送檔案</string>
     <string name="website_instruction">輕觸以傳送檔案，或按住以傳送訊息</string>
-    <string name="website_file_received">已接收檔案</string>
-    <string name="website_file_ask_before_download">儲存檔案前詢問我</string>
+    <string name="website_file_received">檔案已接收</string>
+    <string name="website_file_ask_before_download">儲存檔案前一律詢問</string>
     <string name="website_file_download">儲存</string>
-    <string name="website_footer_discovery">此網路下的所有人皆能發現您</string>
+    <string name="website_footer_discovery">您可以被這個網路下的所有人發現</string>
     <string name="website_footer_known_as">您會顯示為 %s</string>
     <string name="website_about_subheading">最簡單的跨裝置檔案傳輸方案</string>
 </resources>
