@@ -83,6 +83,7 @@ import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
+    private static final int MY_PERMISSIONS_ACCESS_MEDIA_LOCATION = 1315;
     private static final int LAUNCH_SETTINGS_ACTIVITY = 12;
     public static final int REQUEST_SELECT_FILE = 100;
 
@@ -227,6 +228,10 @@ public class MainActivity extends AppCompatActivity {
         if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q)
                 && (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
             requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            requestPermissions(new String[]{Manifest.permission.ACCESS_MEDIA_LOCATION}, MY_PERMISSIONS_ACCESS_MEDIA_LOCATION);
         }
 
         binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
