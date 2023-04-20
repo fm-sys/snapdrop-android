@@ -230,7 +230,8 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+                && (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_MEDIA_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
             requestPermissions(new String[]{Manifest.permission.ACCESS_MEDIA_LOCATION}, MY_PERMISSIONS_ACCESS_MEDIA_LOCATION);
         }
 
@@ -656,7 +657,7 @@ public class MainActivity extends AppCompatActivity {
         handler.post(() -> {
             Snackbar.make(binding.pullToRefresh, errorMessage, Snackbar.LENGTH_LONG).show();
             resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
-       });
+        });
     }
 
     private FileCallback fileCallback(final JavaScriptInterface.FileHeader fileHeader) {
@@ -677,8 +678,8 @@ public class MainActivity extends AppCompatActivity {
                     final DocumentFile documentFile = (DocumentFile) file;
                     final Context context = getApplicationContext();
                     uri = DocumentFileUtils.isRawFile(documentFile)
-                        ? FileProvider.getUriForFile(context, getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile, context))
-                        : documentFile.getUri();
+                            ? FileProvider.getUriForFile(context, getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile, context))
+                            : documentFile.getUri();
                 } else {
                     return;
                 }
