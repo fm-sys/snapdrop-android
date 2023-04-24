@@ -6,6 +6,7 @@
     <string name="pref_first_use" translatable="false">first_use</string>
     <string name="pref_baseurl" translatable="false">baseurl</string>
     <string name="pref_save_location" translatable="false">save_location</string>
+    <string name="pref_retain_location_metadata" translatable="false">retain_location_metadata</string>
 
     <!-- Theme settings -->
     <string name="pref_theme_setting" translatable="false">theme_setting</string>

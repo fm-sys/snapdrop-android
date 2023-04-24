@@ -1,22 +1,29 @@
 package com.fmsys.snapdrop;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.util.Consumer;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
+import androidx.preference.SwitchPreference;
 
 import com.anggrayudi.storage.SimpleStorageHelper;
 import com.anggrayudi.storage.file.DocumentFileUtils;
@@ -32,9 +39,18 @@ import java.util.concurrent.Executors;
 
 
 public class SettingsFragment extends PreferenceFragmentCompat {
-
     private final SimpleStorageHelper storageHelper = new SimpleStorageHelper(this);
     private SharedPreferences prefs;
+    private final ActivityResultLauncher<String> permissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
+        final SwitchPreference retainLocationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
+        retainLocationMetadataPref.setChecked(result);
+        if (result || !ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.ACCESS_MEDIA_LOCATION)) {
+            retainLocationMetadataPref.setEnabled(false);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean(Manifest.permission.ACCESS_MEDIA_LOCATION, true);
+            editor.commit();
+        }
+    });
 
     @Override
     public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey) {
@@ -156,6 +172,18 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             requireActivity().recreate();
             return true;
         });
+
+        final Preference locationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            locationMetadataPref.setVisible(true);
+            if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_MEDIA_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (prefs.getBoolean(Manifest.permission.ACCESS_MEDIA_LOCATION, false)) { locationMetadataPref.setEnabled(false); }
+                locationMetadataPref.setOnPreferenceChangeListener((pref, newValue) -> {
+                    if ((Boolean) newValue) { permissionLauncher.launch(Manifest.permission.ACCESS_MEDIA_LOCATION); }
+                    return false;
+                });
+            } else { locationMetadataPref.setEnabled(false); }
+        }
     }
 
     private void setPreferenceValue(final String preferenceKey, final String s, final Consumer<String> onPreferenceChangeCallback) {
