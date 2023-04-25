@@ -177,19 +177,22 @@ window.addEventListener('file-received', e => {
 
 //hide unnecessary web toolbar buttons
 try {
-    // snapdrop.net
+    // snapdrop.net - theme
     document.querySelector('#theme').style.display = "none";
 } catch (e) {
     console.error(e);
 }
 try {
-    // pairdrop.net
+    // pairdrop.net - theme
     document.querySelector('#theme-wrapper').style.display = "none";
-    //document.querySelector('#theme-auto').click(); TODO: we need a solution to switch back to 'auto'
+    localStorage.removeItem('theme');
+    document.body.classList.remove('dark-theme');
+    document.body.classList.remove('light-theme');
 } catch (e) {
     console.error(e);
 }
 try {
+    // other items
     document.querySelector('.icon-button[href="#about"]').style.display = "none";
     document.querySelector('.icon-button[href="#"]').style.display = "none";
 } catch (e) {
