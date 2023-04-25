@@ -42,6 +42,13 @@
             android:key="@string/pref_save_location"
             android:summary="%s"
             android:title="@string/save_location" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:icon="@drawable/pref_location_metadata"
+            android:key="@string/pref_retain_location_metadata"
+            android:summary="@string/retain_location_metadata_summary"
+            android:title="@string/retain_location_metadata_title"
+            app:isPreferenceVisible="false" />
 
     </PreferenceCategory>
 

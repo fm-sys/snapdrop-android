@@ -651,7 +651,7 @@ public class MainActivity extends AppCompatActivity {
         handler.post(() -> {
             Snackbar.make(binding.pullToRefresh, errorMessage, Snackbar.LENGTH_LONG).show();
             resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
-       });
+        });
     }
 
     private FileCallback fileCallback(final JavaScriptInterface.FileHeader fileHeader) {
@@ -672,8 +672,8 @@ public class MainActivity extends AppCompatActivity {
                     final DocumentFile documentFile = (DocumentFile) file;
                     final Context context = getApplicationContext();
                     uri = DocumentFileUtils.isRawFile(documentFile)
-                        ? FileProvider.getUriForFile(context, getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile, context))
-                        : documentFile.getUri();
+                            ? FileProvider.getUriForFile(context, getPackageName() + ".provider", DocumentFileUtils.toRawFile(documentFile, context))
+                            : documentFile.getUri();
                 } else {
                     return;
                 }
