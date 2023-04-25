@@ -46,7 +46,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         retainLocationMetadataPref.setChecked(result);
         if (result || !ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.ACCESS_MEDIA_LOCATION)) {
             retainLocationMetadataPref.setEnabled(false);
-            SharedPreferences.Editor editor = prefs.edit();
+            final SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(Manifest.permission.ACCESS_MEDIA_LOCATION, true);
             editor.commit();
         }
@@ -177,12 +177,18 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             locationMetadataPref.setVisible(true);
             if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_MEDIA_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                if (prefs.getBoolean(Manifest.permission.ACCESS_MEDIA_LOCATION, false)) { locationMetadataPref.setEnabled(false); }
+                if (prefs.getBoolean(Manifest.permission.ACCESS_MEDIA_LOCATION, false)) {
+                    locationMetadataPref.setEnabled(false);
+                }
                 locationMetadataPref.setOnPreferenceChangeListener((pref, newValue) -> {
-                    if ((Boolean) newValue) { permissionLauncher.launch(Manifest.permission.ACCESS_MEDIA_LOCATION); }
+                    if ((Boolean) newValue) {
+                        permissionLauncher.launch(Manifest.permission.ACCESS_MEDIA_LOCATION);
+                    }
                     return false;
                 });
-            } else { locationMetadataPref.setEnabled(false); }
+            } else {
+                locationMetadataPref.setEnabled(false);
+            }
         }
     }
 
