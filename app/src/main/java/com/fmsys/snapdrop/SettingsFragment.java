@@ -4,11 +4,14 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.ComponentName;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.TextView;
 
@@ -32,6 +35,7 @@ import com.fmsys.snapdrop.utils.Link;
 import com.fmsys.snapdrop.utils.LogUtils;
 import com.fmsys.snapdrop.utils.ShareUtils;
 import com.fmsys.snapdrop.utils.ViewUtils;
+import com.google.android.material.snackbar.Snackbar;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 import com.mikepenz.aboutlibraries.util.SpecialButton;
 
@@ -44,11 +48,16 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     private final ActivityResultLauncher<String> permissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
         final SwitchPreference retainLocationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
         retainLocationMetadataPref.setChecked(result);
-        if (result || !ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.ACCESS_MEDIA_LOCATION)) {
+        if (result) {
             retainLocationMetadataPref.setEnabled(false);
-            final SharedPreferences.Editor editor = prefs.edit();
-            editor.putBoolean(Manifest.permission.ACCESS_MEDIA_LOCATION, true);
-            editor.commit();
+        } else if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.ACCESS_MEDIA_LOCATION)) {
+            Snackbar.make(requireView(), R.string.permission_not_granted, Snackbar.LENGTH_LONG).show();
+        } else {
+            Snackbar.make(requireView(), R.string.permission_not_granted_fallback, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.open_settings, v ->
+                            startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                                    .setData(Uri.fromParts("package", requireContext().getPackageName(), null))))
+                    .show();
         }
     });
 
@@ -173,13 +182,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
 
-        final Preference locationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
+        final SwitchPreference locationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             locationMetadataPref.setVisible(true);
-            if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_MEDIA_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                if (prefs.getBoolean(Manifest.permission.ACCESS_MEDIA_LOCATION, false)) {
-                    locationMetadataPref.setEnabled(false);
-                }
+            final boolean granted = ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_MEDIA_LOCATION) == PackageManager.PERMISSION_GRANTED;
+            locationMetadataPref.setChecked(granted);
+            if (!granted) {
                 locationMetadataPref.setOnPreferenceChangeListener((pref, newValue) -> {
                     if ((Boolean) newValue) {
                         permissionLauncher.launch(Manifest.permission.ACCESS_MEDIA_LOCATION);

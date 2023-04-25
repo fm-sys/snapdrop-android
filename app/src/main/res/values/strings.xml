@@ -53,8 +53,12 @@
     <string name="floating_text_selection_title">Floating text selection</string>
     <string name="floating_text_selection_summary">When selecting text in other apps, an option \"Send with Snapdrop\" will be shown</string>
     <string name="floating_text_selection_activity_label">Send with Snapdrop</string>
+    <string name="permission_not_granted">please grant the necessary permission</string>
+    <string name="permission_not_granted_fallback">please grant the necessary permission manually</string>
+    <string name="open_settings">open settings</string>
     <string name="retain_location_metadata_title">Retain location metadata</string>
-    <string name="retain_location_metadata_summary">Some media files might contain location data that are stripped by default. Grant permission to include full metadata</string>
+    <string name="retain_location_metadata_summary_off">Some media files might contain location data that are stripped by default. Grant permission to include full metadata</string>
+    <string name="retain_location_metadata_summary_on">The app has full file access currently</string>
 
     <string name="settings_theme_title">Theme</string>
     <string-array name="darkmode_entries">
