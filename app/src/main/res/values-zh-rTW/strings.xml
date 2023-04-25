@@ -49,6 +49,12 @@
     <string name="floating_text_selection_title">浮動式文字選取</string>
     <string name="floating_text_selection_summary">使用其他應用程式選取文字時，顯示「使用 Snapdrop 傳送」選項</string>
     <string name="floating_text_selection_activity_label">使用 Snapdrop 傳送</string>
+    <string name="permission_not_granted">請授予必要權限</string>
+    <string name="permission_not_granted_fallback">請手動授予必要權限</string>
+    <string name="open_settings">開啟設定</string>
+    <string name="retain_location_metadata_title">保留位置中繼資料</string>
+    <string name="retain_location_metadata_summary_off">部分媒體檔案可能包含位置中繼資料，這些資料預設會被移除。授予權限以包含完整的中繼資料</string>
+    <string name="retain_location_metadata_summary_on">應用程式目前擁有完整的檔案存取權</string>
     <string name="settings_theme_title">主題</string>
     <string-array name="darkmode_entries">
         <item>系統預設</item>
