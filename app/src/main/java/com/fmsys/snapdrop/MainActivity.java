@@ -267,6 +267,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        // file not added to download manager for android 7 and below, so this doesn't make sense (see #219)
+        menu.findItem(R.id.menu_view_downloads).setVisible(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O);
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             toggleAbout();
