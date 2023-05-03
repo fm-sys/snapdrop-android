@@ -35,6 +35,7 @@
     <string name="home_as_up_indicator_about">關於</string>
     <string name="title_activity_about">關於 Snapdrop for Android</string>
     <string name="pref_about_title">關於這個應用程式</string>
+    <string name="view_downloads">檢視下載</string>
     <string name="pref_category_settings">設定</string>
     <string name="logs">偵錯記錄</string>
     <string name="components_summary">輕觸以顯示</string>
