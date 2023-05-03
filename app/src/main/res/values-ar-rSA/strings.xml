@@ -49,6 +49,12 @@
     <string name="floating_text_selection_title">اختيار النص العائم</string>
     <string name="floating_text_selection_summary">عند تحديد النص في تطبيقات أخرى، سيتم عرض خيار \"إرسال مع Snapdrop\"</string>
     <string name="floating_text_selection_activity_label">مشاركة مع سناب درُوب</string>
+    <string name="permission_not_granted">الرجاء منح الأذونات الضرورية</string>
+    <string name="permission_not_granted_fallback">الرجاء منح الأذونات الضرورية</string>
+    <string name="open_settings">فتح الإعدادات</string>
+    <string name="retain_location_metadata_title">الاحتفاظ بموقع البيانات الوصفية</string>
+    <string name="retain_location_metadata_summary_off">قد تحتوي بعض ملفات الوسائط على بيانات الموقع التي يتم تجريدها بشكل افتراضي. منح الإذن لتضمين بيانات التعريف الكاملة</string>
+    <string name="retain_location_metadata_summary_on">التطبيق لديه كامل الصلاحية للملف حاليا</string>
     <string name="settings_theme_title">السِّمَة</string>
     <string-array name="darkmode_entries">
         <item>اِفتِراضِيَّة تبعًا للنِظام</item>

@@ -49,6 +49,12 @@
     <string name="floating_text_selection_title">Wybór pływającego tekstu</string>
     <string name="floating_text_selection_summary">Podczas wybierania tekstu w innych aplikacjach zostanie wyświetlona opcja \"Wyślij za pomocą Snapdrop\"</string>
     <string name="floating_text_selection_activity_label">Wyślij przez Snapdrop</string>
+    <string name="permission_not_granted">Proszę udzielić odpowiednich uprawnień</string>
+    <string name="permission_not_granted_fallback">udziel niezbędnych uprawnień ręcznie</string>
+    <string name="open_settings">otwórz ustawienia</string>
+    <string name="retain_location_metadata_title">Zachowaj metadane lokalizacji</string>
+    <string name="retain_location_metadata_summary_off">Niektóre pliki multimedialne mogą zawierać dane o lokalizacji, które są domyślnie usuwane. Zezwól na dostęp do pełnych metadanych</string>
+    <string name="retain_location_metadata_summary_on">Aplikacja ma obecnie pełny dostęp do plików</string>
     <string name="settings_theme_title">Motyw</string>
     <string-array name="darkmode_entries">
         <item>Domyślne ustawienia</item>

@@ -2,12 +2,28 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop for Android</string>
+    <string name="app_name_slogan">在您的裝置間無縫傳輸檔案。</string>
     <string name="err_no_browser">無法開啟瀏覽器</string>
-    <string name="err_no_app">找不到可開啟此檔案格式的應用程式</string>
-    <string name="open_url">開啟連結</string>
+    <string name="err_no_app">找不到可開啟此檔案的應用程式</string>
+    <string name="open_url">開啟 URL</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">繼續</string>
+    <string name="onboarding_button_grant">授予權限</string>
+    <string name="onboarding_button_finish">完成</string>
+    <string name="onboarding_choose_server">選擇一個伺服器位址</string>
+    <string name="onboarding_choose_server_short">選擇伺服器</string>
+    <string name="onboarding_choose_server_description">這個應用程式是專為 Web 應用程式 Snapdrop 和 PairDrop 最佳化的用戶端。\n選擇以下執行個體或指定一個自訂 URL 以進行連線。\n\n注意：您必須在所有裝置上選擇相同的 URL。</string>
+    <string name="onboarding_storage_permission">儲存空間權限</string>
+    <string name="onboarding_storage_permission_description">這是一個用於檔案分享的公用程式，因此，若要使用它，需要授予儲存空間權限。</string>
+    <string name="onboarding_server_pairdrop_summary">(建議)\n配對功能，網際網路傳輸並專注於穩定性。</string>
+    <string name="onboarding_server_snapdrop_summary">傳統 Snapdrop，簡單易用。</string>
+    <string name="onboarding_server_custom">自訂 URL</string>
+    <string name="onboarding_server_custom_summary">專家也可以託管個人所有的伺服器。</string>
+    <string name="onboarding_howto">如何使用</string>
+    <string name="onboarding_howto_summary">1. 在您的區域 WiFi 網路中的任何其他裝置上開啟這個應用程式或 %s。\n\n2. 輕觸您想要與其分享檔案的裝置。\n\n3. 大功告成！檔案將被傳送…</string>
+    <string name="onboarding_howto_troubleshoot">提示：裝置可能需要連線至同一個 WiFi 網路，如果啟用了 VPN，應用程式可能無法正常運作。</string>
     <!-- Download -->
-    <string name="download_save_pending">正在儲存檔案。請稍待片刻…</string>
+    <string name="download_save_pending">正在儲存檔案，請稍候片刻…</string>
     <string name="download_successful">下載成功</string>
     <string name="notification_channel_name">下載完成</string>
     <!-- Action Buttons -->
@@ -16,43 +32,58 @@
     <string name="reset">重設</string>
     <string name="copy">複製</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">關於</string>
     <string name="title_activity_about">關於 Snapdrop for Android</string>
+    <string name="pref_about_title">關於這個應用程式</string>
     <string name="pref_category_settings">設定</string>
-    <string name="logs">除錯日誌</string>
-    <string name="components_summary">輕觸顯示</string>
+    <string name="logs">偵錯記錄</string>
+    <string name="components_summary">輕觸以顯示</string>
+    <string name="support_us">支持我們</string>
+    <string name="support_us_summary">看一看，您能如何支持本專案</string>
+    <string name="read_more">瞭解更多</string>
     <string name="version">版本</string>
     <string name="pref_device_name_title">裝置名稱</string>
-    <string name="pref_device_name_summary">自訂裝置名稱</string>
+    <string name="pref_device_name_summary">設定使用者定義的裝置名稱</string>
     <string name="keep_on_summary">如果遇到螢幕休眠而中斷傳輸請開啟這個選項</string>
-    <string name="keep_on_title">保持螢幕開啟</string>
-    <string name="floating_text_selection_title">Floating text selection</string>
-    <string name="floating_text_selection_summary">使用其他APP选中文本时，显示“使用Snapdrop发送”选项</string>
-    <string name="floating_text_selection_activity_label">使用Snapdrop发送</string>
+    <string name="keep_on_title">傳輸時保持螢幕開啟</string>
+    <string name="floating_text_selection_title">浮動式文字選取</string>
+    <string name="floating_text_selection_summary">使用其他應用程式選取文字時，顯示「使用 Snapdrop 傳送」選項</string>
+    <string name="floating_text_selection_activity_label">使用 Snapdrop 傳送</string>
+    <string name="permission_not_granted">請授予必要權限</string>
+    <string name="permission_not_granted_fallback">請手動授予必要權限</string>
+    <string name="open_settings">開啟設定</string>
+    <string name="retain_location_metadata_title">保留位置中繼資料</string>
+    <string name="retain_location_metadata_summary_off">部分媒體檔案可能包含位置中繼資料，這些資料預設會被移除。授予權限以包含完整的中繼資料</string>
+    <string name="retain_location_metadata_summary_on">應用程式目前擁有完整的檔案存取權</string>
     <string name="settings_theme_title">主題</string>
     <string-array name="darkmode_entries">
         <item>系統預設</item>
-        <item>明亮主題</item>
-        <item>黑色主題</item>
+        <item>淺色</item>
+        <item>深色</item>
     </string-array>
-    <string name="baseurl_title">主機 URL</string>
-    <string name="baseurl_no_snapdrop_instance">請輸入 Snapdrop 實例</string>
-    <string name="baseurl_check_instance_failed">無法驗證 Snapdrop 實例</string>
+    <string name="baseurl_title">基底 URL</string>
+    <string name="baseurl_not_set">未設定</string>
+    <string name="baseurl_instance_verified">Snapdrop 執行個體已成功驗證</string>
+    <string name="baseurl_no_snapdrop_instance">請輸入 Snapdrop 執行個體</string>
+    <string name="baseurl_check_instance_failed">無法驗證 Snapdrop 執行個體</string>
+    <string name="baseurl_unofficial_instances">請檢查<a href="">常見問題</a>，瞭解非官方執行個體清單。請注意，一些執行個體可能無法在應用程式內正常運作。</string>
     <string name="save_location">儲存位置</string>
     <!-- File sharing -->
-    <string name="intent_file">正在等待上傳選取的檔案</string>
-    <string name="intent_files">已選取準備上傳的檔案</string>
-    <string name="intent_content">已選取準備上傳的內容</string>
+    <string name="intent_file">已選取的等候分享的檔案</string>
+    <string name="intent_files">已選取的等候分享的檔案</string>
+    <string name="intent_content">已選取的等候分享的內容</string>
     <string name="error_filechooser">無法開啟檔案選擇器</string>
-    <string name="error_network">請確保已連線至可用的無線網路</string>
+    <string name="error_network">請確保您已連線至 WiFi 網路</string>
     <string name="ignore_error_network">忽略並繼續</string>
     <string name="error_not_reachable_title">噢，不好意思！</string>
+    <string name="error_server_not_reachable">無法連線至伺服器。\n\n如果您的網際網路連線是正常運作，而且確實發生了這種狀況，請嘗試選取一個不同的伺服器位址。</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">在其他裝置上開啟 Snapdrop 來傳輸檔案</string>
+    <string name="website_no_peers_info">在其他裝置上開啟 Snapdrop 以傳送檔案</string>
     <string name="website_instruction">輕觸以傳送檔案，或按住以傳送訊息</string>
-    <string name="website_file_received">已接收檔案</string>
-    <string name="website_file_ask_before_download">儲存檔案前詢問我</string>
+    <string name="website_file_received">檔案已接收</string>
+    <string name="website_file_ask_before_download">儲存檔案前一律詢問</string>
     <string name="website_file_download">儲存</string>
-    <string name="website_footer_discovery">此網路下的所有人皆能發現您</string>
+    <string name="website_footer_discovery">您可以被這個網路下的所有人發現</string>
     <string name="website_footer_known_as">您會顯示為 %s</string>
     <string name="website_about_subheading">最簡單的跨裝置檔案傳輸方案</string>
 </resources>

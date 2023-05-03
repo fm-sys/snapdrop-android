@@ -49,6 +49,12 @@
     <string name="floating_text_selection_title">Sélection de texte flottante</string>
     <string name="floating_text_selection_summary">Lors de la sélection de texte dans d\'autres applications, une option \"Envoyer via Snapdrop\" sera affichée</string>
     <string name="floating_text_selection_activity_label">Envoyer via Snapdrop</string>
+    <string name="permission_not_granted">veuillez accorder l\'autorisation nécessaire</string>
+    <string name="permission_not_granted_fallback">veuillez accorder manuellement l\'autorisation nécessaire</string>
+    <string name="open_settings">ouvrir les paramètres</string>
+    <string name="retain_location_metadata_title">Conserver les métadonnées de localisation</string>
+    <string name="retain_location_metadata_summary_off">Certains fichiers multimédias peuvent contenir des données de localisation qui sont supprimées par défaut. Accorder la permission d\'inclure des métadonnées complètes</string>
+    <string name="retain_location_metadata_summary_on">L\'application dispose actuellement d\'un accès complet aux fichiers</string>
     <string name="settings_theme_title">Thème</string>
     <string-array name="darkmode_entries">
         <item>Suivre le système</item>
