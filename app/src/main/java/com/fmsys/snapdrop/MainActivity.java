@@ -45,6 +45,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
@@ -83,8 +85,6 @@ import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
     private static final int MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE = 12321;
-    private static final int LAUNCH_SETTINGS_ACTIVITY = 12;
-    public static final int REQUEST_SELECT_FILE = 100;
 
     private String baseURL;
 
@@ -121,6 +121,22 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
+    private final ActivityResultLauncher<Intent> openSettingsResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result.getResultCode() == Activity.RESULT_OK) {
+            setResult(Activity.RESULT_OK);
+            recreate();
+        }
+    });
+
+    private final ActivityResultLauncher<Intent> selectFilesResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+        if (result.getResultCode() == RESULT_OK) {
+            uploadFromIntent(result.getData());
+        } else if (uploadMessage != null) {
+            uploadMessage.onReceiveValue(null);
+            uploadMessage = null;
+        }
+    });
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -159,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
-        setTitle(R.string.app_name_long);
+        setTitle(null);
 
         final ActionBar actionbar = getSupportActionBar();
         if (actionbar != null) {
@@ -226,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
 
         if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q)
                 && (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
-            requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
+            requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
         }
 
         binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
@@ -251,13 +267,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        // file not added to download manager for android 7 and below, so this doesn't make sense (see #219)
+        menu.findItem(R.id.menu_view_downloads).setVisible(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O);
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             toggleAbout();
             return true;
         } else if (item.getItemId() == R.id.menu_settings) {
             final Intent browserIntent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivityForResult(browserIntent, LAUNCH_SETTINGS_ACTIVITY);
+            openSettingsResultLauncher.launch(browserIntent);
+            return true;
+        } else if (item.getItemId() == R.id.menu_view_downloads) {
+            startActivity(new Intent(this, FileBrowserActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -335,25 +361,6 @@ public class MainActivity extends AppCompatActivity {
     public void resetUploadIntent() {
         uploadIntent = null;
         onlyText = false;
-    }
-
-    @Override
-    public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
-        super.onActivityResult(requestCode, resultCode, intent);
-
-        if (requestCode == REQUEST_SELECT_FILE) {
-            if (resultCode == RESULT_OK) {
-                uploadFromIntent(intent);
-            } else if (uploadMessage != null) {
-                uploadMessage.onReceiveValue(null);
-                uploadMessage = null;
-            }
-        } else if (requestCode == LAUNCH_SETTINGS_ACTIVITY) {
-            if (resultCode == Activity.RESULT_OK) {
-                setResult(Activity.RESULT_OK);
-                recreate();
-            }
-        }
     }
 
     @Override
@@ -479,7 +486,7 @@ public class MainActivity extends AppCompatActivity {
             final Intent intent = fileChooserParams.createIntent();
             intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
             try {
-                startActivityForResult(intent, REQUEST_SELECT_FILE);
+                selectFilesResultLauncher.launch(intent);
             } catch (ActivityNotFoundException e) {
                 uploadMessage = null;
                 Snackbar.make(binding.pullToRefresh, R.string.error_filechooser, Snackbar.LENGTH_LONG).show();
@@ -644,6 +651,12 @@ public class MainActivity extends AppCompatActivity {
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         final String path = preferences.getString(context.getString(R.string.pref_save_location), downloadsFolder);
         return DocumentFileCompat.fromFullPath(context, path, DocumentFileType.FOLDER, true);
+    }
+
+    public static boolean isCustomSaveLocation() {
+        final Context context = SnapdropApplication.getInstance();
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getString(context.getString(R.string.pref_save_location), null) != null;
     }
 
     private void onFailedMovingTempFile(final String errorMessage) {

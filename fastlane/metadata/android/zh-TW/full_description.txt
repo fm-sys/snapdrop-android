@@ -1,21 +1,21 @@
-Snapdrop for Android is an Android™ 免費且開源的客戶端用以本地端的檔案分享解決辦法https://snapdrop.net/.
+Snapdrop for Android is an Android™ 是免費且開源的用戶端，開放原始碼的本機檔案分享方案 https://snapdrop.net/。
 
-你是否時常因為無法快速的將檔案從手機傳輸到電腦而苦惱呢?
+你是否時常因為無法快速的將檔案從手機傳輸到電腦而苦惱呢？
 
-USB? -太low了
-藍牙? -既麻煩又慢!
-E-mail? -拜託別再寄一封信給自己了!
+USB？ - 早就過時了！
+藍牙？ - 既麻煩又慢！
+電子郵件？ - 拜託請別再給自己寄信了！
 
-Snapdrop!
+Snapdrop！
 
-Snapdrop 是一個分享本地檔案的解決辦法，僅僅使用您的瀏覽器。 有點像是 Apple 的 Airdrop，但不限於 Apple 的設備。 Windows, Linux, Android, IPhone, Mac - 完全沒有任何問題! 有點像是 Apple 的 Airdrop，但不限於 Apple 的設備。 Windows, Linux, Android, IPhone, Mac - 完全沒有任何問題!
+Snapdrop 是一個本機檔案分享方案，可在您的瀏覽器中完美運作。 有點像是 Apple 的 Airdrop，但不限於 Apple 裝置。 Windows、Linux、Android、IPhone、Mac - 完全沒問題！
 
-然而，即使只需要用瀏覽器就能操作，但當你有頻繁使用的需求時，相信你會愛上 Snapdrop 這個 App。 由於完美整合到 Android 中，檔案傳輸速度更快了。 您還能直接在其他 App 中使用 Snapdrop 來分享檔案。
+然而，即使只需瀏覽器就能完美運作，但在您有頻繁使用的需求時，相信您會愛上 Snapdrop 這個應用程式。 得益於與 Android 作業系統的完美整合，檔案傳輸變得更加快速。 您還能直接在其他應用程式中使用 Snapdrop 來分享檔案。
 
-Thanks to its radical simplicity, "Snapdrop for Android" makes the everyday life of thousands of users easier. 作为一个开源项目，我们没有获得任何商业利益，只是想让世界变得更加美好。 加入並相信自己!
+得益於它徹底的簡潔性，「Snapdrop for Android」使成千上萬的使用者更加便利。 作為一個開放原始碼專案，我們沒有任何商業利益，只是希望世界變得更好一點。 加入並相信自己！
 
-開放原始碼:
+原始碼：
 https://github.com/fm-sys/snapdrop-android
 
-所有權:
-這個 App 以及圖標源於 RobinLinus 建立的開源專案 Snapdrop。 詳情請參見 https://www.github.com/robinlinus/snapdrop 然而，即使只需要用瀏覽器就能操作，但當你有頻繁使用的需求時，相信你會愛上 Snapdrop 這個 App。 由於完美整合到 Android 中，檔案傳輸速度更快了。 您還能直接在其他 App 中使用 Snapdrop 來分享檔案。
+製作群：
+這個應用程式及圖示源於 RobinLinus 建立並維護的開放原始碼專案 Snapdrop。 請參閱 https://www.github.com/robinlinus/snapdrop

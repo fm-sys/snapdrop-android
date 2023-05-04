@@ -7,6 +7,10 @@
     <string name="open_url">Åpne URL</string>
     <!-- Onboarding -->
     <string name="onboarding_choose_server_short">Velg Server</string>
+    <string name="onboarding_storage_permission">Storage permission</string>
+    <string name="onboarding_storage_permission_description">This app is a file sharing utility. Therefore, storage permission is required order to use it.</string>
+    <string name="onboarding_server_snapdrop_summary">The classic snapdrop. Clean and simple.</string>
+    <string name="onboarding_server_custom_summary">Experts can also host their own servers.</string>
     <!-- Download -->
     <string name="download_save_pending">Lagrer filen. Vennligst ha litt tålmodighet…</string>
     <string name="download_successful">Nedlasting vellykket</string>

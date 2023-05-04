@@ -46,7 +46,8 @@
             android:defaultValue="false"
             android:icon="@drawable/pref_location_metadata"
             android:key="@string/pref_retain_location_metadata"
-            android:summary="@string/retain_location_metadata_summary"
+            android:summaryOff="@string/retain_location_metadata_summary_off"
+            android:summaryOn="@string/retain_location_metadata_summary_on"
             android:title="@string/retain_location_metadata_title"
             app:isPreferenceVisible="false" />
 
