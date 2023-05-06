@@ -85,6 +85,6 @@
     <string name="website_file_ask_before_download">Zawsze pytaj przed zapisaniem pliku</string>
     <string name="website_file_download">Zapisz</string>
     <string name="website_footer_discovery">Możesz być widoczny dla wszystkich w tej sieci</string>
-    <string name="website_footer_known_as">Jesteś znany jako %s</string>
+    <string name="website_footer_known_as">Jesteś widoczny jako %s</string>
     <string name="website_about_subheading">Najprostszy sposób na przesyłanie plików przez urządzenia</string>
 </resources>
