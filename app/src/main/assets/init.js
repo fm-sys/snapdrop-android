@@ -173,6 +173,7 @@ try {
 
 window.addEventListener('file-received', e => {
     SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);
+    SnapdropAndroid.vibrateOnFileReceived();
 }, false);
 
 //hide unnecessary web toolbar buttons
