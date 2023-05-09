@@ -155,7 +155,7 @@ public class JavaScriptInterface {
     }
 
     @JavascriptInterface
-    public void vibrateOnFileReceived() {
+    public void vibrate() {
         Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
         if (vibrator.hasVibrator()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
