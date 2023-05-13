@@ -78,7 +78,6 @@
     <string name="error_not_reachable_title">Ups, scuze!</string>
     <string name="error_server_not_reachable">Serverul nu poate fi accesat. \n\nDacă conexiunea la internet este bună și tot se întâmplă, încearcă să selectezi alt server.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Deschide Snapdrop pe alte dispozitive pentru a trimite fișiere</string>
     <string name="website_instruction">Atingeți pentru a trimite fișiere sau atingeți lung pentru a trimite un mesaj</string>
     <string name="website_file_received">Fișier primit</string>
     <string name="website_file_ask_before_download">Întreabă întotdeauna înainte de a salva un fișier</string>
