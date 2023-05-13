@@ -31,6 +31,7 @@
     <string name="install">installer</string>
     <string name="reset">réinitialiser</string>
     <string name="copy">copier</string>
+    <string name="retry">Réessayer</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">À propos</string>
     <string name="title_activity_about">À propos de Snapdrop pour Android</string>
@@ -75,10 +76,12 @@
     <string name="intent_content">Du contenu est sélectionné pour être partagé</string>
     <string name="error_filechooser">Impossible d\'ouvrir le sélecteur de fichiers</string>
     <string name="error_network">Veuillez vérifier que vous êtes connecté à un réseau Wi-Fi</string>
+    <string name="error_network_offline">Vous êtes hors ligne</string>
     <string name="ignore_error_network">Laisse-moi quand même entrer</string>
     <string name="error_not_reachable_title">Oups, désolé !</string>
     <string name="error_server_not_reachable">Le serveur est inaccessible. \n\nSi votre connexion internet fonctionne et que cela se produit malgré tout, essayer de sélectionner une autre adresse de serveur.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Ouvrez l\'application ou le site web sur d\'autres appareils pour envoyer des fichiers</string>
     <string name="website_instruction">Touchez pour envoyer des fichiers ou appuyez longuement pour envoyer un message</string>
     <string name="website_file_received">Fichier reçu</string>
     <string name="website_file_ask_before_download">Toujours demander avant d\'enregistrer un fichier</string>
