@@ -46,7 +46,6 @@
     <string name="ignore_error_network">תן לי להיכנס בכל מקרה</string>
     <string name="error_not_reachable_title">אופס, סליחה!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">פתח את סנאפדרופ במכשיר אחר לשלוח קבצים</string>
     <string name="website_instruction">לחץ כדי לשלוח קבצים או לחץ לחיצה ארוכה כדי לשלוח הודעה</string>
     <string name="website_file_received">הקובץ התקבל</string>
     <string name="website_file_ask_before_download">שאל תמיד לפני שמירת קובץ</string>
