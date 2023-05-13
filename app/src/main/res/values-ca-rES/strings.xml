@@ -49,7 +49,6 @@
     <string name="ignore_error_network">Deixa\'m intentar-ho igualment</string>
     <string name="error_not_reachable_title">Ups, perdó!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Obri Snapdrop a altres dispositius per a enviar arxius</string>
     <string name="website_instruction">Premeu per a enviar arxius o manteniu premut per a enviar un missatge</string>
     <string name="website_file_received">Arxiu rebut</string>
     <string name="website_file_ask_before_download">Pregunta sempre abans de guardar un arxiu</string>
