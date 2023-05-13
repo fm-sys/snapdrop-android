@@ -46,7 +46,6 @@
     <string name="ignore_error_network">Napriek tomu pokračovať</string>
     <string name="error_not_reachable_title">Ups, prepáčte!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Otvorte Snapdrop na ďalších zariadeniach pre posielanie súborov</string>
     <string name="website_instruction">Klepnutím pošlete súbory a podržaním pošlete správu</string>
     <string name="website_file_received">Súbor bol prijatý</string>
     <string name="website_file_ask_before_download">Vždy sa opýtať pred ukladaním súboru</string>
