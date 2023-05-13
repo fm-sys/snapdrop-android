@@ -46,7 +46,6 @@
     <string name="ignore_error_network">Cứ cho tôi vào đi</string>
     <string name="error_not_reachable_title">Ầu, xin lỗi!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Mở Snapdrop trên thiết bị khác để truyền các tập tin</string>
     <string name="website_instruction">Nhấn để truyền tập tin hoặc nhấn giữ để gửi tin nhắn</string>
     <string name="website_file_received">Tập tin đã được nhận</string>
     <string name="website_file_ask_before_download">Luôn hỏi trước khi lưu tập tin</string>
