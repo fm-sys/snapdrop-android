@@ -46,7 +46,6 @@
     <string name="ignore_error_network">とにかく進む</string>
     <string name="error_not_reachable_title">申し訳ありません</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">他のデバイスでSnapdropを開き、ファイルを送信することができます。</string>
     <string name="website_instruction">タップしてファイルを送信するか、長押しでメッセージを送信します</string>
     <string name="website_file_received">受信したファイル</string>
     <string name="website_file_ask_before_download">ファイルを保存する前に常に確認</string>

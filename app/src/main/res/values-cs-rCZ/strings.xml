@@ -46,7 +46,6 @@
     <string name="ignore_error_network">Stejně mě pusťte dovnitř</string>
     <string name="error_not_reachable_title">Ajajaj, pardon!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Otevřete Snapdrop na více zařízeních pro přesun souborů</string>
     <string name="website_instruction">Klepněte pro odeslání souboru nebo klepněte a podržte pro odeslání zprávy</string>
     <string name="website_file_received">Soubor přijat</string>
     <string name="website_file_ask_before_download">Vždy se zeptat před uložením souboru</string>

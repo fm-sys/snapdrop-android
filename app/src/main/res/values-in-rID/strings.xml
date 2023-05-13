@@ -52,7 +52,6 @@
     <string name="ignore_error_network">Biarkan saya masuk</string>
     <string name="error_not_reachable_title">Ups, maaf!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Buka Snapdrop di perangkat lain untuk mengirim berkas</string>
     <string name="website_instruction">Ketuk untuk mengirim file atau ketuk lama untuk mengirim pesan</string>
     <string name="website_file_received">File Diterima</string>
     <string name="website_file_ask_before_download">Selalu tanyakan sebelum menyimpan file</string>

@@ -72,7 +72,6 @@
     <string name="error_not_reachable_title">앗, 죄송합니다!</string>
     <string name="error_server_not_reachable">서버에 연결할 수 없습니다. \n\n인터넷에 연결되어 있는데도 계속 이 에러가 생긴다면, 다른 서버 주소를 골라보세요.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">파일 전송을 위해 다른 기기에서 Snapdrop을 열어주세요.</string>
     <string name="website_instruction">탭하여 파일을 보내거나 길게 눌러 메세지를 보내세요</string>
     <string name="website_file_received">파일 수신됨</string>
     <string name="website_file_ask_before_download">저장 전 항상 묻기</string>

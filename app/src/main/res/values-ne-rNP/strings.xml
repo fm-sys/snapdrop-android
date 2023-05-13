@@ -46,7 +46,6 @@
     <string name="ignore_error_network">जसरी पनि मलाई भित्र जान दिनुहोस्</string>
     <string name="error_not_reachable_title">ओहो, माफ गर्नुहोस् !</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">फाइलहरू पठाउन अन्य उपकरणहरूमा Snapdrop खोल्नुहोस्</string>
     <string name="website_instruction">फाइलहरू पठाउन ट्याप गर्नुहोस् वा सन्देश पठाउन लामो ट्याप गर्नुहोस्</string>
     <string name="website_file_received">फाइल प्राप्त भयो</string>
     <string name="website_file_ask_before_download">फाइल बचत गर्नु अघि सधैं सोध्नुहोस्</string>

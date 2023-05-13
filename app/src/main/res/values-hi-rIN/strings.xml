@@ -45,7 +45,6 @@
     <string name="ignore_error_network">मुझे वैसे भी आने दो</string>
     <string name="error_not_reachable_title">क्षमा करें!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">फ़ाइलें भेजने के लिए अन्य उपकरणों पर स्नैपड्रॉप खोलें</string>
     <string name="website_instruction">फ़ाइलें भेजने के लिए टैप करें या संदेश भेजने के लिए लंबा टैप करें</string>
     <string name="website_file_received">फाइल प्राप्त हुई</string>
     <string name="website_file_ask_before_download">फ़ाइल सहेजने से पहले हमेशा पूछें</string>

@@ -46,7 +46,6 @@
     <string name="ignore_error_network">Belépés mindenképpen</string>
     <string name="error_not_reachable_title">Hoppá, elnézést!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Nyisd meg a Snapdrop-ot más eszközökön a fájlküldéshez</string>
     <string name="website_instruction">Érintsd meg a fájlküldéshez, vagy nyomd hosszan az üzenetküldéshez</string>
     <string name="website_file_received">Fájl fogadva</string>
     <string name="website_file_ask_before_download">Minden fájl mentése előtt kérdezze</string>

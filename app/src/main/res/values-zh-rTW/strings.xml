@@ -35,6 +35,7 @@
     <string name="home_as_up_indicator_about">關於</string>
     <string name="title_activity_about">關於 Snapdrop for Android</string>
     <string name="pref_about_title">關於這個應用程式</string>
+    <string name="view_downloads">檢視下載</string>
     <string name="pref_category_settings">設定</string>
     <string name="logs">偵錯記錄</string>
     <string name="components_summary">輕觸以顯示</string>
@@ -78,7 +79,6 @@
     <string name="error_not_reachable_title">噢，不好意思！</string>
     <string name="error_server_not_reachable">無法連線至伺服器。\n\n如果您的網際網路連線是正常運作，而且確實發生了這種狀況，請嘗試選取一個不同的伺服器位址。</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">在其他裝置上開啟 Snapdrop 以傳送檔案</string>
     <string name="website_instruction">輕觸以傳送檔案，或按住以傳送訊息</string>
     <string name="website_file_received">檔案已接收</string>
     <string name="website_file_ask_before_download">儲存檔案前一律詢問</string>

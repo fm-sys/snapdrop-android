@@ -52,7 +52,6 @@
     <string name="ignore_error_network">Vseeno me spusti naprej</string>
     <string name="error_not_reachable_title">Ups, oprostite!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Za pošiljanje datotek odprite Snapdrop na drugih napravah</string>
     <string name="website_instruction">Tapnite za pošiljanje datotek ali pridržite za pošiljanje sporočila</string>
     <string name="website_file_received">Datoteka prejeta</string>
     <string name="website_file_ask_before_download">Vedno vprašaj, pred shranjevanjem datoteke</string>

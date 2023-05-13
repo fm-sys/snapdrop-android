@@ -35,6 +35,7 @@
     <string name="home_as_up_indicator_about">O programie</string>
     <string name="title_activity_about">O Snapdrop dla Androida</string>
     <string name="pref_about_title">O tej aplikacji</string>
+    <string name="view_downloads">Zobacz pobrane</string>
     <string name="pref_category_settings">Ustawienia</string>
     <string name="logs">Dzienniki debugowania</string>
     <string name="components_summary">Dotknij, aby wyświetlić</string>
@@ -78,12 +79,11 @@
     <string name="error_not_reachable_title">Ups, przepraszam!</string>
     <string name="error_server_not_reachable">Nie można połączyć się z serwerem. \n\nJeśli Twoje połączenie internetowe działa i tak się dzieje, spróbuj wybrać inny serwer</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Otwórz Snapdrop na innych urządzeniach aby wysyłać pliki</string>
     <string name="website_instruction">Dotknij, aby wysłać pliki lub długie dotknięcie aby wysłać wiadomość</string>
     <string name="website_file_received">Otrzymano plik</string>
     <string name="website_file_ask_before_download">Zawsze pytaj przed zapisaniem pliku</string>
     <string name="website_file_download">Zapisz</string>
-    <string name="website_footer_discovery">Możesz zostać odkryty przez wszystkich w tej sieci</string>
-    <string name="website_footer_known_as">Jesteś znany jako %s</string>
+    <string name="website_footer_discovery">Możesz być widoczny dla wszystkich w tej sieci</string>
+    <string name="website_footer_known_as">Jesteś widoczny jako %s</string>
     <string name="website_about_subheading">Najprostszy sposób na przesyłanie plików przez urządzenia</string>
 </resources>

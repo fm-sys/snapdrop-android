@@ -67,7 +67,6 @@
     <string name="ignore_error_network">Yine de devam et</string>
     <string name="error_not_reachable_title">Ups, üzgünüm!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Dosya göndermek için Snapdrop\'u diğer cihazlarda açınız</string>
     <string name="website_instruction">Dosya göndermek için dokun veya mesaj göndermek için basılı tut</string>
     <string name="website_file_received">Dosya alındı</string>
     <string name="website_file_ask_before_download">Bir dosya kaydetmeden önce her zaman sor</string>

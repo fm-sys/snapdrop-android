@@ -49,7 +49,6 @@
     <string name="ignore_error_network">Toch proberen</string>
     <string name="error_not_reachable_title">Oeps, sorry!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Open Snapdrop op andere apparaten om bestanden te delen</string>
     <string name="website_instruction">Tik om bestanden te delen of houd ingedrukt om een bericht te sturen</string>
     <string name="website_file_received">Bestand ontvangen</string>
     <string name="website_file_ask_before_download">Altijd vragen voordat een bestand wordt opgeslagen</string>

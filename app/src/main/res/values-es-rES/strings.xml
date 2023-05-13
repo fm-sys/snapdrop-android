@@ -72,7 +72,6 @@
     <string name="error_not_reachable_title">¡Ups, lo sentimos!</string>
     <string name="error_server_not_reachable">El servidor no puede ser alcanzado. \n\nSi tu conexión a internet funciona y esto sucede de todos modos, por favor intenta seleccionar un servidor diferente.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Abrir Snapdrop en otros dispositivos para enviar archivos</string>
     <string name="website_instruction">Pulsa para enviar archivos o pulsación larga para enviar un mensaje</string>
     <string name="website_file_received">Archivo recibido</string>
     <string name="website_file_ask_before_download">Preguntar siempre antes de guardar un archivo</string>

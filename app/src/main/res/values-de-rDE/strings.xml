@@ -35,6 +35,7 @@
     <string name="home_as_up_indicator_about">Über</string>
     <string name="title_activity_about">Über Snapdrop für Android</string>
     <string name="pref_about_title">Über diese App</string>
+    <string name="view_downloads">Downloads anzeigen</string>
     <string name="pref_category_settings">Einstellungen</string>
     <string name="logs">Debug-Protokolle</string>
     <string name="components_summary">Zum Anzeigen tippen</string>
@@ -49,6 +50,12 @@
     <string name="floating_text_selection_title">Schwebende Textauswahl</string>
     <string name="floating_text_selection_summary">Bei der Auswahl von Text in anderen Apps wird die Option \"Mit Snapdrop senden\" angezeigt</string>
     <string name="floating_text_selection_activity_label">Mit Snapdrop senden</string>
+    <string name="permission_not_granted">Bitte erteilen Sie die notwendige Berechtigung</string>
+    <string name="permission_not_granted_fallback">Bitte erteilen Sie die notwendige Berechtigung manuell</string>
+    <string name="open_settings">Einstellungen öffnen</string>
+    <string name="retain_location_metadata_title">Standort-Metadaten behalten</string>
+    <string name="retain_location_metadata_summary_off">Einige Mediendateien können Standortdaten enthalten, die standardmäßig entfernt werden. Erteilen Sie die Berechtigung, alle Metadaten einzubinden</string>
+    <string name="retain_location_metadata_summary_on">Die App hat derzeit vollen Dateizugriff</string>
     <string name="settings_theme_title">Design</string>
     <string-array name="darkmode_entries">
         <item>Systemstandard</item>
@@ -72,7 +79,7 @@
     <string name="error_not_reachable_title">Tut mir leid!</string>
     <string name="error_server_not_reachable">Der Server kann nicht erreicht werden. \n\nWenn Ihre Internetverbindung funktioniert und dies trotzdem geschieht, versuchen Sie bitte, eine andere Server-Adresse auszuwählen.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Öffne Snapdrop auf anderen Geräten, um Dateien zu senden</string>
+    <string name="website_no_peers_info">Öffne diese App oder die Website auf anderen Geräten, um Dateien zu senden</string>
     <string name="website_instruction">Tippen, um Dateien zu senden, oder lange tippen, um eine Nachricht zu senden</string>
     <string name="website_file_received">Datei empfangen</string>
     <string name="website_file_ask_before_download">Vor dem Speichern immer fragen</string>
