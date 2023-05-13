@@ -34,6 +34,7 @@
     <string name="install">install</string>
     <string name="reset">reset</string>
     <string name="copy">copy</string>
+    <string name="retry">retry</string>
 
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">About</string>
@@ -82,6 +83,8 @@
     <string name="intent_content">Content is selected for sharing</string>
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
+    <string name="error_network_no_wifi">Please connect to a WiFi network, or pair devices</string>
+    <string name="error_network_offline">You are offline</string>
     <string name="ignore_error_network">Let me in anyway</string>
     <string name="error_not_reachable_title">Ups, sorry!</string>
     <string name="error_server_not_reachable">The Server cannot be reached. \n\nIf your internet connection is working and this does happen anyway, please try to select a different server address.</string>

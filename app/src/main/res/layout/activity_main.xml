@@ -48,9 +48,65 @@
                 android:id="@+id/webview"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:layout_below="@id/connectivity_card"
                 android:alpha="0"
                 android:scrollbars="none"
                 android:textCursorDrawable="@color/colorAccent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/connectivity_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:strokeColor="@android:color/transparent"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/connectivity_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/error_network_no_wifi"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/phonelink_off" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/no_connection_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/error_network_offline"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    app:drawableTopCompat="@drawable/network_off" />
+
+                <Button
+                    android:id="@+id/retry_button"
+                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/retry"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
         </RelativeLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>

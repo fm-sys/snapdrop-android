@@ -33,6 +33,7 @@ import android.util.Patterns;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.ConsoleMessage;
@@ -107,17 +108,15 @@ public class MainActivity extends AppCompatActivity {
     public Intent uploadIntent = null;
 
     private final BroadcastReceiver receiver = new BroadcastReceiver() {
-
         @Override
         public void onReceive(final Context context, final Intent intent) {
-            if (state.isCurrentlyOffline()) {
-                final Handler handler = new Handler();
-                handler.postDelayed(() -> {
-                    if (NetworkUtils.isWifiAvailable()) {
-                        refreshWebsite();
-                    }
-                }, 1500); // wait a bit until connection is ready
-
+            final boolean wasMobileData = binding.connectivityCard.getVisibility() == View.VISIBLE;
+            final boolean wifiAvailable = NetworkUtils.isWiFi(intent.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO));
+            binding.connectivityCard.setVisibility(wifiAvailable ? View.GONE : View.VISIBLE);
+            if (state.isCurrentlyOffline() || wasMobileData) {
+                if (wifiAvailable) {
+                    refreshWebsite();
+                }
             }
         }
     };
@@ -173,6 +172,12 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.connectivityTextview.setText(baseURL.equals(getString(R.string.onboarding_server_pairdrop)) ? R.string.error_network_no_wifi : R.string.error_network);
+        binding.retryButton.setOnClickListener(v -> {
+            binding.noConnectionScreen.setVisibility(View.GONE);
+            refreshWebsite();
+        });
 
         setSupportActionBar(binding.toolbar);
         setTitle(null);
@@ -299,7 +304,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void refreshWebsite(final boolean pulled) {
         Log.w("SnapdropAndroid", "refresh triggered");
-        if (NetworkUtils.isWifiAvailable() && !transfer.get() && !dialogVisible || forceRefresh) {
+        if (NetworkUtils.isInternetAvailable() && !transfer.get() && !dialogVisible || forceRefresh) {
+            binding.connectivityCard.setVisibility(NetworkUtils.isWifiAvailable() ? View.GONE : View.VISIBLE);
             binding.webview.loadUrl(baseURL);
             forceRefresh = false;
             binding.webview.animate().alpha(0).start();
@@ -307,6 +313,7 @@ public class MainActivity extends AppCompatActivity {
             binding.pullToRefresh.setRefreshing(false);
             forceRefresh = pulled; //reset forceRefresh if after pullToRefresh the refresh request did come from another source eg onResume, so pullToRefresh doesn't unexpectedly force refreshes by "first time"
         } else {
+            binding.pullToRefresh.setRefreshing(false);
             state.setCurrentlyLoading(false);
             showScreenNoConnection();
         }
@@ -319,7 +326,8 @@ public class MainActivity extends AppCompatActivity {
     private void showScreenNoConnection() {
         state.setCurrentlyLoading(false);
         state.setCurrentlyOffline(true);
-        binding.webview.loadUrl("file:///android_asset/offline.html?text=" + getString(R.string.error_network) + "&button=" + getString(R.string.ignore_error_network));
+        binding.noConnectionScreen.setVisibility(View.VISIBLE);
+
     }
 
     public static boolean isTablet(final Context ctx) {
@@ -498,16 +506,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onCreateWindow(final WebView view, final boolean dialog, final boolean userGesture, final Message resultMsg) {
             final String url = view.getHitTestResult().getExtra();
-            if (url.endsWith("offlineButForceRefresh")) {
-                forceRefresh = true;
-                refreshWebsite();
-            } else {
-                try {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-                } catch (ActivityNotFoundException e) {
-                    Snackbar.make(binding.pullToRefresh, R.string.err_no_browser, Snackbar.LENGTH_SHORT).show();
-                    resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
-                }
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            } catch (ActivityNotFoundException e) {
+                Snackbar.make(binding.pullToRefresh, R.string.err_no_browser, Snackbar.LENGTH_SHORT).show();
+                resetUploadIntent(); // the snackbar will dismiss the "files are selected" message, therefore also reset the upload intent.
             }
             return false;
         }

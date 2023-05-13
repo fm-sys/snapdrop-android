@@ -34,10 +34,12 @@ public class NetworkUtils {
         return (WifiManager) SnapdropApplication.getInstance().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
     }
 
-    public static boolean isWifiAvailable() {
-        final NetworkInfo activeNetworkInfo = getConnManager().getActiveNetworkInfo();
+    public static boolean isWiFi(final NetworkInfo networkInfo) {
+        return networkInfo != null && networkInfo.getType() == ConnectivityManager.TYPE_WIFI && networkInfo.getState() == NetworkInfo.State.CONNECTED;
+    }
 
-        if (activeNetworkInfo != null && activeNetworkInfo.getType() == ConnectivityManager.TYPE_WIFI) { // WiFi
+    public static boolean isWifiAvailable() {
+        if (isWiFi(getConnManager().getActiveNetworkInfo())) { // WiFi
             return true;
         } else if (isInternetAvailable()) { // Maybe sharing the internet connection via hotspot?
             final WifiManager wifiManager = getWiFiManager();
