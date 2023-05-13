@@ -69,7 +69,6 @@
     <string name="ignore_error_network">Entra comunque</string>
     <string name="error_not_reachable_title">Ops, mi dispiace!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Apri Snapdrop su altri dispositivi per inviare i file</string>
     <string name="website_instruction">Premi per inviare i file o tieni premuto per inviare un messaggio</string>
     <string name="website_file_received">File ricevuto</string>
     <string name="website_file_ask_before_download">Chiedi sempre prima di salvare un file</string>
