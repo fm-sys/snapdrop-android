@@ -48,7 +48,6 @@
     <string name="ignore_error_network">Slipp meg inn likevel</string>
     <string name="error_not_reachable_title">Oops, beklager!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Åpne Snapdrop på andre enheter for å sende filer</string>
     <string name="website_instruction">Trykk for å sende filer eller trykk lenge for å sende en melding</string>
     <string name="website_file_received">Fil mottatt</string>
     <string name="website_file_ask_before_download">Spør alltid før lagring av filer</string>
