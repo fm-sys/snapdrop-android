@@ -79,7 +79,6 @@
     <string name="error_not_reachable_title">عذرًا، آسف!</string>
     <string name="error_server_not_reachable">لا يمكن الوصول إلى الخادم. \n\nإذا كان اتصالك بالإنترنت يعمل ويحدث هذا على أي حال، الرجاء محاولة تحديد عنوان خادم مختلف.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">افتح Snapdrop على الأجهزة الأخرى لإرسال الملفات</string>
     <string name="website_instruction">انقر لإرسال الملفات أو انقر مطولاً لإرسال رسالة</string>
     <string name="website_file_received">تم استلام الملف</string>
     <string name="website_file_ask_before_download">اسأل كل مرة قبل حفض مِلَفّا</string>
