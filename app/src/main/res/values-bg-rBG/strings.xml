@@ -51,7 +51,6 @@
     <string name="ignore_error_network">Пусни ме въпреки това</string>
     <string name="error_not_reachable_title">Опа, съжалявам!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Отвори Snapdrop и на друго устройство, за да изпратиш файлове помежду им</string>
     <string name="website_instruction">Натисни, за да изпратиш файлове или задръж, за да изпратиш съобщение</string>
     <string name="website_file_received">Получен файл</string>
     <string name="website_file_ask_before_download">Винаги питай преди да запазиш файл</string>
