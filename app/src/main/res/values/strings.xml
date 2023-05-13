@@ -87,7 +87,7 @@
     <string name="error_server_not_reachable">The Server cannot be reached. \n\nIf your internet connection is working and this does happen anyway, please try to select a different server address.</string>
 
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Open Snapdrop on other devices to send files</string>
+    <string name="website_no_peers_info">Open app or website on other devices to send files</string>
     <string name="website_instruction">Tap to send files or long tap to send a message</string>
     <string name="website_file_received">File Received</string>
     <string name="website_file_ask_before_download">Always ask before saving a file</string>
