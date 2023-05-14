@@ -31,10 +31,12 @@
     <string name="install">설치</string>
     <string name="reset">초기화</string>
     <string name="copy">복사</string>
+    <string name="retry">다시 시도</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">정보</string>
     <string name="title_activity_about">안드로이드용 Snapdrop 정보</string>
     <string name="pref_about_title">앱 소개</string>
+    <string name="view_downloads">다운로드 보기</string>
     <string name="pref_category_settings">설정</string>
     <string name="logs">디버그 로그</string>
     <string name="components_summary">눌러서 보기</string>
@@ -49,6 +51,9 @@
     <string name="floating_text_selection_title">선택된 텍스트 보내기</string>
     <string name="floating_text_selection_summary">다른 애플리케이션에서 텍스트를 선택할 때, \"Snapdrop으로 보내기\" 옵션이 표시됩니다.</string>
     <string name="floating_text_selection_activity_label">Snapdrop으로 보내기</string>
+    <string name="permission_not_granted">카메라 권한을 허용해주세요.</string>
+    <string name="permission_not_granted_fallback">카메라 권한을 허용해주세요.</string>
+    <string name="open_settings">설정 열기</string>
     <string name="settings_theme_title">테마</string>
     <string-array name="darkmode_entries">
         <item>시스템 기본값</item>
