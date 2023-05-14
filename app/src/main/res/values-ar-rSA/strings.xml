@@ -31,6 +31,7 @@
     <string name="install">تثبيت</string>
     <string name="reset">إعادَةُ الضَّبط</string>
     <string name="copy">نسخ</string>
+    <string name="retry">إعادة المحاولة</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">حول</string>
     <string name="title_activity_about">حَول سناب درُوب لِنِظامِ أندُروِيد</string>
