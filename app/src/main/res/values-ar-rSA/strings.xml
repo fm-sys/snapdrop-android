@@ -76,10 +76,13 @@
     <string name="intent_content">تمَّ تَحدِيدُ المُحتَوى للمُشارَكَة</string>
     <string name="error_filechooser">يتعَذّرُ فَتح مُنتَقي المِلفَات</string>
     <string name="error_network">يُرجى التَّحَقُقُ مِنَ اِتِّصَالِكَ بِشَبَكَةِ واي فاي</string>
+    <string name="error_network_no_wifi">الرجاء الاتصال بشبكة WiFi أو ربط الأجهزة</string>
+    <string name="error_network_offline">أنت في وضع عدم الاتصال</string>
     <string name="ignore_error_network">اِسمَح لِي بالدُخُولِ عَلَى أيِّ حال</string>
     <string name="error_not_reachable_title">عذرًا، آسف!</string>
     <string name="error_server_not_reachable">لا يمكن الوصول إلى الخادم. \n\nإذا كان اتصالك بالإنترنت يعمل ويحدث هذا على أي حال، الرجاء محاولة تحديد عنوان خادم مختلف.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">فتح تطبيق أو موقع على أجهزة أخرى لإرسال الملفات</string>
     <string name="website_instruction">انقر لإرسال الملفات أو انقر مطولاً لإرسال رسالة</string>
     <string name="website_file_received">تم استلام الملف</string>
     <string name="website_file_ask_before_download">اسأل كل مرة قبل حفض مِلَفّا</string>
