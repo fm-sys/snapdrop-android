@@ -31,6 +31,7 @@
     <string name="install">zainstaluj</string>
     <string name="reset">zresetuj</string>
     <string name="copy">kopiuj</string>
+    <string name="retry">spróbuj ponownie</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">O programie</string>
     <string name="title_activity_about">O Snapdrop dla Androida</string>
@@ -75,6 +76,8 @@
     <string name="intent_content">Zawartość jest zaznaczona do udostępnienia</string>
     <string name="error_filechooser">Nie można otworzyć wyboru plików</string>
     <string name="error_network">Upewnij się, że jesteś podłączony do sieci WiFi</string>
+    <string name="error_network_no_wifi">Połącz się z siecią WiFi lub paruj urządzenia</string>
+    <string name="error_network_offline">Brak dostępu do sieci</string>
     <string name="ignore_error_network">Spróbuj mimo wszystko</string>
     <string name="error_not_reachable_title">Ups, przepraszam!</string>
     <string name="error_server_not_reachable">Nie można połączyć się z serwerem. \n\nJeśli Twoje połączenie internetowe działa i tak się dzieje, spróbuj wybrać inny serwer</string>
