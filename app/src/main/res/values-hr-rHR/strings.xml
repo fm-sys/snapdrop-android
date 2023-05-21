@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop za Android</string>
     <string name="err_no_browser">Preglednik nedostupan</string>
     <string name="err_no_app">Nema aplikacije za otvaranje datoteke ovog tipa</string>
     <string name="open_url">Otvori URL adresu</string>
@@ -15,7 +14,6 @@
     <string name="reset">ponovno pokreni</string>
     <string name="copy">kopiraj</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">O Snapdropu za Android</string>
     <string name="pref_category_settings">Postavke</string>
     <string name="logs">Debug Dnevnici</string>
     <string name="components_summary">Pritisni za prikaz</string>
@@ -30,7 +28,6 @@
         <item>Svijetlo</item>
         <item>Tamno</item>
     </string-array>
-    <string name="baseurl_title">Izvorni URL</string>
     <string name="save_location">Mjesto spremanja</string>
     <!-- File sharing -->
     <string name="intent_file">Datoteka je označena za dijeljenje</string>
