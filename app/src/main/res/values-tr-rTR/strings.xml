@@ -10,7 +10,6 @@
     <string name="onboarding_button_grant">izin ver</string>
     <string name="onboarding_button_finish">bitir</string>
     <string name="onboarding_choose_server">Server adresi seçin</string>
-    <string name="onboarding_choose_server_short">Server seç</string>
     <string name="onboarding_storage_permission">Depolama izni</string>
     <string name="onboarding_storage_permission_description">Bu uygulama bir dosya aktarım aracıdır. Uygulamayı kullanabilmek için depolama izni gerekir.</string>
     <string name="onboarding_server_pairdrop_summary">(önerilir)\nEşleştirme özelliği, internet aktarımı ve stabilite üzerine odaklı.</string>
