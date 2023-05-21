@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop for Android</string>
     <string name="err_no_browser">ブラウザを開くことができません</string>
     <string name="err_no_app">このファイルを開くアプリがインストールされていません</string>
     <string name="open_url">URLから開く</string>
@@ -15,7 +14,6 @@
     <string name="reset">リセット</string>
     <string name="copy">コピー</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">Snapdrop for Androidについて</string>
     <string name="pref_category_settings">設定</string>
     <string name="logs">デバッグ ログ</string>
     <string name="components_summary">タップして表示</string>
@@ -33,9 +31,6 @@
         <item>ライト</item>
         <item>ダーク</item>
     </string-array>
-    <string name="baseurl_title">ベースURL</string>
-    <string name="baseurl_no_snapdrop_instance">Snapdropインスタンスではありません</string>
-    <string name="baseurl_check_instance_failed">Snapdropインスタンスの確認に失敗しました</string>
     <string name="save_location">保存先</string>
     <!-- File sharing -->
     <string name="intent_file">シェアするファイルが選択されています</string>
