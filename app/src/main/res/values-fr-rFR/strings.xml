@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop pour Android</string>
     <string name="app_name_slogan">Transférez des fichiers en toute simplicité entre tous vos appareils.</string>
     <string name="err_no_browser">Impossible d\'ouvrir le navigateur</string>
     <string name="err_no_app">Aucune application installée pour ouvrir ce fichier</string>
@@ -34,7 +33,6 @@
     <string name="retry">réessayer</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">À propos</string>
-    <string name="title_activity_about">À propos de Snapdrop pour Android</string>
     <string name="pref_about_title">À propos de cette application</string>
     <string name="view_downloads">Afficher les téléchargements</string>
     <string name="pref_category_settings">Paramètres</string>
@@ -63,11 +61,7 @@
         <item>Clair</item>
         <item>Sombre</item>
     </string-array>
-    <string name="baseurl_title">URL du serveur</string>
     <string name="baseurl_not_set">Non défini</string>
-    <string name="baseurl_instance_verified">L\'instance de Snapdrop a été vérifiée avec succès</string>
-    <string name="baseurl_no_snapdrop_instance">Ne semble pas être une instance Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Échec de la vérification de l\'instance Snapdrop</string>
     <string name="baseurl_unofficial_instances">Consultez la <a href="">FAQ</a> pour obtenir une liste d\'instances non officielles. Veuillez noter que certaines instances peuvent ne pas fonctionner correctement dans l\'application.</string>
     <string name="save_location">Dossier de sauvegarde</string>
     <!-- File sharing -->
