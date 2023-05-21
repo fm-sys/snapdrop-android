@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop за Android</string>
     <string name="err_no_browser">Не може да се отвори прелистувачот</string>
     <string name="err_no_app">Нема апликација инсталирана за да се отвори оваа датотека</string>
     <string name="open_url">Отвори URL</string>
@@ -15,7 +14,6 @@
     <string name="reset">ресетирај</string>
     <string name="copy">копирај</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">За Snapdrop за Android</string>
     <string name="pref_category_settings">Поставки</string>
     <string name="logs">Дебагирани влезови</string>
     <string name="components_summary">Допрете за да се прикаже</string>
@@ -30,7 +28,6 @@
         <item>Светла</item>
         <item>Темна</item>
     </string-array>
-    <string name="baseurl_title">Базна URL-адреса</string>
     <string name="save_location">Зачувај локација</string>
     <!-- File sharing -->
     <string name="intent_file">Датотека е избрана за споделување</string>
