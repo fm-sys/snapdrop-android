@@ -72,8 +72,10 @@ import com.anggrayudi.storage.media.FileDescription;
 import com.anggrayudi.storage.media.MediaFile;
 import com.fmsys.snapdrop.databinding.ActivityMainBinding;
 import com.fmsys.snapdrop.utils.NetworkUtils;
+import com.fmsys.snapdrop.utils.Nullable;
 import com.fmsys.snapdrop.utils.ShareUtils;
 import com.fmsys.snapdrop.utils.StateHandler;
+import com.google.android.material.internal.ToolbarUtils;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
@@ -139,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility"})
+    @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility", "RestrictedApi"})
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -185,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
         final ActionBar actionbar = getSupportActionBar();
         if (actionbar != null) {
             actionbar.setSubtitle(baseURL);
+            Nullable.of(ToolbarUtils.getSubtitleTextView(binding.toolbar)).ifNotNull(tv -> tv.setOnClickListener(v -> OnboardingActivity.launchServerSelection(this)));
             actionbar.setHomeAsUpIndicator(R.drawable.ic_launcher_actionbar);
             actionbar.setHomeActionContentDescription(R.string.home_as_up_indicator_about);
             actionbar.setDisplayHomeAsUpEnabled(true);

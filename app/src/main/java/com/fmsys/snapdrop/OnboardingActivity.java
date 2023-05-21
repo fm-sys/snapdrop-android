@@ -65,8 +65,8 @@ public class OnboardingActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (viewModel.isOnlyServerSelection()) {
-            super.onBackPressed();
+            viewModel.finishActivity();
         }
-        // suppress default back key behaviour otherwise
+        // suppress default back key behaviour
     }
 }
