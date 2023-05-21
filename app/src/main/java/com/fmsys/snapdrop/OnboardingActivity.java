@@ -12,6 +12,8 @@ import androidx.preference.PreferenceManager;
 public class OnboardingActivity extends AppCompatActivity {
     private static final String EXTRA_ONLY_SERVER_SELECTION = "extra_server";
 
+    OnboardingViewModel viewModel;
+
     public OnboardingActivity() {
         super(R.layout.activity_onboarding);
     }
@@ -32,7 +34,7 @@ public class OnboardingActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final OnboardingViewModel viewModel = new ViewModelProvider(this).get(OnboardingViewModel.class);
+        viewModel = new ViewModelProvider(this).get(OnboardingViewModel.class);
         viewModel.setOnlyServerSelection(getIntent().getBooleanExtra(EXTRA_ONLY_SERVER_SELECTION, false));
 
         viewModel.getFinishCallback().observe(this, () -> {
@@ -62,6 +64,9 @@ public class OnboardingActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        // suppress back key
+        if (viewModel.isOnlyServerSelection()) {
+            super.onBackPressed();
+        }
+        // suppress default back key behaviour otherwise
     }
 }
