@@ -10,7 +10,6 @@
     <string name="onboarding_button_grant">授予權限</string>
     <string name="onboarding_button_finish">完成</string>
     <string name="onboarding_choose_server">選擇一個伺服器位址</string>
-    <string name="onboarding_choose_server_short">選擇伺服器</string>
     <string name="onboarding_choose_server_description">這個應用程式是專為 Web 應用程式 Snapdrop 和 PairDrop 最佳化的用戶端。\n選擇以下執行個體或指定一個自訂 URL 以進行連線。\n\n注意：您必須在所有裝置上選擇相同的 URL。</string>
     <string name="onboarding_storage_permission">儲存空間權限</string>
     <string name="onboarding_storage_permission_description">這是一個用於檔案分享的公用程式，因此，若要使用它，需要授予儲存空間權限。</string>
