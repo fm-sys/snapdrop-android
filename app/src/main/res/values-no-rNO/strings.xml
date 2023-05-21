@@ -5,7 +5,6 @@
     <string name="err_no_app">Ingen apper installert for å åpne denne filen</string>
     <string name="open_url">Åpne URL</string>
     <!-- Onboarding -->
-    <string name="onboarding_choose_server_short">Velg Server</string>
     <string name="onboarding_storage_permission">Storage permission</string>
     <string name="onboarding_storage_permission_description">This app is a file sharing utility. Therefore, storage permission is required order to use it.</string>
     <string name="onboarding_server_snapdrop_summary">The classic snapdrop. Clean and simple.</string>
