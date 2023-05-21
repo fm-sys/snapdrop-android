@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop dla Android</string>
     <string name="app_name_slogan">Przesyłaj pliki bezproblemowo pomiędzy wszystkimi urządzeniami.</string>
     <string name="err_no_browser">Nie można otworzyć przeglądarki</string>
     <string name="err_no_app">Nie znaleziono aplikacji do otwarcia tego pliku</string>
@@ -34,7 +33,6 @@
     <string name="retry">spróbuj ponownie</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">O programie</string>
-    <string name="title_activity_about">O Snapdrop dla Androida</string>
     <string name="pref_about_title">O tej aplikacji</string>
     <string name="view_downloads">Zobacz pobrane</string>
     <string name="pref_category_settings">Ustawienia</string>
@@ -63,11 +61,7 @@
         <item>Jasny</item>
         <item>Ciemny</item>
     </string-array>
-    <string name="baseurl_title">Podstawowy adres URL</string>
     <string name="baseurl_not_set">Nie ustawiono</string>
-    <string name="baseurl_instance_verified">Instancja Snapdrop została pomyślnie zweryfikowana</string>
-    <string name="baseurl_no_snapdrop_instance">Wygląda na to, że nie jest instancją Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Nie udało się zweryfikować instancji Snapdrop</string>
     <string name="baseurl_unofficial_instances">Sprawdź <a href="">FAQ</a> dla listy nieoficjalnych instancji. Pamiętaj, że niektóre instancje mogą nie działać poprawnie wewnątrz aplikacji.</string>
     <string name="save_location">Zapisz lokalizację</string>
     <!-- File sharing -->
