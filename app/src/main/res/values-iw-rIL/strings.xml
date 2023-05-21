@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">סנאפדרופ</string>
-    <string name="app_name_long">סנאפדרופ לאנדרואיד</string>
     <string name="err_no_browser">אי אפשר לפתוח דפדפן</string>
     <string name="err_no_app">לא נמצא יישום לפתיחת קובץ זה</string>
     <string name="open_url">פתח קישור אינטרנט</string>
@@ -15,7 +14,6 @@
     <string name="reset">אפס</string>
     <string name="copy">העתק</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">אודות סנאפדרופ לאנדרואיד</string>
     <string name="pref_category_settings">הגדרות</string>
     <string name="logs">יומני איתור באגים</string>
     <string name="components_summary">לחץ להצגה</string>
@@ -33,9 +31,6 @@
         <item>בהיר</item>
         <item>כהה</item>
     </string-array>
-    <string name="baseurl_title">קישור בסיס</string>
-    <string name="baseurl_no_snapdrop_instance">זה לא נראה כמו קישור של סנאפדרופ</string>
-    <string name="baseurl_check_instance_failed">נכשל באימות קישור של סנאפדרופ</string>
     <string name="save_location">שמור מיקום</string>
     <!-- File sharing -->
     <string name="intent_file">קובץ מצורף נבחר לשיתוף</string>
