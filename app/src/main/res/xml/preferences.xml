@@ -4,6 +4,12 @@
     <PreferenceCategory
         android:title="@string/pref_category_settings"
         app:iconSpaceReserved="false">
+        <Preference
+            android:defaultValue="@string/baseURL"
+            android:icon="@drawable/pref_baseurl"
+            android:key="@string/pref_baseurl"
+            android:summary="%s"
+            android:title="@string/baseurl_title" />
         <SwitchPreference
             android:defaultValue="true"
             android:icon="@drawable/pref_screen"
@@ -17,12 +23,6 @@
             android:summary="@string/floating_text_selection_summary"
             android:title="@string/floating_text_selection_title"
             app:isPreferenceVisible="false" />
-        <Preference
-            android:icon="@drawable/pref_name"
-            android:key="@string/pref_device_name"
-            android:maxLines="1"
-            android:title="@string/pref_device_name_title"
-            app:singleLineTitle="false" />
         <ListPreference
             android:defaultValue="@string/pref_value_theme_system_default"
             android:entries="@array/darkmode_entries"
@@ -32,11 +32,11 @@
             android:summary="%s"
             android:title="@string/settings_theme_title" />
         <Preference
-            android:defaultValue="@string/baseURL"
-            android:icon="@drawable/pref_baseurl"
-            android:key="@string/pref_baseurl"
-            android:summary="%s"
-            android:title="@string/baseurl_title" />
+            android:icon="@drawable/pref_name"
+            android:key="@string/pref_device_name"
+            android:maxLines="1"
+            android:title="@string/pref_device_name_title"
+            app:singleLineTitle="false" />
         <Preference
             android:icon="@drawable/pref_savelocation"
             android:key="@string/pref_save_location"
