@@ -11,7 +11,6 @@
     <string name="onboarding_button_grant">accorder l’autorisation</string>
     <string name="onboarding_button_finish">terminer</string>
     <string name="onboarding_choose_server">Choisir une adresse de serveur</string>
-    <string name="onboarding_choose_server_short">Sélectionner un serveur</string>
     <string name="onboarding_choose_server_description">Cette application est un client optimisé pour les applications web Snapdrop et PairDrop.\nChoisissez l\'une des instances suivantes ou spécifiez un URL personnalisé à laquelle vous devez vous connecter.\n\nNote : Vous devez choisir le même URL sur tous les appareils.</string>
     <string name="onboarding_storage_permission">Autorisation d\'accès au stockage</string>
     <string name="onboarding_storage_permission_description">Cette application est un utilitaire de partage de fichiers. Par conséquent, une autorisation de stockage est nécessaire pour l\'utiliser.</string>
