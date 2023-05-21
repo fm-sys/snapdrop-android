@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop para Android</string>
     <string name="app_name_slogan">Transfiere archivos sin problemas entre todos tus dispositivos.</string>
     <string name="err_no_browser">No se puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
@@ -34,7 +33,6 @@
     <string name="retry">reintentar</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Acerca de</string>
-    <string name="title_activity_about">Acerca de Snapdrop para Android</string>
     <string name="pref_about_title">Acerca de esta aplicación</string>
     <string name="view_downloads">Ver descargas</string>
     <string name="pref_category_settings">Ajustes</string>
@@ -63,11 +61,7 @@
         <item>Claro</item>
         <item>Oscuro</item>
     </string-array>
-    <string name="baseurl_title">URL base</string>
     <string name="baseurl_not_set">No establecido</string>
-    <string name="baseurl_instance_verified">La instancia de Snapdrop ha sido verificada correctamente</string>
-    <string name="baseurl_no_snapdrop_instance">No parece ser una instancia de Snapdrop</string>
-    <string name="baseurl_check_instance_failed">No se pudo verificar la instancia de Snapdrop</string>
     <string name="baseurl_unofficial_instances">Echa un vistazo a las <a href="">FAQ</a> para ver una lista de instancias no oficiales. Por favor, ten en cuenta que algunas instancias pueden no funcionar correctamente dentro de la aplicación.</string>
     <string name="save_location">Guardar ubicación</string>
     <!-- File sharing -->
