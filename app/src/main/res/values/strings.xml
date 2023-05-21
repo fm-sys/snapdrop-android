@@ -11,7 +11,7 @@
     <string name="onboarding_button_grant">grant permission</string>
     <string name="onboarding_button_finish">finish</string>
     <string name="onboarding_choose_server">Choose a server address</string>
-    <string name="onboarding_choose_server_short">Choose server</string>
+    <string name="onboarding_choose_server_short">choose server</string>
     <string name="onboarding_choose_server_description">This app is an optimized client for the web apps Snapdrop and PairDrop.\nChoose one of the following instances or specify a custom url to connect to.\n\nNote: You have to choose the same URL on all devices.</string>
     <string name="onboarding_storage_permission">Storage permission</string>
     <string name="onboarding_storage_permission_description">This app is a file sharing utility. Therefore, storage permission is required order to use it.</string>

@@ -88,6 +88,7 @@
                 android:visibility="gone">
 
                 <TextView
+                    android:id="@+id/no_connection_textview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -105,6 +106,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:text="@string/retry"
+                    android:textColor="@android:color/darker_gray" />
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/url_change_button"
+                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onboarding_choose_server_short"
                     android:textColor="@android:color/darker_gray" />
             </LinearLayout>
         </RelativeLayout>

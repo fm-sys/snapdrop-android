@@ -51,7 +51,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
@@ -96,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
 
     public ValueCallback<Uri[]> uploadMessage;
 
-    private final StateHandler state = new StateHandler();
+    private final StateHandler state = new StateHandler(); // todo: view model instead?
     public boolean forceRefresh = false;
-    public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false);
+    public ObservableProperty<Boolean> transfer = new ObservableProperty<>(false); // todo: use view model
     public boolean onlyText = false;
 
     public final List<JavaScriptInterface.FileHeader> downloadFilesList = Collections.synchronizedList(new ArrayList<>());
@@ -180,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
             binding.noConnectionScreen.setVisibility(View.GONE);
             refreshWebsite();
         });
+        binding.urlChangeButton.setOnClickListener(v -> OnboardingActivity.launchServerSelection(this));
 
         setSupportActionBar(binding.toolbar);
         setTitle(null);
@@ -253,7 +253,10 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
         }
 
-        binding.pullToRefresh.setOnRefreshListener(() -> refreshWebsite(true));
+        binding.pullToRefresh.setOnRefreshListener(() -> {
+            binding.noConnectionScreen.setVisibility(View.GONE);
+            refreshWebsite(true);
+        });
 
         final AnimatedVectorDrawableCompat loadAnimationDrawable = AnimatedVectorDrawableCompat.create(this, R.drawable.snapdrop_anim);
         binding.loadAnimator.setImageDrawable(loadAnimationDrawable);
@@ -318,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             binding.pullToRefresh.setRefreshing(false);
             state.setCurrentlyLoading(false);
-            showScreenNoConnection();
+            showScreenNoConnection(true);
         }
     }
 
@@ -326,11 +329,12 @@ public class MainActivity extends AppCompatActivity {
         refreshWebsite(false);
     }
 
-    private void showScreenNoConnection() {
+    private void showScreenNoConnection(boolean offline) {
         state.setCurrentlyLoading(false);
         state.setCurrentlyOffline(true);
         binding.noConnectionScreen.setVisibility(View.VISIBLE);
-
+        binding.urlChangeButton.setVisibility(offline ? View.GONE : View.VISIBLE);
+        binding.noConnectionTextview.setText(offline ? R.string.error_network_offline : R.string.error_server_not_reachable);
     }
 
     public static boolean isTablet(final Context ctx) {
@@ -610,22 +614,18 @@ public class MainActivity extends AppCompatActivity {
             state.setCurrentlyLoading(false);
 
             Log.e("WebViewError", "Error on accessing " + request.getUrl() + ", " + error.getDescription() + " (ErrorCode " + error.getErrorCode() + ")");
-            showScreenNoConnection();
 
             if (error.getErrorCode() == ERROR_CONNECT || error.getErrorCode() == ERROR_TIMEOUT) {
-                handleTimeout();
+                Log.e("WebViewError", "Connection timed out!");
+                showScreenNoConnection(false);
+            } else {
+                showScreenNoConnection(true);
             }
         }
 
         private void handleTimeout() {
             Log.e("WebViewError", "Connection timed out!");
-            showScreenNoConnection();
-            new AlertDialog.Builder(MainActivity.this)
-                    .setTitle(R.string.error_not_reachable_title)
-                    .setMessage(R.string.error_server_not_reachable)
-                    .setPositiveButton(android.R.string.ok, null)
-                    .setNegativeButton(R.string.onboarding_choose_server_short, (d, w) -> OnboardingActivity.launchServerSelection(MainActivity.this))
-                    .show();
+            showScreenNoConnection(false);
         }
     }
 
