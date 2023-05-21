@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop cho Android</string>
     <string name="err_no_browser">Không thể mở trình duyệt</string>
     <string name="err_no_app">Không có ứng dụng nào có thể mở tập tin này</string>
     <string name="open_url">Mở liên kết URL</string>
@@ -15,7 +14,6 @@
     <string name="reset">đặt lại</string>
     <string name="copy">sao chép</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">Thông tin về Snapdrop cho Android</string>
     <string name="pref_category_settings">Cài đặt</string>
     <string name="logs">Nhật ký hoạt động</string>
     <string name="components_summary">Chạm để hiển thị</string>
@@ -33,9 +31,6 @@
         <item>Sáng</item>
         <item>Tối</item>
     </string-array>
-    <string name="baseurl_title">URL cơ sở</string>
-    <string name="baseurl_no_snapdrop_instance">Có vẻ như đây không phải là một yêu cầu của Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Không thể xác nhận yêu cầu của Snapdrop</string>
     <string name="save_location">Vị trí lưu</string>
     <!-- File sharing -->
     <string name="intent_file">Đã chọn 1 file để chia sẻ</string>

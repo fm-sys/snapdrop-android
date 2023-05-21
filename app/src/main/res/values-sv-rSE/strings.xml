@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop för Android</string>
     <string name="err_no_browser">Kan inte öppna webbläsare</string>
     <string name="err_no_app">Ingen applikation hittades som kan öppna denna fil</string>
     <string name="open_url">Öppna URL</string>
@@ -18,7 +17,6 @@
     <string name="copy">kopiera</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Om</string>
-    <string name="title_activity_about">Om Snapdrop för Android</string>
     <string name="pref_about_title">Om denna app</string>
     <string name="pref_category_settings">Inställningar</string>
     <string name="logs">Felsökningsloggar</string>
@@ -35,9 +33,6 @@
         <item>Ljus</item>
         <item>Mörk</item>
     </string-array>
-    <string name="baseurl_title">Rotadress</string>
-    <string name="baseurl_no_snapdrop_instance">Verkar inte vara en Snapdrop-instans</string>
-    <string name="baseurl_check_instance_failed">Det gick inte att verifiera Snapdrop-instansen</string>
     <string name="save_location">Spara platsen</string>
     <!-- File sharing -->
     <string name="intent_file">En fil är markerad för delning</string>

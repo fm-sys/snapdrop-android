@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop 安卓版</string>
     <string name="err_no_browser">无法打开浏览器</string>
     <string name="err_no_app">未找到用于打开此文件的应用</string>
     <string name="open_url">打开网址</string>
@@ -15,7 +14,6 @@
     <string name="reset">重置</string>
     <string name="copy">复制</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">关于Snapdrop安卓版</string>
     <string name="pref_category_settings">设置</string>
     <string name="logs">调试日志</string>
     <string name="components_summary">点击查看</string>
@@ -33,9 +31,6 @@
         <item>浅色</item>
         <item>深色</item>
     </string-array>
-    <string name="baseurl_title">主机 URL</string>
-    <string name="baseurl_no_snapdrop_instance">这似乎不是一个Snapdrop实例</string>
-    <string name="baseurl_check_instance_failed">验证Snapdrop实例失败</string>
     <string name="save_location">保存位置</string>
     <!-- File sharing -->
     <string name="intent_file">已选择一个要共享的文件</string>

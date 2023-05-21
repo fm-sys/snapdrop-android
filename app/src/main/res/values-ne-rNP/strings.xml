@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Android को लागि Snapdrop</string>
     <string name="err_no_browser">ब्राउजर खोल्न सकिएन</string>
     <string name="err_no_app">यो फाईल खोल्न सक्ने कुनै एप भेटिएन</string>
     <string name="open_url">URL खोल्नुहोस्</string>
@@ -15,7 +14,6 @@
     <string name="reset">रिसेट</string>
     <string name="copy">कापी</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">Android को लागी Snapdrop को बारेमा</string>
     <string name="pref_category_settings">सेटिङहरू</string>
     <string name="logs">डिबग लगहरू</string>
     <string name="components_summary">प्रदर्शन गर्न ट्याप गर्नुहोस्</string>
@@ -33,9 +31,6 @@
         <item>उज्ज्यालो</item>
         <item>अँध्यारो</item>
     </string-array>
-    <string name="baseurl_title">आधार URL</string>
-    <string name="baseurl_no_snapdrop_instance">Snapdrop उदाहरण जस्तो लाग्दैन</string>
-    <string name="baseurl_check_instance_failed">Snapdrop उदाहरण प्रमाणीकरण गर्न असफल भयो</string>
     <string name="save_location">स्थान बचत गर्नुहोस्</string>
     <!-- File sharing -->
     <string name="intent_file">साझेदारीको लागि फाइल चयन गरिएको छ</string>

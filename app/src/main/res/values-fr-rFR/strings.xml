@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop pour Android</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop pour Android</string>
     <string name="app_name_slogan">Transférez des fichiers en toute simplicité entre tous vos appareils.</string>
     <string name="err_no_browser">Impossible d\'ouvrir le navigateur</string>
     <string name="err_no_app">Aucune application installée pour ouvrir ce fichier</string>
@@ -11,7 +11,6 @@
     <string name="onboarding_button_grant">accorder l’autorisation</string>
     <string name="onboarding_button_finish">terminer</string>
     <string name="onboarding_choose_server">Choisir une adresse de serveur</string>
-    <string name="onboarding_choose_server_short">Sélectionner un serveur</string>
     <string name="onboarding_choose_server_description">Cette application est un client optimisé pour les applications web Snapdrop et PairDrop.\nChoisissez l\'une des instances suivantes ou spécifiez un URL personnalisé à laquelle vous devez vous connecter.\n\nNote : Vous devez choisir le même URL sur tous les appareils.</string>
     <string name="onboarding_storage_permission">Autorisation d\'accès au stockage</string>
     <string name="onboarding_storage_permission_description">Cette application est un utilitaire de partage de fichiers. Par conséquent, une autorisation de stockage est nécessaire pour l\'utiliser.</string>
@@ -31,9 +30,10 @@
     <string name="install">installer</string>
     <string name="reset">réinitialiser</string>
     <string name="copy">copier</string>
+    <string name="retry">Réessayer</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">À propos</string>
-    <string name="title_activity_about">À propos de Snapdrop pour Android</string>
+    <string name="title_activity_about">À propos de Snapdrop &amp; PairDrop pour Android</string>
     <string name="pref_about_title">À propos de cette application</string>
     <string name="view_downloads">Afficher les téléchargements</string>
     <string name="pref_category_settings">Paramètres</string>
@@ -62,11 +62,11 @@
         <item>Clair</item>
         <item>Sombre</item>
     </string-array>
-    <string name="baseurl_title">URL du serveur</string>
+    <string name="baseurl_title">Modifier l\'adresse du serveur</string>
     <string name="baseurl_not_set">Non défini</string>
-    <string name="baseurl_instance_verified">L\'instance de Snapdrop a été vérifiée avec succès</string>
-    <string name="baseurl_no_snapdrop_instance">Ne semble pas être une instance Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Échec de la vérification de l\'instance Snapdrop</string>
+    <string name="baseurl_instance_verified">L\'instance a été vérifiée avec succès</string>
+    <string name="baseurl_no_snapdrop_instance">L\'instance ne semble pas être prise en charge</string>
+    <string name="baseurl_check_instance_failed">Échec de la vérification de l\'instance</string>
     <string name="baseurl_unofficial_instances">Consultez la <a href="">FAQ</a> pour obtenir une liste d\'instances non officielles. Veuillez noter que certaines instances peuvent ne pas fonctionner correctement dans l\'application.</string>
     <string name="save_location">Dossier de sauvegarde</string>
     <!-- File sharing -->
@@ -75,10 +75,13 @@
     <string name="intent_content">Du contenu est sélectionné pour être partagé</string>
     <string name="error_filechooser">Impossible d\'ouvrir le sélecteur de fichiers</string>
     <string name="error_network">Veuillez vérifier que vous êtes connecté à un réseau Wi-Fi</string>
+    <string name="error_network_no_wifi">Veuillez vous connecter à un réseau Wi-Fi ou associer les appareils</string>
+    <string name="error_network_offline">Vous êtes hors ligne</string>
     <string name="ignore_error_network">Laisse-moi quand même entrer</string>
     <string name="error_not_reachable_title">Oups, désolé !</string>
     <string name="error_server_not_reachable">Le serveur est inaccessible. \n\nSi votre connexion internet fonctionne et que cela se produit malgré tout, essayer de sélectionner une autre adresse de serveur.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Ouvrez l\'application ou le site web sur d\'autres appareils pour envoyer des fichiers</string>
     <string name="website_instruction">Touchez pour envoyer des fichiers ou appuyez longuement pour envoyer un message</string>
     <string name="website_file_received">Fichier reçu</string>
     <string name="website_file_ask_before_download">Toujours demander avant d\'enregistrer un fichier</string>

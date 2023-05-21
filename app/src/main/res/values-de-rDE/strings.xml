@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop für Android</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop für Android</string>
     <string name="app_name_slogan">Übertrage Dateien nahtlos zwischen all deinen Geräten.</string>
     <string name="err_no_browser">Browser kann nicht geöffnet werden</string>
     <string name="err_no_app">Keine App zum Öffnen dieser Datei gefunden</string>
@@ -31,9 +31,10 @@
     <string name="install">installieren</string>
     <string name="reset">zurücksetzen</string>
     <string name="copy">kopieren</string>
+    <string name="retry">Erneut versuchen</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Über</string>
-    <string name="title_activity_about">Über Snapdrop für Android</string>
+    <string name="title_activity_about">Über Snapdrop &amp; PairDrop für Android</string>
     <string name="pref_about_title">Über diese App</string>
     <string name="view_downloads">Downloads anzeigen</string>
     <string name="pref_category_settings">Einstellungen</string>
@@ -62,11 +63,11 @@
         <item>Hell</item>
         <item>Dunkel</item>
     </string-array>
-    <string name="baseurl_title">Basis-URL</string>
+    <string name="baseurl_title">Serveradresse ändern</string>
     <string name="baseurl_not_set">Nicht festgelegt</string>
-    <string name="baseurl_instance_verified">Snapdrop-Instanz wurde erfolgreich verifiziert</string>
-    <string name="baseurl_no_snapdrop_instance">Dies scheint keine Snapdrop-Instanz zu sein</string>
-    <string name="baseurl_check_instance_failed">Fehler beim Überprüfen der Snapdrop-Instanz</string>
+    <string name="baseurl_instance_verified">Instanz wurde erfolgreich verifiziert</string>
+    <string name="baseurl_no_snapdrop_instance">Instanz scheint nicht unterstützt zu werden</string>
+    <string name="baseurl_check_instance_failed">Fehler beim Überprüfen der Instanz</string>
     <string name="baseurl_unofficial_instances">Schauen Sie sich die <a href="">FAQ</a> für eine Liste inoffizieller Instanzen an. Bitte beachten Sie, dass einige Instanzen möglicherweise nicht korrekt innerhalb der App funktionieren.</string>
     <string name="save_location">Speicherort</string>
     <!-- File sharing -->
@@ -75,6 +76,8 @@
     <string name="intent_content">Inhalt ausgewählt</string>
     <string name="error_filechooser">Dateiauswahl kann nicht gestartet werden</string>
     <string name="error_network">Bitte stelle sicher, dass du mit einem WiFi-Netzwerk verbunden bist</string>
+    <string name="error_network_no_wifi">Bitte verbinden Sie sich mit einem WiFi-Netzwerk oder koppeln Sie die Geräte</string>
+    <string name="error_network_offline">Keine Internetverbindung</string>
     <string name="ignore_error_network">Trotzdem laden</string>
     <string name="error_not_reachable_title">Tut mir leid!</string>
     <string name="error_server_not_reachable">Der Server kann nicht erreicht werden. \n\nWenn Ihre Internetverbindung funktioniert und dies trotzdem geschieht, versuchen Sie bitte, eine andere Server-Adresse auszuwählen.</string>
