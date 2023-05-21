@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Android için Snapdrop Hakkında</string>
     <string name="app_name_slogan">Dosyaları tüm cihazlarınız arasında sorunsuz bir şekilde aktarın.</string>
     <string name="err_no_browser">Tarayıcı açılamıyor</string>
     <string name="err_no_app">Bu dosyayı açmak için yüklü bir uygulama yok</string>
@@ -30,7 +29,6 @@
     <string name="copy">kopyala</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Hakkında</string>
-    <string name="title_activity_about">Android için Snapdrop Hakkında</string>
     <string name="pref_about_title">Uygulama hakkında</string>
     <string name="pref_category_settings">Ayarlar</string>
     <string name="logs">Hata Ayıklama Günlükleri</string>
@@ -52,11 +50,7 @@
         <item>Aydınlık</item>
         <item>Karanlık</item>
     </string-array>
-    <string name="baseurl_title">Temel URL</string>
     <string name="baseurl_not_set">Belirlenmemiş</string>
-    <string name="baseurl_instance_verified">Snapdrop istemcisi başarıyla onaylandı</string>
-    <string name="baseurl_no_snapdrop_instance">Snapdrop isteği bulunamadı</string>
-    <string name="baseurl_check_instance_failed">Snapdrop istek doğrulaması başarısız oldu</string>
     <string name="save_location">Kayıt konumu</string>
     <!-- File sharing -->
     <string name="intent_file">Bir dosya paylaşım için seçildi</string>
