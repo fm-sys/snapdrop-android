@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop für Android</string>
     <string name="app_name_slogan">Übertrage Dateien nahtlos zwischen all deinen Geräten.</string>
     <string name="err_no_browser">Browser kann nicht geöffnet werden</string>
     <string name="err_no_app">Keine App zum Öffnen dieser Datei gefunden</string>
@@ -33,7 +32,6 @@
     <string name="copy">kopieren</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Über</string>
-    <string name="title_activity_about">Über Snapdrop für Android</string>
     <string name="pref_about_title">Über diese App</string>
     <string name="view_downloads">Downloads anzeigen</string>
     <string name="pref_category_settings">Einstellungen</string>
@@ -62,11 +60,7 @@
         <item>Hell</item>
         <item>Dunkel</item>
     </string-array>
-    <string name="baseurl_title">Basis-URL</string>
     <string name="baseurl_not_set">Nicht festgelegt</string>
-    <string name="baseurl_instance_verified">Snapdrop-Instanz wurde erfolgreich verifiziert</string>
-    <string name="baseurl_no_snapdrop_instance">Dies scheint keine Snapdrop-Instanz zu sein</string>
-    <string name="baseurl_check_instance_failed">Fehler beim Überprüfen der Snapdrop-Instanz</string>
     <string name="baseurl_unofficial_instances">Schauen Sie sich die <a href="">FAQ</a> für eine Liste inoffizieller Instanzen an. Bitte beachten Sie, dass einige Instanzen möglicherweise nicht korrekt innerhalb der App funktionieren.</string>
     <string name="save_location">Speicherort</string>
     <!-- File sharing -->
