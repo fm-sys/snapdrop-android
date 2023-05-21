@@ -10,7 +10,6 @@
     <string name="onboarding_button_grant">منح الإذن</string>
     <string name="onboarding_button_finish">اكتمل</string>
     <string name="onboarding_choose_server">اختر عنوان الخادم</string>
-    <string name="onboarding_choose_server_short">اختر الخادم</string>
     <string name="onboarding_choose_server_description">هذا التطبيق هو عميل مُحسَّن لتطبيقات الويب Snaplop و PairDrop.\nاختر واحدة من الأمثلة التالية أو حدد عنوان URL مخصص للاتصال به.\n\nملاحظة: يجب عليك اختيار نفس الرابط على جميع الأجهزة.</string>
     <string name="onboarding_storage_permission">إذن التخزين</string>
     <string name="onboarding_storage_permission_description">هذا التطبيق هو أداة مشاركة للملفات. لذلك، إذن التخزين مطلوب لاستخدامه.</string>
