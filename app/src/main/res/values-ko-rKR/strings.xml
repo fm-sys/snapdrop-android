@@ -10,7 +10,6 @@
     <string name="onboarding_button_grant">권한 부여</string>
     <string name="onboarding_button_finish">완료</string>
     <string name="onboarding_choose_server">서버 주소를 선택하세요</string>
-    <string name="onboarding_choose_server_short">서버 선택</string>
     <string name="onboarding_choose_server_description">이 애플리케이션은 Snapdrop과 PairDrop 웹 앱에 대응되는 최적화된 클라이언트 입니다.\n다음 중 하나의 인스턴스를 고르거나, 연결할 커스텀 URL을 입력하세요.\n\n메모: 사용할 모든 기기가 같은 URL에 연결되어야 합니다.</string>
     <string name="onboarding_storage_permission">저장소 권한</string>
     <string name="onboarding_storage_permission_description">이 앱은 파일 공유 유틸리티입니다. 파일에 접근하기 위해 저장소 접근 권한이 필요합니다.</string>
@@ -49,8 +48,6 @@
     <string name="floating_text_selection_title">선택된 텍스트 보내기</string>
     <string name="floating_text_selection_summary">다른 애플리케이션에서 텍스트를 선택할 때, \"Snapdrop으로 보내기\" 옵션이 표시됩니다.</string>
     <string name="floating_text_selection_activity_label">Snapdrop으로 보내기</string>
-    <string name="permission_not_granted">카메라 권한을 허용해주세요.</string>
-    <string name="permission_not_granted_fallback">카메라 권한을 허용해주세요.</string>
     <string name="open_settings">설정 열기</string>
     <string name="settings_theme_title">테마</string>
     <string-array name="darkmode_entries">
