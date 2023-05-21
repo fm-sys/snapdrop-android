@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">안드로이드용 Snapdrop</string>
     <string name="app_name_slogan">당신의 모든 기기간의 파일 전송을 매끄럽게 하세요</string>
     <string name="err_no_browser">브라우저를 실행할 수 없어요.</string>
     <string name="err_no_app">이 파일을 열 수 있는 앱이 없어요.</string>
@@ -34,7 +33,6 @@
     <string name="retry">다시 시도</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">정보</string>
-    <string name="title_activity_about">안드로이드용 Snapdrop 정보</string>
     <string name="pref_about_title">앱 소개</string>
     <string name="view_downloads">다운로드 보기</string>
     <string name="pref_category_settings">설정</string>
@@ -60,11 +58,7 @@
         <item>밝음</item>
         <item>어두움</item>
     </string-array>
-    <string name="baseurl_title">서버 URL</string>
     <string name="baseurl_not_set">설정되지 않음</string>
-    <string name="baseurl_instance_verified">Snapdrop 인스턴스가 성공적으로 확인되었습니다.</string>
-    <string name="baseurl_no_snapdrop_instance">Snapdrop 인스턴스가 아닌 듯 해요</string>
-    <string name="baseurl_check_instance_failed">Snapdrop 인스턴스 검증을 실패하였습니다</string>
     <string name="baseurl_unofficial_instances"><a href="">FAQ</a>를 확인하여 비공식 인스턴스 목록을 확인하세요. 일부 인스턴스는 앱 내에서 정상적으로 작동하지 않을 수 있습니다.</string>
     <string name="save_location">저장할 경로</string>
     <!-- File sharing -->
