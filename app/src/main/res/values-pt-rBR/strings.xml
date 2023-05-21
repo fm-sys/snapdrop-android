@@ -10,7 +10,6 @@
     <string name="onboarding_button_grant">fornecer permissão</string>
     <string name="onboarding_button_finish">terminar</string>
     <string name="onboarding_choose_server">Escolha o endereço do servidor</string>
-    <string name="onboarding_choose_server_short">Escolher servidor</string>
     <string name="onboarding_choose_server_description">Este app é um cliente otimizado para o Snapdrop e o PairDrop.\nEscolha uma das seguintes instâncias ou especifique uma url personalizada para se conectar.\n\nNota: Você tem que escolher a mesma URL em todos os dispositivos.</string>
     <string name="onboarding_storage_permission">Permissão de armazenamento</string>
     <string name="onboarding_storage_permission_description">Este aplicativo é usado para compartilhamento de arquivos. Portanto, a permissão de armazenamento é necessária para usá-lo.</string>
