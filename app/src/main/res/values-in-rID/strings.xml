@@ -14,6 +14,14 @@
     <string name="onboarding_choose_server_short">pilih server</string>
     <string name="onboarding_choose_server_description">Aplikasi ini adalah aplikasi klien yang dioptimalkan untuk aplikasi web Snapdrop dan PairDrop.\nPilih salah satu dari contoh berikut atau tentukan url khusus untuk disambungkan.\n\nCatatan: Anda harus memilih URL yang sama pada semua perangkat.</string>
     <string name="onboarding_storage_permission">Izin penyimpanan</string>
+    <string name="onboarding_storage_permission_description">Aplikasi ini adalah aplikasi berbagi file. Oleh karena itu, izin penyimpanan diperlukan untuk bisa digunakan.</string>
+    <string name="onboarding_server_pairdrop_summary">(disarankan)\nFitur pairing, transfer internet dan fokus pada kestabilan.</string>
+    <string name="onboarding_server_snapdrop_summary">Snapdrop klasik. Murni dan sederhana.</string>
+    <string name="onboarding_server_custom">URL khusus</string>
+    <string name="onboarding_server_custom_summary">Experts juga dapat meng-host server mereka sendiri.</string>
+    <string name="onboarding_howto">Cara menggunakan</string>
+    <string name="onboarding_howto_summary">1. Buka aplikasi ini atau %s pada perangkat lain dalam jaringan WiFi lokal Anda.\n\n2. Ketuk perangkat yang ingin Anda bagikan file.\n\n3. Selesai! File akan dikirim…</string>
+    <string name="onboarding_howto_troubleshoot">Panduan: Perangkat harus terhubung pada jaringan WiFi yang sama. Ini mungkin tidak akan berfungsi jika VPN diaktifkan.</string>
     <!-- Download -->
     <string name="download_save_pending">Menyimpan file. Mohon bersabar…</string>
     <string name="download_successful">Berhasil mengunduh</string>
@@ -23,12 +31,17 @@
     <string name="install">pasang</string>
     <string name="reset">atur ulang</string>
     <string name="copy">salin</string>
+    <string name="retry">coba lagi</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Tentang</string>
+    <string name="title_activity_about">Tentang Snapdrop &amp; PairDrop untuk Android</string>
     <string name="pref_about_title">Tentang aplikasi ini</string>
+    <string name="view_downloads">Lihat unduhan</string>
     <string name="pref_category_settings">Pengaturan</string>
     <string name="logs">Catatan Debug</string>
     <string name="components_summary">Ketuk untuk menampilkan</string>
+    <string name="support_us">Dukung kami</string>
+    <string name="support_us_summary">Lihat, bagaimana Anda dapat mendukung program ini</string>
     <string name="read_more">baca selengkapnya</string>
     <string name="version">Versi</string>
     <string name="pref_device_name_title">Nama perangkat</string>
@@ -38,12 +51,23 @@
     <string name="floating_text_selection_title">Pilihan teks mengambang</string>
     <string name="floating_text_selection_summary">Saat memilih teks di aplikasi lain, opsi \"Kirim dengan Snapdrop\" akan ditampilkan</string>
     <string name="floating_text_selection_activity_label">Kirim dengan Snapdrop</string>
+    <string name="permission_not_granted">mohon berikan izin yang diperlukan</string>
+    <string name="permission_not_granted_fallback">mohon berikan izin yang diperlukan secara manual</string>
+    <string name="open_settings">buka setelan</string>
+    <string name="retain_location_metadata_title">Pertahankan metadata lokasi</string>
+    <string name="retain_location_metadata_summary_off">Beberapa file media mungkin berisi data lokasi yang dihilangkan secara default. Berikan izin agar dapat menyertakan metadata sepenuhnya</string>
+    <string name="retain_location_metadata_summary_on">Saat ini aplikasi memiliki akses file penuh</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Bawaan Sistem</item>
         <item>Terang</item>
         <item>Gelap</item>
     </string-array>
+    <string name="baseurl_title">Ubah alamat server</string>
+    <string name="baseurl_not_set">Tidak diatur</string>
+    <string name="baseurl_instance_verified">Instance berhasil diverifikasi</string>
+    <string name="baseurl_no_snapdrop_instance">Instance sepertinya tidak didukung</string>
+    <string name="baseurl_check_instance_failed">Gagal memverifikasi instance</string>
     <string name="baseurl_unofficial_instances">Lihat <a href="">FAQ</a> untuk mengetahui daftar kejadian tidak resmi. Harap perhatikan bahwa beberapa bagian mungkin tidak berfungsi dengan benar di dalam aplikasi.</string>
     <string name="save_location">Lokasi penyimpanan</string>
     <!-- File sharing -->
@@ -52,9 +76,13 @@
     <string name="intent_content">Konten dipilih untuk dibagikan</string>
     <string name="error_filechooser">Tidak dapat membuka pemilih file</string>
     <string name="error_network">Harap verifikasi bahwa Anda terhubung dengan jaringan WiFi</string>
+    <string name="error_network_no_wifi">Sambungkan ke jaringan WiFi, atau pasangkan perangkat</string>
+    <string name="error_network_offline">Anda sedang offline</string>
     <string name="ignore_error_network">Biarkan saya masuk</string>
     <string name="error_not_reachable_title">Ups, maaf!</string>
+    <string name="error_server_not_reachable">Server tidak dapat dijangkau. \n\nJika koneksi internet Anda berfungsi dan hal ini tetap terjadi, cobalah untuk memilih alamat server yang berbeda.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Buka aplikasi atau situs web di perangkat lain untuk mengirim file</string>
     <string name="website_instruction">Ketuk untuk mengirim file atau ketuk lama untuk mengirim pesan</string>
     <string name="website_file_received">File Diterima</string>
     <string name="website_file_ask_before_download">Selalu tanyakan sebelum menyimpan file</string>
