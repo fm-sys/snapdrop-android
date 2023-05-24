@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop untuk Android</string>
+    <string name="app_name_slogan">Mentransfer file dengan mudah antarsemua perangkat Anda.</string>
     <string name="err_no_browser">Tidak bisa membuka browser</string>
     <string name="err_no_app">Tidak ada aplikasi yang diinstal untuk membuka file ini</string>
     <string name="open_url">Buka URL</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">lanjut</string>
+    <string name="onboarding_button_grant">berikan izin</string>
+    <string name="onboarding_button_finish">selesai</string>
+    <string name="onboarding_choose_server">Pilih alamat server</string>
+    <string name="onboarding_choose_server_short">pilih server</string>
+    <string name="onboarding_choose_server_description">Aplikasi ini adalah aplikasi klien yang dioptimalkan untuk aplikasi web Snapdrop dan PairDrop.\nPilih salah satu dari contoh berikut atau tentukan url khusus untuk disambungkan.\n\nCatatan: Anda harus memilih URL yang sama pada semua perangkat.</string>
+    <string name="onboarding_storage_permission">Izin penyimpanan</string>
     <!-- Download -->
     <string name="download_save_pending">Menyimpan file. Mohon bersabar…</string>
     <string name="download_successful">Berhasil mengunduh</string>
