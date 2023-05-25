@@ -123,7 +123,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                             if (specialButton == SpecialButton.SPECIAL1) {
                                 ShareUtils.openUrl(SettingsFragment.this, "https://github.com/fm-sys/snapdrop-android");
                             } else if (specialButton == SpecialButton.SPECIAL2) {
-                                ShareUtils.openUrl(SettingsFragment.this, "https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20for%20Android%22%20is%20an%20Android%20client%20for%20%23snapdrop%0A%0Ahttps://snapdrop.net");
+                                ShareUtils.openUrl(SettingsFragment.this, "https://twitter.com/intent/tweet?text=@SnapdropAndroid%20-%20%22Snapdrop%20%26%20PairDrop%20for%20Android%22%20is%20an%20Android%20client%20for%20https://snapdrop.net%20and%20https://pairdrop.net%0A%0A%23snapdrop");
                             } else if (specialButton == SpecialButton.SPECIAL3) {
                                 ShareUtils.openUrl(SettingsFragment.this, "https://crowdin.com/project/snapdrop-android");
                             }
