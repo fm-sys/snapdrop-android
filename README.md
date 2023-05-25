@@ -7,10 +7,10 @@
 [![GitHub license](https://img.shields.io/github/license/fm-sys/snapdrop-android)](https://github.com/fm-sys/snapdrop-android/blob/master/LICENSE)
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40SnapdropAndroid)](https://twitter.com/SnapdropAndroid)
 
-# Snapdrop for Android
+# Snapdrop & PairDrop for Android
 <img align="right" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
 
-**Snapdrop for Android** is an android client for the free and open source local file sharing solution https://snapdrop.net/. 
+**Snapdrop & PairDrop for Android** is an android client for the free and open source local file sharing solution https://snapdrop.net/. 
 
 >Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
 >
