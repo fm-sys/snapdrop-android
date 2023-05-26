@@ -44,7 +44,9 @@ public class OnboardingFragment2 extends Fragment {
                 return;
             }
 
-            if (url.startsWith("http")) {
+            if (url.startsWith("!!")) { // hidden feature to force a different url
+                tempUrl.setValue(url.substring("!!".length()));
+            } else if (url.startsWith("http")) {
                 NetworkUtils.checkInstance(this, url, result -> {
                     if (result) {
                         tempUrl.setValue(url);
