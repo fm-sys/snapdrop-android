@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop pre Android</string>
+    <string name="app_name_slogan">Bezproblémovo prenášate súbory medzi všetkými vašimi zariadeniami.</string>
     <string name="err_no_browser">Nemožno otvoriť prehliadač</string>
     <string name="err_no_app">Nebola nájdená žiadna nainštalovaná aplikácia na otvorenie tohto súboru</string>
     <string name="open_url">Otvoriť URL</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">pokračovať</string>
+    <string name="onboarding_button_grant">udeliť povolenie</string>
+    <string name="onboarding_button_finish">dokončiť</string>
+    <string name="onboarding_choose_server">Vyberte adresu serveru</string>
+    <string name="onboarding_choose_server_short">vybrať server</string>
     <!-- Download -->
     <string name="download_save_pending">Ukladanie súboru. Trochu strpenia, prosím…</string>
     <string name="download_successful">Sťahovanie bolo úspešné</string>
