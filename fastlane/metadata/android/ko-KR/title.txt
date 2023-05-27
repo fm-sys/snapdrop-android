@@ -1,1 +1,1 @@
-안드로이드용 Snapdrop
+Snapdrop & PairDrop for Android
