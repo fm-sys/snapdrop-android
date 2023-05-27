@@ -175,6 +175,16 @@ window.addEventListener('file-received', e => {
     SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);
 }, false);
 
+window.addEventListener('files-received', e => {
+    // vibrates after receiving all files (supported only on PairDrop)
+    SnapdropAndroid.vibrate();
+}, false);
+
+window.addEventListener('files-sent', e => {
+    // vibrates after sending all files (supported only on PairDrop)
+    SnapdropAndroid.vibrate();
+}, false);
+
 //hide unnecessary web toolbar buttons
 try {
     // snapdrop.net - theme
