@@ -6,18 +6,6 @@ body:
     attributes:
       value: |
         Welcome! Thanks for taking the time to submit a bug report.
-        
-  - type: checkboxes
-    id: checklist
-    attributes:
-      label: Checklist
-      options:
-        - label: "I have searched the existing issues for my problem. This is a new ticket, NOT a duplicate or related to another open issue."
-          required: true
-        - label: "I have updated \"Snapdrop for Android\" to the latest version. The bug is reproducible on this latest version."
-          required: true
-        - label: "I have checked, that this is NOT a general Snapdrop bug. It is only related to the Android app, and not reproducible with the website as well."
-          required: true
 
   - type: input
     id: version

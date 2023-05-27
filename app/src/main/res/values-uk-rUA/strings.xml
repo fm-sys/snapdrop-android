@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop для Android</string>
     <string name="err_no_browser">Не вдається відкрити браузер</string>
     <string name="err_no_app">Немає встановлених програм, щоб відкрити цей файл</string>
     <string name="open_url">Відкрити URL-адресу</string>
@@ -17,7 +16,6 @@
     <string name="copy">копіювати</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Про</string>
-    <string name="title_activity_about">Про Snapdrop для Android</string>
     <string name="pref_about_title">Про цю програму</string>
     <string name="pref_category_settings">Налаштування</string>
     <string name="logs">Журнал налагодження</string>
@@ -37,10 +35,6 @@
         <item>Світла</item>
         <item>Темна</item>
     </string-array>
-    <string name="baseurl_title">Базова URL-адреса</string>
-    <string name="baseurl_instance_verified">Екземпляр Snapdrop успішно перевірено</string>
-    <string name="baseurl_no_snapdrop_instance">Здається, це не екземпляр Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Не вдалося перевірити екземпляр Snapdrop</string>
     <string name="baseurl_unofficial_instances">Перегляньте <a href="">FAQ</a>, щоб отримати список неофіційних екземплярів. Зверніть увагу, що деякі екземпляри можуть не працювати належним чином у програмі.</string>
     <string name="save_location">Зберегти розташування</string>
     <!-- File sharing -->
@@ -52,7 +46,6 @@
     <string name="ignore_error_network">Все одно спробувати</string>
     <string name="error_not_reachable_title">Упс, вибачте!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Відкрийте Snapdrop на інших пристроях для передачі файлів</string>
     <string name="website_instruction">Натисніть, щоб надіслати файли або утримуйте, щоб надіслати повідомлення</string>
     <string name="website_file_received">Файл отримано</string>
     <string name="website_file_ask_before_download">Завжди запитувати перед збереженням файлу</string>

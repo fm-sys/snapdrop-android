@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Android için Snapdrop Hakkında</string>
     <string name="app_name_slogan">Dosyaları tüm cihazlarınız arasında sorunsuz bir şekilde aktarın.</string>
     <string name="err_no_browser">Tarayıcı açılamıyor</string>
     <string name="err_no_app">Bu dosyayı açmak için yüklü bir uygulama yok</string>
@@ -11,7 +10,6 @@
     <string name="onboarding_button_grant">izin ver</string>
     <string name="onboarding_button_finish">bitir</string>
     <string name="onboarding_choose_server">Server adresi seçin</string>
-    <string name="onboarding_choose_server_short">Server seç</string>
     <string name="onboarding_storage_permission">Depolama izni</string>
     <string name="onboarding_storage_permission_description">Bu uygulama bir dosya aktarım aracıdır. Uygulamayı kullanabilmek için depolama izni gerekir.</string>
     <string name="onboarding_server_pairdrop_summary">(önerilir)\nEşleştirme özelliği, internet aktarımı ve stabilite üzerine odaklı.</string>
@@ -30,7 +28,6 @@
     <string name="copy">kopyala</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Hakkında</string>
-    <string name="title_activity_about">Android için Snapdrop Hakkında</string>
     <string name="pref_about_title">Uygulama hakkında</string>
     <string name="pref_category_settings">Ayarlar</string>
     <string name="logs">Hata Ayıklama Günlükleri</string>
@@ -52,11 +49,7 @@
         <item>Aydınlık</item>
         <item>Karanlık</item>
     </string-array>
-    <string name="baseurl_title">Temel URL</string>
     <string name="baseurl_not_set">Belirlenmemiş</string>
-    <string name="baseurl_instance_verified">Snapdrop istemcisi başarıyla onaylandı</string>
-    <string name="baseurl_no_snapdrop_instance">Snapdrop isteği bulunamadı</string>
-    <string name="baseurl_check_instance_failed">Snapdrop istek doğrulaması başarısız oldu</string>
     <string name="save_location">Kayıt konumu</string>
     <!-- File sharing -->
     <string name="intent_file">Bir dosya paylaşım için seçildi</string>
@@ -67,7 +60,6 @@
     <string name="ignore_error_network">Yine de devam et</string>
     <string name="error_not_reachable_title">Ups, üzgünüm!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Dosya göndermek için Snapdrop\'u diğer cihazlarda açınız</string>
     <string name="website_instruction">Dosya göndermek için dokun veya mesaj göndermek için basılı tut</string>
     <string name="website_file_received">Dosya alındı</string>
     <string name="website_file_ask_before_download">Bir dosya kaydetmeden önce her zaman sor</string>

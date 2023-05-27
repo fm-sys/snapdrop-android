@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop para Android</string>
     <string name="app_name_slogan">Transfiere archivos sin problemas entre todos tus dispositivos.</string>
     <string name="err_no_browser">No se puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
@@ -11,7 +10,6 @@
     <string name="onboarding_button_grant">otorgar permiso</string>
     <string name="onboarding_button_finish">terminar</string>
     <string name="onboarding_choose_server">Elige un servidor</string>
-    <string name="onboarding_choose_server_short">Elegir servidor</string>
     <string name="onboarding_choose_server_description">Esta aplicación es un cliente optimizado para las aplicaciones web Snapdrop y PairDrop.\nElige una de las siguientes instancias o especifica una url personalizada a la que conectarse.\n\nNota: Tienes que elegir la misma URL en todos los dispositivos.</string>
     <string name="onboarding_storage_permission">Permiso de almacenamiento</string>
     <string name="onboarding_storage_permission_description">Esta aplicación es una utilidad para compartir archivos. Por lo tanto, el permiso de almacenamiento es necesario para usarla.</string>
@@ -31,10 +29,11 @@
     <string name="install">instalar</string>
     <string name="reset">reiniciar</string>
     <string name="copy">copiar</string>
+    <string name="retry">reintentar</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Acerca de</string>
-    <string name="title_activity_about">Acerca de Snapdrop para Android</string>
     <string name="pref_about_title">Acerca de esta aplicación</string>
+    <string name="view_downloads">Ver descargas</string>
     <string name="pref_category_settings">Ajustes</string>
     <string name="logs">Registros de depuración</string>
     <string name="components_summary">Pulsa para mostrar</string>
@@ -49,17 +48,19 @@
     <string name="floating_text_selection_title">Selección de texto flotante</string>
     <string name="floating_text_selection_summary">Al seleccionar texto en otras aplicaciones, se mostrará una opción \"Enviar con Snapdrop\"</string>
     <string name="floating_text_selection_activity_label">Enviar con Snapdrop</string>
+    <string name="permission_not_granted">por favor conceda el permiso necesario</string>
+    <string name="permission_not_granted_fallback">por favor conceda el permiso necesario manualmente</string>
+    <string name="open_settings">abrir ajustes</string>
+    <string name="retain_location_metadata_title">Conservar metadatos de ubicación</string>
+    <string name="retain_location_metadata_summary_off">Algunos archivos multimedia pueden contener datos de ubicación que son eliminados por defecto. Conceda el permiso para incluir estos metadatos completos</string>
+    <string name="retain_location_metadata_summary_on">La aplicación tiene acceso completo al sistema de archivos actualmente</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Predeterminado del Sistema</item>
         <item>Claro</item>
         <item>Oscuro</item>
     </string-array>
-    <string name="baseurl_title">URL base</string>
     <string name="baseurl_not_set">No establecido</string>
-    <string name="baseurl_instance_verified">La instancia de Snapdrop ha sido verificada correctamente</string>
-    <string name="baseurl_no_snapdrop_instance">No parece ser una instancia de Snapdrop</string>
-    <string name="baseurl_check_instance_failed">No se pudo verificar la instancia de Snapdrop</string>
     <string name="baseurl_unofficial_instances">Echa un vistazo a las <a href="">FAQ</a> para ver una lista de instancias no oficiales. Por favor, ten en cuenta que algunas instancias pueden no funcionar correctamente dentro de la aplicación.</string>
     <string name="save_location">Guardar ubicación</string>
     <!-- File sharing -->
@@ -68,11 +69,13 @@
     <string name="intent_content">El contenido está seleccionado para compartir</string>
     <string name="error_filechooser">No se pudo abrir el selector de archivos</string>
     <string name="error_network">Por favor, compruebe que está conectado a una red WiFi</string>
+    <string name="error_network_no_wifi">Por favor, conéctese a una red WiFi o empareje los dispositivos</string>
+    <string name="error_network_offline">Estás sin conexión</string>
     <string name="ignore_error_network">Déjame intentarlo de todos modos</string>
     <string name="error_not_reachable_title">¡Ups, lo sentimos!</string>
     <string name="error_server_not_reachable">El servidor no puede ser alcanzado. \n\nSi tu conexión a internet funciona y esto sucede de todos modos, por favor intenta seleccionar un servidor diferente.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Abrir Snapdrop en otros dispositivos para enviar archivos</string>
+    <string name="website_no_peers_info">Abrir aplicación o sitio web en otros dispositivos para enviar archivos</string>
     <string name="website_instruction">Pulsa para enviar archivos o pulsación larga para enviar un mensaje</string>
     <string name="website_file_received">Archivo recibido</string>
     <string name="website_file_ask_before_download">Preguntar siempre antes de guardar un archivo</string>

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop for Android</string>
     <string name="err_no_browser">Kan ikke åpne nettleseren</string>
     <string name="err_no_app">Ingen apper installert for å åpne denne filen</string>
     <string name="open_url">Åpne URL</string>
     <!-- Onboarding -->
-    <string name="onboarding_choose_server_short">Velg Server</string>
     <string name="onboarding_storage_permission">Storage permission</string>
     <string name="onboarding_storage_permission_description">This app is a file sharing utility. Therefore, storage permission is required order to use it.</string>
     <string name="onboarding_server_snapdrop_summary">The classic snapdrop. Clean and simple.</string>
@@ -20,7 +18,6 @@
     <string name="reset">nullstill</string>
     <string name="copy">kopier</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">Om Snapdrop for Android</string>
     <string name="pref_category_settings">Innstillinger</string>
     <string name="logs">Feilsøk-logger</string>
     <string name="components_summary">Trykk for å vise</string>
@@ -35,9 +32,6 @@
         <item>Lys</item>
         <item>Mørk</item>
     </string-array>
-    <string name="baseurl_title">Base-URL</string>
-    <string name="baseurl_no_snapdrop_instance">Ser ikke ut til å være en Snapdrop instans</string>
-    <string name="baseurl_check_instance_failed">Klarte ikke å verifisere Snapdrop instans</string>
     <string name="save_location">Lagringssted</string>
     <!-- File sharing -->
     <string name="intent_file">En fil er valgt for deling</string>
@@ -48,7 +42,6 @@
     <string name="ignore_error_network">Slipp meg inn likevel</string>
     <string name="error_not_reachable_title">Oops, beklager!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Åpne Snapdrop på andre enheter for å sende filer</string>
     <string name="website_instruction">Trykk for å sende filer eller trykk lenge for å sende en melding</string>
     <string name="website_file_received">Fil mottatt</string>
     <string name="website_file_ask_before_download">Spør alltid før lagring av filer</string>

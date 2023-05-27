@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop за Андроид</string>
     <string name="err_no_browser">Не мога да отворя браузъра</string>
     <string name="err_no_app">Няма инсталирано приложение, което да отвори този файл</string>
     <string name="open_url">Отвори линк</string>
@@ -17,7 +16,6 @@
     <string name="copy">копирай</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Относно</string>
-    <string name="title_activity_about">Повече за Snapdrop за Андроид</string>
     <string name="pref_about_title">Относно приложението</string>
     <string name="pref_category_settings">Настройки</string>
     <string name="logs">Логове</string>
@@ -37,10 +35,6 @@
         <item>Светла</item>
         <item>Тъмна</item>
     </string-array>
-    <string name="baseurl_title">Основен линк</string>
-    <string name="baseurl_instance_verified">Snapdrop сесията бе успешно заверена</string>
-    <string name="baseurl_no_snapdrop_instance">Това не изглежда да е част от Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Не успях да потвърдя, че това е част от Snapdrop</string>
     <string name="save_location">Запази местоположението</string>
     <!-- File sharing -->
     <string name="intent_file">Избран е файл за споделяне</string>
@@ -51,7 +45,6 @@
     <string name="ignore_error_network">Пусни ме въпреки това</string>
     <string name="error_not_reachable_title">Опа, съжалявам!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Отвори Snapdrop и на друго устройство, за да изпратиш файлове помежду им</string>
     <string name="website_instruction">Натисни, за да изпратиш файлове или задръж, за да изпратиш съобщение</string>
     <string name="website_file_received">Получен файл</string>
     <string name="website_file_ask_before_download">Винаги питай преди да запазиш файл</string>

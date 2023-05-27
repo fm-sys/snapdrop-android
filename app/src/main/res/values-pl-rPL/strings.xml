@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop dla Android</string>
     <string name="app_name_slogan">Przesyłaj pliki bezproblemowo pomiędzy wszystkimi urządzeniami.</string>
     <string name="err_no_browser">Nie można otworzyć przeglądarki</string>
     <string name="err_no_app">Nie znaleziono aplikacji do otwarcia tego pliku</string>
@@ -11,7 +10,6 @@
     <string name="onboarding_button_grant">Przyznaj uprawnienia</string>
     <string name="onboarding_button_finish">zakończ</string>
     <string name="onboarding_choose_server">Wybierz adres serwera</string>
-    <string name="onboarding_choose_server_short">Wybierz serwer</string>
     <string name="onboarding_choose_server_description">Ta aplikacja jest zoptymalizowanym klientem aplikacji webowych Snapdrop i PairDrop.\nWybierz jedną z następujących instancji lub określ niestandardowy adres url do połączenia\n\nUwaga: musisz wybrać ten sam URL na wszystkich urządzeniach.</string>
     <string name="onboarding_storage_permission">Uprawnienia do przechowywania danych</string>
     <string name="onboarding_storage_permission_description">Ta aplikacja jest narzędziem udostępniania plików. W związku z tym wymagane jest pozwolenie na przechowywanie plików, aby z niej korzystać.</string>
@@ -31,10 +29,11 @@
     <string name="install">zainstaluj</string>
     <string name="reset">zresetuj</string>
     <string name="copy">kopiuj</string>
+    <string name="retry">spróbuj ponownie</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">O programie</string>
-    <string name="title_activity_about">O Snapdrop dla Androida</string>
     <string name="pref_about_title">O tej aplikacji</string>
+    <string name="view_downloads">Zobacz pobrane</string>
     <string name="pref_category_settings">Ustawienia</string>
     <string name="logs">Dzienniki debugowania</string>
     <string name="components_summary">Dotknij, aby wyświetlić</string>
@@ -61,11 +60,7 @@
         <item>Jasny</item>
         <item>Ciemny</item>
     </string-array>
-    <string name="baseurl_title">Podstawowy adres URL</string>
     <string name="baseurl_not_set">Nie ustawiono</string>
-    <string name="baseurl_instance_verified">Instancja Snapdrop została pomyślnie zweryfikowana</string>
-    <string name="baseurl_no_snapdrop_instance">Wygląda na to, że nie jest instancją Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Nie udało się zweryfikować instancji Snapdrop</string>
     <string name="baseurl_unofficial_instances">Sprawdź <a href="">FAQ</a> dla listy nieoficjalnych instancji. Pamiętaj, że niektóre instancje mogą nie działać poprawnie wewnątrz aplikacji.</string>
     <string name="save_location">Zapisz lokalizację</string>
     <!-- File sharing -->
@@ -74,16 +69,17 @@
     <string name="intent_content">Zawartość jest zaznaczona do udostępnienia</string>
     <string name="error_filechooser">Nie można otworzyć wyboru plików</string>
     <string name="error_network">Upewnij się, że jesteś podłączony do sieci WiFi</string>
+    <string name="error_network_no_wifi">Połącz się z siecią WiFi lub paruj urządzenia</string>
+    <string name="error_network_offline">Brak dostępu do sieci</string>
     <string name="ignore_error_network">Spróbuj mimo wszystko</string>
     <string name="error_not_reachable_title">Ups, przepraszam!</string>
     <string name="error_server_not_reachable">Nie można połączyć się z serwerem. \n\nJeśli Twoje połączenie internetowe działa i tak się dzieje, spróbuj wybrać inny serwer</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Otwórz Snapdrop na innych urządzeniach aby wysyłać pliki</string>
     <string name="website_instruction">Dotknij, aby wysłać pliki lub długie dotknięcie aby wysłać wiadomość</string>
     <string name="website_file_received">Otrzymano plik</string>
     <string name="website_file_ask_before_download">Zawsze pytaj przed zapisaniem pliku</string>
     <string name="website_file_download">Zapisz</string>
-    <string name="website_footer_discovery">Możesz zostać odkryty przez wszystkich w tej sieci</string>
-    <string name="website_footer_known_as">Jesteś znany jako %s</string>
+    <string name="website_footer_discovery">Możesz być widoczny dla wszystkich w tej sieci</string>
+    <string name="website_footer_known_as">Jesteś widoczny jako %s</string>
     <string name="website_about_subheading">Najprostszy sposób na przesyłanie plików przez urządzenia</string>
 </resources>

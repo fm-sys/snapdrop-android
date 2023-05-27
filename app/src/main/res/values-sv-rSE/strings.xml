@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop för Android</string>
     <string name="err_no_browser">Kan inte öppna webbläsare</string>
     <string name="err_no_app">Ingen applikation hittades som kan öppna denna fil</string>
     <string name="open_url">Öppna URL</string>
@@ -18,7 +17,6 @@
     <string name="copy">kopiera</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Om</string>
-    <string name="title_activity_about">Om Snapdrop för Android</string>
     <string name="pref_about_title">Om denna app</string>
     <string name="pref_category_settings">Inställningar</string>
     <string name="logs">Felsökningsloggar</string>
@@ -35,9 +33,6 @@
         <item>Ljus</item>
         <item>Mörk</item>
     </string-array>
-    <string name="baseurl_title">Rotadress</string>
-    <string name="baseurl_no_snapdrop_instance">Verkar inte vara en Snapdrop-instans</string>
-    <string name="baseurl_check_instance_failed">Det gick inte att verifiera Snapdrop-instansen</string>
     <string name="save_location">Spara platsen</string>
     <!-- File sharing -->
     <string name="intent_file">En fil är markerad för delning</string>
@@ -48,7 +43,6 @@
     <string name="ignore_error_network">Släpp in mig ändå</string>
     <string name="error_not_reachable_title">Oops, sorry!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Öppna Snapdrop på andra enheter för att skicka filer</string>
     <string name="website_instruction">Tryck för att skicka filer eller tryck och håll ned för att skicka ett meddelande</string>
     <string name="website_file_received">Fil mottagen</string>
     <string name="website_file_ask_before_download">Fråga alltid innan en fil sparas</string>

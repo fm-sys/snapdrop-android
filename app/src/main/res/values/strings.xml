@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop for Android</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop for Android</string>
     <string name="app_name_slogan">Transfer files seamlessly between all your devices.</string>
     <string name="err_no_browser">Can\'t open browser</string>
     <string name="err_no_app">No app installed to open this file</string>
@@ -11,7 +11,7 @@
     <string name="onboarding_button_grant">grant permission</string>
     <string name="onboarding_button_finish">finish</string>
     <string name="onboarding_choose_server">Choose a server address</string>
-    <string name="onboarding_choose_server_short">Choose server</string>
+    <string name="onboarding_choose_server_short">choose server</string>
     <string name="onboarding_choose_server_description">This app is an optimized client for the web apps Snapdrop and PairDrop.\nChoose one of the following instances or specify a custom url to connect to.\n\nNote: You have to choose the same URL on all devices.</string>
     <string name="onboarding_storage_permission">Storage permission</string>
     <string name="onboarding_storage_permission_description">This app is a file sharing utility. Therefore, storage permission is required order to use it.</string>
@@ -34,10 +34,11 @@
     <string name="install">install</string>
     <string name="reset">reset</string>
     <string name="copy">copy</string>
+    <string name="retry">retry</string>
 
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">About</string>
-    <string name="title_activity_about">About Snapdrop for Android</string>
+    <string name="title_activity_about">About Snapdrop &amp; PairDrop for Android</string>
     <string name="pref_about_title">About this app</string>
     <string name="view_downloads">View downloads</string>
     <string name="pref_category_settings">Settings</string>
@@ -67,11 +68,11 @@
         <item>Light</item>
         <item>Dark</item>
     </string-array>
-    <string name="baseurl_title">Base URL</string>
+    <string name="baseurl_title">Change server address</string>
     <string name="baseurl_not_set">Not set</string>
-    <string name="baseurl_instance_verified">Snapdrop instance was successfully verified</string>
-    <string name="baseurl_no_snapdrop_instance">Doesn\'t seem to be a Snapdrop instance</string>
-    <string name="baseurl_check_instance_failed">Failed to verify Snapdrop instance</string>
+    <string name="baseurl_instance_verified">Instance was successfully verified</string>
+    <string name="baseurl_no_snapdrop_instance">Instance doesn\'t seem to be supported</string>
+    <string name="baseurl_check_instance_failed">Failed to verify instance</string>
     <string name="baseurl_unofficial_instances">Check out the <a href="">FAQ</a> for a list of unofficial instances. Please note that some instances might not work correctly inside the app.</string>
 
     <string name="save_location">Save location</string>
@@ -82,12 +83,14 @@
     <string name="intent_content">Content is selected for sharing</string>
     <string name="error_filechooser">Cannot open file chooser</string>
     <string name="error_network">Please verify that you are connected with a WiFi network</string>
+    <string name="error_network_no_wifi">Please connect to a WiFi network, or pair devices</string>
+    <string name="error_network_offline">You are offline</string>
     <string name="ignore_error_network">Let me in anyway</string>
     <string name="error_not_reachable_title">Ups, sorry!</string>
     <string name="error_server_not_reachable">The Server cannot be reached. \n\nIf your internet connection is working and this does happen anyway, please try to select a different server address.</string>
 
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Open Snapdrop on other devices to send files</string>
+    <string name="website_no_peers_info">Open app or website on other devices to send files</string>
     <string name="website_instruction">Tap to send files or long tap to send a message</string>
     <string name="website_file_received">File Received</string>
     <string name="website_file_ask_before_download">Always ask before saving a file</string>

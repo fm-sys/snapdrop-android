@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop для Android</string>
     <string name="err_no_browser">Не удаётся открыть браузер</string>
     <string name="err_no_app">Нет установленных приложений для открытия этого файла</string>
     <string name="open_url">Открыть URL</string>
@@ -15,7 +14,6 @@
     <string name="reset">сброс</string>
     <string name="copy">скопировать</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">О Snapdrop для Android</string>
     <string name="pref_category_settings">Настройки</string>
     <string name="logs">Отладочный журнал</string>
     <string name="components_summary">Коснитесь для отображения</string>
@@ -33,9 +31,6 @@
         <item>Светлая</item>
         <item>Тёмная</item>
     </string-array>
-    <string name="baseurl_title">Базовый адрес</string>
-    <string name="baseurl_no_snapdrop_instance">Не похоже на экземпляр Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Не удалось проверить копию Snapdrop</string>
     <string name="save_location">Сохранить расположение</string>
     <!-- File sharing -->
     <string name="intent_file">Файл выбран для передачи</string>
@@ -46,7 +41,6 @@
     <string name="ignore_error_network">Всё равно попробовать</string>
     <string name="error_not_reachable_title">Извините!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Откройте Snapdrop на других устройствах для передачи файлов</string>
     <string name="website_instruction">Нажмите для отправки файлов или удерживайте для отправки сообщения</string>
     <string name="website_file_received">Файл получен</string>
     <string name="website_file_ask_before_download">Всегда спрашивать перед сохранением файла</string>

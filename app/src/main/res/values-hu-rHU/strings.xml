@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop Android készülékekre</string>
     <string name="err_no_browser">A böngésző nem nyitható meg</string>
     <string name="err_no_app">Nincs megfelelő alkalmazás a fájl megnyitásához</string>
     <string name="open_url">URL megnyitása</string>
@@ -15,7 +14,6 @@
     <string name="reset">visszaállítás</string>
     <string name="copy">másolás</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">A Snapdrop-ról Android készülékre</string>
     <string name="pref_category_settings">Beállítások</string>
     <string name="logs">Hibakeresési naplók</string>
     <string name="components_summary">Érintsd meg a megjelenítéshez</string>
@@ -33,9 +31,6 @@
         <item>Világos</item>
         <item>Sötét</item>
     </string-array>
-    <string name="baseurl_title">Alap URL</string>
-    <string name="baseurl_no_snapdrop_instance">Nem található Snapdrop példány</string>
-    <string name="baseurl_check_instance_failed">Snapdrop példány hitelesítése sikertelen</string>
     <string name="save_location">Mentés helye</string>
     <!-- File sharing -->
     <string name="intent_file">Egy megosztandó fájl kiválasztva</string>
@@ -46,7 +41,6 @@
     <string name="ignore_error_network">Belépés mindenképpen</string>
     <string name="error_not_reachable_title">Hoppá, elnézést!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Nyisd meg a Snapdrop-ot más eszközökön a fájlküldéshez</string>
     <string name="website_instruction">Érintsd meg a fájlküldéshez, vagy nyomd hosszan az üzenetküldéshez</string>
     <string name="website_file_received">Fájl fogadva</string>
     <string name="website_file_ask_before_download">Minden fájl mentése előtt kérdezze</string>

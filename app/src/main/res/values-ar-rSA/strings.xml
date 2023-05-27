@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">سناب درُوب</string>
-    <string name="app_name_long">سناب درُوب لِنِظامِ أندُروِيد</string>
     <string name="app_name_slogan">نقل الملفات بسلاسة بين جميع أجهزتك.</string>
     <string name="err_no_browser">لا يمكن فتح المستعرض</string>
     <string name="err_no_app">لا يوجد تطبيق لفتح هذا المِلَفّ</string>
@@ -11,7 +10,6 @@
     <string name="onboarding_button_grant">منح الإذن</string>
     <string name="onboarding_button_finish">اكتمل</string>
     <string name="onboarding_choose_server">اختر عنوان الخادم</string>
-    <string name="onboarding_choose_server_short">اختر الخادم</string>
     <string name="onboarding_choose_server_description">هذا التطبيق هو عميل مُحسَّن لتطبيقات الويب Snaplop و PairDrop.\nاختر واحدة من الأمثلة التالية أو حدد عنوان URL مخصص للاتصال به.\n\nملاحظة: يجب عليك اختيار نفس الرابط على جميع الأجهزة.</string>
     <string name="onboarding_storage_permission">إذن التخزين</string>
     <string name="onboarding_storage_permission_description">هذا التطبيق هو أداة مشاركة للملفات. لذلك، إذن التخزين مطلوب لاستخدامه.</string>
@@ -31,10 +29,11 @@
     <string name="install">تثبيت</string>
     <string name="reset">إعادَةُ الضَّبط</string>
     <string name="copy">نسخ</string>
+    <string name="retry">إعادة المحاولة</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">حول</string>
-    <string name="title_activity_about">حَول سناب درُوب لِنِظامِ أندُروِيد</string>
     <string name="pref_about_title">حول التطبيق</string>
+    <string name="view_downloads">عرض التنزيلات</string>
     <string name="pref_category_settings">الإعدادات</string>
     <string name="logs">سجل تصحيح الأخطاء</string>
     <string name="components_summary">اِنقر للعَرض</string>
@@ -61,11 +60,7 @@
         <item>فاتِح</item>
         <item>داكِن</item>
     </string-array>
-    <string name="baseurl_title">عنوان URL الأساسي</string>
     <string name="baseurl_not_set">لم يتم التعيين</string>
-    <string name="baseurl_instance_verified">تم التحقق من خادم Snapdrop بنجاح</string>
-    <string name="baseurl_no_snapdrop_instance">لا يبدو أنه مثيل سناب دروب</string>
-    <string name="baseurl_check_instance_failed">فشل في التحقق من مثيل سناب دروب</string>
     <string name="baseurl_unofficial_instances">تحقق من <a href="">الأسئلة الشائعة</a> للحصول على قائمة من الخوادم غير الرسمية. يرجى ملاحظة أن بعضها قد لا يعمل بشكل صحيح داخل التطبيق.</string>
     <string name="save_location">حِفظُ المَوقِع</string>
     <!-- File sharing -->
@@ -74,11 +69,13 @@
     <string name="intent_content">تمَّ تَحدِيدُ المُحتَوى للمُشارَكَة</string>
     <string name="error_filechooser">يتعَذّرُ فَتح مُنتَقي المِلفَات</string>
     <string name="error_network">يُرجى التَّحَقُقُ مِنَ اِتِّصَالِكَ بِشَبَكَةِ واي فاي</string>
+    <string name="error_network_no_wifi">الرجاء الاتصال بشبكة WiFi أو ربط الأجهزة</string>
+    <string name="error_network_offline">أنت في وضع عدم الاتصال</string>
     <string name="ignore_error_network">اِسمَح لِي بالدُخُولِ عَلَى أيِّ حال</string>
     <string name="error_not_reachable_title">عذرًا، آسف!</string>
     <string name="error_server_not_reachable">لا يمكن الوصول إلى الخادم. \n\nإذا كان اتصالك بالإنترنت يعمل ويحدث هذا على أي حال، الرجاء محاولة تحديد عنوان خادم مختلف.</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">افتح Snapdrop على الأجهزة الأخرى لإرسال الملفات</string>
+    <string name="website_no_peers_info">فتح تطبيق أو موقع على أجهزة أخرى لإرسال الملفات</string>
     <string name="website_instruction">انقر لإرسال الملفات أو انقر مطولاً لإرسال رسالة</string>
     <string name="website_file_received">تم استلام الملف</string>
     <string name="website_file_ask_before_download">اسأل كل مرة قبل حفض مِلَفّا</string>

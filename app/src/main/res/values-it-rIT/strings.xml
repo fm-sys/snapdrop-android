@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop per Android</string>
     <string name="app_name_slogan">Trasferisci i file in modo semplice e veloce tra i tuoi dispositivi.</string>
     <string name="err_no_browser">Impossibile aprire il browser</string>
     <string name="err_no_app">Nessuna app trovata per aprire questo file</string>
@@ -31,7 +30,6 @@
     <string name="copy">copia</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Informazioni</string>
-    <string name="title_activity_about">Informazioni su Snapdrop per Android</string>
     <string name="pref_about_title">Informazioni sull\'app</string>
     <string name="pref_category_settings">Impostazioni</string>
     <string name="logs">Log di debug</string>
@@ -53,11 +51,7 @@
         <item>Chiaro</item>
         <item>Scuro</item>
     </string-array>
-    <string name="baseurl_title">URL di base</string>
     <string name="baseurl_not_set">Non impostato</string>
-    <string name="baseurl_instance_verified">L\'istanza Snapdrop è stata verificata con successo</string>
-    <string name="baseurl_no_snapdrop_instance">Non sembra essere un\'istanza di Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Impossibile verificare l\'istanza di Snapdrop</string>
     <string name="baseurl_unofficial_instances">Dai un\'occhiata alle <a href="">FAQ</a> per una lista di istanze non ufficiali. Si informa che alcune istanze potrebbero non funzionare correttamente all\'interno dell\'app.</string>
     <string name="save_location">Percorso di salvataggio</string>
     <!-- File sharing -->
@@ -69,7 +63,6 @@
     <string name="ignore_error_network">Entra comunque</string>
     <string name="error_not_reachable_title">Ops, mi dispiace!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Apri Snapdrop su altri dispositivi per inviare i file</string>
     <string name="website_instruction">Premi per inviare i file o tieni premuto per inviare un messaggio</string>
     <string name="website_file_received">File ricevuto</string>
     <string name="website_file_ask_before_download">Chiedi sempre prima di salvare un file</string>

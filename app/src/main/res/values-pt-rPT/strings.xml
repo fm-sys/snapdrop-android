@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop para Android</string>
     <string name="err_no_browser">Não é possível abrir o browser [navegador]</string>
     <string name="err_no_app">Nenhuma aplicação instalada para abrir este ficheiro</string>
     <string name="open_url">Abrir URL</string>
@@ -15,7 +14,6 @@
     <string name="reset">restaurar</string>
     <string name="copy">copiar</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">Sobre o Snapdrop para Android</string>
     <string name="pref_category_settings">Configurações</string>
     <string name="logs">Dados de Depuração</string>
     <string name="components_summary">Pressione para exibir</string>
@@ -33,9 +31,6 @@
         <item>Claro</item>
         <item>Escuro</item>
     </string-array>
-    <string name="baseurl_title">URL base</string>
-    <string name="baseurl_no_snapdrop_instance">Não parece ser uma instância do Snapdrop</string>
-    <string name="baseurl_check_instance_failed">Falha ao verificar a instância do Snapdrop</string>
     <string name="save_location">Guardar localização</string>
     <!-- File sharing -->
     <string name="intent_file">O arquivo é selecionado para ser compartilhado</string>
@@ -46,7 +41,6 @@
     <string name="ignore_error_network">Deixe-me entrar a mesma</string>
     <string name="error_not_reachable_title">Ups, desculpa!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Abra o Snapdrop nos outros dispositivos para enviar arquivos</string>
     <string name="website_instruction">Toque para enviar arquivos ou toque longo para enviar uma mensagem</string>
     <string name="website_file_received">Ficheiro Recebido</string>
     <string name="website_file_ask_before_download">Perguntar sempre antes de salvar um ficheiro</string>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop pre Android</string>
     <string name="err_no_browser">Nemožno otvoriť prehliadač</string>
     <string name="err_no_app">Nebola nájdená žiadna nainštalovaná aplikácia na otvorenie tohto súboru</string>
     <string name="open_url">Otvoriť URL</string>
@@ -15,7 +14,6 @@
     <string name="reset">obnoviť</string>
     <string name="copy">kopírovať</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">O Snapdrop pre Android</string>
     <string name="pref_category_settings">Nastavenia</string>
     <string name="logs">Záznamy ladení</string>
     <string name="components_summary">Klepnutím zobrazíte</string>
@@ -33,9 +31,6 @@
         <item>Svetlý</item>
         <item>Tmavý</item>
     </string-array>
-    <string name="baseurl_title">Základná URL</string>
-    <string name="baseurl_no_snapdrop_instance">Zdá sa, že nejde o Snapdrop inštanciu</string>
-    <string name="baseurl_check_instance_failed">Nepodarilo sa o overiť Snapdrop inštanciu</string>
     <string name="save_location">Uložiť umiestnenie</string>
     <!-- File sharing -->
     <string name="intent_file">Súbor je označený pre zdieľanie</string>
@@ -46,7 +41,6 @@
     <string name="ignore_error_network">Napriek tomu pokračovať</string>
     <string name="error_not_reachable_title">Ups, prepáčte!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Otvorte Snapdrop na ďalších zariadeniach pre posielanie súborov</string>
     <string name="website_instruction">Klepnutím pošlete súbory a podržaním pošlete správu</string>
     <string name="website_file_received">Súbor bol prijatý</string>
     <string name="website_file_ask_before_download">Vždy sa opýtať pred ukladaním súboru</string>

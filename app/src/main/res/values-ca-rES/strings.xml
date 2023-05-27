@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop per a Android</string>
     <string name="err_no_browser">No es pot obrir el navegador</string>
     <string name="err_no_app">No hi ha cap aplicació per a obrir el fitxer</string>
     <string name="open_url">Obrir enllaç</string>
@@ -16,7 +15,6 @@
     <string name="copy">copiar</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Quant a</string>
-    <string name="title_activity_about">Sobre Snapdrop per Android</string>
     <string name="pref_about_title">Sobre aquesta aplicació</string>
     <string name="pref_category_settings">Configuració</string>
     <string name="logs">Registres per diagnòstics</string>
@@ -36,9 +34,6 @@
         <item>Clar</item>
         <item>Fosc</item>
     </string-array>
-    <string name="baseurl_title">URL base</string>
-    <string name="baseurl_no_snapdrop_instance">No sembla haver-hi una instància de Snapdrop</string>
-    <string name="baseurl_check_instance_failed">No s\'ha pogut verificar la instància de Snapdrop</string>
     <string name="save_location">Desa a la ubicació</string>
     <!-- File sharing -->
     <string name="intent_file">Un arxiu ha estat seleccionat per compartir</string>
@@ -49,7 +44,6 @@
     <string name="ignore_error_network">Deixa\'m intentar-ho igualment</string>
     <string name="error_not_reachable_title">Ups, perdó!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Obri Snapdrop a altres dispositius per a enviar arxius</string>
     <string name="website_instruction">Premeu per a enviar arxius o manteniu premut per a enviar un missatge</string>
     <string name="website_file_received">Arxiu rebut</string>
     <string name="website_file_ask_before_download">Pregunta sempre abans de guardar un arxiu</string>

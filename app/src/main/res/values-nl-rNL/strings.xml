@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="app_name_long">Snapdrop voor Android</string>
     <string name="err_no_browser">Browser kan niet worden geopend</string>
     <string name="err_no_app">Geen app gevonden om dit bestand te openen</string>
     <string name="open_url">URL openen</string>
@@ -16,7 +15,6 @@
     <string name="reset">resetten</string>
     <string name="copy">kopiëren</string>
     <!-- Settings / About -->
-    <string name="title_activity_about">Over Snapdrop voor Android</string>
     <string name="pref_category_settings">Instellingen</string>
     <string name="logs">Foutopsporingslogboek</string>
     <string name="components_summary">Tik om weer te geven</string>
@@ -34,10 +32,6 @@
         <item>Licht</item>
         <item>Donker</item>
     </string-array>
-    <string name="baseurl_title">Standaard URL</string>
-    <string name="baseurl_instance_verified">Snapdrop-instantie is succesvol geverifieerd</string>
-    <string name="baseurl_no_snapdrop_instance">Dit lijkt geen Snapdrop-instantie te zijn</string>
-    <string name="baseurl_check_instance_failed">Fout bij het verifiëren van de Snapdrop-instantie</string>
     <string name="baseurl_unofficial_instances">Bekijk de <a href="">FAQ</a> voor een lijst met niet-officiële instanties. Houd er rekening mee dat sommige instanties mogelijk niet goed werken in de app.</string>
     <string name="save_location">Locatie opslaan</string>
     <!-- File sharing -->
@@ -49,7 +43,6 @@
     <string name="ignore_error_network">Toch proberen</string>
     <string name="error_not_reachable_title">Oeps, sorry!</string>
     <!-- Website Localization -->
-    <string name="website_no_peers_info">Open Snapdrop op andere apparaten om bestanden te delen</string>
     <string name="website_instruction">Tik om bestanden te delen of houd ingedrukt om een bericht te sturen</string>
     <string name="website_file_received">Bestand ontvangen</string>
     <string name="website_file_ask_before_download">Altijd vragen voordat een bestand wordt opgeslagen</string>
