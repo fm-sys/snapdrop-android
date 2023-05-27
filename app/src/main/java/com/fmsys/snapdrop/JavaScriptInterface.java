@@ -1,6 +1,7 @@
 package com.fmsys.snapdrop;
 
 import android.content.Context;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.VibrationEffect;
@@ -156,13 +157,16 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void vibrate() {
-        Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        if (vibrator.hasVibrator()) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                VibrationEffect effect = VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE);
-                vibrator.vibrate(effect);
-            } else {
-                vibrator.vibrate(500);
+        final AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+        if (audioManager.getRingerMode() != AudioManager.RINGER_MODE_SILENT) {
+            final Vibrator vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+            if (vibrator.hasVibrator()) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    final VibrationEffect effect = VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE);
+                    vibrator.vibrate(effect);
+                } else {
+                    vibrator.vibrate(500);
+                }
             }
         }
     }

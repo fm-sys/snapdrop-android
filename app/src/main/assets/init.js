@@ -173,8 +173,6 @@ try {
 
 window.addEventListener('file-received', e => {
     SnapdropAndroid.saveDownloadFileName(e.detail.name, e.detail.size);
-    // vibrates after receiving each file (SnapDrop and PairDrop)
-    //SnapdropAndroid.vibrate();
 }, false);
 
 window.addEventListener('files-received', e => {
@@ -182,12 +180,9 @@ window.addEventListener('files-received', e => {
     SnapdropAndroid.vibrate();
 }, false);
 
-window.addEventListener('notify-user', e => {
-    if (e.detail == 'File transfer completed.') {
-        // vibrates after sending all files (PairDrop)
-        // vibrates after sending each file (SnapDrop)
-        SnapdropAndroid.vibrate();
-    }
+window.addEventListener('files-sent', e => {
+    // vibrates after sending all files (supported only on PairDrop)
+    SnapdropAndroid.vibrate();
 }, false);
 
 //hide unnecessary web toolbar buttons
