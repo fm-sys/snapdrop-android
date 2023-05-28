@@ -15,7 +15,11 @@
     <string name="onboarding_choose_server_description">Αυτή η εφαρμογή είναι ένας βελτιστοποιημένος client για τις web εφαρμογές Snapdrop και PairDrop.\nΕπιλέξτε μία από τις ακόλουθες επιλογές ή καθορίστε μια προσαρμοσμένη διεύθυνση URL για να συνδεθίιτε.\n\nΣημείωση: Πρέπει να επιλέξετε το ίδιο URL σε όλες τις συσκευές.</string>
     <string name="onboarding_storage_permission">Άδεια αποθήκευσης</string>
     <string name="onboarding_storage_permission_description">Αυτή η εφαρμογή είναι ένα πρόγραμμα κοινής χρήσης αρχείων. Ως εκ τούτου, απαιτείται άδεια αποθήκευσης για να μπορεί να χρησιμοποιηθεί.</string>
+    <string name="onboarding_server_pairdrop_summary">(συνιστάται)\nΛειτουργία σύζευξης, μεταφορά μέσω διαδικτύου με στόχο τη σταθερότητα.</string>
+    <string name="onboarding_server_snapdrop_summary">Το κλασσικό snapdrop. Απλό και λιτό.</string>
     <string name="onboarding_server_custom">Προσαρμοσμένη διεύθυνση URL</string>
+    <string name="onboarding_server_custom_summary">Οι ειδικοί μπορούν επιπλέον να το κάνουν host σε δικό τους servers.</string>
+    <string name="onboarding_howto">Πώς να το χρησιμοποιήσω</string>
     <!-- Download -->
     <string name="download_successful">Επιτυχημένη λήψη</string>
     <string name="notification_channel_name">Η λήψη ολοκληρώθηκε</string>
