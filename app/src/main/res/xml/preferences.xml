@@ -18,6 +18,7 @@
             android:title="@string/keep_on_title" />
         <SwitchPreference
             android:defaultValue="true"
+            android:icon="@drawable/pref_connectivity_card"
             android:key="@string/pref_show_connectivity_card"
             android:summary="@string/show_connectivity_card_summary"
             android:title="@string/show_connectivity_card_title" />
