@@ -17,6 +17,11 @@
             android:summary="@string/keep_on_summary"
             android:title="@string/keep_on_title" />
         <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/pref_show_connectivity_card"
+            android:summary="@string/show_connectivity_card_summary"
+            android:title="@string/show_connectivity_card_title" />
+        <SwitchPreference
             android:defaultValue="false"
             android:icon="@drawable/pref_floatingtext"
             android:key="@string/pref_floating_text_selection"

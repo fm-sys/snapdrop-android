@@ -113,7 +113,15 @@ public class MainActivity extends AppCompatActivity {
         public void onReceive(final Context context, final Intent intent) {
             final boolean wasMobileData = binding.connectivityCard.getVisibility() == View.VISIBLE;
             final boolean wifiAvailable = NetworkUtils.isWiFi(intent.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO));
-            binding.connectivityCard.setVisibility(View.GONE);
+            prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+            boolean show = prefs.getBoolean(getString(R.string.pref_show_connectivity_card), true);
+            if(show){
+                binding.connectivityCard.setVisibility(wifiAvailable ? View.GONE : View.VISIBLE);
+            }else{
+                binding.connectivityCard.setVisibility(View.GONE);
+            }
+
             if (state.isCurrentlyOffline() || wasMobileData) {
                 if (wifiAvailable) {
                     refreshWebsite();
