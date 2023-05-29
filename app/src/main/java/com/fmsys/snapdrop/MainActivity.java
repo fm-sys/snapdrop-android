@@ -115,10 +115,10 @@ public class MainActivity extends AppCompatActivity {
             final boolean wifiAvailable = NetworkUtils.isWiFi(intent.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO));
             prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
-            boolean show = prefs.getBoolean(getString(R.string.pref_show_connectivity_card), true);
-            if(show){
+            final boolean show = prefs.getBoolean(getString(R.string.pref_show_connectivity_card), true);
+            if (show) {
                 binding.connectivityCard.setVisibility(wifiAvailable ? View.GONE : View.VISIBLE);
-            }else{
+            } else {
                 binding.connectivityCard.setVisibility(View.GONE);
             }
 
