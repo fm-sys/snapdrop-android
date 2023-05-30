@@ -146,18 +146,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             });
         }
 
-        final Preference showConnectivityCardPref = findPreference(getString(R.string.pref_show_connectivity_card));
-
-            showConnectivityCardPref.setVisible(true);
-            showConnectivityCardPref.setOnPreferenceChangeListener((pref, newValue) -> {
-
-                PreferenceManager.getDefaultSharedPreferences(getContext()).edit().putBoolean(showConnectivityCardPref.getKey(), (boolean) newValue).apply();
-                return true;
-            });
-
-
-
-
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
         deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", null, newValue -> updateDeviceNameSummary(deviceNamePref)));
         updateDeviceNameSummary(deviceNamePref);
