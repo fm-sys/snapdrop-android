@@ -50,6 +50,8 @@
     <string name="keep_on_title">Gardez l\'écran allumé pendant le transfert</string>
     <string name="floating_text_selection_title">Sélection de texte flottante</string>
     <string name="floating_text_selection_summary">Lors de la sélection de texte dans d\'autres applications, une option \"Envoyer via Snapdrop\" sera affichée</string>
+    <string name="show_connectivity_card_title">Avertissement sur la connexion</string>
+    <string name="show_connectivity_card_summary"> Afficher un avertissement lorsque vous n\'êtes pas connecté à un réseau Wi-Fi</string>
     <string name="floating_text_selection_activity_label">Envoyer via Snapdrop</string>
     <string name="permission_not_granted">veuillez accorder l\'autorisation nécessaire</string>
     <string name="permission_not_granted_fallback">veuillez accorder manuellement l\'autorisation nécessaire</string>
