@@ -26,7 +26,7 @@ import androidx.core.util.Consumer;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.anggrayudi.storage.SimpleStorageHelper;
 import com.anggrayudi.storage.file.DocumentFileUtils;
@@ -46,7 +46,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     private final SimpleStorageHelper storageHelper = new SimpleStorageHelper(this);
     private SharedPreferences prefs;
     private final ActivityResultLauncher<String> permissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
-        final SwitchPreference retainLocationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
+        final SwitchPreferenceCompat retainLocationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
         retainLocationMetadataPref.setChecked(result);
         if (result) {
             retainLocationMetadataPref.setEnabled(false);
@@ -182,7 +182,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
 
-        final SwitchPreference locationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
+        final SwitchPreferenceCompat locationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             locationMetadataPref.setVisible(true);
             final boolean granted = ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_MEDIA_LOCATION) == PackageManager.PERMISSION_GRANTED;

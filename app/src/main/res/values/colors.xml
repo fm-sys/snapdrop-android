@@ -2,7 +2,8 @@
 <resources>
     <color name="textColorWhite">#FFFFFF</color>
 
-    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimary">#4285F4</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
     <bool name="isLightTheme">true</bool>
 
     <color name="colorBackground">#FFFFFF</color>
