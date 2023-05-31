@@ -10,19 +10,19 @@
             android:key="@string/pref_baseurl"
             android:summary="%s"
             android:title="@string/baseurl_title" />
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:defaultValue="true"
             android:icon="@drawable/pref_screen"
             android:key="@string/pref_switch_keep_on"
             android:summary="@string/keep_on_summary"
             android:title="@string/keep_on_title" />
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:defaultValue="true"
             android:icon="@drawable/pref_connectivity_card"
             android:key="@string/pref_show_connectivity_card"
             android:summary="@string/show_connectivity_card_summary"
             android:title="@string/show_connectivity_card_title" />
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:defaultValue="false"
             android:icon="@drawable/pref_floatingtext"
             android:key="@string/pref_floating_text_selection"
@@ -48,7 +48,7 @@
             android:key="@string/pref_save_location"
             android:summary="%s"
             android:title="@string/save_location" />
-        <SwitchPreference
+        <SwitchPreferenceCompat
             android:defaultValue="false"
             android:icon="@drawable/pref_location_metadata"
             android:key="@string/pref_retain_location_metadata"

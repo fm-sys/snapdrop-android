@@ -3,6 +3,7 @@
     <style name="AppTheme_v21" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Colors -->
         <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorLink">@color/colorAccent</item>
@@ -12,7 +13,7 @@
         <item name="snackbarButtonStyle">@style/SnackBarActionStyle</item>
         <item name="snackbarTextViewStyle">@style/SnackbarTextViewStyle</item>
         <item name="alertDialogTheme">@style/AlertDialogTheme</item>
-
+        <item name="preferenceTheme">@style/ThemeOverlay.App.Preference</item>
     </style>
 
     <!-- Actual theme that's used for the app -->
@@ -25,6 +26,16 @@
         <item name="android:windowBackground">@null</item>
         <item name="android:statusBarColor">@color/colorAccent</item>
         <item name="android:navigationBarColor">@color/colorAccent</item>
+    </style>
+
+    <!-- Theme for the preference screen -->
+    <style name="ThemeOverlay.App.Preference" parent="PreferenceThemeOverlay">
+        <item name="switchPreferenceCompatStyle">@style/PreferenceMaterialSwitch</item>
+    </style>
+
+    <!-- Adaptation for M3 switches -->
+    <style name="PreferenceMaterialSwitch" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="widgetLayout">@layout/preference_switch</item>
     </style>
 
     <!-- Helper Theme for FloatingTextActivity to avoid doubled splash screen -->
