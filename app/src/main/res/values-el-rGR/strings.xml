@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop για το Android</string>
+    <string name="app_name_slogan">Μεταφέρετε με αξιοπιστία αρχεία μεταξύ όλων των συσκευών σας.</string>
+    <string name="err_no_browser">Αδυναμία ανοίγματος του προγράμματος περιήγησης</string>
+    <string name="err_no_app">Δε βρέθηκε εφαρμογή για το άνοιγμα αυτού του αρχείου</string>
+    <string name="open_url">Άνοιγμα διεύθυνσης URL</string>
+    <!-- Onboarding -->
+    <string name="onboarding_button_continue">συνέχεια</string>
+    <string name="onboarding_button_grant">εκχώρηση δικαιωμάτων</string>
+    <string name="onboarding_button_finish">ολοκλήρωση</string>
+    <string name="onboarding_choose_server">Επιλέξτε την διεύθυνση του server</string>
+    <string name="onboarding_choose_server_short">επιλέξτε τον server</string>
+    <string name="onboarding_choose_server_description">Αυτή η εφαρμογή είναι ένας βελτιστοποιημένος client για τις web εφαρμογές Snapdrop και PairDrop.\nΕπιλέξτε μία από τις ακόλουθες επιλογές ή καθορίστε μια προσαρμοσμένη διεύθυνση URL για να συνδεθίιτε.\n\nΣημείωση: Πρέπει να επιλέξετε το ίδιο URL σε όλες τις συσκευές.</string>
+    <string name="onboarding_storage_permission">Άδεια αποθήκευσης</string>
+    <string name="onboarding_storage_permission_description">Αυτή η εφαρμογή είναι ένα πρόγραμμα κοινής χρήσης αρχείων. Ως εκ τούτου, απαιτείται άδεια αποθήκευσης για να μπορεί να χρησιμοποιηθεί.</string>
+    <string name="onboarding_server_pairdrop_summary">(συνιστάται)\nΛειτουργία σύζευξης, μεταφορά μέσω διαδικτύου με στόχο τη σταθερότητα.</string>
+    <string name="onboarding_server_snapdrop_summary">Το κλασσικό snapdrop. Απλό και λιτό.</string>
+    <string name="onboarding_server_custom">Προσαρμοσμένη διεύθυνση URL</string>
+    <string name="onboarding_server_custom_summary">Οι ειδικοί μπορούν επιπλέον να το κάνουν host σε δικό τους servers.</string>
+    <string name="onboarding_howto">Πώς να το χρησιμοποιήσω</string>
+    <string name="onboarding_howto_summary">1. Ανοίξτε αυτήν την εφαρμογή ή %s οποιαδήποτε άλλη συσκευή στο τοπικό σας δίκτυο WiFi.\n\n2. Επιλέξτε τη συσκευή στην οποία θέλετε να μοιραστείτε τα αρχεία σας με.\n\n3. Ολοκληρώθηκε! Τα αρχεία σας θα αποσταλούν…</string>
+    <string name="onboarding_howto_troubleshoot">Συμβουλή: Οι συσκευές πρέπει να είναι συνδεδεμένες στο ίδιο δίκτυο WiFi. Ενδέχεται να μην λειτουργεί αν είναι συνδεδεμένο σε ένα VPN.</string>
+    <!-- Download -->
+    <string name="download_save_pending">Αποθήκευση του αρχείου. Παρακαλώ περιμένετε…</string>
+    <string name="download_successful">Επιτυχημένη λήψη</string>
+    <string name="notification_channel_name">Η λήψη ολοκληρώθηκε</string>
+    <!-- Action Buttons -->
+    <string name="open">άνοιγμα</string>
+    <string name="install">εγκατάσταση</string>
+    <string name="reset">επαναφορά</string>
+    <string name="copy">αντιγραφή</string>
+    <string name="retry">δοκιμάστε ξανά</string>
+    <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Σχετικά με την εφαρμογή</string>
+    <string name="title_activity_about">Σχετικά με το Snapdrop &amp; PairDrop για το Android</string>
+    <string name="pref_about_title">Σχετικά με αυτή την εφαρμογή</string>
+    <string name="view_downloads">Προβολή λήψεων</string>
+    <string name="pref_category_settings">Ρυθμίσεις</string>
+    <string name="logs">Debug Logs</string>
+    <string name="components_summary">Πιέστε για προβολή</string>
+    <string name="support_us">Στήριξέ μας</string>
+    <string name="support_us_summary">Δες πώς μπορείς να υποστηρίξεις αυτό το έργο</string>
+    <string name="read_more">διάβασε περισσότερα</string>
+    <string name="version">Έκδοση</string>
+    <string name="pref_device_name_title">Όνομα συσκευής</string>
+    <string name="pref_device_name_summary">Ορισμός ονόματος συσκευής από τον χρήστη</string>
+    <string name="keep_on_summary">(Προτείνεται) Πολλές συσκευές αντιμετωπίζουν προβλήματα με μεταφορές αρχείων οπού διακόπτονται διότι η οθόνη απενεργοποιείται</string>
+    <string name="keep_on_title">Διατηρήστε την οθόνη ενεργή κατά τη μεταφορά</string>
+    <string name="floating_text_selection_title">Επιλογή Floating text</string>
+    <string name="floating_text_selection_summary">Κατά την επιλογή κειμένου σε άλλες εφαρμογές, θα εμφανιστεί η επιλογή \"Αποστολή με Snapdrop\"</string>
+    <string name="floating_text_selection_activity_label">Αποστολή με Snapdrop</string>
+    <string name="permission_not_granted">παρακαλώ, παραχωρήστε την απαιτούμενη άδεια</string>
+    <string name="permission_not_granted_fallback">παρακαλώ, παραχωρήστε την απαιτούμενη άδεια χειροκίνητα</string>
+    <string name="open_settings">άνοιγμα ρυθμίσεων</string>
+    <string name="retain_location_metadata_title">Διατήρηση μεταδεδομένων τοποθεσίας</string>
+    <string name="retain_location_metadata_summary_off">Ορισμένα αρχεία πολυμέσων ενδεχομένως να περιέχουν δεδομένα τοποθεσίας που αφαιρούνται από προεπιλογή. Χορηγήστε την απαραίτητη άδεια για να συμπεριληφθούν τα πλήρη μεταδεδομένα</string>
+    <string name="retain_location_metadata_summary_on">Η εφαρμογή έχει πλήρη πρόσβαση στο αρχείο αυτήν τη στιγμή</string>
+    <string name="settings_theme_title">Θέμα</string>
+    <string-array name="darkmode_entries">
+        <item>Προεπιλογή συστήματος</item>
+        <item>Φωτεινό</item>
+        <item>Σκοτεινό</item>
+    </string-array>
+    <string name="baseurl_title">Αλλαγή διεύθυνσης διακομιστή</string>
+    <string name="baseurl_not_set">Δεν έχει οριστεί</string>
+    <string name="baseurl_instance_verified">Το instance επαληθεύτηκε με επιτυχία</string>
+    <string name="baseurl_no_snapdrop_instance">Το instance φαίνεται να μην υποστηρίζεται</string>
+    <string name="baseurl_check_instance_failed">Αποτυχία επαλήθευσης του instance</string>
+    <string name="baseurl_unofficial_instances">Ελέγξτε το <a href="">FAQ</a> για μια λίστα από ανεπίσημα instances. Λάβετε υπόψη ότι ορισμένες περιπτώσεις ενδέχεται να μην λειτουργούν σωστά μέσα στην εφαρμογή.</string>
+    <string name="save_location">Αποθήκευση τοποθεσίας</string>
+    <!-- File sharing -->
+    <string name="intent_file">Ένα αρχείο έχει επιλεγεί για κοινή χρήση</string>
+    <string name="intent_files">Πολλαπλά αρχεία έχουν επιλεχθεί για κοινή χρήση</string>
+    <string name="intent_content">Το περιεχόμενο έχει επιλεγεί για κοινή χρήση</string>
+    <string name="error_filechooser">Αδυναμία έναρξης επιλογεά αρχείων</string>
+    <string name="error_network">Βεβαιωθείτε ότι είστε συνδεδεμένοι σε ένα δίκτυο WiFi</string>
+    <string name="error_network_no_wifi">Παρακαλώ συνδεθείτε σε ένα δίκτυο WiFi ή πραγματοποιείστε σύζευξη συσκευών</string>
+    <string name="error_network_offline">Είστε εκτός σύνδεσης</string>
+    <string name="ignore_error_network">Αφήστε με να χρησιμοποιήσω την εφαρμογή και έτσι</string>
+    <string name="error_not_reachable_title">Ουπς, συγγνώμη!</string>
+    <string name="error_server_not_reachable">Δεν είναι δυνατή η πρόσβαση στον Διακομιστή. \n\nΕάν η σύνδεση σας στο διαδίκτυο λειτουργεί και το σφάλμα συνεχίζει να υφίσταται, προσπαθήστε να επιλέξετε μια διαφορετική διεύθυνση διακομιστή.</string>
+    <!-- Website Localization -->
+    <string name="website_no_peers_info">Άνοιγμα εφαρμογής ή ιστοσελίδας από άλλες συσκευές για αποστολή αρχείων</string>
+    <string name="website_instruction">Πατήστε για αποστολή αρχείων ή παρατεταμένο πάτημα για αποστολή μηνύματος</string>
+    <string name="website_file_received">Το αρχείο ελήφθη</string>
+    <string name="website_file_ask_before_download">Ερώτηση πάντα πριν από την αποθήκευση ενός αρχείου</string>
+    <string name="website_file_download">Αποθήκευση</string>
+    <string name="website_footer_discovery">Μπορείτε να ανακαλυφθείτε από όλους σε αυτό το δίκτυο</string>
+    <string name="website_footer_known_as">Είστε γνωστοί ως %s</string>
+    <string name="website_about_subheading">Ο ευκολότερος τρόπος μεταφοράς αρχείων σε όλες τις συσκευές</string>
+</resources>

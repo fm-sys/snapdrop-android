@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">سناب درُوب</string>
+    <string name="app_name_long">سناب درُوب &amp; اقترن واسقط لِنِظامِ أندُروِيد</string>
     <string name="app_name_slogan">نقل الملفات بسلاسة بين جميع أجهزتك.</string>
     <string name="err_no_browser">لا يمكن فتح المستعرض</string>
     <string name="err_no_app">لا يوجد تطبيق لفتح هذا المِلَفّ</string>
@@ -10,6 +11,7 @@
     <string name="onboarding_button_grant">منح الإذن</string>
     <string name="onboarding_button_finish">اكتمل</string>
     <string name="onboarding_choose_server">اختر عنوان الخادم</string>
+    <string name="onboarding_choose_server_short">اختر الخادم</string>
     <string name="onboarding_choose_server_description">هذا التطبيق هو عميل مُحسَّن لتطبيقات الويب Snaplop و PairDrop.\nاختر واحدة من الأمثلة التالية أو حدد عنوان URL مخصص للاتصال به.\n\nملاحظة: يجب عليك اختيار نفس الرابط على جميع الأجهزة.</string>
     <string name="onboarding_storage_permission">إذن التخزين</string>
     <string name="onboarding_storage_permission_description">هذا التطبيق هو أداة مشاركة للملفات. لذلك، إذن التخزين مطلوب لاستخدامه.</string>
@@ -32,6 +34,7 @@
     <string name="retry">إعادة المحاولة</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">حول</string>
+    <string name="title_activity_about">حَول سناب درُوب &amp; اقترن واسقط لِنِظامِ أندُروِيد</string>
     <string name="pref_about_title">حول التطبيق</string>
     <string name="view_downloads">عرض التنزيلات</string>
     <string name="pref_category_settings">الإعدادات</string>
@@ -60,7 +63,11 @@
         <item>فاتِح</item>
         <item>داكِن</item>
     </string-array>
+    <string name="baseurl_title">تغيير عنوان الخادم</string>
     <string name="baseurl_not_set">لم يتم التعيين</string>
+    <string name="baseurl_instance_verified">تم التحقق من المثيل بنجاح</string>
+    <string name="baseurl_no_snapdrop_instance">لا يبدو أن المثيل مدعوم</string>
+    <string name="baseurl_check_instance_failed">فشل التحقق من المثيل</string>
     <string name="baseurl_unofficial_instances">تحقق من <a href="">الأسئلة الشائعة</a> للحصول على قائمة من الخوادم غير الرسمية. يرجى ملاحظة أن بعضها قد لا يعمل بشكل صحيح داخل التطبيق.</string>
     <string name="save_location">حِفظُ المَوقِع</string>
     <!-- File sharing -->

@@ -2,6 +2,7 @@
 <resources>
     <string name="pref_switch_keep_on" translatable="false">keep_screen_on</string>
     <string name="pref_floating_text_selection" translatable="false">floating_text_selection</string>
+    <string name="pref_show_connectivity_card" translatable="false">show_connectivity_card</string>
     <string name="pref_device_name" translatable="false">device_name</string>
     <string name="pref_first_use" translatable="false">first_use</string>
     <string name="pref_baseurl" translatable="false">baseurl</string>

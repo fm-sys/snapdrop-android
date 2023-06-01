@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop pre Android</string>
+    <string name="app_name_slogan">Bezproblémovo prenášajte súbory medzi všetkými vašimi zariadeniami.</string>
     <string name="err_no_browser">Nemožno otvoriť prehliadač</string>
     <string name="err_no_app">Nebola nájdená žiadna nainštalovaná aplikácia na otvorenie tohto súboru</string>
     <string name="open_url">Otvoriť URL</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">pokračovať</string>
+    <string name="onboarding_button_grant">udeliť povolenie</string>
+    <string name="onboarding_button_finish">dokončiť</string>
+    <string name="onboarding_choose_server">Vyberte adresu serveru</string>
+    <string name="onboarding_choose_server_short">vybrať server</string>
+    <string name="onboarding_choose_server_description">Táto aplikácia je optimalizovaný klient pre webové aplikácie Snapdrop a PairDrop.\nVyberte si jednu z nasledujúcich inštancií alebo špecifikuje vlastnú url na pripojenie.\n\nPoznámka: Musíte si vybrať rovnakú URL na všetkých zariadeniach.</string>
+    <string name="onboarding_storage_permission">Povolenie prístupu k súborom</string>
+    <string name="onboarding_storage_permission_description">Táto aplikácia je nástroj na zdieľanie súborov. Preto je pre použitie vyžadované povolenie prístupu k súborom.</string>
+    <string name="onboarding_server_pairdrop_summary">(odporúčané)\nPárovacia funkcia, prenos cez internet a zameranie na stabilitu.</string>
+    <string name="onboarding_server_snapdrop_summary">Klasický SnapDrop. Prehľadný a jednoduchý.</string>
+    <string name="onboarding_server_custom">Vlastná URL</string>
+    <string name="onboarding_server_custom_summary">Experti môžu taktiež sprevádzkovať svoje vlastné servery.</string>
+    <string name="onboarding_howto">Ako používať</string>
+    <string name="onboarding_howto_summary">1. Otvorte túto aplikáciu alebo %s na akomkoľvek inom zariadení vo vašej miestnej WiFi sieti.\n\n2. Klepnite na zariadenie s ktorým chcete zdieľať súbor(y).\n\n3. Hotovo! Súbor(y) budú odoslané…</string>
+    <string name="onboarding_howto_troubleshoot">Pripomienka: Zariadenia musia byť pripojené na rovnakú WiFi sieť. Nemusí to fungovať, ak je zapnutá VPN.</string>
     <!-- Download -->
     <string name="download_save_pending">Ukladanie súboru. Trochu strpenia, prosím…</string>
     <string name="download_successful">Sťahovanie bolo úspešné</string>
     <string name="notification_channel_name">Sťahovanie dokončené</string>
     <!-- Action Buttons -->
     <string name="open">otvoriť</string>
+    <string name="install">inštalovať</string>
     <string name="reset">obnoviť</string>
     <string name="copy">kopírovať</string>
+    <string name="retry">skúsiť znova</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">O</string>
+    <string name="title_activity_about">O Snapdrope &amp; PairDrope pre Android</string>
+    <string name="pref_about_title">O tejto aplikácii</string>
+    <string name="view_downloads">Zobraziť stiahnuté súbory</string>
     <string name="pref_category_settings">Nastavenia</string>
     <string name="logs">Záznamy ladení</string>
     <string name="components_summary">Klepnutím zobrazíte</string>
+    <string name="support_us">Podporte nás</string>
+    <string name="support_us_summary">Pozrite sa, ako môžete podporiť tento projekt</string>
+    <string name="read_more">čítať viac</string>
     <string name="version">Verzia</string>
     <string name="pref_device_name_title">Názov zariadenia</string>
     <string name="pref_device_name_summary">Nastaviť si vlastný názov zariadenia</string>
@@ -25,12 +51,24 @@
     <string name="floating_text_selection_title">Výber plávajúceho textu</string>
     <string name="floating_text_selection_summary">Keď budete označovať text v iných aplikáciách, zobrazí sa možnosť \"Poslať cez Snapdrop\"</string>
     <string name="floating_text_selection_activity_label">Poslať cez Snapdrop</string>
+    <string name="permission_not_granted">prosím udeľte potrebné povolenia</string>
+    <string name="permission_not_granted_fallback">prosím udeľte potrebné povolenia manuálne</string>
+    <string name="open_settings">otvoriť nastavenia</string>
+    <string name="retain_location_metadata_title">Zachovať metaúdaje lokácie</string>
+    <string name="retain_location_metadata_summary_off">Niektoré mediálne súbory môžu obsahovať údaje o polohe, ktoré sú predvolené odstránené. Udeľte povolenie na zahrnutie úplných metaúdajov</string>
+    <string name="retain_location_metadata_summary_on">Aplikácia má momentálne plný prístup k súborom</string>
     <string name="settings_theme_title">Motív</string>
     <string-array name="darkmode_entries">
         <item>Predvolený systémom</item>
         <item>Svetlý</item>
         <item>Tmavý</item>
     </string-array>
+    <string name="baseurl_title">Zmeniť adresu serveru</string>
+    <string name="baseurl_not_set">Nenastavené</string>
+    <string name="baseurl_instance_verified">Inštancia bola úspešne overená</string>
+    <string name="baseurl_no_snapdrop_instance">Inštancia sa zdá byť nepodporovaná</string>
+    <string name="baseurl_check_instance_failed">Nepodarilo sa overiť inštanciu</string>
+    <string name="baseurl_unofficial_instances">Pozrite si <a href="">FAQ</a> pre zoznam neoficiálnych inštancií. Prosím vedzte, že niektoré inštancie nemusia správne fungovať v aplikácii.</string>
     <string name="save_location">Uložiť umiestnenie</string>
     <!-- File sharing -->
     <string name="intent_file">Súbor je označený pre zdieľanie</string>
@@ -38,9 +76,13 @@
     <string name="intent_content">Obsah je označený pre zdieľanie</string>
     <string name="error_filechooser">Nemožno otvoriť výber súborov</string>
     <string name="error_network">Prosím, skontrolujte, či ste pripojení k WiFi sieti</string>
+    <string name="error_network_no_wifi">Prosím pripojte sa k WiFi sieti alebo spárujte zariadenia</string>
+    <string name="error_network_offline">Ste offline</string>
     <string name="ignore_error_network">Napriek tomu pokračovať</string>
     <string name="error_not_reachable_title">Ups, prepáčte!</string>
+    <string name="error_server_not_reachable">Server je nedostupný. \n\nAk vaše internetové pripojenie funguje a toto sa stane aj tak, prosím skúste zvoliť inú adresu serveru.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Pre zasielanie súborov, otvorte aplikáciu alebo stránku na ďalších zariadeniach</string>
     <string name="website_instruction">Klepnutím pošlete súbory a podržaním pošlete správu</string>
     <string name="website_file_received">Súbor bol prijatý</string>
     <string name="website_file_ask_before_download">Vždy sa opýtať pred ukladaním súboru</string>
