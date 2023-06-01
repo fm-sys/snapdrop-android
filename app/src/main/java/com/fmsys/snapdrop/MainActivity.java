@@ -138,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
+    private final ActivityResultLauncher<String> permissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {});
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility", "RestrictedApi"})
@@ -251,6 +252,16 @@ public class MainActivity extends AppCompatActivity {
         if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q)
                 && (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
             requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS)) {
+                Snackbar.make(binding.getRoot(), R.string.grant_notification_permission, Snackbar.LENGTH_INDEFINITE)
+                        .setAction(R.string.ok, view ->  permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS))
+                        .show();
+            } else if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+            }
         }
 
         binding.pullToRefresh.setOnRefreshListener(() -> {

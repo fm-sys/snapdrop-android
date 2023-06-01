@@ -35,6 +35,7 @@
     <string name="reset">reset</string>
     <string name="copy">copy</string>
     <string name="retry">retry</string>
+    <string name="ok">OK</string>
 
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">About</string>
@@ -61,6 +62,9 @@
     <string name="retain_location_metadata_title">Retain location metadata</string>
     <string name="retain_location_metadata_summary_off">Some media files might contain location data that are stripped by default. Grant permission to include full metadata</string>
     <string name="retain_location_metadata_summary_on">The app has full file access currently</string>
+
+    <!-- Permissions -->
+    <string name="grant_notification_permission">Please grant the notification permission to receive updates on file transfers</string>
 
     <string name="settings_theme_title">Theme</string>
     <string-array name="darkmode_entries">
