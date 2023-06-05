@@ -50,6 +50,8 @@
     <string name="keep_on_title">Διατηρήστε την οθόνη ενεργή κατά τη μεταφορά</string>
     <string name="floating_text_selection_title">Επιλογή Floating text</string>
     <string name="floating_text_selection_summary">Κατά την επιλογή κειμένου σε άλλες εφαρμογές, θα εμφανιστεί η επιλογή \"Αποστολή με Snapdrop\"</string>
+    <string name="show_connectivity_card_title">Ειδοποίηση συνδεσιμότητας</string>
+    <string name="show_connectivity_card_summary"> Εμφάνιση προειδοποίησης όταν δεν είστε συνδεδεμένοι με δίκτυο WiFi</string>
     <string name="floating_text_selection_activity_label">Αποστολή με Snapdrop</string>
     <string name="permission_not_granted">παρακαλώ, παραχωρήστε την απαιτούμενη άδεια</string>
     <string name="permission_not_granted_fallback">παρακαλώ, παραχωρήστε την απαιτούμενη άδεια χειροκίνητα</string>
