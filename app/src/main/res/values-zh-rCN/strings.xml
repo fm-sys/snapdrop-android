@@ -14,18 +14,35 @@
     <string name="onboarding_choose_server_short">选择服务器</string>
     <string name="onboarding_choose_server_description">这个应用程序是适用于 Snapdrop 和 PairDrop 的 Web 应用程序的优化客户端。\n选择以下实例之一或指定要连接的自定义URL。\n\n注意：您必须在所有设备上选择相同的 URL。</string>
     <string name="onboarding_storage_permission">存储权限</string>
+    <string name="onboarding_storage_permission_description">此应用是一个共享文件的工具。因此，需要存储权限才能使用。</string>
+    <string name="onboarding_server_pairdrop_summary">(推荐)\n配对功能、互联网传输并侧重于稳定性。</string>
+    <string name="onboarding_server_snapdrop_summary">经典的 SnapDrop。简洁而干净。</string>
+    <string name="onboarding_server_custom">自定义URL</string>
+    <string name="onboarding_server_custom_summary">专家们也可以搭建他们自己的服务器。</string>
+    <string name="onboarding_howto">如何使用</string>
+    <string name="onboarding_howto_summary">1. 在您本地 WiFi 网络中的任意设备上打开此应用或者 %s 。\n\n 2. 轻按您想要与之共享文件的设备。\n\n 3. 完成！文件(支持多选)将立即被发送…</string>
+    <string name="onboarding_howto_troubleshoot">提示：设备需要连接到同一个WiFi网络。如果启用了VPN，它可能无法工作。</string>
     <!-- Download -->
     <string name="download_save_pending">存储文件。请稍等…</string>
     <string name="download_successful">下载成功</string>
     <string name="notification_channel_name">下载完成</string>
     <!-- Action Buttons -->
     <string name="open">打开</string>
+    <string name="install">安装</string>
     <string name="reset">重置</string>
     <string name="copy">复制</string>
+    <string name="retry">重试</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">关于</string>
+    <string name="title_activity_about">关于 Snapdrop &amp; PairDrop 安卓版</string>
+    <string name="pref_about_title">关于此应用</string>
+    <string name="view_downloads">查看下载项目</string>
     <string name="pref_category_settings">设置</string>
     <string name="logs">调试日志</string>
     <string name="components_summary">点击查看</string>
+    <string name="support_us">支持我们</string>
+    <string name="support_us_summary">看看您可以如何支持此项目</string>
+    <string name="read_more">阅读更多</string>
     <string name="version">版本</string>
     <string name="pref_device_name_title">设备名称</string>
     <string name="pref_device_name_summary">自定义设备名称</string>
@@ -33,13 +50,27 @@
     <string name="keep_on_title">传输时保持屏幕开启</string>
     <string name="floating_text_selection_title">浮动文字选择</string>
     <string name="floating_text_selection_summary">使用其他APP选中文本时，显示“使用Snapdrop发送”选项</string>
+    <string name="show_connectivity_card_title">连接警告</string>
+    <string name="show_connectivity_card_summary"> 当您没有连接到 WiFi 网络时显示警告</string>
     <string name="floating_text_selection_activity_label">使用Snapdrop发送</string>
+    <string name="permission_not_granted">请授予必要的权限</string>
+    <string name="permission_not_granted_fallback">请手动授予必要的权限</string>
+    <string name="open_settings">打开设定</string>
+    <string name="retain_location_metadata_title">保留位置元数据</string>
+    <string name="retain_location_metadata_summary_off">某些媒体文件可能包含默认去除的位置数据。授予权限来包含全部元数据</string>
+    <string name="retain_location_metadata_summary_on">该应用当前拥有完整文件访问权限</string>
     <string name="settings_theme_title">主题</string>
     <string-array name="darkmode_entries">
         <item>跟随系统</item>
         <item>浅色</item>
         <item>深色</item>
     </string-array>
+    <string name="baseurl_title">更改服务器地址</string>
+    <string name="baseurl_not_set">未设定</string>
+    <string name="baseurl_instance_verified">实例验证成功</string>
+    <string name="baseurl_no_snapdrop_instance">实例似乎不受支持</string>
+    <string name="baseurl_check_instance_failed">验证实例失败</string>
+    <string name="baseurl_unofficial_instances">查看 <a href="">常见问题</a> 中的非官方实例列表。请注意某些实例在应用内可能无法正常工作。</string>
     <string name="save_location">保存位置</string>
     <!-- File sharing -->
     <string name="intent_file">已选择一个要共享的文件</string>
@@ -47,14 +78,18 @@
     <string name="intent_content">已选择要共享的内容</string>
     <string name="error_filechooser">无法打开文件选择程序</string>
     <string name="error_network">请确保您已经连接到WiFi网络</string>
+    <string name="error_network_no_wifi">请连接到 WiFi 网络或配对设备</string>
+    <string name="error_network_offline">您已离线</string>
     <string name="ignore_error_network">忽略并继续</string>
     <string name="error_not_reachable_title">啊哦，很抱歉！</string>
+    <string name="error_server_not_reachable">无法到达服务器。 \n\n如果您的互联网连接正常且这种情况仍然发生，请尝试选择一个不同的服务器地址。</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">在其他设备上打开应用或网站来发送文件</string>
     <string name="website_instruction">点击发送文件或长按发送消息</string>
     <string name="website_file_received">文件已接收</string>
     <string name="website_file_ask_before_download">保存文件前总是询问</string>
     <string name="website_file_download">保存</string>
     <string name="website_footer_discovery">您可以在这个网络上被所有人发现</string>
     <string name="website_footer_known_as">您的设备昵称为 %s</string>
-    <string name="website_about_subheading">通过最简单的方式在跨设备之间传输文件</string>
+    <string name="website_about_subheading">跨设备传输文件的最简单方法</string>
 </resources>
