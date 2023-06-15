@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop 安卓版</string>
+    <string name="app_name_slogan">在您所有设备间无缝传输文件。</string>
     <string name="err_no_browser">无法打开浏览器</string>
     <string name="err_no_app">未找到用于打开此文件的应用</string>
     <string name="open_url">打开网址</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">继续</string>
+    <string name="onboarding_button_grant">授予权限</string>
+    <string name="onboarding_button_finish">完成</string>
+    <string name="onboarding_choose_server">选择一个服务器地址</string>
+    <string name="onboarding_choose_server_short">选择服务器</string>
+    <string name="onboarding_choose_server_description">这个应用程序是适用于 Snapdrop 和 PairDrop 的 Web 应用程序的优化客户端。\n选择以下实例之一或指定要连接的自定义URL。\n\n注意：您必须在所有设备上选择相同的 URL。</string>
+    <string name="onboarding_storage_permission">存储权限</string>
     <!-- Download -->
     <string name="download_save_pending">存储文件。请稍等…</string>
     <string name="download_successful">下载成功</string>
