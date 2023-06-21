@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop для Android</string>
     <string name="err_no_browser">Не удаётся открыть браузер</string>
     <string name="err_no_app">Нет установленных приложений для открытия этого файла</string>
     <string name="open_url">Открыть URL</string>
