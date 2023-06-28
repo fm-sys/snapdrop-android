@@ -50,6 +50,8 @@
     <string name="keep_on_title">Tetap aktifkan layar saat mentransfer</string>
     <string name="floating_text_selection_title">Pilihan teks mengambang</string>
     <string name="floating_text_selection_summary">Saat memilih teks di aplikasi lain, opsi \"Kirim dengan Snapdrop\" akan ditampilkan</string>
+    <string name="show_connectivity_card_title">Peringatan konektivitas</string>
+    <string name="show_connectivity_card_summary"> Menampilkan peringatan saat Anda tidak tersambung dengan jaringan WiFi</string>
     <string name="floating_text_selection_activity_label">Kirim dengan Snapdrop</string>
     <string name="permission_not_granted">mohon berikan izin yang diperlukan</string>
     <string name="permission_not_granted_fallback">mohon berikan izin yang diperlukan secara manual</string>
