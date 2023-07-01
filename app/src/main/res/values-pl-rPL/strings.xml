@@ -84,6 +84,7 @@
     <string name="error_not_reachable_title">Ups, przepraszam!</string>
     <string name="error_server_not_reachable">Nie można połączyć się z serwerem. \n\nJeśli Twoje połączenie internetowe działa i tak się dzieje, spróbuj wybrać inny serwer</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Otwórz aplikację lub stronę internetową na innych urządzeniach, aby wysyłać pliki</string>
     <string name="website_instruction">Dotknij, aby wysłać pliki lub długie dotknięcie aby wysłać wiadomość</string>
     <string name="website_file_received">Otrzymano plik</string>
     <string name="website_file_ask_before_download">Zawsze pytaj przed zapisaniem pliku</string>
