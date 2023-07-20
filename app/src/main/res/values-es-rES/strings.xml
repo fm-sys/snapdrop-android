@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; Pairdrop para Android</string>
     <string name="app_name_slogan">Transfiere archivos sin problemas entre todos tus dispositivos.</string>
     <string name="err_no_browser">No se puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
@@ -10,6 +11,7 @@
     <string name="onboarding_button_grant">otorgar permiso</string>
     <string name="onboarding_button_finish">terminar</string>
     <string name="onboarding_choose_server">Elige un servidor</string>
+    <string name="onboarding_choose_server_short">elegir servidor</string>
     <string name="onboarding_choose_server_description">Esta aplicación es un cliente optimizado para las aplicaciones web Snapdrop y PairDrop.\nElige una de las siguientes instancias o especifica una url personalizada a la que conectarse.\n\nNota: Tienes que elegir la misma URL en todos los dispositivos.</string>
     <string name="onboarding_storage_permission">Permiso de almacenamiento</string>
     <string name="onboarding_storage_permission_description">Esta aplicación es una utilidad para compartir archivos. Por lo tanto, el permiso de almacenamiento es necesario para usarla.</string>
@@ -32,6 +34,7 @@
     <string name="retry">reintentar</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Acerca de</string>
+    <string name="title_activity_about">Acerca de Snapdrop &amp; PairDrop para Android</string>
     <string name="pref_about_title">Acerca de esta aplicación</string>
     <string name="view_downloads">Ver descargas</string>
     <string name="pref_category_settings">Ajustes</string>
@@ -47,6 +50,8 @@
     <string name="keep_on_title">Mantener la pantalla encendida mientras se transfiere</string>
     <string name="floating_text_selection_title">Selección de texto flotante</string>
     <string name="floating_text_selection_summary">Al seleccionar texto en otras aplicaciones, se mostrará una opción \"Enviar con Snapdrop\"</string>
+    <string name="show_connectivity_card_title">Advertencia de conexión</string>
+    <string name="show_connectivity_card_summary"> Mostrar una advertencia cuando no esté conectado a una red WiFi</string>
     <string name="floating_text_selection_activity_label">Enviar con Snapdrop</string>
     <string name="permission_not_granted">por favor conceda el permiso necesario</string>
     <string name="permission_not_granted_fallback">por favor conceda el permiso necesario manualmente</string>
@@ -60,7 +65,11 @@
         <item>Claro</item>
         <item>Oscuro</item>
     </string-array>
+    <string name="baseurl_title">Cambiar dirección del servidor</string>
     <string name="baseurl_not_set">No establecido</string>
+    <string name="baseurl_instance_verified">La instancia fue verificada exitosamente</string>
+    <string name="baseurl_no_snapdrop_instance">La instancia no parece estar soportada</string>
+    <string name="baseurl_check_instance_failed">Error al verificar la instancia</string>
     <string name="baseurl_unofficial_instances">Echa un vistazo a las <a href="">FAQ</a> para ver una lista de instancias no oficiales. Por favor, ten en cuenta que algunas instancias pueden no funcionar correctamente dentro de la aplicación.</string>
     <string name="save_location">Guardar ubicación</string>
     <!-- File sharing -->
