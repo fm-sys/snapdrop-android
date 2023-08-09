@@ -12,7 +12,7 @@
     <string name="onboarding_button_finish">selesai</string>
     <string name="onboarding_choose_server">Pilih alamat server</string>
     <string name="onboarding_choose_server_short">pilih server</string>
-    <string name="onboarding_choose_server_description">Aplikasi ini adalah aplikasi klien yang dioptimalkan untuk aplikasi web Snapdrop dan PairDrop.\nPilih salah satu dari contoh berikut atau tentukan url khusus untuk disambungkan.\n\nCatatan: Anda harus memilih URL yang sama pada semua perangkat.</string>
+    <string name="onboarding_choose_server_description">Aplikasi ini adalah klien yang dioptimalkan untuk aplikasi web Snapdrop dan PairDrop.\nPilih salah satu dari beberapa opsi berikut atau tentukan url khusus agar dapat tersambung.\n\nCatatan: Anda harus menggunakan URL yang sama di semua perangkat.</string>
     <string name="onboarding_storage_permission">Izin penyimpanan</string>
     <string name="onboarding_storage_permission_description">Aplikasi ini adalah aplikasi berbagi file. Oleh karena itu, izin penyimpanan diperlukan untuk bisa digunakan.</string>
     <string name="onboarding_server_pairdrop_summary">(disarankan)\nFitur pairing, transfer internet dan fokus pada kestabilan.</string>
