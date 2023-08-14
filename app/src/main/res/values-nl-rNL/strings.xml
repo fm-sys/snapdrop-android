@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_slogan">Bestanden naadloos tussen al uw apparaten overzetten.</string>
     <string name="err_no_browser">Browser kan niet worden geopend</string>
     <string name="err_no_app">Geen app gevonden om dit bestand te openen</string>
     <string name="open_url">URL openen</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">doorgaan</string>
+    <string name="onboarding_button_grant">geef toestemming</string>
     <!-- Download -->
     <string name="download_save_pending">Het bestand opslaan. Even geduld…</string>
     <string name="download_successful">Download geslaagd</string>
