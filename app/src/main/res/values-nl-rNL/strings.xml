@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop voor Android</string>
     <string name="app_name_slogan">Bestanden naadloos tussen al uw apparaten overzetten.</string>
     <string name="err_no_browser">Browser kan niet worden geopend</string>
     <string name="err_no_app">Geen app gevonden om dit bestand te openen</string>
@@ -8,6 +9,19 @@
     <!-- Onboarding -->
     <string name="onboarding_button_continue">doorgaan</string>
     <string name="onboarding_button_grant">geef toestemming</string>
+    <string name="onboarding_button_finish">voltooien</string>
+    <string name="onboarding_choose_server">Kies een serveradres</string>
+    <string name="onboarding_choose_server_short">kies een server</string>
+    <string name="onboarding_choose_server_description">Deze app is een geoptimaliseerde client voor de webapps Snapdrop en PairDrop.\nKies een van de volgende instanties of specificeer een aangepaste url om verbinding mee te maken.\n\nOpmerking: Kies dezelfde URL op alle apparaten.</string>
+    <string name="onboarding_storage_permission">Toegang tot bestanden</string>
+    <string name="onboarding_storage_permission_description">Deze app is bedoeld voor het delen van bestanden. Daarom is toestemming tot bestanden vereist om deze te gebruiken.</string>
+    <string name="onboarding_server_pairdrop_summary">(aanbevolen)\nKoppeling functie, overdracht via internet en focus op stabiliteit.</string>
+    <string name="onboarding_server_snapdrop_summary">De klassieke snapdrop. Sober en simpel.</string>
+    <string name="onboarding_server_custom">Aangepaste URL</string>
+    <string name="onboarding_server_custom_summary">Experts kunnen ook hun eigen servers hosten.</string>
+    <string name="onboarding_howto">Zo werkt het</string>
+    <string name="onboarding_howto_summary">1. Open de app of %s op een willekeurig ander apparaat op het lokale WiFi-netwerk.\n\n2. Klik op het apparaat waarmee je de bestand(en) wilt delen.\n\n3. Klaar! De bestand(en) worden verstuurd…</string>
+    <string name="onboarding_howto_troubleshoot">Tip: Apparaten moeten verbonden zijn met hetzelfde WiFi-netwerk. Het werkt mogelijk niet als een VPN ingeschakeld is.</string>
     <!-- Download -->
     <string name="download_save_pending">Het bestand opslaan. Even geduld…</string>
     <string name="download_successful">Download geslaagd</string>
@@ -17,10 +31,18 @@
     <string name="install">installeren</string>
     <string name="reset">resetten</string>
     <string name="copy">kopiëren</string>
+    <string name="retry">opnieuw proberen</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">Over</string>
+    <string name="title_activity_about">Over Snapdrop &amp; PairDrop voor Android</string>
+    <string name="pref_about_title">Over deze app</string>
+    <string name="view_downloads">Bekijk downloads</string>
     <string name="pref_category_settings">Instellingen</string>
     <string name="logs">Foutopsporingslogboek</string>
     <string name="components_summary">Tik om weer te geven</string>
+    <string name="support_us">Steun ons</string>
+    <string name="support_us_summary">Kijk hoe je dit project kunt ondersteunen</string>
+    <string name="read_more">lees meer</string>
     <string name="version">Versie</string>
     <string name="pref_device_name_title">Apparaatnaam</string>
     <string name="pref_device_name_summary">Stel een apparaatnaam in</string>
@@ -28,13 +50,26 @@
     <string name="keep_on_title">Houd het scherm aan tijdens de overdracht</string>
     <string name="floating_text_selection_title">Zwevende-tekstselectie</string>
     <string name="floating_text_selection_summary">Bij het selecteren van tekst in andere apps wordt een optie \"Verstuur met Snapdrop\" getoond</string>
+    <string name="show_connectivity_card_title">Waarschuwing voor verbinding</string>
+    <string name="show_connectivity_card_summary"> Een waarschuwing weergeven wanneer je niet verbonden bent met een WiFi-netwerk</string>
     <string name="floating_text_selection_activity_label">Verstuur met Snapdrop</string>
+    <string name="permission_not_granted">verleen de benodigde rechten</string>
+    <string name="permission_not_granted_fallback">verleen de benodigde toestemming handmatig</string>
+    <string name="open_settings">instellingen</string>
+    <string name="retain_location_metadata_title">Behoud locatie metagegevens</string>
+    <string name="retain_location_metadata_summary_off">Sommige mediabestanden kunnen standaard locatiegegevens bevatten die verwijderd worden. Geef toestemming om volledige metadata te behouden</string>
+    <string name="retain_location_metadata_summary_on">De app heeft op dit moment volledige toegang tot bestanden</string>
     <string name="settings_theme_title">Thema</string>
     <string-array name="darkmode_entries">
         <item>Systeeminstelling</item>
         <item>Licht</item>
         <item>Donker</item>
     </string-array>
+    <string name="baseurl_title">Verander serveradres</string>
+    <string name="baseurl_not_set">Niet ingesteld</string>
+    <string name="baseurl_instance_verified">Instantie met succes geverifieerd</string>
+    <string name="baseurl_no_snapdrop_instance">Instantie lijkt niet te worden ondersteund</string>
+    <string name="baseurl_check_instance_failed">Fout bij het verifiëren van de instantie</string>
     <string name="baseurl_unofficial_instances">Bekijk de <a href="">FAQ</a> voor een lijst met niet-officiële instanties. Houd er rekening mee dat sommige instanties mogelijk niet goed werken in de app.</string>
     <string name="save_location">Locatie opslaan</string>
     <!-- File sharing -->
@@ -43,9 +78,13 @@
     <string name="intent_content">Inhoud is geselecteerd om te delen</string>
     <string name="error_filechooser">Kan bestandskiezer niet openen</string>
     <string name="error_network">Controleer of u verbonden bent met een WiFi-netwerk</string>
+    <string name="error_network_no_wifi">Maak verbinding met een WiFi-netwerk, of koppel apparaten</string>
+    <string name="error_network_offline">Je bent offline</string>
     <string name="ignore_error_network">Toch proberen</string>
     <string name="error_not_reachable_title">Oeps, sorry!</string>
+    <string name="error_server_not_reachable">De server kan niet benaderd worden. \n\nAls het apparaat verbonden is met internet, probeer dan een ander serveradres te selecteren.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Open app of website op andere apparaten om bestanden te verzenden</string>
     <string name="website_instruction">Tik om bestanden te delen of houd ingedrukt om een bericht te sturen</string>
     <string name="website_file_received">Bestand ontvangen</string>
     <string name="website_file_ask_before_download">Altijd vragen voordat een bestand wordt opgeslagen</string>
