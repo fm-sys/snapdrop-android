@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop pro Android</string>
+    <string name="app_name_slogan">Přenášejte soubory hladce mezi všemi zařízeními - Snapdrop.</string>
     <string name="err_no_browser">Nelze spustit prohlížeč</string>
     <string name="err_no_app">Pro otevření tohoto souboru není nainstalována žádná aplikace</string>
     <string name="open_url">Otevřít odkaz</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">pokračovat</string>
+    <string name="onboarding_button_grant">udělit oprávnění</string>
+    <string name="onboarding_button_finish">dokončit</string>
+    <string name="onboarding_choose_server">Vyberte adresu serveru</string>
+    <string name="onboarding_choose_server_short">vybrat server</string>
+    <string name="onboarding_choose_server_description">Tato aplikace je optimalizovaným klientem pro webové aplikace Snapdrop a PairDrop.\nVyberte jednu z následujících instancí nebo zadejte vlastní adresu URL pro připojení.\n\nPoznámka: Musíte vybrat stejnou adresu URL na všech zařízeních.</string>
+    <string name="onboarding_storage_permission">Oprávnění úložiště</string>
+    <string name="onboarding_storage_permission_description">Tato aplikace je nástroj pro sdílení souborů. Proto je vyžadováno oprávnění pro její používání.</string>
+    <string name="onboarding_server_pairdrop_summary">(doporučeno)\nPárování, internetový přenos a zaměření na stabilitu.</string>
+    <string name="onboarding_server_snapdrop_summary">Klasický Snapdrop. Čistý a jednoduchý.</string>
+    <string name="onboarding_server_custom">Vlastní URL</string>
+    <string name="onboarding_server_custom_summary">Pokročilí uživatelé mohou také hostovat své vlastní servery.</string>
+    <string name="onboarding_howto">Jak na to</string>
+    <string name="onboarding_howto_summary">1. Navštivte stránku %s, nebo otevřete aplikaci Snapdrop na jakémkoliv jiném zařízení připojené ke stejné WiFi síti.\n\n2. Klepněte na zařízení, se kterým chcete sdílet soubor(y).\n\n3. A máme hotovo! Soubor(y) se odešle/ou…</string>
+    <string name="onboarding_howto_troubleshoot">Tip: Zařízení musí být připojena ke stejné síti WiFi. Pokud je VPN povoleno, nemusí to fungovat.</string>
     <!-- Download -->
     <string name="download_save_pending">Ukládání souboru. Chvíli strpení…</string>
     <string name="download_successful">Úspěšně staženo</string>
