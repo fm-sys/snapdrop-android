@@ -20,7 +20,6 @@
     <string name="onboarding_server_custom">URL personalizada</string>
     <string name="onboarding_server_custom_summary">Especialistas também podem hospedar seus próprios servidores.</string>
     <string name="onboarding_howto">Como usar</string>
-    <string name="onboarding_howto_summary">1. Abra esse aplicativo ou %s em qualquer outro dispositivo na sua rede Wifi local.\n\n2. Aperte no dispositivo que você quer compartilhar os arquivos.\n\n3. Pronto! Os arquivos serão enviados…</string>
     <string name="onboarding_howto_troubleshoot">Dica: Dispositivos precisam estar conectados na mesma rede Wi-Fi. Pode não funcionar se um VPN estiver ativado.</string>
     <!-- Download -->
     <string name="download_save_pending">Armazenando o arquivo. Por favor, tenha um pouco de paciência…</string>
