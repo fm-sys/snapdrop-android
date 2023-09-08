@@ -41,7 +41,7 @@ However, even if it theoretically would fully work in your browser and you don't
 ➡️ [See how you can support this app and the snapdrop community](https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md)
 
 ## Contributing
-**Snapdrop & PairDrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
+**Snapdrop & PairDrop for Android** originally coded by [@fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
 
 ### Localization
 We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to help translating **Snapdrop & PairDrop for Android** into your favorite language. If your language does not yet exist and you want to contribute, please open an issue so we can discuss whether it is worth maintaining translations for that language. 
