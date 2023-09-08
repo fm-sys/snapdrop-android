@@ -117,6 +117,15 @@
                         android:textAlignment="center"
                         android:textColor="@color/textColorWhite"
                         android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/onboarding_server_snapdrop_summary_server_warning"
+                        android:textAlignment="center"
+                        android:textColor="@color/textColorError"
+                        android:textSize="16sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

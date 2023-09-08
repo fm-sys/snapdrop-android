@@ -17,6 +17,7 @@
     <string name="onboarding_storage_permission_description">This app is a file sharing utility. Therefore, storage permission is required order to use it.</string>
     <string name="onboarding_server_pairdrop_summary">(recommended)\nPairing feature, internet transfer and focus on stability.</string>
     <string name="onboarding_server_snapdrop_summary">The classic snapdrop. Clean and simple.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Warning: Server instabilities</string>
     <string name="onboarding_server_custom">Custom URL</string>
     <string name="onboarding_server_custom_summary">Experts can also host their own servers.</string>
 
