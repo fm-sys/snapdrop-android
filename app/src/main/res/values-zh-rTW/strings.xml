@@ -17,10 +17,11 @@
     <string name="onboarding_storage_permission_description">這是一個用於檔案分享的公用程式，因此，若要使用它，需要授予儲存空間權限。</string>
     <string name="onboarding_server_pairdrop_summary">(建議)\n配對功能，網際網路傳輸並專注於穩定性。</string>
     <string name="onboarding_server_snapdrop_summary">傳統 Snapdrop，簡單易用。</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">警告：伺服器不穩定</string>
     <string name="onboarding_server_custom">自訂 URL</string>
     <string name="onboarding_server_custom_summary">專家也可以託管個人所有的伺服器。</string>
     <string name="onboarding_howto">如何使用</string>
-    <string name="onboarding_howto_summary">1. 在您的區域 WiFi 網路中的任何其他裝置上開啟這個應用程式或 %s。\n\n2. 輕觸您想要與其分享檔案的裝置。\n\n3. 大功告成！檔案將被傳送…</string>
+    <string name="onboarding_howto_summary">1. 在您的區域 WiFi 網路中的任何其他裝置上開啟這個應用程式或 %s。\n\n2. 輕觸裝置並選取您想要傳送的檔案。\n\n3. 大功告成！檔案將被傳送…</string>
     <string name="onboarding_howto_troubleshoot">提示：裝置可能需要連線至同一個 WiFi 網路，如果啟用了 VPN，應用程式可能無法正常運作。</string>
     <!-- Download -->
     <string name="download_save_pending">正在儲存檔案，請稍候片刻…</string>
