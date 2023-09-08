@@ -20,7 +20,6 @@
     <string name="onboarding_server_custom">Aangepaste URL</string>
     <string name="onboarding_server_custom_summary">Experts kunnen ook hun eigen servers hosten.</string>
     <string name="onboarding_howto">Zo werkt het</string>
-    <string name="onboarding_howto_summary">1. Open de app of %s op een willekeurig ander apparaat op het lokale WiFi-netwerk.\n\n2. Klik op het apparaat waarmee je de bestand(en) wilt delen.\n\n3. Klaar! De bestand(en) worden verstuurd…</string>
     <string name="onboarding_howto_troubleshoot">Tip: Apparaten moeten verbonden zijn met hetzelfde WiFi-netwerk. Het werkt mogelijk niet als een VPN ingeschakeld is.</string>
     <!-- Download -->
     <string name="download_save_pending">Het bestand opslaan. Even geduld…</string>
