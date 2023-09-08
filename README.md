@@ -41,10 +41,10 @@ However, even if it theoretically would fully work in your browser and you don't
 ➡️ [See how you can support this app and the snapdrop community](https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md)
 
 ## Contributing
-**Snapdrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
+**Snapdrop & PairDrop for Android** originally coded by [fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
 
 ### Localization
-We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to help translating **Snapdrop for Android** into your favorite language. If your language does not yet exist and you want to contribute, please open an issue so we can discuss whether it is worth maintaining translations for that language. 
+We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to help translating **Snapdrop & PairDrop for Android** into your favorite language. If your language does not yet exist and you want to contribute, please open an issue so we can discuss whether it is worth maintaining translations for that language. 
 
 <p align="center">
   <a href="https://crowdin.com/project/snapdrop-android" rel="nofollow">
@@ -61,6 +61,7 @@ If you want to help with development, this would be more than welcome! I am very
 ## Other software
 ### Other Snapdrop software
 - Firefox Add-on for desktop platforms: [Snapdrop Web Extension](https://github.com/ueen/SnapdropFirefoxAddon)
+- And for sure, PairDrop directly inside the browser - just use it everywhere: https://pairdrop.net/
 - And for sure, Snapdrop directly inside the browser - just use it everywhere: https://snapdrop.net/
 
 Oh, and thanks [Mrwhosetheboss](https://youtu.be/lmIO18kLcZU?t=397) for recommending this app on your youtube channel! 
