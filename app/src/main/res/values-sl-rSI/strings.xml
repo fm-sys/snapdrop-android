@@ -18,7 +18,6 @@
     <string name="onboarding_server_custom">URL po meri</string>
     <string name="onboarding_server_custom_summary">Strokovnjaki lahko prav tako gostijo svoje lastne strežnike.</string>
     <string name="onboarding_howto">Kako uporabljati</string>
-    <string name="onboarding_howto_summary">1. Odprite to aplikacijo ali %s na katerikoli drugi napravi v vašem lokalnem WiFi omrežju.\n\n2. Tapnite na napravo z katero želite deliti vaše datoteke.\n\n3. Končano! Datoteke bodo poslane…</string>
     <string name="onboarding_howto_troubleshoot">Namig: Naprave morajo biti povezane v istem WiFi omrežju. Morda ne bo delovalo, če je omogočena VPN povezava.</string>
     <!-- Download -->
     <string name="download_save_pending">Shranjevanje datoteke. Prosimo počakajte trenutek…</string>
