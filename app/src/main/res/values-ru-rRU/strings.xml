@@ -20,7 +20,6 @@
     <string name="onboarding_server_custom">Пользовательский URL</string>
     <string name="onboarding_server_custom_summary">Эксперты также могут размещать свои собственные серверы.</string>
     <string name="onboarding_howto">Как пользоваться</string>
-    <string name="onboarding_howto_summary">1. Откройте это приложение или %s на любом другом устройстве в вашей локальной сети WiFi.\n\n2. Нажмите на устройство, с которым вы хотите поделиться файлом(ами).\n\n3. Готово! Файл(ы) будут отправлены...</string>
     <string name="onboarding_howto_troubleshoot">Подсказка: Устройства должны быть подключены к одной и той же сети WiFi. Это может не работать, если включен VPN.</string>
     <!-- Download -->
     <string name="download_save_pending">Сохранение файла. Пожалуйста, наберитесь терпения...</string>
