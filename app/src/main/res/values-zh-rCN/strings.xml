@@ -20,7 +20,6 @@
     <string name="onboarding_server_custom">自定义URL</string>
     <string name="onboarding_server_custom_summary">专家们也可以搭建他们自己的服务器。</string>
     <string name="onboarding_howto">如何使用</string>
-    <string name="onboarding_howto_summary">1. 在您本地 WiFi 网络中的任意设备上打开此应用或者 %s 。\n\n 2. 轻按您想要与之共享文件的设备。\n\n 3. 完成！文件(支持多选)将立即被发送…</string>
     <string name="onboarding_howto_troubleshoot">提示：设备需要连接到同一个WiFi网络。如果启用了VPN，它可能无法工作。</string>
     <!-- Download -->
     <string name="download_save_pending">存储文件。请稍等…</string>
