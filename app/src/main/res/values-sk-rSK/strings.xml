@@ -20,7 +20,6 @@
     <string name="onboarding_server_custom">Vlastná URL</string>
     <string name="onboarding_server_custom_summary">Experti môžu taktiež sprevádzkovať svoje vlastné servery.</string>
     <string name="onboarding_howto">Ako používať</string>
-    <string name="onboarding_howto_summary">1. Otvorte túto aplikáciu alebo %s na akomkoľvek inom zariadení vo vašej miestnej WiFi sieti.\n\n2. Klepnite na zariadenie s ktorým chcete zdieľať súbor(y).\n\n3. Hotovo! Súbor(y) budú odoslané…</string>
     <string name="onboarding_howto_troubleshoot">Pripomienka: Zariadenia musia byť pripojené na rovnakú WiFi sieť. Nemusí to fungovať, ak je zapnutá VPN.</string>
     <!-- Download -->
     <string name="download_save_pending">Ukladanie súboru. Trochu strpenia, prosím…</string>
