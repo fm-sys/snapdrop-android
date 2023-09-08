@@ -50,6 +50,8 @@
     <string name="keep_on_title">Nechať obrazovku zapnutú počas prenosu</string>
     <string name="floating_text_selection_title">Výber plávajúceho textu</string>
     <string name="floating_text_selection_summary">Keď budete označovať text v iných aplikáciách, zobrazí sa možnosť \"Poslať cez Snapdrop\"</string>
+    <string name="show_connectivity_card_title">Upozornení na pripojení</string>
+    <string name="show_connectivity_card_summary"> Zobrazenie upozornení, ak nie ste pripojení k sieti Wi-Fi</string>
     <string name="floating_text_selection_activity_label">Poslať cez Snapdrop</string>
     <string name="permission_not_granted">prosím udeľte potrebné povolenia</string>
     <string name="permission_not_granted_fallback">prosím udeľte potrebné povolenia manuálne</string>

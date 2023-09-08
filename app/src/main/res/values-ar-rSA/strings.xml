@@ -50,6 +50,8 @@
     <string name="keep_on_title">إبقاء الشاشة قيد التشغيل أثناء النقل</string>
     <string name="floating_text_selection_title">اختيار النص العائم</string>
     <string name="floating_text_selection_summary">عند تحديد النص في تطبيقات أخرى، سيتم عرض خيار \"إرسال مع Snapdrop\"</string>
+    <string name="show_connectivity_card_title">تحذير الاتصال</string>
+    <string name="show_connectivity_card_summary"> إظهار تحذير عندما لا تكون متصلاً بشبكة Wi-Fi</string>
     <string name="floating_text_selection_activity_label">مشاركة مع سناب درُوب</string>
     <string name="permission_not_granted">الرجاء منح الأذونات الضرورية</string>
     <string name="permission_not_granted_fallback">الرجاء منح الأذونات الضرورية</string>

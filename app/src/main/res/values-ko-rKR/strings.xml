@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Android 용 Snapdrop 및 PairDrop</string>
     <string name="app_name_slogan">당신의 모든 기기간의 파일 전송을 매끄럽게 하세요</string>
     <string name="err_no_browser">브라우저를 실행할 수 없어요.</string>
     <string name="err_no_app">이 파일을 열 수 있는 앱이 없어요.</string>
@@ -10,6 +11,7 @@
     <string name="onboarding_button_grant">권한 부여</string>
     <string name="onboarding_button_finish">완료</string>
     <string name="onboarding_choose_server">서버 주소를 선택하세요</string>
+    <string name="onboarding_choose_server_short">서버 선택</string>
     <string name="onboarding_choose_server_description">이 애플리케이션은 Snapdrop과 PairDrop 웹 앱에 대응되는 최적화된 클라이언트 입니다.\n다음 중 하나의 인스턴스를 고르거나, 연결할 커스텀 URL을 입력하세요.\n\n메모: 사용할 모든 기기가 같은 URL에 연결되어야 합니다.</string>
     <string name="onboarding_storage_permission">저장소 권한</string>
     <string name="onboarding_storage_permission_description">이 앱은 파일 공유 유틸리티입니다. 파일에 접근하기 위해 저장소 접근 권한이 필요합니다.</string>
@@ -32,6 +34,7 @@
     <string name="retry">다시 시도</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">정보</string>
+    <string name="title_activity_about">Android 용 Snapdrop 및 PairDrop에 대해</string>
     <string name="pref_about_title">앱 소개</string>
     <string name="view_downloads">다운로드 보기</string>
     <string name="pref_category_settings">설정</string>
@@ -47,15 +50,26 @@
     <string name="keep_on_title">전송 중일때 화면 켜짐 유지</string>
     <string name="floating_text_selection_title">선택된 텍스트 보내기</string>
     <string name="floating_text_selection_summary">다른 애플리케이션에서 텍스트를 선택할 때, \"Snapdrop으로 보내기\" 옵션이 표시됩니다.</string>
+    <string name="show_connectivity_card_title">연결 안정성 경고</string>
+    <string name="show_connectivity_card_summary"> WiFi 네트워크에 연결되어 있지 않을 때 경고를 표시합니다</string>
     <string name="floating_text_selection_activity_label">Snapdrop으로 보내기</string>
+    <string name="permission_not_granted">권한을 허용해주십시오</string>
+    <string name="permission_not_granted_fallback">권한을 수동으로 허용해주십시오</string>
     <string name="open_settings">설정 열기</string>
+    <string name="retain_location_metadata_title">위치 정보 유지하기</string>
+    <string name="retain_location_metadata_summary_off">일부 미디어 파일은 위치 정보를 포함하는 메타데이터를 포함하고 있을 수 있습니다. 이를 포함시켜 전송하려면 권한을 허용해 주세요</string>
+    <string name="retain_location_metadata_summary_on">현재 전체 파일에 대한 접근이 허용되어 있습니다</string>
     <string name="settings_theme_title">테마</string>
     <string-array name="darkmode_entries">
         <item>시스템 기본값</item>
         <item>밝음</item>
         <item>어두움</item>
     </string-array>
+    <string name="baseurl_title">서버 주소 변경</string>
     <string name="baseurl_not_set">설정되지 않음</string>
+    <string name="baseurl_instance_verified">인스턴스가 성공적으로 확인되었습니다.</string>
+    <string name="baseurl_no_snapdrop_instance">인스턴스가 지원되지 않는 것 같습니다</string>
+    <string name="baseurl_check_instance_failed">인스턴스 검증을 실패하였습니다</string>
     <string name="baseurl_unofficial_instances"><a href="">FAQ</a>를 확인하여 비공식 인스턴스 목록을 확인하세요. 일부 인스턴스는 앱 내에서 정상적으로 작동하지 않을 수 있습니다.</string>
     <string name="save_location">저장할 경로</string>
     <!-- File sharing -->
@@ -64,10 +78,13 @@
     <string name="intent_content">공유할 컨텐츠가 선택되었어요.</string>
     <string name="error_filechooser">파일 선택기를 열 수 없어요.</string>
     <string name="error_network">WiFi 네트워크에 연결되어 있는지 확인해주세요.</string>
+    <string name="error_network_no_wifi">WiFi 네트워크에 연결하거나 기기를 페어링해주세요</string>
+    <string name="error_network_offline">연결되지 않음</string>
     <string name="ignore_error_network">무시하고 시작하기</string>
     <string name="error_not_reachable_title">앗, 죄송합니다!</string>
     <string name="error_server_not_reachable">서버에 연결할 수 없습니다. \n\n인터넷에 연결되어 있는데도 계속 이 에러가 생긴다면, 다른 서버 주소를 골라보세요.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">파일 전송을 위해 다른 기기에서 앱이나 사이트를 열어주세요.</string>
     <string name="website_instruction">탭하여 파일을 보내거나 길게 눌러 메세지를 보내세요</string>
     <string name="website_file_received">파일 수신됨</string>
     <string name="website_file_ask_before_download">저장 전 항상 묻기</string>

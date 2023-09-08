@@ -1,51 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
-    <string name="err_no_browser">Не удаётся открыть браузер</string>
-    <string name="err_no_app">Нет установленных приложений для открытия этого файла</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop для Android</string>
+    <string name="app_name_slogan">Легко передавайте файлы между всеми вашими устройствами.</string>
+    <string name="err_no_browser">Не удается открыть браузер</string>
+    <string name="err_no_app">Не установлено приложения для открытия этого файла</string>
     <string name="open_url">Открыть URL</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">Продолжить</string>
+    <string name="onboarding_button_grant">Дать разрешение</string>
+    <string name="onboarding_button_finish">Завершить</string>
+    <string name="onboarding_choose_server">Выберите адрес сервера</string>
+    <string name="onboarding_choose_server_short">Выберите сервер</string>
+    <string name="onboarding_choose_server_description">Это приложение оптимизировано для веб-приложений Snapdrop и PairDrop.\nВыберите один из следующих экземпляров или укажите пользовательский URL для подключения.\n\nПримечание: вы должны выбрать один и тот же URL на всех устройствах.</string>
+    <string name="onboarding_storage_permission">Разрешение на работу с файлами</string>
+    <string name="onboarding_storage_permission_description">Это приложение является утилитой для обмена файлами. Поэтому для его использования требуется разрешение на работу с файлами.</string>
+    <string name="onboarding_server_pairdrop_summary">(Рекомендуется)\nВозможность сопряжения, интернет-передача и фокус на стабильности.</string>
+    <string name="onboarding_server_snapdrop_summary">Классический Snapdrop. Чистый и простой.</string>
+    <string name="onboarding_server_custom">Пользовательский URL</string>
+    <string name="onboarding_server_custom_summary">Эксперты также могут размещать свои собственные серверы.</string>
+    <string name="onboarding_howto">Как пользоваться</string>
+    <string name="onboarding_howto_summary">1. Откройте это приложение или %s на любом другом устройстве в вашей локальной сети WiFi.\n\n2. Нажмите на устройство, с которым вы хотите поделиться файлом(ами).\n\n3. Готово! Файл(ы) будут отправлены...</string>
+    <string name="onboarding_howto_troubleshoot">Подсказка: Устройства должны быть подключены к одной и той же сети WiFi. Это может не работать, если включен VPN.</string>
     <!-- Download -->
-    <string name="download_save_pending">Сохранение файла. Пожалуйста, подождите…</string>
-    <string name="download_successful">Загрузка завершена</string>
+    <string name="download_save_pending">Сохранение файла. Пожалуйста, наберитесь терпения...</string>
+    <string name="download_successful">Загрузка успешна</string>
     <string name="notification_channel_name">Загрузка завершена</string>
     <!-- Action Buttons -->
-    <string name="open">открыть</string>
-    <string name="reset">сброс</string>
-    <string name="copy">скопировать</string>
+    <string name="open">Открыть</string>
+    <string name="install">Установить</string>
+    <string name="reset">Сброс</string>
+    <string name="copy">Копировать</string>
+    <string name="retry">Повторить попытку</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">О сервисе</string>
+    <string name="title_activity_about">О Snapdrop &amp; PairDrop для Android</string>
+    <string name="pref_about_title">Об этом приложении</string>
+    <string name="view_downloads">Просмотреть загрузки</string>
     <string name="pref_category_settings">Настройки</string>
-    <string name="logs">Отладочный журнал</string>
-    <string name="components_summary">Коснитесь для отображения</string>
+    <string name="logs">Логи отладки</string>
+    <string name="components_summary">Нажмите для отображения</string>
+    <string name="support_us">Поддержите нас</string>
+    <string name="support_us_summary">Узнайте, как вы можете поддержать этот проект</string>
+    <string name="read_more">Подробнее</string>
     <string name="version">Версия</string>
     <string name="pref_device_name_title">Имя устройства</string>
-    <string name="pref_device_name_summary">Задать имя устройства, определенного пользователем</string>
+    <string name="pref_device_name_summary">Задать имя устройства</string>
     <string name="keep_on_summary">(Рекомендуется) На многих устройствах наблюдаются проблемы с прерыванием передачи при выключенном экране</string>
-    <string name="keep_on_title">Не выключать экран</string>
+    <string name="keep_on_title">Не выключать экран во время передачи</string>
     <string name="floating_text_selection_title">Поделиться выделенным текстом</string>
-    <string name="floating_text_selection_summary">При выборе текста в других приложениях, будет предложено \"Отправить в Snapdrop\"</string>
+    <string name="floating_text_selection_summary">При попытке поделиться текстом будет предложена отправка через \"Snapdrop\"</string>
+    <string name="show_connectivity_card_title">Предупреждение о подключении</string>
+    <string name="show_connectivity_card_summary">Показывать предупреждение, когда вы не подключены к сети WiFi</string>
     <string name="floating_text_selection_activity_label">Отправить в Snapdrop</string>
+    <string name="permission_not_granted">Пожалуйста, дайте необходимое разрешение</string>
+    <string name="permission_not_granted_fallback">Пожалуйста, предоставьте необходимое разрешение вручную</string>
+    <string name="open_settings">Открыть настройки</string>
+    <string name="retain_location_metadata_title">Сохранять метаданные о местоположении</string>
+    <string name="retain_location_metadata_summary_off">Некоторые медиафайлы могут содержать данные о местоположении, которые убраны по умолчанию. Предоставьте разрешение на сохранение полных метаданных</string>
+    <string name="retain_location_metadata_summary_on">В настоящее время приложение имеет полный доступ к файлам</string>
     <string name="settings_theme_title">Тема</string>
     <string-array name="darkmode_entries">
         <item>Системные настройки</item>
         <item>Светлая</item>
-        <item>Тёмная</item>
+        <item>Темная</item>
     </string-array>
-    <string name="save_location">Сохранить расположение</string>
+    <string name="baseurl_title">Сменить адрес сервера</string>
+    <string name="baseurl_not_set">Не установлен</string>
+    <string name="baseurl_instance_verified">Экземпляр успешно прошел проверку</string>
+    <string name="baseurl_no_snapdrop_instance">Похоже, что экземпляр не поддерживается</string>
+    <string name="baseurl_check_instance_failed">Не удалось проверить экземпляр</string>
+    <string name="baseurl_unofficial_instances">Список неофициальных экземпляров можно найти в <a href="">FAQ</a>. Обратите внимание, что некоторые экземпляры могут работать некорректно внутри приложения.</string>
+    <string name="save_location">Место для сохранения файлов</string>
     <!-- File sharing -->
     <string name="intent_file">Файл выбран для передачи</string>
     <string name="intent_files">Файлы выбраны для передачи</string>
     <string name="intent_content">Содержимое выбрано для передачи</string>
-    <string name="error_filechooser">Не удаётся выбрать файл</string>
+    <string name="error_filechooser">Не удается открыть окно выбора файлов</string>
     <string name="error_network">Пожалуйста, убедитесь, что вы подключены к сети WiFi</string>
-    <string name="ignore_error_network">Всё равно попробовать</string>
-    <string name="error_not_reachable_title">Извините!</string>
+    <string name="error_network_no_wifi">Пожалуйста, подключитесь к сети WiFi или сопрягите устройства</string>
+    <string name="error_network_offline">Вы находитесь вне сети</string>
+    <string name="ignore_error_network">Впустите меня в любом случае</string>
+    <string name="error_not_reachable_title">Ой, извините!</string>
+    <string name="error_server_not_reachable">Не получается общаться с сервером. \n\nЕсли с вашим интернет-соединением все хорошо, но это все равно происходит, пожалуйста, попробуйте выбрать другой адрес сервера.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Откройте приложение или веб-сайт на других устройствах для отправки файлов</string>
     <string name="website_instruction">Нажмите для отправки файлов или удерживайте для отправки сообщения</string>
     <string name="website_file_received">Файл получен</string>
     <string name="website_file_ask_before_download">Всегда спрашивать перед сохранением файла</string>
     <string name="website_file_download">Сохранить</string>
-    <string name="website_footer_discovery">Вы можете быть обнаружены всеми в этой сети</string>
+    <string name="website_footer_discovery">Вас могут обнаружить все в этой сети</string>
     <string name="website_footer_known_as">Вы известны как %s</string>
     <string name="website_about_subheading">Самый простой способ передачи файлов между устройствами</string>
 </resources>

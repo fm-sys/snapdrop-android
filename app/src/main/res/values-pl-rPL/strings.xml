@@ -50,6 +50,8 @@
     <string name="keep_on_title">Pozostaw włączony ekran podczas przesyłania</string>
     <string name="floating_text_selection_title">Wybór pływającego tekstu</string>
     <string name="floating_text_selection_summary">Podczas wybierania tekstu w innych aplikacjach zostanie wyświetlona opcja \"Wyślij za pomocą Snapdrop\"</string>
+    <string name="show_connectivity_card_title">Ostrzeżenie o połączeniu</string>
+    <string name="show_connectivity_card_summary"> Pokaż ostrzeżenie, gdy nie jesteś połączony z siecią WiFi</string>
     <string name="floating_text_selection_activity_label">Wyślij przez Snapdrop</string>
     <string name="permission_not_granted">Proszę udzielić odpowiednich uprawnień</string>
     <string name="permission_not_granted_fallback">udziel niezbędnych uprawnień ręcznie</string>
@@ -82,6 +84,7 @@
     <string name="error_not_reachable_title">Ups, przepraszam!</string>
     <string name="error_server_not_reachable">Nie można połączyć się z serwerem. \n\nJeśli Twoje połączenie internetowe działa i tak się dzieje, spróbuj wybrać inny serwer</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Otwórz aplikację lub stronę internetową na innych urządzeniach, aby wysyłać pliki</string>
     <string name="website_instruction">Dotknij, aby wysłać pliki lub długie dotknięcie aby wysłać wiadomość</string>
     <string name="website_file_received">Otrzymano plik</string>
     <string name="website_file_ask_before_download">Zawsze pytaj przed zapisaniem pliku</string>

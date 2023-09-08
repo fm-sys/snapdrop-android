@@ -50,6 +50,8 @@
     <string name="keep_on_title">Bildschirm während der Übertragung angeschaltet lassen</string>
     <string name="floating_text_selection_title">Schwebende Textauswahl</string>
     <string name="floating_text_selection_summary">Bei der Auswahl von Text in anderen Apps wird die Option \"Mit Snapdrop senden\" angezeigt</string>
+    <string name="show_connectivity_card_title">Verbindungswarnung</string>
+    <string name="show_connectivity_card_summary"> Warnung anzeigen, wenn nicht mit einem WLAN-Netzwerk verbunden</string>
     <string name="floating_text_selection_activity_label">Mit Snapdrop senden</string>
     <string name="permission_not_granted">Bitte erteilen Sie die notwendige Berechtigung</string>
     <string name="permission_not_granted_fallback">Bitte erteilen Sie die notwendige Berechtigung manuell</string>
