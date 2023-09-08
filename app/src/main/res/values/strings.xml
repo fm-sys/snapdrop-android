@@ -22,7 +22,7 @@
     <string name="onboarding_server_custom_summary">Experts can also host their own servers.</string>
 
     <string name="onboarding_howto">How to use</string>
-    <string name="onboarding_howto_summary">1. Open this app or %s on any other device in your local WiFi network.\n\n2. Tap on the device you want to share the file(s) with.\n\n3. Done! The file(s) will be sent…</string>
+    <string name="onboarding_howto_summary">1. Open this app or %s on any other device in your local WiFi network.\n\n2. Tap on the device and select the files you want to send.\n\n3. Done! The files will be sent…</string>
     <string name="onboarding_howto_troubleshoot">Hint: Devices need to be connected with the same WiFi network. It may not work if a VPN is enabled.</string>
 
     <!-- Download -->
