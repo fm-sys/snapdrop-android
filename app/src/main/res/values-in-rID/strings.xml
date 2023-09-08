@@ -20,7 +20,6 @@
     <string name="onboarding_server_custom">URL khusus</string>
     <string name="onboarding_server_custom_summary">Ekspert dapat meng-host server miliknya sendiri.</string>
     <string name="onboarding_howto">Cara menggunakan</string>
-    <string name="onboarding_howto_summary">1. Buka aplikasi ini atau %s pada perangkat lain dalam jaringan WiFi lokal Anda.\n\n2. Ketuk perangkat yang ingin Anda bagikan file.\n\n3. Selesai! File akan dikirim…</string>
     <string name="onboarding_howto_troubleshoot">Panduan: Perangkat harus terhubung pada jaringan WiFi yang sama. Ini mungkin tidak akan berfungsi jika VPN diaktifkan.</string>
     <!-- Download -->
     <string name="download_save_pending">Menyimpan file. Mohon bersabar…</string>
