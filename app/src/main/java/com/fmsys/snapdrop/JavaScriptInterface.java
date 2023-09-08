@@ -102,7 +102,21 @@ public class JavaScriptInterface {
 
     public static String getSendTextDialogWithPreInsertedString(final String text) {
         return "javascript: " +
-                "var x = document.getElementById(\"textInput\").innerHTML=\"" + TextUtils.htmlEncode(text) + "\";";
+                // snapdrop
+                "try {" +
+                "    document.getElementById(\"textInput\").innerHTML=\"" + TextUtils.htmlEncode(text).replaceAll("\\n", "<br />") + "\";" +
+                "    console.log(\"successfully set pre-inserted text (snapdrop based)\");" +
+                "} catch (e) {" +
+                "    console.error(\"Error setting pre-inserted text (snapdrop based): \" + e);" +
+                "}" +
+                // PairDrop
+                "try {" +
+                "    document.getElementById(\"text-input\").innerHTML=\"" + TextUtils.htmlEncode(text).replaceAll("\\n", "<br />") + "\";" +
+                "    document.getElementById('send-text-dialog').querySelector('button[type=\"submit\"]').removeAttribute('disabled');" +
+                "    console.log(\"successfully set pre-inserted text (PairDrop based)\");" +
+                "} catch (e) {" +
+                "    console.error(\"Error setting pre-inserted text (PairDrop based): \" + e);" +
+                "}";
     }
 
     @JavascriptInterface

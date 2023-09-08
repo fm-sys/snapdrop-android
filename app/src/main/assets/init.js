@@ -93,7 +93,11 @@ try {
     PeerUI.prototype._onTouchEnd = function(e){
         this._oTE(e);
         if ((Date.now() - this._touchStart < 500) && SnapdropAndroid.shouldOpenSendTextDialog()) {
-            Events.fire('text-recipient', this._peer.id);
+            if (document.querySelector('meta[name="application-name"]')?.content == "PairDrop") {
+                // no fix yet, cause they have changed the data format
+            } else {
+                Events.fire('text-recipient', this._peer.id);
+            }
         }
     };
 } catch (e) {
