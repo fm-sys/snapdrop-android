@@ -17,9 +17,11 @@
     <string name="onboarding_storage_permission_description">Este aplicativo é usado para compartilhamento de arquivos. Portanto, a permissão de armazenamento é necessária para usá-lo.</string>
     <string name="onboarding_server_pairdrop_summary">(recomendado)\nrecurso de emparelhamento, transferência de internet e foco na estabilidade.</string>
     <string name="onboarding_server_snapdrop_summary">O snapdrop clássico. Limpo e simples.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Atenção: Instabilidade no servidor</string>
     <string name="onboarding_server_custom">URL personalizada</string>
     <string name="onboarding_server_custom_summary">Especialistas também podem hospedar seus próprios servidores.</string>
     <string name="onboarding_howto">Como usar</string>
+    <string name="onboarding_howto_summary">1. Abra este aplicativo ou %s em qualquer outro dispositivo na sua rede Wi-Fi local.\n\n2. Toque no dispositivo e selecione os arquivos que deseja enviar.\n\n3. Pronto! Os arquivos serão enviados…</string>
     <string name="onboarding_howto_troubleshoot">Dica: Dispositivos precisam estar conectados na mesma rede Wi-Fi. Pode não funcionar se um VPN estiver ativado.</string>
     <!-- Download -->
     <string name="download_save_pending">Armazenando o arquivo. Por favor, tenha um pouco de paciência…</string>
