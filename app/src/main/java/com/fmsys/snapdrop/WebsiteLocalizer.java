@@ -41,6 +41,15 @@ public class WebsiteLocalizer {
         // no instances
     }
 
+    public static void localizeIfNotBuiltIn(final WebView webView) {
+        webView.evaluateJavascript("(function() { return !!document.getElementById('language-selector'); })();", localizationBuiltIn -> {
+            if (localizationBuiltIn.equals("false")) {
+                //Localization is not built into instance. Localize via snapdrop-android.
+                localize(webView);
+            }
+        });
+    }
+
     public static void localize(final WebView webView) {
         for (TranslationElement element : TranslationElement.values()) {
             webView.evaluateJavascript(getTranslationJS(element, webView.getContext()), null);
