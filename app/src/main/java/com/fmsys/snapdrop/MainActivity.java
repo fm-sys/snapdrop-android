@@ -578,7 +578,7 @@ public class MainActivity extends AppCompatActivity {
             binding.webview.evaluateJavascript(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"),
                     returnValue -> binding.loadAnimator.animate().alpha(0).withEndAction(() -> binding.webview.animate().alpha(1).start()));
             binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()), null);
-            WebsiteLocalizer.localize(binding.webview);
+            WebsiteLocalizer.localizeIfNotBuiltIn(binding.webview);
             Log.w("WebView", "init end.");
         }
 

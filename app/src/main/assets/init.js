@@ -157,19 +157,23 @@ try {
 
 //show localized display name
 try {
-    let localizeDisplayName = function(str){
-        const displayNameNode = document.getElementById('displayName');
-        // don't change it e.g. for pairdrop.net
-        if (displayNameNode.textContent.substring(0, 17) === "You are known as ") {
-            displayNameNode.textContent = SnapdropAndroid.getYouAreKnownAsTranslationString(str);
+    const localizationBuiltIn = !!document.getElementById('language-selector');
+
+    if (!localizationBuiltIn) {
+        let localizeDisplayName = function(str){
+            const displayNameNode = document.getElementById('displayName');
+            // don't change it e.g. for pairdrop.net
+            if (displayNameNode.textContent.substring(0, 17) === "You are known as ") {
+                displayNameNode.textContent = SnapdropAndroid.getYouAreKnownAsTranslationString(str);
+            }
+        };
+
+        window.addEventListener('display-name', e => window.setTimeout(_ => localizeDisplayName(e.detail.message.displayName), 100), false);
+
+        let currentText = document.getElementById('displayName').textContent;
+        if(currentText.startsWith("You are known as ")){
+            localizeDisplayName(currentText.split("You are known as ")[1]);
         }
-    };
-
-    window.addEventListener('display-name', e => window.setTimeout(_ => localizeDisplayName(e.detail.message.displayName), 100), false);
-
-    let currentText = document.getElementById('displayName').textContent;
-    if(currentText.startsWith("You are known as ")){
-        localizeDisplayName(currentText.split("You are known as ")[1]);
     }
 } catch (e) {
     console.error(e);
