@@ -18,12 +18,11 @@ android {
         //  -   Don't forget to always **pull** changes into the local repo!!!
         //  -   Change version code and name when releasing a new version
         //  -   Afterwards, build a new version via Build > Generate Signed Bundle / APK...
-        //  -   Please move the APK to the "./releases/old" folder for archiving purposes
-        //  -   Push to GitHub
-        //  -   Write Changelog at GitHub
         //  -   Upload and publish APK to Google Play
-        //  -   Publish the release tag on Github
-        //  -   Post release info to Twitter
+        //  -   Push release-commit to GitHub
+        //  -   If feature release: - Write Changelog at GitHub and create release tag there
+        //  -                         Optional: Post release info to X/Twitter
+        //  -   Otherwise:          - `git tag vX.X.X` and `git push origin vX.X.X`
 
         versionCode 43
         versionName "2.2.4"
