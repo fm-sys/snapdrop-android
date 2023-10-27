@@ -18,7 +18,6 @@
     <string name="onboarding_server_custom">URL personalizat</string>
     <string name="onboarding_server_custom_summary">Experţii îşi pot găzdui şi propriile servere.</string>
     <string name="onboarding_howto">Instrucțiuni de folosire</string>
-    <string name="onboarding_howto_summary">1. Deschide această aplicație sau %s pe orice alt dispozitiv din rețeaua locală Wireless.\n\n2. Alege dispozitivul cu care vrei sa partajezi fișierele.\n\n3. Gata! Fișierele sunt trimise…</string>
     <string name="onboarding_howto_troubleshoot">Sugestie: Dispozitivele trebuie să fie conectate la aceeași rețea WiFi. Nu va funcționa dacă un VPN este activat.</string>
     <!-- Download -->
     <string name="download_save_pending">Se stochează fișierul. Vă rugăm să aveți puțină răbdare...</string>

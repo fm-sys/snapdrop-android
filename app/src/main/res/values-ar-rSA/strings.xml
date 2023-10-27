@@ -17,10 +17,11 @@
     <string name="onboarding_storage_permission_description">هذا التطبيق هو أداة مشاركة للملفات. لذلك، إذن التخزين مطلوب لاستخدامه.</string>
     <string name="onboarding_server_pairdrop_summary">(موصى به)\nميزة الاقتران ، نقل الإنترنت والتركيز على الاستقرار.</string>
     <string name="onboarding_server_snapdrop_summary">سناب دروب الكلاسيكي والبسيط.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">تحذير: الخادم غير مستقر</string>
     <string name="onboarding_server_custom">عنوان URL مخصص</string>
     <string name="onboarding_server_custom_summary">ويمكن للخبراء أيضا أن يستضيفوا خوادمهم الخاصة.</string>
     <string name="onboarding_howto">كيفية الاستخدام</string>
-    <string name="onboarding_howto_summary">1. افتح هذا التطبيق أو %s على أي جهاز آخر في شبكة الواي فاي المحلية الخاصة بك.\n\n2. اضغط على الجهاز الذي تريد مشاركة الملف (الملفات) معه.\n\n3. تم! سيتم إرسال الملف (الملفات)…</string>
+    <string name="onboarding_howto_summary">1. افتح هذا التطبيق أو %s على أي جهاز آخر في شبكة WiFi المحلية الخاصة بك.\n\n2. اضغط على الجهاز وحدد الملفات التي تريد إرسالها.\n\n3. تم! سيتم إرسال الملفات…</string>
     <string name="onboarding_howto_troubleshoot">تلميح: الأجهزة يجب أن تكون متصلة بنفس شبكة الواي فاي. قد لا تعمل إذا تم تمكين VPN.</string>
     <!-- Download -->
     <string name="download_save_pending">يتم تخزين الملف. يرجى التحلي بالصبر قليلاً…</string>

@@ -20,7 +20,6 @@
     <string name="onboarding_server_custom">커스텀 URL</string>
     <string name="onboarding_server_custom_summary">전문가들은 직접 서버를 호스팅할 수도 있습니다.</string>
     <string name="onboarding_howto">사용법</string>
-    <string name="onboarding_howto_summary">1. 이 앱 또는 %s를 같은 Wi-Fi에 연결된 기기에서 여세요.\n\n2. 파일(들) 을 공유하려는 기기를 누르세요.\n\n3. 파일(들) 이 공유됩니다…</string>
     <string name="onboarding_howto_troubleshoot">팁: 기기들이 같은 Wi-Fi에 연결되어 있어야 합니다. VPN이 연결되어 있다면 작동하지 않을 수 있습니다.</string>
     <!-- Download -->
     <string name="download_save_pending">파일을 저장중입니다. 잠시 기다려주세요...</string>
