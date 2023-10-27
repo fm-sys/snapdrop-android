@@ -210,6 +210,12 @@ try {
     console.error(e);
 }
 try {
+    // remove pairdrop language selector
+    document.getElementById('language-selector').style.display = "none";
+} catch (e) {
+    console.error(e);
+}
+try {
     // other items
     document.querySelector('.icon-button[href="#about"]').style.display = "none";
     document.querySelector('.icon-button[href="#"]').style.display = "none";
