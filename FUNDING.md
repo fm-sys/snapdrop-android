@@ -7,13 +7,11 @@
 
 <br/>
 
-<h3 align="center"> Support the Snapdrop Community</h3>
-<p align="center"><a href="https://github.com/RobinLinus/snapdrop#support-the-snapdrop-community" rel="nofollow">➡️ read how to donate to https://snapdrop.net</a></p>
-
 <h3 align="center"> Support the PairDrop Community</h3>
 <p align="center"><a href="https://github.com/schlagmichdoch/PairDrop#support-the-community" rel="nofollow">➡️ read how to donate to https://pairdrop.net</a></p>
 
-<br/>
+<h3 align="center"> Support the Snapdrop Community</h3>
+<p align="center"><a href="https://github.com/RobinLinus/snapdrop#support-the-snapdrop-community" rel="nofollow">➡️ read how to donate to https://snapdrop.net</a></p>
 
 <h3 align="center">Buy me a coffee</h3>
 <p align="center">If you want to support the developer of Snapdrop for Android, you are welcome to by me a coffe or hot chocolate :)</p>
