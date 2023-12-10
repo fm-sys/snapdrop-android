@@ -12,6 +12,7 @@
 
 **Snapdrop & PairDrop for Android** is an android client for the free and open source local file sharing solution https://snapdrop.net/. 
 
+>[!NOTE]
 >Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
 >
 > - USB? - Old fashioned!
