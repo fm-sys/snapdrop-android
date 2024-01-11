@@ -61,7 +61,7 @@ If you want to help with development, this would be more than welcome! I am very
 
 ## Other software
 ### Other Snapdrop software
-- Firefox Add-on for desktop platforms: [Snapdrop Web Extension](https://github.com/ueen/SnapdropFirefoxAddon)
+- Firefox Add-on for desktop platforms: [Pairdrop Web Extension](https://github.com/ueen/PairdropWebExtension)
 - And for sure, PairDrop directly inside the browser - just use it everywhere: https://pairdrop.net/
 - And for sure, Snapdrop directly inside the browser - just use it everywhere: https://snapdrop.net/
 - Serverless snapdrop desktop app: https://github.com/JustSch/node-snapdrop-electron
