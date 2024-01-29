@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Android için Snapdrop &amp; PairDrop</string>
     <string name="app_name_slogan">Dosyaları tüm cihazlarınız arasında sorunsuz bir şekilde aktarın.</string>
     <string name="err_no_browser">Tarayıcı açılamıyor</string>
     <string name="err_no_app">Bu dosyayı açmak için yüklü bir uygulama yok</string>
@@ -10,10 +11,12 @@
     <string name="onboarding_button_grant">izin ver</string>
     <string name="onboarding_button_finish">bitir</string>
     <string name="onboarding_choose_server">Server adresi seçin</string>
+    <string name="onboarding_choose_server_short">sunucu seçin</string>
     <string name="onboarding_storage_permission">Depolama izni</string>
     <string name="onboarding_storage_permission_description">Bu uygulama bir dosya aktarım aracıdır. Uygulamayı kullanabilmek için depolama izni gerekir.</string>
     <string name="onboarding_server_pairdrop_summary">(önerilir)\nEşleştirme özelliği, internet aktarımı ve stabilite üzerine odaklı.</string>
     <string name="onboarding_server_snapdrop_summary">Klasik snapdrop. Temiz ve basit.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Uyarı: Sunucu kararsızlığı</string>
     <string name="onboarding_server_custom">Özel URL</string>
     <string name="onboarding_server_custom_summary">Uzman kullanıcılar kendi serverlarını depolayabilir.</string>
     <string name="onboarding_howto">Nasıl kullanılır</string>
