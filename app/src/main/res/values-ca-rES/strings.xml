@@ -2,10 +2,12 @@
 <resources>
     <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop i PairDrop per a l\'Android</string>
+    <string name="app_name_slogan">Transfereix fitxers amb comoditat entre tots els teus dispositius.</string>
     <string name="err_no_browser">No es pot obrir el navegador</string>
     <string name="err_no_app">No hi ha cap aplicació per a obrir el fitxer</string>
     <string name="open_url">Obrir enllaç</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">continua</string>
     <!-- Download -->
     <string name="download_save_pending">Descarregant l\'arxiu. Siusplau, tingui una mica de paciència…</string>
     <string name="download_successful">S\'ha baixat amb èxit</string>
