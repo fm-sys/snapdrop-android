@@ -17,10 +17,11 @@
     <string name="onboarding_storage_permission_description">Tato aplikace je nástroj pro sdílení souborů. Proto je vyžadováno oprávnění pro její používání.</string>
     <string name="onboarding_server_pairdrop_summary">(doporučeno)\nPárování, internetový přenos a zaměření na stabilitu.</string>
     <string name="onboarding_server_snapdrop_summary">Klasický Snapdrop. Čistý a jednoduchý.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Varování: Nestability serveru</string>
     <string name="onboarding_server_custom">Vlastní URL</string>
     <string name="onboarding_server_custom_summary">Pokročilí uživatelé mohou také hostovat své vlastní servery.</string>
     <string name="onboarding_howto">Jak na to</string>
-    <string name="onboarding_howto_summary">1. Navštivte stránku %s, nebo otevřete aplikaci Snapdrop na jakémkoliv jiném zařízení připojené ke stejné WiFi síti.\n\n2. Klepněte na zařízení, se kterým chcete sdílet soubor(y).\n\n3. A máme hotovo! Soubor(y) se odešle/ou…</string>
+    <string name="onboarding_howto_summary">1. Otevřete tuto aplikaci nebo %s na jakémkoli jiném zařízení v místní WiFi síti.\n\n2. Klepněte na zařízení a vyberte soubory, které chcete odeslat.\n\n3. A je to! Soubory budou odeslány…</string>
     <string name="onboarding_howto_troubleshoot">Tip: Zařízení musí být připojena ke stejné síti WiFi. Pokud je VPN povoleno, nemusí to fungovat.</string>
     <!-- Download -->
     <string name="download_save_pending">Ukládání souboru. Chvíli strpení…</string>
