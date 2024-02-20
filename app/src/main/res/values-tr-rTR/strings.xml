@@ -12,6 +12,7 @@
     <string name="onboarding_button_finish">bitir</string>
     <string name="onboarding_choose_server">Server adresi seçin</string>
     <string name="onboarding_choose_server_short">sunucu seçin</string>
+    <string name="onboarding_choose_server_description">Bu uygulama Snapdrop ve PairDrop web uygulamaları için optimize edilmiş bir istemcidir.\nAşağıdaki örneklerden birini seçin veya bağlanılacak özel bir URL belirtin.\n\nNot: Tüm cihazlarda aynı URL\'yi seçmelisiniz.</string>
     <string name="onboarding_storage_permission">Depolama izni</string>
     <string name="onboarding_storage_permission_description">Bu uygulama bir dosya aktarım aracıdır. Uygulamayı kullanabilmek için depolama izni gerekir.</string>
     <string name="onboarding_server_pairdrop_summary">(önerilir)\nEşleştirme özelliği, internet aktarımı ve stabilite üzerine odaklı.</string>
@@ -57,6 +58,7 @@
     <string name="permission_not_granted_fallback">lütfen gerekli izni manuel olarak onaylayın</string>
     <string name="open_settings">ayarları aç</string>
     <string name="retain_location_metadata_title">Konum meta verilerini koru</string>
+    <string name="retain_location_metadata_summary_off">Konum bilgisi içeren bazı medya dosyaları varsayılan olarak temizlenmiş olabilir. Tüm metabilgiyi eklemek için izin verin</string>
     <string name="retain_location_metadata_summary_on">Uygulama şuan tam dosya iznine sahip</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
@@ -80,6 +82,7 @@
     <string name="error_network_offline">Çevrimdışısınız</string>
     <string name="ignore_error_network">Yine de devam et</string>
     <string name="error_not_reachable_title">Ups, üzgünüm!</string>
+    <string name="error_server_not_reachable">Sunucuya erişim sağlanamaz. \n\nEğer internet bağlantınız çalışıyorsa ve bu durum tekrar ediyorsa lütfen başka bir sunucu adresi seçmeyi deneyin.</string>
     <!-- Website Localization -->
     <string name="website_no_peers_info">Dosyalarınızı diğer cihazlara göndermek için uygulamayı veya web sitesini açın</string>
     <string name="website_instruction">Dosya göndermek için dokun veya mesaj göndermek için basılı tut</string>
