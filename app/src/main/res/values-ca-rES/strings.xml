@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop i PairDrop per a l\'Android</string>
+    <string name="app_name_slogan">Transfereix fitxers amb comoditat entre tots els teus dispositius.</string>
     <string name="err_no_browser">No es pot obrir el navegador</string>
     <string name="err_no_app">No hi ha cap aplicació per a obrir el fitxer</string>
     <string name="open_url">Obrir enllaç</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">continua</string>
+    <string name="onboarding_button_grant">concedeix permís</string>
+    <string name="onboarding_button_finish">finalitza</string>
+    <string name="onboarding_choose_server">Trieu una adreça del servidor</string>
+    <string name="onboarding_choose_server_short">trieu el servidor</string>
+    <string name="onboarding_choose_server_description">Aquesta aplicació és un client optimitzat per a les aplicacions web Snapdrop i PairDrop.\nTrieu una de les següents instàncies o especifiqueu un URL personalitzat per connectar-vos.\n\nNota: Heu de triar el mateix URL en tots els dispositius.</string>
+    <string name="onboarding_storage_permission">Permís d\'emmagatzematge</string>
+    <string name="onboarding_storage_permission_description">Aquesta aplicació és una utilitat per compartir fitxers. Per tant, es requereix el permís d\'emmagatzematge per poder utilitzar-la.</string>
+    <string name="onboarding_server_pairdrop_summary">(recomanat)\nFunció d\'emparellament, transferència per Internet i enfocat en l\'estabilitat.</string>
+    <string name="onboarding_server_snapdrop_summary">L\'snapdrop clàssic. Net i senzill.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Avís: Inestabilitats del servidor</string>
+    <string name="onboarding_server_custom">URL personalitzat</string>
+    <string name="onboarding_server_custom_summary">Els usuaris més experts poden allotjar els seus servidors.</string>
+    <string name="onboarding_howto">Com funciona</string>
+    <string name="onboarding_howto_summary">1. Obriu aquesta aplicació o %s en qualsevol altre dispositiu de la xarxa wifi local.\n\n2. Toqueu el dispositiu i seleccioneu els fitxers que voleu enviar.\n\n3. Fet. Els fitxers s\'enviaran…</string>
+    <string name="onboarding_howto_troubleshoot">Consell: Els dispositius han d\'estar connectats amb la mateixa xarxa wifi. Pot ser que no funcioni si hi ha una VPN habilitada.</string>
     <!-- Download -->
-    <string name="download_save_pending">Descarregant l\'arxiu. Siusplau, tingui una mica de paciència…</string>
+    <string name="download_save_pending">S\'està baixant el fitxer. Si us plau, tingueu una mica de paciència…</string>
     <string name="download_successful">S\'ha baixat amb èxit</string>
-    <string name="notification_channel_name">Descàrrega completada</string>
+    <string name="notification_channel_name">Baixada completada</string>
     <!-- Action Buttons -->
-    <string name="open">obrir</string>
-    <string name="reset">restablir</string>
-    <string name="copy">copiar</string>
+    <string name="open">obre</string>
+    <string name="install">instal·la</string>
+    <string name="reset">reinicia</string>
+    <string name="copy">copia</string>
+    <string name="retry">torna-ho a intentar</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Quant a</string>
-    <string name="pref_about_title">Sobre aquesta aplicació</string>
+    <string name="title_activity_about">Quant a Snapdrop i PairDrop per a Android</string>
+    <string name="pref_about_title">Quant a aquesta aplicació</string>
+    <string name="view_downloads">Mostra les baixades</string>
     <string name="pref_category_settings">Configuració</string>
     <string name="logs">Registres per diagnòstics</string>
-    <string name="components_summary">Prem per mostrar</string>
-    <string name="read_more">Més informació</string>
+    <string name="components_summary">Toqueu per mostrar</string>
+    <string name="support_us">Doneu-nos suport</string>
+    <string name="support_us_summary">Mireu com podeu ajudar a aquest projecte</string>
+    <string name="read_more">més informació</string>
     <string name="version">Versió</string>
     <string name="pref_device_name_title">Nom del dispositiu</string>
     <string name="pref_device_name_summary">Estableix un nom de dispositiu definit per l\'usuari</string>
@@ -27,28 +51,46 @@
     <string name="keep_on_title">Deixa la pantalla encesa mentre es transfereix</string>
     <string name="floating_text_selection_title">Selecció del text flotant</string>
     <string name="floating_text_selection_summary">Quan se seleccioni text en altres aplicacions, l\'opció \"Enviar amb snapdrop\" sortirà</string>
+    <string name="show_connectivity_card_title">Avís de connectivitat</string>
+    <string name="show_connectivity_card_summary"> Mostra un avís quan no estigueu connectat amb wifi</string>
     <string name="floating_text_selection_activity_label">Envia amb Snapdrop</string>
+    <string name="permission_not_granted">concediu el permís necessari</string>
+    <string name="permission_not_granted_fallback">concediu manualment el permís necessari</string>
+    <string name="open_settings">obre la configuració</string>
+    <string name="retain_location_metadata_title">Conserva les metadades de la ubicació</string>
+    <string name="retain_location_metadata_summary_off">Alguns fitxers multimèdia poden contenir dades d\'ubicació que no persisteixen per defecte. Concediu el permís per incloure totes les metadades</string>
+    <string name="retain_location_metadata_summary_on">L\'aplicació ja té accés complet al fitxer</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Predeterminat del sistema</item>
         <item>Clar</item>
         <item>Fosc</item>
     </string-array>
+    <string name="baseurl_title">Canvia l\'adreça del servidor</string>
+    <string name="baseurl_not_set">No definit</string>
+    <string name="baseurl_instance_verified">La instància s\'ha verificat correctament</string>
+    <string name="baseurl_no_snapdrop_instance">Sembla que la instància no està suportada</string>
+    <string name="baseurl_check_instance_failed">No s\'ha pogut verificar la instància</string>
+    <string name="baseurl_unofficial_instances">Consulteu les <a href="">PMF</a> per obtenir una llista d\'instàncies no oficials. Tingueu en compte que algunes instàncies poden no funcionar correctament dins de l\'aplicació.</string>
     <string name="save_location">Desa a la ubicació</string>
     <!-- File sharing -->
-    <string name="intent_file">Un arxiu ha estat seleccionat per compartir</string>
-    <string name="intent_files">Arxius han estat seleccionats per compartir</string>
+    <string name="intent_file">S\'ha seleccionat un fitxer per compartir</string>
+    <string name="intent_files">S\'han seleccionat els fitxers per compartir</string>
     <string name="intent_content">El contingut està seleccionat per compartir</string>
-    <string name="error_filechooser">El selector d\'arxius no es pot obrir</string>
-    <string name="error_network">Si us plau, comprova que estas conectat a una xarxa WiFi</string>
-    <string name="ignore_error_network">Deixa\'m intentar-ho igualment</string>
-    <string name="error_not_reachable_title">Ups, perdó!</string>
+    <string name="error_filechooser">No s\'ha pogut obrir el selector de fitxers</string>
+    <string name="error_network">Si us plau, comproveu que estigueu connectat a una xarxa wifi</string>
+    <string name="error_network_no_wifi">Connecteu-vos a una xarxa Wi-Fi o emparelleu dispositius</string>
+    <string name="error_network_offline">Esteu fora de línia</string>
+    <string name="ignore_error_network">Deixa\'m entrar igualment</string>
+    <string name="error_not_reachable_title">Ostres, ens sap greu.</string>
+    <string name="error_server_not_reachable">No s\'ha pogut arribar al servidor. \n\nSi la vostra connexió a Internet funciona i això continua passant, si us plau, intenteu seleccionar una altra adreça del servidor.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Obriu l\'aplicació o el lloc web en altres dispositius per enviar fitxers</string>
     <string name="website_instruction">Premeu per a enviar arxius o manteniu premut per a enviar un missatge</string>
-    <string name="website_file_received">Arxiu rebut</string>
-    <string name="website_file_ask_before_download">Pregunta sempre abans de guardar un arxiu</string>
-    <string name="website_file_download">Guardar</string>
+    <string name="website_file_received">S\'ha rebut el fitxer</string>
+    <string name="website_file_ask_before_download">Pregunta sempre abans de desar un fitxer</string>
+    <string name="website_file_download">Desa</string>
     <string name="website_footer_discovery">Pots ser trobat per qualsevol en aquesta xarxa</string>
-    <string name="website_footer_known_as">Ets conegut com a %s</string>
+    <string name="website_footer_known_as">Sou conegut com a %s</string>
     <string name="website_about_subheading">La manera més fàcil per a passar arxius entre dispositius</string>
 </resources>

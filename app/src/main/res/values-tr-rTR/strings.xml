@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Android için Snapdrop &amp; PairDrop</string>
     <string name="app_name_slogan">Dosyaları tüm cihazlarınız arasında sorunsuz bir şekilde aktarın.</string>
     <string name="err_no_browser">Tarayıcı açılamıyor</string>
     <string name="err_no_app">Bu dosyayı açmak için yüklü bir uygulama yok</string>
@@ -10,13 +11,18 @@
     <string name="onboarding_button_grant">izin ver</string>
     <string name="onboarding_button_finish">bitir</string>
     <string name="onboarding_choose_server">Server adresi seçin</string>
+    <string name="onboarding_choose_server_short">sunucu seçin</string>
+    <string name="onboarding_choose_server_description">Bu uygulama Snapdrop ve PairDrop web uygulamaları için optimize edilmiş bir istemcidir.\nAşağıdaki örneklerden birini seçin veya bağlanılacak özel bir URL belirtin.\n\nNot: Tüm cihazlarda aynı URL\'yi seçmelisiniz.</string>
     <string name="onboarding_storage_permission">Depolama izni</string>
     <string name="onboarding_storage_permission_description">Bu uygulama bir dosya aktarım aracıdır. Uygulamayı kullanabilmek için depolama izni gerekir.</string>
     <string name="onboarding_server_pairdrop_summary">(önerilir)\nEşleştirme özelliği, internet aktarımı ve stabilite üzerine odaklı.</string>
     <string name="onboarding_server_snapdrop_summary">Klasik snapdrop. Temiz ve basit.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Uyarı: Sunucu kararsızlığı</string>
     <string name="onboarding_server_custom">Özel URL</string>
     <string name="onboarding_server_custom_summary">Uzman kullanıcılar kendi serverlarını depolayabilir.</string>
     <string name="onboarding_howto">Nasıl kullanılır</string>
+    <string name="onboarding_howto_summary">1. Bu uygulamayı açın veya %s yerel WiFi ağınızdaki herhangi başka bir cihazda açın.\n\n2. Cihaza dokunun ve göndermek istediğiniz dosyaları seçin.\n\n3. Bitti! Dosyalarınız gönderilecektir…</string>
+    <string name="onboarding_howto_troubleshoot">İpucu: Cihazların aynı WiFi ağına bağlı olmaları gerekmektedir. Eğer bir VPN kullanıyorsanız işe yaramayabilir.</string>
     <!-- Download -->
     <string name="download_save_pending">Dosya depolanıyor. Lütfen bekleyiniz…</string>
     <string name="download_successful">İndirme başarılı</string>
@@ -26,9 +32,12 @@
     <string name="install">yükle</string>
     <string name="reset">Sıfırla</string>
     <string name="copy">kopyala</string>
+    <string name="retry">tekrar deneyiniz</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Hakkında</string>
+    <string name="title_activity_about">Android için Snapdrop &amp; PairDrop hakkında</string>
     <string name="pref_about_title">Uygulama hakkında</string>
+    <string name="view_downloads">İndirilenleri göster</string>
     <string name="pref_category_settings">Ayarlar</string>
     <string name="logs">Hata Ayıklama Günlükleri</string>
     <string name="components_summary">Görüntülemek için dokun</string>
@@ -42,14 +51,26 @@
     <string name="keep_on_title">Transfer sırasında ekranı açık tut</string>
     <string name="floating_text_selection_title">Kayan metin seçimi</string>
     <string name="floating_text_selection_summary">Diğer uygulamalarda metin seçerken \"Snapdrop ile gönder\" seçeneği gösterilecek</string>
+    <string name="show_connectivity_card_title">Bağlantı uyarısı</string>
+    <string name="show_connectivity_card_summary"> Bir WiFi ağına bağlı olmadığında uyarı göster</string>
     <string name="floating_text_selection_activity_label">Snapdrop ile gönder</string>
+    <string name="permission_not_granted">lütfen gerekli izni onaylayın</string>
+    <string name="permission_not_granted_fallback">lütfen gerekli izni manuel olarak onaylayın</string>
+    <string name="open_settings">ayarları aç</string>
+    <string name="retain_location_metadata_title">Konum meta verilerini koru</string>
+    <string name="retain_location_metadata_summary_off">Konum bilgisi içeren bazı medya dosyaları varsayılan olarak temizlenmiş olabilir. Tüm metabilgiyi eklemek için izin verin</string>
+    <string name="retain_location_metadata_summary_on">Uygulama şuan tam dosya iznine sahip</string>
     <string name="settings_theme_title">Tema</string>
     <string-array name="darkmode_entries">
         <item>Sistem Varsayılanı</item>
         <item>Aydınlık</item>
         <item>Karanlık</item>
     </string-array>
+    <string name="baseurl_title">Sunucu adresini değiştir</string>
     <string name="baseurl_not_set">Belirlenmemiş</string>
+    <string name="baseurl_instance_verified">İstemci başarıyla onaylandı</string>
+    <string name="baseurl_no_snapdrop_instance">Görünüşe göre istemci desteklenmiyor</string>
+    <string name="baseurl_check_instance_failed">İstemci doğrulaması başarısız oldu</string>
     <string name="save_location">Kayıt konumu</string>
     <!-- File sharing -->
     <string name="intent_file">Bir dosya paylaşım için seçildi</string>
@@ -57,9 +78,13 @@
     <string name="intent_content">İçerik paylaşım için seçildi</string>
     <string name="error_filechooser">Dosya seçici açılamıyor</string>
     <string name="error_network">Bir WiFi ağına bağlı olduğunuzdan emin olun</string>
+    <string name="error_network_no_wifi">Lütfen bir WiFi ağına bağlanın veya cihazları eşleştirin</string>
+    <string name="error_network_offline">Çevrimdışısınız</string>
     <string name="ignore_error_network">Yine de devam et</string>
     <string name="error_not_reachable_title">Ups, üzgünüm!</string>
+    <string name="error_server_not_reachable">Sunucuya erişim sağlanamaz. \n\nEğer internet bağlantınız çalışıyorsa ve bu durum tekrar ediyorsa lütfen başka bir sunucu adresi seçmeyi deneyin.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Dosyalarınızı diğer cihazlara göndermek için uygulamayı veya web sitesini açın</string>
     <string name="website_instruction">Dosya göndermek için dokun veya mesaj göndermek için basılı tut</string>
     <string name="website_file_received">Dosya alındı</string>
     <string name="website_file_ask_before_download">Bir dosya kaydetmeden önce her zaman sor</string>

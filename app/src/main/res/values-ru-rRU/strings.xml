@@ -17,9 +17,11 @@
     <string name="onboarding_storage_permission_description">Это приложение является утилитой для обмена файлами. Поэтому для его использования требуется разрешение на работу с файлами.</string>
     <string name="onboarding_server_pairdrop_summary">(Рекомендуется)\nВозможность сопряжения, интернет-передача и фокус на стабильности.</string>
     <string name="onboarding_server_snapdrop_summary">Классический Snapdrop. Чистый и простой.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Предупреждение: Нестабильность сервера</string>
     <string name="onboarding_server_custom">Пользовательский URL</string>
     <string name="onboarding_server_custom_summary">Эксперты также могут размещать свои собственные серверы.</string>
     <string name="onboarding_howto">Как пользоваться</string>
+    <string name="onboarding_howto_summary">1. Откройте это приложение или %s на любом другом устройстве в локальной сети WiFi.\n\n2. Нажмите на устройство и выберите файлы, которые вы хотите отправить.\n\n3. Готово! Файлы будут отправлены…</string>
     <string name="onboarding_howto_troubleshoot">Подсказка: Устройства должны быть подключены к одной и той же сети WiFi. Это может не работать, если включен VPN.</string>
     <!-- Download -->
     <string name="download_save_pending">Сохранение файла. Пожалуйста, наберитесь терпения...</string>
