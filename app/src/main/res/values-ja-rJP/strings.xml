@@ -8,20 +8,42 @@
     <string name="open_url">URLから開く</string>
     <!-- Onboarding -->
     <string name="onboarding_button_continue">続行</string>
+    <string name="onboarding_button_grant">権限を許可する</string>
+    <string name="onboarding_button_finish">完了</string>
     <string name="onboarding_choose_server">サーバー選択</string>
     <string name="onboarding_choose_server_short">サーバー選択</string>
+    <string name="onboarding_choose_server_description">このアプリはウェブアプリのSnapdropとPairDropに対応しています。\n以下のサーバーを選択するか、カスタムサーバーのURLを入力してください。\n\n注意: すべてのデバイスで同じサーバーに接続する必要があります。</string>
+    <string name="onboarding_storage_permission">ストレージ権限</string>
+    <string name="onboarding_storage_permission_description">このアプリはファイル共有ツールです。そのため、ストレージへのアクセス許可が必要です。</string>
+    <string name="onboarding_server_pairdrop_summary">(推奨)\nペアリングやインターネット上での転送機能があり、安定しています。</string>
+    <string name="onboarding_server_snapdrop_summary">シンプルな従来通りのSnapdropです。</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">警告: サーバーが不安定なことがあります</string>
+    <string name="onboarding_server_custom">カスタムサーバー</string>
+    <string name="onboarding_server_custom_summary">知識がある方はご自身でサーバーを立てることもできます。</string>
+    <string name="onboarding_howto">使い方</string>
+    <string name="onboarding_howto_summary">1. 同じWiFiに接続しているデバイスで%sか、このアプリを開いてください。\n\n2. 画面上に現れたご自身のデバイスを選び、送信したいファイルを選択してください。\n\n3. これで完了です！ファイルが転送されます…</string>
+    <string name="onboarding_howto_troubleshoot">ヒント：デバイスを同じWiFiに接続する必要があります。VPNが有効な場合、動作しない可能性があります。</string>
     <!-- Download -->
     <string name="download_save_pending">ファイルを保存しています。少しお待ちください…</string>
     <string name="download_successful">ダウンロード完了</string>
     <string name="notification_channel_name">ダウンロードが完了しました</string>
     <!-- Action Buttons -->
     <string name="open">開く</string>
+    <string name="install">インストール</string>
     <string name="reset">リセット</string>
     <string name="copy">コピー</string>
+    <string name="retry">再試行</string>
     <!-- Settings / About -->
+    <string name="home_as_up_indicator_about">このアプリについて</string>
+    <string name="title_activity_about">Snapdrop &amp; PairDrop for Androidについて</string>
+    <string name="pref_about_title">このアプリについて</string>
+    <string name="view_downloads">ダウンロードを表示</string>
     <string name="pref_category_settings">設定</string>
     <string name="logs">デバッグ ログ</string>
     <string name="components_summary">タップして表示</string>
+    <string name="support_us">支援</string>
+    <string name="support_us_summary">このプロジェクトを支援方法について</string>
+    <string name="read_more">もっと読む</string>
     <string name="version">バージョン</string>
     <string name="pref_device_name_title">デバイス名</string>
     <string name="pref_device_name_summary">カスタムデバイス名を設定する</string>
@@ -29,28 +51,46 @@
     <string name="keep_on_title">転送時に画面を点灯したままにする</string>
     <string name="floating_text_selection_title">Floating text selection</string>
     <string name="floating_text_selection_summary">他のアプリでテキストを選択すると､「Snapdropで送信」オプションが表示されます</string>
+    <string name="show_connectivity_card_title">接続警告</string>
+    <string name="show_connectivity_card_summary"> WiFiに接続していない場合に警告を表示する</string>
     <string name="floating_text_selection_activity_label">Snapdropで送信</string>
+    <string name="permission_not_granted">必要な権限を許可してください</string>
+    <string name="permission_not_granted_fallback">必要な権限を手動で許可してください</string>
+    <string name="open_settings">設定を開く</string>
+    <string name="retain_location_metadata_title">位置情報メタデータを保持</string>
+    <string name="retain_location_metadata_summary_off">一部メディアファイルは、デフォルトで位置情報のデータが取り除かれることがあります。完全なメタデータを残したい場合は、ストレージ権限が必要です。</string>
+    <string name="retain_location_metadata_summary_on">現在、完全なストレージ権限が許可されています</string>
     <string name="settings_theme_title">テーマ</string>
     <string-array name="darkmode_entries">
         <item>システムデフォルト</item>
         <item>ライト</item>
         <item>ダーク</item>
     </string-array>
+    <string name="baseurl_title">サーバーを変更</string>
+    <string name="baseurl_not_set">未設定</string>
+    <string name="baseurl_instance_verified">サーバーが正常に検証されました</string>
+    <string name="baseurl_no_snapdrop_instance">このサーバーには対応していません</string>
+    <string name="baseurl_check_instance_failed">サーバーの検証に失敗しました</string>
+    <string name="baseurl_unofficial_instances">非公式サーバーのリストは<a href="">FAQ</a>をご覧ください。なお、一部サーバーはこのアプリに対応していない場合があるためご注意ください。</string>
     <string name="save_location">保存先</string>
     <!-- File sharing -->
-    <string name="intent_file">シェアするファイルが選択されています</string>
-    <string name="intent_files">シェアするファイルが選択されています</string>
-    <string name="intent_content">シェアするコンテンツが選択されています</string>
+    <string name="intent_file">共有するファイルが選択されています</string>
+    <string name="intent_files">共有するファイルが選択されています</string>
+    <string name="intent_content">共有するコンテンツが選択されています</string>
     <string name="error_filechooser">ファイル選択を開けません</string>
-    <string name="error_network">WiFiネットワークに接続されているか確認してください</string>
-    <string name="ignore_error_network">とにかく進む</string>
+    <string name="error_network">WiFiに接続しているか確認してください</string>
+    <string name="error_network_no_wifi">WiFiに接続するか、デバイスをペアリングしてください</string>
+    <string name="error_network_offline">オフライン</string>
+    <string name="ignore_error_network">無視して続行</string>
     <string name="error_not_reachable_title">申し訳ありません</string>
+    <string name="error_server_not_reachable">サーバーに接続できませんでした。\n\nインターネット接続が正常な場合は、別のサーバーを選択してください。</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">ファイルを共有するには、他のデバイスでアプリもしくはウェブサイトを開いてください</string>
     <string name="website_instruction">タップしてファイルを送信するか、長押しでメッセージを送信します</string>
     <string name="website_file_received">受信したファイル</string>
     <string name="website_file_ask_before_download">ファイルを保存する前に常に確認</string>
     <string name="website_file_download">保存</string>
-    <string name="website_footer_discovery">このネットワーク上のすべての人に発見される可能性があります</string>
-    <string name="website_footer_known_as">あなたは %sとして知られています</string>
-    <string name="website_about_subheading">デバイス間でファイルを転送する最も簡単な方法</string>
+    <string name="website_footer_discovery">このネットワーク上のすべてのデバイスからアクセスできます</string>
+    <string name="website_footer_known_as">他のデバイスに表示される名前: %s</string>
+    <string name="website_about_subheading">デバイス間のファイル共有を手軽に実現します</string>
 </resources>
