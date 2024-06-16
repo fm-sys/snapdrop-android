@@ -1,6 +1,6 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/fm-sys/snapdrop-android)](https://github.com/fm-sys/snapdrop-android/releases/latest) 
 [![CI build](https://github.com/fm-sys/snapdrop-android/workflows/APK%20Build/badge.svg?branch=master)](https://github.com/fm-sys/snapdrop-android) 
-[![Uptime status page](disabled!https://img.shields.io/uptimerobot/ratio/m794250124-e911aac785f4e3425de6b894?label=PairDrop%20uptime)](https://stats.uptimerobot.com/1VgjOC6P1R)
+[![Uptime status page](https://img.shields.io/uptimerobot/ratio/m794250124-e911aac785f4e3425de6b894?label=PairDrop%20uptime)](https://stats.uptimerobot.com/1VgjOC6P1R)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6a918bb3dc624cba87b5139f2cb4597d)](https://www.codacy.com/gh/fm-sys/snapdrop-android/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fm-sys/snapdrop-android&amp;utm_campaign=Badge_Grade) 
 [![Crowdin](https://badges.crowdin.net/snapdrop-android/localized.svg)](https://crowdin.com/project/snapdrop-android)
 [![GitHub issues](https://img.shields.io/github/issues/fm-sys/snapdrop-android)](https://github.com/fm-sys/snapdrop-android/issues) 
