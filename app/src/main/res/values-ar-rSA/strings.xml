@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">سناب درُوب</string>
-    <string name="app_name_long">سناب درُوب &amp; اقترن واسقط لِنِظامِ أندُروِيد</string>
+    <string name="app_name_long">سناب درُوب اقترن واسقط لِنِظامِ أندُروِيد</string>
     <string name="app_name_slogan">نقل الملفات بسلاسة بين جميع أجهزتك.</string>
     <string name="err_no_browser">لا يمكن فتح المستعرض</string>
     <string name="err_no_app">لا يوجد تطبيق لفتح هذا المِلَفّ</string>
