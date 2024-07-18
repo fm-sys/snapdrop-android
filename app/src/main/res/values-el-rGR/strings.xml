@@ -17,9 +17,11 @@
     <string name="onboarding_storage_permission_description">Αυτή η εφαρμογή είναι ένα πρόγραμμα κοινής χρήσης αρχείων. Ως εκ τούτου, απαιτείται άδεια αποθήκευσης για να μπορεί να χρησιμοποιηθεί.</string>
     <string name="onboarding_server_pairdrop_summary">(συνιστάται)\nΛειτουργία σύζευξης, μεταφορά μέσω διαδικτύου με στόχο τη σταθερότητα.</string>
     <string name="onboarding_server_snapdrop_summary">Το κλασσικό snapdrop. Απλό και λιτό.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Προειδοποίηση: αστάθειες διακομιστή</string>
     <string name="onboarding_server_custom">Προσαρμοσμένη διεύθυνση URL</string>
     <string name="onboarding_server_custom_summary">Οι ειδικοί μπορούν επιπλέον να το κάνουν host σε δικό τους servers.</string>
     <string name="onboarding_howto">Πώς να το χρησιμοποιήσω</string>
+    <string name="onboarding_howto_summary">1. Ανοίξτε αυτήν την εφαρμογή ή %s σε οποιαδήποτε άλλη συσκευή στο τοπικό σας δίκτυο WiFi.\n\n2. Επιλέξτε τη συσκευή στην οποία με την οποία θέλετε να μοιραστείτε τα αρχεία σας.\n\n3. Ολοκληρώθηκε! Τα αρχεία σας θα αποσταλούν…</string>
     <string name="onboarding_howto_troubleshoot">Συμβουλή: Οι συσκευές πρέπει να είναι συνδεδεμένες στο ίδιο δίκτυο WiFi. Ενδέχεται να μην λειτουργεί αν είναι συνδεδεμένο σε ένα VPN.</string>
     <!-- Download -->
     <string name="download_save_pending">Αποθήκευση του αρχείου. Παρακαλώ περιμένετε…</string>
