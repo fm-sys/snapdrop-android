@@ -16,8 +16,10 @@
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
-        app:tint="@color/textColorWhite"
-        tools:src="@drawable/snapdrop_anim" />
+        android:alpha="0"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_snapdrop"
+        tools:alpha="1" />
 
     <TextView
         android:id="@+id/app_name"
@@ -48,8 +50,8 @@
 
 
     <Button
-        style="@style/OnboardingButtonStyle"
         android:id="@+id/continue_button"
+        style="@style/OnboardingButtonStyle"
         android:layout_alignParentBottom="true"
         android:alpha="0"
         android:text="@string/onboarding_button_continue"
