@@ -16,9 +16,12 @@
     <string name="onboarding_storage_permission_description">Diese App ist ein Datei-Freigabe-Programm. Daher ist die Speicher-Berechtigung erforderlich, um funktionieren zu können.</string>
     <string name="onboarding_server_pairdrop_summary">(empfohlen)\nKopplungsfunktion, Internet-Übertragung und Fokus auf Stabilität.</string>
     <string name="onboarding_server_snapdrop_summary">Das klassische Snapdrop. Schlicht und simpel.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Warnung: Serverinstabilitäten</string>
     <string name="onboarding_server_custom">Eigene URL</string>
     <string name="onboarding_server_custom_summary">Experten können auch ihre eigenen Server hosten.</string>
+    <string name="onboarding_server_custom_add">Server hinzufügen</string>
     <string name="onboarding_howto">Wie funktioniert es?</string>
+    <string name="onboarding_howto_summary">1. Öffne diese App oder %s auf jedem anderen Gerät in deinem lokalen WiFi-Netzwerk.\n\n2. Tippen Sie auf das Gerät und wählen Sie die Dateien, die Sie senden möchten.\n\n3. Fertig! Die Dateien werden gesendet…</string>
     <string name="onboarding_howto_troubleshoot">Hinweis: Geräte müssen mit demselben WLAN-Netzwerk verbunden sein. Möglicherweise funktioniert es nicht, wenn ein VPN aktiviert ist.</string>
     <!-- Download -->
     <string name="download_save_pending">Datei wird gespeichert. Bitte haben Sie etwas Geduld…</string>
@@ -44,6 +47,8 @@
     <string name="version">Version</string>
     <string name="pref_device_name_title">Gerätename</string>
     <string name="pref_device_name_summary">Lege einen benutzerdefinierten Gerätenamen fest</string>
+    <string name="notifications_summary">Benachrichtigung bei Abschluss eines Downloads anzeigen</string>
+    <string name="notifications_title">Benachrichtigungen</string>
     <string name="keep_on_summary">(Empfohlen) Viele Geräte haben Probleme mit Übertragungen, wenn der Bildschirm ausgeschaltet wird</string>
     <string name="keep_on_title">Bildschirm während der Übertragung angeschaltet lassen</string>
     <string name="floating_text_selection_title">Schwebende Textauswahl</string>
