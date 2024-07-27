@@ -18,7 +18,7 @@
     <uses-permission-sdk-23 android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- Needed to prompt the user to give permission to install a downloaded apk -->
     <uses-feature
         android:name="android.hardware.wifi"
-        android:required="true" />
+        android:required="false" />
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
