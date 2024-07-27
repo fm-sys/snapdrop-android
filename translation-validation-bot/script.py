@@ -22,6 +22,7 @@ text = r.content.decode()
 translator = Translator()
 
 table_initialized = False
+counter = 0
 
 for line in text.splitlines():
     if line.startswith("+"):
@@ -32,11 +33,12 @@ for line in text.splitlines():
                 print2cache("ID|Translation|Reverse translated source string\n-|-|-")
             success = False
             while not success:
+                counter = counter + 1
                 try:
                     translation = translator.translate(match.group(2).replace("\\n", " \\n "))
                     success = True
                 except:
-                    print("API call blocked, wait some seconds and try again...")
+                    print("API call #" + str(counter) + " blocked, wait some seconds and try again...")
                     time.sleep(10)
             print2cache(f"{match.group(1)}|{translation.origin} ({translation.src})|{translation.text} ({translation.dest})")
         elif line.startswith("+++"):
