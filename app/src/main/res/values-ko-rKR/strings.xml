@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Android 용 Snapdrop 및 PairDrop</string>
     <string name="app_name_slogan">당신의 모든 기기간의 파일 전송을 매끄럽게 하세요</string>
     <string name="err_no_browser">브라우저를 실행할 수 없어요.</string>

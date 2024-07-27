@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop &amp; PairDrop for Android</string>
     <string name="app_name_slogan">在您的裝置間無縫傳輸檔案。</string>
     <string name="err_no_browser">無法開啟瀏覽器</string>
@@ -20,6 +19,7 @@
     <string name="onboarding_server_snapdrop_summary_server_warning">警告：伺服器不穩定</string>
     <string name="onboarding_server_custom">自訂 URL</string>
     <string name="onboarding_server_custom_summary">專家也可以託管個人所有的伺服器。</string>
+    <string name="onboarding_server_custom_add">新增伺服器</string>
     <string name="onboarding_howto">如何使用</string>
     <string name="onboarding_howto_summary">1. 在您的區域 WiFi 網路中的任何其他裝置上開啟這個應用程式或 %s。\n\n2. 輕觸裝置並選取您想要傳送的檔案。\n\n3. 大功告成！檔案將被傳送…</string>
     <string name="onboarding_howto_troubleshoot">提示：裝置可能需要連線至同一個 WiFi 網路，如果啟用了 VPN，應用程式可能無法正常運作。</string>
@@ -47,6 +47,8 @@
     <string name="version">版本</string>
     <string name="pref_device_name_title">裝置名稱</string>
     <string name="pref_device_name_summary">設定使用者定義的裝置名稱</string>
+    <string name="notifications_summary">下載完成時顯示通知</string>
+    <string name="notifications_title">通知</string>
     <string name="keep_on_summary">如果遇到螢幕休眠而中斷傳輸請開啟這個選項</string>
     <string name="keep_on_title">傳輸時保持螢幕開啟</string>
     <string name="floating_text_selection_title">浮動式文字選取</string>

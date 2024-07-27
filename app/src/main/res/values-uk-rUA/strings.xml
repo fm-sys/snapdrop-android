@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop для Android</string>
+    <string name="app_name_slogan">Легко передавайте файли між усіма своїми пристроями.</string>
     <string name="err_no_browser">Не вдається відкрити браузер</string>
     <string name="err_no_app">Немає встановлених програм, щоб відкрити цей файл</string>
     <string name="open_url">Відкрити URL-адресу</string>
     <!-- Onboarding -->
+    <string name="onboarding_button_continue">продовжити</string>
+    <string name="onboarding_button_grant">надати дозвіл</string>
+    <string name="onboarding_button_finish">завершити</string>
+    <string name="onboarding_choose_server">Виберіть адресу сервера</string>
+    <string name="onboarding_choose_server_short">вибрати сервер</string>
+    <string name="onboarding_choose_server_description">Цей застосунок є оптимізованим клієнтом для вебзастосунків Snapdrop і PairDrop.\nВиберіть один із наведених нижче екземплярів або вкажіть спеціальну URL-адресу для підключення.\n\nПримітка: Вам потрібно вибрати однакову URL-адресу на всіх пристроях.</string>
+    <string name="onboarding_storage_permission">Дозвіл на зберігання</string>
+    <string name="onboarding_storage_permission_description">Цей застосунок є засобом для обміну файлами. Тому для його використання потрібен дозвіл на зберігання.</string>
+    <string name="onboarding_server_pairdrop_summary">(рекомендовано)\nФункція створення пари, передавання через інтернет та зосередженість на стабільності.</string>
+    <string name="onboarding_server_snapdrop_summary">Класичний snapdrop. Чисто і просто.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Попередження: Нестабільність сервера</string>
+    <string name="onboarding_server_custom">Користувацька URL</string>
+    <string name="onboarding_server_custom_summary">Експерти також можуть розміщувати власні сервери.</string>
+    <string name="onboarding_server_custom_add">Додавати сервер</string>
+    <string name="onboarding_howto">Як використовувати</string>
+    <string name="onboarding_howto_summary">1. Відкрийте цей застосунок або %s на будь-якому іншому пристрої у вашій локальній мережі WiFi.\n\n2. Торкніться пристрою та виберіть файли, які хочете надіслати.\n\n3. Готово! Файли будуть надіслані…</string>
+    <string name="onboarding_howto_troubleshoot">Підказка: Пристрої мають бути підключені до однієї мережі WiFi. Це може не працювати, якщо ввімкнено VPN.</string>
     <!-- Download -->
     <string name="download_save_pending">Збереження файлу. Будь ласка зачекайте…</string>
     <string name="download_successful">Завантажено успішно</string>
@@ -14,27 +32,47 @@
     <string name="install">встановити</string>
     <string name="reset">скинути</string>
     <string name="copy">копіювати</string>
+    <string name="retry">повторити</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Про</string>
+    <string name="title_activity_about">Про Snapdrop &amp; PairDrop для Android</string>
     <string name="pref_about_title">Про цю програму</string>
+    <string name="view_downloads">Переглянути завантаження</string>
     <string name="pref_category_settings">Налаштування</string>
     <string name="logs">Журнал налагодження</string>
     <string name="components_summary">Натисніть для відображення</string>
+    <string name="support_us">Підтримайте нас</string>
+    <string name="support_us_summary">Подивіться, як ви можете підтримати цей проєкт</string>
     <string name="read_more">читати далі</string>
     <string name="version">Версія</string>
     <string name="pref_device_name_title">Ім\'я пристрою</string>
     <string name="pref_device_name_summary">Задати назву пристрою самостійно</string>
+    <string name="notifications_summary">Показати сповіщення, коли завантаження завершиться</string>
+    <string name="notifications_title">Сповіщення</string>
     <string name="keep_on_summary">(Рекомендується) На багатьох пристроях спостерігаються проблеми з перериванням передачі при вимкненому екрані</string>
     <string name="keep_on_title">Не вимикати екран під час передачі</string>
     <string name="floating_text_selection_title">Поділитись виділеним текстом</string>
     <string name="floating_text_selection_summary">При виборі тексту в інших програмах буде запропоновано опцію \"Надіслати за допомогою Snapdrop\"</string>
+    <string name="show_connectivity_card_title">Попередження про підключення</string>
+    <string name="show_connectivity_card_summary"> Показувати попередження, коли ви не підключені до мережі WiFi</string>
     <string name="floating_text_selection_activity_label">Надіслати за допомогою Snapdrop</string>
+    <string name="permission_not_granted">будь ласка, надайте необхідний дозвіл</string>
+    <string name="permission_not_granted_fallback">будь ласка, надайте необхідний дозвіл вручну</string>
+    <string name="open_settings">відкрити налаштування</string>
+    <string name="retain_location_metadata_title">Зберігати метадані про місце знаходження</string>
+    <string name="retain_location_metadata_summary_off">Деякі мультимедійні файли можуть містити дані про місце знаходження, які видаляються за замовчуванням. Надайте дозвіл на включення повних метаданих</string>
+    <string name="retain_location_metadata_summary_on">Зараз застосунок має повний доступ до файлів</string>
     <string name="settings_theme_title">Тема</string>
     <string-array name="darkmode_entries">
         <item>Використовувати тему системи</item>
         <item>Світла</item>
         <item>Темна</item>
     </string-array>
+    <string name="baseurl_title">Змінити адресу сервера</string>
+    <string name="baseurl_not_set">Не встановлено</string>
+    <string name="baseurl_instance_verified">Екземпляр успішно перевірено</string>
+    <string name="baseurl_no_snapdrop_instance">Здається, екземпляр не підтримується</string>
+    <string name="baseurl_check_instance_failed">Не вдалося перевірити екземпляр</string>
     <string name="baseurl_unofficial_instances">Перегляньте <a href="">FAQ</a>, щоб отримати список неофіційних екземплярів. Зверніть увагу, що деякі екземпляри можуть не працювати належним чином у програмі.</string>
     <string name="save_location">Зберегти розташування</string>
     <!-- File sharing -->
@@ -43,9 +81,13 @@
     <string name="intent_content">Вміст, обраний для надсилання</string>
     <string name="error_filechooser">Не вдалося вибрати файл</string>
     <string name="error_network">Будь ласка, переконайтесь, що Ви підключені до мережі Wi-Fi</string>
+    <string name="error_network_no_wifi">Будь ласка, під\'єднайтеся до мережі Wi-Fi або об’єднайте пристрої в пару</string>
+    <string name="error_network_offline">Ви офлайн</string>
     <string name="ignore_error_network">Все одно спробувати</string>
     <string name="error_not_reachable_title">Упс, вибачте!</string>
+    <string name="error_server_not_reachable">Сервер недоступний. \n\nЯкщо ваше підключення до інтернету працює, але це все одно відбувається, спробуйте вибрати іншу адресу сервера.</string>
     <!-- Website Localization -->
+    <string name="website_no_peers_info">Відкрийте застосунок або вебсайт на інших пристроях, щоб надіслати файли</string>
     <string name="website_instruction">Натисніть, щоб надіслати файли або утримуйте, щоб надіслати повідомлення</string>
     <string name="website_file_received">Файл отримано</string>
     <string name="website_file_ask_before_download">Завжди запитувати перед збереженням файлу</string>

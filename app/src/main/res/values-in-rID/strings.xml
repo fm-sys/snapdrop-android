@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop &amp; PairDrop untuk Android</string>
     <string name="app_name_slogan">Mentransfer file dengan mudah antarsemua perangkat Anda.</string>
     <string name="err_no_browser">Tidak bisa membuka browser</string>

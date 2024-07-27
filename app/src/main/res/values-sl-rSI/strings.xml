@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
+    <string name="app_name_long">Snapdrop &amp; PairDrop za Android</string>
     <string name="app_name_slogan">Enostavno prenašanje datotek med vašimi napravami.</string>
     <string name="err_no_browser">Brskalnika ni mogoče odpreti</string>
     <string name="err_no_app">Ni najdene aplikacije za odpiranje te vrste datoteke</string>
@@ -10,14 +10,17 @@
     <string name="onboarding_button_grant">odobri dovoljenje</string>
     <string name="onboarding_button_finish">konec</string>
     <string name="onboarding_choose_server">Izberite naslov strežnika</string>
+    <string name="onboarding_choose_server_short">izberite strežnik</string>
     <string name="onboarding_choose_server_description">Ta aplikacija je optimiziran odjemalec za spletni aplikaciji Snapdrop in PairDrop.\nIzberite enega od naslednjih primerov ali pa vnesite lasten URL za povezavo.\n\nOpomba: v vseh napravah morate izbrati isti URL.</string>
     <string name="onboarding_storage_permission">Dovoljenje za shrambo</string>
     <string name="onboarding_storage_permission_description">Ta aplikacija je orodje za deljenje datotek. Zato je potrebno dovoljenje za shranjevanje, da jo lahko uporabljate.</string>
     <string name="onboarding_server_pairdrop_summary">(priporočeno)\nZnačilnosti povezovanja, prenosa prek interneta in poudarek na stabilnosti.</string>
     <string name="onboarding_server_snapdrop_summary">Klasični Snapdrop. Pregledno in enostavno.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Opozorilo: Nestabilnost strežnika</string>
     <string name="onboarding_server_custom">URL po meri</string>
     <string name="onboarding_server_custom_summary">Strokovnjaki lahko prav tako gostijo svoje lastne strežnike.</string>
     <string name="onboarding_howto">Kako uporabljati</string>
+    <string name="onboarding_howto_summary">1. Odprite to aplikacijo ali %s na katerikoli drugi napravi v vašem lokalnem WiFi omrežju.\n\n2. Tapnite na napravo z katero želite deliti vaše datoteke.\n\n3. Končano! Datoteke bodo poslane…</string>
     <string name="onboarding_howto_troubleshoot">Namig: Naprave morajo biti povezane v istem WiFi omrežju. Morda ne bo delovalo, če je omogočena VPN povezava.</string>
     <!-- Download -->
     <string name="download_save_pending">Shranjevanje datoteke. Prosimo počakajte trenutek…</string>
@@ -31,6 +34,7 @@
     <string name="retry">poskusi znova</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">O programu</string>
+    <string name="title_activity_about">O Snapdrop &amp; PairDrop za Android</string>
     <string name="pref_about_title">O tej aplikaciji</string>
     <string name="view_downloads">Oglej si prenose</string>
     <string name="pref_category_settings">Nastavitve</string>
@@ -46,6 +50,8 @@
     <string name="keep_on_title">Med prenosom ne izklopi zaslona</string>
     <string name="floating_text_selection_title">Lebdeči izbor besedila</string>
     <string name="floating_text_selection_summary">Pri izbiri besedila v drugih aplikacijah se bo prikazala možnost \"Pošlji s Snapdrop-om\"</string>
+    <string name="show_connectivity_card_title">Opozorilo o povezljivosti</string>
+    <string name="show_connectivity_card_summary"> Opozori me, če nisem povezan z WiFi omrežjem</string>
     <string name="floating_text_selection_activity_label">Pošlji s Snapdrop-om</string>
     <string name="permission_not_granted">prosimo omogočite potrebna dovoljenja</string>
     <string name="permission_not_granted_fallback">prosimo omogočite potrebna dovoljenja ročno</string>
@@ -59,7 +65,11 @@
         <item>Svetla</item>
         <item>Temna</item>
     </string-array>
+    <string name="baseurl_title">Spremeni naslov strežnika</string>
     <string name="baseurl_not_set">Ni nastavljeno</string>
+    <string name="baseurl_instance_verified">Primerek je bil uspešno preverjen</string>
+    <string name="baseurl_no_snapdrop_instance">Primerek ni podprt</string>
+    <string name="baseurl_check_instance_failed">Napaka pri preverbi primerka</string>
     <string name="baseurl_unofficial_instances">Oglejte si <a href="">FAQ</a> seznam neuradnih primerov. Upoštevajte, da nekateri primeri v aplikaciji morda ne bodo delovali pravilno.</string>
     <string name="save_location">Shrani lokacijo</string>
     <!-- File sharing -->
