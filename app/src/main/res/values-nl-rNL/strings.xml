@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop &amp; PairDrop voor Android</string>
     <string name="app_name_slogan">Bestanden naadloos tussen al uw apparaten overzetten.</string>
     <string name="err_no_browser">Browser kan niet worden geopend</string>
