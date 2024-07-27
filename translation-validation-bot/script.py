@@ -36,10 +36,11 @@ for line in text.splitlines():
                 counter = counter + 1
                 try:
                     translation = translator.translate(match.group(2).replace("\\n", " \\n "))
+                    print("API call #" + str(counter) + " ok")
                     success = True
                 except:
                     print("API call #" + str(counter) + " blocked, wait some seconds and try again...")
-                    time.sleep(10)
+                    time.sleep(60)
             print2cache(f"{match.group(1)}|{translation.origin} ({translation.src})|{translation.text} ({translation.dest})")
         elif line.startswith("+++"):
             print2cache("\n\n" + line + "\n")
