@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Snapdrop</string>
+    <string name="app_name" translatable="false">Snapdrop &amp; PairDrop</string>
     <string name="app_name_long">Snapdrop &amp; PairDrop for Android</string>
     <string name="app_name_slogan">Transfer files seamlessly between all your devices.</string>
     <string name="err_no_browser">Can\'t open browser</string>
