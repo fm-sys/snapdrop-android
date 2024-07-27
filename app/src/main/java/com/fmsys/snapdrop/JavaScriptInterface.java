@@ -110,13 +110,7 @@ public class JavaScriptInterface {
                 "    console.error(\"Error setting pre-inserted text (snapdrop based): \" + e);" +
                 "}" +
                 // PairDrop
-                "try {" +
-                "    document.getElementById(\"text-input\").innerHTML=\"" + TextUtils.htmlEncode(text).replaceAll("\\n", "<br />") + "\";" +
-                "    document.getElementById('send-text-dialog').querySelector('button[type=\"submit\"]').removeAttribute('disabled');" +
-                "    console.log(\"successfully set pre-inserted text (PairDrop based)\");" +
-                "} catch (e) {" +
-                "    console.error(\"Error setting pre-inserted text (PairDrop based): \" + e);" +
-                "}";
+                "Events.fire('activate-share-mode', {text: SnapdropAndroid.getTextFromUploadIntent()});";
     }
 
     @JavascriptInterface
@@ -132,6 +126,11 @@ public class JavaScriptInterface {
     @JavascriptInterface
     public int getVersionId() {
         return BuildConfig.VERSION_CODE;
+    }
+
+    @JavascriptInterface
+    public String getTextFromUploadIntent() {
+        return context.getTextFromUploadIntent();
     }
 
     @JavascriptInterface

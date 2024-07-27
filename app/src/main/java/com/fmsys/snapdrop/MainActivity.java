@@ -188,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.connectivityTextview.setText(baseURL.equals(getString(R.string.onboarding_server_pairdrop)) ? R.string.error_network_no_wifi : R.string.error_network);
+        binding.connectivityTextview.setText(isPairDrop() ? R.string.error_network_no_wifi : R.string.error_network);
         binding.retryButton.setOnClickListener(v -> {
             binding.noConnectionScreen.setVisibility(View.GONE);
             refreshWebsite();
@@ -208,7 +208,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         final WebSettings webSettings = binding.webview.getSettings();
-        webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // there are transfer problems when using cached resources
         webSettings.setUseWideViewPort(true);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setDatabaseEnabled(true);
@@ -282,6 +281,10 @@ public class MainActivity extends AppCompatActivity {
         });
         loadAnimationDrawable.start();
 
+    }
+
+    private boolean isPairDrop() {
+        return baseURL.equals(getString(R.string.onboarding_server_pairdrop));
     }
 
     @Override
@@ -365,10 +368,13 @@ public class MainActivity extends AppCompatActivity {
             final String clipText = getTextFromUploadIntent();
             binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText), null);
 
-            final Snackbar snackbar = Snackbar
-                    .make(binding.pullToRefresh, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
-                    .setAction(android.R.string.cancel, button -> resetUploadIntent());
-            snackbar.show();
+            if (!isPairDrop() || clipText.isEmpty()) {
+                final Snackbar snackbar = Snackbar
+                        .make(binding.pullToRefresh, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
+                        .setAction(android.R.string.cancel, button -> resetUploadIntent());
+                snackbar.show();
+            }
+
 
             onlyText = true;
             final Uri[] results = getUploadFromIntentUris(intent);
@@ -470,7 +476,7 @@ public class MainActivity extends AppCompatActivity {
         return results;
     }
 
-    private String getTextFromUploadIntent() {
+    public String getTextFromUploadIntent() {
         final StringBuilder result = new StringBuilder();
         if (uploadIntent != null) {
 
