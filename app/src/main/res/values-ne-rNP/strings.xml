@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
     <string name="err_no_browser">ब्राउजर खोल्न सकिएन</string>
     <string name="err_no_app">यो फाईल खोल्न सक्ने कुनै एप भेटिएन</string>
     <string name="open_url">URL खोल्नुहोस्</string>
