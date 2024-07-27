@@ -16,7 +16,7 @@
     <string name="onboarding_storage_permission_description">Diese App ist ein Datei-Freigabe-Programm. Daher ist die Speicher-Berechtigung erforderlich, um funktionieren zu können.</string>
     <string name="onboarding_server_pairdrop_summary">(empfohlen)\nKopplungsfunktion, Internet-Übertragung und Fokus auf Stabilität.</string>
     <string name="onboarding_server_snapdrop_summary">Das klassische Snapdrop. Schlicht und simpel.</string>
-    <string name="onboarding_server_snapdrop_summary_server_warning">Warnung: Serverinstabilitäten</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Warnung: Server möglicherweise instabil</string>
     <string name="onboarding_server_custom">Eigene URL</string>
     <string name="onboarding_server_custom_summary">Experten können auch ihre eigenen Server hosten.</string>
     <string name="onboarding_server_custom_add">Server hinzufügen</string>
