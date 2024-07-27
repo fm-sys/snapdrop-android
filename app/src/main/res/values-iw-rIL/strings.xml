@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">סנאפדרופ</string>
     <string name="err_no_browser">אי אפשר לפתוח דפדפן</string>
     <string name="err_no_app">לא נמצא יישום לפתיחת קובץ זה</string>
     <string name="open_url">פתח קישור אינטרנט</string>
