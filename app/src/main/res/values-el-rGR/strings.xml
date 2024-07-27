@@ -80,10 +80,10 @@
     <string name="intent_files">Πολλαπλά αρχεία έχουν επιλεχθεί για κοινή χρήση</string>
     <string name="intent_content">Το περιεχόμενο έχει επιλεγεί για κοινή χρήση</string>
     <string name="error_filechooser">Αδυναμία έναρξης επιλογεά αρχείων</string>
-    <string name="error_network">Βεβαιωθείτε ότι είστε συνδεδεμένοι σε ένα δίκτυο WiFi</string>
+    <string name="error_network">Παρακαλώ βεβαιωθείτε ότι είστε συνδεδεμένοι με δίκτυο WiFi</string>
     <string name="error_network_no_wifi">Παρακαλώ συνδεθείτε σε ένα δίκτυο WiFi ή πραγματοποιείστε σύζευξη συσκευών</string>
     <string name="error_network_offline">Είστε εκτός σύνδεσης</string>
-    <string name="ignore_error_network">Αφήστε με να χρησιμοποιήσω την εφαρμογή και έτσι</string>
+    <string name="ignore_error_network">Επίτρεψέ μου ούτως ή άλλως</string>
     <string name="error_not_reachable_title">Ουπς, συγγνώμη!</string>
     <string name="error_server_not_reachable">Δεν είναι δυνατή η πρόσβαση στον Διακομιστή. \n\nΕάν η σύνδεση σας στο διαδίκτυο λειτουργεί και το σφάλμα συνεχίζει να υφίσταται, προσπαθήστε να επιλέξετε μια διαφορετική διεύθυνση διακομιστή.</string>
     <!-- Website Localization -->
