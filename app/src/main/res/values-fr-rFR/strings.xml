@@ -19,6 +19,7 @@
     <string name="onboarding_server_snapdrop_summary_server_warning">Attention : Serveur instable</string>
     <string name="onboarding_server_custom">URL personnalisé</string>
     <string name="onboarding_server_custom_summary">Les experts peuvent aussi héberger leurs propres serveurs.</string>
+    <string name="onboarding_server_custom_add">Ajouter serveur</string>
     <string name="onboarding_howto">Mode d\'emploi</string>
     <string name="onboarding_howto_summary">1. Ouvrez cette application ou %s sur n\'importe quel autre appareil connecté à votre réseau local.\n\n2. Appuyer sur l\'appareil vers lequel vous souhaitez partager le(s) fichier(s) et sélectionnez le(s) fichier(s) à envoyer.\n\n3. Et voilà ! Le(s) fichier(s) sera(ont) envoyé(s)…</string>
     <string name="onboarding_howto_troubleshoot">Note : Les appareils doivent être connectés sur le même réseau local/WiFi. Cela peut ne pas fonctionner si un VPN est activé.</string>
@@ -46,8 +47,10 @@
     <string name="version">Version</string>
     <string name="pref_device_name_title">Nom de l\'appareil</string>
     <string name="pref_device_name_summary">Définir un nom d\'appareil personnalisé</string>
+    <string name="notifications_summary">Afficher une notification lorsque le téléchargement est terminé</string>
+    <string name="notifications_title">Notifications</string>
     <string name="keep_on_summary">(Recommandé) De nombreux appareils ont des problèmes d\"interruption de transfert lorsque l\'écran s\'éteint</string>
-    <string name="keep_on_title">Gardez l\'écran allumé pendant le transfert</string>
+    <string name="keep_on_title">Garder l\'écran allumé pendant le transfert</string>
     <string name="floating_text_selection_title">Sélection de texte flottante</string>
     <string name="floating_text_selection_summary">Lors de la sélection de texte dans d\'autres applications, une option \"Envoyer via Snapdrop\" sera affichée</string>
     <string name="show_connectivity_card_title">Avertissement sur la connexion</string>
