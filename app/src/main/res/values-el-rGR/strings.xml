@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop &amp; PairDrop για το Android</string>
     <string name="app_name_slogan">Μεταφέρετε με αξιοπιστία αρχεία μεταξύ όλων των συσκευών σας.</string>
     <string name="err_no_browser">Αδυναμία ανοίγματος του προγράμματος περιήγησης</string>
