@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Snapdrop</string>
     <string name="app_name_long">Snapdrop i PairDrop per a l\'Android</string>
     <string name="app_name_slogan">Transfereix fitxers amb comoditat entre tots els teus dispositius.</string>
     <string name="err_no_browser">No es pot obrir el navegador</string>
