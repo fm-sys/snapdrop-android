@@ -4,7 +4,7 @@ on:
 
 jobs:
   translate:
-    if: ${{ github.head_ref == 'l10n_master' }}
+    if: ${{ github.head_ref == ' l10n_crowdin_translations' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
