@@ -19,6 +19,7 @@
     <string name="onboarding_server_snapdrop_summary_server_warning">تحذير: الخادم غير مستقر</string>
     <string name="onboarding_server_custom">عنوان URL مخصص</string>
     <string name="onboarding_server_custom_summary">ويمكن للخبراء أيضا أن يستضيفوا خوادمهم الخاصة.</string>
+    <string name="onboarding_server_custom_add">إضافة خادم</string>
     <string name="onboarding_howto">كيفية الاستخدام</string>
     <string name="onboarding_howto_summary">1. افتح هذا التطبيق أو %s على أي جهاز آخر في شبكة WiFi المحلية الخاصة بك.\n\n2. اضغط على الجهاز وحدد الملفات التي تريد إرسالها.\n\n3. تم! سيتم إرسال الملفات…</string>
     <string name="onboarding_howto_troubleshoot">تلميح: الأجهزة يجب أن تكون متصلة بنفس شبكة الواي فاي. قد لا تعمل إذا تم تمكين VPN.</string>
@@ -46,6 +47,8 @@
     <string name="version">الإصدار</string>
     <string name="pref_device_name_title">اِسمُ الجِهاز</string>
     <string name="pref_device_name_summary">تَعيين اِسم جِهاز مُعَرَّف مِن قِبَل المُستَخدِم</string>
+    <string name="notifications_summary">إظهار الإشعار عند الانتهاء من التنزيل</string>
+    <string name="notifications_title">الإشعارات</string>
     <string name="keep_on_summary">(مستحسن) العديد من الأجهزة تواجه مشاكل مع انقطاع عمليات النقل عند ايقاف تشغيل الشاشة</string>
     <string name="keep_on_title">إبقاء الشاشة قيد التشغيل أثناء النقل</string>
     <string name="floating_text_selection_title">اختيار النص العائم</string>
