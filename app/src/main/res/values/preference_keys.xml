@@ -5,6 +5,7 @@
     <string name="pref_show_connectivity_card" translatable="false">show_connectivity_card</string>
     <string name="pref_device_name" translatable="false">device_name</string>
     <string name="pref_first_use" translatable="false">first_use</string>
+    <string name="pref_notifications" translatable="false">notify</string>
     <string name="pref_baseurl" translatable="false">baseurl</string>
     <string name="pref_save_location" translatable="false">save_location</string>
     <string name="pref_retain_location_metadata" translatable="false">retain_location_metadata</string>

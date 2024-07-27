@@ -11,6 +11,11 @@
             android:summary="%s"
             android:title="@string/baseurl_title" />
         <SwitchPreferenceCompat
+            android:icon="@drawable/pref_notifications"
+            android:key="@string/pref_notifications"
+            android:summary="@string/notifications_summary"
+            android:title="@string/notifications_title" />
+        <SwitchPreferenceCompat
             android:defaultValue="true"
             android:icon="@drawable/pref_screen"
             android:key="@string/pref_switch_keep_on"

@@ -3,7 +3,9 @@ package com.fmsys.snapdrop;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.NotificationManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -45,7 +47,8 @@ import java.util.concurrent.Executors;
 public class SettingsFragment extends PreferenceFragmentCompat {
     private final SimpleStorageHelper storageHelper = new SimpleStorageHelper(this);
     private SharedPreferences prefs;
-    private final ActivityResultLauncher<String> permissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
+
+    private final ActivityResultLauncher<String> storagePpermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
         final SwitchPreferenceCompat retainLocationMetadataPref = findPreference(getString(R.string.pref_retain_location_metadata));
         retainLocationMetadataPref.setChecked(result);
         if (result) {
@@ -57,6 +60,22 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                     .setAction(R.string.open_settings, v ->
                             startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
                                     .setData(Uri.fromParts("package", requireContext().getPackageName(), null))))
+                    .show();
+        }
+    });
+
+    private final ActivityResultLauncher<String> notificationsPpermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
+        final SwitchPreferenceCompat notificationsPref = findPreference(getString(R.string.pref_notifications));
+        if (result) {
+            notificationsPref.setChecked(true);
+        } else if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.POST_NOTIFICATIONS)) {
+            Snackbar.make(requireView(), R.string.permission_not_granted, Snackbar.LENGTH_LONG).show();
+        } else {
+            Snackbar.make(requireView(), R.string.permission_not_granted_fallback, Snackbar.LENGTH_LONG)
+                    .setAction(R.string.open_settings, v ->
+                            startActivity(new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+                                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                    .putExtra(Settings.EXTRA_APP_PACKAGE, requireContext().getPackageName())))
                     .show();
         }
     });
@@ -146,6 +165,33 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             });
         }
 
+        final Preference notificationsPref = findPreference(getString(R.string.pref_notifications));
+        notificationsPref.setOnPreferenceChangeListener((pref, newValue) -> {
+            if ((boolean) newValue) {
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU || ContextCompat.checkSelfPermission(getContext(), Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
+                    if (isNotificationsCorrectlyEnabled()) {
+                        return true;
+                    } else {
+                        final Intent settingsIntent = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ?
+                                new Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
+                                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                        .putExtra(Settings.EXTRA_APP_PACKAGE, getContext().getPackageName()) :
+                                new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                        .setData(Uri.fromParts("package", getContext().getPackageName(), null));
+
+                        startActivity(settingsIntent);
+                        return true;
+                    }
+                } else {
+                    notificationsPpermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+                    return false;
+                }
+            }
+            return true;
+        });
+
+
         final Preference deviceNamePref = findPreference(getString(R.string.pref_device_name));
         deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", null, newValue -> updateDeviceNameSummary(deviceNamePref)));
         updateDeviceNameSummary(deviceNamePref);
@@ -190,7 +236,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             if (!granted) {
                 locationMetadataPref.setOnPreferenceChangeListener((pref, newValue) -> {
                     if ((Boolean) newValue) {
-                        permissionLauncher.launch(Manifest.permission.ACCESS_MEDIA_LOCATION);
+                        storagePpermissionLauncher.launch(Manifest.permission.ACCESS_MEDIA_LOCATION);
                     }
                     return false;
                 });
@@ -198,6 +244,14 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 locationMetadataPref.setEnabled(false);
             }
         }
+    }
+
+    private boolean isNotificationsCorrectlyEnabled() {
+        final NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        final boolean enabled = (Build.VERSION.SDK_INT < Build.VERSION_CODES.N || notificationManager.areNotificationsEnabled()) &&
+                (Build.VERSION.SDK_INT < Build.VERSION_CODES.O || notificationManager.getNotificationChannel("MYCHANNEL") == null || notificationManager.getNotificationChannel("MYCHANNEL").getImportance() != NotificationManager.IMPORTANCE_NONE);
+        return enabled;
     }
 
     private void setPreferenceValue(final String preferenceKey, final String s, final Consumer<String> onPreferenceChangeCallback) {
@@ -236,5 +290,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public void onSaveInstanceState(final @NonNull Bundle outState) {
         storageHelper.onSaveInstanceState(outState);
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        final boolean enabled = isNotificationsCorrectlyEnabled();
+        final SwitchPreferenceCompat notificationsPref = findPreference(getString(R.string.pref_notifications));
+
+        if (!enabled && notificationsPref.isChecked()) {
+            notificationsPref.setChecked(false);
+        }
     }
 }

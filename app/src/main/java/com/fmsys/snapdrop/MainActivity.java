@@ -146,6 +146,14 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
+    private final ActivityResultLauncher<String> permissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), result -> {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                prefs.edit().putBoolean(getString(R.string.pref_notifications), ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED);
+            }
+        }
+    });
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility", "RestrictedApi"})
@@ -722,10 +730,11 @@ public class MainActivity extends AppCompatActivity {
         final PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity.this, 1, intent, Build.VERSION.SDK_INT >= 23 ? PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_CANCEL_CURRENT : PendingIntent.FLAG_CANCEL_CURRENT);
         final String channelId = "MYCHANNEL";
         final NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        final Notification notification;
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             final NotificationChannel notificationChannel = new NotificationChannel(channelId, getString(R.string.notification_channel_name), NotificationManager.IMPORTANCE_DEFAULT);
-            final Notification notification = new Notification.Builder(MainActivity.this, channelId)
+            notification = new Notification.Builder(MainActivity.this, channelId)
                     .setContentText(fileHeader.getName())
                     .setContentTitle(getString(R.string.download_successful))
                     .setContentIntent(pendingIntent)
@@ -735,22 +744,30 @@ public class MainActivity extends AppCompatActivity {
                     .build();
             if (notificationManager != null) {
                 notificationManager.createNotificationChannel(notificationChannel);
-                notificationManager.notify(notificationId, notification);
             }
 
         } else {
-            final NotificationCompat.Builder b = new NotificationCompat.Builder(MainActivity.this, channelId)
+            notification = new NotificationCompat.Builder(MainActivity.this, channelId)
                     .setDefaults(NotificationCompat.DEFAULT_ALL)
                     .setWhen(System.currentTimeMillis())
                     .setSmallIcon(android.R.drawable.stat_sys_download_done)
                     .setContentIntent(pendingIntent)
                     .setAutoCancel(true)
                     .setContentTitle(getString(R.string.download_successful))
-                    .setContentText(fileHeader.getName());
+                    .setContentText(fileHeader.getName())
+                    .build();
+        }
 
-            if (notificationManager != null) {
-                notificationManager.notify(notificationId, b.build());
+        if (notificationManager != null) {
+            if (prefs.getBoolean(getString(R.string.pref_notifications), true)) {
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU || ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
+                    notificationManager.notify(notificationId, notification);
+                } else {
+                    permissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+                }
             }
+
+            notificationManager.notify(notificationId, notification);
         }
 
         final Snackbar snackbar = Snackbar.make(binding.pullToRefresh, R.string.download_successful, Snackbar.LENGTH_LONG)
