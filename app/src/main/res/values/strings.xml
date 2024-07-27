@@ -6,7 +6,7 @@
     <string name="err_no_app">No app installed to open this file</string>
     <string name="open_url">Open URL</string>
 
-    <string name="test_string">this is just a test</string>
+    <string name="test_string">this is a test</string>
 
     <!-- Onboarding -->
     <string name="onboarding_button_continue">continue</string>
