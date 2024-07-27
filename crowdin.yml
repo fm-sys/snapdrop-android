@@ -6,5 +6,7 @@ files:
     translation: /app/src/main/res/values-%android_code%/%original_file_name%
     translate_attributes: 0
     content_segmentation: 0
-  - source: /fastlane/metadata/android/en-US/*.txt
+  - source: /fastlane/metadata/android/en-US/short_description.txt
+    translation: /fastlane/metadata/android/%locale%/%original_file_name%
+  - source: /fastlane/metadata/android/en-US/title.txt
     translation: /fastlane/metadata/android/%locale%/%original_file_name%
