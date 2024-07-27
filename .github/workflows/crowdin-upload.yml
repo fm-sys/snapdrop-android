@@ -2,6 +2,7 @@ name: Crowdin Upload Action
 
 on:
   push:
+    paths: ['app/src/main/res/values/']
     branches: [ master ]
 
 jobs:
