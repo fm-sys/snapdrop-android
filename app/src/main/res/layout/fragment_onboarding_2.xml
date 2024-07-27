@@ -20,6 +20,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
@@ -42,134 +43,39 @@
                 android:textSize="16sp" />
 
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card1"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listview"
+                android:layout_marginTop="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/customUrl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="30dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:checkedIconTint="@color/textColorWhite"
-                app:strokeColor="@color/textColorWhite">
+                android:text="@string/onboarding_server_custom"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite"
+                android:textSize="20sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/onboarding_server_pairdrop"
-                        android:textAlignment="center"
-                        android:textColor="@color/textColorWhite"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="@string/onboarding_server_pairdrop_summary"
-                        android:textAlignment="center"
-                        android:textColor="@color/textColorWhite"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card2"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:checkedIconTint="@color/textColorWhite"
-                app:strokeColor="@color/textColorWhite">
+                android:text="@string/onboarding_server_custom_summary"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite"
+                android:textSize="16sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/onboarding_server_snapdrop"
-                        android:textAlignment="center"
-                        android:textColor="@color/textColorWhite"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="@string/onboarding_server_snapdrop_summary"
-                        android:textAlignment="center"
-                        android:textColor="@color/textColorWhite"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/onboarding_server_snapdrop_summary_server_warning"
-                        android:textAlignment="center"
-                        android:textColor="@color/textColorError"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="30dp"
-                android:checkable="true"
-                android:clickable="true"
-                android:focusable="true"
-                android:nextFocusDown="@id/continue_button"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:checkedIconTint="@color/textColorWhite"
-                app:strokeColor="@color/textColorWhite">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/customUrl"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="10dp"
-                        android:text="@string/onboarding_server_custom"
-                        android:textAlignment="center"
-                        android:textColor="@color/textColorWhite"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="@string/onboarding_server_custom_summary"
-                        android:textAlignment="center"
-                        android:textColor="@color/textColorWhite"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            <Button
+                android:id="@+id/add"
+                style="@style/OnboardingOutlinedButtonStyle"
+                android:layout_margin="10dp"
+                android:text="@string/onboarding_server_custom_add" />
 
         </LinearLayout>
     </ScrollView>
@@ -179,7 +85,6 @@
         style="@style/OnboardingButtonStyle"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="10dp"
-        android:nextFocusUp="@id/card3"
         android:text="@string/onboarding_button_continue" />
 
 </RelativeLayout>

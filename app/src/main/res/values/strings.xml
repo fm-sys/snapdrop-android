@@ -20,6 +20,7 @@
     <string name="onboarding_server_snapdrop_summary_server_warning">Warning: Server instabilities</string>
     <string name="onboarding_server_custom">Custom URL</string>
     <string name="onboarding_server_custom_summary">Experts can also host their own servers.</string>
+    <string name="onboarding_server_custom_add">Add server</string>
 
     <string name="onboarding_howto">How to use</string>
     <string name="onboarding_howto_summary">1. Open this app or %s on any other device in your local WiFi network.\n\n2. Tap on the device and select the files you want to send.\n\n3. Done! The files will be sent…</string>
