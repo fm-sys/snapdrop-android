@@ -105,7 +105,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                             getString(R.string.support_us_summary) + "<br>" +
                             "<a href=\"https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md\">" + getString(R.string.read_more) + "</a>")
                     .withAboutSpecial1("GitHub")
-                    .withAboutSpecial2("Twitter")
+                    .withAboutSpecial2("Twitter/X")
                     .withAboutSpecial3("Crowdin")
                     .withListener(new AboutLibrariesListener() {
                         @Override
