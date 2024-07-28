@@ -24,7 +24,6 @@
     <!-- Action Buttons -->
     <string name="open">apri</string>
     <string name="install">installa</string>
-    <string name="reset">reset</string>
     <string name="copy">copia</string>
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">Informazioni</string>

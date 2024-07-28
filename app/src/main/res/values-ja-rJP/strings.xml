@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name_long">Snapdrop &amp; PairDrop for Android</string>
     <string name="app_name_slogan">あらゆるデバイス間で手軽なファイル共有を実現します。</string>
     <string name="err_no_browser">ブラウザを開くことができません</string>
     <string name="err_no_app">このファイルを開くアプリがインストールされていません</string>

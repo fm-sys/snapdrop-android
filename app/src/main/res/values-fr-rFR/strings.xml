@@ -44,11 +44,9 @@
     <string name="support_us">Soutenez-nous</string>
     <string name="support_us_summary">Voir, comment vous pouvez soutenir ce projet</string>
     <string name="read_more">voir plus</string>
-    <string name="version">Version</string>
     <string name="pref_device_name_title">Nom de l\'appareil</string>
     <string name="pref_device_name_summary">Définir un nom d\'appareil personnalisé</string>
     <string name="notifications_summary">Afficher une notification lorsque le téléchargement est terminé</string>
-    <string name="notifications_title">Notifications</string>
     <string name="keep_on_summary">(Recommandé) De nombreux appareils ont des problèmes d\"interruption de transfert lorsque l\'écran s\'éteint</string>
     <string name="keep_on_title">Garder l\'écran allumé pendant le transfert</string>
     <string name="floating_text_selection_title">Sélection de texte flottante</string>

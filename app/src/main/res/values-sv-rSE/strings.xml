@@ -21,7 +21,6 @@
     <string name="logs">Felsökningsloggar</string>
     <string name="components_summary">Tryck för att visa</string>
     <string name="read_more">läs mer</string>
-    <string name="version">Version</string>
     <string name="pref_device_name_title">Enhetsnamn</string>
     <string name="pref_device_name_summary">Ange ett användardefinierat enhetsnamn</string>
     <string name="keep_on_summary">(Rekommenderas) Många enheter har problem med överföringar som avbryts när skärmen stängs av</string>

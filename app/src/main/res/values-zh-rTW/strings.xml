@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name_long">Snapdrop &amp; PairDrop for Android</string>
     <string name="app_name_slogan">在您的裝置間無縫傳輸檔案。</string>
     <string name="err_no_browser">無法開啟瀏覽器</string>
     <string name="err_no_app">找不到可開啟此檔案的應用程式</string>
