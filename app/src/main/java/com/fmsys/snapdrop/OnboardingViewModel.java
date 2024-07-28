@@ -5,12 +5,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.fmsys.snapdrop.utils.LiveCallback;
-
 public class OnboardingViewModel extends ViewModel {
     private final MutableLiveData<Class<? extends Fragment>> fragment = new MutableLiveData<>();
     private final MutableLiveData<String> url = new MutableLiveData<>();
-    private final LiveCallback finish = new LiveCallback();
     private boolean onlyServerSelection;
 
     public void launchFragment(final Class<? extends Fragment> item) {
@@ -37,11 +34,4 @@ public class OnboardingViewModel extends ViewModel {
         this.onlyServerSelection = onlyServerSelection;
     }
 
-    public void finishActivity() {
-        finish.call();
-    }
-
-    public LiveCallback getFinishCallback() {
-        return finish;
-    }
 }

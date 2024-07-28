@@ -140,12 +140,12 @@ public class JavaScriptInterface {
 
     @JavascriptInterface
     public void dialogShown() {
-        context.dialogVisible = true;
+        context.setDialogVisible(true);
     }
 
     @JavascriptInterface
     public void dialogHidden() {
-        context.dialogVisible = false;
+        context.setDialogVisible(false);
     }
 
     @JavascriptInterface

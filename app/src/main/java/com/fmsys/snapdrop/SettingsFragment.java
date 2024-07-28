@@ -196,14 +196,11 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         deviceNamePref.setOnPreferenceClickListener(pref -> showEditTextPreferenceWithResetPossibility(pref, "Android ", "", null, newValue -> updateDeviceNameSummary(deviceNamePref)));
         updateDeviceNameSummary(deviceNamePref);
 
-        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-
         final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
         baseUrlPref.setOnPreferenceClickListener(pref -> {
-            OnboardingActivity.launchServerSelection(requireActivity());
+            startActivity(OnboardingActivity.getServerSelectionIntent(requireActivity()));
             return true;
         });
-        baseUrlPref.setSummary(preferences.getString(baseUrlPref.getKey(), getString(R.string.baseurl_not_set)));
 
         final Preference saveLocationPref = findPreference(getString(R.string.pref_save_location));
         saveLocationPref.setOnPreferenceClickListener(preference -> {
@@ -211,7 +208,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
             return true;
         });
         final String downloadsFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
-        saveLocationPref.setSummary(preferences.getString(saveLocationPref.getKey(), downloadsFolder));
+        saveLocationPref.setSummary(prefs.getString(saveLocationPref.getKey(), downloadsFolder));
         storageHelper.setOnFolderSelected((requestCode, folder) -> {
             final String path = DocumentFileUtils.getAbsolutePath(folder, requireContext());
             setPreferenceValue(saveLocationPref.getKey(), path, null);
@@ -302,5 +299,8 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         if (!enabled && notificationsPref.isChecked()) {
             notificationsPref.setChecked(false);
         }
+
+        final Preference baseUrlPref = findPreference(getString(R.string.pref_baseurl));
+        baseUrlPref.setSummary(prefs.getString(baseUrlPref.getKey(), getString(R.string.baseurl_not_set)));
     }
 }

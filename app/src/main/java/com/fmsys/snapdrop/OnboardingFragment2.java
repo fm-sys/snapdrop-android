@@ -161,7 +161,7 @@ public class OnboardingFragment2 extends Fragment {
         binding.continueButton.setOnClickListener(v -> {
             viewModel.url(tempUrl.getValue());
             if (viewModel.isOnlyServerSelection()) {
-                viewModel.finishActivity();
+                requireActivity().finish();
             } else {
                 viewModel.launchFragment(OnboardingFragment3.class);
             }

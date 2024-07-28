@@ -46,6 +46,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onlyText = false;
 
     public final List<JavaScriptInterface.FileHeader> downloadFilesList = Collections.synchronizedList(new ArrayList<>());
-    public boolean dialogVisible = false;
+    private boolean dialogVisible = false;
 
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private final Handler handler = new Handler(Looper.getMainLooper());
@@ -152,6 +153,18 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
+    private final OnBackPressedCallback onBackpressedCallback = new OnBackPressedCallback(false) {
+        @Override
+        public void handleOnBackPressed() {
+            if (binding.webview.getUrl() != null && binding.webview.getUrl().endsWith("#about")) {
+                binding.webview.loadUrl(baseURL + "#");
+            } else if (dialogVisible) {
+                binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(MainActivity.this, "closeDialogs.js"));
+            }
+            setDialogVisible(false);
+        }
+    };
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility", "RestrictedApi"})
@@ -185,6 +198,8 @@ public class MainActivity extends AppCompatActivity {
             }));
         }
 
+        getOnBackPressedDispatcher().addCallback(this, onBackpressedCallback);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -193,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
             binding.noConnectionScreen.setVisibility(View.GONE);
             refreshWebsite();
         });
-        binding.urlChangeButton.setOnClickListener(v -> OnboardingActivity.launchServerSelection(this));
+        binding.urlChangeButton.setOnClickListener(v -> openSettingsResultLauncher.launch(OnboardingActivity.getServerSelectionIntent(this)));
 
         setSupportActionBar(binding.toolbar);
         setTitle(null);
@@ -201,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
         final ActionBar actionbar = getSupportActionBar();
         if (actionbar != null) {
             actionbar.setSubtitle(baseURL);
-            Nullable.of(ToolbarUtils.getSubtitleTextView(binding.toolbar)).ifNotNull(tv -> tv.setOnClickListener(v -> OnboardingActivity.launchServerSelection(this)));
+            Nullable.of(ToolbarUtils.getSubtitleTextView(binding.toolbar)).ifNotNull(tv -> tv.setOnClickListener(v -> openSettingsResultLauncher.launch(OnboardingActivity.getServerSelectionIntent(this))));
             actionbar.setHomeAsUpIndicator(R.drawable.ic_launcher_actionbar);
             actionbar.setHomeActionContentDescription(R.string.home_as_up_indicator_about);
             actionbar.setDisplayHomeAsUpEnabled(true);
@@ -320,9 +335,16 @@ public class MainActivity extends AppCompatActivity {
     private void toggleAbout() {
         if (binding.webview.getUrl() != null && binding.webview.getUrl().endsWith("#about")) {
             binding.webview.loadUrl(baseURL + "#");
+            setDialogVisible(false);
         } else {
             binding.webview.loadUrl(baseURL + "#about");
+            setDialogVisible(true);
         }
+    }
+
+    public void setDialogVisible(final boolean visible) {
+        this.dialogVisible = visible;
+        onBackpressedCallback.setEnabled(dialogVisible);
     }
 
     private void refreshWebsite(final boolean pulled) {
@@ -399,17 +421,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        if (binding.webview.getUrl() != null && binding.webview.getUrl().endsWith("#about")) {
-            binding.webview.loadUrl(baseURL + "#");
-        } else if (dialogVisible) {
-            binding.webview.loadUrl(JavaScriptInterface.getAssetsJS(this, "closeDialogs.js"));
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    @Override
     public void onResume() {
         super.onResume();
 
@@ -421,6 +432,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRestart() {
         super.onRestart();
+        baseURL = prefs.getString(getString(R.string.pref_baseurl), null);
+        final ActionBar actionbar = getSupportActionBar();
+        if (actionbar != null) {
+            actionbar.setSubtitle(baseURL);
+        }
         if (binding.webview.getUrl() == null || !binding.webview.getUrl().startsWith(baseURL)) {
             refreshWebsite();
         }

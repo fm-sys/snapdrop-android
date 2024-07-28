@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.preference.PreferenceManager;
@@ -23,11 +24,10 @@ public class OnboardingActivity extends AppCompatActivity {
         context.finish();
     }
 
-    public static void launchServerSelection(final Activity context) {
+    public static Intent getServerSelectionIntent(final Activity context) {
         final Intent intent = new Intent(context, OnboardingActivity.class);
         intent.putExtra(EXTRA_ONLY_SERVER_SELECTION, true);
-        context.startActivity(intent);
-        context.finish();
+        return intent;
     }
 
     @Override
@@ -36,11 +36,6 @@ public class OnboardingActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(OnboardingViewModel.class);
         viewModel.setOnlyServerSelection(getIntent().getBooleanExtra(EXTRA_ONLY_SERVER_SELECTION, false));
-
-        viewModel.getFinishCallback().observe(this, () -> {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
-        });
 
         viewModel.getFragment().observe(this, fragment -> getSupportFragmentManager()
                 .beginTransaction()
@@ -60,13 +55,12 @@ public class OnboardingActivity extends AppCompatActivity {
                 viewModel.launchFragment(OnboardingFragment1.class);
             }
         }
-    }
 
-    @Override
-    public void onBackPressed() {
-        if (viewModel.isOnlyServerSelection()) {
-            viewModel.finishActivity();
-        }
-        // suppress default back key behaviour
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(!viewModel.isOnlyServerSelection()) {
+            @Override
+            public void handleOnBackPressed() {
+                // block back press while onboarding
+            }
+        });
     }
 }
