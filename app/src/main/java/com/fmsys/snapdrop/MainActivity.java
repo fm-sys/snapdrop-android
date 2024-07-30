@@ -394,7 +394,7 @@ public class MainActivity extends AppCompatActivity {
 
             final String clipText = getTextFromUploadIntent();
 
-            if (!isPairDrop() || clipText.isEmpty()) {
+            if (!isPairDrop()) {
                 final Snackbar snackbar = Snackbar
                         .make(binding.pullToRefresh, clipText.isEmpty() ? (Intent.ACTION_SEND_MULTIPLE.equals(intent.getAction()) ? R.string.intent_files : R.string.intent_file) : R.string.intent_content, Snackbar.LENGTH_INDEFINITE)
                         .setAction(android.R.string.cancel, button -> resetUploadIntent());

@@ -184,6 +184,11 @@ public class JavaScriptInterface {
         }
     }
 
+    @JavascriptInterface
+    public void resetUploadIntent() {
+        context.resetUploadIntent();
+    }
+
     public static class FileHeader {
         private final String name;
         private final String mime;

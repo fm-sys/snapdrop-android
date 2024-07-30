@@ -193,6 +193,13 @@ window.addEventListener('files-sent', e => {
     SnapdropAndroid.vibrate();
 }, false);
 
+window.addEventListener('share-mode-changed', e => {
+    // remove upload intent on canceling share mode (supported only on PairDrop)
+    if (!e.detail.active) {
+        SnapdropAndroid.resetUploadIntent();
+    }
+}, false);
+
 //hide unnecessary web toolbar buttons
 try {
     // snapdrop.net - theme
