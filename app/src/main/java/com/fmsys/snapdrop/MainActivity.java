@@ -29,6 +29,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
 import android.util.Base64;
+import android.util.Base64OutputStream;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.Menu;
@@ -80,6 +81,7 @@ import com.fmsys.snapdrop.utils.ZipUtils;
 import com.google.android.material.internal.ToolbarUtils;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -624,10 +626,15 @@ public class MainActivity extends AppCompatActivity {
             }
             if (!uris.isEmpty()) {
                 try {
-                    final byte[] zipData = ZipUtils.createZipFromUris(MainActivity.this, uris);
-                    // convert to base64 string
-                    final String base64String = Base64.encodeToString(zipData, Base64.DEFAULT);
-                    binding.webview.evaluateJavascript("pairDrop.base64Dialog.processBase64Zip('" + base64String.replaceAll("\n", "") + "');", null);
+                    final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                    final Base64OutputStream base64OutputStream = new Base64OutputStream(byteArrayOutputStream, Base64.DEFAULT);
+
+                    // Create ZIP data and stream it directly into the Base64 encoder
+                    ZipUtils.createZipFromUris(MainActivity.this, uris, base64OutputStream);
+                    base64OutputStream.close();
+
+                    final String base64String = byteArrayOutputStream.toString();
+                    binding.webview.evaluateJavascript("pairDrop.base64Dialog.processBase64Zip('" + base64String.replace("\n", "") + "');", null);
                 } catch (IOException e) {
                     // ignore
                 }

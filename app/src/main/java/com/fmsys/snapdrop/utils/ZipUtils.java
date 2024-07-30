@@ -8,6 +8,7 @@ import androidx.documentfile.provider.DocumentFile;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -18,11 +19,10 @@ public class ZipUtils {
         // utility class
     }
 
-    public static byte[] createZipFromUris(final Context context, final List<Uri> uris) throws IOException {
-        final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        final ZipOutputStream zipOutputStream = new ZipOutputStream(byteArrayOutputStream);
-
+    public static void createZipFromUris(final Context context, final List<Uri> uris, final OutputStream outputStream) throws IOException {
+        final ZipOutputStream zipOutputStream = new ZipOutputStream(outputStream);
         final byte[] buffer = new byte[1024];
+
         for (Uri uri : uris) {
             try (InputStream inputStream = context.getContentResolver().openInputStream(uri)) {
                 if (inputStream == null) {
@@ -39,8 +39,8 @@ public class ZipUtils {
             }
         }
 
+        zipOutputStream.finish();
         zipOutputStream.close();
-        return byteArrayOutputStream.toByteArray();
     }
 
     private static String getFileNameFromUri(final Context context, final Uri uri) {
