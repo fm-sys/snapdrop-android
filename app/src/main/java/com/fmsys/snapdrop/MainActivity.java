@@ -28,6 +28,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
+import android.util.Base64;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.Menu;
@@ -75,10 +76,12 @@ import com.fmsys.snapdrop.utils.NetworkUtils;
 import com.fmsys.snapdrop.utils.Nullable;
 import com.fmsys.snapdrop.utils.ShareUtils;
 import com.fmsys.snapdrop.utils.StateHandler;
+import com.fmsys.snapdrop.utils.ZipUtils;
 import com.google.android.material.internal.ToolbarUtils;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -310,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
+    public boolean onPrepareOptionsMenu(final Menu menu) {
         // file not added to download manager for android 7 and below, so this doesn't make sense (see #219)
         menu.findItem(R.id.menu_view_downloads).setVisible(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O);
         return super.onPrepareOptionsMenu(menu);
@@ -368,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
         refreshWebsite(false);
     }
 
-    private void showScreenNoConnection(boolean offline) {
+    private void showScreenNoConnection(final boolean offline) {
         state.setCurrentlyLoading(false);
         state.setCurrentlyOffline(true);
         binding.noConnectionScreen.setVisibility(View.VISIBLE);
@@ -388,7 +391,6 @@ public class MainActivity extends AppCompatActivity {
             binding.webview.clearFocus(); // remove potential text selections
 
             final String clipText = getTextFromUploadIntent();
-            binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText), null);
 
             if (!isPairDrop() || clipText.isEmpty()) {
                 final Snackbar snackbar = Snackbar
@@ -396,7 +398,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction(android.R.string.cancel, button -> resetUploadIntent());
                 snackbar.show();
             }
-
 
             onlyText = true;
             final Uri[] results = getUploadFromIntentUris(intent);
@@ -408,6 +409,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+
+            if (onlyText) {
+                binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(clipText), null);
+            }
+
         } else if (Intent.ACTION_VIEW.equals(intent.getAction()) && intent.getData().getHost().equals(Uri.parse(baseURL).getHost())) {
             binding.webview.loadUrl(intent.getDataString()); // e.g. paring URL
         } else {
@@ -606,6 +612,29 @@ public class MainActivity extends AppCompatActivity {
             binding.webview.evaluateJavascript(JavaScriptInterface.getAssetsJS(MainActivity.this, "init.js"),
                     returnValue -> binding.loadAnimator.animate().alpha(0).withEndAction(() -> binding.webview.animate().alpha(1).start()));
             binding.webview.evaluateJavascript(JavaScriptInterface.getSendTextDialogWithPreInsertedString(getTextFromUploadIntent()), null);
+
+            final List<Uri> uris = new ArrayList<>();
+            final Uri[] results = getUploadFromIntentUris(uploadIntent);
+            if (results != null) {
+                for (Uri uri : results) {
+                    if (uri != null) {
+                        uris.add(uri);
+                    }
+                }
+            }
+            if (!uris.isEmpty()) {
+                try {
+                    final byte[] zipData = ZipUtils.createZipFromUris(MainActivity.this, uris);
+                    // convert to base64 string
+                    final String base64String = Base64.encodeToString(zipData, Base64.DEFAULT);
+                    binding.webview.evaluateJavascript("pairDrop.base64Dialog.processBase64Zip('" + base64String.replaceAll("\n", "") + "');", null);
+                } catch (IOException e) {
+                    // ignore
+                }
+            }
+
+
+
             WebsiteLocalizer.localizeIfNotBuiltIn(binding.webview);
             Log.w("WebView", "init end.");
         }
