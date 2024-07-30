@@ -94,7 +94,7 @@
     </style>
 
     <style name="OnboardingOutlinedButtonStyle" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="strokeColor">@color/textColorWhite</item>
         <item name="android:textColor">@color/textColorWhite</item>
