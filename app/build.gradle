@@ -24,8 +24,8 @@ android {
         //  -                         Optional: Post release info to X/Twitter
         //  -   Otherwise:          - `git tag vX.X.X` and `git push origin vX.X.X`
 
-        versionCode 43
-        versionName "2.2.4"
+        versionCode 44
+        versionName "2.3.0"
         applicationVariants.all { variant ->
             variant.outputs.all {
                 outputFileName = "snapdrop_v${defaultConfig.versionName}.apk"
