@@ -174,7 +174,7 @@ public class OnboardingFragment2 extends Fragment {
 
         final List<ServerItem> servers = new ArrayList<>();
         servers.add(new ServerItem("https://pairdrop.net", getString(R.string.onboarding_server_pairdrop_summary), null));
-        servers.add(new ServerItem("https://snapdrop.net", getString(R.string.onboarding_server_snapdrop_summary), getString(R.string.onboarding_server_snapdrop_summary_server_warning)));
+        servers.add(new ServerItem("https://snapdrop.net", getString(R.string.onboarding_server_snapdrop_summary), null/*getString(R.string.onboarding_server_snapdrop_summary_server_warning)*/));
 
         for (String url : serverUrls) {
             servers.add(new ServerItem(url, null, null));

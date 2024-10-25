@@ -42,7 +42,7 @@ However, even if it theoretically would fully work in your browser and you don't
 ➡️ [See how you can support this app and the snapdrop community](https://github.com/fm-sys/snapdrop-android/blob/master/FUNDING.md)
 
 ## Contributing
-**Snapdrop & PairDrop for Android** originally coded by [@fm-sys](https://github.com/fm-sys) would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
+**Snapdrop & PairDrop for Android** would like to become a community project. I invite your participation through issues and pull requests! Also bug reports are very welcome! But note that this is **not** the right place to report bugs regarding the **Snapdrop website** which occur independently of this app.
 
 ### Localization
 We use [Crowdin](https://crowdin.com/project/snapdrop-android) to manage all our translations. If you want to contribute, feel free to help translating **Snapdrop & PairDrop for Android** into your favorite language. If your language does not yet exist and you want to contribute, please open an issue so we can discuss whether it is worth maintaining translations for that language. 
@@ -67,6 +67,7 @@ If you want to help with development, this would be more than welcome! I am very
 - Serverless snapdrop desktop app: https://github.com/JustSch/node-snapdrop-electron
 
 ### Alternatives
-- Apple Airdrop (Mac and IOS only)
-- Google Nearby Share (Android, Chrome OS and [Windows](https://www.android.com/better-together/nearby-share-app/), plus an unofficial [IOS client](https://github.com/grishka/NearDrop))
+- Apple Airdrop (Mac and IOS only, plus an unofficial [open source implementation](https://github.com/seemoo-lab/opendrop) for Linux) 
+- Google Nearby Share (Android, Chrome OS and [Windows](https://www.android.com/better-together/nearby-share-app/), plus an unofficial [macOS client](https://github.com/grishka/NearDrop))
 - Windows Nearby Sharing (Windows only, there is a [FLOSS implementation](https://github.com/ShortDevelopment/Nearby-Sharing-Windows) for android)
+- Link to Windows (Your Android phone will be mounted as storage directly in your Windows file explorer, [read more](https://blogs.windows.com/windows-insider/2024/07/25/ability-to-access-your-android-phone-in-file-explorer-begins-rolling-out-to-windows-insiders/))

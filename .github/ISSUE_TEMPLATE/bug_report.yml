@@ -23,6 +23,9 @@ body:
       description: What version of Android are you running? This can usually be found in your device's settings in the "About" section.
       options:
         - newer
+        - 15
+        - 14
+        - 13
         - 12
         - 11
         - 10
