@@ -19,6 +19,7 @@
     <string name="onboarding_server_snapdrop_summary_server_warning">Avís: Inestabilitats del servidor</string>
     <string name="onboarding_server_custom">URL personalitzat</string>
     <string name="onboarding_server_custom_summary">Els usuaris més experts poden allotjar els seus servidors.</string>
+    <string name="onboarding_server_custom_add">Afegir un servidor</string>
     <string name="onboarding_howto">Com funciona</string>
     <string name="onboarding_howto_summary">1. Obriu aquesta aplicació o %s en qualsevol altre dispositiu de la xarxa wifi local.\n\n2. Toqueu el dispositiu i seleccioneu els fitxers que voleu enviar.\n\n3. Fet. Els fitxers s\'enviaran…</string>
     <string name="onboarding_howto_troubleshoot">Consell: Els dispositius han d\'estar connectats amb la mateixa xarxa wifi. Pot ser que no funcioni si hi ha una VPN habilitada.</string>
@@ -46,7 +47,9 @@
     <string name="version">Versió</string>
     <string name="pref_device_name_title">Nom del dispositiu</string>
     <string name="pref_device_name_summary">Estableix un nom de dispositiu definit per l\'usuari</string>
-    <string name="keep_on_summary">(Recomanat) Molts dispositius tenen problemes amb transferiments detinguts degut a que la pantalla s\'apagui</string>
+    <string name="notifications_summary">Mostra una notificació quan s\'hagi completat la descàrrega</string>
+    <string name="notifications_title">Notificacions</string>
+    <string name="keep_on_summary">(Recomanat) Molts dispositius tenen problemes amb transferiments detinguts perquè la pantalla s\'apaga</string>
     <string name="keep_on_title">Deixa la pantalla encesa mentre es transfereix</string>
     <string name="floating_text_selection_title">Selecció del text flotant</string>
     <string name="floating_text_selection_summary">Quan se seleccioni text en altres aplicacions, l\'opció \"Enviar amb snapdrop\" sortirà</string>
