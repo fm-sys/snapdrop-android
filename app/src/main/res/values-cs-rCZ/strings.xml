@@ -19,6 +19,7 @@
     <string name="onboarding_server_snapdrop_summary_server_warning">Varování: Nestability serveru</string>
     <string name="onboarding_server_custom">Vlastní URL</string>
     <string name="onboarding_server_custom_summary">Pokročilí uživatelé mohou také hostovat své vlastní servery.</string>
+    <string name="onboarding_server_custom_add">Přidat server</string>
     <string name="onboarding_howto">Jak na to</string>
     <string name="onboarding_howto_summary">1. Otevřete tuto aplikaci nebo %s na jakémkoli jiném zařízení v místní WiFi síti.\n\n2. Klepněte na zařízení a vyberte soubory, které chcete odeslat.\n\n3. A je to! Soubory budou odeslány…</string>
     <string name="onboarding_howto_troubleshoot">Tip: Zařízení musí být připojena ke stejné síti WiFi. Pokud je VPN povoleno, nemusí to fungovat.</string>
@@ -46,6 +47,8 @@
     <string name="version">Verze</string>
     <string name="pref_device_name_title">Název zařízení</string>
     <string name="pref_device_name_summary">Nastavte vlastní název zařízení</string>
+    <string name="notifications_summary">Zobrazit oznámení po dokončení stahování</string>
+    <string name="notifications_title">Oznámení</string>
     <string name="keep_on_summary">(Doporučeno) Mnoho zařízení má problémy s přerušením přenosu při vypnutí obrazovky</string>
     <string name="keep_on_title">Během přenosu udržujte obrazovku zapnutou</string>
     <string name="floating_text_selection_title">Výběr plovoucího textu</string>

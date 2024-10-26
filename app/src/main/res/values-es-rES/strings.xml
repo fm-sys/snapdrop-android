@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name_long">Snapdrop &amp; Pairdrop para Android</string>
+    <string name="app_name_long">Sandro &amp; AirDrop para Android</string>
     <string name="app_name_slogan">Transfiere archivos sin problemas entre todos tus dispositivos.</string>
     <string name="err_no_browser">No se puede abrir el navegador</string>
     <string name="err_no_app">No hay ninguna aplicación instalada para abrir este archivo</string>
     <string name="open_url">Abrir URL</string>
     <!-- Onboarding -->
     <string name="onboarding_button_continue">continuar</string>
-    <string name="onboarding_button_grant">otorgar permiso</string>
+    <string name="onboarding_button_grant">conceder permiso</string>
     <string name="onboarding_button_finish">terminar</string>
     <string name="onboarding_choose_server">Elige un servidor</string>
     <string name="onboarding_choose_server_short">elegir servidor</string>
@@ -50,7 +50,7 @@
     <string name="keep_on_title">Mantener la pantalla encendida mientras se transfiere</string>
     <string name="floating_text_selection_title">Selección de texto flotante</string>
     <string name="floating_text_selection_summary">Al seleccionar texto en otras aplicaciones, se mostrará una opción \"Enviar con Snapdrop\"</string>
-    <string name="show_connectivity_card_title">Advertencia de conexión</string>
+    <string name="show_connectivity_card_title">Connectivity warning</string>
     <string name="show_connectivity_card_summary"> Mostrar una advertencia cuando no esté conectado a una red WiFi</string>
     <string name="floating_text_selection_activity_label">Enviar con Snapdrop</string>
     <string name="permission_not_granted">por favor conceda el permiso necesario</string>
