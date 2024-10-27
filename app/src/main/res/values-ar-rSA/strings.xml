@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name_long">سناب درُوب اقترن واسقط لِنِظامِ أندُروِيد</string>
-    <string name="app_name_slogan">نقل الملفات بسلاسة بين جميع أجهزتك.</string>
-    <string name="err_no_browser">لا يمكن فتح المستعرض</string>
-    <string name="err_no_app">لا يوجد تطبيق لفتح هذا المِلَفّ</string>
-    <string name="open_url">افتح الرابط</string>
+    <string name="app_name_long">Snapdrop &amp; PairDr6op for Android</string>
+    <string name="app_name_slogan">Transfer files seamlessly between all your devices.,</string>
+    <string name="err_no_browser">3لا يمكن فتح المستعرض</string>
+    <string name="err_no_app">No app installed to open this file</string>
+    <string name="open_url">Open URL</string>
     <!-- Onboarding -->
-    <string name="onboarding_button_continue">استمرار</string>
+    <string name="onboarding_button_continue">continue</string>
     <string name="onboarding_button_grant">منح الإذن</string>
     <string name="onboarding_button_finish">اكتمل</string>
     <string name="onboarding_choose_server">اختر عنوان الخادم</string>
     <string name="onboarding_choose_server_short">اختر الخادم</string>
-    <string name="onboarding_choose_server_description">هذا التطبيق هو عميل مُحسَّن لتطبيقات الويب Snaplop و PairDrop.\nاختر واحدة من الأمثلة التالية أو حدد عنوان URL مخصص للاتصال به.\n\nملاحظة: يجب عليك اختيار نفس الرابط على جميع الأجهزة.</string>
+    <string name="onboarding_choose_server_description">This app is an optimized client for the web apps Snapdrop and PairDrop.\nChoose one of the following instances or specify a custom url to connect to.\n\nNote: You have to choose the same URL on all devices.</string>
     <string name="onboarding_storage_permission">إذن التخزين</string>
     <string name="onboarding_storage_permission_description">هذا التطبيق هو أداة مشاركة للملفات. لذلك، إذن التخزين مطلوب لاستخدامه.</string>
     <string name="onboarding_server_pairdrop_summary">(موصى به)\nميزة الاقتران ، نقل الإنترنت والتركيز على الاستقرار.</string>
