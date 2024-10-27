@@ -16,6 +16,7 @@
     <string name="onboarding_storage_permission_description">Táto aplikácia je nástroj na zdieľanie súborov. Preto je pre použitie vyžadované povolenie prístupu k súborom.</string>
     <string name="onboarding_server_pairdrop_summary">(odporúčané)\nPárovacia funkcia, prenos cez internet a zameranie na stabilitu.</string>
     <string name="onboarding_server_snapdrop_summary">Klasický SnapDrop. Prehľadný a jednoduchý.</string>
+    <string name="onboarding_server_snapdrop_summary_server_warning">Slovak</string>
     <string name="onboarding_server_custom">Vlastná URL</string>
     <string name="onboarding_server_custom_summary">Experti môžu taktiež sprevádzkovať svoje vlastné servery.</string>
     <string name="onboarding_howto">Ako používať</string>
