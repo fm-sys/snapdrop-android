@@ -192,6 +192,9 @@ public class MainActivity extends AppCompatActivity {
             return; // all this doesn't make sense if we have no base URL
         }
 
+        if (baseURL.equals("https://snapdrop.net")) {
+            openSettingsResultLauncher.launch(OnboardingActivity.getServerSelectionIntent(this));
+        }
 
         if (prefs.getBoolean(getString(R.string.pref_switch_keep_on), true)) {
             transfer.setOnChangedListener(transferActive -> runOnUiThread(() -> {

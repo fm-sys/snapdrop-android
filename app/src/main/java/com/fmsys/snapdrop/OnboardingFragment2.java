@@ -19,6 +19,7 @@ import com.fmsys.snapdrop.utils.Link;
 import com.fmsys.snapdrop.utils.NetworkUtils;
 import com.fmsys.snapdrop.utils.ViewUtils;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -123,6 +124,23 @@ public class OnboardingFragment2 extends Fragment {
         pref = PreferenceManager.getDefaultSharedPreferences(requireContext());
         tempUrl.setValue(pref.getString(getString(R.string.pref_baseurl), "https://pairdrop.net"));
 
+        if (tempUrl.getValue().equals("https://snapdrop.net")) {
+            tempUrl.setValue("https://pairdrop.net");
+
+            binding.scrollview.setVisibility(View.INVISIBLE);
+            binding.continueButton.setVisibility(View.INVISIBLE);
+
+            new MaterialAlertDialogBuilder(requireContext())
+                    .setTitle("Important Update")
+                    .setMessage("The snapdrop.net website has been acquired by a company with unclear security and privacy practices. \n\nTo keep your data safe, this app will no longer support snapdrop.net and will instead switch all users to PairDrop, a more secure alternative.  \n\nThank you for your understanding!")
+                    .setPositiveButton("OK", null)
+                    .setOnDismissListener(dialog -> {
+                        binding.scrollview.setVisibility(View.VISIBLE);
+                        binding.continueButton.setVisibility(View.VISIBLE);
+                    })
+                    .show();
+        }
+
         reloadServerList();
 
         binding.add.setOnClickListener(v -> ViewUtils.showEditTextWithResetPossibility(this, "Custom URL", null, null, Link.bind("https://github.com/RobinLinus/snapdrop/blob/master/docs/faq.md#inofficial-instances", R.string.baseurl_unofficial_instances), url -> {
@@ -174,7 +192,7 @@ public class OnboardingFragment2 extends Fragment {
 
         final List<ServerItem> servers = new ArrayList<>();
         servers.add(new ServerItem("https://pairdrop.net", getString(R.string.onboarding_server_pairdrop_summary), null));
-        servers.add(new ServerItem("https://snapdrop.net", getString(R.string.onboarding_server_snapdrop_summary), null/*getString(R.string.onboarding_server_snapdrop_summary_server_warning)*/));
+//        servers.add(new ServerItem("https://snapdrop.net", getString(R.string.onboarding_server_snapdrop_summary), null/*getString(R.string.onboarding_server_snapdrop_summary_server_warning)*/));
 
         for (String url : serverUrls) {
             servers.add(new ServerItem(url, null, null));

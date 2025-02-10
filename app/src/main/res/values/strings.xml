@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name" translatable="false">Snapdrop &amp; PairDrop</string>
-    <string name="app_name_long">Snapdrop &amp; PairDrop for Android</string>
+    <string name="app_name" translatable="false">PairDrop</string>
+    <string name="app_name_long">PairDrop for Android</string>
     <string name="app_name_slogan">Transfer files seamlessly between all your devices.</string>
     <string name="err_no_browser">Can\'t open browser</string>
     <string name="err_no_app">No app installed to open this file</string>
@@ -12,7 +12,7 @@
     <string name="onboarding_button_finish">finish</string>
     <string name="onboarding_choose_server">Choose a server address</string>
     <string name="onboarding_choose_server_short">choose server</string>
-    <string name="onboarding_choose_server_description">This app is an optimized client for the web apps Snapdrop and PairDrop.\nChoose one of the following instances or specify a custom url to connect to.\n\nNote: You have to choose the same URL on all devices.</string>
+    <string name="onboarding_choose_server_description">This app is an optimized client for the web apps Snapdrop and PairDrop.\n\nNote: You have to choose the same URL on all devices.</string>
     <string name="onboarding_storage_permission">Storage permission</string>
     <string name="onboarding_storage_permission_description">This app is a file sharing utility. Therefore, storage permission is required order to use it.</string>
     <string name="onboarding_server_pairdrop_summary">(recommended)\nPairing feature, internet transfer and focus on stability.</string>
@@ -40,7 +40,7 @@
 
     <!-- Settings / About -->
     <string name="home_as_up_indicator_about">About</string>
-    <string name="title_activity_about">About Snapdrop &amp; PairDrop for Android</string>
+    <string name="title_activity_about">About PairDrop for Android</string>
     <string name="pref_about_title">About this app</string>
     <string name="view_downloads">View downloads</string>
     <string name="pref_category_settings">Settings</string>
@@ -57,10 +57,10 @@
     <string name="keep_on_summary">(Recommended) Many devices have problems with transfers being interrupted when the screen turns off</string>
     <string name="keep_on_title">Keep screen on while transferring</string>
     <string name="floating_text_selection_title">Floating text selection</string>
-    <string name="floating_text_selection_summary">When selecting text in other apps, an option \"Send with Snapdrop\" will be shown</string>
+    <string name="floating_text_selection_summary">When selecting text in other apps, an option \"Send with PairDrop\" will be shown</string>
     <string name="show_connectivity_card_title">Connectivity warning</string>
     <string name="show_connectivity_card_summary"> Show a warning when you are not connected with a WiFi network</string>
-    <string name="floating_text_selection_activity_label">Send with Snapdrop</string>
+    <string name="floating_text_selection_activity_label">Send with PairDrop</string>
     <string name="permission_not_granted">please grant the necessary permission</string>
     <string name="permission_not_granted_fallback">please grant the necessary permission manually</string>
     <string name="open_settings">open settings</string>
