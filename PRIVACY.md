@@ -1,38 +1,26 @@
-# Snapdrop for Android Privacy Policy
+# PairDrop for Android Privacy Policy  
 
-"Snapdrop for Android" is an open source project which pursues the goal of providing an easy-to-use cross-platform file sharing solution, which is integrated well into the Android™ system.
+"PairDrop for Android" is an open-source project designed to provide an easy-to-use, cross-platform file-sharing solution that integrates well with the Android™ system.  
 
-To be able to provide our services, the app is powered by the open-source web app https://snapdrop.net (Hereinafter simply called "Snapdrop"). 
+Unlike standalone services, our app does not have its own backend or servers. Instead, it relies entirely on web-based services selected by the user within the app (e.g. https://pairdrop.net/ by default). Because of this, the privacy and security of your data depend on the specific website you choose to use. We strongly recommend that users review the privacy policy of the selected web service before using it.  
 
-## Server connections
+## Server Connections  
 
-To allow discovering of other devices running Snapdrop in your local network, the app makes requests to the Snapdrop server while the app is being executed in the foreground. The server will progress your public IP address and will create a "room" for every IP. If you open Snapdrop on multiple devices in the same network, they will share the same public IP and room, and will therefore "see" each other. However, none of your data will be stored permanently on any server. The data is only kept in RAM for the time the app is opened.
+To enable device discovery on your local network, the app connects to the chosen web-based service. For example, if you use https://pairdrop.net/, your public IP address is temporarily processed to create a shared "room" for all devices in the same network. Any information handled by the web service is subject to its own privacy policy.  
 
-## Users rights
+## User Rights  
 
-We cannot provide you an option to delete your user data, because we simply store nothing permanently. All data we process is required for the service to work and is used for nothing else than as described here. We do not share any personal data with third parties. 
-If you don't want to use our app any longer, just uninstall the app from your device. This will delete all app data (except user files which where received). 
+Since we do not operate our own servers or store any user data, we cannot provide options to delete your information. If you want to stop using the app, simply uninstall it from your device. Any files received through the app will remain on your device until you manually delete them.  
 
-## Permissions 
+## Permissions  
 
-This app requires storage access on your device. This permission is necessary for using this app, if you want to share (send) and receive (download) files. We will not process your files (even not locally!), except the ones you have explicitly selected for sharing. 
-Furthermore, the app can read the WiFi state. This status info is only progressed locally and will not leave your device. 
+The app requires the following permissions:  
 
-## Progressed data
+- **Storage Access:** Necessary for sending and receiving files on some Android versions. We do not process your files beyond what is explicitly selected for sharing.  
+- **WiFi State Access:** Used only locally to check network conditions and is not transmitted outside your device.  
 
-The following data will be progressed and is visible for other devices ("peers") in the same network:
-- A randomly generated UUID
-- A pseudo random user displayable device identifier generated out of the UUID
-- The device model name (or a custom name if set)
+## Support Email  
 
-When you select files to share with a specific peer, a WebRTC connection will be established. WebRTC needs a server for establishing the connection, but the server is not involved in the file transfer itself. None of your files are ever sent to any server, but are transferred directly peer-to-peer between your devices inside your local network. Furthermore, WebRTC encrypts all files on transmission, so nobody could read them anyway.
+For support inquiries, you can contact us at: **snapdrop-android[at]googlegroups.com**  
 
-## Exceptions
-
-In addition, this app allows configuring a custom snapdrop server instance. However, we cannot guarantee about the privacy of third party snapdrop instances you have configured.
-
-## Support email
-
-We provide you our support email address: snapdrop-android[at]googlegroups.com
-
-All emails sent to that address will automatically be forwarded to our core developers. We do not share your emails with third parties. Support emails aren't deleted automatically by default. If you want, that we delete your previous emails, please let us know.
+Emails sent to this address will be forwarded to our core developers. We do not share your emails with third parties. Emails are not automatically deleted, but you can request removal by contacting us.
