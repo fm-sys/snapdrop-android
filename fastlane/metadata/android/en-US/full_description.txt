@@ -1,21 +1,25 @@
-Snapdrop & PairDrop for Android is an Android™ client for the free and open source local file sharing solutions https://snapdrop.net/ and https://pairdrop.net/.
+<hh2>Introduction</hh2>
+<a href="https://snapdrop.net">Snapdrop</a> and <a href="https://pairdrop.net">PairDrop</a> for Android are clients for free and open-source local file-sharing solutions.
 
-Do you also sometimes have the problem that you just need to quickly transfer a file from your phone to the PC?
+Are you ever in a situation where you need to quickly transfer files from your phone to your PC? If so, this is the app for you.
 
-USB? - Old fashioned!
-Bluetooth? - Much too cumbersome and slow!
-E-mail? - Please not another email I write to myself!
+<hh2>Awkward Technologies</hh2>
+Because of its speed and simplicity, Snapdrop is superior to these file-sharing methods:
+<ul>
+<li>USB? - Old fashioned!</li>
+<li>Bluetooth? - Much too cumbersome and slow!</li>
+<li>E-mail? - Please, not another email I must write to myself!</li>
+</ul>
 
-Snapdrop!
+<hh2>Enter Snapdrop!</hh2>
+Snapdrop (as well as the enhanced version <i>PairDrop</i>) is a browser-based local file-sharing solution. It's like Apple's Airdrop, but not exclusively for Apple devices. It runs on Windows, Linux, Android, iPhone, Mac — no problem at all!
 
-Snapdrop (as well as the enhanced version "PairDrop") is a local file sharing solution which completely works in your browser. A bit like Apple's Airdrop, but not only for Apple devices. Windows, Linux, Android, IPhone, Mac - no problem at all!
+<hh2>Integration With Android OS</hh2>
+Even though Snapdrop and PairDrop can be totally browser based, they fully integrate with the Android operating system; meaning, you can quickly send files directly from Android apps via the <i>Share</i> function.
 
-However, even if it theoretically would fully work in your browser, you will love this app if you want to use Snapdrop or PairDrop more often in your daily life. Thanks to perfect integration into the Android operating system, files are sent even faster. Directly from within other apps you can select Snapdrop to share with.
+<hh2>Help Us Improve The World</hh2>
+Thanks to their radical simplicity, Snapdrop and PairDrop for Android make the everyday lives of thousands of users easier. As an open-source project, we don't have any commercial interests but want to make the world a little bit better. So, join and see yourself!
 
-Thanks to its radical simplicity, "Snapdrop & PairDrop for Android" makes the everyday life of thousands of users easier. As an open source project we don't have any commercial interests but want to make the world a little bit better. Join and convince yourself!
+<hh2>Credit</hh2>
+The app is powered by the <a href="https://www.github.com/robinlinus/snapdrop">Snapdrop</a> open-source project, which is hosted and maintained by RobinLinus.
 
-SOURCE CODE:
-https://github.com/fm-sys/snapdrop-android
-
-CREDIT:
-The app is powered by the Snapdrop Open Source project, which is hosted and maintained by RobinLinus. See also https://www.github.com/robinlinus/snapdrop
